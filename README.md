@@ -38,6 +38,14 @@ mkdir -p base_models
 curl -L -o base_models/eng.traineddata https://github.com/tesseract-ocr/tessdata_best/raw/main/eng.traineddata
 ```
 
+## Make a corpus
+
+`tools/make_corpus.py` writes 500 Minecraft and mod-loader lines to `data/corpus.txt`.
+
+    python tools/make_corpus.py --count 500 --out data/corpus.txt
+
+Load that file with **Load text file...** in the window.
+
 ## Desktop window (Windows)
 
 `gui.py` is a window with a drop area for your font, settings, and a **Make good** button.
