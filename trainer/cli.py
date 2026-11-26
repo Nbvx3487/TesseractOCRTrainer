@@ -13,31 +13,26 @@ from .pipeline import train_font
 
 
 def main(argv=None):
-    parser = argparse.ArgumentParser(description="Fine-tune Tesseract on a font.")
-    parser.add_argument("--font", required=True, help="Path to the .ttf or .otf file")
+    parser = argparse.ArgumentParser(description="Fine-tune Tesseract on a set of fonts.")
+    parser.add_argument("--fonts-json", required=True,
+                        help='JSON list, e.g. [{"path": "/mnt/c/Fonts/a.ttf", "weight": 2}]')
     parser.add_argument("--name", required=True, help="Model name")
     parser.add_argument("--corpus-file", required=True, help="Text file, one line per row")
     parser.add_argument("--data-root", required=True, help="Folder for run outputs")
-    parser.add_argument("--font-size", type=int, default=32)
-    parser.add_argument("--iterations", type=int, default=400)
-    parser.add_argument("--control-font", action="append", default=[],
-                        help="Extra font for the forgetting check (repeatable)")
     args = parser.parse_args(argv)
 
     def log(message):
         print(message, flush=True)
 
     try:
+        fonts = [(item["path"], int(item["weight"])) for item in json.loads(args.fonts_json)]
         corpus = Path(args.corpus_file).read_text(encoding="utf-8")
         result = train_font(
             name=args.name,
-            font_path=args.font,
+            fonts=fonts,
             corpus=corpus,
-            control_fonts=args.control_font,
             data_root=args.data_root,
             log=log,
-            font_size=args.font_size,
-            iterations=args.iterations,
         )
     except Exception as error:
         print(f"ERROR: {error}", flush=True)

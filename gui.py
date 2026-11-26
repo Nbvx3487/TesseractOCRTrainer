@@ -1,8 +1,8 @@
-"""Desktop window for training Tesseract on a font.
+"""Desktop window for training Tesseract on a set of fonts.
 
 Runs on Windows. Training itself runs inside WSL, because Tesseract's training
-tools are Linux programs. Drop a font onto the window, adjust settings, and
-press "Make good".
+tools are Linux programs. Drop fonts onto the window, set a weight for each,
+paste a corpus, and press "Make good".
 
 Requirements (Windows): pip install -r requirements-gui.txt
 Requirements (WSL): see README.md
@@ -15,9 +15,11 @@ import sys
 from pathlib import Path
 
 from PySide6.QtCore import QThread, Qt, Signal
+from PySide6.QtGui import QFont
 from PySide6.QtWidgets import (
-    QApplication, QFileDialog, QHBoxLayout, QLabel, QLineEdit, QListWidget,
-    QMessageBox, QPlainTextEdit, QPushButton, QSpinBox, QVBoxLayout, QWidget,
+    QAbstractItemView, QApplication, QFileDialog, QHBoxLayout, QHeaderView, QLabel,
+    QLineEdit, QMessageBox, QPlainTextEdit, QPushButton, QSpinBox, QTableWidget,
+    QTableWidgetItem, QVBoxLayout, QWidget,
 )
 
 REPO = Path(__file__).resolve().parent
@@ -84,73 +86,63 @@ class TrainWorker(QThread):
 
 
 class DropArea(QLabel):
-    """Accepts a dropped font file, or a click to browse for one."""
+    """Accepts dropped font files, or a click to browse for them."""
 
-    def __init__(self, on_font, parent=None):
+    def __init__(self, on_fonts, parent=None):
         super().__init__(parent)
-        self.on_font = on_font
+        self.on_fonts = on_fonts
         self.setAcceptDrops(True)
         self.setAlignment(Qt.AlignCenter)
-        self.setMinimumHeight(90)
+        self.setMinimumHeight(110)
         self.setCursor(Qt.PointingHandCursor)
-        self.setToolTip("Drop a .ttf or .otf file here, or click to browse")
-        self.set_text("Drop a font file here\n(or click to browse)")
-
-    def set_text(self, text):
-        self.setText(text)
-        self.setStyleSheet("border: 2px dashed #888; border-radius: 8px; padding: 8px;")
+        self.setText("Drop font files here\n(or click to browse)")
+        self.setStyleSheet("border: 2px dashed #888; border-radius: 8px; padding: 10px;")
 
     def dragEnterEvent(self, event):
-        if self._first_font(event.mimeData().urls()):
+        if self._font_paths(event.mimeData().urls()):
             event.acceptProposedAction()
         else:
             event.ignore()
 
     def dropEvent(self, event):
-        path = self._first_font(event.mimeData().urls())
-        if path:
-            self.on_font(path)
+        paths = self._font_paths(event.mimeData().urls())
+        if paths:
+            self.on_fonts(paths)
 
     def mousePressEvent(self, event):
-        path, _ = QFileDialog.getOpenFileName(
-            self, "Choose a font", "", "Fonts (*.ttf *.otf)")
-        if path:
-            self.on_font(path)
+        paths, _ = QFileDialog.getOpenFileNames(
+            self, "Choose fonts", "", "Fonts (*.ttf *.otf)")
+        if paths:
+            self.on_fonts(paths)
 
     @staticmethod
-    def _first_font(urls):
-        for url in urls:
-            path = url.toLocalFile()
-            if path.lower().endswith(FONT_EXTENSIONS):
-                return path
-        return None
+    def _font_paths(urls):
+        paths = [url.toLocalFile() for url in urls]
+        return [p for p in paths if p.lower().endswith(FONT_EXTENSIONS)]
 
 
 class MainWindow(QWidget):
     def __init__(self):
         super().__init__()
         self.setWindowTitle("Tesseract Font Trainer")
-        self.resize(760, 760)
-        self.font_path = None
+        self.resize(900, 900)
         self.worker = None
 
-        self.drop = DropArea(self.set_font)
-        self.font_label = QLabel("No font chosen yet.")
+        self.drop = DropArea(self.add_fonts)
+
+        self.table = QTableWidget(0, 2)
+        self.table.setHorizontalHeaderLabels(["Font", "Weight"])
+        self.table.horizontalHeader().setSectionResizeMode(0, QHeaderView.Stretch)
+        self.table.horizontalHeader().setSectionResizeMode(1, QHeaderView.ResizeToContents)
+        self.table.setSelectionBehavior(QAbstractItemView.SelectRows)
+        self.table.setMinimumHeight(160)
+
+        add_font = QPushButton("Add font...")
+        add_font.clicked.connect(self.browse_fonts)
+        remove_font = QPushButton("Remove selected")
+        remove_font.clicked.connect(self.remove_selected)
 
         self.name = QLineEdit("minecraft")
-        self.font_size = QSpinBox()
-        self.font_size.setRange(8, 200)
-        self.font_size.setValue(32)
-        self.iterations = QSpinBox()
-        self.iterations.setRange(50, 20000)
-        self.iterations.setValue(400)
-
-        self.control_list = QListWidget()
-        self.control_list.setMaximumHeight(70)
-        add_control = QPushButton("Add check font...")
-        add_control.clicked.connect(self.add_control_font)
-        remove_control = QPushButton("Remove")
-        remove_control.clicked.connect(self.remove_control_font)
 
         self.corpus = QPlainTextEdit()
         self.corpus.setPlaceholderText(
@@ -159,36 +151,31 @@ class MainWindow(QWidget):
         load_corpus.clicked.connect(self.load_corpus)
 
         self.make_good = QPushButton("Make good")
-        self.make_good.setMinimumHeight(40)
+        self.make_good.setMinimumHeight(56)
         self.make_good.clicked.connect(self.start_training)
+
+        self.status = QLabel("")
+        self.status.setWordWrap(True)
 
         self.log = QPlainTextEdit()
         self.log.setReadOnly(True)
         self.log.setPlaceholderText("Progress will appear here.")
 
-        self.status = QLabel("")
-        self.status.setWordWrap(True)
-
         layout = QVBoxLayout(self)
         layout.addWidget(self.drop)
-        layout.addWidget(self.font_label)
 
-        settings = QHBoxLayout()
-        settings.addWidget(QLabel("Model name:"))
-        settings.addWidget(self.name)
-        settings.addWidget(QLabel("Font size (px):"))
-        settings.addWidget(self.font_size)
-        settings.addWidget(QLabel("Iterations:"))
-        settings.addWidget(self.iterations)
-        layout.addLayout(settings)
+        layout.addWidget(QLabel("Fonts in the dataset. Weight = how many times each line is trained in that font."))
+        layout.addWidget(self.table)
+        font_buttons = QHBoxLayout()
+        font_buttons.addWidget(add_font)
+        font_buttons.addWidget(remove_font)
+        font_buttons.addStretch()
+        layout.addLayout(font_buttons)
 
-        layout.addWidget(QLabel("Check fonts (also tested, to catch forgetting):"))
-        layout.addWidget(self.control_list)
-        buttons = QHBoxLayout()
-        buttons.addWidget(add_control)
-        buttons.addWidget(remove_control)
-        buttons.addStretch()
-        layout.addLayout(buttons)
+        model_row = QHBoxLayout()
+        model_row.addWidget(QLabel("Model name:"))
+        model_row.addWidget(self.name)
+        layout.addLayout(model_row)
 
         layout.addWidget(QLabel("Corpus:"))
         layout.addWidget(self.corpus)
@@ -198,21 +185,44 @@ class MainWindow(QWidget):
         layout.addWidget(self.status)
         layout.addWidget(self.log)
 
-    def set_font(self, path):
-        self.font_path = path
-        self.font_label.setText(f"Font: {Path(path).name}")
-        self.drop.set_text(f"Loaded: {Path(path).name}\n(drop another to replace)")
-
-    def add_control_font(self):
-        paths, _ = QFileDialog.getOpenFileNames(self, "Check fonts", "", "Fonts (*.ttf *.otf)")
-        existing = {self.control_list.item(i).text() for i in range(self.control_list.count())}
+    def add_fonts(self, paths):
+        existing = {self.table.item(r, 0).data(Qt.UserRole)
+                    for r in range(self.table.rowCount())}
         for path in paths:
             if path not in existing:
-                self.control_list.addItem(path)
+                self._append_row(path, 1)
+                existing.add(path)
 
-    def remove_control_font(self):
-        for item in self.control_list.selectedItems():
-            self.control_list.takeItem(self.control_list.row(item))
+    def browse_fonts(self):
+        paths, _ = QFileDialog.getOpenFileNames(self, "Choose fonts", "", "Fonts (*.ttf *.otf)")
+        if paths:
+            self.add_fonts(paths)
+
+    def _append_row(self, path, weight):
+        row = self.table.rowCount()
+        self.table.insertRow(row)
+        item = QTableWidgetItem(Path(path).name)
+        item.setData(Qt.UserRole, path)
+        item.setToolTip(path)
+        self.table.setItem(row, 0, item)
+        spin = QSpinBox()
+        spin.setRange(1, 10)
+        spin.setValue(weight)
+        self.table.setCellWidget(row, 1, spin)
+
+    def remove_selected(self):
+        rows = sorted({index.row() for index in self.table.selectedIndexes()}, reverse=True)
+        for row in rows:
+            self.table.removeRow(row)
+
+    def dataset(self):
+        """List of (path, weight) for every row in the table."""
+        fonts = []
+        for row in range(self.table.rowCount()):
+            path = self.table.item(row, 0).data(Qt.UserRole)
+            weight = self.table.cellWidget(row, 1).value()
+            fonts.append((path, weight))
+        return fonts
 
     def load_corpus(self):
         path, _ = QFileDialog.getOpenFileName(self, "Corpus", "", "Text (*.txt)")
@@ -226,21 +236,17 @@ class MainWindow(QWidget):
             return
 
         name = self.name.text().strip()
-        run_dir = DATA / "runs"
         corpus_file = DATA / f"corpus_{name}.txt"
         corpus_file.parent.mkdir(parents=True, exist_ok=True)
         corpus_file.write_text(self.corpus.toPlainText(), encoding="utf-8")
 
+        fonts = [{"path": to_wsl(path), "weight": weight} for path, weight in self.dataset()]
         args = [
-            "--font", to_wsl(self.font_path),
+            "--fonts-json", json.dumps(fonts),
             "--name", name,
             "--corpus-file", to_wsl(corpus_file),
-            "--data-root", to_wsl(run_dir),
-            "--font-size", str(self.font_size.value()),
-            "--iterations", str(self.iterations.value()),
+            "--data-root", to_wsl(DATA / "runs"),
         ]
-        for i in range(self.control_list.count()):
-            args += ["--control-font", to_wsl(self.control_list.item(i).text())]
 
         self.log.clear()
         self.status.setText("Training... this can take a long time. Keep the window open.")
@@ -252,8 +258,8 @@ class MainWindow(QWidget):
         self.worker.start()
 
     def validate(self):
-        if not self.font_path:
-            return "Drop a font file first."
+        if self.table.rowCount() == 0:
+            return "Add at least one font to the dataset."
         if not re.fullmatch(r"[A-Za-z0-9_-]{1,40}", self.name.text().strip()):
             return "Model name: use letters, digits, - or _ (max 40 characters)."
         lines = [l for l in self.corpus.toPlainText().splitlines() if l.strip()]
@@ -266,11 +272,12 @@ class MainWindow(QWidget):
         lines = ["", "Results (exact matches on held-out lines):"]
         for label, scores in result["scores"].items():
             b, t = scores["baseline"], scores["trained"]
+            font = label.split("_", 1)[-1]
             lines.append(
-                f"  {label}: before {b['exact']}/{b['total']} (CER {b['cer']}), "
+                f"  {font}: before {b['exact']}/{b['total']} (CER {b['cer']}), "
                 f"after {t['exact']}/{t['total']} (CER {t['cer']})")
-        model_win = DATA / "runs" / result["name"] / "model" / f"{result['name']}.traineddata"
-        lines.append(f"Model saved to: {model_win}")
+        model = DATA / "runs" / result["name"] / "model" / f"{result['name']}.traineddata"
+        lines.append(f"Model saved to: {model}")
         self.log.appendPlainText("\n".join(lines))
         self.status.setText("Done.")
 
@@ -282,6 +289,9 @@ class MainWindow(QWidget):
 
 def main():
     app = QApplication(sys.argv)
+    font = app.font()
+    font.setPointSize(13)
+    app.setFont(font)
     window = MainWindow()
     window.show()
     sys.exit(app.exec())

@@ -59,9 +59,13 @@ Run it:
 
     python gui.py
 
-Settings: model name, font size, iterations, check fonts (tested to catch forgetting),
-and the corpus (paste it or load a text file). The log shows progress, then the
-before-and-after results and the saved model path.
+Fonts: drop one or more font files onto the window. Each font gets a weight (1 to 10):
+the number of times each training line is rendered and trained in that font, so a
+higher weight means the model sees that font more. Every font is also scored on the
+held-out lines, which shows any loss on the other fonts.
+
+Also set the model name and paste or load the corpus. The log shows progress, then the
+before-and-after results for each font and the saved model path.
 
 WSL must have Pillow and the training tools (see Setup above). The window converts
 Windows paths such as C:\Users\me\font.ttf to /mnt/c/Users/me/font.ttf for WSL.
@@ -77,7 +81,7 @@ Open http://localhost:8000. Upload a font, paste at least 10 lines, set the mode
 
 ## Notes
 
-- Iterations default to 400. More iterations take longer; check the control scores to decide.
+- Training runs 400 iterations by default. More takes longer; check the per-font scores to decide.
 - Each run writes to `data/runs/<name>/`. The trained model is `data/runs/<name>/model/<name>.traineddata`.
 - To use the trained model with Tesseract, copy that file into a folder and pass it
   with `--tessdata-dir`, using `-l <name>`.

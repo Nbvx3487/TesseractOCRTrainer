@@ -37,11 +37,13 @@ def safe_name(value):
 
 def run_training(job):
     try:
+        fonts = [(str(FONTS / job["font"]), 1)] + [
+            (str(FONTS / f), 1) for f in job.get("control_fonts", [])
+        ]
         result = train_font(
             name=job["name"],
-            font_path=FONTS / job["font"],
+            fonts=fonts,
             corpus=job["corpus"],
-            control_fonts=[str(FONTS / f) for f in job.get("control_fonts", [])],
             data_root=RUNS,
             log=log,
             font_size=int(job.get("font_size", 32)),
