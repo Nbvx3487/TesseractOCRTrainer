@@ -93,6 +93,19 @@ def report(log, stage, label, current, count, done, total):
                                   "count": count, "done": done, "total": total}))
 
 
+def score_and_log(label, images, lang, tessdata_dir, when, log):
+    """Score the held-out lines and log each line as PASS or FAIL."""
+    scores = score_set(images, lang, tessdata_dir)
+    log(f"{label} {when}: {scores['exact']}/{scores['total']} lines pass, CER {scores['cer']}")
+    for line in scores["lines"]:
+        if line["pass"]:
+            log(f"  PASS  {line['expected']}")
+        else:
+            log(f"  FAIL  expected: {line['expected']}")
+            log(f"        got:      {line['got']}")
+    return scores
+
+
 def font_label(index, font_path):
     return f"{index}_{Path(font_path).stem}"
 
@@ -125,12 +138,27 @@ def train_font(name, fonts, corpus, data_root, log, font_size=32, iterations=400
     if dropped:
         log(f"Skipped {dropped} Cyrillic line(s): the English model cannot learn them.")
 
-    # Progress units: one per training line prepared, one per training iteration,
-    # and two per held-out line scored (before and after) in each font.
+    # Progress units: one per held-out line checked before training, one per training
+    # line prepared, one per training iteration, and one per held-out line checked after.
     font_count = len(fonts)
     prepared_units = font_count * len(train_lines)
-    total = prepared_units + iterations + font_count * len(control_lines) * 2
+    total = font_count * len(control_lines) * 2 + prepared_units + iterations
     done = 0
+
+    # Held-out check before training: the untrained English model, font by font.
+    control_images = {}
+    baseline_scores = {}
+    for index, (font_path, _) in enumerate(fonts):
+        label = font_label(index, font_path)
+        log(f"Rendering {len(control_lines)} held-out lines in {label}")
+        images = render_lines(control_lines, font_path, work / "control" / label,
+                              font_size, prefix="ctrl")
+        control_images[label] = images
+        report(log, "score", label, 0, len(images), done, total)
+        baseline_scores[label] = score_and_log(label, images, "eng", system_tessdata,
+                                               "before training", log)
+        done += len(images)
+        report(log, "score", label, len(images), len(images), done, total)
 
     # Render training images per font, and list each one weight times.
     lstmf_list = []
@@ -160,16 +188,16 @@ def train_font(name, fonts, corpus, data_root, log, font_size=32, iterations=400
         if match:
             current = min(int(match.group(1)), iterations)
             report(log, "train", "all fonts", current, iterations,
-                   prepared_units + current, total)
+                   done + current, total)
 
-    report(log, "train", "all fonts", 0, iterations, prepared_units, total)
+    report(log, "train", "all fonts", 0, iterations, done, total)
     run(["lstmtraining",
          "--model_output", str(checkpoints / name),
          "--continue_from", str(base_dir / "eng.lstm"),
          "--traineddata", str(base_dir / "eng.traineddata"),
          "--train_listfile", str(list_file),
          "--max_iterations", str(iterations)], log, on_line=on_training_line)
-    done = prepared_units + iterations
+    done += iterations
 
     output_dir = work / "model"
     output_dir.mkdir()
@@ -178,20 +206,14 @@ def train_font(name, fonts, corpus, data_root, log, font_size=32, iterations=400
          "--traineddata", str(base_dir / "eng.traineddata"),
          "--model_output", str(output_dir / f"{name}.traineddata")], log)
 
-    # Score both models on the held-out lines in every dataset font.
+    # Held-out check after training, with the same lines as before.
     results = {"name": name, "model": str(output_dir / f"{name}.traineddata"), "scores": {}}
     for index, (font_path, _) in enumerate(fonts):
         label = font_label(index, font_path)
-        log(f"Rendering {len(control_lines)} held-out lines in {label}")
-        images = render_lines(control_lines, font_path, work / "control" / label,
-                              font_size, prefix="ctrl")
+        images = control_images[label]
         report(log, "score", label, 0, len(images), done, total)
-        log(f"Scoring {label}: before training, then after")
-        baseline = score_set(images, "eng", system_tessdata)
-        trained = score_set(images, name, output_dir)
-        done += len(images) * 2
+        trained = score_and_log(label, images, name, output_dir, "after training", log)
+        done += len(images)
         report(log, "score", label, len(images), len(images), done, total)
-        results["scores"][label] = {"baseline": baseline, "trained": trained}
-        log(f"{label}: before {baseline['exact']}/{len(images)} exact, "
-            f"after {trained['exact']}/{len(images)} exact")
+        results["scores"][label] = {"baseline": baseline_scores[label], "trained": trained}
     return results

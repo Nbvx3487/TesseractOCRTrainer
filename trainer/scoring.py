@@ -33,6 +33,7 @@ def score_set(image_paths, lang, tessdata_dir):
     total_chars = 0
     total_errors = 0
     misses = []
+    lines = []
     for image in image_paths:
         image = Path(image)
         truth = image.with_suffix(".gt.txt").read_text(encoding="utf-8").strip()
@@ -40,7 +41,9 @@ def score_set(image_paths, lang, tessdata_dir):
         distance = edit_distance(got, truth)
         total_errors += distance
         total_chars += max(len(truth), 1)
-        if got == truth:
+        passed = got == truth
+        lines.append({"expected": truth, "got": got, "pass": passed})
+        if passed:
             exact += 1
         elif len(misses) < 5:
             misses.append({"expected": truth, "got": got})
@@ -49,4 +52,5 @@ def score_set(image_paths, lang, tessdata_dir):
         "total": len(image_paths),
         "cer": round(total_errors / max(total_chars, 1), 4),
         "misses": misses,
+        "lines": lines,
     }
