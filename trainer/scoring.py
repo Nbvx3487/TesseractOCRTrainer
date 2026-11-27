@@ -27,7 +27,7 @@ def run_tesseract(image_path, lang, tessdata_dir):
     return " ".join(result.stdout.split())
 
 
-def score_set(image_paths, lang, tessdata_dir):
+def score_set(image_paths, lang, tessdata_dir, on_line=None):
     """Return a dict with exact-match count, total, mean CER, and the first few misses."""
     exact = 0
     total_chars = 0
@@ -47,6 +47,8 @@ def score_set(image_paths, lang, tessdata_dir):
             exact += 1
         elif len(misses) < 5:
             misses.append({"expected": truth, "got": got})
+        if on_line:
+            on_line(len(lines), len(image_paths))
     return {
         "exact": exact,
         "total": len(image_paths),

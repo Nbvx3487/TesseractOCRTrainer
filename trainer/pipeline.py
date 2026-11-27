@@ -95,7 +95,11 @@ def report(log, stage, label, current, count, done, total):
 
 def score_and_log(label, images, lang, tessdata_dir, when, log):
     """Score the held-out lines and log each line as PASS or FAIL."""
-    scores = score_set(images, lang, tessdata_dir)
+    def on_line(checked, total):
+        if checked % 10 == 0 or checked == total:
+            log(f"  checked {checked}/{total} lines in {label} ({when})")
+
+    scores = score_set(images, lang, tessdata_dir, on_line=on_line)
     log(f"{label} {when}: {scores['exact']}/{scores['total']} lines pass, CER {scores['cer']}")
     for line in scores["lines"]:
         if line["pass"]:
@@ -174,6 +178,8 @@ def train_font(name, fonts, corpus, data_root, log, font_size=32, iterations=400
             lstmf_list.extend([entry] * weight)
             done += 1
             report(log, "prepare", label, number, len(tifs), done, total)
+            if number % 20 == 0 or number == len(tifs):
+                log(f"  prepared {number}/{len(tifs)} lines in {label}")
         log(f"Prepared {len(tifs)} lines in {label}")
 
     list_file = work / "train_list.txt"
