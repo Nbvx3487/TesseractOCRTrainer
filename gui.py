@@ -292,6 +292,7 @@ class MainWindow(QWidget):
         self.run_log = None
         self.run_stamp = None
         self.model_dir = None
+        self.accepting = False  # True only while a run is shown; late output is ignored
         self.setAcceptDrops(True)
 
         self._build_controls()
@@ -680,6 +681,7 @@ class MainWindow(QWidget):
             return
 
         name = self.name.text().strip()
+        self.accepting = True
         self.log.clear()
         self.results.setRowCount(0)
         self.current_bar.setValue(0)
@@ -722,20 +724,41 @@ class MainWindow(QWidget):
 
     def on_primary(self):
         if self.worker is not None and self.worker.isRunning():
-            self.stop_training()
-        else:
-            self.start_training()
+            if not self.worker.stopped:
+                self.stop_training()
+            return
+        self.start_training()
 
     def stop_training(self):
+        if self.worker is None or not self.worker.isRunning():
+            return
+        self.status.setText("Stopping...")
+        self.worker.stop()
+        self.finish_stopped()
+
+    def finish_stopped(self):
+        """Close the run now. The trainer's remaining output is ignored from here on."""
+        self.record("interrupted by a user")
+        if self.run_log:
+            self.run_log.close()
+            self.run_log = None
+        self.accepting = False
+        self.set_running(False)
+        self.status.setText("Training stopped. Nothing was saved.")
+
+    def closeEvent(self, event):
         if self.worker is not None and self.worker.isRunning():
-            self.status.setText("Stopping...")
             self.worker.stop()
+            self.worker.wait(5000)
+        event.accept()
 
     def set_running(self, on):
         self.primary.setText("Stop training" if on else "adjust the font")
 
     def show_progress(self, info):
         """Update both progress bars from a PROGRESS line of the trainer."""
+        if not self.accepting:
+            return
         total = max(info["total"], 1)
         overall = int(100 * info["done"] / total)
         count = max(info["count"], 1)
@@ -774,6 +797,8 @@ class MainWindow(QWidget):
         self.record(f"Run started: {self.run_stamp}")
 
     def record(self, text):
+        if not self.accepting:
+            return
         self.log.appendPlainText(text)
         if self.run_log:
             self.run_log.write(text + "\n")
@@ -804,6 +829,8 @@ class MainWindow(QWidget):
     # ----- results -----
 
     def show_results(self, result):
+        if not self.accepting:
+            return
         self.set_running(False)
         (LOG_DIR / f"{self.run_stamp}.json").write_text(
             json.dumps(result, indent=2), encoding="utf-8")
@@ -823,6 +850,7 @@ class MainWindow(QWidget):
         lines.append(f"Model saved to: {model}")
         self.record("\n".join(lines))
         self.close_run_log()
+        self.accepting = False
         self.status.setText("Done. The model is saved. Results are in the table below.")
 
     def _add_result_row(self, font, before, after):
@@ -835,17 +863,16 @@ class MainWindow(QWidget):
             self.results.setItem(row, column, QTableWidgetItem(value))
 
     def show_failure(self, detail):
+        if not self.accepting:
+            return
         self.set_running(False)
         if detail == "Training stopped.":
-            self.status.setText("Training stopped. Nothing was saved.")
-            self.record("interrupted by a user")
-            if self.run_log:
-                self.run_log.close()
-                self.run_log = None
+            self.finish_stopped()
             return
         self.status.setText("Training failed. See the log below.")
         self.record(f"\nFAILED: {detail}")
         self.close_run_log()
+        self.accepting = False
 
 
 def main():
