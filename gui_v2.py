@@ -18,6 +18,7 @@ import os
 
 os.environ.setdefault("QT_OPENGL", "software")
 
+import difflib
 import json
 import random
 import re
@@ -26,6 +27,7 @@ import sys
 import threading
 import time
 import traceback
+from collections import Counter
 from datetime import datetime
 from pathlib import Path
 
@@ -35,9 +37,11 @@ except ImportError:  # not on Windows, so the theme cannot be read
     winreg = None
 
 from PySide6.QtCore import QThread, QTimer, Qt, Signal
+from PySide6.QtGui import QColor, QPainter, QPen
 from PySide6.QtNetwork import QLocalServer, QLocalSocket
 from PySide6.QtWidgets import (
-    QAbstractItemView, QApplication, QButtonGroup, QCheckBox, QFileDialog, QFormLayout,
+    QAbstractItemView, QApplication, QButtonGroup, QCheckBox, QComboBox, QFileDialog,
+    QFormLayout, QGridLayout,
     QFrame, QHBoxLayout, QHeaderView, QLabel, QLineEdit, QListWidget, QListWidgetItem,
     QMainWindow, QMessageBox, QPlainTextEdit, QProgressBar, QPushButton, QRadioButton,
     QSpinBox, QStackedWidget, QTableWidget, QTableWidgetItem, QVBoxLayout, QWidget,
@@ -56,7 +60,8 @@ COMMON_FONTS = [
     "arial.ttf", "times.ttf", "cour.ttf", "verdana.ttf", "georgia.ttf",
     "tahoma.ttf", "calibri.ttf", "consola.ttf", "segoeui.ttf",
 ]
-PAGES = ["Training", "Fonts", "Corpus", "Results", "Logs", "Settings"]
+PAGES = ["Training", "Fonts", "Corpus", "Results", "Metrics", "Logs", "Settings"]
+TRAIN_ERROR = re.compile(r"At iteration (\d+)/.*?BCER train=([\d.]+)%")
 INSTANCE_NAME = "TesseractFontTrainer"  # same name as the first window: one copy at a time
 DEFAULT_ITERATIONS = 400
 DEFAULT_FONT_SIZE = 32
@@ -76,6 +81,7 @@ DARK = dict(bg="#1F1F1F", nav="#191919", nav_sel="#2C2C2C", card="#2B2B2B",
             border="#3A3A3A", hover="#353535", text="#FFFFFF", sub="#B8B8B8",
             accent="#4CC2FF", on_accent="#000000", danger="#FF6B6B",
             banner="#253A4E", field="#222222")
+THEME = LIGHT  # set to DARK or LIGHT in main(), before any window is drawn
 
 
 def system_is_dark():
@@ -102,7 +108,7 @@ QLabel#banner {{ background: {t['banner']}; border-radius: 8px; padding: 12px 16
 QFrame#card {{ background: {t['card']}; border: 1px solid {t['border']}; border-radius: 10px; }}
 QListWidget#nav {{ background: {t['nav']}; border: none; padding: 12px 8px; outline: none; }}
 QListWidget#nav::item {{ padding: 10px 14px; border-radius: 6px; margin: 2px 0; }}
-QListWidget#nav::item:selected {{ background: {t['nav_sel']}; }}
+QListWidget#nav::item:selected {{ background: {t['nav_sel']}; color: {t['text']}; }}
 QListWidget#nav::item:hover {{ background: {t['hover']}; }}
 QListWidget {{ background: {t['field']}; border: 1px solid {t['border']}; border-radius: 6px; }}
 QPushButton {{ background: {t['card']}; border: 1px solid {t['border']}; border-radius: 6px; padding: 7px 16px; }}
@@ -308,6 +314,181 @@ def page_header(title, subtitle):
     return box
 
 
+def palette(index):
+    colors = [THEME["accent"], "#3FB950", THEME["danger"], "#F2A33A", THEME["sub"]]
+    return colors[index % len(colors)]
+
+
+class Chart(QWidget):
+    """A small chart drawn with Qt painting: grouped bars, or one line per series."""
+
+    def __init__(self, title, parent=None):
+        super().__init__(parent)
+        self.title = title
+        self.mode = "empty"
+        self.rows = []
+        self.names = []
+        self.colors = []
+        self.series = []
+        self.y_min, self.y_max = 0.0, 100.0
+        self.y_suffix = "%"
+        self.x_suffix = ""
+        self.setMinimumHeight(240)
+        self.setMinimumWidth(320)
+
+    def set_bars(self, names, rows, colors=None):
+        self.mode = "bars"
+        self.names = names
+        self.rows = rows
+        self.colors = colors or [THEME["sub"], THEME["accent"]]
+        self.update()
+
+    def set_lines(self, series, y_max=100.0, x_suffix=""):
+        self.mode = "lines"
+        self.series = series
+        self.y_max = y_max
+        self.x_suffix = x_suffix
+        self.update()
+
+    def clear(self):
+        self.mode = "empty"
+        self.update()
+
+    def paintEvent(self, event):
+        painter = QPainter(self)
+        painter.setRenderHint(QPainter.RenderHint.Antialiasing)
+        painter.fillRect(self.rect(), QColor(THEME["card"]))
+        painter.setPen(QColor(THEME["text"]))
+        painter.drawText(12, 22, self.title)
+        if self.mode == "empty":
+            painter.setPen(QColor(THEME["sub"]))
+            painter.drawText(12, 52, "No data yet.")
+            painter.end()
+            return
+
+        left, top = 48, 62
+        right, bottom = self.width() - 14, self.height() - 34
+
+        def to_y(value):
+            span = max(self.y_max - self.y_min, 1e-9)
+            return bottom - (bottom - top) * (value - self.y_min) / span
+
+        for step in range(5):
+            fraction = step / 4
+            y = int(bottom - (bottom - top) * fraction)
+            painter.setPen(QPen(QColor(THEME["border"])))
+            painter.drawLine(left, y, right, y)
+            value = self.y_min + (self.y_max - self.y_min) * fraction
+            painter.setPen(QColor(THEME["sub"]))
+            painter.drawText(4, y + 4, f"{value:.0f}{self.y_suffix}")
+
+        if self.mode == "bars":
+            group = (right - left) / max(len(self.rows), 1)
+            bar_width = max(4, int(group * 0.7 / max(len(self.names), 1)))
+            for row_index, (label, values) in enumerate(self.rows):
+                x0 = left + group * row_index + group * 0.15
+                for series_index, value in enumerate(values):
+                    x = int(x0 + series_index * bar_width)
+                    y = int(to_y(value))
+                    painter.fillRect(x, y, bar_width - 2, bottom - y,
+                                     QColor(self.colors[series_index % len(self.colors)]))
+                    painter.setPen(QColor(THEME["text"]))
+                    painter.drawText(x, y - 4, f"{value:.0f}{self.y_suffix}")
+                painter.setPen(QColor(THEME["sub"]))
+                painter.drawText(int(x0), bottom + 18, label[:16])
+            names = self.names
+            colors = self.colors
+        else:
+            points_all = [point for _, points in self.series for point in points]
+            x_max = max([x for x, _ in points_all] + [1])
+
+            def to_x(x):
+                return left + (right - left) * x / x_max
+
+            for series_index, (_name, points) in enumerate(self.series):
+                color = QColor(palette(series_index))
+                painter.setPen(QPen(color, 2))
+                for (x1, y1), (x2, y2) in zip(points, points[1:]):
+                    painter.drawLine(int(to_x(x1)), int(to_y(y1)), int(to_x(x2)), int(to_y(y2)))
+                painter.setPen(QPen(color, 1))
+                painter.setBrush(color)
+                for x, y in points:
+                    painter.drawEllipse(int(to_x(x)) - 3, int(to_y(y)) - 3, 6, 6)
+                painter.setBrush(Qt.BrushStyle.NoBrush)
+            painter.setPen(QColor(THEME["sub"]))
+            painter.drawText(left, bottom + 18, "0")
+            painter.drawText(right - 80, bottom + 18, f"{x_max:g}{self.x_suffix}")
+            names = [name for name, _ in self.series]
+            colors = [palette(index) for index in range(len(names))]
+
+        x = left
+        for index, text in enumerate(names):
+            painter.fillRect(x, 36, 10, 10, QColor(colors[index]))
+            painter.setPen(QColor(THEME["sub"]))
+            painter.drawText(x + 14, 46, text)
+            x += painter.fontMetrics().horizontalAdvance(text) + 36
+        painter.end()
+
+
+def char_mixups(expected, got):
+    """Count which character was read in place of which, from one wrong line."""
+    pairs = Counter()
+    for tag, i1, i2, j1, j2 in difflib.SequenceMatcher(
+            None, expected, got, autojunk=False).get_opcodes():
+        if tag == "equal":
+            continue
+        left, right = expected[i1:i2], got[j1:j2]
+        for index in range(max(len(left), len(right))):
+            a = left[index] if index < len(left) else "(nothing)"
+            b = right[index] if index < len(right) else "(nothing)"
+            pairs[(a, b)] += 1
+    return pairs
+
+
+def list_result_runs():
+    """Stamps of the finished runs, newest first. Each finished run has a result file."""
+    if not LOG_DIR.exists():
+        return []
+    return [path.stem for path in sorted(LOG_DIR.glob("*.json"), reverse=True)]
+
+
+def load_run(stamp):
+    """Everything the Metrics page shows for one run, read from the files it saved."""
+    result = json.loads((LOG_DIR / f"{stamp}.json").read_text(encoding="utf-8"))
+    name = result.get("name", stamp.split("_", 1)[-1])
+    checks_file = RUNS_DIR / stamp / name / "metrics.json"
+    checks = json.loads(checks_file.read_text(encoding="utf-8")) if checks_file.exists() else []
+    train_error = []
+    log_file = LOG_DIR / f"{stamp}.log"
+    if log_file.exists():
+        for line in log_file.read_text(encoding="utf-8", errors="replace").splitlines():
+            match = TRAIN_ERROR.search(line)
+            if match:
+                train_error.append((int(match.group(1)), float(match.group(2))))
+    mixups = Counter()
+    for scores in result["scores"].values():
+        for entry in scores["trained"].get("lines", []):
+            if not entry.get("pass"):
+                mixups.update(char_mixups(entry["expected"], entry["got"]))
+    return {"result": result, "checks": checks, "train_error": train_error,
+            "mixups": mixups.most_common(15)}
+
+
+def percent(score):
+    return 100.0 * score["exact"] / score["total"] if score["total"] else 0.0
+
+
+def format_time(seconds):
+    if seconds is None:
+        return "estimating..."
+    seconds = int(seconds)
+    if seconds >= 3600:
+        return f"{seconds // 3600} h {(seconds % 3600) // 60:02d} min"
+    if seconds >= 60:
+        return f"{seconds // 60} min {seconds % 60:02d} s"
+    return f"{seconds} s"
+
+
 class MainWindow(QMainWindow):
     def __init__(self):
         super().__init__()
@@ -325,6 +506,7 @@ class MainWindow(QMainWindow):
         self.last_output = 0.0
         self.run_started = 0.0
 
+        self.stage_track = {}  # speed of each step, from the trainer's progress lines
         self.heartbeat = QTimer(self)
         self.heartbeat.timeout.connect(self.heartbeat_tick)
 
@@ -353,6 +535,7 @@ class MainWindow(QMainWindow):
         self.stack.addWidget(self.build_fonts_page())
         self.stack.addWidget(self.build_corpus_page())
         self.stack.addWidget(self.build_results_page())
+        self.stack.addWidget(self.build_metrics_page())
         self.stack.addWidget(self.build_logs_page())
         self.stack.addWidget(self.build_settings_page())
         self.nav.currentRowChanged.connect(self.stack.setCurrentIndex)
@@ -417,6 +600,17 @@ class MainWindow(QMainWindow):
                        self.overall_bar, self.render_label, self.render_bar):
             progress_layout.addWidget(widget)
         layout.addWidget(progress)
+
+        eta, eta_layout = card(
+            "Time estimate",
+            "Rough, from the speed of this run so far. Checkpoint checks are not counted yet.")
+        self.eta_total = QLabel("Starts when you press Start training.")
+        self.eta_render = QLabel()
+        self.eta_prepare = QLabel()
+        self.eta_train = QLabel()
+        for widget in (self.eta_total, self.eta_render, self.eta_prepare, self.eta_train):
+            eta_layout.addWidget(widget)
+        layout.addWidget(eta)
 
         live, live_layout = card("Live log", "Every step is written to data/logs as it happens.")
         self.live_log = QPlainTextEdit()
@@ -536,6 +730,118 @@ class MainWindow(QMainWindow):
         frame_layout.addLayout(row)
         layout.addWidget(frame, 1)
         return page
+
+    def build_metrics_page(self):
+        page = QWidget()
+        layout = QVBoxLayout(page)
+        layout.setSpacing(14)
+        layout.addLayout(page_header(
+            "Metrics", "How well each font is recognised, and how training changed it. "
+                       "Pick any finished run to see its charts."))
+
+        top = QHBoxLayout()
+        self.metrics_run = QComboBox()
+        self.metrics_run.setMinimumWidth(340)
+        self.metrics_run.currentIndexChanged.connect(self.show_selected_metrics)
+        refresh = QPushButton("Refresh")
+        refresh.clicked.connect(lambda: self.refresh_metrics_runs())
+        top.addWidget(QLabel("Run"))
+        top.addWidget(self.metrics_run, 1)
+        top.addWidget(refresh)
+        layout.addLayout(top)
+        self.metrics_note = QLabel("")
+        self.metrics_note.setObjectName("hint")
+        self.metrics_note.setWordWrap(True)
+        layout.addWidget(self.metrics_note)
+
+        grid = QGridLayout()
+        grid.setSpacing(14)
+        self.chart_fonts = Chart("Recognition per font, before and after")
+        self.chart_checks = Chart("Held-out recognition over iterations")
+        self.chart_error = Chart("Training error over iterations")
+        for position, chart in (((0, 0), self.chart_fonts), ((0, 1), self.chart_checks),
+                                ((1, 0), self.chart_error)):
+            frame, frame_layout = card()
+            frame_layout.addWidget(chart)
+            grid.addWidget(frame, *position)
+        mix_frame, mix_layout = card("Most common mix-ups",
+                                     "What the model read instead of the right character.")
+        self.mixup_table = QTableWidget(0, 3)
+        self.mixup_table.setHorizontalHeaderLabels(["Expected", "Read as", "Times"])
+        self.mixup_table.verticalHeader().setVisible(False)
+        self.mixup_table.setEditTriggers(QAbstractItemView.EditTrigger.NoEditTriggers)
+        self.mixup_table.horizontalHeader().setSectionResizeMode(
+            QHeaderView.ResizeMode.Stretch)
+        mix_layout.addWidget(self.mixup_table)
+        grid.addWidget(mix_frame, 1, 1)
+        layout.addLayout(grid, 1)
+        self.refresh_metrics_runs()
+        return page
+
+    def refresh_metrics_runs(self, select=None):
+        """Fill the run list from the finished runs, and pick one."""
+        self.metrics_run.blockSignals(True)
+        self.metrics_run.clear()
+        for stamp in list_result_runs():
+            self.metrics_run.addItem(stamp, stamp)
+        if select is not None:
+            index = self.metrics_run.findData(select)
+            if index >= 0:
+                self.metrics_run.setCurrentIndex(index)
+        self.metrics_run.blockSignals(False)
+        self.show_selected_metrics()
+
+    def show_selected_metrics(self):
+        stamp = self.metrics_run.currentData()
+        if not stamp:
+            for chart in (self.chart_fonts, self.chart_checks, self.chart_error):
+                chart.clear()
+            self.mixup_table.setRowCount(0)
+            self.metrics_note.setText("No finished runs yet. Finished runs show up here.")
+            return
+        try:
+            data = load_run(stamp)
+        except (OSError, ValueError, KeyError) as error:
+            self.metrics_note.setText(f"This run's files could not be read: {error}")
+            return
+
+        result = data["result"]
+        rows = []
+        series = []
+        for label, scores in result["scores"].items():
+            font = label.split("_", 1)[-1]
+            before, after = percent(scores["baseline"]), percent(scores["trained"])
+            rows.append((font, [before, after]))
+            points = [(0, before)]
+            for check in data["checks"]:
+                entry = check["fonts"].get(label)
+                if entry:
+                    points.append((check["iteration"], percent(entry)))
+            if len(points) == 1:
+                last = max([iteration for iteration, _ in data["train_error"]] + [0])
+                points.append((last, after))
+            series.append((font, points))
+        self.chart_fonts.set_bars(["Before", "After"], rows)
+        self.chart_checks.set_lines(series, y_max=100.0, x_suffix=" it")
+        errors = [value for _, value in data["train_error"]]
+        y_max = max(1.0, 1.2 * max(errors)) if errors else 100.0
+        self.chart_error.set_lines([("Training error (BCER)", data["train_error"])],
+                                   y_max=y_max, x_suffix=" it")
+
+        self.mixup_table.setRowCount(0)
+        for (expected, got), count in data["mixups"]:
+            row = self.mixup_table.rowCount()
+            self.mixup_table.insertRow(row)
+            for column, value in enumerate([expected, got, str(count)]):
+                self.mixup_table.setItem(row, column, QTableWidgetItem(value))
+
+        notes = []
+        if not data["checks"]:
+            notes.append("This run has no checkpoint checks, so its curve has only the start "
+                         "and the end.")
+        if not data["train_error"]:
+            notes.append("No training error lines were found in this run's log.")
+        self.metrics_note.setText(" ".join(notes))
 
     def build_logs_page(self):
         page = QWidget()
@@ -815,6 +1121,11 @@ class MainWindow(QMainWindow):
             self.reset_bar(bar)
         self.render_label.hide()
         self.render_bar.hide()
+        self.stage_track = {}
+        self.eta_total.setText("Starting...")
+        self.eta_render.setText("")
+        self.eta_prepare.setText("")
+        self.eta_train.setText("")
         self.set_label_text(self.current_label, "Current font: starting")
         self.set_label_text(self.overall_label, "All fonts: starting")
 
@@ -884,13 +1195,72 @@ class MainWindow(QMainWindow):
         if not self.running:
             return
         now = time.monotonic()
+        self.update_eta()
         if now - self.last_output >= 15:
             self.record(f"Still working: {int(now - self.run_started)} s since the start, "
                         f"{int(now - self.last_output)} s since the last line.")
 
+    def track_stage(self, info):
+        """Remember when each step started and how far it has got, for the time estimate."""
+        stage = info["stage"]
+        now = time.monotonic()
+        track = self.stage_track.get(stage)
+        if track is None or info["current"] < track["c1"]:
+            track = {"t0": now, "c0": info["current"]}
+            self.stage_track[stage] = track
+        track.update(t1=now, c1=info["current"], count=info["count"], label=info["label"])
+
+    def stage_rate(self, stage):
+        track = self.stage_track.get(stage)
+        if not track or track["t1"] - track["t0"] < 2 or track["c1"] <= track["c0"]:
+            return None
+        return (track["c1"] - track["c0"]) / (track["t1"] - track["t0"])
+
+    def stage_left(self, stage):
+        track = self.stage_track.get(stage)
+        if not track:
+            return None
+        if stage == "train":
+            return max(track["count"] - track["c1"], 0)
+        try:
+            index = int(track["label"].split("_", 1)[0])
+        except ValueError:
+            index = 0
+        fonts_after = max(len(self.fonts) - index - 1, 0)
+        return max(track["count"] - track["c1"], 0) + fonts_after * track["count"]
+
+    def update_eta(self):
+        if not self.running:
+            return
+        seconds_total = 0.0
+        notes = []
+        for stage, title in (("render", "Rendering lines"), ("prepare", "Preparing lines"),
+                             ("train", "Training")):
+            left = self.stage_left(stage)
+            rate = self.stage_rate(stage)
+            if left is None:
+                text = f"{title}: not started yet"
+            elif rate is None:
+                text = f"{title}: {left} left, measuring speed..."
+            else:
+                seconds_total += left / rate
+                text = f"{title}: about {format_time(left / rate)} left ({left} left, {rate:.1f} per second)"
+            if stage == "render":
+                self.eta_render.setText(text)
+            elif stage == "prepare":
+                self.eta_prepare.setText(text)
+            else:
+                self.eta_train.setText(text)
+        if self.stage_track.get("train") is None:
+            notes.append("Training time is counted once it starts.")
+        self.eta_total.setText(
+            f"Total left: about {format_time(seconds_total)}. " + " ".join(notes))
+
     def on_progress(self, info):
         if not self.running:
             return
+        self.track_stage(info)
+        self.update_eta()
         if info["stage"] == "render":
             count = max(info["count"], 1)
             self.animate_bar(self.render_bar, info["current"] / count)
@@ -946,6 +1316,7 @@ class MainWindow(QMainWindow):
         self.record(f"Log saved to: {LOG_DIR / (self.run_stamp + '.log')}")
         self.finish_run()
         self.model_label.setText(f"Model: {self.model_dir / (name + '.traineddata')}")
+        self.refresh_metrics_runs(select=self.run_stamp)
         self.open_model.setEnabled(True)
         self.status.setText("Done. The model is saved. See the Results page.")
 
@@ -1000,7 +1371,9 @@ class MainWindow(QMainWindow):
 def main():
     app = QApplication(sys.argv)
     app.setStyle("Fusion")
-    app.setStyleSheet(stylesheet(DARK if system_is_dark() else LIGHT))
+    global THEME
+    THEME = DARK if system_is_dark() else LIGHT
+    app.setStyleSheet(stylesheet(THEME))
 
     if another_copy_is_open():
         QMessageBox.information(None, "Already open",
