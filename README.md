@@ -51,8 +51,13 @@ Load that file with **Load text file...** in the window.
 `gui.py` is one page laid out like PowerToys settings. The left panel holds the resource
 limits: memory (written to `.wslconfig` for WSL), CPU threads (passed to training as
 `OMP_THREAD_LIMIT`), and GPU, which is not used because Tesseract training runs on the CPU.
-The right side holds Fonts, Corpus, Run (model name, iterations, font size, generated lines,
-and the **adjust the font** button), and Log. It follows the Windows light or dark setting.
+The right side has the **adjust the font** button at the top, then Fonts, Corpus, Training
+(model name, iterations, font size), Results (before and after scores for each font, with an
+**Open model folder** button), and Log. It follows the Windows light or dark setting.
+
+Only one copy of the window can run at a time. A second copy shows a message and closes.
+Each run writes its training files to its own folder under `data/runs/`, so runs never
+share files.
 
 Changing the memory or CPU limit restarts WSL before the next run, which stops any WSL
 program that is running. The window asks first.
