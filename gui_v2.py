@@ -37,10 +37,10 @@ except ImportError:  # not on Windows, so the theme cannot be read
 from PySide6.QtCore import QThread, QTimer, Qt, Signal
 from PySide6.QtNetwork import QLocalServer, QLocalSocket
 from PySide6.QtWidgets import (
-    QAbstractItemView, QApplication, QCheckBox, QFileDialog, QFormLayout, QFrame,
-    QHBoxLayout, QHeaderView, QLabel, QLineEdit, QListWidget, QListWidgetItem,
-    QMainWindow, QMessageBox, QPlainTextEdit, QProgressBar, QPushButton, QSpinBox,
-    QStackedWidget, QTableWidget, QTableWidgetItem, QVBoxLayout, QWidget,
+    QAbstractItemView, QApplication, QButtonGroup, QCheckBox, QFileDialog, QFormLayout,
+    QFrame, QHBoxLayout, QHeaderView, QLabel, QLineEdit, QListWidget, QListWidgetItem,
+    QMainWindow, QMessageBox, QPlainTextEdit, QProgressBar, QPushButton, QRadioButton,
+    QSpinBox, QStackedWidget, QTableWidget, QTableWidgetItem, QVBoxLayout, QWidget,
 )
 
 REPO = Path(__file__).resolve().parent
@@ -60,9 +60,11 @@ PAGES = ["Training", "Fonts", "Corpus", "Results", "Logs", "Settings"]
 INSTANCE_NAME = "TesseractFontTrainer"  # same name as the first window: one copy at a time
 DEFAULT_ITERATIONS = 400
 DEFAULT_FONT_SIZE = 32
-DEFAULT_GENERATED_LINES = 200
+DEFAULT_GENERATED_LINES = 1000
 DEFAULT_MEMORY_GB = 16
 DEFAULT_THREADS = 2
+DEFAULT_SCORING_THREADS = 1
+CHECK_EVERY = 50  # iterations between checkpoint checks
 MIN_LINES = 10
 BAR_STEPS = 1000  # progress bars move in tenths of a percent
 
@@ -568,29 +570,92 @@ class MainWindow(QMainWindow):
         layout = QVBoxLayout(page)
         layout.setSpacing(14)
         layout.addLayout(page_header(
-            "Settings", "Limits for the training run. They apply the next time you start training."))
+            "Settings", "Limits and checks for the training run. They apply the next time you "
+                        "start training."))
 
-        frame, frame_layout = card("Resource limits")
+        frame, frame_layout = card("Checkpoint checks",
+                                   f"Every {CHECK_EVERY} iterations the saved model is scored on "
+                                   "the held-out lines, so you can see the recognition rate improve.")
+        self.series_mode = QRadioButton("In series: stop, check, then resume (exact, slower)")
+        self.parallel_mode = QRadioButton("In parallel: check while training continues (faster)")
+        self.series_mode.setChecked(True)
+        mode_group = QButtonGroup(self)
+        mode_group.addButton(self.series_mode)
+        mode_group.addButton(self.parallel_mode)
+        frame_layout.addWidget(self.series_mode)
+        frame_layout.addWidget(self.parallel_mode)
+        layout.addWidget(frame)
+
+        limits, limits_layout = card("Resource limits")
         form = QFormLayout()
         self.memory_gb = QSpinBox()
         self.memory_gb.setRange(4, 128)
         self.memory_gb.setSuffix(" GB")
         self.memory_gb.setValue(DEFAULT_MEMORY_GB)
-        self.cpu_threads = QSpinBox()
-        self.cpu_threads.setRange(1, os.cpu_count() or 1)
-        self.cpu_threads.setValue(min(DEFAULT_THREADS, os.cpu_count() or 1))
+        cpu_count = os.cpu_count() or 1
+        self.series_threads = QSpinBox()
+        self.series_threads.setRange(1, cpu_count)
+        self.series_threads.setValue(min(DEFAULT_THREADS, cpu_count))
+        self.training_threads = QSpinBox()
+        self.training_threads.setRange(1, cpu_count)
+        self.training_threads.setValue(min(DEFAULT_THREADS, cpu_count))
+        self.scoring_threads = QSpinBox()
+        self.scoring_threads.setRange(1, cpu_count)
+        self.scoring_threads.setValue(min(DEFAULT_SCORING_THREADS, cpu_count))
+        self.total_threads_label = QLabel()
+        self.threads_warning = QLabel()
+        self.threads_warning.setObjectName("hint")
         gpu = QLabel("Not used. Tesseract training runs on the CPU only.")
         gpu.setObjectName("hint")
         form.addRow("Memory limit for WSL", self.memory_gb)
-        form.addRow("CPU threads", self.cpu_threads)
+        self.series_row_label = QLabel("Max CPU threads for training/scoring")
+        form.addRow(self.series_row_label, self.series_threads)
+        self.training_row_label = QLabel("Max CPU threads for training")
+        form.addRow(self.training_row_label, self.training_threads)
+        self.scoring_row_label = QLabel("Max CPU threads for scoring")
+        form.addRow(self.scoring_row_label, self.scoring_threads)
+        form.addRow("Total CPU threads", self.total_threads_label)
         form.addRow("GPU", gpu)
-        frame_layout.addLayout(form)
-        frame_layout.addWidget(QLabel(
+        limits_layout.addLayout(form)
+        limits_layout.addWidget(self.threads_warning)
+        limits_layout.addWidget(QLabel(
             "If the memory or CPU limit changes, WSL restarts before the run, which stops any "
             "WSL program that is running. The window asks first."))
-        layout.addWidget(frame)
+        layout.addWidget(limits)
         layout.addStretch(1)
+
+        self.series_mode.toggled.connect(self.update_thread_rows)
+        for spin in (self.series_threads, self.training_threads, self.scoring_threads):
+            spin.valueChanged.connect(self.update_thread_rows)
+        self.update_thread_rows()
         return page
+
+    def is_parallel(self):
+        return self.parallel_mode.isChecked()
+
+    def total_threads(self):
+        """The hard cap: in series mode one counter, in parallel mode training plus scoring."""
+        if self.is_parallel():
+            return self.training_threads.value() + self.scoring_threads.value()
+        return self.series_threads.value()
+
+    def update_thread_rows(self):
+        parallel = self.is_parallel()
+        self.series_row_label.setVisible(not parallel)
+        self.series_threads.setVisible(not parallel)
+        self.training_row_label.setVisible(parallel)
+        self.training_threads.setVisible(parallel)
+        self.scoring_row_label.setVisible(parallel)
+        self.scoring_threads.setVisible(parallel)
+        total = self.total_threads()
+        self.total_threads_label.setText(str(total))
+        cpu_count = os.cpu_count() or 1
+        if total > cpu_count:
+            self.threads_warning.setText(
+                f"The total is above the {cpu_count} processors this PC has. The run will be slower "
+                "and the PC may become unstable under load.")
+        else:
+            self.threads_warning.setText("")
 
     # ----- fonts -----
 
@@ -676,7 +741,7 @@ class MainWindow(QMainWindow):
         Returns False if the user cancels."""
         config = Path(os.environ.get("USERPROFILE", str(Path.home()))) / ".wslconfig"
         current = config.read_text(encoding="utf-8") if config.exists() else ""
-        new = wslconfig_text(current, self.memory_gb.value(), self.cpu_threads.value())
+        new = wslconfig_text(current, self.memory_gb.value(), self.total_threads())
         if new == current:
             return True
         answer = QMessageBox.question(
@@ -713,6 +778,11 @@ class MainWindow(QMainWindow):
         if problem:
             QMessageBox.warning(self, "Cannot start", problem)
             return
+        if self.is_parallel():
+            QMessageBox.information(
+                self, "Not built yet",
+                "The parallel checks are not built yet. Choose 'In series' for now.")
+            return
         if not self.apply_wsl_limits():
             return
 
@@ -733,6 +803,7 @@ class MainWindow(QMainWindow):
             "--data-root", to_wsl(RUNS_DIR / self.run_stamp),
             "--iterations", str(self.iterations.value()),
             "--font-size", str(self.font_size.value()),
+            "--check-every", str(CHECK_EVERY),
         ]
 
         self.live_log.clear()
@@ -761,7 +832,7 @@ class MainWindow(QMainWindow):
         for item in self.fonts:
             self.record(f"Font: {item['path']} (weight {item['weight']})")
 
-        self.worker = TrainWorker(args, self.cpu_threads.value())
+        self.worker = TrainWorker(args, self.total_threads())
         self.worker.line.connect(self.on_line)
         self.worker.progress.connect(self.on_progress)
         self.worker.done.connect(self.on_done)

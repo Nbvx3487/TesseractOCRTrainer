@@ -21,6 +21,8 @@ def main(argv=None):
     parser.add_argument("--data-root", required=True, help="Folder for run outputs")
     parser.add_argument("--iterations", type=int, default=400, help="Training iterations")
     parser.add_argument("--font-size", type=int, default=32, help="Rendered line size in px")
+    parser.add_argument("--check-every", type=int, default=0,
+                        help="Score the checkpoint on held-out lines every N iterations (0 = off)")
     args = parser.parse_args(argv)
 
     def log(message):
@@ -40,6 +42,7 @@ def main(argv=None):
             log=log,
             font_size=args.font_size,
             iterations=args.iterations,
+            check_every=args.check_every,
         )
     except Exception as error:
         print(f"ERROR: {error}", flush=True)

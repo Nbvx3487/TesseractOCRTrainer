@@ -113,11 +113,13 @@ def font_label(index, font_path):
     return f"{index}_{Path(font_path).stem}"
 
 
-def train_font(name, fonts, corpus, data_root, log, font_size=32, iterations=400):
+def train_font(name, fonts, corpus, data_root, log, font_size=32, iterations=400, check_every=0):
     """Run the full pipeline.
 
     fonts: list of (font_path, weight) pairs. Weight is an integer, 1 or more.
-    Returns a dict with per-font scores and the path to the trained model.
+    check_every: if above 0, training stops every this many iterations, the checkpoint is
+    scored on the held-out lines, and training resumes from it (series mode).
+    Returns a dict with per-font scores, the checks, and the path to the trained model.
     """
     if not fonts:
         raise ValueError("Add at least one font to the dataset.")
@@ -200,12 +202,57 @@ def train_font(name, fonts, corpus, data_root, log, font_size=32, iterations=400
                    done + current, total)
 
     report(log, "train", "all fonts", 0, iterations, done, total)
-    run(["lstmtraining",
-         "--model_output", str(checkpoints / name),
-         "--continue_from", str(base_dir / "eng.lstm"),
-         "--traineddata", str(base_dir / "eng.traineddata"),
-         "--train_listfile", str(list_file),
-         "--max_iterations", str(iterations)], log, on_line=on_training_line)
+    state = {"last": 0, "finished": False}
+
+    def on_chunk_line(line):
+        match = ITERATION_LINE.search(line)
+        if match:
+            state["last"] = int(match.group(1))
+        if "Finished!" in line:
+            state["finished"] = True
+        on_training_line(line)
+
+    def run_check(iteration):
+        """Turn the checkpoint into a model and score it on the held-out lines."""
+        check_dir = work / "checks" / f"iteration_{iteration:04d}"
+        check_dir.mkdir(parents=True, exist_ok=True)
+        run(["lstmtraining", "--stop_training",
+             "--continue_from", str(checkpoints / f"{name}_checkpoint"),
+             "--traineddata", str(base_dir / "eng.traineddata"),
+             "--model_output", str(check_dir / f"{name}.traineddata")], log, quiet=True)
+        entry = {"iteration": iteration, "fonts": {}}
+        for index, (font_path, _) in enumerate(fonts):
+            label = font_label(index, font_path)
+            score = score_set(control_images[label], name, check_dir)
+            entry["fonts"][label] = {"exact": score["exact"], "total": score["total"],
+                                     "cer": score["cer"]}
+            log(f"Check at iteration {iteration}: {label} {score['exact']}/{score['total']} "
+                f"lines pass, CER {score['cer']}")
+        return entry
+
+    checks = []
+    if check_every <= 0:
+        run(["lstmtraining",
+             "--model_output", str(checkpoints / name),
+             "--continue_from", str(base_dir / "eng.lstm"),
+             "--traineddata", str(base_dir / "eng.traineddata"),
+             "--train_listfile", str(list_file),
+             "--max_iterations", str(iterations)], log, on_line=on_training_line)
+    else:
+        source = base_dir / "eng.lstm"
+        target = 0
+        while target < iterations and not state["finished"]:
+            target = min(target + check_every, iterations)
+            log(f"Training to iteration {target} of {iterations}")
+            run(["lstmtraining",
+                 "--model_output", str(checkpoints / name),
+                 "--continue_from", str(source),
+                 "--traineddata", str(base_dir / "eng.traineddata"),
+                 "--train_listfile", str(list_file),
+                 "--max_iterations", str(target)], log, on_line=on_chunk_line)
+            source = checkpoints / f"{name}_checkpoint"
+            checks.append(run_check(state["last"] or target))
+            (work / "metrics.json").write_text(json.dumps(checks, indent=2), encoding="utf-8")
     done += iterations
 
     output_dir = work / "model"
@@ -216,7 +263,8 @@ def train_font(name, fonts, corpus, data_root, log, font_size=32, iterations=400
          "--model_output", str(output_dir / f"{name}.traineddata")], log)
 
     # Held-out check after training, with the same lines as before.
-    results = {"name": name, "model": str(output_dir / f"{name}.traineddata"), "scores": {}}
+    results = {"name": name, "model": str(output_dir / f"{name}.traineddata"), "scores": {},
+               "checks": checks}
     for index, (font_path, _) in enumerate(fonts):
         label = font_label(index, font_path)
         images = control_images[label]
