@@ -56,7 +56,7 @@ DEFAULT_ITERATIONS = 400
 DEFAULT_FONT_SIZE = 32
 DEFAULT_GENERATED_LINES = 200
 DEFAULT_MEMORY_GB = 16
-DEFAULT_THREADS = 8
+DEFAULT_THREADS = 4
 
 # Colours follow the Windows settings look: light or dark, with a blue accent.
 LIGHT = dict(bg="#F3F3F3", card="#FFFFFF", border="#E5E5E5", hover="#F5F5F5",
