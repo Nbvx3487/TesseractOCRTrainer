@@ -692,14 +692,23 @@ class MainWindow(QMainWindow):
         frame_layout.addLayout(buttons)
 
         cache = QHBoxLayout()
-        self.cache_label = QLabel()
-        self.cache_label.setWordWrap(True)
-        clear_cache = QPushButton("Clear render cache")
-        clear_cache.clicked.connect(self.clear_render_cache)
-        cache.addWidget(self.cache_label, 1)
-        cache.addWidget(clear_cache, 0, Qt.AlignmentFlag.AlignVCenter)
+        cache_title = QLabel("Render cache")
+        self.cache_size = QLineEdit()
+        self.cache_size.setReadOnly(True)
+        self.cache_size.setFixedWidth(160)
+        self.cache_size.setToolTip(str(RENDER_CACHE))
+        self.clear_cache_button = QPushButton("Clear render cache")
+        self.clear_cache_button.clicked.connect(self.clear_render_cache)
+        cache.addWidget(cache_title)
+        cache.addWidget(self.cache_size)
+        cache.addStretch(1)
+        cache.addWidget(self.clear_cache_button)
         frame_layout.addLayout(cache)
         self.refresh_cache_label()
+        # Keeps the size current while a run adds lines to the cache.
+        self.cache_timer = QTimer(self)
+        self.cache_timer.timeout.connect(self.refresh_cache_label)
+        self.cache_timer.start(2000)
         layout.addWidget(frame, 1)
         return page
 
@@ -714,17 +723,10 @@ class MainWindow(QMainWindow):
 
     def refresh_cache_label(self):
         size = self.render_cache_size()
-        if size == 0:
-            text = "Render cache: empty. Rendered lines are saved here after the first run of a font."
-        else:
-            text = (f"Render cache: {format_size(size)} in {RENDER_CACHE}. "
-                    "Reused when the same font is trained again.")
-        self.cache_label.setText(text)
+        self.cache_size.setText(format_size(size) if size else "Empty")
 
     def clear_render_cache(self):
         if self.running:
-            QMessageBox.information(self, "Training is running",
-                                    "Wait for the run to finish before clearing the cache.")
             return
         answer = QMessageBox.question(
             self, "Clear render cache",
@@ -1250,6 +1252,7 @@ class MainWindow(QMainWindow):
         self.set_label_text(self.overall_label, "All fonts: starting")
 
         self.running = True
+        self.clear_cache_button.setEnabled(False)
         self.run_started = self.last_output = time.monotonic()
         self.heartbeat.start(15000)
         self.set_primary_mode(stop=True)
@@ -1285,6 +1288,7 @@ class MainWindow(QMainWindow):
     def finish_run(self):
         """Close the run: the log is saved and the window goes back to idle."""
         self.running = False
+        self.clear_cache_button.setEnabled(True)
         self.refresh_cache_label()
         self.update_prestart_estimate()
         self.heartbeat.stop()
