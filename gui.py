@@ -101,6 +101,8 @@ QPushButton#primary {{ background: {t['accent']}; color: {t['on_accent']}; borde
 QPushButton#primary:disabled {{ background: {t['border']}; }}
 QLineEdit, QPlainTextEdit, QTableWidget, QSpinBox {{ background: {t['card']}; border: 1px solid {t['border']}; border-radius: 4px; padding: 4px; }}
 QTableWidget {{ gridline-color: {t['border']}; }}
+QProgressBar {{ background: {t['card']}; border: 1px solid {t['border']}; border-radius: 4px; text-align: center; color: {t['text']}; min-height: 22px; }}
+QProgressBar::chunk {{ background: {t['accent']}; border-radius: 3px; }}
 QHeaderView::section {{ background: {t['card']}; color: {t['subtext']}; border: none; border-bottom: 1px solid {t['border']}; padding: 6px; font-weight: 600; }}
 """
 
