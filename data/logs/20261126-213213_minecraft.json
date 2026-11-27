@@ -1,0 +1,30 @@
+{
+  "model": "/mnt/c/Users/Nbvx Teo/Documents/_Programming/GitHub/TesseractOCRTrainer/data/runs/20261126-213213_minecraft/minecraft/model/minecraft.traineddata",
+  "name": "minecraft",
+  "scores": {
+    "0_arial": {
+      "baseline": {
+        "cer": 0.1627,
+        "exact": 3,
+        "misses": [
+          {
+            "expected": "java.lang.NoClassDefFoundError: org.spongepowered.mixin/cloth-config",
+            "got": "org spongepowered.mixin/eloth-config"
+          }
+        ],
+        "total": 4
+      },
+      "trained": {
+        "cer": 0.177,
+        "exact": 3,
+        "misses": [
+          {
+            "expected": "java.lang.NoClassDefFoundError: org.spongepowered.mixin/cloth-config",
+            "got": "org Spongepowered mixinlcloth-confi"
+          }
+        ],
+        "total": 4
+      }
+    }
+  }
+}

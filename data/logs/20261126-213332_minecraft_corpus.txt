@@ -1,0 +1,20 @@
+Set JVM argument -Xmx4096M for 1.19.2 Modded
+Deleted 121 old log files from E:\Games\MultiMC\logs
+Connection timed out while reading packet 250
+oculus 5.4.0 is already installed in 1.20.1 6June2026Wiped9Nov2026
+Retrying download of ironchests: HTTP status 404
+Failed to load mod alexsmobs 2.0.0-beta.4: missing dependency org.spongepowered.mixin
+Mod terralith requires Minecraft 47.4.10 but found 2.0.0-beta.4
+Saved world settings to disk successfully
+Chunk loading took 191 ms in dimension minecraft:overworld
+Connection timed out while reading packet 139
+Server started on port 8080 after 164 seconds
+carpet 1.16.5 is already installed in 1.21 Survival
+Skipping create: incompatible with forge 0.15.3
+Error loading class net.minecraftforge.fmlcore.glassseam-fix in glassseam-fix-1.20.1.jar
+[INFO] Registered 213 recipes from oculus
+Crash report saved to D:\Games\MultiMC\crash-reports\crash-2026-11-15.txt
+Crash report saved to E:\Games\MultiMC\crash-reports\crash-2026-11-10.txt
+Launching 1.20.1 6June2026Wiped9Nov2026 with 2048 MB of memory
+Server started on port 25566 after 5 seconds
+Loading mod list from E:\Games\MultiMC\instances\Server Backup 2026\mods

@@ -1,0 +1,20 @@
+Error loading class com.google.guava.cloth-config in cloth-config-1.16.5.jar
+Skipping terralith: incompatible with forge 2.0.0-beta.4
+Saved world settings to disk successfully
+Loading mod list from D:\Games\MultiMC\instances\1.16.5 Create\mods
+[INFO] Registered 700 recipes from terralith
+Chunk loading took 209 ms in dimension minecraft:overworld
+Connection timed out while reading packet 227
+Crash report saved to D:\Games\MultiMC\crash-reports\crash-2026-11-10.txt
+Error loading class com.google.guava.jei in jei-1.16.5.jar
+java.lang.NoClassDefFoundError: org.spongepowered.mixin/cloth-config
+Unable to open E:\Games\MultiMC\libraries\org\apache\logging\log4j\2.0.0-beta.4\glassseam-fix-2.0.0-beta.4.jar
+Crash report saved to C:\Games\MultiMC\crash-reports\crash-2026-11-29.txt
+Chunk loading took 117 ms in dimension minecraft:overworld
+Skipping ironchests: incompatible with forge 47.2.0
+Chunk loading took 182 ms in dimension minecraft:overworld
+Could not find net.fabricmc.loader for waystones, skipping
+Loading mod list from D:\Games\MultiMC\instances\1.20.4 Fabric\mods
+Downloaded modmenu-1.21.jar in 121 seconds
+terralith 1.21 is already installed in 1.16.5 Create
+Launching 1.16.5 Create with 2048 MB of memory

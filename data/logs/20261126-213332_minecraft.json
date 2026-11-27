@@ -1,0 +1,38 @@
+{
+  "model": "/mnt/c/Users/Nbvx Teo/Documents/_Programming/GitHub/TesseractOCRTrainer/data/runs/20261126-213332_minecraft/minecraft/model/minecraft.traineddata",
+  "name": "minecraft",
+  "scores": {
+    "0_arial": {
+      "baseline": {
+        "cer": 0.3478,
+        "exact": 2,
+        "misses": [
+          {
+            "expected": "Loading mod list from E:\\Games\\MultiMC\\instances\\Server Backup 2026\\mods",
+            "got": "\\Gamec\\MultiM(C\\netanoes\\Server Backup 2026\\mods"
+          },
+          {
+            "expected": "Error loading class net.minecraftforge.fmlcore.glassseam-fix in glassseam-fix-1.20.1.jar",
+            "got": "retina noe gassean- in glassseam-"
+          }
+        ],
+        "total": 4
+      },
+      "trained": {
+        "cer": 0.3597,
+        "exact": 2,
+        "misses": [
+          {
+            "expected": "Loading mod list from E:\\Games\\MultiMC\\instances\\Server Backup 2026\\mods",
+            "got": "CamoaMUMO\\matanses\\Server Backup 2026\\mods"
+          },
+          {
+            "expected": "Error loading class net.minecraftforge.fmlcore.glassseam-fix in glassseam-fix-1.20.1.jar",
+            "got": "pt mineratrg rire gasssea in glassseam-"
+          }
+        ],
+        "total": 4
+      }
+    }
+  }
+}
