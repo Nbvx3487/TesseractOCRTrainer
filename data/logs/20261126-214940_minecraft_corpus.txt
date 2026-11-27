@@ -1,0 +1,200 @@
+Mixin apply failed for com.google.guava: target class not found
+[WARN] Config file sodium-common.toml is out of date
+Server started on port 8080 after 135 seconds
+Crash report saved to C:\Games\MultiMC\crash-reports\crash-2026-11-17.txt
+The Mod File E:\Games\MultiMC\instances\1.20.1 Forge\.minecraft\mods\alexsmobs.jar has mods that were not found
+Downloaded ironchests-1.19.2.jar in 95 seconds
+Server started on port 8080 after 86 seconds
+java.lang.NoClassDefFoundError: net.minecraftforge.javafmlmod/modmenu
+Launching Server Backup 2026 with 8192 MB of memory
+Saved world settings to disk successfully
+Server started on port 25565 after 46 seconds
+Server started on port 25566 after 166 seconds
+Skipping quark: incompatible with forge 0.15.3
+Launching 1.19.2 Modded with 4096 MB of memory
+Set JVM argument -Xmx2048M for 1.20.1 6June2026Wiped9Nov2026
+Mod mekanism requires Minecraft 47.4.10 but found 47.2.0
+Connection timed out while reading packet 190
+Connection timed out while reading packet 253
+java.lang.NoClassDefFoundError: net.fabricmc.loader/oculus
+[INFO] Registered 160 recipes from waystones
+Failed to load mod cloth-config 47.4.10: missing dependency org.lwjgl.glfw
+java.lang.NoClassDefFoundError: net.minecraftforge.javafmlmod/create
+Found 29 mods, 9 failed to load
+Downloaded ironchests-5.4.0.jar in 185 seconds
+Failed to load mod sodium 3.1.8: missing dependency org.spongepowered.mixin
+java.lang.NoClassDefFoundError: com.electronwizard.config/glassseam-fix
+Deleted 351 old log files from E:\Games\MultiMC\logs
+Error loading class net.minecraftforge.javafmlmod.sodium in sodium-1.21.jar
+Failed to load mod terralith 3.1.8: missing dependency net.minecraftforge.fmlcore
+Skipping biomesoplenty: incompatible with forge 3.1.8
+Missing dependency: com.electronwizard.config version 1.20.4 required by carpet
+Failed to load mod mekanism 0.15.3: missing dependency net.minecraftforge.fmlcore
+Server started on port 25565 after 36 seconds
+Retrying download of quark: HTTP status 403
+Error loading class org.lwjgl.glfw.quark in quark-1.16.5.jar
+Deleted 584 old log files from D:\Games\MultiMC\logs
+Connection timed out while reading packet 19
+Connection timed out while reading packet 185
+java.lang.NoClassDefFoundError: net.minecraftforge.javafmlmod/carpet
+Found 872 mods, 3 failed to load
+Missing dependency: com.google.guava version 1.19.2 required by modmenu
+Server started on port 8080 after 2 seconds
+Crash report saved to D:\Games\MultiMC\crash-reports\crash-2026-11-04.txt
+Loading mod list from D:\Games\MultiMC\instances\1.20.4 Fabric\mods
+Mod xaeros-minimap requires Minecraft 47.4.10 but found 47.2.0
+Loading mod list from E:\Games\MultiMC\instances\1.20.1 6June2026Wiped9Nov2026\mods
+[WARN] Config file glassseam-fix-common.toml is out of date
+Crash report saved to D:\Games\MultiMC\crash-reports\crash-2026-11-20.txt
+The Mod File D:\Games\MultiMC\instances\1.20.1 6June2026Wiped9Nov2026\.minecraft\mods\quark.jar has mods that were not found
+Chunk loading took 46 ms in dimension minecraft:overworld
+[INFO] Registered 565 recipes from applied-energistics-2
+Downloaded mekanism-47.4.10.jar in 192 seconds
+Connection timed out while reading packet 76
+Deleted 870 old log files from C:\Games\MultiMC\logs
+Launching 1.21 Survival with 4096 MB of memory
+Connection timed out while reading packet 189
+Crash report saved to E:\Games\MultiMC\crash-reports\crash-2026-11-08.txt
+Error loading class net.minecraftforge.fmlcore.modmenu in modmenu-1.20.1.jar
+Server started on port 8080 after 113 seconds
+[WARN] Config file biomesoplenty-common.toml is out of date
+applied-energistics-2 5.4.0 is already installed in Server Backup 2026
+Texture pack reloaded with 594 resources
+java.lang.NoClassDefFoundError: net.minecraftforge.fmlcore/jei
+Found 363 mods, 9 failed to load
+Mixin apply failed for org.lwjgl.glfw: target class not found
+supplementaries 5.4.0 is already installed in 1.21 Survival
+Unable to open C:\Games\MultiMC\libraries\net\fabricmc\loader\47.2.0\modmenu-47.2.0.jar
+Retrying download of applied-energistics-2: HTTP status 404
+Could not find com.google.guava for glassseam-fix, skipping
+Unable to open E:\Games\MultiMC\libraries\net\minecraftforge\fmlcore\0.15.3\sodium-0.15.3.jar
+Server started on port 25566 after 163 seconds
+Unable to open D:\Games\MultiMC\libraries\org\apache\logging\log4j\47.2.0\biomesoplenty-47.2.0.jar
+Failed to load mod fabric-api 3.1.8: missing dependency org.apache.logging.log4j
+Launching Server Backup 2026 with 2048 MB of memory
+Server started on port 8080 after 59 seconds
+Missing dependency: org.lwjgl.glfw version 1.21 required by jei
+Found 108 mods, 5 failed to load
+Skipping jei: incompatible with forge 2.0.0-beta.4
+Downloaded xaeros-minimap-47.4.10.jar in 181 seconds
+Missing dependency: net.minecraftforge.fmlcore version 47.4.10 required by applied-energistics-2
+Loading mod list from C:\Games\MultiMC\instances\1.20.4 Fabric\mods
+Crash report saved to C:\Games\MultiMC\crash-reports\crash-2026-11-04.txt
+java.lang.NoClassDefFoundError: net.fabricmc.loader/glassseam-fix
+Set JVM argument -Xmx4096M for 1.20.1 Forge
+Unable to open C:\Games\MultiMC\libraries\com\electronwizard\config\2.0.0-beta.4\xaeros-minimap-2.0.0-beta.4.jar
+Found 428 mods, 1 failed to load
+Retrying download of farmersdelight: HTTP status 500
+Deleted 650 old log files from D:\Games\MultiMC\logs
+Mixin apply failed for org.spongepowered.mixin: target class not found
+glassseam-fix 5.4.0 is already installed in 1.20.1 Forge
+Failed to load mod alexsmobs 47.4.10: missing dependency com.electronwizard.config
+Loading mod list from E:\Games\MultiMC\instances\1.21 Survival\mods
+Deleted 351 old log files from C:\Games\MultiMC\logs
+Missing dependency: net.minecraftforge.javafmlmod version 1.19.2 required by mekanism
+Set JVM argument -Xmx6144M for Server Backup 2026
+Downloaded cloth-config-1.21.jar in 238 seconds
+The Mod File C:\Games\MultiMC\instances\1.16.5 Create\.minecraft\mods\journeymap.jar has mods that were not found
+Chunk loading took 199 ms in dimension minecraft:overworld
+Failed to load mod mekanism 0.15.3: missing dependency com.google.guava
+java.lang.NoClassDefFoundError: org.apache.logging.log4j/modmenu
+java.lang.NoClassDefFoundError: net.minecraftforge.javafmlmod/jei
+Unable to open E:\Games\MultiMC\libraries\net\minecraftforge\javafmlmod\47.4.10\supplementaries-47.4.10.jar
+Skipping journeymap: incompatible with forge 3.1.8
+Mod quark requires Minecraft 1.20.4 but found 3.1.8
+Crash report saved to D:\Games\MultiMC\crash-reports\crash-2026-11-15.txt
+Error loading class net.minecraftforge.fmlcore.sodium in sodium-1.21.jar
+Launching 1.16.5 Create with 6144 MB of memory
+Mod quark requires Minecraft 1.19.2 but found 47.4.10
+Downloaded oculus-47.4.10.jar in 219 seconds
+Downloaded applied-energistics-2-0.14.22.jar in 150 seconds
+Error loading class net.minecraftforge.fmlcore.quark in quark-47.4.10.jar
+Mod glassseam-fix requires Minecraft 1.20.4 but found 3.1.8
+Crash report saved to C:\Games\MultiMC\crash-reports\crash-2026-11-03.txt
+Downloaded jei-1.20.4.jar in 72 seconds
+java.lang.NoClassDefFoundError: net.fabricmc.loader/journeymap
+Deleted 894 old log files from D:\Games\MultiMC\logs
+Failed to load mod iris 2.0.0-beta.4: missing dependency net.minecraftforge.javafmlmod
+Unable to open E:\Games\MultiMC\libraries\org\spongepowered\mixin\2.0.0-beta.4\modmenu-2.0.0-beta.4.jar
+Launching 1.20.4 Fabric with 4096 MB of memory
+Found 487 mods, 7 failed to load
+Error loading class net.fabricmc.loader.alexsmobs in alexsmobs-1.21.jar
+Connection timed out while reading packet 151
+Could not find org.spongepowered.mixin for supplementaries, skipping
+Server started on port 25566 after 7 seconds
+Deleted 68 old log files from D:\Games\MultiMC\logs
+java.lang.NoClassDefFoundError: org.apache.logging.log4j/carpet
+Skipping carpet: incompatible with forge 2.0.0-beta.4
+Deleted 316 old log files from D:\Games\MultiMC\logs
+Failed to load mod biomesoplenty 3.1.8: missing dependency org.spongepowered.mixin
+Retrying download of supplementaries: HTTP status 503
+Unable to open D:\Games\MultiMC\libraries\net\minecraftforge\javafmlmod\0.15.3\quark-0.15.3.jar
+Crash report saved to C:\Games\MultiMC\crash-reports\crash-2026-11-28.txt
+Found 894 mods, 0 failed to load
+Crash report saved to E:\Games\MultiMC\crash-reports\crash-2026-11-17.txt
+Downloaded ironchests-1.19.2.jar in 132 seconds
+Crash report saved to D:\Games\MultiMC\crash-reports\crash-2026-11-13.txt
+Mod supplementaries requires Minecraft 1.20.4 but found 0.15.3
+Deleted 838 old log files from E:\Games\MultiMC\logs
+[INFO] Registered 839 recipes from jei
+Connection timed out while reading packet 55
+Set JVM argument -Xmx8192M for 1.16.5 Create
+Unable to open D:\Games\MultiMC\libraries\net\minecraftforge\fmlcore\0.15.3\quark-0.15.3.jar
+The Mod File C:\Games\MultiMC\instances\1.20.1 Forge\.minecraft\mods\mekanism.jar has mods that were not found
+Error loading class com.electronwizard.config.biomesoplenty in biomesoplenty-1.19.2.jar
+Failed to load mod applied-energistics-2 47.2.0: missing dependency net.fabricmc.loader
+[INFO] Registered 758 recipes from journeymap
+Mixin apply failed for net.fabricmc.loader: target class not found
+Server started on port 25565 after 60 seconds
+Unable to open C:\Games\MultiMC\libraries\net\minecraftforge\fmlcore\47.4.10\sodium-47.4.10.jar
+Mod cloth-config requires Minecraft 0.14.22 but found 2.0.0-beta.4
+Retrying download of carpet: HTTP status 404
+Missing dependency: net.minecraftforge.javafmlmod version 1.16.5 required by quark
+Error loading class com.electronwizard.config.xaeros-minimap in xaeros-minimap-1.21.jar
+Missing dependency: net.minecraftforge.javafmlmod version 1.19.2 required by cloth-config
+Connection timed out while reading packet 94
+Could not find org.spongepowered.mixin for cloth-config, skipping
+Error loading class org.spongepowered.mixin.ironchests in ironchests-1.16.5.jar
+java.lang.NoClassDefFoundError: net.fabricmc.loader/biomesoplenty
+Loading mod list from D:\Games\MultiMC\instances\1.20.1 6June2026Wiped9Nov2026\mods
+Mod xaeros-minimap requires Minecraft 0.14.22 but found 47.2.0
+Texture pack reloaded with 278 resources
+Downloaded ironchests-47.4.10.jar in 227 seconds
+Unable to open C:\Games\MultiMC\libraries\net\minecraftforge\javafmlmod\47.2.0\mekanism-47.2.0.jar
+Launching Server Backup 2026 with 4096 MB of memory
+Error loading class com.electronwizard.config.glassseam-fix in glassseam-fix-0.14.22.jar
+Connection timed out while reading packet 229
+java.lang.NoClassDefFoundError: com.electronwizard.config/xaeros-minimap
+Crash report saved to E:\Games\MultiMC\crash-reports\crash-2026-11-03.txt
+Found 401 mods, 1 failed to load
+Could not find org.apache.logging.log4j for fabric-api, skipping
+Downloaded oculus-1.16.5.jar in 16 seconds
+Chunk loading took 20 ms in dimension minecraft:overworld
+Texture pack reloaded with 89 resources
+Unable to open C:\Games\MultiMC\libraries\org\lwjgl\glfw\47.2.0\create-47.2.0.jar
+Mixin apply failed for org.apache.logging.log4j: target class not found
+Unable to open E:\Games\MultiMC\libraries\net\fabricmc\loader\2.0.0-beta.4\carpet-2.0.0-beta.4.jar
+The Mod File E:\Games\MultiMC\instances\Server Backup 2026\.minecraft\mods\applied-energistics-2.jar has mods that were not found
+Texture pack reloaded with 92 resources
+Missing dependency: com.electronwizard.config version 1.16.5 required by farmersdelight
+Connection timed out while reading packet 90
+Missing dependency: com.electronwizard.config version 0.14.22 required by oculus
+Server started on port 8080 after 127 seconds
+Launching 1.20.1 6June2026Wiped9Nov2026 with 4096 MB of memory
+Failed to load mod modmenu 0.15.3: missing dependency org.spongepowered.mixin
+Mod glassseam-fix requires Minecraft 1.16.5 but found 47.2.0
+Server started on port 25565 after 196 seconds
+Downloaded modmenu-5.4.0.jar in 112 seconds
+Deleted 124 old log files from C:\Games\MultiMC\logs
+Mixin apply failed for net.minecraftforge.javafmlmod: target class not found
+Retrying download of xaeros-minimap: HTTP status 500
+xaeros-minimap 1.20.1 is already installed in 1.21 Survival
+[WARN] Config file create-common.toml is out of date
+Launching 1.19.2 Modded with 2048 MB of memory
+Deleted 180 old log files from C:\Games\MultiMC\logs
+Crash report saved to C:\Games\MultiMC\crash-reports\crash-2026-11-01.txt
+Launching 1.20.1 Forge with 6144 MB of memory
+Downloaded jei-1.20.4.jar in 82 seconds
+[INFO] Registered 186 recipes from iris
+Set JVM argument -Xmx4096M for 1.20.1 6June2026Wiped9Nov2026
+Launching 1.20.4 Fabric with 2048 MB of memory

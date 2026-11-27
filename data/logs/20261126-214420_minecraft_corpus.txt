@@ -1,0 +1,40 @@
+Connection timed out while reading packet 116
+[INFO] Registered 493 recipes from oculus
+Mixin apply failed for org.spongepowered.mixin: target class not found
+Connection timed out while reading packet 155
+Mixin apply failed for net.minecraftforge.fmlcore: target class not found
+Found 872 mods, 1 failed to load
+Set JVM argument -Xmx6144M for 1.20.1 Forge
+Deleted 744 old log files from C:\Games\MultiMC\logs
+Set JVM argument -Xmx6144M for Server Backup 2026
+Mixin apply failed for com.google.guava: target class not found
+Saved world settings to disk successfully
+Error loading class org.spongepowered.mixin.farmersdelight in farmersdelight-1.20.1.jar
+Crash report saved to C:\Games\MultiMC\crash-reports\crash-2026-11-12.txt
+Server started on port 25566 after 42 seconds
+Found 411 mods, 5 failed to load
+Chunk loading took 122 ms in dimension minecraft:overworld
+Downloaded alexsmobs-1.20.4.jar in 164 seconds
+Server started on port 8080 after 182 seconds
+[WARN] Config file carpet-common.toml is out of date
+Error loading class org.apache.logging.log4j.terralith in terralith-1.20.4.jar
+Downloaded terralith-47.4.10.jar in 231 seconds
+Launching 1.21 Survival with 8192 MB of memory
+java.lang.NoClassDefFoundError: org.spongepowered.mixin/journeymap
+Downloaded applied-energistics-2-1.19.2.jar in 86 seconds
+Error loading class org.apache.logging.log4j.glassseam-fix in glassseam-fix-1.20.4.jar
+Loading mod list from D:\Games\MultiMC\instances\1.21 Survival\mods
+[WARN] Config file oculus-common.toml is out of date
+Skipping biomesoplenty: incompatible with forge 2.0.0-beta.4
+Failed to load mod biomesoplenty 3.1.8: missing dependency com.google.guava
+Unable to open D:\Games\MultiMC\libraries\net\minecraftforge\fmlcore\47.2.0\terralith-47.2.0.jar
+Downloaded sodium-1.16.5.jar in 153 seconds
+[WARN] Config file biomesoplenty-common.toml is out of date
+Mod terralith requires Minecraft 1.21 but found 47.2.0
+Missing dependency: org.spongepowered.mixin version 1.19.2 required by alexsmobs
+Mod applied-energistics-2 requires Minecraft 0.14.22 but found 2.0.0-beta.4
+Failed to load mod journeymap 3.1.8: missing dependency net.fabricmc.loader
+Chunk loading took 148 ms in dimension minecraft:overworld
+The Mod File E:\Games\MultiMC\instances\1.16.5 Create\.minecraft\mods\fabric-api.jar has mods that were not found
+[INFO] Registered 888 recipes from modmenu
+Found 331 mods, 2 failed to load

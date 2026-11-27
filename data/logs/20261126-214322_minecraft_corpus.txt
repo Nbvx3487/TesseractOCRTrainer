@@ -1,0 +1,40 @@
+Could not find com.google.guava for sodium, skipping
+Could not find net.minecraftforge.fmlcore for iris, skipping
+Chunk loading took 41 ms in dimension minecraft:overworld
+Saved world settings to disk successfully
+Found 707 mods, 8 failed to load
+Retrying download of quark: HTTP status 500
+Texture pack reloaded with 221 resources
+Found 388 mods, 3 failed to load
+Texture pack reloaded with 178 resources
+[INFO] Registered 63 recipes from sodium
+Texture pack reloaded with 134 resources
+java.lang.NoClassDefFoundError: net.minecraftforge.fmlcore/supplementaries
+Connection timed out while reading packet 133
+Found 274 mods, 3 failed to load
+Connection timed out while reading packet 100
+[INFO] Registered 844 recipes from waystones
+Skipping alexsmobs: incompatible with forge 3.1.8
+The Mod File C:\Games\MultiMC\instances\1.20.1 Forge\.minecraft\mods\biomesoplenty.jar has mods that were not found
+carpet 0.14.22 is already installed in 1.19.2 Modded
+[WARN] Config file fabric-api-common.toml is out of date
+Deleted 693 old log files from E:\Games\MultiMC\logs
+Failed to load mod create 0.15.3: missing dependency com.electronwizard.config
+Mod alexsmobs requires Minecraft 47.4.10 but found 3.1.8
+Unable to open C:\Games\MultiMC\libraries\net\minecraftforge\javafmlmod\47.2.0\xaeros-minimap-47.2.0.jar
+Missing dependency: net.minecraftforge.fmlcore version 5.4.0 required by xaeros-minimap
+Launching 1.20.1 6June2026Wiped9Nov2026 with 8192 MB of memory
+Connection timed out while reading packet 241
+Failed to load mod cloth-config 47.2.0: missing dependency org.lwjgl.glfw
+cloth-config 1.19.2 is already installed in 1.20.1 Forge
+Found 409 mods, 6 failed to load
+Found 125 mods, 6 failed to load
+Deleted 590 old log files from D:\Games\MultiMC\logs
+Crash report saved to D:\Games\MultiMC\crash-reports\crash-2026-11-01.txt
+Mixin apply failed for org.lwjgl.glfw: target class not found
+Set JVM argument -Xmx2048M for 1.20.1 Forge
+Loading mod list from D:\Games\MultiMC\instances\1.19.2 Modded\mods
+[WARN] Config file iris-common.toml is out of date
+Crash report saved to E:\Games\MultiMC\crash-reports\crash-2026-11-25.txt
+Downloaded supplementaries-1.20.1.jar in 215 seconds
+[WARN] Config file create-common.toml is out of date
