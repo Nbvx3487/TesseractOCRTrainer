@@ -155,7 +155,8 @@ def train_font(name, fonts, corpus, data_root, log, font_size=32, iterations=400
         label = font_label(index, font_path)
         log(f"Rendering {len(control_lines)} held-out lines in {label}")
         images = render_lines(control_lines, font_path, work / "control" / label,
-                              font_size, prefix="ctrl", log=log, label=label)
+                              font_size, prefix="ctrl", log=log, label=label,
+                              progress=lambda cur, cnt: report(log, "render", label, cur, cnt, 0, 1))
         log(f"Rendered {len(images)} held-out images in {label}")
         control_images[label] = images
         report(log, "score", label, 0, len(images), done, total)
@@ -171,7 +172,8 @@ def train_font(name, fonts, corpus, data_root, log, font_size=32, iterations=400
         train_dir = work / "train" / label
         log(f"Rendering {len(train_lines)} training lines in {label} (weight {weight})")
         tifs = render_lines(train_lines, font_path, train_dir, font_size, prefix="train",
-                            log=log, label=label)
+                            log=log, label=label,
+                            progress=lambda cur, cnt: report(log, "render", label, cur, cnt, 0, 1))
         log(f"Rendered {len(tifs)} training images in {label}")
         for number, tif in enumerate(tifs, start=1):
             run(["tesseract", str(tif), str(tif.with_suffix("")),

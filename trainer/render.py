@@ -35,10 +35,12 @@ def stage_font(font_path):
     return USER_FONTS
 
 
-def render_lines(lines, font_path, out_dir, font_size=32, prefix="line", log=None, label=""):
+def render_lines(lines, font_path, out_dir, font_size=32, prefix="line", log=None, label="",
+                 progress=None):
     """Render each line to name.tif + name.box + name.gt.txt. Returns the TIFF paths.
 
-    If log is given, one line is logged per rendered image.
+    If log is given, one line is logged per rendered image. If progress is given, it is
+    called as progress(done, total) after each image.
     """
     out_dir = Path(out_dir)
     out_dir.mkdir(parents=True, exist_ok=True)
@@ -62,4 +64,6 @@ def render_lines(lines, font_path, out_dir, font_size=32, prefix="line", log=Non
         tiffs.append(stem.with_suffix(".tif"))
         if log:
             log(f"  rendered {index + 1}/{len(lines)} lines in {label}")
+        if progress:
+            progress(index + 1, len(lines))
     return tiffs

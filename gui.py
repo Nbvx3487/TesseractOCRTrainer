@@ -39,7 +39,7 @@ except ImportError:  # not on Windows, so the theme cannot be read
 from PySide6.QtCore import QThread, QTimer, Qt, Signal
 from PySide6.QtNetwork import QLocalServer, QLocalSocket
 from PySide6.QtWidgets import (
-    QAbstractItemView, QApplication, QCheckBox, QFileDialog, QFrame, QHBoxLayout,
+    QAbstractItemView, QApplication, QCheckBox, QDialog, QFileDialog, QFrame, QHBoxLayout,
     QHeaderView, QLabel, QLayout, QLineEdit, QMessageBox, QPlainTextEdit, QProgressBar,
     QPushButton, QScrollArea, QSpinBox, QTableWidget, QTableWidgetItem, QVBoxLayout, QWidget,
 )
@@ -255,6 +255,7 @@ class MainWindow(QWidget):
         self.model_dir = None
         self.accepting = False  # True only while a run is shown; late output is ignored
         self.running = False  # True from Start until the run is finished, stopped or failed
+        self.render_window = None  # small window with the rendering progress bar
         self.setAcceptDrops(True)
 
         self._build_controls()
@@ -729,12 +730,45 @@ class MainWindow(QWidget):
         self.running = on
         if not on and getattr(self, "heartbeat", None) is not None:
             self.heartbeat.stop()
+        if not on and self.render_window is not None:
+            self.render_window.hide()
         self.primary.setText("Stop training" if on else "adjust the font")
+
+    def show_render_window(self, info):
+        """A small window with a progress bar for rendering the lines, like the copy
+        window in Explorer. It has its own Stop button."""
+        if self.render_window is None:
+            self.render_window = QDialog(self)
+            self.render_window.setWindowTitle("Rendering lines")
+            self.render_window.setMinimumWidth(420)
+            layout = QVBoxLayout(self.render_window)
+            self.render_label = QLabel()
+            self.render_label.setWordWrap(True)
+            self.render_bar = QProgressBar()
+            self.render_bar.setRange(0, 100)
+            layout.addWidget(self.render_label)
+            layout.addWidget(self.render_bar)
+            buttons = QHBoxLayout()
+            buttons.addStretch(1)
+            stop = QPushButton("Stop training")
+            stop.clicked.connect(self.stop_training)
+            buttons.addWidget(stop)
+            layout.addLayout(buttons)
+        count = max(info["count"], 1)
+        self.render_bar.setValue(int(100 * info["current"] / count))
+        self.render_label.setText(
+            f"Rendering line {info['current']} of {info['count']} in {info['label']}")
+        self.render_window.show()
 
     def show_progress(self, info):
         """Update both progress bars from a PROGRESS line of the trainer."""
         if not self.accepting:
             return
+        if info["stage"] == "render":
+            self.show_render_window(info)
+            return
+        if self.render_window is not None:
+            self.render_window.hide()
         total = max(info["total"], 1)
         overall = int(100 * info["done"] / total)
         count = max(info["count"], 1)
