@@ -1,0 +1,904 @@
+10:03:45 Run started: 20261127-100345_minecraft
+10:03:45 Model: minecraft
+10:03:45 Iterations: 400, font size: 32px
+10:03:45 Corpus: 1000 lines, generated automatically (copy in logs: 20261127-100345_minecraft_corpus.txt)
+10:03:45 Font: C:\WINDOWS\Fonts\arial.ttf (weight 1)
+10:03:45 Starting the trainer in WSL. The first output can take a little while.
+10:03:45 WSL started (process 28440), waiting for the trainer.
+10:03:50 Trainer started: minecraft, 400 iterations, font size 32px
+10:03:51 $ combine_tessdata -e /mnt/c/Users/Nbvx Teo/Documents/_Programming/GitHub/TesseractOCRTrainer/data/runs/20261127-100345_minecraft/minecraft/base/eng.traineddata /mnt/c/Users/Nbvx Teo/Documents/_Programming/GitHub/TesseractOCRTrainer/data/runs/20261127-100345_minecraft/minecraft/base/eng.lstm
+10:03:51 Extracting tessdata components from /mnt/c/Users/Nbvx Teo/Documents/_Programming/GitHub/TesseractOCRTrainer/data/runs/20261127-100345_minecraft/minecraft/base/eng.traineddata
+10:03:51 Wrote /mnt/c/Users/Nbvx Teo/Documents/_Programming/GitHub/TesseractOCRTrainer/data/runs/20261127-100345_minecraft/minecraft/base/eng.lstm
+10:03:51 Version:4.00.00alpha:eng:synth20170629:[1,36,0,1Ct3,3,16Mp3,3Lfys64Lfx96Lrx96Lfx512O1c1]
+10:03:51 17:lstm:size=11689099, offset=192
+10:03:51 18:lstm-punc-dawg:size=4322, offset=11689291
+10:03:51 19:lstm-word-dawg:size=3694794, offset=11693613
+10:03:51 20:lstm-number-dawg:size=4738, offset=15388407
+10:03:51 21:lstm-unicharset:size=6360, offset=15393145
+10:03:51 22:lstm-recoder:size=1012, offset=15399505
+10:03:51 23:version:size=80, offset=15400517
+10:03:51 Corpus: 800 training lines, 200 held-out lines
+10:03:51 Rendering 200 held-out lines in 0_arial
+10:03:51   rendered 1/200 lines in 0_arial
+10:03:51   rendered 2/200 lines in 0_arial
+10:03:52   rendered 3/200 lines in 0_arial
+10:03:52   rendered 4/200 lines in 0_arial
+10:03:52   rendered 5/200 lines in 0_arial
+10:03:52   rendered 6/200 lines in 0_arial
+10:03:53   rendered 7/200 lines in 0_arial
+10:03:53   rendered 8/200 lines in 0_arial
+10:03:53   rendered 9/200 lines in 0_arial
+10:03:53   rendered 10/200 lines in 0_arial
+10:03:54   rendered 11/200 lines in 0_arial
+10:03:54   rendered 12/200 lines in 0_arial
+10:03:54   rendered 13/200 lines in 0_arial
+10:03:54   rendered 14/200 lines in 0_arial
+10:03:55   rendered 15/200 lines in 0_arial
+10:03:55   rendered 16/200 lines in 0_arial
+10:03:55   rendered 17/200 lines in 0_arial
+10:03:55   rendered 18/200 lines in 0_arial
+10:03:56   rendered 19/200 lines in 0_arial
+10:03:56   rendered 20/200 lines in 0_arial
+10:03:56   rendered 21/200 lines in 0_arial
+10:03:56   rendered 22/200 lines in 0_arial
+10:03:57   rendered 23/200 lines in 0_arial
+10:03:57   rendered 24/200 lines in 0_arial
+10:03:57   rendered 25/200 lines in 0_arial
+10:03:57   rendered 26/200 lines in 0_arial
+10:03:58   rendered 27/200 lines in 0_arial
+10:03:58   rendered 28/200 lines in 0_arial
+10:03:58   rendered 29/200 lines in 0_arial
+10:03:58   rendered 30/200 lines in 0_arial
+10:03:59   rendered 31/200 lines in 0_arial
+10:03:59   rendered 32/200 lines in 0_arial
+10:03:59   rendered 33/200 lines in 0_arial
+10:03:59   rendered 34/200 lines in 0_arial
+10:04:00   rendered 35/200 lines in 0_arial
+10:04:00   rendered 36/200 lines in 0_arial
+10:04:00   rendered 37/200 lines in 0_arial
+10:04:00   rendered 38/200 lines in 0_arial
+10:04:00   rendered 39/200 lines in 0_arial
+10:04:00   rendered 40/200 lines in 0_arial
+10:04:01   rendered 41/200 lines in 0_arial
+10:04:01   rendered 42/200 lines in 0_arial
+10:04:01   rendered 43/200 lines in 0_arial
+10:04:01   rendered 44/200 lines in 0_arial
+10:04:02   rendered 45/200 lines in 0_arial
+10:04:02   rendered 46/200 lines in 0_arial
+10:04:02   rendered 47/200 lines in 0_arial
+10:04:02   rendered 48/200 lines in 0_arial
+10:04:03   rendered 49/200 lines in 0_arial
+10:04:03   rendered 50/200 lines in 0_arial
+10:04:03   rendered 51/200 lines in 0_arial
+10:04:03   rendered 52/200 lines in 0_arial
+10:04:04   rendered 53/200 lines in 0_arial
+10:04:04   rendered 54/200 lines in 0_arial
+10:04:04   rendered 55/200 lines in 0_arial
+10:04:04   rendered 56/200 lines in 0_arial
+10:04:05   rendered 57/200 lines in 0_arial
+10:04:05   rendered 58/200 lines in 0_arial
+10:04:05   rendered 59/200 lines in 0_arial
+10:04:05   rendered 60/200 lines in 0_arial
+10:04:06   rendered 61/200 lines in 0_arial
+10:04:06   rendered 62/200 lines in 0_arial
+10:04:06   rendered 63/200 lines in 0_arial
+10:04:06   rendered 64/200 lines in 0_arial
+10:04:07   rendered 65/200 lines in 0_arial
+10:04:07   rendered 66/200 lines in 0_arial
+10:04:07   rendered 67/200 lines in 0_arial
+10:04:07   rendered 68/200 lines in 0_arial
+10:04:08   rendered 69/200 lines in 0_arial
+10:04:08   rendered 70/200 lines in 0_arial
+10:04:08   rendered 71/200 lines in 0_arial
+10:04:08   rendered 72/200 lines in 0_arial
+10:04:09   rendered 73/200 lines in 0_arial
+10:04:09   rendered 74/200 lines in 0_arial
+10:04:09   rendered 75/200 lines in 0_arial
+10:04:09   rendered 76/200 lines in 0_arial
+10:04:10   rendered 77/200 lines in 0_arial
+10:04:10   rendered 78/200 lines in 0_arial
+10:04:10   rendered 79/200 lines in 0_arial
+10:04:10   rendered 80/200 lines in 0_arial
+10:04:11   rendered 81/200 lines in 0_arial
+10:04:11   rendered 82/200 lines in 0_arial
+10:04:11   rendered 83/200 lines in 0_arial
+10:04:11   rendered 84/200 lines in 0_arial
+10:04:12   rendered 85/200 lines in 0_arial
+10:04:12   rendered 86/200 lines in 0_arial
+10:04:12   rendered 87/200 lines in 0_arial
+10:04:12   rendered 88/200 lines in 0_arial
+10:04:13   rendered 89/200 lines in 0_arial
+10:04:13   rendered 90/200 lines in 0_arial
+10:04:13   rendered 91/200 lines in 0_arial
+10:04:13   rendered 92/200 lines in 0_arial
+10:04:14   rendered 93/200 lines in 0_arial
+10:04:14   rendered 94/200 lines in 0_arial
+10:04:14   rendered 95/200 lines in 0_arial
+10:04:14   rendered 96/200 lines in 0_arial
+10:04:15   rendered 97/200 lines in 0_arial
+10:04:15   rendered 98/200 lines in 0_arial
+10:04:15   rendered 99/200 lines in 0_arial
+10:04:15   rendered 100/200 lines in 0_arial
+10:04:16   rendered 101/200 lines in 0_arial
+10:04:16   rendered 102/200 lines in 0_arial
+10:04:16   rendered 103/200 lines in 0_arial
+10:04:16   rendered 104/200 lines in 0_arial
+10:04:17   rendered 105/200 lines in 0_arial
+10:04:17   rendered 106/200 lines in 0_arial
+10:04:17   rendered 107/200 lines in 0_arial
+10:04:17   rendered 108/200 lines in 0_arial
+10:04:18   rendered 109/200 lines in 0_arial
+10:04:18   rendered 110/200 lines in 0_arial
+10:04:18   rendered 111/200 lines in 0_arial
+10:04:18   rendered 112/200 lines in 0_arial
+10:04:19   rendered 113/200 lines in 0_arial
+10:04:19   rendered 114/200 lines in 0_arial
+10:04:19   rendered 115/200 lines in 0_arial
+10:04:19   rendered 116/200 lines in 0_arial
+10:04:20   rendered 117/200 lines in 0_arial
+10:04:20   rendered 118/200 lines in 0_arial
+10:04:20   rendered 119/200 lines in 0_arial
+10:04:20   rendered 120/200 lines in 0_arial
+10:04:21   rendered 121/200 lines in 0_arial
+10:04:21   rendered 122/200 lines in 0_arial
+10:04:21   rendered 123/200 lines in 0_arial
+10:04:21   rendered 124/200 lines in 0_arial
+10:04:22   rendered 125/200 lines in 0_arial
+10:04:22   rendered 126/200 lines in 0_arial
+10:04:22   rendered 127/200 lines in 0_arial
+10:04:22   rendered 128/200 lines in 0_arial
+10:04:23   rendered 129/200 lines in 0_arial
+10:04:23   rendered 130/200 lines in 0_arial
+10:04:23   rendered 131/200 lines in 0_arial
+10:04:23   rendered 132/200 lines in 0_arial
+10:04:24   rendered 133/200 lines in 0_arial
+10:04:24   rendered 134/200 lines in 0_arial
+10:04:24   rendered 135/200 lines in 0_arial
+10:04:24   rendered 136/200 lines in 0_arial
+10:04:25   rendered 137/200 lines in 0_arial
+10:04:25   rendered 138/200 lines in 0_arial
+10:04:25   rendered 139/200 lines in 0_arial
+10:04:25   rendered 140/200 lines in 0_arial
+10:04:26   rendered 141/200 lines in 0_arial
+10:04:26   rendered 142/200 lines in 0_arial
+10:04:26   rendered 143/200 lines in 0_arial
+10:04:26   rendered 144/200 lines in 0_arial
+10:04:27   rendered 145/200 lines in 0_arial
+10:04:27   rendered 146/200 lines in 0_arial
+10:04:27   rendered 147/200 lines in 0_arial
+10:04:27   rendered 148/200 lines in 0_arial
+10:04:28   rendered 149/200 lines in 0_arial
+10:04:28   rendered 150/200 lines in 0_arial
+10:04:28   rendered 151/200 lines in 0_arial
+10:04:28   rendered 152/200 lines in 0_arial
+10:04:28   rendered 153/200 lines in 0_arial
+10:04:28   rendered 154/200 lines in 0_arial
+10:04:29   rendered 155/200 lines in 0_arial
+10:04:29   rendered 156/200 lines in 0_arial
+10:04:29   rendered 157/200 lines in 0_arial
+10:04:29   rendered 158/200 lines in 0_arial
+10:04:30   rendered 159/200 lines in 0_arial
+10:04:30   rendered 160/200 lines in 0_arial
+10:04:30   rendered 161/200 lines in 0_arial
+10:04:30   rendered 162/200 lines in 0_arial
+10:04:31   rendered 163/200 lines in 0_arial
+10:04:31   rendered 164/200 lines in 0_arial
+10:04:31   rendered 165/200 lines in 0_arial
+10:04:31   rendered 166/200 lines in 0_arial
+10:04:32   rendered 167/200 lines in 0_arial
+10:04:32   rendered 168/200 lines in 0_arial
+10:04:32   rendered 169/200 lines in 0_arial
+10:04:32   rendered 170/200 lines in 0_arial
+10:04:33   rendered 171/200 lines in 0_arial
+10:04:33   rendered 172/200 lines in 0_arial
+10:04:33   rendered 173/200 lines in 0_arial
+10:04:33   rendered 174/200 lines in 0_arial
+10:04:34   rendered 175/200 lines in 0_arial
+10:04:34   rendered 176/200 lines in 0_arial
+10:04:34   rendered 177/200 lines in 0_arial
+10:04:34   rendered 178/200 lines in 0_arial
+10:04:35   rendered 179/200 lines in 0_arial
+10:04:35   rendered 180/200 lines in 0_arial
+10:04:35   rendered 181/200 lines in 0_arial
+10:04:35   rendered 182/200 lines in 0_arial
+10:04:36   rendered 183/200 lines in 0_arial
+10:04:36   rendered 184/200 lines in 0_arial
+10:04:36   rendered 185/200 lines in 0_arial
+10:04:36   rendered 186/200 lines in 0_arial
+10:04:37   rendered 187/200 lines in 0_arial
+10:04:37   rendered 188/200 lines in 0_arial
+10:04:37   rendered 189/200 lines in 0_arial
+10:04:37   rendered 190/200 lines in 0_arial
+10:04:38   rendered 191/200 lines in 0_arial
+10:04:38   rendered 192/200 lines in 0_arial
+10:04:38   rendered 193/200 lines in 0_arial
+10:04:38   rendered 194/200 lines in 0_arial
+10:04:39   rendered 195/200 lines in 0_arial
+10:04:39   rendered 196/200 lines in 0_arial
+10:04:39   rendered 197/200 lines in 0_arial
+10:04:39   rendered 198/200 lines in 0_arial
+10:04:40   rendered 199/200 lines in 0_arial
+10:04:40   rendered 200/200 lines in 0_arial
+10:04:40 Rendered 200 held-out images in 0_arial
+10:04:40   checked 1/200 lines in 0_arial (before training)
+10:04:40   checked 2/200 lines in 0_arial (before training)
+10:04:41   checked 3/200 lines in 0_arial (before training)
+10:04:41   checked 4/200 lines in 0_arial (before training)
+10:04:41   checked 5/200 lines in 0_arial (before training)
+10:04:41   checked 6/200 lines in 0_arial (before training)
+10:04:41   checked 7/200 lines in 0_arial (before training)
+10:04:41   checked 8/200 lines in 0_arial (before training)
+10:04:42   checked 9/200 lines in 0_arial (before training)
+10:04:42   checked 10/200 lines in 0_arial (before training)
+10:04:42   checked 11/200 lines in 0_arial (before training)
+10:04:42   checked 12/200 lines in 0_arial (before training)
+10:04:42   checked 13/200 lines in 0_arial (before training)
+10:04:43   checked 14/200 lines in 0_arial (before training)
+10:04:43   checked 15/200 lines in 0_arial (before training)
+10:04:43   checked 16/200 lines in 0_arial (before training)
+10:04:43   checked 17/200 lines in 0_arial (before training)
+10:04:44   checked 18/200 lines in 0_arial (before training)
+10:04:44   checked 19/200 lines in 0_arial (before training)
+10:04:44   checked 20/200 lines in 0_arial (before training)
+10:04:44   checked 21/200 lines in 0_arial (before training)
+10:04:44   checked 22/200 lines in 0_arial (before training)
+10:04:45   checked 23/200 lines in 0_arial (before training)
+10:04:45   checked 24/200 lines in 0_arial (before training)
+10:04:45   checked 25/200 lines in 0_arial (before training)
+10:04:45   checked 26/200 lines in 0_arial (before training)
+10:04:45   checked 27/200 lines in 0_arial (before training)
+10:04:46   checked 28/200 lines in 0_arial (before training)
+10:04:46   checked 29/200 lines in 0_arial (before training)
+10:04:46   checked 30/200 lines in 0_arial (before training)
+10:04:46   checked 31/200 lines in 0_arial (before training)
+10:04:46   checked 32/200 lines in 0_arial (before training)
+10:04:47   checked 33/200 lines in 0_arial (before training)
+10:04:47   checked 34/200 lines in 0_arial (before training)
+10:04:47   checked 35/200 lines in 0_arial (before training)
+10:04:47   checked 36/200 lines in 0_arial (before training)
+10:04:47   checked 37/200 lines in 0_arial (before training)
+10:04:48   checked 38/200 lines in 0_arial (before training)
+10:04:48   checked 39/200 lines in 0_arial (before training)
+10:04:48   checked 40/200 lines in 0_arial (before training)
+10:04:48   checked 41/200 lines in 0_arial (before training)
+10:04:48   checked 42/200 lines in 0_arial (before training)
+10:04:49   checked 43/200 lines in 0_arial (before training)
+10:04:49   checked 44/200 lines in 0_arial (before training)
+10:04:49   checked 45/200 lines in 0_arial (before training)
+10:04:49   checked 46/200 lines in 0_arial (before training)
+10:04:49   checked 47/200 lines in 0_arial (before training)
+10:04:50   checked 48/200 lines in 0_arial (before training)
+10:04:50   checked 49/200 lines in 0_arial (before training)
+10:04:50   checked 50/200 lines in 0_arial (before training)
+10:04:50   checked 51/200 lines in 0_arial (before training)
+10:04:50   checked 52/200 lines in 0_arial (before training)
+10:04:51   checked 53/200 lines in 0_arial (before training)
+10:04:51   checked 54/200 lines in 0_arial (before training)
+10:04:51   checked 55/200 lines in 0_arial (before training)
+10:04:51   checked 56/200 lines in 0_arial (before training)
+10:04:51   checked 57/200 lines in 0_arial (before training)
+10:04:52   checked 58/200 lines in 0_arial (before training)
+10:04:52   checked 59/200 lines in 0_arial (before training)
+10:04:52   checked 60/200 lines in 0_arial (before training)
+10:04:52   checked 61/200 lines in 0_arial (before training)
+10:04:52   checked 62/200 lines in 0_arial (before training)
+10:04:53   checked 63/200 lines in 0_arial (before training)
+10:04:53   checked 64/200 lines in 0_arial (before training)
+10:04:53   checked 65/200 lines in 0_arial (before training)
+10:04:53   checked 66/200 lines in 0_arial (before training)
+10:04:54   checked 67/200 lines in 0_arial (before training)
+10:04:54   checked 68/200 lines in 0_arial (before training)
+10:04:54   checked 69/200 lines in 0_arial (before training)
+10:04:54   checked 70/200 lines in 0_arial (before training)
+10:04:54   checked 71/200 lines in 0_arial (before training)
+10:04:54   checked 72/200 lines in 0_arial (before training)
+10:04:55   checked 73/200 lines in 0_arial (before training)
+10:04:55   checked 74/200 lines in 0_arial (before training)
+10:04:55   checked 75/200 lines in 0_arial (before training)
+10:04:55   checked 76/200 lines in 0_arial (before training)
+10:04:56   checked 77/200 lines in 0_arial (before training)
+10:04:56   checked 78/200 lines in 0_arial (before training)
+10:04:56   checked 79/200 lines in 0_arial (before training)
+10:04:56   checked 80/200 lines in 0_arial (before training)
+10:04:56   checked 81/200 lines in 0_arial (before training)
+10:04:57   checked 82/200 lines in 0_arial (before training)
+10:04:57   checked 83/200 lines in 0_arial (before training)
+10:04:57   checked 84/200 lines in 0_arial (before training)
+10:04:57   checked 85/200 lines in 0_arial (before training)
+10:04:57   checked 86/200 lines in 0_arial (before training)
+10:04:57   checked 87/200 lines in 0_arial (before training)
+10:04:58   checked 88/200 lines in 0_arial (before training)
+10:04:58   checked 89/200 lines in 0_arial (before training)
+10:04:58   checked 90/200 lines in 0_arial (before training)
+10:04:58   checked 91/200 lines in 0_arial (before training)
+10:04:59   checked 92/200 lines in 0_arial (before training)
+10:04:59   checked 93/200 lines in 0_arial (before training)
+10:04:59   checked 94/200 lines in 0_arial (before training)
+10:04:59   checked 95/200 lines in 0_arial (before training)
+10:04:59   checked 96/200 lines in 0_arial (before training)
+10:04:59   checked 97/200 lines in 0_arial (before training)
+10:05:00   checked 98/200 lines in 0_arial (before training)
+10:05:00   checked 99/200 lines in 0_arial (before training)
+10:05:00   checked 100/200 lines in 0_arial (before training)
+10:05:00   checked 101/200 lines in 0_arial (before training)
+10:05:00   checked 102/200 lines in 0_arial (before training)
+10:05:01   checked 103/200 lines in 0_arial (before training)
+10:05:01   checked 104/200 lines in 0_arial (before training)
+10:05:01   checked 105/200 lines in 0_arial (before training)
+10:05:01   checked 106/200 lines in 0_arial (before training)
+10:05:01   checked 107/200 lines in 0_arial (before training)
+10:05:02   checked 108/200 lines in 0_arial (before training)
+10:05:02   checked 109/200 lines in 0_arial (before training)
+10:05:02   checked 110/200 lines in 0_arial (before training)
+10:05:02   checked 111/200 lines in 0_arial (before training)
+10:05:02   checked 112/200 lines in 0_arial (before training)
+10:05:03   checked 113/200 lines in 0_arial (before training)
+10:05:03   checked 114/200 lines in 0_arial (before training)
+10:05:03   checked 115/200 lines in 0_arial (before training)
+10:05:03   checked 116/200 lines in 0_arial (before training)
+10:05:03   checked 117/200 lines in 0_arial (before training)
+10:05:04   checked 118/200 lines in 0_arial (before training)
+10:05:04   checked 119/200 lines in 0_arial (before training)
+10:05:04   checked 120/200 lines in 0_arial (before training)
+10:05:04   checked 121/200 lines in 0_arial (before training)
+10:05:04   checked 122/200 lines in 0_arial (before training)
+10:05:05   checked 123/200 lines in 0_arial (before training)
+10:05:05   checked 124/200 lines in 0_arial (before training)
+10:05:05   checked 125/200 lines in 0_arial (before training)
+10:05:05   checked 126/200 lines in 0_arial (before training)
+10:05:05   checked 127/200 lines in 0_arial (before training)
+10:05:06   checked 128/200 lines in 0_arial (before training)
+10:05:06   checked 129/200 lines in 0_arial (before training)
+10:05:06   checked 130/200 lines in 0_arial (before training)
+10:05:06   checked 131/200 lines in 0_arial (before training)
+10:05:06   checked 132/200 lines in 0_arial (before training)
+10:05:07   checked 133/200 lines in 0_arial (before training)
+10:05:07   checked 134/200 lines in 0_arial (before training)
+10:05:07   checked 135/200 lines in 0_arial (before training)
+10:05:07   checked 136/200 lines in 0_arial (before training)
+10:05:07   checked 137/200 lines in 0_arial (before training)
+10:05:08   checked 138/200 lines in 0_arial (before training)
+10:05:08   checked 139/200 lines in 0_arial (before training)
+10:05:08   checked 140/200 lines in 0_arial (before training)
+10:05:08   checked 141/200 lines in 0_arial (before training)
+10:05:08   checked 142/200 lines in 0_arial (before training)
+10:05:09   checked 143/200 lines in 0_arial (before training)
+10:05:09   checked 144/200 lines in 0_arial (before training)
+10:05:09   checked 145/200 lines in 0_arial (before training)
+10:05:09   checked 146/200 lines in 0_arial (before training)
+10:05:09   checked 147/200 lines in 0_arial (before training)
+10:05:10   checked 148/200 lines in 0_arial (before training)
+10:05:10   checked 149/200 lines in 0_arial (before training)
+10:05:10   checked 150/200 lines in 0_arial (before training)
+10:05:10   checked 151/200 lines in 0_arial (before training)
+10:05:10   checked 152/200 lines in 0_arial (before training)
+10:05:11   checked 153/200 lines in 0_arial (before training)
+10:05:11   checked 154/200 lines in 0_arial (before training)
+10:05:11   checked 155/200 lines in 0_arial (before training)
+10:05:11   checked 156/200 lines in 0_arial (before training)
+10:05:11   checked 157/200 lines in 0_arial (before training)
+10:05:12   checked 158/200 lines in 0_arial (before training)
+10:05:12   checked 159/200 lines in 0_arial (before training)
+10:05:12   checked 160/200 lines in 0_arial (before training)
+10:05:12   checked 161/200 lines in 0_arial (before training)
+10:05:12   checked 162/200 lines in 0_arial (before training)
+10:05:13   checked 163/200 lines in 0_arial (before training)
+10:05:13   checked 164/200 lines in 0_arial (before training)
+10:05:13   checked 165/200 lines in 0_arial (before training)
+10:05:13   checked 166/200 lines in 0_arial (before training)
+10:05:13   checked 167/200 lines in 0_arial (before training)
+10:05:13   checked 168/200 lines in 0_arial (before training)
+10:05:14   checked 169/200 lines in 0_arial (before training)
+10:05:14   checked 170/200 lines in 0_arial (before training)
+10:05:14   checked 171/200 lines in 0_arial (before training)
+10:05:14   checked 172/200 lines in 0_arial (before training)
+10:05:14   checked 173/200 lines in 0_arial (before training)
+10:05:15   checked 174/200 lines in 0_arial (before training)
+10:05:15   checked 175/200 lines in 0_arial (before training)
+10:05:15   checked 176/200 lines in 0_arial (before training)
+10:05:15   checked 177/200 lines in 0_arial (before training)
+10:05:15   checked 178/200 lines in 0_arial (before training)
+10:05:16   checked 179/200 lines in 0_arial (before training)
+10:05:16   checked 180/200 lines in 0_arial (before training)
+10:05:16   checked 181/200 lines in 0_arial (before training)
+10:05:16   checked 182/200 lines in 0_arial (before training)
+10:05:17   checked 183/200 lines in 0_arial (before training)
+10:05:17   checked 184/200 lines in 0_arial (before training)
+10:05:17   checked 185/200 lines in 0_arial (before training)
+10:05:17   checked 186/200 lines in 0_arial (before training)
+10:05:17   checked 187/200 lines in 0_arial (before training)
+10:05:18   checked 188/200 lines in 0_arial (before training)
+10:05:18   checked 189/200 lines in 0_arial (before training)
+10:05:18   checked 190/200 lines in 0_arial (before training)
+10:05:18   checked 191/200 lines in 0_arial (before training)
+10:05:18   checked 192/200 lines in 0_arial (before training)
+10:05:19   checked 193/200 lines in 0_arial (before training)
+10:05:19   checked 194/200 lines in 0_arial (before training)
+10:05:19   checked 195/200 lines in 0_arial (before training)
+10:05:19   checked 196/200 lines in 0_arial (before training)
+10:05:19   checked 197/200 lines in 0_arial (before training)
+10:05:20   checked 198/200 lines in 0_arial (before training)
+10:05:20   checked 199/200 lines in 0_arial (before training)
+10:05:20   checked 200/200 lines in 0_arial (before training)
+10:05:20 0_arial before training: 97/200 lines pass, CER 0.3926
+10:05:20   PASS  [INFO] Registered 367 recipes from sodium
+10:05:20   FAIL  expected: The Mod File D:\Games\MultiMC\instances\1.16.5 Create\.minecraft\mods\create.jar has mods that were not found
+10:05:20         got:
+10:05:20   PASS  Deleted 535 old log files from D:\Games\MultiMC\logs
+10:05:20   FAIL  expected: Chunk loading took 132 ms in dimension minecraft:overworld
+10:05:20         got:      mineorattoverwerld
+10:05:20   PASS  Downloaded supplementaries-47.4.10.jar in 118 seconds
+10:05:20   FAIL  expected: Unable to open D:\Games\MultiMC\libraries\net\minecraftforge\fmlcore\3.1.8\biomesoplenty-3.1.8.jar
+10:05:20         got:      Games ch re ea et\minecraftforge\fmlicore\3.1.
+10:05:20   FAIL  expected: Chunk loading took 217 ms in dimension minecraft:overworld
+10:05:20         got:      mineorattoverwerld
+10:05:20   FAIL  expected: Failed to load mod jei 0.15.3: missing dependency net.fabricmc.loader
+10:05:20         got:      ret fabromeloeden and Gependency
+10:05:20   PASS  Texture pack reloaded with 52 resources
+10:05:20   PASS  Deleted 376 old log files from C:\Games\MultiMC\logs
+10:05:20   PASS  Deleted 94 old log files from C:\Games\MultiMC\logs
+10:05:20   FAIL  expected: Missing dependency: net.minecraftforge.javafmlmod version 5.4.0 required by create
+10:05:20         got:      version 5:40 required by create
+10:05:20   FAIL  expected: waystones 1.20.4 is already installed in Server Backup 2026
+10:05:20         got:      maystones 1.20.4 is already installed in Server Backup
+10:05:20   FAIL  expected: Failed to load mod journeymap 47.4.10: missing dependency net.minecraftforge.fmlcore
+10:05:20         got:      dependency netminecratforgefmicore
+10:05:20   FAIL  expected: Chunk loading took 127 ms in dimension minecraft:overworld
+10:05:20         got:      mineorattoverwerld
+10:05:20   PASS  [INFO] Registered 714 recipes from farmersdelight
+10:05:20   FAIL  expected: Mod applied-energistics-2 requires Minecraft 1.21 but found 2.0.0-beta.4
+10:05:20         got:      Mn Arns lel requires Minecraft 1.21 but
+10:05:20   FAIL  expected: Failed to load mod create 47.2.0: missing dependency net.minecraftforge.javafmlmod
+10:05:20         got:      netminecratforgejavatnimed
+10:05:20   FAIL  expected: Set JVM argument -Xmx2048M for 1.19.2 Modded
+10:05:20         got:      set JVM argument -Xmx2048M for 1.19.2 Modded
+10:05:20   PASS  Skipping farmersdelight: incompatible with forge 47.2.0
+10:05:20   FAIL  expected: Mixin apply failed for net.fabricmc.loader: target class not found
+10:05:20         got:      nn apply failed for net.fabricmc.loader: target class not
+10:05:20   PASS  Deleted 194 old log files from C:\Games\MultiMC\logs
+10:05:20   FAIL  expected: Crash report saved to D:\Games\MultiMC\crash-reports\crash-2026-11-29.txt
+10:05:20         got:
+10:05:20   PASS  Downloaded ironchests-1.19.2.jar in 43 seconds
+10:05:20   FAIL  expected: Failed to load mod supplementaries 47.4.10: missing dependency org.apache.logging.log4j
+10:05:20         got:      dependency org.apachelogging ogg)
+10:05:20   FAIL  expected: Server started on port 25566 after 169 seconds
+10:05:20         got:      server started on port 25566 after 169 seconds
+10:05:20   FAIL  expected: Loading mod list from C:\Games\MultiMC\instances\Server Backup 2026\mods
+10:05:20         got:      \Gamec\MultiMC\inetances\Server Backup 2026\mods
+10:05:20   FAIL  expected: The Mod File E:\Games\MultiMC\instances\1.21 Survival\.minecraft\mods\glassseam-fix.jar has mods that were not found
+10:05:20         got:      Sunil : : : “afte 5 i s\glasesearn-f : ; i . has n ods that
+10:05:20   FAIL  expected: Set JVM argument -Xmx6144M for 1.20.4 Fabric
+10:05:20         got:      set JVM argument -Xmx6144M for 1.20.4 Fabric
+10:05:20   PASS  Downloaded jei-47.4.10.jar in 193 seconds
+10:05:20   FAIL  expected: Mod alexsmobs requires Minecraft 1.16.5 but found 47.4.10
+10:05:20         got:      aos requires Minecraft 1.16.5 but found
+10:05:20   PASS  Launching Server Backup 2026 with 6144 MB of memory
+10:05:20   PASS  Connection timed out while reading packet 61
+10:05:20   PASS  [WARN] Config file iris-common.toml is out of date
+10:05:20   PASS  Downloaded fabric-api-1.21.jar in 219 seconds
+10:05:20   FAIL  expected: Unable to open D:\Games\MultiMC\libraries\net\minecraftforge\fmlcore\47.4.10\modmenu-47.4.10.jar
+10:05:20         got:      Garett Cvaresinetiincatergeior
+10:05:20   PASS  Texture pack reloaded with 398 resources
+10:05:20   FAIL  expected: Chunk loading took 118 ms in dimension minecraft:overworld
+10:05:20         got:      mineorattoverwerld
+10:05:20   PASS  Deleted 83 old log files from E:\Games\MultiMC\logs
+10:05:20   PASS  Launching 1.19.2 Modded with 6144 MB of memory
+10:05:20   FAIL  expected: java.lang.NoClassDefFoundError: com.google.guava/fabric-api
+10:05:20         got:      ican com.google.guava/
+10:05:20   FAIL  expected: Crash report saved to C:\Games\MultiMC\crash-reports\crash-2026-11-24.txt
+10:05:20         got:
+10:05:20   PASS  glassseam-fix 1.21 is already installed in 1.19.2 Modded
+10:05:20   FAIL  expected: Crash report saved to C:\Games\MultiMC\crash-reports\crash-2026-11-22.txt
+10:05:20         got:
+10:05:20   PASS  Connection timed out while reading packet 19
+10:05:20   FAIL  expected: Error loading class net.minecraftforge.fmlcore.jei in jei-47.4.10.jar
+10:05:20         got:      vohty 4100 net.minecraftforge.fmlcore.jei in
+10:05:20   FAIL  expected: Could not find net.fabricmc.loader for farmersdelight, skipping
+10:05:20         got:      sKioving. find net.fabricmc.loader for farmersdelight,
+10:05:20   PASS  Found 40 mods, 9 failed to load
+10:05:20   PASS  Connection timed out while reading packet 108
+10:05:20   PASS  Retrying download of xaeros-minimap: HTTP status 503
+10:05:20   PASS  Retrying download of journeymap: HTTP status 404
+10:05:20   PASS  Downloaded quark-47.4.10.jar in 104 seconds
+10:05:20   FAIL  expected: Crash report saved to E:\Games\MultiMC\crash-reports\crash-2026-11-06.txt
+10:05:20         got:
+10:05:20   FAIL  expected: Loading mod list from D:\Games\MultiMC\instances\1.20.1 Forge\mods
+10:05:20         got:      \GameclM at MC\inetanoes\' .20.1 Forge\mods
+10:05:20   FAIL  expected: Mod cloth-config requires Minecraft 1.20.1 but found 2.0.0-beta.4
+10:05:20         got:      ee oe requires Minecraft 1.20.1 but found
+10:05:20   PASS  Connection timed out while reading packet 42
+10:05:20   PASS  [WARN] Config file oculus-common.toml is out of date
+10:05:20   FAIL  expected: Chunk loading took 143 ms in dimension minecraft:overworld
+10:05:20         got:      mineorattoverwerld
+10:05:20   FAIL  expected: Skipping journeymap: incompatible with forge 2.0.0-beta.4
+10:05:20         got:      Sepp ng journeymap: incompatible with forge 2.0.0-
+10:05:20   PASS  Downloaded terralith-1.19.2.jar in 45 seconds
+10:05:20   PASS  Deleted 695 old log files from D:\Games\MultiMC\logs
+10:05:20   FAIL  expected: Missing dependency: net.fabricmc.loader version 1.20.1 required by glassseam-fix
+10:05:20         got:      reuired by claseecn nek tabriome.loader version 1.20.1
+10:05:20   FAIL  expected: Skipping quark: incompatible with forge 2.0.0-beta.4
+10:05:20         got:      okipping quark: incompatible with forge 2.0.0-beta.4
+10:05:20   FAIL  expected: Failed to load mod ironchests 3.1.8: missing dependency net.fabricmc.loader
+10:05:20         got:      ate oan ests 3.1.8: missing dependency
+10:05:20   FAIL  expected: alexsmobs 1.20.4 is already installed in Server Backup 2026
+10:05:20         got:      oe oes 1.20.4 is already installed in Server Backup
+10:05:20   FAIL  expected: Loading mod list from C:\Games\MultiMC\instances\1.20.1 6June2026Wiped9Nov2026\mods
+10:05:20         got:
+10:05:20   PASS  Downloaded ironchests-1.16.5.jar in 35 seconds
+10:05:20   FAIL  expected: Could not find com.electronwizard.config for ironchests, skipping
+10:05:20         got:      sKioving. find com.electronwizard.config for ironchests,
+10:05:20   PASS  Found 407 mods, 8 failed to load
+10:05:20   FAIL  expected: Missing dependency: com.electronwizard.config version 0.14.22 required by glassseam-fix
+10:05:20         got:      re “eauited bys com.e’ecrronwizard.contig version
+10:05:20   PASS  Found 857 mods, 4 failed to load
+10:05:20   PASS  [WARN] Config file terralith-common.toml is out of date
+10:05:20   FAIL  expected: Could not find net.minecraftforge.javafmlmod for ironchests, skipping
+10:05:20         got:      vou not me sing oe evamimed for
+10:05:20   PASS  Texture pack reloaded with 677 resources
+10:05:20   FAIL  expected: Error loading class org.apache.logging.log4j.oculus in oculus-0.14.22.jar
+10:05:20         got:      Sor S014 2D iar org.apache.logging.log4j.oculus in
+10:05:20   PASS  Found 439 mods, 7 failed to load
+10:05:20   FAIL  expected: Crash report saved to D:\Games\MultiMC\crash-reports\crash-2026-11-19.txt
+10:05:20         got:
+10:05:20   PASS  Downloaded xaeros-minimap-5.4.0.jar in 146 seconds
+10:05:20   PASS  [WARN] Config file mekanism-common.toml is out of date
+10:05:20   PASS  Server started on port 8080 after 21 seconds
+10:05:20   FAIL  expected: Could not find org.apache.logging.log4j for terralith, skipping
+10:05:20         got:      sKioving. find org.apache.logging.log4j for terralith,
+10:05:20   PASS  Downloaded journeymap-1.20.1.jar in 112 seconds
+10:05:20   PASS  Mod quark requires Minecraft 47.4.10 but found 0.15.3
+10:05:20   FAIL  expected: java.lang.NoClassDefFoundError: com.google.guava/mekanism
+10:05:20         got:      Java vang. NoClassDelFounderror com.google.guava/
+10:05:20   FAIL  expected: Missing dependency: org.apache.logging.log4j version 1.21 required by modmenu
+10:05:20         got:      1 24 required by me org. apacne logging. 109% version
+10:05:20   PASS  Retrying download of sodium: HTTP status 500
+10:05:20   PASS  Retrying download of modmenu: HTTP status 500
+10:05:20   PASS  Skipping mekanism: incompatible with forge 3.1.8
+10:05:20   FAIL  expected: Missing dependency: org.apache.logging.log4j version 1.21 required by mekanism
+10:05:20         got:      1 21 tenuitod by mekoneme soneregging.'o94 version
+10:05:20   PASS  Could not find net.fabricmc.loader for quark, skipping
+10:05:20   PASS  Downloaded jei-5.4.0.jar in 69 seconds
+10:05:20   FAIL  expected: Error loading class com.electronwizard.config.cloth-config in cloth-config-1.19.2.jar
+10:05:20         got:
+10:05:20   PASS  Connection timed out while reading packet 48
+10:05:20   FAIL  expected: Failed to load mod iris 0.15.3: missing dependency com.electronwizard.config
+10:05:20         got:      comelectronwizardcong
+10:05:20   FAIL  expected: Missing dependency: net.fabricmc.loader version 1.19.2 required by oculus
+10:05:20         got:      required by coals net.fabricmc.loader version 1.19.2
+10:05:20   PASS  Connection timed out while reading packet 66
+10:05:20   FAIL  expected: java.lang.NoClassDefFoundError: net.minecraftforge.fmlcore/modmenu
+10:05:20         got:      net minecrafforgemlcorelmodment
+10:05:20   PASS  Texture pack reloaded with 48 resources
+10:05:20   FAIL  expected: The Mod File E:\Games\MultiMC\instances\1.20.1 Forge\.minecraft\mods\oculus.jar has mods that were not found
+10:05:20         got:
+10:05:20   FAIL  expected: Crash report saved to D:\Games\MultiMC\crash-reports\crash-2026-11-18.txt
+10:05:20         got:
+10:05:20   PASS  Texture pack reloaded with 434 resources
+10:05:20   PASS  Found 597 mods, 0 failed to load
+10:05:20   PASS  Server started on port 25565 after 180 seconds
+10:05:20   PASS  Skipping farmersdelight: incompatible with forge 47.4.10
+10:05:20   FAIL  expected: Could not find org.spongepowered.mixin for oculus, skipping
+10:05:20         got:      sKioving. find org.spongepowered.mixin for oculus,
+10:05:20   PASS  [INFO] Registered 895 recipes from applied-energistics-2
+10:05:20   FAIL  expected: Chunk loading took 199 ms in dimension minecraft:overworld
+10:05:20         got:      mineorattoverwerld
+10:05:20   PASS  Deleted 736 old log files from C:\Games\MultiMC\logs
+10:05:20   FAIL  expected: Missing dependency: net.fabricmc.loader version 1.19.2 required by journeymap
+10:05:20         got:      required by jounevaap noacer version 1.19.2
+10:05:20   PASS  journeymap 1.19.2 is already installed in 1.19.2 Modded
+10:05:20   PASS  Could not find com.google.guava for fabric-api, skipping
+10:05:20   FAIL  expected: Failed to load mod alexsmobs 47.2.0: missing dependency net.fabricmc.loader
+10:05:20         got:      dependency netfabriemeloader
+10:05:20   FAIL  expected: Unable to open C:\Games\MultiMC\libraries\com\google\guava\0.15.3\quark-0.15.3.jar
+10:05:20         got:      ca nes clibra ries\com\google\guava\0.15.3\quark
+10:05:20   PASS  Server started on port 8080 after 226 seconds
+10:05:20   PASS  [INFO] Registered 486 recipes from farmersdelight
+10:05:20   FAIL  expected: Crash report saved to C:\Games\MultiMC\crash-reports\crash-2026-11-17.txt
+10:05:20         got:
+10:05:20   PASS  Skipping sodium: incompatible with forge 47.4.10
+10:05:20   PASS  Retrying download of cloth-config: HTTP status 500
+10:05:20   FAIL  expected: Failed to load mod modmenu 47.4.10: missing dependency org.apache.logging.log4j
+10:05:20         got:      dependency org apache logging log)
+10:05:20   FAIL  expected: Missing dependency: net.fabricmc.loader version 1.19.2 required by mekanism
+10:05:20         got:      required by rmekenior net.fabricmc.loader version 1.19.2
+10:05:20   PASS  Downloaded waystones-1.21.jar in 206 seconds
+10:05:20   FAIL  expected: Unable to open D:\Games\MultiMC\libraries\com\google\guava\3.1.8\oculus-3.1.8.jar
+10:05:20         got:      ca nes Cibra ries\com\google\guava\3.1.8\oculus
+10:05:20   PASS  Launching Server Backup 2026 with 4096 MB of memory
+10:05:20   PASS  Server started on port 25565 after 139 seconds
+10:05:20   PASS  Downloaded fabric-api-1.16.5.jar in 172 seconds
+10:05:20   FAIL  expected: Server started on port 25566 after 227 seconds
+10:05:20         got:      server started on port 25566 after 227 seconds
+10:05:20   PASS  Launching 1.20.1 Forge with 8192 MB of memory
+10:05:20   FAIL  expected: Error loading class com.google.guava.waystones in waystones-0.14.22.jar
+10:05:20         got:      wavatonos.s oe far sowie Guava maystones in
+10:05:20   FAIL  expected: The Mod File D:\Games\MultiMC\instances\1.20.1 Forge\.minecraft\mods\waystones.jar has mods that were not found
+10:05:20         got:      Forge\m i 2c “aft\mods\waystones j 5 hae mod s that were
+10:05:20   PASS  Skipping fabric-api: incompatible with forge 47.2.0
+10:05:20   FAIL  expected: Missing dependency: net.minecraftforge.fmlcore version 1.20.4 required by biomesoplenty
+10:05:20         got:      1 20-4 sequired by bro mesoplenty version
+10:05:20   FAIL  expected: Server started on port 8080 after 173 seconds
+10:05:20         got:      server started on port 8080 after 173 seconds
+10:05:20   FAIL  expected: The Mod File D:\Games\MultiMC\instances\1.20.1 Forge\.minecraft\mods\mekanism.jar has mods that were not found
+10:05:20         got:
+10:05:20   FAIL  expected: Failed to load mod alexsmobs 3.1.8: missing dependency org.lwjgl.glfw
+10:05:20         got:      og Lott mod alexsmobs 3.1.8: missing dependency
+10:05:20   PASS  Downloaded journeymap-1.21.jar in 25 seconds
+10:05:20   PASS  Deleted 422 old log files from E:\Games\MultiMC\logs
+10:05:20   FAIL  expected: Skipping quark: incompatible with forge 3.1.8
+10:05:20         got:      okipping quark: incompatible with forge 3.1.8
+10:05:20   PASS  Found 237 mods, 1 failed to load
+10:05:20   FAIL  expected: The Mod File E:\Games\MultiMC\instances\Server Backup 2026\.minecraft\mods\alexsmobs.jar has mods that were not found
+10:05:20         got:
+10:05:20   PASS  Deleted 347 old log files from C:\Games\MultiMC\logs
+10:05:20   PASS  [INFO] Registered 459 recipes from xaeros-minimap
+10:05:20   PASS  Texture pack reloaded with 678 resources
+10:05:20   PASS  [INFO] Registered 264 recipes from journeymap
+10:05:20   PASS  Found 841 mods, 2 failed to load
+10:05:20   FAIL  expected: java.lang.NoClassDefFoundError: net.minecraftforge.fmlcore/jei
+10:05:20         got:
+10:05:20   FAIL  expected: The Mod File C:\Games\MultiMC\instances\1.20.1 6June2026Wiped9Nov2026\.minecraft\mods\oculus.jar has mods that were not found
+10:05:20         got:      : 2 2p seNov2020\.m necraft\mmods\oc u i S.jar
+10:05:20   FAIL  expected: Unable to open E:\Games\MultiMC\libraries\com\google\guava\0.15.3\oculus-0.15.3.jar
+10:05:20         got:      a nes Cilibra ries\com\google\guava\0.15.3\ocul-
+10:05:20   FAIL  expected: Failed to load mod supplementaries 2.0.0-beta.4: missing dependency org.lwjgl.glfw
+10:05:20         got:      Soper dency ova lw areal 2.0.0-beta.4: missing
+10:05:20   FAIL  expected: Could not find org.apache.logging.log4j for alexsmobs, skipping
+10:05:20         got:      sKioving. find org.apache.logging.log4j for alexsmobs,
+10:05:20   FAIL  expected: Missing dependency: org.apache.logging.log4j version 1.19.2 required by biomesoplenty
+10:05:20         got:      1.19.2 required by bomesoplenty
+10:05:20   PASS  Connection timed out while reading packet 232
+10:05:20   FAIL  expected: Set JVM argument -Xmx4096M for 1.20.1 6June2026Wiped9Nov2026
+10:05:20         got:      Siune2026Wiped9Nov2026—
+10:05:20   FAIL  expected: Loading mod list from E:\Games\MultiMC\instances\1.20.4 Fabric\mods
+10:05:20         got:      Comes MattiCNcctanses\4 .20.4 Fabric\mods
+10:05:20   FAIL  expected: Unable to open C:\Games\MultiMC\libraries\net\fabricmc\loader\2.0.0-beta.4\oculus-2.0.0-beta.4.jar
+10:05:20         got:      a mesial ci oe Media
+10:05:20   FAIL  expected: Chunk loading took 97 ms in dimension minecraft:overworld
+10:05:20         got:      mineorattoverwerld
+10:05:20   PASS  [INFO] Registered 571 recipes from jei
+10:05:20   FAIL  expected: Set JVM argument -Xmx4096M for 1.21 Survival
+10:05:20         got:      set JVM argument -Xmx4096M for 1.21 Survival
+10:05:20   PASS  Texture pack reloaded with 307 resources
+10:05:20   PASS  Skipping mekanism: incompatible with forge 2.0.0-beta.4
+10:05:20   FAIL  expected: The Mod File D:\Games\MultiMC\instances\1.20.1 Forge\.minecraft\mods\terralith.jar has mods that were not found
+10:05:20         got:
+10:05:20   FAIL  expected: Unable to open C:\Games\MultiMC\libraries\net\fabricmc\loader\3.1.8\farmersdelight-3.1.8.jar
+10:05:20         got:      amex ci braries\net\fabricmc\loader\3.1.8\farm-
+10:05:20   PASS  Texture pack reloaded with 266 resources
+10:05:20   PASS  Retrying download of supplementaries: HTTP status 500
+10:05:20   PASS  Found 244 mods, 9 failed to load
+10:05:20   FAIL  expected: Failed to load mod carpet 2.0.0-beta.4: missing dependency org.apache.logging.log4j
+10:05:20         got:      dependency org.apache logging logd)
+10:05:20   FAIL  expected: Failed to load mod journeymap 47.4.10: missing dependency org.spongepowered.mixin
+10:05:20         got:      dependency org spongepowered mixin
+10:05:20   PASS  Downloaded alexsmobs-0.14.22.jar in 144 seconds
+10:05:20   PASS  Connection timed out while reading packet 93
+10:05:20   FAIL  expected: Crash report saved to C:\Games\MultiMC\crash-reports\crash-2026-11-02.txt
+10:05:20         got:
+10:05:20   FAIL  expected: Unable to open E:\Games\MultiMC\libraries\org\spongepowered\mixin\0.15.3\create-0.15.3.jar
+10:05:20         got:      ca resi ci ries\org\spongepowered\mixin\0.15.
+10:05:20   FAIL  expected: Unable to open E:\Games\MultiMC\libraries\com\google\guava\3.1.8\iris-3.1.8.jar
+10:05:20         got:      es esi Cilibra ries\com\google\guava\3.1 .8\iris-3. 1
+10:05:20   FAIL  expected: Missing dependency: com.google.guava version 5.4.0 required by sodium
+10:05:20         got:      required by sodium com.google.guava version 5.4.0
+10:05:20   FAIL  expected: Error loading class org.apache.logging.log4j.cloth-config in cloth-config-1.16.5.jar
+10:05:20         got:      nolothconayt 16 Br oangioatl-cloln-contig
+10:05:20   PASS  [INFO] Registered 893 recipes from ironchests
+10:05:20   PASS  Retrying download of carpet: HTTP status 500
+10:05:20   PASS  Downloaded oculus-1.16.5.jar in 24 seconds
+10:05:20   PASS  Connection timed out while reading packet 54
+10:05:20   PASS  Texture pack reloaded with 228 resources
+10:05:20   FAIL  expected: Unable to open D:\Games\MultiMC\libraries\net\minecraftforge\fmlcore\2.0.0-beta.4\modmenu-2.0.0-beta.4.jar
+10:05:20         got:      Games ltr neon | a ore.
+10:05:20   FAIL  expected: Crash report saved to C:\Games\MultiMC\crash-reports\crash-2026-11-12.txt
+10:05:20         got:
+10:05:20   PASS  Connection timed out while reading packet 178
+10:05:20   FAIL  expected: Server started on port 25565 after 220 seconds
+10:05:20         got:      server started on port 25565 after 220 seconds
+10:05:20   FAIL  expected: Crash report saved to C:\Games\MultiMC\crash-reports\crash-2026-11-03.txt
+10:05:20         got:
+10:05:20   FAIL  expected: Failed to load mod create 2.0.0-beta.4: missing dependency org.apache.logging.log4j
+10:05:20         got:
+10:05:20   FAIL  expected: Mixin apply failed for com.electronwizard.config: target class not found
+10:05:20         got:      ween app y fares for com.electronwizard.config: target
+10:05:20   FAIL  expected: Could not find org.spongepowered.mixin for fabric-api, skipping
+10:05:20         got:      sKioving. find org.spongepowered.mixin for fabric-api,
+10:05:20   PASS  Deleted 600 old log files from D:\Games\MultiMC\logs
+10:05:20   PASS  Could not find net.fabricmc.loader for iris, skipping
+10:05:20   PASS  Texture pack reloaded with 96 resources
+10:05:20   PASS  Skipping glassseam-fix: incompatible with forge 47.2.0
+10:05:20   PASS  [WARN] Config file sodium-common.toml is out of date
+10:05:20   FAIL  expected: Could not find org.apache.logging.log4j for glassseam-fix, skipping
+10:05:20         got:      sKioving. find org.apache.logging.log4j for glassseam-fix,
+10:05:20   PASS  Connection timed out while reading packet 101
+10:05:20   PASS  [INFO] Registered 225 recipes from modmenu
+10:05:20   FAIL  expected: Server started on port 25566 after 229 seconds
+10:05:20         got:      server started on port 25566 after 229 seconds
+10:05:20   FAIL  expected: Missing dependency: net.fabricmc.loader version 1.16.5 required by quark
+10:05:20         got:      require’ by cuark net.fabricmc.loader version 1.16.5
+10:05:20   FAIL  expected: Server started on port 8080 after 5 seconds
+10:05:20         got:      server started on port 8080 after 5 seconds
+10:05:20   FAIL  expected: Failed to load mod carpet 2.0.0-beta.4: missing dependency com.google.guava
+10:05:20         got:      dependency com googie.quava
+10:05:20   PASS  Downloaded ironchests-5.4.0.jar in 47 seconds
+10:05:20   FAIL  expected: Error loading class com.google.guava.supplementaries in supplementaries-1.19.2.jar
+10:05:20         got:      supplemontarieet foD er Ppemeniares in
+10:05:20 Rendering 800 training lines in 0_arial (weight 1)
+10:05:20   rendered 1/800 lines in 0_arial
+10:05:20   rendered 2/800 lines in 0_arial
+10:05:21   rendered 3/800 lines in 0_arial
+10:05:21   rendered 4/800 lines in 0_arial
+10:05:21   rendered 5/800 lines in 0_arial
+10:05:21   rendered 6/800 lines in 0_arial
+10:05:22   rendered 7/800 lines in 0_arial
+10:05:22   rendered 8/800 lines in 0_arial
+10:05:22   rendered 9/800 lines in 0_arial
+10:05:22   rendered 10/800 lines in 0_arial
+10:05:23   rendered 11/800 lines in 0_arial
+10:05:23   rendered 12/800 lines in 0_arial
+10:05:23   rendered 13/800 lines in 0_arial
+10:05:23   rendered 14/800 lines in 0_arial
+10:05:24   rendered 15/800 lines in 0_arial
+10:05:24   rendered 16/800 lines in 0_arial
+10:05:25   rendered 17/800 lines in 0_arial
+10:05:25   rendered 18/800 lines in 0_arial
+10:05:25   rendered 19/800 lines in 0_arial
+10:05:25   rendered 20/800 lines in 0_arial
+10:05:26   rendered 21/800 lines in 0_arial
+10:05:26   rendered 22/800 lines in 0_arial
+10:05:26   rendered 23/800 lines in 0_arial
+10:05:26   rendered 24/800 lines in 0_arial
+10:05:27   rendered 25/800 lines in 0_arial
+10:05:27   rendered 26/800 lines in 0_arial
+10:05:27   rendered 27/800 lines in 0_arial
+10:05:27   rendered 28/800 lines in 0_arial
+10:05:28   rendered 29/800 lines in 0_arial
+10:05:28   rendered 30/800 lines in 0_arial
+10:05:29   rendered 31/800 lines in 0_arial
+10:05:29   rendered 32/800 lines in 0_arial
+10:05:29   rendered 33/800 lines in 0_arial
+10:05:29   rendered 34/800 lines in 0_arial
+10:05:30   rendered 35/800 lines in 0_arial
+10:05:30   rendered 36/800 lines in 0_arial
+10:05:30   rendered 37/800 lines in 0_arial
+10:05:30   rendered 38/800 lines in 0_arial
+10:05:31   rendered 39/800 lines in 0_arial
+10:05:31   rendered 40/800 lines in 0_arial
+10:05:32   rendered 41/800 lines in 0_arial
+10:05:32   rendered 42/800 lines in 0_arial
+10:05:32   rendered 43/800 lines in 0_arial
+10:05:32   rendered 44/800 lines in 0_arial
+10:05:33   rendered 45/800 lines in 0_arial
+10:05:33   rendered 46/800 lines in 0_arial
+10:05:33   rendered 47/800 lines in 0_arial
+10:05:33   rendered 48/800 lines in 0_arial
+10:05:34   rendered 49/800 lines in 0_arial
+10:05:34   rendered 50/800 lines in 0_arial
+10:05:34   rendered 51/800 lines in 0_arial
+10:05:34   rendered 52/800 lines in 0_arial
+10:05:35   rendered 53/800 lines in 0_arial
+10:05:35   rendered 54/800 lines in 0_arial
+10:05:35   rendered 55/800 lines in 0_arial
+10:05:35   rendered 56/800 lines in 0_arial
+10:05:36   rendered 57/800 lines in 0_arial
+10:05:36   rendered 58/800 lines in 0_arial
+10:05:36   rendered 59/800 lines in 0_arial
+10:05:36   rendered 60/800 lines in 0_arial
+10:05:37   rendered 61/800 lines in 0_arial
+10:05:37   rendered 62/800 lines in 0_arial
+10:05:37   rendered 63/800 lines in 0_arial
+10:05:37   rendered 64/800 lines in 0_arial
+10:05:38   rendered 65/800 lines in 0_arial
+10:05:38   rendered 66/800 lines in 0_arial
+10:05:38   rendered 67/800 lines in 0_arial
+10:05:38   rendered 68/800 lines in 0_arial
+10:05:39   rendered 69/800 lines in 0_arial
+10:05:39   rendered 70/800 lines in 0_arial
+10:05:39   rendered 71/800 lines in 0_arial
+10:05:39   rendered 72/800 lines in 0_arial
+10:05:40   rendered 73/800 lines in 0_arial
+10:05:40   rendered 74/800 lines in 0_arial
+10:05:40   rendered 75/800 lines in 0_arial
+10:05:40   rendered 76/800 lines in 0_arial
+10:05:41   rendered 77/800 lines in 0_arial
+10:05:41   rendered 78/800 lines in 0_arial
+10:05:41   rendered 79/800 lines in 0_arial
+10:05:41   rendered 80/800 lines in 0_arial
+10:05:42   rendered 81/800 lines in 0_arial
+10:05:42   rendered 82/800 lines in 0_arial
+10:05:42   rendered 83/800 lines in 0_arial
+10:05:42   rendered 84/800 lines in 0_arial
+10:05:43   rendered 85/800 lines in 0_arial
+10:05:43   rendered 86/800 lines in 0_arial
+10:05:43   rendered 87/800 lines in 0_arial
+10:05:43   rendered 88/800 lines in 0_arial
+10:05:44   rendered 89/800 lines in 0_arial
+10:05:44   rendered 90/800 lines in 0_arial
+10:05:44   rendered 91/800 lines in 0_arial
+10:05:44   rendered 92/800 lines in 0_arial
+10:05:45   rendered 93/800 lines in 0_arial
+10:05:45   rendered 94/800 lines in 0_arial
+10:05:45   rendered 95/800 lines in 0_arial
+10:05:45   rendered 96/800 lines in 0_arial
+10:05:45   rendered 97/800 lines in 0_arial
+10:05:45   rendered 98/800 lines in 0_arial
+10:05:46   rendered 99/800 lines in 0_arial
+10:05:46   rendered 100/800 lines in 0_arial
+10:05:46   rendered 101/800 lines in 0_arial
+10:05:46   rendered 102/800 lines in 0_arial
+10:05:47   rendered 103/800 lines in 0_arial
+10:05:47   rendered 104/800 lines in 0_arial
+10:05:47   rendered 105/800 lines in 0_arial
+10:05:47   rendered 106/800 lines in 0_arial
+10:05:48   rendered 107/800 lines in 0_arial
+10:05:48   rendered 108/800 lines in 0_arial
+10:05:48   rendered 109/800 lines in 0_arial
+10:05:48   rendered 110/800 lines in 0_arial
+10:05:49   rendered 111/800 lines in 0_arial
+10:05:49   rendered 112/800 lines in 0_arial
+10:05:49   rendered 113/800 lines in 0_arial
+10:05:49   rendered 114/800 lines in 0_arial
+10:05:50   rendered 115/800 lines in 0_arial
+10:05:50   rendered 116/800 lines in 0_arial
+10:05:50   rendered 117/800 lines in 0_arial
+10:05:50   rendered 118/800 lines in 0_arial
+10:05:51   rendered 119/800 lines in 0_arial
+10:05:51   rendered 120/800 lines in 0_arial
+10:05:51   rendered 121/800 lines in 0_arial
+10:05:51   rendered 122/800 lines in 0_arial
+10:05:51   rendered 123/800 lines in 0_arial
+10:05:51   rendered 124/800 lines in 0_arial
+10:05:52   rendered 125/800 lines in 0_arial
+10:05:52   rendered 126/800 lines in 0_arial
+10:05:52   rendered 127/800 lines in 0_arial
+10:05:52   rendered 128/800 lines in 0_arial
+10:05:53   rendered 129/800 lines in 0_arial
+10:05:53   rendered 130/800 lines in 0_arial
+10:05:53   rendered 131/800 lines in 0_arial
+10:05:53   rendered 132/800 lines in 0_arial
+10:05:54   rendered 133/800 lines in 0_arial
+10:05:54   rendered 134/800 lines in 0_arial
+10:05:54   rendered 135/800 lines in 0_arial
+10:05:54   rendered 136/800 lines in 0_arial
+10:05:55   rendered 137/800 lines in 0_arial
+10:05:55   rendered 138/800 lines in 0_arial
+10:05:55   rendered 139/800 lines in 0_arial
+10:05:55   rendered 140/800 lines in 0_arial
+10:05:56   rendered 141/800 lines in 0_arial
+10:05:56   rendered 142/800 lines in 0_arial
+10:05:56   rendered 143/800 lines in 0_arial
+10:05:56   rendered 144/800 lines in 0_arial
+10:05:56   rendered 145/800 lines in 0_arial
+10:05:56   rendered 146/800 lines in 0_arial
+10:05:57   rendered 147/800 lines in 0_arial
+10:05:57   rendered 148/800 lines in 0_arial
+10:05:57   rendered 149/800 lines in 0_arial
+10:05:57   rendered 150/800 lines in 0_arial
+10:05:58   rendered 151/800 lines in 0_arial
+10:05:58   rendered 152/800 lines in 0_arial
+10:05:58   rendered 153/800 lines in 0_arial
+10:05:58   rendered 154/800 lines in 0_arial
+10:05:59   rendered 155/800 lines in 0_arial
+10:05:59   rendered 156/800 lines in 0_arial
+10:05:59   rendered 157/800 lines in 0_arial
+10:05:59   rendered 158/800 lines in 0_arial
+10:06:00   rendered 159/800 lines in 0_arial
+10:06:00   rendered 160/800 lines in 0_arial
+10:06:00   rendered 161/800 lines in 0_arial
+10:06:00   rendered 162/800 lines in 0_arial
+10:06:01   rendered 163/800 lines in 0_arial
+10:06:01   rendered 164/800 lines in 0_arial
+10:06:01   rendered 165/800 lines in 0_arial
+10:06:01   rendered 166/800 lines in 0_arial
+10:06:02   rendered 167/800 lines in 0_arial
+10:06:02   rendered 168/800 lines in 0_arial
+10:06:02   rendered 169/800 lines in 0_arial
+10:06:02   rendered 170/800 lines in 0_arial
+10:06:02   rendered 171/800 lines in 0_arial
+10:06:02   rendered 172/800 lines in 0_arial
+10:06:03   rendered 173/800 lines in 0_arial
+10:06:03   rendered 174/800 lines in 0_arial
+10:06:03   rendered 175/800 lines in 0_arial
+10:06:03   rendered 176/800 lines in 0_arial
+10:06:04 interrupted by a user
