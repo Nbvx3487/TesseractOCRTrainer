@@ -1,0 +1,10 @@
+Run started: 20261126-225906_minecraft
+Model: minecraft
+Iterations: 400, font size: 32px
+Corpus: 1000 lines, generated automatically (copy in logs: 20261126-225906_minecraft_corpus.txt)
+Font: C:\WINDOWS\Fonts\arial.ttf (weight 1)
+Starting the trainer in WSL. The first output can take a little while.
+WSL started (process 17132), waiting for the trainer.
+Trainer started: minecraft, 400 iterations, font size 32px
+$ combine_tessdata -e /mnt/c/Users/Nbvx Teo/Documents/_Programming/GitHub/TesseractOCRTrainer/data/runs/20261126-225906_minecraft/minecraft/base/eng.traineddata /mnt/c/Users/Nbvx Teo/Documents/_Programming/GitHub/TesseractOCRTrainer/data/runs/20261126-225906_minecraft/minecraft/base/eng.lstm
+interrupted by a user

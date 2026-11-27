@@ -1,0 +1,2443 @@
+Run started: 20261126-225014_minecraft
+Model: minecraft
+Iterations: 400, font size: 38px
+Corpus: 987 lines, generated automatically (copy in logs: 20261126-225014_minecraft_corpus.txt)
+Font: C:\WINDOWS\Fonts\arial.ttf (weight 1)
+Starting the trainer in WSL. The first output can take a little while.
+WSL started (process 2212), waiting for the trainer.
+Trainer started: minecraft, 400 iterations, font size 38px
+$ combine_tessdata -e /mnt/c/Users/Nbvx Teo/Documents/_Programming/GitHub/TesseractOCRTrainer/data/runs/20261126-225014_minecraft/minecraft/base/eng.traineddata /mnt/c/Users/Nbvx Teo/Documents/_Programming/GitHub/TesseractOCRTrainer/data/runs/20261126-225014_minecraft/minecraft/base/eng.lstm
+Extracting tessdata components from /mnt/c/Users/Nbvx Teo/Documents/_Programming/GitHub/TesseractOCRTrainer/data/runs/20261126-225014_minecraft/minecraft/base/eng.traineddata
+Wrote /mnt/c/Users/Nbvx Teo/Documents/_Programming/GitHub/TesseractOCRTrainer/data/runs/20261126-225014_minecraft/minecraft/base/eng.lstm
+Version:4.00.00alpha:eng:synth20170629:[1,36,0,1Ct3,3,16Mp3,3Lfys64Lfx96Lrx96Lfx512O1c1]
+17:lstm:size=11689099, offset=192
+18:lstm-punc-dawg:size=4322, offset=11689291
+19:lstm-word-dawg:size=3694794, offset=11693613
+20:lstm-number-dawg:size=4738, offset=15388407
+21:lstm-unicharset:size=6360, offset=15393145
+22:lstm-recoder:size=1012, offset=15399505
+23:version:size=80, offset=15400517
+Corpus: 790 training lines, 197 held-out lines
+Rendering 197 held-out lines in 0_arial
+  rendered 1/197 lines in 0_arial
+  rendered 2/197 lines in 0_arial
+  rendered 3/197 lines in 0_arial
+  rendered 4/197 lines in 0_arial
+  rendered 5/197 lines in 0_arial
+  rendered 6/197 lines in 0_arial
+  rendered 7/197 lines in 0_arial
+  rendered 8/197 lines in 0_arial
+  rendered 9/197 lines in 0_arial
+  rendered 10/197 lines in 0_arial
+  rendered 11/197 lines in 0_arial
+  rendered 12/197 lines in 0_arial
+  rendered 13/197 lines in 0_arial
+  rendered 14/197 lines in 0_arial
+  rendered 15/197 lines in 0_arial
+  rendered 16/197 lines in 0_arial
+  rendered 17/197 lines in 0_arial
+  rendered 18/197 lines in 0_arial
+  rendered 19/197 lines in 0_arial
+  rendered 20/197 lines in 0_arial
+  rendered 21/197 lines in 0_arial
+  rendered 22/197 lines in 0_arial
+  rendered 23/197 lines in 0_arial
+  rendered 24/197 lines in 0_arial
+  rendered 25/197 lines in 0_arial
+  rendered 26/197 lines in 0_arial
+  rendered 27/197 lines in 0_arial
+  rendered 28/197 lines in 0_arial
+  rendered 29/197 lines in 0_arial
+  rendered 30/197 lines in 0_arial
+  rendered 31/197 lines in 0_arial
+  rendered 32/197 lines in 0_arial
+  rendered 33/197 lines in 0_arial
+  rendered 34/197 lines in 0_arial
+  rendered 35/197 lines in 0_arial
+  rendered 36/197 lines in 0_arial
+  rendered 37/197 lines in 0_arial
+  rendered 38/197 lines in 0_arial
+  rendered 39/197 lines in 0_arial
+  rendered 40/197 lines in 0_arial
+  rendered 41/197 lines in 0_arial
+  rendered 42/197 lines in 0_arial
+  rendered 43/197 lines in 0_arial
+  rendered 44/197 lines in 0_arial
+  rendered 45/197 lines in 0_arial
+  rendered 46/197 lines in 0_arial
+  rendered 47/197 lines in 0_arial
+  rendered 48/197 lines in 0_arial
+  rendered 49/197 lines in 0_arial
+  rendered 50/197 lines in 0_arial
+  rendered 51/197 lines in 0_arial
+  rendered 52/197 lines in 0_arial
+  rendered 53/197 lines in 0_arial
+  rendered 54/197 lines in 0_arial
+  rendered 55/197 lines in 0_arial
+  rendered 56/197 lines in 0_arial
+  rendered 57/197 lines in 0_arial
+  rendered 58/197 lines in 0_arial
+  rendered 59/197 lines in 0_arial
+  rendered 60/197 lines in 0_arial
+  rendered 61/197 lines in 0_arial
+  rendered 62/197 lines in 0_arial
+  rendered 63/197 lines in 0_arial
+  rendered 64/197 lines in 0_arial
+  rendered 65/197 lines in 0_arial
+  rendered 66/197 lines in 0_arial
+  rendered 67/197 lines in 0_arial
+  rendered 68/197 lines in 0_arial
+  rendered 69/197 lines in 0_arial
+  rendered 70/197 lines in 0_arial
+  rendered 71/197 lines in 0_arial
+  rendered 72/197 lines in 0_arial
+  rendered 73/197 lines in 0_arial
+  rendered 74/197 lines in 0_arial
+  rendered 75/197 lines in 0_arial
+  rendered 76/197 lines in 0_arial
+  rendered 77/197 lines in 0_arial
+  rendered 78/197 lines in 0_arial
+  rendered 79/197 lines in 0_arial
+  rendered 80/197 lines in 0_arial
+  rendered 81/197 lines in 0_arial
+  rendered 82/197 lines in 0_arial
+  rendered 83/197 lines in 0_arial
+  rendered 84/197 lines in 0_arial
+  rendered 85/197 lines in 0_arial
+  rendered 86/197 lines in 0_arial
+  rendered 87/197 lines in 0_arial
+  rendered 88/197 lines in 0_arial
+  rendered 89/197 lines in 0_arial
+  rendered 90/197 lines in 0_arial
+  rendered 91/197 lines in 0_arial
+  rendered 92/197 lines in 0_arial
+  rendered 93/197 lines in 0_arial
+  rendered 94/197 lines in 0_arial
+  rendered 95/197 lines in 0_arial
+  rendered 96/197 lines in 0_arial
+  rendered 97/197 lines in 0_arial
+  rendered 98/197 lines in 0_arial
+  rendered 99/197 lines in 0_arial
+  rendered 100/197 lines in 0_arial
+  rendered 101/197 lines in 0_arial
+  rendered 102/197 lines in 0_arial
+  rendered 103/197 lines in 0_arial
+  rendered 104/197 lines in 0_arial
+  rendered 105/197 lines in 0_arial
+  rendered 106/197 lines in 0_arial
+  rendered 107/197 lines in 0_arial
+  rendered 108/197 lines in 0_arial
+  rendered 109/197 lines in 0_arial
+  rendered 110/197 lines in 0_arial
+  rendered 111/197 lines in 0_arial
+  rendered 112/197 lines in 0_arial
+  rendered 113/197 lines in 0_arial
+  rendered 114/197 lines in 0_arial
+  rendered 115/197 lines in 0_arial
+  rendered 116/197 lines in 0_arial
+  rendered 117/197 lines in 0_arial
+  rendered 118/197 lines in 0_arial
+  rendered 119/197 lines in 0_arial
+  rendered 120/197 lines in 0_arial
+  rendered 121/197 lines in 0_arial
+  rendered 122/197 lines in 0_arial
+  rendered 123/197 lines in 0_arial
+  rendered 124/197 lines in 0_arial
+  rendered 125/197 lines in 0_arial
+  rendered 126/197 lines in 0_arial
+  rendered 127/197 lines in 0_arial
+  rendered 128/197 lines in 0_arial
+  rendered 129/197 lines in 0_arial
+  rendered 130/197 lines in 0_arial
+  rendered 131/197 lines in 0_arial
+  rendered 132/197 lines in 0_arial
+  rendered 133/197 lines in 0_arial
+  rendered 134/197 lines in 0_arial
+  rendered 135/197 lines in 0_arial
+  rendered 136/197 lines in 0_arial
+  rendered 137/197 lines in 0_arial
+  rendered 138/197 lines in 0_arial
+  rendered 139/197 lines in 0_arial
+  rendered 140/197 lines in 0_arial
+  rendered 141/197 lines in 0_arial
+  rendered 142/197 lines in 0_arial
+  rendered 143/197 lines in 0_arial
+  rendered 144/197 lines in 0_arial
+  rendered 145/197 lines in 0_arial
+  rendered 146/197 lines in 0_arial
+  rendered 147/197 lines in 0_arial
+  rendered 148/197 lines in 0_arial
+  rendered 149/197 lines in 0_arial
+  rendered 150/197 lines in 0_arial
+  rendered 151/197 lines in 0_arial
+  rendered 152/197 lines in 0_arial
+  rendered 153/197 lines in 0_arial
+  rendered 154/197 lines in 0_arial
+  rendered 155/197 lines in 0_arial
+  rendered 156/197 lines in 0_arial
+  rendered 157/197 lines in 0_arial
+  rendered 158/197 lines in 0_arial
+  rendered 159/197 lines in 0_arial
+  rendered 160/197 lines in 0_arial
+  rendered 161/197 lines in 0_arial
+  rendered 162/197 lines in 0_arial
+  rendered 163/197 lines in 0_arial
+  rendered 164/197 lines in 0_arial
+  rendered 165/197 lines in 0_arial
+  rendered 166/197 lines in 0_arial
+  rendered 167/197 lines in 0_arial
+  rendered 168/197 lines in 0_arial
+  rendered 169/197 lines in 0_arial
+  rendered 170/197 lines in 0_arial
+  rendered 171/197 lines in 0_arial
+  rendered 172/197 lines in 0_arial
+  rendered 173/197 lines in 0_arial
+  rendered 174/197 lines in 0_arial
+  rendered 175/197 lines in 0_arial
+  rendered 176/197 lines in 0_arial
+  rendered 177/197 lines in 0_arial
+  rendered 178/197 lines in 0_arial
+  rendered 179/197 lines in 0_arial
+  rendered 180/197 lines in 0_arial
+  rendered 181/197 lines in 0_arial
+  rendered 182/197 lines in 0_arial
+  rendered 183/197 lines in 0_arial
+  rendered 184/197 lines in 0_arial
+  rendered 185/197 lines in 0_arial
+  rendered 186/197 lines in 0_arial
+  rendered 187/197 lines in 0_arial
+  rendered 188/197 lines in 0_arial
+  rendered 189/197 lines in 0_arial
+  rendered 190/197 lines in 0_arial
+  rendered 191/197 lines in 0_arial
+  rendered 192/197 lines in 0_arial
+  rendered 193/197 lines in 0_arial
+  rendered 194/197 lines in 0_arial
+  rendered 195/197 lines in 0_arial
+  rendered 196/197 lines in 0_arial
+  rendered 197/197 lines in 0_arial
+Rendered 197 held-out images in 0_arial
+  checked 1/197 lines in 0_arial (before training)
+  checked 2/197 lines in 0_arial (before training)
+  checked 3/197 lines in 0_arial (before training)
+  checked 4/197 lines in 0_arial (before training)
+  checked 5/197 lines in 0_arial (before training)
+  checked 6/197 lines in 0_arial (before training)
+  checked 7/197 lines in 0_arial (before training)
+  checked 8/197 lines in 0_arial (before training)
+  checked 9/197 lines in 0_arial (before training)
+  checked 10/197 lines in 0_arial (before training)
+  checked 11/197 lines in 0_arial (before training)
+  checked 12/197 lines in 0_arial (before training)
+  checked 13/197 lines in 0_arial (before training)
+  checked 14/197 lines in 0_arial (before training)
+  checked 15/197 lines in 0_arial (before training)
+  checked 16/197 lines in 0_arial (before training)
+  checked 17/197 lines in 0_arial (before training)
+  checked 18/197 lines in 0_arial (before training)
+  checked 19/197 lines in 0_arial (before training)
+  checked 20/197 lines in 0_arial (before training)
+  checked 21/197 lines in 0_arial (before training)
+  checked 22/197 lines in 0_arial (before training)
+  checked 23/197 lines in 0_arial (before training)
+  checked 24/197 lines in 0_arial (before training)
+  checked 25/197 lines in 0_arial (before training)
+  checked 26/197 lines in 0_arial (before training)
+  checked 27/197 lines in 0_arial (before training)
+  checked 28/197 lines in 0_arial (before training)
+  checked 29/197 lines in 0_arial (before training)
+  checked 30/197 lines in 0_arial (before training)
+  checked 31/197 lines in 0_arial (before training)
+  checked 32/197 lines in 0_arial (before training)
+  checked 33/197 lines in 0_arial (before training)
+  checked 34/197 lines in 0_arial (before training)
+  checked 35/197 lines in 0_arial (before training)
+  checked 36/197 lines in 0_arial (before training)
+  checked 37/197 lines in 0_arial (before training)
+  checked 38/197 lines in 0_arial (before training)
+  checked 39/197 lines in 0_arial (before training)
+  checked 40/197 lines in 0_arial (before training)
+  checked 41/197 lines in 0_arial (before training)
+  checked 42/197 lines in 0_arial (before training)
+  checked 43/197 lines in 0_arial (before training)
+  checked 44/197 lines in 0_arial (before training)
+  checked 45/197 lines in 0_arial (before training)
+  checked 46/197 lines in 0_arial (before training)
+  checked 47/197 lines in 0_arial (before training)
+  checked 48/197 lines in 0_arial (before training)
+  checked 49/197 lines in 0_arial (before training)
+  checked 50/197 lines in 0_arial (before training)
+  checked 51/197 lines in 0_arial (before training)
+  checked 52/197 lines in 0_arial (before training)
+  checked 53/197 lines in 0_arial (before training)
+  checked 54/197 lines in 0_arial (before training)
+  checked 55/197 lines in 0_arial (before training)
+  checked 56/197 lines in 0_arial (before training)
+  checked 57/197 lines in 0_arial (before training)
+  checked 58/197 lines in 0_arial (before training)
+  checked 59/197 lines in 0_arial (before training)
+  checked 60/197 lines in 0_arial (before training)
+  checked 61/197 lines in 0_arial (before training)
+  checked 62/197 lines in 0_arial (before training)
+  checked 63/197 lines in 0_arial (before training)
+  checked 64/197 lines in 0_arial (before training)
+  checked 65/197 lines in 0_arial (before training)
+  checked 66/197 lines in 0_arial (before training)
+  checked 67/197 lines in 0_arial (before training)
+  checked 68/197 lines in 0_arial (before training)
+  checked 69/197 lines in 0_arial (before training)
+  checked 70/197 lines in 0_arial (before training)
+  checked 71/197 lines in 0_arial (before training)
+  checked 72/197 lines in 0_arial (before training)
+  checked 73/197 lines in 0_arial (before training)
+  checked 74/197 lines in 0_arial (before training)
+  checked 75/197 lines in 0_arial (before training)
+  checked 76/197 lines in 0_arial (before training)
+  checked 77/197 lines in 0_arial (before training)
+  checked 78/197 lines in 0_arial (before training)
+  checked 79/197 lines in 0_arial (before training)
+  checked 80/197 lines in 0_arial (before training)
+  checked 81/197 lines in 0_arial (before training)
+  checked 82/197 lines in 0_arial (before training)
+  checked 83/197 lines in 0_arial (before training)
+  checked 84/197 lines in 0_arial (before training)
+  checked 85/197 lines in 0_arial (before training)
+  checked 86/197 lines in 0_arial (before training)
+  checked 87/197 lines in 0_arial (before training)
+  checked 88/197 lines in 0_arial (before training)
+  checked 89/197 lines in 0_arial (before training)
+  checked 90/197 lines in 0_arial (before training)
+  checked 91/197 lines in 0_arial (before training)
+  checked 92/197 lines in 0_arial (before training)
+  checked 93/197 lines in 0_arial (before training)
+  checked 94/197 lines in 0_arial (before training)
+  checked 95/197 lines in 0_arial (before training)
+  checked 96/197 lines in 0_arial (before training)
+  checked 97/197 lines in 0_arial (before training)
+  checked 98/197 lines in 0_arial (before training)
+  checked 99/197 lines in 0_arial (before training)
+  checked 100/197 lines in 0_arial (before training)
+  checked 101/197 lines in 0_arial (before training)
+  checked 102/197 lines in 0_arial (before training)
+  checked 103/197 lines in 0_arial (before training)
+  checked 104/197 lines in 0_arial (before training)
+  checked 105/197 lines in 0_arial (before training)
+  checked 106/197 lines in 0_arial (before training)
+  checked 107/197 lines in 0_arial (before training)
+  checked 108/197 lines in 0_arial (before training)
+  checked 109/197 lines in 0_arial (before training)
+  checked 110/197 lines in 0_arial (before training)
+  checked 111/197 lines in 0_arial (before training)
+  checked 112/197 lines in 0_arial (before training)
+  checked 113/197 lines in 0_arial (before training)
+  checked 114/197 lines in 0_arial (before training)
+  checked 115/197 lines in 0_arial (before training)
+  checked 116/197 lines in 0_arial (before training)
+  checked 117/197 lines in 0_arial (before training)
+  checked 118/197 lines in 0_arial (before training)
+  checked 119/197 lines in 0_arial (before training)
+  checked 120/197 lines in 0_arial (before training)
+  checked 121/197 lines in 0_arial (before training)
+  checked 122/197 lines in 0_arial (before training)
+  checked 123/197 lines in 0_arial (before training)
+  checked 124/197 lines in 0_arial (before training)
+  checked 125/197 lines in 0_arial (before training)
+  checked 126/197 lines in 0_arial (before training)
+  checked 127/197 lines in 0_arial (before training)
+  checked 128/197 lines in 0_arial (before training)
+  checked 129/197 lines in 0_arial (before training)
+  checked 130/197 lines in 0_arial (before training)
+  checked 131/197 lines in 0_arial (before training)
+  checked 132/197 lines in 0_arial (before training)
+  checked 133/197 lines in 0_arial (before training)
+  checked 134/197 lines in 0_arial (before training)
+  checked 135/197 lines in 0_arial (before training)
+  checked 136/197 lines in 0_arial (before training)
+  checked 137/197 lines in 0_arial (before training)
+  checked 138/197 lines in 0_arial (before training)
+  checked 139/197 lines in 0_arial (before training)
+  checked 140/197 lines in 0_arial (before training)
+  checked 141/197 lines in 0_arial (before training)
+  checked 142/197 lines in 0_arial (before training)
+  checked 143/197 lines in 0_arial (before training)
+  checked 144/197 lines in 0_arial (before training)
+  checked 145/197 lines in 0_arial (before training)
+  checked 146/197 lines in 0_arial (before training)
+  checked 147/197 lines in 0_arial (before training)
+  checked 148/197 lines in 0_arial (before training)
+  checked 149/197 lines in 0_arial (before training)
+  checked 150/197 lines in 0_arial (before training)
+  checked 151/197 lines in 0_arial (before training)
+  checked 152/197 lines in 0_arial (before training)
+  checked 153/197 lines in 0_arial (before training)
+  checked 154/197 lines in 0_arial (before training)
+  checked 155/197 lines in 0_arial (before training)
+  checked 156/197 lines in 0_arial (before training)
+  checked 157/197 lines in 0_arial (before training)
+  checked 158/197 lines in 0_arial (before training)
+  checked 159/197 lines in 0_arial (before training)
+  checked 160/197 lines in 0_arial (before training)
+  checked 161/197 lines in 0_arial (before training)
+  checked 162/197 lines in 0_arial (before training)
+  checked 163/197 lines in 0_arial (before training)
+  checked 164/197 lines in 0_arial (before training)
+  checked 165/197 lines in 0_arial (before training)
+  checked 166/197 lines in 0_arial (before training)
+  checked 167/197 lines in 0_arial (before training)
+  checked 168/197 lines in 0_arial (before training)
+  checked 169/197 lines in 0_arial (before training)
+  checked 170/197 lines in 0_arial (before training)
+  checked 171/197 lines in 0_arial (before training)
+  checked 172/197 lines in 0_arial (before training)
+  checked 173/197 lines in 0_arial (before training)
+  checked 174/197 lines in 0_arial (before training)
+  checked 175/197 lines in 0_arial (before training)
+  checked 176/197 lines in 0_arial (before training)
+  checked 177/197 lines in 0_arial (before training)
+  checked 178/197 lines in 0_arial (before training)
+  checked 179/197 lines in 0_arial (before training)
+  checked 180/197 lines in 0_arial (before training)
+  checked 181/197 lines in 0_arial (before training)
+  checked 182/197 lines in 0_arial (before training)
+  checked 183/197 lines in 0_arial (before training)
+  checked 184/197 lines in 0_arial (before training)
+  checked 185/197 lines in 0_arial (before training)
+  checked 186/197 lines in 0_arial (before training)
+  checked 187/197 lines in 0_arial (before training)
+  checked 188/197 lines in 0_arial (before training)
+  checked 189/197 lines in 0_arial (before training)
+  checked 190/197 lines in 0_arial (before training)
+  checked 191/197 lines in 0_arial (before training)
+  checked 192/197 lines in 0_arial (before training)
+  checked 193/197 lines in 0_arial (before training)
+  checked 194/197 lines in 0_arial (before training)
+  checked 195/197 lines in 0_arial (before training)
+  checked 196/197 lines in 0_arial (before training)
+  checked 197/197 lines in 0_arial (before training)
+0_arial before training: 38/197 lines pass, CER 0.5179
+  FAIL  expected: Failed to load mod supplementaries 2.0.0-beta.4: missing dependency org.lwjgl.glfw
+        got:
+  PASS  Texture pack reloaded with 67 resources
+  FAIL  expected: modmenu 1.16.5 is already installed in 1.21 Survival
+        got:      momen 1.16.5 is already installed in 1.21
+  FAIL  expected: The Mod File D:\Games\MultiMC\instances\1.20.1 Forge\.minecraft\mods\journeymap.jar has mods that were not found
+        got:
+  FAIL  expected: Deleted 822 old log files from D:\Games\MultiMC\logs
+        got:      \Games\MultiMClogs
+  FAIL  expected: Failed to load mod cloth-config 47.2.0: missing dependency org.apache.logging.log4j
+        got:      dependency org.apache logging.logd)
+  FAIL  expected: Skipping carpet: incompatible with forge 0.15.3
+        got:      okipping carpet: incompatible with forge 0.15.3
+  FAIL  expected: java.lang.NoClassDefFoundError: com.google.guava/farmersdelight
+        got:      com google quavalfarmersdelight
+  FAIL  expected: Deleted 715 old log files from D:\Games\MultiMC\logs
+        got:      \Games\MultiMClogs
+  FAIL  expected: java.lang.NoClassDefFoundError: net.fabricmc.loader/iris
+        got:
+  PASS  [INFO] Registered 664 recipes from quark
+  FAIL  expected: The Mod File D:\Games\MultiMC\instances\1.16.5 Create\.minecraft\mods\biomesoplenty.jar has mods that were not found
+        got:      me rs on 0 eniyernas
+  PASS  Texture pack reloaded with 374 resources
+  FAIL  expected: Error loading class net.fabricmc.loader.supplementaries in supplementaries-1.16.5.jar
+        got:
+  FAIL  expected: xaeros-minimap 47.4.10 is already installed in 1.16.5 Create
+        got:      acres minima 47.4.10 is already installed in
+  PASS  Connection timed out while reading packet 217
+  FAIL  expected: Mod ironchests requires Minecraft 1.20.1 but found 2.0.0-beta.4
+        got:      noe fone ures Minecraft 1.20.1 but
+  FAIL  expected: Missing dependency: net.minecraftforge.fmlcore version 47.4.10 required by biomesoplenty
+        got:      version 47-4.10 required by biomesoplenty
+  FAIL  expected: Could not find net.minecraftforge.fmlcore for create, skipping
+        got:      vou Kipping ooimoore for
+  FAIL  expected: jei 5.4.0 is already installed in Server Backup 2026
+        got:      " a0 is already installed in Server Backup
+  FAIL  expected: java.lang.NoClassDefFoundError: net.minecraftforge.javafmlmod/alexsmobs
+        got:      vot minccrattforge javafm nod/alexsmobs
+  FAIL  expected: Downloaded mekanism-1.19.2.jar in 205 seconds
+        got:      ~own waded mekanism-1.19.2.jar in 205
+  FAIL  expected: Retrying download of journeymap: HTTP status 500
+        got:      ans download of journeymap: HTTP status
+  FAIL  expected: waystones 5.4.0 is already installed in 1.20.1 Forge
+        got:      rome 0.4.0 is already installed in 1.20.1
+  FAIL  expected: Saved world settings to disk successfully
+        got:      saved world settings to disk successfully
+  FAIL  expected: Server started on port 8080 after 176 seconds
+        got:      server started on port 8080 after 176 seconds
+  PASS  Found 463 mods, 1 failed to load
+  PASS  Connection timed out while reading packet 132
+  FAIL  expected: Downloaded modmenu-1.16.5.jar in 205 seconds
+        got:      ~own waded modmenu-1.16.5.jar in 205
+  FAIL  expected: Retrying download of fabric-api: HTTP status 503
+        got:      a nS download of fabric-api: HTTP status
+  PASS  Retrying download of carpet: HTTP status 500
+  FAIL  expected: The Mod File E:\Games\MultiMC\instances\1.19.2 Modded\.minecraft\mods\quark.jar has mods that were not found
+        got:      sa ! : ae har Siar has mods
+  FAIL  expected: Unable to open D:\Games\MultiMC\libraries\org\spongepowered\mixin\47.4.10\applied-energistics-2-47.4.10.jar
+        got:
+  FAIL  expected: Set JVM argument -Xmx2048M for 1.19.2 Modded
+        got:      anne argument -Xmx2048M for 1.19.2
+  FAIL  expected: Could not find com.google.guava for modmenu, skipping
+        got:      skioing. find com.google.guava for modmenu,
+  FAIL  expected: Could not find com.google.guava for oculus, skipping
+        got:      skioing. find com.google.guava for oculus,
+  FAIL  expected: [WARN] Config file xaeros-minimap-common.toml is out of date
+        got:      common.toml is out of date
+  FAIL  expected: Could not find com.google.guava for biomesoplenty, skipping
+        got:      piomesoplenty skipping
+  FAIL  expected: Deleted 295 old log files from E:\Games\MultiMC\logs
+        got:      \Games\MutiMClogs
+  FAIL  expected: Downloaded alexsmobs-0.14.22.jar in 228 seconds
+        got:      ~own waded alexsmobs-0.14.22.jar in 228
+  FAIL  expected: Mod mekanism requires Minecraft 5.4.0 but found 0.15.3
+        got:      al requires Minecraft 5.4.0 but
+  FAIL  expected: Could not find org.spongepowered.mixin for glassseam-fix, skipping
+        got:      slassseom fx, eng en for
+  FAIL  expected: Error loading class net.fabricmc.loader.biomesoplenty in biomesoplenty-0.14.22.jar
+        got:
+  FAIL  expected: Missing dependency: net.minecraftforge.fmlcore version 0.14.22 required by applied-energistics-2
+        got:
+  FAIL  expected: Set JVM argument -Xmx4096M for 1.20.4 Fabric
+        got:      ee ne argument -Xmx4096M for 1.20.4
+  FAIL  expected: Deleted 297 old log files from C:\Games\MultiMC\logs
+        got:      \Games\MutiMtClogs
+  FAIL  expected: biomesoplenty 1.21 is already installed in 1.19.2 Modded
+        got:      ote ony 1.21 is already installed in 1.19.2
+  FAIL  expected: Error loading class com.google.guava.cloth-config in cloth-config-1.20.4.jar
+        got:      config in cloth-confige1 20.4 jar
+  FAIL  expected: Set JVM argument -Xmx6144M for 1.20.1 Forge
+        got:      set JVM argument -Xmx6144M for 1.20.1 Forge
+  FAIL  expected: Chunk loading took 237 ms in dimension minecraft:overworld
+        got:      minecrattoveword
+  FAIL  expected: Skipping journeymap: incompatible with forge 47.2.0
+        got:      sp phng journeymap: incompatible with forge
+  FAIL  expected: Mixin apply failed for net.minecraftforge.fmlcore: target class not found
+        got:      tarot cheek Nabe OF net minecraltforge.imicore:
+  FAIL  expected: [INFO] Registered 173 recipes from biomesoplenty
+        got:      niomesoplenty. 173 recipes from
+  FAIL  expected: [WARN] Config file cloth-config-common.toml is out of date
+        got:      Sehr date file cloth-config-common.toml is
+  PASS  Connection timed out while reading packet 201
+  FAIL  expected: terralith 1.20.4 is already installed in 1.20.1 Forge
+        got:      Force. 1.20.4 is already installed in 1.20.1
+  FAIL  expected: Mod terralith requires Minecraft 1.20.1 but found 47.4.10
+        got:      Ian requires Minecraft 1.20.1 but found
+  PASS  Server started on port 25566 after 128 seconds
+  FAIL  expected: The Mod File E:\Games\MultiMC\instances\1.19.2 Modded\.minecraft\mods\carpet.jar has mods that were not found
+        got:      sa ! : ee r has mods
+  FAIL  expected: Mod modmenu requires Minecraft 47.4.10 but found 2.0.0-beta.4
+        got:      Sonoma requires Minecraft 47.4.10 but
+  FAIL  expected: Deleted 432 old log files from D:\Games\MultiMC\logs
+        got:      \Games\MutiClogs
+  FAIL  expected: waystones 47.4.10 is already installed in 1.20.4 Fabric
+        got:      waystones 47.4.10 is already installed in 1.20.4
+  FAIL  expected: applied-energistics-2 1.16.5 is already installed in 1.20.1 6June2026Wiped9Nov2026
+        got:      in 1.20.1 6une2026Wiped9NOv2028
+  FAIL  expected: java.lang.NoClassDefFoundError: com.electronwizard.config/farmersdelight
+        got:      som | slo ‘or ord configifarmered elight
+  FAIL  expected: Retrying download of modmenu: HTTP status 403
+        got:      hoa download of modmenu: HTTP status
+  FAIL  expected: Error loading class com.google.guava.terralith in terralith-0.14.22.jar
+        got:      ror pacing 50 iar com.google.guava.terralith in
+  FAIL  expected: Deleted 152 old log files from E:\Games\MultiMC\logs
+        got:      \Games\MutiMtClogs
+  FAIL  expected: alexsmobs 0.14.22 is already installed in 1.21 Survival
+        got:      aoxsmons 0.14.22 is already installed in 1.21
+  FAIL  expected: Chunk loading took 87 ms in dimension minecraft:overworld
+        got:      minecrattoverword
+  FAIL  expected: Failed to load mod modmenu 2.0.0-beta.4: missing dependency org.spongepowered.mixin
+        got:      missing dependency org spongepowered mixin
+  FAIL  expected: Failed to load mod ironchests 2.0.0-beta.4: missing dependency org.apache.logging.log4j
+        got:      nis 5 ide 5 ; nde “ oy o ce 5 i "elo agin 9 ‘ood J
+  PASS  Downloaded waystones-5.4.0.jar in 22 seconds
+  FAIL  expected: [WARN] Config file modmenu-common.toml is out of date
+        got:      Sehr date file modmenu-common.toml is
+  FAIL  expected: Error loading class org.spongepowered.mixin.modmenu in modmenu-1.16.5.jar
+        got:      rospangepowered mn made In
+  FAIL  expected: [INFO] Registered 680 recipes from biomesoplenty
+        got:      niomesoplenty. 680 recipes from
+  PASS  Texture pack reloaded with 38 resources
+  FAIL  expected: Server started on port 25566 after 15 seconds
+        got:      server started on port 25566 after 15 seconds
+  FAIL  expected: Error loading class com.google.guava.fabric-api in fabric-api-1.16.5.jar
+        got:      mal Teaph) Osan anaeneaP
+  PASS  [INFO] Registered 62 recipes from carpet
+  FAIL  expected: Skipping modmenu: incompatible with forge 47.2.0
+        got:      sp phng modmenu: incompatible with forge
+  FAIL  expected: Deleted 511 old log files from C:\Games\MultiMC\logs
+        got:      \Games\MutiitClogs
+  PASS  Connection timed out while reading packet 31
+  PASS  Retrying download of oculus: HTTP status 403
+  PASS  Found 145 mods, 8 failed to load
+  FAIL  expected: Set JVM argument -Xmx2048M for 1.20.4 Fabric
+        got:      ee ne argument -Xmx2048M for 1.20.4
+  PASS  [INFO] Registered 599 recipes from iris
+  FAIL  expected: Mod sodium requires Minecraft 1.20.4 but found 47.2.0
+        got:      Ioan requires Minecraft 1.20.4 but found
+  PASS  Server started on port 25565 after 109 seconds
+  FAIL  expected: Chunk loading took 64 ms in dimension minecraft:overworld
+        got:      minecrattoverworid
+  FAIL  expected: Mod fabric-api requires Minecraft 1.20.1 but found 47.4.10
+        got:      noe aoe ee requires Minecraft 1.20.1 but
+  FAIL  expected: The Mod File D:\Games\MultiMC\instances\1.20.1 Forge\.minecraft\mods\supplementaries.jar has mods that were not found
+        got:      Seer plomentaries jar has
+  FAIL  expected: Chunk loading took 46 ms in dimension minecraft:overworld
+        got:      minecrattoveworid
+  FAIL  expected: Missing dependency: com.google.guava version 1.19.2 required by xaeros-minimap
+        got:
+  FAIL  expected: Skipping cloth-config: incompatible with forge 2.0.0-beta.4
+        got:      Sgnpng cron-contig, incompatible with forge
+  FAIL  expected: java.lang.NoClassDefFoundError: net.minecraftforge.javafmlmod/sodium
+        got:      net minectatforgejavatmimod/sodium
+  FAIL  expected: [INFO] Registered 344 recipes from farmersdelight
+        got:      farmersdetaht 344 recipes from
+  FAIL  expected: The Mod File C:\Games\MultiMC\instances\1.19.2 Modded\.minecraft\mods\supplementaries.jar has mods that were not found
+        got:
+  FAIL  expected: Unable to open C:\Games\MultiMC\libraries\org\lwjgl\glfw\2.0.0-beta.4\waystones-2.0.0-beta.4.jar
+        got:
+  FAIL  expected: Could not find org.spongepowered.mixin for alexsmobs, skipping
+        got:      sen S ekipoy sepoweredmisr for
+  FAIL  expected: java.lang.NoClassDefFoundError: org.apache.logging.log4j/applied-energistics-2
+        got:      ro apache logging.louai/anol ied-anergistics-2
+  FAIL  expected: Chunk loading took 209 ms in dimension minecraft:overworld
+        got:      minecrattoveword
+  PASS  Downloaded jei-1.21.jar in 145 seconds
+  FAIL  expected: ironchests 1.20.1 is already installed in 1.16.5 Create
+        got:      ronenesis 1.20.1 is already installed in 1.16.5
+  PASS  Found 652 mods, 9 failed to load
+  FAIL  expected: The Mod File D:\Games\MultiMC\instances\1.21 Survival\.minecraft\mods\applied-energistics-2.jar has mods that were not found
+        got:
+  FAIL  expected: journeymap 1.20.1 is already installed in 1.16.5 Create
+        got:      ourneymap 1.20.1 is already installed in 1.16.5
+  FAIL  expected: The Mod File D:\Games\MultiMC\instances\1.16.5 Create\.minecraft\mods\alexsmobs.jar has mods that were not found
+        got:      ee Jar has mods
+  FAIL  expected: Skipping alexsmobs: incompatible with forge 3.1.8
+        got:      Sapping alexsmobs: incompatible with forge
+  FAIL  expected: Error loading class com.electronwizard.config.modmenu in modmenu-0.14.22.jar
+        got:
+  FAIL  expected: Chunk loading took 96 ms in dimension minecraft:overworld
+        got:      minecrattoverword
+  FAIL  expected: Error loading class net.minecraftforge.fmlcore.ironchests in ironchests-1.20.4.jar
+        got:      et mneratage nore rnc In
+  FAIL  expected: jei 1.20.4 is already installed in Server Backup 2026
+        got:      " aa is already installed in Server Backup
+  FAIL  expected: Missing dependency: com.google.guava version 5.4.0 required by carpet
+        got:      540 reauived by coro pom-google.quava version
+  PASS  [INFO] Registered 860 recipes from cloth-config
+  PASS  Texture pack reloaded with 621 resources
+  FAIL  expected: java.lang.NoClassDefFoundError: org.lwjgl.glfw/waystones
+        got:      estce org.lwjgl.glfw/
+  FAIL  expected: Skipping biomesoplenty: incompatible with forge 3.1.8
+        got:      Sapping biomesoplenty: incompatible with forge
+  FAIL  expected: Deleted 379 old log files from C:\Games\MultiMC\logs
+        got:      \Games\MutiMtClogs
+  FAIL  expected: Mod mekanism requires Minecraft 47.4.10 but found 47.4.10
+        got:      poe mexanen requires Minecraft 47.4.10 but
+  FAIL  expected: Missing dependency: net.minecraftforge.javafmlmod version 1.20.4 required by waystones
+        got:      et miner avai version 1.20.4
+  FAIL  expected: Unable to open C:\Games\MultiMC\libraries\org\lwjgl\glfw\47.2.0\jei-47.2.0.jar
+        got:      GamesANClianesorjgo47 2.04
+  FAIL  expected: Missing dependency: org.spongepowered.mixin version 47.4.10 required by carpet
+        got:      version 474.10 required by carpet
+  FAIL  expected: xaeros-minimap 1.20.4 is already installed in Server Backup 2026
+        got:      Server Backup 20 va is already installed in
+  PASS  Texture pack reloaded with 154 resources
+  FAIL  expected: Deleted 854 old log files from D:\Games\MultiMC\logs
+        got:      \Games\MutiitClogs
+  FAIL  expected: Mod waystones requires Minecraft 1.16.5 but found 0.15.3
+        got:      moe wayerones requires Minecraft 1.16.5 but
+  FAIL  expected: iris 0.14.22 is already installed in Server Backup 2026
+        got:      Moe is already installed in Server Backup
+  PASS  Connection timed out while reading packet 225
+  FAIL  expected: The Mod File D:\Games\MultiMC\instances\1.20.4 Fabric\.minecraft\mods\cloth-config.jar has mods that were not found
+        got:
+  FAIL  expected: Failed to load mod iris 47.2.0: missing dependency com.google.guava
+        got:      dependency comgoogle guava.
+  FAIL  expected: Downloaded alexsmobs-1.19.2.jar in 212 seconds
+        got:      ~own waded alexsmobs-1.19.2.jar in 212
+  FAIL  expected: Set JVM argument -Xmx8192M for 1.20.1 Forge
+        got:      set JVM argument -Xmx8192M for 1.20.1 Forge
+  FAIL  expected: Downloaded biomesoplenty-1.16.5.jar in 141 seconds
+        got:      ~own waded biomesoplenty-1.16.5.jar in 141
+  FAIL  expected: Chunk loading took 6 ms in dimension minecraft:overworld
+        got:      minecrattoverworid
+  PASS  Server started on port 25565 after 160 seconds
+  FAIL  expected: java.lang.NoClassDefFoundError: org.lwjgl.glfw/fabric-api
+        got:      fabicay en org.lwjgl.glfw/
+  PASS  [INFO] Registered 816 recipes from iris
+  FAIL  expected: Skipping iris: incompatible with forge 47.4.10
+        got:      okipping iris: incompatible with forge 47.4.10
+  FAIL  expected: Deleted 799 old log files from E:\Games\MultiMC\logs
+        got:      \GamesiMutiMtClogs
+  FAIL  expected: Failed to load mod ironchests 47.4.10: missing dependency org.apache.logging.log4j
+        got:      dependency org.apache logging og)
+  FAIL  expected: Mod supplementaries requires Minecraft 0.14.22 but found 3.1.8
+        got:      no" Suppromeniaries requires Minecraft 0.14.22
+  FAIL  expected: Chunk loading took 154 ms in dimension minecraft:overworld
+        got:      minecrattoveword
+  PASS  Server started on port 25565 after 207 seconds
+  FAIL  expected: Set JVM argument -Xmx2048M for 1.20.1 Forge
+        got:      set JVM argument -Xmx2048M for 1.20.1 Forge
+  FAIL  expected: Loading mod list from E:\Games\MultiMC\instances\1.16.5 Create\mods
+        got:      Gamat MCNinetanses\' .16.5 Create\mods
+  FAIL  expected: Launching 1.20.1 Forge with 4096 MB of memory
+        got:      momory 1.20.1 Forge with 4096 MB of
+  FAIL  expected: Loading mod list from C:\Games\MultiMC\instances\1.19.2 Modded\mods
+        got:      am eau icin wes 19.2
+  FAIL  expected: [INFO] Registered 741 recipes from farmersdelight
+        got:      farmersdetaht 741 recipes from
+  FAIL  expected: The Mod File E:\Games\MultiMC\instances\1.20.1 6June2026Wiped9Nov2026\.minecraft\mods\terralith.jar has mods that were not found
+        got:
+  PASS  Server started on port 25566 after 224 seconds
+  FAIL  expected: Retrying download of fabric-api: HTTP status 403
+        got:      how download of fabric-api: HTTP status
+  FAIL  expected: Launching 1.20.1 6June2026Wiped9Nov2026 with 6144 MB of memory
+        got:      aeons y i nome
+  FAIL  expected: java.lang.NoClassDefFoundError: com.electronwizard.config/supplementaries
+        got:      com electtonwizard.config/supplementarie
+  FAIL  expected: Missing dependency: org.spongepowered.mixin version 1.20.4 required by journeymap
+        got:      version 1.20.4 required by joumeymap
+  FAIL  expected: java.lang.NoClassDefFoundError: org.lwjgl.glfw/xaeros-minimap
+        got:      Meroevinima org.lwjgl.glfw/
+  FAIL  expected: [WARN] Config file create-common.toml is out of date
+        got:      Nata Config file create-common.toml is out of
+  FAIL  expected: Launching 1.19.2 Modded with 6144 MB of memory
+        got:      memory = 1.19.2 Modded with 6144 MB of
+  FAIL  expected: The Mod File C:\Games\MultiMC\instances\1.20.1 6June2026Wiped9Nov2026\.minecraft\mods\modmenu.jar has mods that were not found
+        got:
+  PASS  Found 149 mods, 7 failed to load
+  FAIL  expected: Error loading class org.lwjgl.glfw.cloth-config in cloth-config-1.19.2.jar
+        got:      Sloth-configs 12a 9 in
+  FAIL  expected: Could not find org.apache.logging.log4j for glassseam-fix, skipping
+        got:      slassseomfix, eet for
+  FAIL  expected: Downloaded mekanism-47.4.10.jar in 75 seconds
+        got:      ~own waded mekanism-47.4.10.jar in 75
+  FAIL  expected: Crash report saved to C:\Games\MultiMC\crash-reports\crash-2026-11-19.txt
+        got:      roporislerash-2026-T1-19.0
+  FAIL  expected: Missing dependency: com.electronwizard.config version 1.21 required by biomesoplenty
+        got:
+  FAIL  expected: Launching 1.16.5 Create with 6144 MB of memory
+        got:      momory 1.16.5 Create with 6144 MB of
+  FAIL  expected: Missing dependency: org.spongepowered.mixin version 1.20.4 required by farmersdelight
+        got:      version 1.20.4 requited by farmersdelight
+  FAIL  expected: Downloaded applied-energistics-2-0.14.22.jar in 76 seconds
+        got:      road applied-energistics-2-0.14.22.jar in
+  PASS  Retrying download of create: HTTP status 403
+  PASS  Connection timed out while reading packet 66
+  PASS  Connection timed out while reading packet 208
+  FAIL  expected: Downloaded waystones-1.20.4.jar in 17 seconds
+        got:      ~own waded waystones-1.20.4.jar in 17
+  FAIL  expected: Unable to open E:\Games\MultiMC\libraries\com\electronwizard\config\0.15.3\sodium-0.15.3.jar
+        got:
+  PASS  Texture pack reloaded with 442 resources
+  PASS  [INFO] Registered 707 recipes from carpet
+  FAIL  expected: Launching 1.20.4 Fabric with 6144 MB of memory
+        got:      momory 1.20.4 Fabric with 6144 MB of
+  FAIL  expected: Mod waystones requires Minecraft 0.14.22 but found 47.4.10
+        got:      roe veystones requires Minecraft 0.14.22 but
+  FAIL  expected: Error loading class net.minecraftforge.javafmlmod.cloth-config in cloth-config-1.21.jar
+        got:      et mneraege evatnined clt-ony in
+  PASS  Downloaded terralith-5.4.0.jar in 50 seconds
+  FAIL  expected: Missing dependency: org.lwjgl.glfw version 1.21 required by biomesoplenty
+        got:      reauited by biomesop ony version 1.21
+  PASS  Found 430 mods, 4 failed to load
+  PASS  [INFO] Registered 355 recipes from modmenu
+  FAIL  expected: Skipping xaeros-minimap: incompatible with forge 47.4.10
+        got:      roree 49 xeeros-minimap: incompatible with
+  FAIL  expected: Retrying download of xaeros-minimap: HTTP status 403
+        got:      ne rying fownload of xaeros-minimap: HTTP
+  FAIL  expected: Could not find org.spongepowered.mixin for ironchests, skipping
+        got:      vou net oe cane aepowerecmnan for
+  FAIL  expected: Mod waystones requires Minecraft 47.4.10 but found 0.15.3
+        got:      moe wayerones requires Minecraft 47.4.10 but
+  FAIL  expected: Chunk loading took 189 ms in dimension minecraft:overworld
+        got:      minecrattoveword
+  PASS  Connection timed out while reading packet 108
+  FAIL  expected: Missing dependency: org.apache.logging.log4j version 0.14.22 required by ironchests
+        got:      version 0.14.22 required by ronchests
+  PASS  Connection timed out while reading packet 194
+  FAIL  expected: Error loading class net.minecraftforge.fmlcore.waystones in waystones-1.20.4.jar
+        got:      pet minecatorge ice waytones In
+  FAIL  expected: Unable to open C:\Games\MultiMC\libraries\org\lwjgl\glfw\47.4.10\alexsmobs-47.4.10.jar
+        got:      a nesiliChi resi rg\lwighglfw\47.4.10\
+  FAIL  expected: Skipping glassseam-fix: incompatible with forge 0.15.3
+        got:      spping glassseam-fix: incompatible with forge
+  FAIL  expected: Skipping create: incompatible with forge 47.2.0
+        got:      okipping create: incompatible with forge 47.2.0
+  FAIL  expected: Unable to open D:\Games\MultiMC\libraries\org\apache\logging\log4j\47.4.10\iris-47.4.10.jar
+        got:
+  FAIL  expected: modmenu 1.21 is already installed in 1.21 Survival
+        got:      momen 1.21 is already installed in 1.21
+  FAIL  expected: Server started on port 25565 after 66 seconds
+        got:      server started on port 25565 after 66 seconds
+  FAIL  expected: Launching Server Backup 2026 with 4096 MB of memory
+        got:      momory server Backup 2026 with 4096 MB of
+Rendering 790 training lines in 0_arial (weight 1)
+  rendered 1/790 lines in 0_arial
+  rendered 2/790 lines in 0_arial
+  rendered 3/790 lines in 0_arial
+  rendered 4/790 lines in 0_arial
+  rendered 5/790 lines in 0_arial
+  rendered 6/790 lines in 0_arial
+  rendered 7/790 lines in 0_arial
+  rendered 8/790 lines in 0_arial
+  rendered 9/790 lines in 0_arial
+  rendered 10/790 lines in 0_arial
+  rendered 11/790 lines in 0_arial
+  rendered 12/790 lines in 0_arial
+  rendered 13/790 lines in 0_arial
+  rendered 14/790 lines in 0_arial
+  rendered 15/790 lines in 0_arial
+  rendered 16/790 lines in 0_arial
+  rendered 17/790 lines in 0_arial
+  rendered 18/790 lines in 0_arial
+  rendered 19/790 lines in 0_arial
+  rendered 20/790 lines in 0_arial
+  rendered 21/790 lines in 0_arial
+  rendered 22/790 lines in 0_arial
+  rendered 23/790 lines in 0_arial
+  rendered 24/790 lines in 0_arial
+  rendered 25/790 lines in 0_arial
+  rendered 26/790 lines in 0_arial
+  rendered 27/790 lines in 0_arial
+  rendered 28/790 lines in 0_arial
+  rendered 29/790 lines in 0_arial
+  rendered 30/790 lines in 0_arial
+  rendered 31/790 lines in 0_arial
+  rendered 32/790 lines in 0_arial
+  rendered 33/790 lines in 0_arial
+  rendered 34/790 lines in 0_arial
+  rendered 35/790 lines in 0_arial
+  rendered 36/790 lines in 0_arial
+  rendered 37/790 lines in 0_arial
+  rendered 38/790 lines in 0_arial
+  rendered 39/790 lines in 0_arial
+  rendered 40/790 lines in 0_arial
+  rendered 41/790 lines in 0_arial
+  rendered 42/790 lines in 0_arial
+  rendered 43/790 lines in 0_arial
+  rendered 44/790 lines in 0_arial
+  rendered 45/790 lines in 0_arial
+  rendered 46/790 lines in 0_arial
+  rendered 47/790 lines in 0_arial
+  rendered 48/790 lines in 0_arial
+  rendered 49/790 lines in 0_arial
+  rendered 50/790 lines in 0_arial
+  rendered 51/790 lines in 0_arial
+  rendered 52/790 lines in 0_arial
+  rendered 53/790 lines in 0_arial
+  rendered 54/790 lines in 0_arial
+  rendered 55/790 lines in 0_arial
+  rendered 56/790 lines in 0_arial
+  rendered 57/790 lines in 0_arial
+  rendered 58/790 lines in 0_arial
+  rendered 59/790 lines in 0_arial
+  rendered 60/790 lines in 0_arial
+  rendered 61/790 lines in 0_arial
+  rendered 62/790 lines in 0_arial
+  rendered 63/790 lines in 0_arial
+  rendered 64/790 lines in 0_arial
+  rendered 65/790 lines in 0_arial
+  rendered 66/790 lines in 0_arial
+  rendered 67/790 lines in 0_arial
+  rendered 68/790 lines in 0_arial
+  rendered 69/790 lines in 0_arial
+  rendered 70/790 lines in 0_arial
+  rendered 71/790 lines in 0_arial
+  rendered 72/790 lines in 0_arial
+  rendered 73/790 lines in 0_arial
+  rendered 74/790 lines in 0_arial
+  rendered 75/790 lines in 0_arial
+  rendered 76/790 lines in 0_arial
+  rendered 77/790 lines in 0_arial
+  rendered 78/790 lines in 0_arial
+  rendered 79/790 lines in 0_arial
+  rendered 80/790 lines in 0_arial
+  rendered 81/790 lines in 0_arial
+  rendered 82/790 lines in 0_arial
+  rendered 83/790 lines in 0_arial
+  rendered 84/790 lines in 0_arial
+  rendered 85/790 lines in 0_arial
+  rendered 86/790 lines in 0_arial
+  rendered 87/790 lines in 0_arial
+  rendered 88/790 lines in 0_arial
+  rendered 89/790 lines in 0_arial
+  rendered 90/790 lines in 0_arial
+  rendered 91/790 lines in 0_arial
+  rendered 92/790 lines in 0_arial
+  rendered 93/790 lines in 0_arial
+  rendered 94/790 lines in 0_arial
+  rendered 95/790 lines in 0_arial
+  rendered 96/790 lines in 0_arial
+  rendered 97/790 lines in 0_arial
+  rendered 98/790 lines in 0_arial
+  rendered 99/790 lines in 0_arial
+  rendered 100/790 lines in 0_arial
+  rendered 101/790 lines in 0_arial
+  rendered 102/790 lines in 0_arial
+  rendered 103/790 lines in 0_arial
+  rendered 104/790 lines in 0_arial
+  rendered 105/790 lines in 0_arial
+  rendered 106/790 lines in 0_arial
+  rendered 107/790 lines in 0_arial
+  rendered 108/790 lines in 0_arial
+  rendered 109/790 lines in 0_arial
+  rendered 110/790 lines in 0_arial
+  rendered 111/790 lines in 0_arial
+  rendered 112/790 lines in 0_arial
+  rendered 113/790 lines in 0_arial
+  rendered 114/790 lines in 0_arial
+  rendered 115/790 lines in 0_arial
+  rendered 116/790 lines in 0_arial
+  rendered 117/790 lines in 0_arial
+  rendered 118/790 lines in 0_arial
+  rendered 119/790 lines in 0_arial
+  rendered 120/790 lines in 0_arial
+  rendered 121/790 lines in 0_arial
+  rendered 122/790 lines in 0_arial
+  rendered 123/790 lines in 0_arial
+  rendered 124/790 lines in 0_arial
+  rendered 125/790 lines in 0_arial
+  rendered 126/790 lines in 0_arial
+  rendered 127/790 lines in 0_arial
+  rendered 128/790 lines in 0_arial
+  rendered 129/790 lines in 0_arial
+  rendered 130/790 lines in 0_arial
+  rendered 131/790 lines in 0_arial
+  rendered 132/790 lines in 0_arial
+  rendered 133/790 lines in 0_arial
+  rendered 134/790 lines in 0_arial
+  rendered 135/790 lines in 0_arial
+  rendered 136/790 lines in 0_arial
+  rendered 137/790 lines in 0_arial
+  rendered 138/790 lines in 0_arial
+  rendered 139/790 lines in 0_arial
+  rendered 140/790 lines in 0_arial
+  rendered 141/790 lines in 0_arial
+  rendered 142/790 lines in 0_arial
+  rendered 143/790 lines in 0_arial
+  rendered 144/790 lines in 0_arial
+  rendered 145/790 lines in 0_arial
+  rendered 146/790 lines in 0_arial
+  rendered 147/790 lines in 0_arial
+  rendered 148/790 lines in 0_arial
+  rendered 149/790 lines in 0_arial
+  rendered 150/790 lines in 0_arial
+  rendered 151/790 lines in 0_arial
+  rendered 152/790 lines in 0_arial
+  rendered 153/790 lines in 0_arial
+  rendered 154/790 lines in 0_arial
+  rendered 155/790 lines in 0_arial
+  rendered 156/790 lines in 0_arial
+  rendered 157/790 lines in 0_arial
+  rendered 158/790 lines in 0_arial
+  rendered 159/790 lines in 0_arial
+  rendered 160/790 lines in 0_arial
+  rendered 161/790 lines in 0_arial
+  rendered 162/790 lines in 0_arial
+  rendered 163/790 lines in 0_arial
+  rendered 164/790 lines in 0_arial
+  rendered 165/790 lines in 0_arial
+  rendered 166/790 lines in 0_arial
+  rendered 167/790 lines in 0_arial
+  rendered 168/790 lines in 0_arial
+  rendered 169/790 lines in 0_arial
+  rendered 170/790 lines in 0_arial
+  rendered 171/790 lines in 0_arial
+  rendered 172/790 lines in 0_arial
+  rendered 173/790 lines in 0_arial
+  rendered 174/790 lines in 0_arial
+  rendered 175/790 lines in 0_arial
+  rendered 176/790 lines in 0_arial
+  rendered 177/790 lines in 0_arial
+  rendered 178/790 lines in 0_arial
+  rendered 179/790 lines in 0_arial
+  rendered 180/790 lines in 0_arial
+  rendered 181/790 lines in 0_arial
+  rendered 182/790 lines in 0_arial
+  rendered 183/790 lines in 0_arial
+  rendered 184/790 lines in 0_arial
+  rendered 185/790 lines in 0_arial
+  rendered 186/790 lines in 0_arial
+  rendered 187/790 lines in 0_arial
+  rendered 188/790 lines in 0_arial
+  rendered 189/790 lines in 0_arial
+  rendered 190/790 lines in 0_arial
+  rendered 191/790 lines in 0_arial
+  rendered 192/790 lines in 0_arial
+  rendered 193/790 lines in 0_arial
+  rendered 194/790 lines in 0_arial
+  rendered 195/790 lines in 0_arial
+  rendered 196/790 lines in 0_arial
+  rendered 197/790 lines in 0_arial
+  rendered 198/790 lines in 0_arial
+  rendered 199/790 lines in 0_arial
+  rendered 200/790 lines in 0_arial
+  rendered 201/790 lines in 0_arial
+  rendered 202/790 lines in 0_arial
+  rendered 203/790 lines in 0_arial
+  rendered 204/790 lines in 0_arial
+  rendered 205/790 lines in 0_arial
+  rendered 206/790 lines in 0_arial
+  rendered 207/790 lines in 0_arial
+  rendered 208/790 lines in 0_arial
+  rendered 209/790 lines in 0_arial
+  rendered 210/790 lines in 0_arial
+  rendered 211/790 lines in 0_arial
+  rendered 212/790 lines in 0_arial
+  rendered 213/790 lines in 0_arial
+  rendered 214/790 lines in 0_arial
+  rendered 215/790 lines in 0_arial
+  rendered 216/790 lines in 0_arial
+  rendered 217/790 lines in 0_arial
+  rendered 218/790 lines in 0_arial
+  rendered 219/790 lines in 0_arial
+  rendered 220/790 lines in 0_arial
+  rendered 221/790 lines in 0_arial
+  rendered 222/790 lines in 0_arial
+  rendered 223/790 lines in 0_arial
+  rendered 224/790 lines in 0_arial
+  rendered 225/790 lines in 0_arial
+  rendered 226/790 lines in 0_arial
+  rendered 227/790 lines in 0_arial
+  rendered 228/790 lines in 0_arial
+  rendered 229/790 lines in 0_arial
+  rendered 230/790 lines in 0_arial
+  rendered 231/790 lines in 0_arial
+  rendered 232/790 lines in 0_arial
+  rendered 233/790 lines in 0_arial
+  rendered 234/790 lines in 0_arial
+  rendered 235/790 lines in 0_arial
+  rendered 236/790 lines in 0_arial
+  rendered 237/790 lines in 0_arial
+  rendered 238/790 lines in 0_arial
+  rendered 239/790 lines in 0_arial
+  rendered 240/790 lines in 0_arial
+  rendered 241/790 lines in 0_arial
+  rendered 242/790 lines in 0_arial
+  rendered 243/790 lines in 0_arial
+  rendered 244/790 lines in 0_arial
+  rendered 245/790 lines in 0_arial
+  rendered 246/790 lines in 0_arial
+  rendered 247/790 lines in 0_arial
+  rendered 248/790 lines in 0_arial
+  rendered 249/790 lines in 0_arial
+  rendered 250/790 lines in 0_arial
+  rendered 251/790 lines in 0_arial
+  rendered 252/790 lines in 0_arial
+  rendered 253/790 lines in 0_arial
+  rendered 254/790 lines in 0_arial
+  rendered 255/790 lines in 0_arial
+  rendered 256/790 lines in 0_arial
+  rendered 257/790 lines in 0_arial
+  rendered 258/790 lines in 0_arial
+  rendered 259/790 lines in 0_arial
+  rendered 260/790 lines in 0_arial
+  rendered 261/790 lines in 0_arial
+  rendered 262/790 lines in 0_arial
+  rendered 263/790 lines in 0_arial
+  rendered 264/790 lines in 0_arial
+  rendered 265/790 lines in 0_arial
+  rendered 266/790 lines in 0_arial
+  rendered 267/790 lines in 0_arial
+  rendered 268/790 lines in 0_arial
+  rendered 269/790 lines in 0_arial
+  rendered 270/790 lines in 0_arial
+  rendered 271/790 lines in 0_arial
+  rendered 272/790 lines in 0_arial
+  rendered 273/790 lines in 0_arial
+  rendered 274/790 lines in 0_arial
+  rendered 275/790 lines in 0_arial
+  rendered 276/790 lines in 0_arial
+  rendered 277/790 lines in 0_arial
+  rendered 278/790 lines in 0_arial
+  rendered 279/790 lines in 0_arial
+  rendered 280/790 lines in 0_arial
+  rendered 281/790 lines in 0_arial
+  rendered 282/790 lines in 0_arial
+  rendered 283/790 lines in 0_arial
+  rendered 284/790 lines in 0_arial
+  rendered 285/790 lines in 0_arial
+  rendered 286/790 lines in 0_arial
+  rendered 287/790 lines in 0_arial
+  rendered 288/790 lines in 0_arial
+  rendered 289/790 lines in 0_arial
+  rendered 290/790 lines in 0_arial
+  rendered 291/790 lines in 0_arial
+  rendered 292/790 lines in 0_arial
+  rendered 293/790 lines in 0_arial
+  rendered 294/790 lines in 0_arial
+  rendered 295/790 lines in 0_arial
+  rendered 296/790 lines in 0_arial
+  rendered 297/790 lines in 0_arial
+  rendered 298/790 lines in 0_arial
+  rendered 299/790 lines in 0_arial
+  rendered 300/790 lines in 0_arial
+  rendered 301/790 lines in 0_arial
+  rendered 302/790 lines in 0_arial
+  rendered 303/790 lines in 0_arial
+  rendered 304/790 lines in 0_arial
+  rendered 305/790 lines in 0_arial
+  rendered 306/790 lines in 0_arial
+  rendered 307/790 lines in 0_arial
+  rendered 308/790 lines in 0_arial
+  rendered 309/790 lines in 0_arial
+  rendered 310/790 lines in 0_arial
+  rendered 311/790 lines in 0_arial
+  rendered 312/790 lines in 0_arial
+  rendered 313/790 lines in 0_arial
+  rendered 314/790 lines in 0_arial
+  rendered 315/790 lines in 0_arial
+  rendered 316/790 lines in 0_arial
+  rendered 317/790 lines in 0_arial
+  rendered 318/790 lines in 0_arial
+  rendered 319/790 lines in 0_arial
+  rendered 320/790 lines in 0_arial
+  rendered 321/790 lines in 0_arial
+  rendered 322/790 lines in 0_arial
+  rendered 323/790 lines in 0_arial
+  rendered 324/790 lines in 0_arial
+  rendered 325/790 lines in 0_arial
+  rendered 326/790 lines in 0_arial
+  rendered 327/790 lines in 0_arial
+  rendered 328/790 lines in 0_arial
+  rendered 329/790 lines in 0_arial
+  rendered 330/790 lines in 0_arial
+  rendered 331/790 lines in 0_arial
+  rendered 332/790 lines in 0_arial
+  rendered 333/790 lines in 0_arial
+  rendered 334/790 lines in 0_arial
+  rendered 335/790 lines in 0_arial
+  rendered 336/790 lines in 0_arial
+  rendered 337/790 lines in 0_arial
+  rendered 338/790 lines in 0_arial
+  rendered 339/790 lines in 0_arial
+  rendered 340/790 lines in 0_arial
+  rendered 341/790 lines in 0_arial
+  rendered 342/790 lines in 0_arial
+  rendered 343/790 lines in 0_arial
+  rendered 344/790 lines in 0_arial
+  rendered 345/790 lines in 0_arial
+  rendered 346/790 lines in 0_arial
+  rendered 347/790 lines in 0_arial
+  rendered 348/790 lines in 0_arial
+  rendered 349/790 lines in 0_arial
+  rendered 350/790 lines in 0_arial
+  rendered 351/790 lines in 0_arial
+  rendered 352/790 lines in 0_arial
+  rendered 353/790 lines in 0_arial
+  rendered 354/790 lines in 0_arial
+  rendered 355/790 lines in 0_arial
+  rendered 356/790 lines in 0_arial
+  rendered 357/790 lines in 0_arial
+  rendered 358/790 lines in 0_arial
+  rendered 359/790 lines in 0_arial
+  rendered 360/790 lines in 0_arial
+  rendered 361/790 lines in 0_arial
+  rendered 362/790 lines in 0_arial
+  rendered 363/790 lines in 0_arial
+  rendered 364/790 lines in 0_arial
+  rendered 365/790 lines in 0_arial
+  rendered 366/790 lines in 0_arial
+  rendered 367/790 lines in 0_arial
+  rendered 368/790 lines in 0_arial
+  rendered 369/790 lines in 0_arial
+  rendered 370/790 lines in 0_arial
+  rendered 371/790 lines in 0_arial
+  rendered 372/790 lines in 0_arial
+  rendered 373/790 lines in 0_arial
+  rendered 374/790 lines in 0_arial
+  rendered 375/790 lines in 0_arial
+  rendered 376/790 lines in 0_arial
+  rendered 377/790 lines in 0_arial
+  rendered 378/790 lines in 0_arial
+  rendered 379/790 lines in 0_arial
+  rendered 380/790 lines in 0_arial
+  rendered 381/790 lines in 0_arial
+  rendered 382/790 lines in 0_arial
+  rendered 383/790 lines in 0_arial
+  rendered 384/790 lines in 0_arial
+  rendered 385/790 lines in 0_arial
+  rendered 386/790 lines in 0_arial
+  rendered 387/790 lines in 0_arial
+  rendered 388/790 lines in 0_arial
+  rendered 389/790 lines in 0_arial
+  rendered 390/790 lines in 0_arial
+  rendered 391/790 lines in 0_arial
+  rendered 392/790 lines in 0_arial
+  rendered 393/790 lines in 0_arial
+  rendered 394/790 lines in 0_arial
+  rendered 395/790 lines in 0_arial
+  rendered 396/790 lines in 0_arial
+  rendered 397/790 lines in 0_arial
+  rendered 398/790 lines in 0_arial
+  rendered 399/790 lines in 0_arial
+  rendered 400/790 lines in 0_arial
+  rendered 401/790 lines in 0_arial
+  rendered 402/790 lines in 0_arial
+  rendered 403/790 lines in 0_arial
+  rendered 404/790 lines in 0_arial
+  rendered 405/790 lines in 0_arial
+  rendered 406/790 lines in 0_arial
+  rendered 407/790 lines in 0_arial
+  rendered 408/790 lines in 0_arial
+  rendered 409/790 lines in 0_arial
+  rendered 410/790 lines in 0_arial
+  rendered 411/790 lines in 0_arial
+  rendered 412/790 lines in 0_arial
+  rendered 413/790 lines in 0_arial
+  rendered 414/790 lines in 0_arial
+  rendered 415/790 lines in 0_arial
+  rendered 416/790 lines in 0_arial
+  rendered 417/790 lines in 0_arial
+  rendered 418/790 lines in 0_arial
+  rendered 419/790 lines in 0_arial
+  rendered 420/790 lines in 0_arial
+  rendered 421/790 lines in 0_arial
+  rendered 422/790 lines in 0_arial
+  rendered 423/790 lines in 0_arial
+  rendered 424/790 lines in 0_arial
+  rendered 425/790 lines in 0_arial
+  rendered 426/790 lines in 0_arial
+  rendered 427/790 lines in 0_arial
+  rendered 428/790 lines in 0_arial
+  rendered 429/790 lines in 0_arial
+  rendered 430/790 lines in 0_arial
+  rendered 431/790 lines in 0_arial
+  rendered 432/790 lines in 0_arial
+  rendered 433/790 lines in 0_arial
+  rendered 434/790 lines in 0_arial
+  rendered 435/790 lines in 0_arial
+  rendered 436/790 lines in 0_arial
+  rendered 437/790 lines in 0_arial
+  rendered 438/790 lines in 0_arial
+  rendered 439/790 lines in 0_arial
+  rendered 440/790 lines in 0_arial
+  rendered 441/790 lines in 0_arial
+  rendered 442/790 lines in 0_arial
+  rendered 443/790 lines in 0_arial
+  rendered 444/790 lines in 0_arial
+  rendered 445/790 lines in 0_arial
+  rendered 446/790 lines in 0_arial
+  rendered 447/790 lines in 0_arial
+  rendered 448/790 lines in 0_arial
+  rendered 449/790 lines in 0_arial
+  rendered 450/790 lines in 0_arial
+  rendered 451/790 lines in 0_arial
+  rendered 452/790 lines in 0_arial
+  rendered 453/790 lines in 0_arial
+  rendered 454/790 lines in 0_arial
+  rendered 455/790 lines in 0_arial
+  rendered 456/790 lines in 0_arial
+  rendered 457/790 lines in 0_arial
+  rendered 458/790 lines in 0_arial
+  rendered 459/790 lines in 0_arial
+  rendered 460/790 lines in 0_arial
+  rendered 461/790 lines in 0_arial
+  rendered 462/790 lines in 0_arial
+  rendered 463/790 lines in 0_arial
+  rendered 464/790 lines in 0_arial
+  rendered 465/790 lines in 0_arial
+  rendered 466/790 lines in 0_arial
+  rendered 467/790 lines in 0_arial
+  rendered 468/790 lines in 0_arial
+  rendered 469/790 lines in 0_arial
+  rendered 470/790 lines in 0_arial
+  rendered 471/790 lines in 0_arial
+  rendered 472/790 lines in 0_arial
+  rendered 473/790 lines in 0_arial
+  rendered 474/790 lines in 0_arial
+  rendered 475/790 lines in 0_arial
+  rendered 476/790 lines in 0_arial
+  rendered 477/790 lines in 0_arial
+  rendered 478/790 lines in 0_arial
+  rendered 479/790 lines in 0_arial
+  rendered 480/790 lines in 0_arial
+  rendered 481/790 lines in 0_arial
+  rendered 482/790 lines in 0_arial
+  rendered 483/790 lines in 0_arial
+  rendered 484/790 lines in 0_arial
+  rendered 485/790 lines in 0_arial
+  rendered 486/790 lines in 0_arial
+  rendered 487/790 lines in 0_arial
+  rendered 488/790 lines in 0_arial
+  rendered 489/790 lines in 0_arial
+  rendered 490/790 lines in 0_arial
+  rendered 491/790 lines in 0_arial
+  rendered 492/790 lines in 0_arial
+  rendered 493/790 lines in 0_arial
+  rendered 494/790 lines in 0_arial
+  rendered 495/790 lines in 0_arial
+  rendered 496/790 lines in 0_arial
+  rendered 497/790 lines in 0_arial
+  rendered 498/790 lines in 0_arial
+  rendered 499/790 lines in 0_arial
+  rendered 500/790 lines in 0_arial
+  rendered 501/790 lines in 0_arial
+  rendered 502/790 lines in 0_arial
+  rendered 503/790 lines in 0_arial
+  rendered 504/790 lines in 0_arial
+  rendered 505/790 lines in 0_arial
+  rendered 506/790 lines in 0_arial
+  rendered 507/790 lines in 0_arial
+  rendered 508/790 lines in 0_arial
+  rendered 509/790 lines in 0_arial
+  rendered 510/790 lines in 0_arial
+  rendered 511/790 lines in 0_arial
+  rendered 512/790 lines in 0_arial
+  rendered 513/790 lines in 0_arial
+  rendered 514/790 lines in 0_arial
+  rendered 515/790 lines in 0_arial
+  rendered 516/790 lines in 0_arial
+  rendered 517/790 lines in 0_arial
+  rendered 518/790 lines in 0_arial
+  rendered 519/790 lines in 0_arial
+  rendered 520/790 lines in 0_arial
+  rendered 521/790 lines in 0_arial
+  rendered 522/790 lines in 0_arial
+  rendered 523/790 lines in 0_arial
+  rendered 524/790 lines in 0_arial
+  rendered 525/790 lines in 0_arial
+  rendered 526/790 lines in 0_arial
+  rendered 527/790 lines in 0_arial
+  rendered 528/790 lines in 0_arial
+  rendered 529/790 lines in 0_arial
+  rendered 530/790 lines in 0_arial
+  rendered 531/790 lines in 0_arial
+  rendered 532/790 lines in 0_arial
+  rendered 533/790 lines in 0_arial
+  rendered 534/790 lines in 0_arial
+  rendered 535/790 lines in 0_arial
+  rendered 536/790 lines in 0_arial
+  rendered 537/790 lines in 0_arial
+  rendered 538/790 lines in 0_arial
+  rendered 539/790 lines in 0_arial
+  rendered 540/790 lines in 0_arial
+  rendered 541/790 lines in 0_arial
+  rendered 542/790 lines in 0_arial
+  rendered 543/790 lines in 0_arial
+  rendered 544/790 lines in 0_arial
+  rendered 545/790 lines in 0_arial
+  rendered 546/790 lines in 0_arial
+  rendered 547/790 lines in 0_arial
+  rendered 548/790 lines in 0_arial
+  rendered 549/790 lines in 0_arial
+  rendered 550/790 lines in 0_arial
+  rendered 551/790 lines in 0_arial
+  rendered 552/790 lines in 0_arial
+  rendered 553/790 lines in 0_arial
+  rendered 554/790 lines in 0_arial
+  rendered 555/790 lines in 0_arial
+  rendered 556/790 lines in 0_arial
+  rendered 557/790 lines in 0_arial
+  rendered 558/790 lines in 0_arial
+  rendered 559/790 lines in 0_arial
+  rendered 560/790 lines in 0_arial
+  rendered 561/790 lines in 0_arial
+  rendered 562/790 lines in 0_arial
+  rendered 563/790 lines in 0_arial
+  rendered 564/790 lines in 0_arial
+  rendered 565/790 lines in 0_arial
+  rendered 566/790 lines in 0_arial
+  rendered 567/790 lines in 0_arial
+  rendered 568/790 lines in 0_arial
+  rendered 569/790 lines in 0_arial
+  rendered 570/790 lines in 0_arial
+  rendered 571/790 lines in 0_arial
+  rendered 572/790 lines in 0_arial
+  rendered 573/790 lines in 0_arial
+  rendered 574/790 lines in 0_arial
+  rendered 575/790 lines in 0_arial
+  rendered 576/790 lines in 0_arial
+  rendered 577/790 lines in 0_arial
+  rendered 578/790 lines in 0_arial
+  rendered 579/790 lines in 0_arial
+  rendered 580/790 lines in 0_arial
+  rendered 581/790 lines in 0_arial
+  rendered 582/790 lines in 0_arial
+  rendered 583/790 lines in 0_arial
+  rendered 584/790 lines in 0_arial
+  rendered 585/790 lines in 0_arial
+  rendered 586/790 lines in 0_arial
+  rendered 587/790 lines in 0_arial
+  rendered 588/790 lines in 0_arial
+  rendered 589/790 lines in 0_arial
+  rendered 590/790 lines in 0_arial
+  rendered 591/790 lines in 0_arial
+  rendered 592/790 lines in 0_arial
+  rendered 593/790 lines in 0_arial
+  rendered 594/790 lines in 0_arial
+  rendered 595/790 lines in 0_arial
+  rendered 596/790 lines in 0_arial
+  rendered 597/790 lines in 0_arial
+  rendered 598/790 lines in 0_arial
+  rendered 599/790 lines in 0_arial
+  rendered 600/790 lines in 0_arial
+  rendered 601/790 lines in 0_arial
+  rendered 602/790 lines in 0_arial
+  rendered 603/790 lines in 0_arial
+  rendered 604/790 lines in 0_arial
+  rendered 605/790 lines in 0_arial
+  rendered 606/790 lines in 0_arial
+  rendered 607/790 lines in 0_arial
+  rendered 608/790 lines in 0_arial
+  rendered 609/790 lines in 0_arial
+  rendered 610/790 lines in 0_arial
+  rendered 611/790 lines in 0_arial
+  rendered 612/790 lines in 0_arial
+  rendered 613/790 lines in 0_arial
+  rendered 614/790 lines in 0_arial
+  rendered 615/790 lines in 0_arial
+  rendered 616/790 lines in 0_arial
+  rendered 617/790 lines in 0_arial
+  rendered 618/790 lines in 0_arial
+  rendered 619/790 lines in 0_arial
+  rendered 620/790 lines in 0_arial
+  rendered 621/790 lines in 0_arial
+  rendered 622/790 lines in 0_arial
+  rendered 623/790 lines in 0_arial
+  rendered 624/790 lines in 0_arial
+  rendered 625/790 lines in 0_arial
+  rendered 626/790 lines in 0_arial
+  rendered 627/790 lines in 0_arial
+  rendered 628/790 lines in 0_arial
+  rendered 629/790 lines in 0_arial
+  rendered 630/790 lines in 0_arial
+  rendered 631/790 lines in 0_arial
+  rendered 632/790 lines in 0_arial
+  rendered 633/790 lines in 0_arial
+  rendered 634/790 lines in 0_arial
+  rendered 635/790 lines in 0_arial
+  rendered 636/790 lines in 0_arial
+  rendered 637/790 lines in 0_arial
+  rendered 638/790 lines in 0_arial
+  rendered 639/790 lines in 0_arial
+  rendered 640/790 lines in 0_arial
+  rendered 641/790 lines in 0_arial
+  rendered 642/790 lines in 0_arial
+  rendered 643/790 lines in 0_arial
+  rendered 644/790 lines in 0_arial
+  rendered 645/790 lines in 0_arial
+  rendered 646/790 lines in 0_arial
+  rendered 647/790 lines in 0_arial
+  rendered 648/790 lines in 0_arial
+  rendered 649/790 lines in 0_arial
+  rendered 650/790 lines in 0_arial
+  rendered 651/790 lines in 0_arial
+  rendered 652/790 lines in 0_arial
+  rendered 653/790 lines in 0_arial
+  rendered 654/790 lines in 0_arial
+  rendered 655/790 lines in 0_arial
+  rendered 656/790 lines in 0_arial
+  rendered 657/790 lines in 0_arial
+  rendered 658/790 lines in 0_arial
+  rendered 659/790 lines in 0_arial
+  rendered 660/790 lines in 0_arial
+  rendered 661/790 lines in 0_arial
+  rendered 662/790 lines in 0_arial
+  rendered 663/790 lines in 0_arial
+  rendered 664/790 lines in 0_arial
+  rendered 665/790 lines in 0_arial
+  rendered 666/790 lines in 0_arial
+  rendered 667/790 lines in 0_arial
+  rendered 668/790 lines in 0_arial
+  rendered 669/790 lines in 0_arial
+  rendered 670/790 lines in 0_arial
+  rendered 671/790 lines in 0_arial
+  rendered 672/790 lines in 0_arial
+  rendered 673/790 lines in 0_arial
+  rendered 674/790 lines in 0_arial
+  rendered 675/790 lines in 0_arial
+  rendered 676/790 lines in 0_arial
+  rendered 677/790 lines in 0_arial
+  rendered 678/790 lines in 0_arial
+  rendered 679/790 lines in 0_arial
+  rendered 680/790 lines in 0_arial
+  rendered 681/790 lines in 0_arial
+  rendered 682/790 lines in 0_arial
+  rendered 683/790 lines in 0_arial
+  rendered 684/790 lines in 0_arial
+  rendered 685/790 lines in 0_arial
+  rendered 686/790 lines in 0_arial
+  rendered 687/790 lines in 0_arial
+  rendered 688/790 lines in 0_arial
+  rendered 689/790 lines in 0_arial
+  rendered 690/790 lines in 0_arial
+  rendered 691/790 lines in 0_arial
+  rendered 692/790 lines in 0_arial
+  rendered 693/790 lines in 0_arial
+  rendered 694/790 lines in 0_arial
+  rendered 695/790 lines in 0_arial
+  rendered 696/790 lines in 0_arial
+  rendered 697/790 lines in 0_arial
+  rendered 698/790 lines in 0_arial
+  rendered 699/790 lines in 0_arial
+  rendered 700/790 lines in 0_arial
+  rendered 701/790 lines in 0_arial
+  rendered 702/790 lines in 0_arial
+  rendered 703/790 lines in 0_arial
+  rendered 704/790 lines in 0_arial
+  rendered 705/790 lines in 0_arial
+  rendered 706/790 lines in 0_arial
+  rendered 707/790 lines in 0_arial
+  rendered 708/790 lines in 0_arial
+  rendered 709/790 lines in 0_arial
+  rendered 710/790 lines in 0_arial
+  rendered 711/790 lines in 0_arial
+  rendered 712/790 lines in 0_arial
+  rendered 713/790 lines in 0_arial
+  rendered 714/790 lines in 0_arial
+  rendered 715/790 lines in 0_arial
+  rendered 716/790 lines in 0_arial
+  rendered 717/790 lines in 0_arial
+  rendered 718/790 lines in 0_arial
+  rendered 719/790 lines in 0_arial
+  rendered 720/790 lines in 0_arial
+  rendered 721/790 lines in 0_arial
+  rendered 722/790 lines in 0_arial
+  rendered 723/790 lines in 0_arial
+  rendered 724/790 lines in 0_arial
+  rendered 725/790 lines in 0_arial
+  rendered 726/790 lines in 0_arial
+  rendered 727/790 lines in 0_arial
+  rendered 728/790 lines in 0_arial
+  rendered 729/790 lines in 0_arial
+  rendered 730/790 lines in 0_arial
+  rendered 731/790 lines in 0_arial
+  rendered 732/790 lines in 0_arial
+  rendered 733/790 lines in 0_arial
+  rendered 734/790 lines in 0_arial
+  rendered 735/790 lines in 0_arial
+  rendered 736/790 lines in 0_arial
+  rendered 737/790 lines in 0_arial
+  rendered 738/790 lines in 0_arial
+  rendered 739/790 lines in 0_arial
+  rendered 740/790 lines in 0_arial
+  rendered 741/790 lines in 0_arial
+  rendered 742/790 lines in 0_arial
+  rendered 743/790 lines in 0_arial
+  rendered 744/790 lines in 0_arial
+  rendered 745/790 lines in 0_arial
+  rendered 746/790 lines in 0_arial
+  rendered 747/790 lines in 0_arial
+  rendered 748/790 lines in 0_arial
+  rendered 749/790 lines in 0_arial
+  rendered 750/790 lines in 0_arial
+  rendered 751/790 lines in 0_arial
+  rendered 752/790 lines in 0_arial
+  rendered 753/790 lines in 0_arial
+  rendered 754/790 lines in 0_arial
+  rendered 755/790 lines in 0_arial
+  rendered 756/790 lines in 0_arial
+  rendered 757/790 lines in 0_arial
+  rendered 758/790 lines in 0_arial
+  rendered 759/790 lines in 0_arial
+  rendered 760/790 lines in 0_arial
+  rendered 761/790 lines in 0_arial
+  rendered 762/790 lines in 0_arial
+  rendered 763/790 lines in 0_arial
+  rendered 764/790 lines in 0_arial
+  rendered 765/790 lines in 0_arial
+  rendered 766/790 lines in 0_arial
+  rendered 767/790 lines in 0_arial
+  rendered 768/790 lines in 0_arial
+  rendered 769/790 lines in 0_arial
+  rendered 770/790 lines in 0_arial
+  rendered 771/790 lines in 0_arial
+  rendered 772/790 lines in 0_arial
+  rendered 773/790 lines in 0_arial
+  rendered 774/790 lines in 0_arial
+  rendered 775/790 lines in 0_arial
+  rendered 776/790 lines in 0_arial
+  rendered 777/790 lines in 0_arial
+  rendered 778/790 lines in 0_arial
+  rendered 779/790 lines in 0_arial
+  rendered 780/790 lines in 0_arial
+  rendered 781/790 lines in 0_arial
+  rendered 782/790 lines in 0_arial
+  rendered 783/790 lines in 0_arial
+  rendered 784/790 lines in 0_arial
+  rendered 785/790 lines in 0_arial
+  rendered 786/790 lines in 0_arial
+  rendered 787/790 lines in 0_arial
+  rendered 788/790 lines in 0_arial
+  rendered 789/790 lines in 0_arial
+  rendered 790/790 lines in 0_arial
+Rendered 790 training images in 0_arial
+  prepared 1/790 lines in 0_arial: train_0000.tif
+  prepared 2/790 lines in 0_arial: train_0001.tif
+  prepared 3/790 lines in 0_arial: train_0002.tif
+  prepared 4/790 lines in 0_arial: train_0003.tif
+  prepared 5/790 lines in 0_arial: train_0004.tif
+  prepared 6/790 lines in 0_arial: train_0005.tif
+  prepared 7/790 lines in 0_arial: train_0006.tif
+  prepared 8/790 lines in 0_arial: train_0007.tif
+  prepared 9/790 lines in 0_arial: train_0008.tif
+  prepared 10/790 lines in 0_arial: train_0009.tif
+  prepared 11/790 lines in 0_arial: train_0010.tif
+  prepared 12/790 lines in 0_arial: train_0011.tif
+  prepared 13/790 lines in 0_arial: train_0012.tif
+  prepared 14/790 lines in 0_arial: train_0013.tif
+  prepared 15/790 lines in 0_arial: train_0014.tif
+  prepared 16/790 lines in 0_arial: train_0015.tif
+  prepared 17/790 lines in 0_arial: train_0016.tif
+  prepared 18/790 lines in 0_arial: train_0017.tif
+  prepared 19/790 lines in 0_arial: train_0018.tif
+  prepared 20/790 lines in 0_arial: train_0019.tif
+  prepared 21/790 lines in 0_arial: train_0020.tif
+  prepared 22/790 lines in 0_arial: train_0021.tif
+  prepared 23/790 lines in 0_arial: train_0022.tif
+  prepared 24/790 lines in 0_arial: train_0023.tif
+  prepared 25/790 lines in 0_arial: train_0024.tif
+  prepared 26/790 lines in 0_arial: train_0025.tif
+  prepared 27/790 lines in 0_arial: train_0026.tif
+  prepared 28/790 lines in 0_arial: train_0027.tif
+  prepared 29/790 lines in 0_arial: train_0028.tif
+  prepared 30/790 lines in 0_arial: train_0029.tif
+  prepared 31/790 lines in 0_arial: train_0030.tif
+  prepared 32/790 lines in 0_arial: train_0031.tif
+  prepared 33/790 lines in 0_arial: train_0032.tif
+  prepared 34/790 lines in 0_arial: train_0033.tif
+  prepared 35/790 lines in 0_arial: train_0034.tif
+  prepared 36/790 lines in 0_arial: train_0035.tif
+  prepared 37/790 lines in 0_arial: train_0036.tif
+  prepared 38/790 lines in 0_arial: train_0037.tif
+  prepared 39/790 lines in 0_arial: train_0038.tif
+  prepared 40/790 lines in 0_arial: train_0039.tif
+  prepared 41/790 lines in 0_arial: train_0040.tif
+  prepared 42/790 lines in 0_arial: train_0041.tif
+  prepared 43/790 lines in 0_arial: train_0042.tif
+  prepared 44/790 lines in 0_arial: train_0043.tif
+  prepared 45/790 lines in 0_arial: train_0044.tif
+  prepared 46/790 lines in 0_arial: train_0045.tif
+  prepared 47/790 lines in 0_arial: train_0046.tif
+  prepared 48/790 lines in 0_arial: train_0047.tif
+  prepared 49/790 lines in 0_arial: train_0048.tif
+  prepared 50/790 lines in 0_arial: train_0049.tif
+  prepared 51/790 lines in 0_arial: train_0050.tif
+  prepared 52/790 lines in 0_arial: train_0051.tif
+  prepared 53/790 lines in 0_arial: train_0052.tif
+  prepared 54/790 lines in 0_arial: train_0053.tif
+  prepared 55/790 lines in 0_arial: train_0054.tif
+  prepared 56/790 lines in 0_arial: train_0055.tif
+  prepared 57/790 lines in 0_arial: train_0056.tif
+  prepared 58/790 lines in 0_arial: train_0057.tif
+  prepared 59/790 lines in 0_arial: train_0058.tif
+  prepared 60/790 lines in 0_arial: train_0059.tif
+  prepared 61/790 lines in 0_arial: train_0060.tif
+  prepared 62/790 lines in 0_arial: train_0061.tif
+  prepared 63/790 lines in 0_arial: train_0062.tif
+  prepared 64/790 lines in 0_arial: train_0063.tif
+  prepared 65/790 lines in 0_arial: train_0064.tif
+  prepared 66/790 lines in 0_arial: train_0065.tif
+  prepared 67/790 lines in 0_arial: train_0066.tif
+  prepared 68/790 lines in 0_arial: train_0067.tif
+  prepared 69/790 lines in 0_arial: train_0068.tif
+  prepared 70/790 lines in 0_arial: train_0069.tif
+  prepared 71/790 lines in 0_arial: train_0070.tif
+  prepared 72/790 lines in 0_arial: train_0071.tif
+  prepared 73/790 lines in 0_arial: train_0072.tif
+  prepared 74/790 lines in 0_arial: train_0073.tif
+  prepared 75/790 lines in 0_arial: train_0074.tif
+  prepared 76/790 lines in 0_arial: train_0075.tif
+  prepared 77/790 lines in 0_arial: train_0076.tif
+  prepared 78/790 lines in 0_arial: train_0077.tif
+  prepared 79/790 lines in 0_arial: train_0078.tif
+  prepared 80/790 lines in 0_arial: train_0079.tif
+  prepared 81/790 lines in 0_arial: train_0080.tif
+  prepared 82/790 lines in 0_arial: train_0081.tif
+  prepared 83/790 lines in 0_arial: train_0082.tif
+  prepared 84/790 lines in 0_arial: train_0083.tif
+  prepared 85/790 lines in 0_arial: train_0084.tif
+  prepared 86/790 lines in 0_arial: train_0085.tif
+  prepared 87/790 lines in 0_arial: train_0086.tif
+  prepared 88/790 lines in 0_arial: train_0087.tif
+  prepared 89/790 lines in 0_arial: train_0088.tif
+  prepared 90/790 lines in 0_arial: train_0089.tif
+  prepared 91/790 lines in 0_arial: train_0090.tif
+  prepared 92/790 lines in 0_arial: train_0091.tif
+  prepared 93/790 lines in 0_arial: train_0092.tif
+  prepared 94/790 lines in 0_arial: train_0093.tif
+  prepared 95/790 lines in 0_arial: train_0094.tif
+  prepared 96/790 lines in 0_arial: train_0095.tif
+  prepared 97/790 lines in 0_arial: train_0096.tif
+  prepared 98/790 lines in 0_arial: train_0097.tif
+  prepared 99/790 lines in 0_arial: train_0098.tif
+  prepared 100/790 lines in 0_arial: train_0099.tif
+  prepared 101/790 lines in 0_arial: train_0100.tif
+  prepared 102/790 lines in 0_arial: train_0101.tif
+  prepared 103/790 lines in 0_arial: train_0102.tif
+  prepared 104/790 lines in 0_arial: train_0103.tif
+  prepared 105/790 lines in 0_arial: train_0104.tif
+  prepared 106/790 lines in 0_arial: train_0105.tif
+  prepared 107/790 lines in 0_arial: train_0106.tif
+  prepared 108/790 lines in 0_arial: train_0107.tif
+  prepared 109/790 lines in 0_arial: train_0108.tif
+  prepared 110/790 lines in 0_arial: train_0109.tif
+  prepared 111/790 lines in 0_arial: train_0110.tif
+  prepared 112/790 lines in 0_arial: train_0111.tif
+  prepared 113/790 lines in 0_arial: train_0112.tif
+  prepared 114/790 lines in 0_arial: train_0113.tif
+  prepared 115/790 lines in 0_arial: train_0114.tif
+  prepared 116/790 lines in 0_arial: train_0115.tif
+  prepared 117/790 lines in 0_arial: train_0116.tif
+  prepared 118/790 lines in 0_arial: train_0117.tif
+  prepared 119/790 lines in 0_arial: train_0118.tif
+  prepared 120/790 lines in 0_arial: train_0119.tif
+  prepared 121/790 lines in 0_arial: train_0120.tif
+  prepared 122/790 lines in 0_arial: train_0121.tif
+  prepared 123/790 lines in 0_arial: train_0122.tif
+  prepared 124/790 lines in 0_arial: train_0123.tif
+  prepared 125/790 lines in 0_arial: train_0124.tif
+  prepared 126/790 lines in 0_arial: train_0125.tif
+  prepared 127/790 lines in 0_arial: train_0126.tif
+  prepared 128/790 lines in 0_arial: train_0127.tif
+  prepared 129/790 lines in 0_arial: train_0128.tif
+  prepared 130/790 lines in 0_arial: train_0129.tif
+  prepared 131/790 lines in 0_arial: train_0130.tif
+  prepared 132/790 lines in 0_arial: train_0131.tif
+  prepared 133/790 lines in 0_arial: train_0132.tif
+  prepared 134/790 lines in 0_arial: train_0133.tif
+  prepared 135/790 lines in 0_arial: train_0134.tif
+  prepared 136/790 lines in 0_arial: train_0135.tif
+  prepared 137/790 lines in 0_arial: train_0136.tif
+  prepared 138/790 lines in 0_arial: train_0137.tif
+  prepared 139/790 lines in 0_arial: train_0138.tif
+  prepared 140/790 lines in 0_arial: train_0139.tif
+  prepared 141/790 lines in 0_arial: train_0140.tif
+  prepared 142/790 lines in 0_arial: train_0141.tif
+  prepared 143/790 lines in 0_arial: train_0142.tif
+  prepared 144/790 lines in 0_arial: train_0143.tif
+  prepared 145/790 lines in 0_arial: train_0144.tif
+  prepared 146/790 lines in 0_arial: train_0145.tif
+  prepared 147/790 lines in 0_arial: train_0146.tif
+  prepared 148/790 lines in 0_arial: train_0147.tif
+  prepared 149/790 lines in 0_arial: train_0148.tif
+  prepared 150/790 lines in 0_arial: train_0149.tif
+  prepared 151/790 lines in 0_arial: train_0150.tif
+  prepared 152/790 lines in 0_arial: train_0151.tif
+  prepared 153/790 lines in 0_arial: train_0152.tif
+  prepared 154/790 lines in 0_arial: train_0153.tif
+  prepared 155/790 lines in 0_arial: train_0154.tif
+  prepared 156/790 lines in 0_arial: train_0155.tif
+  prepared 157/790 lines in 0_arial: train_0156.tif
+  prepared 158/790 lines in 0_arial: train_0157.tif
+  prepared 159/790 lines in 0_arial: train_0158.tif
+  prepared 160/790 lines in 0_arial: train_0159.tif
+  prepared 161/790 lines in 0_arial: train_0160.tif
+  prepared 162/790 lines in 0_arial: train_0161.tif
+  prepared 163/790 lines in 0_arial: train_0162.tif
+  prepared 164/790 lines in 0_arial: train_0163.tif
+  prepared 165/790 lines in 0_arial: train_0164.tif
+  prepared 166/790 lines in 0_arial: train_0165.tif
+  prepared 167/790 lines in 0_arial: train_0166.tif
+  prepared 168/790 lines in 0_arial: train_0167.tif
+  prepared 169/790 lines in 0_arial: train_0168.tif
+  prepared 170/790 lines in 0_arial: train_0169.tif
+  prepared 171/790 lines in 0_arial: train_0170.tif
+  prepared 172/790 lines in 0_arial: train_0171.tif
+  prepared 173/790 lines in 0_arial: train_0172.tif
+  prepared 174/790 lines in 0_arial: train_0173.tif
+  prepared 175/790 lines in 0_arial: train_0174.tif
+  prepared 176/790 lines in 0_arial: train_0175.tif
+  prepared 177/790 lines in 0_arial: train_0176.tif
+  prepared 178/790 lines in 0_arial: train_0177.tif
+  prepared 179/790 lines in 0_arial: train_0178.tif
+  prepared 180/790 lines in 0_arial: train_0179.tif
+  prepared 181/790 lines in 0_arial: train_0180.tif
+  prepared 182/790 lines in 0_arial: train_0181.tif
+  prepared 183/790 lines in 0_arial: train_0182.tif
+  prepared 184/790 lines in 0_arial: train_0183.tif
+  prepared 185/790 lines in 0_arial: train_0184.tif
+  prepared 186/790 lines in 0_arial: train_0185.tif
+  prepared 187/790 lines in 0_arial: train_0186.tif
+  prepared 188/790 lines in 0_arial: train_0187.tif
+  prepared 189/790 lines in 0_arial: train_0188.tif
+  prepared 190/790 lines in 0_arial: train_0189.tif
+  prepared 191/790 lines in 0_arial: train_0190.tif
+  prepared 192/790 lines in 0_arial: train_0191.tif
+  prepared 193/790 lines in 0_arial: train_0192.tif
+  prepared 194/790 lines in 0_arial: train_0193.tif
+  prepared 195/790 lines in 0_arial: train_0194.tif
+  prepared 196/790 lines in 0_arial: train_0195.tif
+  prepared 197/790 lines in 0_arial: train_0196.tif
+  prepared 198/790 lines in 0_arial: train_0197.tif
+  prepared 199/790 lines in 0_arial: train_0198.tif
+  prepared 200/790 lines in 0_arial: train_0199.tif
+  prepared 201/790 lines in 0_arial: train_0200.tif
+  prepared 202/790 lines in 0_arial: train_0201.tif
+  prepared 203/790 lines in 0_arial: train_0202.tif
+  prepared 204/790 lines in 0_arial: train_0203.tif
+  prepared 205/790 lines in 0_arial: train_0204.tif
+  prepared 206/790 lines in 0_arial: train_0205.tif
+  prepared 207/790 lines in 0_arial: train_0206.tif
+  prepared 208/790 lines in 0_arial: train_0207.tif
+  prepared 209/790 lines in 0_arial: train_0208.tif
+  prepared 210/790 lines in 0_arial: train_0209.tif
+  prepared 211/790 lines in 0_arial: train_0210.tif
+  prepared 212/790 lines in 0_arial: train_0211.tif
+  prepared 213/790 lines in 0_arial: train_0212.tif
+  prepared 214/790 lines in 0_arial: train_0213.tif
+  prepared 215/790 lines in 0_arial: train_0214.tif
+  prepared 216/790 lines in 0_arial: train_0215.tif
+  prepared 217/790 lines in 0_arial: train_0216.tif
+  prepared 218/790 lines in 0_arial: train_0217.tif
+  prepared 219/790 lines in 0_arial: train_0218.tif
+  prepared 220/790 lines in 0_arial: train_0219.tif
+  prepared 221/790 lines in 0_arial: train_0220.tif
+  prepared 222/790 lines in 0_arial: train_0221.tif
+  prepared 223/790 lines in 0_arial: train_0222.tif
+  prepared 224/790 lines in 0_arial: train_0223.tif
+  prepared 225/790 lines in 0_arial: train_0224.tif
+  prepared 226/790 lines in 0_arial: train_0225.tif
+  prepared 227/790 lines in 0_arial: train_0226.tif
+  prepared 228/790 lines in 0_arial: train_0227.tif
+  prepared 229/790 lines in 0_arial: train_0228.tif
+  prepared 230/790 lines in 0_arial: train_0229.tif
+  prepared 231/790 lines in 0_arial: train_0230.tif
+  prepared 232/790 lines in 0_arial: train_0231.tif
+  prepared 233/790 lines in 0_arial: train_0232.tif
+  prepared 234/790 lines in 0_arial: train_0233.tif
+  prepared 235/790 lines in 0_arial: train_0234.tif
+  prepared 236/790 lines in 0_arial: train_0235.tif
+  prepared 237/790 lines in 0_arial: train_0236.tif
+  prepared 238/790 lines in 0_arial: train_0237.tif
+  prepared 239/790 lines in 0_arial: train_0238.tif
+  prepared 240/790 lines in 0_arial: train_0239.tif
+  prepared 241/790 lines in 0_arial: train_0240.tif
+  prepared 242/790 lines in 0_arial: train_0241.tif
+  prepared 243/790 lines in 0_arial: train_0242.tif
+  prepared 244/790 lines in 0_arial: train_0243.tif
+  prepared 245/790 lines in 0_arial: train_0244.tif
+  prepared 246/790 lines in 0_arial: train_0245.tif
+  prepared 247/790 lines in 0_arial: train_0246.tif
+  prepared 248/790 lines in 0_arial: train_0247.tif
+  prepared 249/790 lines in 0_arial: train_0248.tif
+  prepared 250/790 lines in 0_arial: train_0249.tif
+  prepared 251/790 lines in 0_arial: train_0250.tif
+  prepared 252/790 lines in 0_arial: train_0251.tif
+  prepared 253/790 lines in 0_arial: train_0252.tif
+  prepared 254/790 lines in 0_arial: train_0253.tif
+  prepared 255/790 lines in 0_arial: train_0254.tif
+  prepared 256/790 lines in 0_arial: train_0255.tif
+  prepared 257/790 lines in 0_arial: train_0256.tif
+  prepared 258/790 lines in 0_arial: train_0257.tif
+  prepared 259/790 lines in 0_arial: train_0258.tif
+  prepared 260/790 lines in 0_arial: train_0259.tif
+  prepared 261/790 lines in 0_arial: train_0260.tif
+  prepared 262/790 lines in 0_arial: train_0261.tif
+  prepared 263/790 lines in 0_arial: train_0262.tif
+  prepared 264/790 lines in 0_arial: train_0263.tif
+  prepared 265/790 lines in 0_arial: train_0264.tif
+  prepared 266/790 lines in 0_arial: train_0265.tif
+  prepared 267/790 lines in 0_arial: train_0266.tif
+  prepared 268/790 lines in 0_arial: train_0267.tif
+  prepared 269/790 lines in 0_arial: train_0268.tif
+  prepared 270/790 lines in 0_arial: train_0269.tif
+  prepared 271/790 lines in 0_arial: train_0270.tif
+  prepared 272/790 lines in 0_arial: train_0271.tif
+  prepared 273/790 lines in 0_arial: train_0272.tif
+  prepared 274/790 lines in 0_arial: train_0273.tif
+  prepared 275/790 lines in 0_arial: train_0274.tif
+  prepared 276/790 lines in 0_arial: train_0275.tif
+  prepared 277/790 lines in 0_arial: train_0276.tif
+  prepared 278/790 lines in 0_arial: train_0277.tif
+  prepared 279/790 lines in 0_arial: train_0278.tif
+  prepared 280/790 lines in 0_arial: train_0279.tif
+  prepared 281/790 lines in 0_arial: train_0280.tif
+  prepared 282/790 lines in 0_arial: train_0281.tif
+  prepared 283/790 lines in 0_arial: train_0282.tif
+  prepared 284/790 lines in 0_arial: train_0283.tif
+  prepared 285/790 lines in 0_arial: train_0284.tif
+  prepared 286/790 lines in 0_arial: train_0285.tif
+  prepared 287/790 lines in 0_arial: train_0286.tif
+  prepared 288/790 lines in 0_arial: train_0287.tif
+  prepared 289/790 lines in 0_arial: train_0288.tif
+  prepared 290/790 lines in 0_arial: train_0289.tif
+  prepared 291/790 lines in 0_arial: train_0290.tif
+  prepared 292/790 lines in 0_arial: train_0291.tif
+  prepared 293/790 lines in 0_arial: train_0292.tif
+  prepared 294/790 lines in 0_arial: train_0293.tif
+  prepared 295/790 lines in 0_arial: train_0294.tif
+  prepared 296/790 lines in 0_arial: train_0295.tif
+  prepared 297/790 lines in 0_arial: train_0296.tif
+  prepared 298/790 lines in 0_arial: train_0297.tif
+  prepared 299/790 lines in 0_arial: train_0298.tif
+  prepared 300/790 lines in 0_arial: train_0299.tif
+  prepared 301/790 lines in 0_arial: train_0300.tif
+  prepared 302/790 lines in 0_arial: train_0301.tif
+  prepared 303/790 lines in 0_arial: train_0302.tif
+  prepared 304/790 lines in 0_arial: train_0303.tif
+  prepared 305/790 lines in 0_arial: train_0304.tif
+  prepared 306/790 lines in 0_arial: train_0305.tif
+  prepared 307/790 lines in 0_arial: train_0306.tif
+  prepared 308/790 lines in 0_arial: train_0307.tif
+  prepared 309/790 lines in 0_arial: train_0308.tif
+  prepared 310/790 lines in 0_arial: train_0309.tif
+  prepared 311/790 lines in 0_arial: train_0310.tif
+  prepared 312/790 lines in 0_arial: train_0311.tif
+  prepared 313/790 lines in 0_arial: train_0312.tif
+  prepared 314/790 lines in 0_arial: train_0313.tif
+  prepared 315/790 lines in 0_arial: train_0314.tif
+  prepared 316/790 lines in 0_arial: train_0315.tif
+  prepared 317/790 lines in 0_arial: train_0316.tif
+  prepared 318/790 lines in 0_arial: train_0317.tif
+  prepared 319/790 lines in 0_arial: train_0318.tif
+  prepared 320/790 lines in 0_arial: train_0319.tif
+  prepared 321/790 lines in 0_arial: train_0320.tif
+  prepared 322/790 lines in 0_arial: train_0321.tif
+  prepared 323/790 lines in 0_arial: train_0322.tif
+  prepared 324/790 lines in 0_arial: train_0323.tif
+  prepared 325/790 lines in 0_arial: train_0324.tif
+  prepared 326/790 lines in 0_arial: train_0325.tif
+  prepared 327/790 lines in 0_arial: train_0326.tif
+  prepared 328/790 lines in 0_arial: train_0327.tif
+  prepared 329/790 lines in 0_arial: train_0328.tif
+  prepared 330/790 lines in 0_arial: train_0329.tif
+  prepared 331/790 lines in 0_arial: train_0330.tif
+  prepared 332/790 lines in 0_arial: train_0331.tif
+  prepared 333/790 lines in 0_arial: train_0332.tif
+  prepared 334/790 lines in 0_arial: train_0333.tif
+  prepared 335/790 lines in 0_arial: train_0334.tif
+  prepared 336/790 lines in 0_arial: train_0335.tif
+  prepared 337/790 lines in 0_arial: train_0336.tif
+  prepared 338/790 lines in 0_arial: train_0337.tif
+  prepared 339/790 lines in 0_arial: train_0338.tif
+  prepared 340/790 lines in 0_arial: train_0339.tif
+  prepared 341/790 lines in 0_arial: train_0340.tif
+  prepared 342/790 lines in 0_arial: train_0341.tif
+  prepared 343/790 lines in 0_arial: train_0342.tif
+  prepared 344/790 lines in 0_arial: train_0343.tif
+  prepared 345/790 lines in 0_arial: train_0344.tif
+  prepared 346/790 lines in 0_arial: train_0345.tif
+  prepared 347/790 lines in 0_arial: train_0346.tif
+  prepared 348/790 lines in 0_arial: train_0347.tif
+  prepared 349/790 lines in 0_arial: train_0348.tif
+  prepared 350/790 lines in 0_arial: train_0349.tif
+  prepared 351/790 lines in 0_arial: train_0350.tif
+  prepared 352/790 lines in 0_arial: train_0351.tif
+  prepared 353/790 lines in 0_arial: train_0352.tif
+  prepared 354/790 lines in 0_arial: train_0353.tif
+  prepared 355/790 lines in 0_arial: train_0354.tif
+  prepared 356/790 lines in 0_arial: train_0355.tif
+  prepared 357/790 lines in 0_arial: train_0356.tif
+  prepared 358/790 lines in 0_arial: train_0357.tif
+  prepared 359/790 lines in 0_arial: train_0358.tif
+  prepared 360/790 lines in 0_arial: train_0359.tif
+  prepared 361/790 lines in 0_arial: train_0360.tif
+  prepared 362/790 lines in 0_arial: train_0361.tif
+  prepared 363/790 lines in 0_arial: train_0362.tif
+  prepared 364/790 lines in 0_arial: train_0363.tif
+  prepared 365/790 lines in 0_arial: train_0364.tif
+  prepared 366/790 lines in 0_arial: train_0365.tif
+  prepared 367/790 lines in 0_arial: train_0366.tif
+  prepared 368/790 lines in 0_arial: train_0367.tif
+  prepared 369/790 lines in 0_arial: train_0368.tif
+  prepared 370/790 lines in 0_arial: train_0369.tif
+  prepared 371/790 lines in 0_arial: train_0370.tif
+  prepared 372/790 lines in 0_arial: train_0371.tif
+  prepared 373/790 lines in 0_arial: train_0372.tif
+  prepared 374/790 lines in 0_arial: train_0373.tif
+  prepared 375/790 lines in 0_arial: train_0374.tif
+  prepared 376/790 lines in 0_arial: train_0375.tif
+  prepared 377/790 lines in 0_arial: train_0376.tif
+  prepared 378/790 lines in 0_arial: train_0377.tif
+  prepared 379/790 lines in 0_arial: train_0378.tif
+  prepared 380/790 lines in 0_arial: train_0379.tif
+  prepared 381/790 lines in 0_arial: train_0380.tif
+  prepared 382/790 lines in 0_arial: train_0381.tif
+  prepared 383/790 lines in 0_arial: train_0382.tif
+  prepared 384/790 lines in 0_arial: train_0383.tif
+  prepared 385/790 lines in 0_arial: train_0384.tif
+  prepared 386/790 lines in 0_arial: train_0385.tif
+  prepared 387/790 lines in 0_arial: train_0386.tif
+  prepared 388/790 lines in 0_arial: train_0387.tif
+  prepared 389/790 lines in 0_arial: train_0388.tif
+  prepared 390/790 lines in 0_arial: train_0389.tif
+  prepared 391/790 lines in 0_arial: train_0390.tif
+  prepared 392/790 lines in 0_arial: train_0391.tif
+  prepared 393/790 lines in 0_arial: train_0392.tif
+  prepared 394/790 lines in 0_arial: train_0393.tif
+  prepared 395/790 lines in 0_arial: train_0394.tif
+  prepared 396/790 lines in 0_arial: train_0395.tif
+  prepared 397/790 lines in 0_arial: train_0396.tif
+  prepared 398/790 lines in 0_arial: train_0397.tif
+  prepared 399/790 lines in 0_arial: train_0398.tif
+  prepared 400/790 lines in 0_arial: train_0399.tif
+  prepared 401/790 lines in 0_arial: train_0400.tif
+  prepared 402/790 lines in 0_arial: train_0401.tif
+  prepared 403/790 lines in 0_arial: train_0402.tif
+  prepared 404/790 lines in 0_arial: train_0403.tif
+  prepared 405/790 lines in 0_arial: train_0404.tif
+  prepared 406/790 lines in 0_arial: train_0405.tif
+  prepared 407/790 lines in 0_arial: train_0406.tif
+  prepared 408/790 lines in 0_arial: train_0407.tif
+  prepared 409/790 lines in 0_arial: train_0408.tif
+  prepared 410/790 lines in 0_arial: train_0409.tif
+  prepared 411/790 lines in 0_arial: train_0410.tif
+  prepared 412/790 lines in 0_arial: train_0411.tif
+  prepared 413/790 lines in 0_arial: train_0412.tif
+  prepared 414/790 lines in 0_arial: train_0413.tif
+  prepared 415/790 lines in 0_arial: train_0414.tif
+  prepared 416/790 lines in 0_arial: train_0415.tif
+  prepared 417/790 lines in 0_arial: train_0416.tif
+  prepared 418/790 lines in 0_arial: train_0417.tif
+  prepared 419/790 lines in 0_arial: train_0418.tif
+  prepared 420/790 lines in 0_arial: train_0419.tif
+  prepared 421/790 lines in 0_arial: train_0420.tif
+  prepared 422/790 lines in 0_arial: train_0421.tif
+  prepared 423/790 lines in 0_arial: train_0422.tif
+  prepared 424/790 lines in 0_arial: train_0423.tif
+  prepared 425/790 lines in 0_arial: train_0424.tif
+  prepared 426/790 lines in 0_arial: train_0425.tif
+  prepared 427/790 lines in 0_arial: train_0426.tif
+  prepared 428/790 lines in 0_arial: train_0427.tif
+  prepared 429/790 lines in 0_arial: train_0428.tif
+  prepared 430/790 lines in 0_arial: train_0429.tif
+  prepared 431/790 lines in 0_arial: train_0430.tif
+  prepared 432/790 lines in 0_arial: train_0431.tif
+  prepared 433/790 lines in 0_arial: train_0432.tif
+  prepared 434/790 lines in 0_arial: train_0433.tif
+  prepared 435/790 lines in 0_arial: train_0434.tif
+  prepared 436/790 lines in 0_arial: train_0435.tif
+  prepared 437/790 lines in 0_arial: train_0436.tif
+  prepared 438/790 lines in 0_arial: train_0437.tif
+  prepared 439/790 lines in 0_arial: train_0438.tif
+  prepared 440/790 lines in 0_arial: train_0439.tif
+  prepared 441/790 lines in 0_arial: train_0440.tif
+  prepared 442/790 lines in 0_arial: train_0441.tif
+  prepared 443/790 lines in 0_arial: train_0442.tif
+  prepared 444/790 lines in 0_arial: train_0443.tif
+  prepared 445/790 lines in 0_arial: train_0444.tif
+  prepared 446/790 lines in 0_arial: train_0445.tif
+  prepared 447/790 lines in 0_arial: train_0446.tif
+  prepared 448/790 lines in 0_arial: train_0447.tif
+  prepared 449/790 lines in 0_arial: train_0448.tif
+  prepared 450/790 lines in 0_arial: train_0449.tif
+  prepared 451/790 lines in 0_arial: train_0450.tif
+  prepared 452/790 lines in 0_arial: train_0451.tif
+  prepared 453/790 lines in 0_arial: train_0452.tif
+  prepared 454/790 lines in 0_arial: train_0453.tif
+  prepared 455/790 lines in 0_arial: train_0454.tif
+  prepared 456/790 lines in 0_arial: train_0455.tif
+  prepared 457/790 lines in 0_arial: train_0456.tif
+  prepared 458/790 lines in 0_arial: train_0457.tif
+  prepared 459/790 lines in 0_arial: train_0458.tif
+  prepared 460/790 lines in 0_arial: train_0459.tif
+  prepared 461/790 lines in 0_arial: train_0460.tif
+  prepared 462/790 lines in 0_arial: train_0461.tif
+  prepared 463/790 lines in 0_arial: train_0462.tif
+  prepared 464/790 lines in 0_arial: train_0463.tif
+  prepared 465/790 lines in 0_arial: train_0464.tif
+  prepared 466/790 lines in 0_arial: train_0465.tif
+  prepared 467/790 lines in 0_arial: train_0466.tif
+  prepared 468/790 lines in 0_arial: train_0467.tif
+  prepared 469/790 lines in 0_arial: train_0468.tif
+  prepared 470/790 lines in 0_arial: train_0469.tif
+  prepared 471/790 lines in 0_arial: train_0470.tif
+  prepared 472/790 lines in 0_arial: train_0471.tif
+  prepared 473/790 lines in 0_arial: train_0472.tif
+  prepared 474/790 lines in 0_arial: train_0473.tif
+  prepared 475/790 lines in 0_arial: train_0474.tif
+  prepared 476/790 lines in 0_arial: train_0475.tif
+  prepared 477/790 lines in 0_arial: train_0476.tif
+  prepared 478/790 lines in 0_arial: train_0477.tif
+  prepared 479/790 lines in 0_arial: train_0478.tif
+  prepared 480/790 lines in 0_arial: train_0479.tif
+  prepared 481/790 lines in 0_arial: train_0480.tif
+  prepared 482/790 lines in 0_arial: train_0481.tif
+  prepared 483/790 lines in 0_arial: train_0482.tif
+  prepared 484/790 lines in 0_arial: train_0483.tif
+  prepared 485/790 lines in 0_arial: train_0484.tif
+  prepared 486/790 lines in 0_arial: train_0485.tif
+  prepared 487/790 lines in 0_arial: train_0486.tif
+  prepared 488/790 lines in 0_arial: train_0487.tif
+  prepared 489/790 lines in 0_arial: train_0488.tif
+  prepared 490/790 lines in 0_arial: train_0489.tif
+  prepared 491/790 lines in 0_arial: train_0490.tif
+  prepared 492/790 lines in 0_arial: train_0491.tif
+  prepared 493/790 lines in 0_arial: train_0492.tif
+  prepared 494/790 lines in 0_arial: train_0493.tif
+  prepared 495/790 lines in 0_arial: train_0494.tif
+  prepared 496/790 lines in 0_arial: train_0495.tif
+  prepared 497/790 lines in 0_arial: train_0496.tif
+  prepared 498/790 lines in 0_arial: train_0497.tif
+  prepared 499/790 lines in 0_arial: train_0498.tif
+  prepared 500/790 lines in 0_arial: train_0499.tif
+  prepared 501/790 lines in 0_arial: train_0500.tif
+  prepared 502/790 lines in 0_arial: train_0501.tif
+  prepared 503/790 lines in 0_arial: train_0502.tif
+  prepared 504/790 lines in 0_arial: train_0503.tif
+  prepared 505/790 lines in 0_arial: train_0504.tif
+  prepared 506/790 lines in 0_arial: train_0505.tif
+  prepared 507/790 lines in 0_arial: train_0506.tif
+  prepared 508/790 lines in 0_arial: train_0507.tif
+  prepared 509/790 lines in 0_arial: train_0508.tif
+  prepared 510/790 lines in 0_arial: train_0509.tif
+  prepared 511/790 lines in 0_arial: train_0510.tif
+  prepared 512/790 lines in 0_arial: train_0511.tif
+  prepared 513/790 lines in 0_arial: train_0512.tif
+  prepared 514/790 lines in 0_arial: train_0513.tif
+  prepared 515/790 lines in 0_arial: train_0514.tif
+  prepared 516/790 lines in 0_arial: train_0515.tif
+  prepared 517/790 lines in 0_arial: train_0516.tif
+  prepared 518/790 lines in 0_arial: train_0517.tif
+  prepared 519/790 lines in 0_arial: train_0518.tif
+  prepared 520/790 lines in 0_arial: train_0519.tif
+  prepared 521/790 lines in 0_arial: train_0520.tif
+  prepared 522/790 lines in 0_arial: train_0521.tif
+  prepared 523/790 lines in 0_arial: train_0522.tif
+  prepared 524/790 lines in 0_arial: train_0523.tif
+  prepared 525/790 lines in 0_arial: train_0524.tif
+  prepared 526/790 lines in 0_arial: train_0525.tif
+  prepared 527/790 lines in 0_arial: train_0526.tif
+  prepared 528/790 lines in 0_arial: train_0527.tif
+  prepared 529/790 lines in 0_arial: train_0528.tif
+  prepared 530/790 lines in 0_arial: train_0529.tif
+  prepared 531/790 lines in 0_arial: train_0530.tif
+  prepared 532/790 lines in 0_arial: train_0531.tif
+  prepared 533/790 lines in 0_arial: train_0532.tif
+  prepared 534/790 lines in 0_arial: train_0533.tif
+  prepared 535/790 lines in 0_arial: train_0534.tif
+  prepared 536/790 lines in 0_arial: train_0535.tif
+  prepared 537/790 lines in 0_arial: train_0536.tif
+  prepared 538/790 lines in 0_arial: train_0537.tif
+  prepared 539/790 lines in 0_arial: train_0538.tif
+  prepared 540/790 lines in 0_arial: train_0539.tif
+  prepared 541/790 lines in 0_arial: train_0540.tif
+  prepared 542/790 lines in 0_arial: train_0541.tif
+  prepared 543/790 lines in 0_arial: train_0542.tif
+  prepared 544/790 lines in 0_arial: train_0543.tif
+  prepared 545/790 lines in 0_arial: train_0544.tif
+  prepared 546/790 lines in 0_arial: train_0545.tif
+  prepared 547/790 lines in 0_arial: train_0546.tif
+  prepared 548/790 lines in 0_arial: train_0547.tif
+  prepared 549/790 lines in 0_arial: train_0548.tif
+  prepared 550/790 lines in 0_arial: train_0549.tif
+  prepared 551/790 lines in 0_arial: train_0550.tif
+  prepared 552/790 lines in 0_arial: train_0551.tif
+  prepared 553/790 lines in 0_arial: train_0552.tif
+  prepared 554/790 lines in 0_arial: train_0553.tif
+  prepared 555/790 lines in 0_arial: train_0554.tif
+  prepared 556/790 lines in 0_arial: train_0555.tif
+  prepared 557/790 lines in 0_arial: train_0556.tif
+  prepared 558/790 lines in 0_arial: train_0557.tif
+  prepared 559/790 lines in 0_arial: train_0558.tif
+  prepared 560/790 lines in 0_arial: train_0559.tif
+  prepared 561/790 lines in 0_arial: train_0560.tif
+  prepared 562/790 lines in 0_arial: train_0561.tif
+  prepared 563/790 lines in 0_arial: train_0562.tif
+  prepared 564/790 lines in 0_arial: train_0563.tif
+  prepared 565/790 lines in 0_arial: train_0564.tif
+  prepared 566/790 lines in 0_arial: train_0565.tif
+  prepared 567/790 lines in 0_arial: train_0566.tif
+  prepared 568/790 lines in 0_arial: train_0567.tif
+  prepared 569/790 lines in 0_arial: train_0568.tif
+  prepared 570/790 lines in 0_arial: train_0569.tif
+  prepared 571/790 lines in 0_arial: train_0570.tif
+  prepared 572/790 lines in 0_arial: train_0571.tif
+  prepared 573/790 lines in 0_arial: train_0572.tif
+  prepared 574/790 lines in 0_arial: train_0573.tif
+  prepared 575/790 lines in 0_arial: train_0574.tif
+  prepared 576/790 lines in 0_arial: train_0575.tif
+  prepared 577/790 lines in 0_arial: train_0576.tif
+  prepared 578/790 lines in 0_arial: train_0577.tif
+  prepared 579/790 lines in 0_arial: train_0578.tif
+  prepared 580/790 lines in 0_arial: train_0579.tif
+  prepared 581/790 lines in 0_arial: train_0580.tif
+  prepared 582/790 lines in 0_arial: train_0581.tif
+  prepared 583/790 lines in 0_arial: train_0582.tif
+  prepared 584/790 lines in 0_arial: train_0583.tif
+  prepared 585/790 lines in 0_arial: train_0584.tif
+  prepared 586/790 lines in 0_arial: train_0585.tif
+  prepared 587/790 lines in 0_arial: train_0586.tif
+  prepared 588/790 lines in 0_arial: train_0587.tif
+  prepared 589/790 lines in 0_arial: train_0588.tif
+  prepared 590/790 lines in 0_arial: train_0589.tif
+  prepared 591/790 lines in 0_arial: train_0590.tif
+  prepared 592/790 lines in 0_arial: train_0591.tif
+  prepared 593/790 lines in 0_arial: train_0592.tif
+  prepared 594/790 lines in 0_arial: train_0593.tif
+  prepared 595/790 lines in 0_arial: train_0594.tif
+  prepared 596/790 lines in 0_arial: train_0595.tif
+  prepared 597/790 lines in 0_arial: train_0596.tif
+  prepared 598/790 lines in 0_arial: train_0597.tif
+  prepared 599/790 lines in 0_arial: train_0598.tif
+  prepared 600/790 lines in 0_arial: train_0599.tif
+  prepared 601/790 lines in 0_arial: train_0600.tif
+  prepared 602/790 lines in 0_arial: train_0601.tif
+  prepared 603/790 lines in 0_arial: train_0602.tif
+  prepared 604/790 lines in 0_arial: train_0603.tif
+  prepared 605/790 lines in 0_arial: train_0604.tif
+  prepared 606/790 lines in 0_arial: train_0605.tif
+  prepared 607/790 lines in 0_arial: train_0606.tif
+  prepared 608/790 lines in 0_arial: train_0607.tif
+  prepared 609/790 lines in 0_arial: train_0608.tif
+  prepared 610/790 lines in 0_arial: train_0609.tif
+  prepared 611/790 lines in 0_arial: train_0610.tif
+  prepared 612/790 lines in 0_arial: train_0611.tif
+  prepared 613/790 lines in 0_arial: train_0612.tif
+  prepared 614/790 lines in 0_arial: train_0613.tif
+  prepared 615/790 lines in 0_arial: train_0614.tif
+  prepared 616/790 lines in 0_arial: train_0615.tif
+  prepared 617/790 lines in 0_arial: train_0616.tif
+  prepared 618/790 lines in 0_arial: train_0617.tif
+  prepared 619/790 lines in 0_arial: train_0618.tif
+  prepared 620/790 lines in 0_arial: train_0619.tif
+  prepared 621/790 lines in 0_arial: train_0620.tif
+  prepared 622/790 lines in 0_arial: train_0621.tif
+  prepared 623/790 lines in 0_arial: train_0622.tif
+  prepared 624/790 lines in 0_arial: train_0623.tif
+  prepared 625/790 lines in 0_arial: train_0624.tif
+  prepared 626/790 lines in 0_arial: train_0625.tif
+  prepared 627/790 lines in 0_arial: train_0626.tif
+  prepared 628/790 lines in 0_arial: train_0627.tif
+  prepared 629/790 lines in 0_arial: train_0628.tif
+  prepared 630/790 lines in 0_arial: train_0629.tif
+  prepared 631/790 lines in 0_arial: train_0630.tif
+  prepared 632/790 lines in 0_arial: train_0631.tif
+  prepared 633/790 lines in 0_arial: train_0632.tif
+  prepared 634/790 lines in 0_arial: train_0633.tif
+  prepared 635/790 lines in 0_arial: train_0634.tif
+  prepared 636/790 lines in 0_arial: train_0635.tif
+  prepared 637/790 lines in 0_arial: train_0636.tif
+  prepared 638/790 lines in 0_arial: train_0637.tif
+  prepared 639/790 lines in 0_arial: train_0638.tif
+  prepared 640/790 lines in 0_arial: train_0639.tif
+  prepared 641/790 lines in 0_arial: train_0640.tif
+  prepared 642/790 lines in 0_arial: train_0641.tif
+  prepared 643/790 lines in 0_arial: train_0642.tif
+  prepared 644/790 lines in 0_arial: train_0643.tif
+  prepared 645/790 lines in 0_arial: train_0644.tif
+  prepared 646/790 lines in 0_arial: train_0645.tif
+  prepared 647/790 lines in 0_arial: train_0646.tif
+  prepared 648/790 lines in 0_arial: train_0647.tif
+  prepared 649/790 lines in 0_arial: train_0648.tif
+  prepared 650/790 lines in 0_arial: train_0649.tif
+  prepared 651/790 lines in 0_arial: train_0650.tif
+  prepared 652/790 lines in 0_arial: train_0651.tif
+  prepared 653/790 lines in 0_arial: train_0652.tif
+  prepared 654/790 lines in 0_arial: train_0653.tif
+  prepared 655/790 lines in 0_arial: train_0654.tif
+  prepared 656/790 lines in 0_arial: train_0655.tif
+  prepared 657/790 lines in 0_arial: train_0656.tif
+  prepared 658/790 lines in 0_arial: train_0657.tif
+  prepared 659/790 lines in 0_arial: train_0658.tif
+  prepared 660/790 lines in 0_arial: train_0659.tif
+  prepared 661/790 lines in 0_arial: train_0660.tif
+  prepared 662/790 lines in 0_arial: train_0661.tif
+  prepared 663/790 lines in 0_arial: train_0662.tif
+  prepared 664/790 lines in 0_arial: train_0663.tif
+  prepared 665/790 lines in 0_arial: train_0664.tif
+  prepared 666/790 lines in 0_arial: train_0665.tif
+  prepared 667/790 lines in 0_arial: train_0666.tif
+  prepared 668/790 lines in 0_arial: train_0667.tif
+  prepared 669/790 lines in 0_arial: train_0668.tif
+  prepared 670/790 lines in 0_arial: train_0669.tif
+  prepared 671/790 lines in 0_arial: train_0670.tif
+  prepared 672/790 lines in 0_arial: train_0671.tif
+  prepared 673/790 lines in 0_arial: train_0672.tif
+  prepared 674/790 lines in 0_arial: train_0673.tif
+  prepared 675/790 lines in 0_arial: train_0674.tif
+  prepared 676/790 lines in 0_arial: train_0675.tif
+  prepared 677/790 lines in 0_arial: train_0676.tif
+  prepared 678/790 lines in 0_arial: train_0677.tif
+  prepared 679/790 lines in 0_arial: train_0678.tif
+  prepared 680/790 lines in 0_arial: train_0679.tif
+  prepared 681/790 lines in 0_arial: train_0680.tif
+  prepared 682/790 lines in 0_arial: train_0681.tif
+  prepared 683/790 lines in 0_arial: train_0682.tif
+  prepared 684/790 lines in 0_arial: train_0683.tif
+  prepared 685/790 lines in 0_arial: train_0684.tif
+  prepared 686/790 lines in 0_arial: train_0685.tif
+  prepared 687/790 lines in 0_arial: train_0686.tif
+  prepared 688/790 lines in 0_arial: train_0687.tif
+  prepared 689/790 lines in 0_arial: train_0688.tif
+  prepared 690/790 lines in 0_arial: train_0689.tif
+  prepared 691/790 lines in 0_arial: train_0690.tif
+  prepared 692/790 lines in 0_arial: train_0691.tif
+  prepared 693/790 lines in 0_arial: train_0692.tif
+  prepared 694/790 lines in 0_arial: train_0693.tif
+  prepared 695/790 lines in 0_arial: train_0694.tif
+  prepared 696/790 lines in 0_arial: train_0695.tif
+  prepared 697/790 lines in 0_arial: train_0696.tif
+  prepared 698/790 lines in 0_arial: train_0697.tif
+  prepared 699/790 lines in 0_arial: train_0698.tif
+  prepared 700/790 lines in 0_arial: train_0699.tif
+  prepared 701/790 lines in 0_arial: train_0700.tif
+  prepared 702/790 lines in 0_arial: train_0701.tif
+  prepared 703/790 lines in 0_arial: train_0702.tif
+  prepared 704/790 lines in 0_arial: train_0703.tif
+  prepared 705/790 lines in 0_arial: train_0704.tif
+  prepared 706/790 lines in 0_arial: train_0705.tif
+  prepared 707/790 lines in 0_arial: train_0706.tif
+  prepared 708/790 lines in 0_arial: train_0707.tif
+  prepared 709/790 lines in 0_arial: train_0708.tif
+  prepared 710/790 lines in 0_arial: train_0709.tif
+  prepared 711/790 lines in 0_arial: train_0710.tif
+  prepared 712/790 lines in 0_arial: train_0711.tif
+  prepared 713/790 lines in 0_arial: train_0712.tif
+  prepared 714/790 lines in 0_arial: train_0713.tif
+  prepared 715/790 lines in 0_arial: train_0714.tif
+  prepared 716/790 lines in 0_arial: train_0715.tif
+  prepared 717/790 lines in 0_arial: train_0716.tif
+  prepared 718/790 lines in 0_arial: train_0717.tif
+  prepared 719/790 lines in 0_arial: train_0718.tif
+  prepared 720/790 lines in 0_arial: train_0719.tif
+  prepared 721/790 lines in 0_arial: train_0720.tif
+  prepared 722/790 lines in 0_arial: train_0721.tif
+  prepared 723/790 lines in 0_arial: train_0722.tif
+  prepared 724/790 lines in 0_arial: train_0723.tif
+  prepared 725/790 lines in 0_arial: train_0724.tif
+  prepared 726/790 lines in 0_arial: train_0725.tif
+  prepared 727/790 lines in 0_arial: train_0726.tif
+  prepared 728/790 lines in 0_arial: train_0727.tif
+  prepared 729/790 lines in 0_arial: train_0728.tif
+  prepared 730/790 lines in 0_arial: train_0729.tif
+  prepared 731/790 lines in 0_arial: train_0730.tif
+  prepared 732/790 lines in 0_arial: train_0731.tif
+  prepared 733/790 lines in 0_arial: train_0732.tif
+  prepared 734/790 lines in 0_arial: train_0733.tif
+  prepared 735/790 lines in 0_arial: train_0734.tif
+  prepared 736/790 lines in 0_arial: train_0735.tif
+  prepared 737/790 lines in 0_arial: train_0736.tif
+  prepared 738/790 lines in 0_arial: train_0737.tif
+  prepared 739/790 lines in 0_arial: train_0738.tif
+  prepared 740/790 lines in 0_arial: train_0739.tif
+  prepared 741/790 lines in 0_arial: train_0740.tif
+  prepared 742/790 lines in 0_arial: train_0741.tif
+  prepared 743/790 lines in 0_arial: train_0742.tif
+  prepared 744/790 lines in 0_arial: train_0743.tif
+  prepared 745/790 lines in 0_arial: train_0744.tif
+  prepared 746/790 lines in 0_arial: train_0745.tif
+  prepared 747/790 lines in 0_arial: train_0746.tif
+  prepared 748/790 lines in 0_arial: train_0747.tif
+  prepared 749/790 lines in 0_arial: train_0748.tif
+  prepared 750/790 lines in 0_arial: train_0749.tif
+  prepared 751/790 lines in 0_arial: train_0750.tif
+  prepared 752/790 lines in 0_arial: train_0751.tif
+  prepared 753/790 lines in 0_arial: train_0752.tif
+  prepared 754/790 lines in 0_arial: train_0753.tif
+  prepared 755/790 lines in 0_arial: train_0754.tif
+  prepared 756/790 lines in 0_arial: train_0755.tif
+  prepared 757/790 lines in 0_arial: train_0756.tif
+  prepared 758/790 lines in 0_arial: train_0757.tif
+  prepared 759/790 lines in 0_arial: train_0758.tif
+  prepared 760/790 lines in 0_arial: train_0759.tif
+  prepared 761/790 lines in 0_arial: train_0760.tif
+  prepared 762/790 lines in 0_arial: train_0761.tif
+  prepared 763/790 lines in 0_arial: train_0762.tif
+  prepared 764/790 lines in 0_arial: train_0763.tif
+  prepared 765/790 lines in 0_arial: train_0764.tif
+  prepared 766/790 lines in 0_arial: train_0765.tif
+  prepared 767/790 lines in 0_arial: train_0766.tif
+  prepared 768/790 lines in 0_arial: train_0767.tif
+  prepared 769/790 lines in 0_arial: train_0768.tif
+  prepared 770/790 lines in 0_arial: train_0769.tif
+  prepared 771/790 lines in 0_arial: train_0770.tif
+  prepared 772/790 lines in 0_arial: train_0771.tif
+  prepared 773/790 lines in 0_arial: train_0772.tif
+  prepared 774/790 lines in 0_arial: train_0773.tif
+  prepared 775/790 lines in 0_arial: train_0774.tif
+  prepared 776/790 lines in 0_arial: train_0775.tif
+  prepared 777/790 lines in 0_arial: train_0776.tif
+  prepared 778/790 lines in 0_arial: train_0777.tif
+  prepared 779/790 lines in 0_arial: train_0778.tif
+  prepared 780/790 lines in 0_arial: train_0779.tif
+  prepared 781/790 lines in 0_arial: train_0780.tif
+  prepared 782/790 lines in 0_arial: train_0781.tif
+  prepared 783/790 lines in 0_arial: train_0782.tif
+  prepared 784/790 lines in 0_arial: train_0783.tif
+  prepared 785/790 lines in 0_arial: train_0784.tif
+  prepared 786/790 lines in 0_arial: train_0785.tif
+  prepared 787/790 lines in 0_arial: train_0786.tif
+  prepared 788/790 lines in 0_arial: train_0787.tif
+  prepared 789/790 lines in 0_arial: train_0788.tif
+  prepared 790/790 lines in 0_arial: train_0789.tif
+Prepared 790 lines in 0_arial
+Training list: 790 entries
+$ lstmtraining --model_output /mnt/c/Users/Nbvx Teo/Documents/_Programming/GitHub/TesseractOCRTrainer/data/runs/20261126-225014_minecraft/minecraft/checkpoints/minecraft --continue_from /mnt/c/Users/Nbvx Teo/Documents/_Programming/GitHub/TesseractOCRTrainer/data/runs/20261126-225014_minecraft/minecraft/base/eng.lstm --traineddata /mnt/c/Users/Nbvx Teo/Documents/_Programming/GitHub/TesseractOCRTrainer/data/runs/20261126-225014_minecraft/minecraft/base/eng.traineddata --train_listfile /mnt/c/Users/Nbvx Teo/Documents/_Programming/GitHub/TesseractOCRTrainer/data/runs/20261126-225014_minecraft/minecraft/train_list.txt --max_iterations 400
+Loaded file /mnt/c/Users/Nbvx Teo/Documents/_Programming/GitHub/TesseractOCRTrainer/data/runs/20261126-225014_minecraft/minecraft/base/eng.lstm, unpacking...
+Warning: LSTMTrainer deserialized an LSTMRecognizer!
+Continuing from /mnt/c/Users/Nbvx Teo/Documents/_Programming/GitHub/TesseractOCRTrainer/data/runs/20261126-225014_minecraft/minecraft/base/eng.lstm
+Loaded 2/2 lines (1-2) of document /mnt/c/Users/Nbvx Teo/Documents/_Programming/GitHub/TesseractOCRTrainer/data/runs/20261126-225014_minecraft/minecraft/train/0_arial/train_0000.lstmf
+Loaded 2/2 lines (1-2) of document /mnt/c/Users/Nbvx Teo/Documents/_Programming/GitHub/TesseractOCRTrainer/data/runs/20261126-225014_minecraft/minecraft/train/0_arial/train_0001.lstmf
+Loaded 2/2 lines (1-2) of document /mnt/c/Users/Nbvx Teo/Documents/_Programming/GitHub/TesseractOCRTrainer/data/runs/20261126-225014_minecraft/minecraft/train/0_arial/train_0003.lstmf
+Loaded 3/3 lines (1-3) of document /mnt/c/Users/Nbvx Teo/Documents/_Programming/GitHub/TesseractOCRTrainer/data/runs/20261126-225014_minecraft/minecraft/train/0_arial/train_0004.lstmf
+Loaded 2/2 lines (1-2) of document /mnt/c/Users/Nbvx Teo/Documents/_Programming/GitHub/TesseractOCRTrainer/data/runs/20261126-225014_minecraft/minecraft/train/0_arial/train_0006.lstmf
+Loaded 2/2 lines (1-2) of document /mnt/c/Users/Nbvx Teo/Documents/_Programming/GitHub/TesseractOCRTrainer/data/runs/20261126-225014_minecraft/minecraft/train/0_arial/train_0007.lstmf
+Loaded 2/2 lines (1-2) of document /mnt/c/Users/Nbvx Teo/Documents/_Programming/GitHub/TesseractOCRTrainer/data/runs/20261126-225014_minecraft/minecraft/train/0_arial/train_0008.lstmf
+Loaded 2/2 lines (1-2) of document /mnt/c/Users/Nbvx Teo/Documents/_Programming/GitHub/TesseractOCRTrainer/data/runs/20261126-225014_minecraft/minecraft/train/0_arial/train_0009.lstmf
+Loaded 2/2 lines (1-2) of document /mnt/c/Users/Nbvx Teo/Documents/_Programming/GitHub/TesseractOCRTrainer/data/runs/20261126-225014_minecraft/minecraft/train/0_arial/train_0010.lstmf
+Loaded 2/2 lines (1-2) of document /mnt/c/Users/Nbvx Teo/Documents/_Programming/GitHub/TesseractOCRTrainer/data/runs/20261126-225014_minecraft/minecraft/train/0_arial/train_0011.lstmf
+Loaded 5/5 lines (1-5) of document /mnt/c/Users/Nbvx Teo/Documents/_Programming/GitHub/TesseractOCRTrainer/data/runs/20261126-225014_minecraft/minecraft/train/0_arial/train_0012.lstmf
+Loaded 3/3 lines (1-3) of document /mnt/c/Users/Nbvx Teo/Documents/_Programming/GitHub/TesseractOCRTrainer/data/runs/20261126-225014_minecraft/minecraft/train/0_arial/train_0014.lstmf
+Loaded 2/2 lines (1-2) of document /mnt/c/Users/Nbvx Teo/Documents/_Programming/GitHub/TesseractOCRTrainer/data/runs/20261126-225014_minecraft/minecraft/train/0_arial/train_0015.lstmf
+Loaded 2/2 lines (1-2) of document /mnt/c/Users/Nbvx Teo/Documents/_Programming/GitHub/TesseractOCRTrainer/data/runs/20261126-225014_minecraft/minecraft/train/0_arial/train_0016.lstmf
+Loaded 2/2 lines (1-2) of document /mnt/c/Users/Nbvx Teo/Documents/_Programming/GitHub/TesseractOCRTrainer/data/runs/20261126-225014_minecraft/minecraft/train/0_arial/train_0017.lstmf
+Loaded 4/4 lines (1-4) of document /mnt/c/Users/Nbvx Teo/Documents/_Programming/GitHub/TesseractOCRTrainer/data/runs/20261126-225014_minecraft/minecraft/train/0_arial/train_0018.lstmf
+Loaded 2/2 lines (1-2) of document /mnt/c/Users/Nbvx Teo/Documents/_Programming/GitHub/TesseractOCRTrainer/data/runs/20261126-225014_minecraft/minecraft/train/0_arial/train_0020.lstmf
+Loaded 2/2 lines (1-2) of document /mnt/c/Users/Nbvx Teo/Documents/_Programming/GitHub/TesseractOCRTrainer/data/runs/20261126-225014_minecraft/minecraft/train/0_arial/train_0022.lstmf
+Loaded 2/2 lines (1-2) of document /mnt/c/Users/Nbvx Teo/Documents/_Programming/GitHub/TesseractOCRTrainer/data/runs/20261126-225014_minecraft/minecraft/train/0_arial/train_0023.lstmf
+Loaded 2/2 lines (1-2) of document /mnt/c/Users/Nbvx Teo/Documents/_Programming/GitHub/TesseractOCRTrainer/data/runs/20261126-225014_minecraft/minecraft/train/0_arial/train_0024.lstmf
+Loaded 2/2 lines (1-2) of document /mnt/c/Users/Nbvx Teo/Documents/_Programming/GitHub/TesseractOCRTrainer/data/runs/20261126-225014_minecraft/minecraft/train/0_arial/train_0025.lstmf
+Loaded 2/2 lines (1-2) of document /mnt/c/Users/Nbvx Teo/Documents/_Programming/GitHub/TesseractOCRTrainer/data/runs/20261126-225014_minecraft/minecraft/train/0_arial/train_0029.lstmf
+Loaded 3/3 lines (1-3) of document /mnt/c/Users/Nbvx Teo/Documents/_Programming/GitHub/TesseractOCRTrainer/data/runs/20261126-225014_minecraft/minecraft/train/0_arial/train_0030.lstmf
+Loaded 2/2 lines (1-2) of document /mnt/c/Users/Nbvx Teo/Documents/_Programming/GitHub/TesseractOCRTrainer/data/runs/20261126-225014_minecraft/minecraft/train/0_arial/train_0031.lstmf
+Loaded 2/2 lines (1-2) of document /mnt/c/Users/Nbvx Teo/Documents/_Programming/GitHub/TesseractOCRTrainer/data/runs/20261126-225014_minecraft/minecraft/train/0_arial/train_0032.lstmf
+Loaded 2/2 lines (1-2) of document /mnt/c/Users/Nbvx Teo/Documents/_Programming/GitHub/TesseractOCRTrainer/data/runs/20261126-225014_minecraft/minecraft/train/0_arial/train_0033.lstmf
+Loaded 4/4 lines (1-4) of document /mnt/c/Users/Nbvx Teo/Documents/_Programming/GitHub/TesseractOCRTrainer/data/runs/20261126-225014_minecraft/minecraft/train/0_arial/train_0035.lstmf
+Loaded 2/2 lines (1-2) of document /mnt/c/Users/Nbvx Teo/Documents/_Programming/GitHub/TesseractOCRTrainer/data/runs/20261126-225014_minecraft/minecraft/train/0_arial/train_0037.lstmf
+Loaded 2/2 lines (1-2) of document /mnt/c/Users/Nbvx Teo/Documents/_Programming/GitHub/TesseractOCRTrainer/data/runs/20261126-225014_minecraft/minecraft/train/0_arial/train_0039.lstmf
+Loaded 2/2 lines (1-2) of document /mnt/c/Users/Nbvx Teo/Documents/_Programming/GitHub/TesseractOCRTrainer/data/runs/20261126-225014_minecraft/minecraft/train/0_arial/train_0040.lstmf
+Loaded 2/2 lines (1-2) of document /mnt/c/Users/Nbvx Teo/Documents/_Programming/GitHub/TesseractOCRTrainer/data/runs/20261126-225014_minecraft/minecraft/train/0_arial/train_0041.lstmf
+Loaded 2/2 lines (1-2) of document /mnt/c/Users/Nbvx Teo/Documents/_Programming/GitHub/TesseractOCRTrainer/data/runs/20261126-225014_minecraft/minecraft/train/0_arial/train_0043.lstmf
+Loaded 2/2 lines (1-2) of document /mnt/c/Users/Nbvx Teo/Documents/_Programming/GitHub/TesseractOCRTrainer/data/runs/20261126-225014_minecraft/minecraft/train/0_arial/train_0044.lstmf
+Loaded 2/2 lines (1-2) of document /mnt/c/Users/Nbvx Teo/Documents/_Programming/GitHub/TesseractOCRTrainer/data/runs/20261126-225014_minecraft/minecraft/train/0_arial/train_0045.lstmf
+Loaded 2/2 lines (1-2) of document /mnt/c/Users/Nbvx Teo/Documents/_Programming/GitHub/TesseractOCRTrainer/data/runs/20261126-225014_minecraft/minecraft/train/0_arial/train_0046.lstmf
+Loaded 2/2 lines (1-2) of document /mnt/c/Users/Nbvx Teo/Documents/_Programming/GitHub/TesseractOCRTrainer/data/runs/20261126-225014_minecraft/minecraft/train/0_arial/train_0048.lstmf
+Loaded 2/2 lines (1-2) of document /mnt/c/Users/Nbvx Teo/Documents/_Programming/GitHub/TesseractOCRTrainer/data/runs/20261126-225014_minecraft/minecraft/train/0_arial/train_0049.lstmf
+Loaded 2/2 lines (1-2) of document /mnt/c/Users/Nbvx Teo/Documents/_Programming/GitHub/TesseractOCRTrainer/data/runs/20261126-225014_minecraft/minecraft/train/0_arial/train_0050.lstmf
+Loaded 2/2 lines (1-2) of document /mnt/c/Users/Nbvx Teo/Documents/_Programming/GitHub/TesseractOCRTrainer/data/runs/20261126-225014_minecraft/minecraft/train/0_arial/train_0051.lstmf
+Loaded 2/2 lines (1-2) of document /mnt/c/Users/Nbvx Teo/Documents/_Programming/GitHub/TesseractOCRTrainer/data/runs/20261126-225014_minecraft/minecraft/train/0_arial/train_0052.lstmf
+Loaded 3/3 lines (1-3) of document /mnt/c/Users/Nbvx Teo/Documents/_Programming/GitHub/TesseractOCRTrainer/data/runs/20261126-225014_minecraft/minecraft/train/0_arial/train_0053.lstmf
+Loaded 4/4 lines (1-4) of document /mnt/c/Users/Nbvx Teo/Documents/_Programming/GitHub/TesseractOCRTrainer/data/runs/20261126-225014_minecraft/minecraft/train/0_arial/train_0054.lstmf
+Loaded 3/3 lines (1-3) of document /mnt/c/Users/Nbvx Teo/Documents/_Programming/GitHub/TesseractOCRTrainer/data/runs/20261126-225014_minecraft/minecraft/train/0_arial/train_0055.lstmf
+Loaded 2/2 lines (1-2) of document /mnt/c/Users/Nbvx Teo/Documents/_Programming/GitHub/TesseractOCRTrainer/data/runs/20261126-225014_minecraft/minecraft/train/0_arial/train_0057.lstmf
+Loaded 2/2 lines (1-2) of document /mnt/c/Users/Nbvx Teo/Documents/_Programming/GitHub/TesseractOCRTrainer/data/runs/20261126-225014_minecraft/minecraft/train/0_arial/train_0058.lstmf
+Loaded 2/2 lines (1-2) of document /mnt/c/Users/Nbvx Teo/Documents/_Programming/GitHub/TesseractOCRTrainer/data/runs/20261126-225014_minecraft/minecraft/train/0_arial/train_0059.lstmf
+Loaded 3/3 lines (1-3) of document /mnt/c/Users/Nbvx Teo/Documents/_Programming/GitHub/TesseractOCRTrainer/data/runs/20261126-225014_minecraft/minecraft/train/0_arial/train_0060.lstmf
+Loaded 2/2 lines (1-2) of document /mnt/c/Users/Nbvx Teo/Documents/_Programming/GitHub/TesseractOCRTrainer/data/runs/20261126-225014_minecraft/minecraft/train/0_arial/train_0061.lstmf
+Loaded 4/4 lines (1-4) of document /mnt/c/Users/Nbvx Teo/Documents/_Programming/GitHub/TesseractOCRTrainer/data/runs/20261126-225014_minecraft/minecraft/train/0_arial/train_0062.lstmf
+Loaded 2/2 lines (1-2) of document /mnt/c/Users/Nbvx Teo/Documents/_Programming/GitHub/TesseractOCRTrainer/data/runs/20261126-225014_minecraft/minecraft/train/0_arial/train_0064.lstmf
+Loaded 2/2 lines (1-2) of document /mnt/c/Users/Nbvx Teo/Documents/_Programming/GitHub/TesseractOCRTrainer/data/runs/20261126-225014_minecraft/minecraft/train/0_arial/train_0065.lstmf
+Loaded 2/2 lines (1-2) of document /mnt/c/Users/Nbvx Teo/Documents/_Programming/GitHub/TesseractOCRTrainer/data/runs/20261126-225014_minecraft/minecraft/train/0_arial/train_0066.lstmf
+Loaded 2/2 lines (1-2) of document /mnt/c/Users/Nbvx Teo/Documents/_Programming/GitHub/TesseractOCRTrainer/data/runs/20261126-225014_minecraft/minecraft/train/0_arial/train_0067.lstmf
+Loaded 3/3 lines (1-3) of document /mnt/c/Users/Nbvx Teo/Documents/_Programming/GitHub/TesseractOCRTrainer/data/runs/20261126-225014_minecraft/minecraft/train/0_arial/train_0068.lstmf
+Loaded 4/4 lines (1-4) of document /mnt/c/Users/Nbvx Teo/Documents/_Programming/GitHub/TesseractOCRTrainer/data/runs/20261126-225014_minecraft/minecraft/train/0_arial/train_0069.lstmf
+Loaded 2/2 lines (1-2) of document /mnt/c/Users/Nbvx Teo/Documents/_Programming/GitHub/TesseractOCRTrainer/data/runs/20261126-225014_minecraft/minecraft/train/0_arial/train_0070.lstmf
+Loaded 3/3 lines (1-3) of document /mnt/c/Users/Nbvx Teo/Documents/_Programming/GitHub/TesseractOCRTrainer/data/runs/20261126-225014_minecraft/minecraft/train/0_arial/train_0073.lstmf
+Loaded 3/3 lines (1-3) of document /mnt/c/Users/Nbvx Teo/Documents/_Programming/GitHub/TesseractOCRTrainer/data/runs/20261126-225014_minecraft/minecraft/train/0_arial/train_0074.lstmf
+Loaded 2/2 lines (1-2) of document /mnt/c/Users/Nbvx Teo/Documents/_Programming/GitHub/TesseractOCRTrainer/data/runs/20261126-225014_minecraft/minecraft/train/0_arial/train_0077.lstmf
+Loaded 2/2 lines (1-2) of document /mnt/c/Users/Nbvx Teo/Documents/_Programming/GitHub/TesseractOCRTrainer/data/runs/20261126-225014_minecraft/minecraft/train/0_arial/train_0078.lstmf
+Loaded 2/2 lines (1-2) of document /mnt/c/Users/Nbvx Teo/Documents/_Programming/GitHub/TesseractOCRTrainer/data/runs/20261126-225014_minecraft/minecraft/train/0_arial/train_0079.lstmf
+Loaded 2/2 lines (1-2) of document /mnt/c/Users/Nbvx Teo/Documents/_Programming/GitHub/TesseractOCRTrainer/data/runs/20261126-225014_minecraft/minecraft/train/0_arial/train_0081.lstmf
+Loaded 2/2 lines (1-2) of document /mnt/c/Users/Nbvx Teo/Documents/_Programming/GitHub/TesseractOCRTrainer/data/runs/20261126-225014_minecraft/minecraft/train/0_arial/train_0082.lstmf
+Loaded 2/2 lines (1-2) of document /mnt/c/Users/Nbvx Teo/Documents/_Programming/GitHub/TesseractOCRTrainer/data/runs/20261126-225014_minecraft/minecraft/train/0_arial/train_0083.lstmf
+Loaded 2/2 lines (1-2) of document /mnt/c/Users/Nbvx Teo/Documents/_Programming/GitHub/TesseractOCRTrainer/data/runs/20261126-225014_minecraft/minecraft/train/0_arial/train_0084.lstmf
+Loaded 2/2 lines (1-2) of document /mnt/c/Users/Nbvx Teo/Documents/_Programming/GitHub/TesseractOCRTrainer/data/runs/20261126-225014_minecraft/minecraft/train/0_arial/train_0086.lstmf
+Loaded 3/3 lines (1-3) of document /mnt/c/Users/Nbvx Teo/Documents/_Programming/GitHub/TesseractOCRTrainer/data/runs/20261126-225014_minecraft/minecraft/train/0_arial/train_0088.lstmf
+Loaded 2/2 lines (1-2) of document /mnt/c/Users/Nbvx Teo/Documents/_Programming/GitHub/TesseractOCRTrainer/data/runs/20261126-225014_minecraft/minecraft/train/0_arial/train_0089.lstmf
+Loaded 2/2 lines (1-2) of document /mnt/c/Users/Nbvx Teo/Documents/_Programming/GitHub/TesseractOCRTrainer/data/runs/20261126-225014_minecraft/minecraft/train/0_arial/train_0090.lstmf
+Loaded 2/2 lines (1-2) of document /mnt/c/Users/Nbvx Teo/Documents/_Programming/GitHub/TesseractOCRTrainer/data/runs/20261126-225014_minecraft/minecraft/train/0_arial/train_0093.lstmf
+Loaded 2/2 lines (1-2) of document /mnt/c/Users/Nbvx Teo/Documents/_Programming/GitHub/TesseractOCRTrainer/data/runs/20261126-225014_minecraft/minecraft/train/0_arial/train_0094.lstmf
+Loaded 2/2 lines (1-2) of document /mnt/c/Users/Nbvx Teo/Documents/_Programming/GitHub/TesseractOCRTrainer/data/runs/20261126-225014_minecraft/minecraft/train/0_arial/train_0096.lstmf
+Loaded 4/4 lines (1-4) of document /mnt/c/Users/Nbvx Teo/Documents/_Programming/GitHub/TesseractOCRTrainer/data/runs/20261126-225014_minecraft/minecraft/train/0_arial/train_0097.lstmf
+Loaded 2/2 lines (1-2) of document /mnt/c/Users/Nbvx Teo/Documents/_Programming/GitHub/TesseractOCRTrainer/data/runs/20261126-225014_minecraft/minecraft/train/0_arial/train_0098.lstmf
+Loaded 2/2 lines (1-2) of document /mnt/c/Users/Nbvx Teo/Documents/_Programming/GitHub/TesseractOCRTrainer/data/runs/20261126-225014_minecraft/minecraft/train/0_arial/train_0099.lstmf
+Loaded 2/2 lines (1-2) of document /mnt/c/Users/Nbvx Teo/Documents/_Programming/GitHub/TesseractOCRTrainer/data/runs/20261126-225014_minecraft/minecraft/train/0_arial/train_0100.lstmf
+Loaded 3/3 lines (1-3) of document /mnt/c/Users/Nbvx Teo/Documents/_Programming/GitHub/TesseractOCRTrainer/data/runs/20261126-225014_minecraft/minecraft/train/0_arial/train_0102.lstmf
+Loaded 2/2 lines (1-2) of document /mnt/c/Users/Nbvx Teo/Documents/_Programming/GitHub/TesseractOCRTrainer/data/runs/20261126-225014_minecraft/minecraft/train/0_arial/train_0104.lstmf
+Loaded 2/2 lines (1-2) of document /mnt/c/Users/Nbvx Teo/Documents/_Programming/GitHub/TesseractOCRTrainer/data/runs/20261126-225014_minecraft/minecraft/train/0_arial/train_0105.lstmf
+Loaded 2/2 lines (1-2) of document /mnt/c/Users/Nbvx Teo/Documents/_Programming/GitHub/TesseractOCRTrainer/data/runs/20261126-225014_minecraft/minecraft/train/0_arial/train_0106.lstmf
+2 Percent improvement time=3, best error was 100 @ 0
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           

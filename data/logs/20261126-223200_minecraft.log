@@ -1,0 +1,1164 @@
+Run started: 20261126-223200_minecraft
+Model: minecraft
+Iterations: 400, font size: 32px
+Corpus: 1000 lines, generated automatically (copy in logs: 20261126-223200_minecraft_corpus.txt)
+Font: C:\WINDOWS\Fonts\arial.ttf (weight 1)
+Starting the trainer in WSL. The first output can take a little while.
+WSL started (process 15932), waiting for the trainer.
+Trainer started: minecraft, 400 iterations, font size 32px
+$ combine_tessdata -e /mnt/c/Users/Nbvx Teo/Documents/_Programming/GitHub/TesseractOCRTrainer/data/runs/20261126-223200_minecraft/minecraft/base/eng.traineddata /mnt/c/Users/Nbvx Teo/Documents/_Programming/GitHub/TesseractOCRTrainer/data/runs/20261126-223200_minecraft/minecraft/base/eng.lstm
+Extracting tessdata components from /mnt/c/Users/Nbvx Teo/Documents/_Programming/GitHub/TesseractOCRTrainer/data/runs/20261126-223200_minecraft/minecraft/base/eng.traineddata
+Wrote /mnt/c/Users/Nbvx Teo/Documents/_Programming/GitHub/TesseractOCRTrainer/data/runs/20261126-223200_minecraft/minecraft/base/eng.lstm
+Version:4.00.00alpha:eng:synth20170629:[1,36,0,1Ct3,3,16Mp3,3Lfys64Lfx96Lrx96Lfx512O1c1]
+17:lstm:size=11689099, offset=192
+18:lstm-punc-dawg:size=4322, offset=11689291
+19:lstm-word-dawg:size=3694794, offset=11693613
+20:lstm-number-dawg:size=4738, offset=15388407
+21:lstm-unicharset:size=6360, offset=15393145
+22:lstm-recoder:size=1012, offset=15399505
+23:version:size=80, offset=15400517
+Corpus: 800 training lines, 200 held-out lines
+Rendering 200 held-out lines in 0_arial
+  rendered 1/200 lines in 0_arial
+  rendered 2/200 lines in 0_arial
+  rendered 3/200 lines in 0_arial
+  rendered 4/200 lines in 0_arial
+  rendered 5/200 lines in 0_arial
+  rendered 6/200 lines in 0_arial
+  rendered 7/200 lines in 0_arial
+  rendered 8/200 lines in 0_arial
+  rendered 9/200 lines in 0_arial
+  rendered 10/200 lines in 0_arial
+  rendered 11/200 lines in 0_arial
+  rendered 12/200 lines in 0_arial
+  rendered 13/200 lines in 0_arial
+  rendered 14/200 lines in 0_arial
+  rendered 15/200 lines in 0_arial
+  rendered 16/200 lines in 0_arial
+  rendered 17/200 lines in 0_arial
+  rendered 18/200 lines in 0_arial
+  rendered 19/200 lines in 0_arial
+  rendered 20/200 lines in 0_arial
+  rendered 21/200 lines in 0_arial
+  rendered 22/200 lines in 0_arial
+  rendered 23/200 lines in 0_arial
+  rendered 24/200 lines in 0_arial
+  rendered 25/200 lines in 0_arial
+  rendered 26/200 lines in 0_arial
+  rendered 27/200 lines in 0_arial
+  rendered 28/200 lines in 0_arial
+  rendered 29/200 lines in 0_arial
+  rendered 30/200 lines in 0_arial
+  rendered 31/200 lines in 0_arial
+  rendered 32/200 lines in 0_arial
+  rendered 33/200 lines in 0_arial
+  rendered 34/200 lines in 0_arial
+  rendered 35/200 lines in 0_arial
+  rendered 36/200 lines in 0_arial
+  rendered 37/200 lines in 0_arial
+  rendered 38/200 lines in 0_arial
+  rendered 39/200 lines in 0_arial
+  rendered 40/200 lines in 0_arial
+  rendered 41/200 lines in 0_arial
+  rendered 42/200 lines in 0_arial
+  rendered 43/200 lines in 0_arial
+  rendered 44/200 lines in 0_arial
+  rendered 45/200 lines in 0_arial
+  rendered 46/200 lines in 0_arial
+  rendered 47/200 lines in 0_arial
+  rendered 48/200 lines in 0_arial
+  rendered 49/200 lines in 0_arial
+  rendered 50/200 lines in 0_arial
+  rendered 51/200 lines in 0_arial
+  rendered 52/200 lines in 0_arial
+  rendered 53/200 lines in 0_arial
+  rendered 54/200 lines in 0_arial
+  rendered 55/200 lines in 0_arial
+  rendered 56/200 lines in 0_arial
+  rendered 57/200 lines in 0_arial
+  rendered 58/200 lines in 0_arial
+  rendered 59/200 lines in 0_arial
+  rendered 60/200 lines in 0_arial
+  rendered 61/200 lines in 0_arial
+  rendered 62/200 lines in 0_arial
+  rendered 63/200 lines in 0_arial
+  rendered 64/200 lines in 0_arial
+  rendered 65/200 lines in 0_arial
+  rendered 66/200 lines in 0_arial
+  rendered 67/200 lines in 0_arial
+  rendered 68/200 lines in 0_arial
+  rendered 69/200 lines in 0_arial
+  rendered 70/200 lines in 0_arial
+  rendered 71/200 lines in 0_arial
+  rendered 72/200 lines in 0_arial
+  rendered 73/200 lines in 0_arial
+  rendered 74/200 lines in 0_arial
+  rendered 75/200 lines in 0_arial
+  rendered 76/200 lines in 0_arial
+  rendered 77/200 lines in 0_arial
+  rendered 78/200 lines in 0_arial
+  rendered 79/200 lines in 0_arial
+  rendered 80/200 lines in 0_arial
+  rendered 81/200 lines in 0_arial
+  rendered 82/200 lines in 0_arial
+  rendered 83/200 lines in 0_arial
+  rendered 84/200 lines in 0_arial
+  rendered 85/200 lines in 0_arial
+  rendered 86/200 lines in 0_arial
+  rendered 87/200 lines in 0_arial
+  rendered 88/200 lines in 0_arial
+  rendered 89/200 lines in 0_arial
+  rendered 90/200 lines in 0_arial
+  rendered 91/200 lines in 0_arial
+  rendered 92/200 lines in 0_arial
+  rendered 93/200 lines in 0_arial
+  rendered 94/200 lines in 0_arial
+  rendered 95/200 lines in 0_arial
+  rendered 96/200 lines in 0_arial
+  rendered 97/200 lines in 0_arial
+  rendered 98/200 lines in 0_arial
+  rendered 99/200 lines in 0_arial
+  rendered 100/200 lines in 0_arial
+  rendered 101/200 lines in 0_arial
+  rendered 102/200 lines in 0_arial
+  rendered 103/200 lines in 0_arial
+  rendered 104/200 lines in 0_arial
+  rendered 105/200 lines in 0_arial
+  rendered 106/200 lines in 0_arial
+  rendered 107/200 lines in 0_arial
+  rendered 108/200 lines in 0_arial
+  rendered 109/200 lines in 0_arial
+  rendered 110/200 lines in 0_arial
+  rendered 111/200 lines in 0_arial
+  rendered 112/200 lines in 0_arial
+  rendered 113/200 lines in 0_arial
+  rendered 114/200 lines in 0_arial
+  rendered 115/200 lines in 0_arial
+  rendered 116/200 lines in 0_arial
+  rendered 117/200 lines in 0_arial
+  rendered 118/200 lines in 0_arial
+  rendered 119/200 lines in 0_arial
+  rendered 120/200 lines in 0_arial
+  rendered 121/200 lines in 0_arial
+  rendered 122/200 lines in 0_arial
+  rendered 123/200 lines in 0_arial
+  rendered 124/200 lines in 0_arial
+  rendered 125/200 lines in 0_arial
+  rendered 126/200 lines in 0_arial
+  rendered 127/200 lines in 0_arial
+  rendered 128/200 lines in 0_arial
+  rendered 129/200 lines in 0_arial
+  rendered 130/200 lines in 0_arial
+  rendered 131/200 lines in 0_arial
+  rendered 132/200 lines in 0_arial
+  rendered 133/200 lines in 0_arial
+  rendered 134/200 lines in 0_arial
+  rendered 135/200 lines in 0_arial
+  rendered 136/200 lines in 0_arial
+  rendered 137/200 lines in 0_arial
+  rendered 138/200 lines in 0_arial
+  rendered 139/200 lines in 0_arial
+  rendered 140/200 lines in 0_arial
+  rendered 141/200 lines in 0_arial
+  rendered 142/200 lines in 0_arial
+  rendered 143/200 lines in 0_arial
+  rendered 144/200 lines in 0_arial
+  rendered 145/200 lines in 0_arial
+  rendered 146/200 lines in 0_arial
+  rendered 147/200 lines in 0_arial
+  rendered 148/200 lines in 0_arial
+  rendered 149/200 lines in 0_arial
+  rendered 150/200 lines in 0_arial
+  rendered 151/200 lines in 0_arial
+  rendered 152/200 lines in 0_arial
+  rendered 153/200 lines in 0_arial
+  rendered 154/200 lines in 0_arial
+  rendered 155/200 lines in 0_arial
+  rendered 156/200 lines in 0_arial
+  rendered 157/200 lines in 0_arial
+  rendered 158/200 lines in 0_arial
+  rendered 159/200 lines in 0_arial
+  rendered 160/200 lines in 0_arial
+  rendered 161/200 lines in 0_arial
+  rendered 162/200 lines in 0_arial
+  rendered 163/200 lines in 0_arial
+  rendered 164/200 lines in 0_arial
+  rendered 165/200 lines in 0_arial
+  rendered 166/200 lines in 0_arial
+  rendered 167/200 lines in 0_arial
+  rendered 168/200 lines in 0_arial
+  rendered 169/200 lines in 0_arial
+  rendered 170/200 lines in 0_arial
+  rendered 171/200 lines in 0_arial
+  rendered 172/200 lines in 0_arial
+  rendered 173/200 lines in 0_arial
+  rendered 174/200 lines in 0_arial
+  rendered 175/200 lines in 0_arial
+  rendered 176/200 lines in 0_arial
+  rendered 177/200 lines in 0_arial
+  rendered 178/200 lines in 0_arial
+  rendered 179/200 lines in 0_arial
+  rendered 180/200 lines in 0_arial
+  rendered 181/200 lines in 0_arial
+  rendered 182/200 lines in 0_arial
+  rendered 183/200 lines in 0_arial
+  rendered 184/200 lines in 0_arial
+  rendered 185/200 lines in 0_arial
+  rendered 186/200 lines in 0_arial
+  rendered 187/200 lines in 0_arial
+  rendered 188/200 lines in 0_arial
+  rendered 189/200 lines in 0_arial
+  rendered 190/200 lines in 0_arial
+  rendered 191/200 lines in 0_arial
+  rendered 192/200 lines in 0_arial
+  rendered 193/200 lines in 0_arial
+  rendered 194/200 lines in 0_arial
+  rendered 195/200 lines in 0_arial
+  rendered 196/200 lines in 0_arial
+  rendered 197/200 lines in 0_arial
+  rendered 198/200 lines in 0_arial
+  rendered 199/200 lines in 0_arial
+  rendered 200/200 lines in 0_arial
+Rendered 200 held-out images in 0_arial
+  checked 1/200 lines in 0_arial (before training)
+  checked 2/200 lines in 0_arial (before training)
+  checked 3/200 lines in 0_arial (before training)
+  checked 4/200 lines in 0_arial (before training)
+  checked 5/200 lines in 0_arial (before training)
+  checked 6/200 lines in 0_arial (before training)
+  checked 7/200 lines in 0_arial (before training)
+  checked 8/200 lines in 0_arial (before training)
+  checked 9/200 lines in 0_arial (before training)
+  checked 10/200 lines in 0_arial (before training)
+  checked 11/200 lines in 0_arial (before training)
+  checked 12/200 lines in 0_arial (before training)
+  checked 13/200 lines in 0_arial (before training)
+  checked 14/200 lines in 0_arial (before training)
+  checked 15/200 lines in 0_arial (before training)
+  checked 16/200 lines in 0_arial (before training)
+  checked 17/200 lines in 0_arial (before training)
+  checked 18/200 lines in 0_arial (before training)
+  checked 19/200 lines in 0_arial (before training)
+  checked 20/200 lines in 0_arial (before training)
+  checked 21/200 lines in 0_arial (before training)
+  checked 22/200 lines in 0_arial (before training)
+  checked 23/200 lines in 0_arial (before training)
+  checked 24/200 lines in 0_arial (before training)
+  checked 25/200 lines in 0_arial (before training)
+  checked 26/200 lines in 0_arial (before training)
+  checked 27/200 lines in 0_arial (before training)
+  checked 28/200 lines in 0_arial (before training)
+  checked 29/200 lines in 0_arial (before training)
+  checked 30/200 lines in 0_arial (before training)
+  checked 31/200 lines in 0_arial (before training)
+  checked 32/200 lines in 0_arial (before training)
+  checked 33/200 lines in 0_arial (before training)
+  checked 34/200 lines in 0_arial (before training)
+  checked 35/200 lines in 0_arial (before training)
+  checked 36/200 lines in 0_arial (before training)
+  checked 37/200 lines in 0_arial (before training)
+  checked 38/200 lines in 0_arial (before training)
+  checked 39/200 lines in 0_arial (before training)
+  checked 40/200 lines in 0_arial (before training)
+  checked 41/200 lines in 0_arial (before training)
+  checked 42/200 lines in 0_arial (before training)
+  checked 43/200 lines in 0_arial (before training)
+  checked 44/200 lines in 0_arial (before training)
+  checked 45/200 lines in 0_arial (before training)
+  checked 46/200 lines in 0_arial (before training)
+  checked 47/200 lines in 0_arial (before training)
+  checked 48/200 lines in 0_arial (before training)
+  checked 49/200 lines in 0_arial (before training)
+  checked 50/200 lines in 0_arial (before training)
+  checked 51/200 lines in 0_arial (before training)
+  checked 52/200 lines in 0_arial (before training)
+  checked 53/200 lines in 0_arial (before training)
+  checked 54/200 lines in 0_arial (before training)
+  checked 55/200 lines in 0_arial (before training)
+  checked 56/200 lines in 0_arial (before training)
+  checked 57/200 lines in 0_arial (before training)
+  checked 58/200 lines in 0_arial (before training)
+  checked 59/200 lines in 0_arial (before training)
+  checked 60/200 lines in 0_arial (before training)
+  checked 61/200 lines in 0_arial (before training)
+  checked 62/200 lines in 0_arial (before training)
+  checked 63/200 lines in 0_arial (before training)
+  checked 64/200 lines in 0_arial (before training)
+  checked 65/200 lines in 0_arial (before training)
+  checked 66/200 lines in 0_arial (before training)
+  checked 67/200 lines in 0_arial (before training)
+  checked 68/200 lines in 0_arial (before training)
+  checked 69/200 lines in 0_arial (before training)
+  checked 70/200 lines in 0_arial (before training)
+  checked 71/200 lines in 0_arial (before training)
+  checked 72/200 lines in 0_arial (before training)
+  checked 73/200 lines in 0_arial (before training)
+  checked 74/200 lines in 0_arial (before training)
+  checked 75/200 lines in 0_arial (before training)
+  checked 76/200 lines in 0_arial (before training)
+  checked 77/200 lines in 0_arial (before training)
+  checked 78/200 lines in 0_arial (before training)
+  checked 79/200 lines in 0_arial (before training)
+  checked 80/200 lines in 0_arial (before training)
+  checked 81/200 lines in 0_arial (before training)
+  checked 82/200 lines in 0_arial (before training)
+  checked 83/200 lines in 0_arial (before training)
+  checked 84/200 lines in 0_arial (before training)
+  checked 85/200 lines in 0_arial (before training)
+  checked 86/200 lines in 0_arial (before training)
+  checked 87/200 lines in 0_arial (before training)
+  checked 88/200 lines in 0_arial (before training)
+  checked 89/200 lines in 0_arial (before training)
+  checked 90/200 lines in 0_arial (before training)
+  checked 91/200 lines in 0_arial (before training)
+  checked 92/200 lines in 0_arial (before training)
+  checked 93/200 lines in 0_arial (before training)
+  checked 94/200 lines in 0_arial (before training)
+  checked 95/200 lines in 0_arial (before training)
+  checked 96/200 lines in 0_arial (before training)
+  checked 97/200 lines in 0_arial (before training)
+  checked 98/200 lines in 0_arial (before training)
+  checked 99/200 lines in 0_arial (before training)
+  checked 100/200 lines in 0_arial (before training)
+  checked 101/200 lines in 0_arial (before training)
+  checked 102/200 lines in 0_arial (before training)
+  checked 103/200 lines in 0_arial (before training)
+  checked 104/200 lines in 0_arial (before training)
+  checked 105/200 lines in 0_arial (before training)
+  checked 106/200 lines in 0_arial (before training)
+  checked 107/200 lines in 0_arial (before training)
+  checked 108/200 lines in 0_arial (before training)
+  checked 109/200 lines in 0_arial (before training)
+  checked 110/200 lines in 0_arial (before training)
+  checked 111/200 lines in 0_arial (before training)
+  checked 112/200 lines in 0_arial (before training)
+  checked 113/200 lines in 0_arial (before training)
+  checked 114/200 lines in 0_arial (before training)
+  checked 115/200 lines in 0_arial (before training)
+  checked 116/200 lines in 0_arial (before training)
+  checked 117/200 lines in 0_arial (before training)
+  checked 118/200 lines in 0_arial (before training)
+  checked 119/200 lines in 0_arial (before training)
+  checked 120/200 lines in 0_arial (before training)
+  checked 121/200 lines in 0_arial (before training)
+  checked 122/200 lines in 0_arial (before training)
+  checked 123/200 lines in 0_arial (before training)
+  checked 124/200 lines in 0_arial (before training)
+  checked 125/200 lines in 0_arial (before training)
+  checked 126/200 lines in 0_arial (before training)
+  checked 127/200 lines in 0_arial (before training)
+  checked 128/200 lines in 0_arial (before training)
+  checked 129/200 lines in 0_arial (before training)
+  checked 130/200 lines in 0_arial (before training)
+  checked 131/200 lines in 0_arial (before training)
+  checked 132/200 lines in 0_arial (before training)
+  checked 133/200 lines in 0_arial (before training)
+  checked 134/200 lines in 0_arial (before training)
+  checked 135/200 lines in 0_arial (before training)
+  checked 136/200 lines in 0_arial (before training)
+  checked 137/200 lines in 0_arial (before training)
+  checked 138/200 lines in 0_arial (before training)
+  checked 139/200 lines in 0_arial (before training)
+  checked 140/200 lines in 0_arial (before training)
+  checked 141/200 lines in 0_arial (before training)
+  checked 142/200 lines in 0_arial (before training)
+  checked 143/200 lines in 0_arial (before training)
+  checked 144/200 lines in 0_arial (before training)
+  checked 145/200 lines in 0_arial (before training)
+  checked 146/200 lines in 0_arial (before training)
+  checked 147/200 lines in 0_arial (before training)
+  checked 148/200 lines in 0_arial (before training)
+  checked 149/200 lines in 0_arial (before training)
+  checked 150/200 lines in 0_arial (before training)
+  checked 151/200 lines in 0_arial (before training)
+  checked 152/200 lines in 0_arial (before training)
+  checked 153/200 lines in 0_arial (before training)
+  checked 154/200 lines in 0_arial (before training)
+  checked 155/200 lines in 0_arial (before training)
+  checked 156/200 lines in 0_arial (before training)
+  checked 157/200 lines in 0_arial (before training)
+  checked 158/200 lines in 0_arial (before training)
+  checked 159/200 lines in 0_arial (before training)
+  checked 160/200 lines in 0_arial (before training)
+  checked 161/200 lines in 0_arial (before training)
+  checked 162/200 lines in 0_arial (before training)
+  checked 163/200 lines in 0_arial (before training)
+  checked 164/200 lines in 0_arial (before training)
+  checked 165/200 lines in 0_arial (before training)
+  checked 166/200 lines in 0_arial (before training)
+  checked 167/200 lines in 0_arial (before training)
+  checked 168/200 lines in 0_arial (before training)
+  checked 169/200 lines in 0_arial (before training)
+  checked 170/200 lines in 0_arial (before training)
+  checked 171/200 lines in 0_arial (before training)
+  checked 172/200 lines in 0_arial (before training)
+  checked 173/200 lines in 0_arial (before training)
+  checked 174/200 lines in 0_arial (before training)
+  checked 175/200 lines in 0_arial (before training)
+  checked 176/200 lines in 0_arial (before training)
+  checked 177/200 lines in 0_arial (before training)
+  checked 178/200 lines in 0_arial (before training)
+  checked 179/200 lines in 0_arial (before training)
+  checked 180/200 lines in 0_arial (before training)
+  checked 181/200 lines in 0_arial (before training)
+  checked 182/200 lines in 0_arial (before training)
+  checked 183/200 lines in 0_arial (before training)
+  checked 184/200 lines in 0_arial (before training)
+  checked 185/200 lines in 0_arial (before training)
+  checked 186/200 lines in 0_arial (before training)
+  checked 187/200 lines in 0_arial (before training)
+  checked 188/200 lines in 0_arial (before training)
+  checked 189/200 lines in 0_arial (before training)
+  checked 190/200 lines in 0_arial (before training)
+  checked 191/200 lines in 0_arial (before training)
+  checked 192/200 lines in 0_arial (before training)
+  checked 193/200 lines in 0_arial (before training)
+  checked 194/200 lines in 0_arial (before training)
+  checked 195/200 lines in 0_arial (before training)
+  checked 196/200 lines in 0_arial (before training)
+  checked 197/200 lines in 0_arial (before training)
+  checked 198/200 lines in 0_arial (before training)
+  checked 199/200 lines in 0_arial (before training)
+  checked 200/200 lines in 0_arial (before training)
+0_arial before training: 102/200 lines pass, CER 0.3548
+  PASS  Texture pack reloaded with 416 resources
+  FAIL  expected: Unable to open E:\Games\MultiMC\libraries\net\minecraftforge\fmlcore\47.2.0\create-47.2.0.jar
+        got:      Garett Ciaresineinineratorgelincre 2
+  FAIL  expected: Error loading class net.minecraftforge.fmlcore.cloth-config in cloth-config-1.19.2.jar
+        got:      contiginclothconig 1 92/ar
+  FAIL  expected: Could not find org.apache.logging.log4j for ironchests, skipping
+        got:      sKioving. find org.apache.logging.log4j for ironchests,
+  FAIL  expected: Could not find net.minecraftforge.javafmlmod for xaeros-minimap, skipping
+        got:      vou’ _ skioping vaimimod for xaeros-
+  PASS  Downloaded supplementaries-1.20.1.jar in 60 seconds
+  PASS  Retrying download of glassseam-fix: HTTP status 500
+  PASS  Deleted 662 old log files from C:\Games\MultiMC\logs
+  PASS  Downloaded sodium-0.14.22.jar in 181 seconds
+  FAIL  expected: java.lang.NoClassDefFoundError: net.minecraftforge.javafmlmod/biomesoplenty
+        got:      vot minectattforse vavafin nod/biomesoplenty
+  FAIL  expected: Skipping create: incompatible with forge 3.1.8
+        got:      okipping create: incompatible with forge 3.1.8
+  PASS  [INFO] Registered 470 recipes from jei
+  PASS  Skipping waystones: incompatible with forge 3.1.8
+  FAIL  expected: Failed to load mod create 47.4.10: missing dependency org.lwjgl.glfw
+        got:      og Lott mod create 47.4.10: missing dependency
+  PASS  Deleted 707 old log files from C:\Games\MultiMC\logs
+  FAIL  expected: Set JVM argument -Xmx2048M for 1.19.2 Modded
+        got:      set JVM argument -Xmx2048M for 1.19.2 Modded
+  PASS  Retrying download of biomesoplenty: HTTP status 503
+  PASS  Deleted 86 old log files from E:\Games\MultiMC\logs
+  PASS  Downloaded ironchests-1.20.1.jar in 206 seconds
+  FAIL  expected: Chunk loading took 48 ms in dimension minecraft:overworld
+        got:      mineorattoverwerld
+  PASS  Texture pack reloaded with 553 resources
+  PASS  Mod terralith requires Minecraft 1.20.4 but found 0.15.3
+  PASS  Launching 1.20.1 Forge with 8192 MB of memory
+  PASS  Mod sodium requires Minecraft 47.4.10 but found 47.2.0
+  FAIL  expected: Could not find net.minecraftforge.fmlcore for journeymap, skipping
+        got:      sKioving. find net.minecraftforge.fmicore for journeymap,
+  FAIL  expected: Could not find org.spongepowered.mixin for sodium, skipping
+        got:      sKioving. find org.spongepowered.mixin for sodium,
+  PASS  [INFO] Registered 168 recipes from iris
+  PASS  Found 168 mods, 9 failed to load
+  FAIL  expected: java.lang.NoClassDefFoundError: com.electronwizard.config/supplementaries
+        got:      om ‘lent ‘on oard.contig/s a 5 slementa ries
+  PASS  Connection timed out while reading packet 38
+  PASS  jei 1.20.4 is already installed in 1.16.5 Create
+  PASS  Texture pack reloaded with 785 resources
+  FAIL  expected: Could not find com.electronwizard.config for fabric-api, skipping
+        got:      sKioving. find com.electronwizard.config for fabric-api,
+  FAIL  expected: Error loading class org.spongepowered.mixin.sodium in sodium-1.16.5.jar
+        got:      or acing Siar org.spongepowered.mixin.sodium in
+  PASS  [WARN] Config file terralith-common.toml is out of date
+  FAIL  expected: Loading mod list from E:\Games\MultiMC\instances\Server Backup 2026\mods
+        got:      \Gamec\MultiM(C\netanoes\Server Backup 2026\mods
+  PASS  Skipping glassseam-fix: incompatible with forge 3.1.8
+  PASS  [INFO] Registered 453 recipes from xaeros-minimap
+  FAIL  expected: Server started on port 25566 after 106 seconds
+        got:      server started on port 25566 after 106 seconds
+  PASS  [INFO] Registered 382 recipes from create
+  PASS  Launching 1.21 Survival with 6144 MB of memory
+  FAIL  expected: Loading mod list from C:\Games\MultiMC\instances\1.20.4 Fabric\mods
+        got:      Gomes MattiMCNcctances\4 .20.4 Fabric\mods
+  PASS  Found 459 mods, 9 failed to load
+  PASS  Retrying download of oculus: HTTP status 404
+  PASS  Connection timed out while reading packet 119
+  PASS  Found 718 mods, 1 failed to load
+  PASS  Texture pack reloaded with 128 resources
+  FAIL  expected: The Mod File C:\Games\MultiMC\instances\1.21 Survival\.minecraft\mods\farmersdelight.jar has mods that were not found
+        got:      Sunil : : crt meredolight jer has mods that
+  FAIL  expected: Server started on port 8080 after 79 seconds
+        got:      server started on port 8080 after 79 seconds
+  FAIL  expected: Chunk loading took 59 ms in dimension minecraft:overworld
+        got:      mineorattoverwerld
+  PASS  Found 52 mods, 1 failed to load
+  PASS  Retrying download of fabric-api: HTTP status 503
+  PASS  Deleted 538 old log files from C:\Games\MultiMC\logs
+  FAIL  expected: Unable to open D:\Games\MultiMC\libraries\org\apache\logging\log4j\47.4.10\iris-47.4.10.jar
+        got:      a esi Cli ries\org\apache\logging\log4j\47.4.1
+  FAIL  expected: Crash report saved to D:\Games\MultiMC\crash-reports\crash-2026-11-14.txt
+        got:
+  FAIL  expected: Missing dependency: com.google.guava version 1.21 required by fabric-api
+        got:      recuited by fabrie a) com.google.guava version 1.21
+  PASS  Downloaded xaeros-minimap-1.19.2.jar in 117 seconds
+  FAIL  expected: Set JVM argument -Xmx8192M for 1.21 Survival
+        got:      set JVM argument -Xmx8192M for 1.21 Survival
+  FAIL  expected: applied-energistics-2 47.4.10 is already installed in 1.21 Survival
+        got:      app lec energistios-2 47.4.10 is already installed in 1.21
+  FAIL  expected: Missing dependency: net.minecraftforge.javafmlmod version 1.16.5 required by ironchests
+        got:      version 1.16.5 requited by oncheste
+  PASS  Downloaded farmersdelight-1.20.1.jar in 207 seconds
+  FAIL  expected: The Mod File D:\Games\MultiMC\instances\Server Backup 2026\.minecraft\mods\biomesoplenty.jar has mods that were not found
+        got:
+  FAIL  expected: Set JVM argument -Xmx2048M for Server Backup 2026
+        got:      set JVM argument -Xmx2048M for Server Backup 2026
+  PASS  Downloaded carpet-1.20.1.jar in 115 seconds
+  FAIL  expected: Unable to open D:\Games\MultiMC\libraries\net\fabricmc\loader\0.15.3\supplementaries-0.15.3.jar
+        got:      Games tivCle mesin et\fabricmc\loader\0.15.3\sup-
+  FAIL  expected: Crash report saved to E:\Games\MultiMC\crash-reports\crash-2026-11-20.txt
+        got:
+  PASS  Connection timed out while reading packet 211
+  PASS  Connection timed out while reading packet 110
+  FAIL  expected: Chunk loading took 101 ms in dimension minecraft:overworld
+        got:      mineorattoverwerld
+  FAIL  expected: Could not find net.minecraftforge.fmlcore for create, skipping
+        got:      sKioving. find net.minecraftforge.fmlicore for create,
+  PASS  Server started on port 25565 after 176 seconds
+  FAIL  expected: Could not find org.spongepowered.mixin for alexsmobs, skipping
+        got:      sKioving. find org.spongepowered.mixin for alexsmobs,
+  PASS  Retrying download of sodium: HTTP status 403
+  FAIL  expected: Error loading class net.minecraftforge.fmlcore.alexsmobs in alexsmobs-0.14.22.jar
+        got:      Tor aca case Mis minecraltiorge.Imicore.alexsmobs
+  PASS  Deleted 411 old log files from E:\Games\MultiMC\logs
+  PASS  jei 1.16.5 is already installed in 1.19.2 Modded
+  PASS  Connection timed out while reading packet 21
+  FAIL  expected: Chunk loading took 234 ms in dimension minecraft:overworld
+        got:      mineorattoverwerld
+  FAIL  expected: The Mod File D:\Games\MultiMC\instances\1.20.1 Forge\.minecraft\mods\sodium.jar has mods that were not found
+        got:
+  FAIL  expected: The Mod File C:\Games\MultiMC\instances\1.21 Survival\.minecraft\mods\jei.jar has mods that were not found
+        got:      Survival mineraimods\ejorhas mods that wee no
+  FAIL  expected: Unable to open E:\Games\MultiMC\libraries\net\minecraftforge\javafmlmod\2.0.0-beta.4\terralith-2.0.0-beta.4.jar
+        got:
+  PASS  Deleted 119 old log files from D:\Games\MultiMC\logs
+  FAIL  expected: Missing dependency: net.minecraftforge.javafmlmod version 0.14.22 required by quark
+        got:      version 0.14.22 required by quark
+  PASS  Retrying download of waystones: HTTP status 404
+  PASS  terralith 1.20.4 is already installed in 1.20.4 Fabric
+  FAIL  expected: Missing dependency: net.minecraftforge.fmlcore version 1.19.2 required by journeymap
+        got:      1 19.2 vequired by jeu neymnep ne version
+  PASS  Mixin apply failed for org.lwjgl.glfw: target class not found
+  FAIL  expected: The Mod File D:\Games\MultiMC\instances\1.19.2 Modded\.minecraft\mods\waystones.jar has mods that were not found
+        got:
+  FAIL  expected: Could not find org.lwjgl.glfw for applied-energistics-2, skipping
+        got:      sKioving. find org.lwjgl.glfw for applied-energistics-2,
+  FAIL  expected: Mod xaeros-minimap requires Minecraft 1.20.1 but found 47.2.0
+        got:      Aes orosminimap requires Minecraft 1.20.1 but found
+  FAIL  expected: Chunk loading took 85 ms in dimension minecraft:overworld
+        got:      mineorattoverwerld
+  FAIL  expected: Unable to open C:\Games\MultiMC\libraries\org\apache\logging\log4j\47.4.10\mekanism-47.4.10.jar
+        got:      ca esti 0; res\orgh pache\logging\log4)\47.4.1
+  PASS  Found 555 mods, 7 failed to load
+  PASS  Found 788 mods, 9 failed to load
+  FAIL  expected: Chunk loading took 93 ms in dimension minecraft:overworld
+        got:      mineorattoverwerld
+  FAIL  expected: Missing dependency: net.minecraftforge.fmlcore version 0.14.22 required by jei
+        got:      re “eauired by Ye net mingerattiorge tmnlcore version
+  PASS  [INFO] Registered 679 recipes from journeymap
+  PASS  Could not find com.google.guava for oculus, skipping
+  PASS  Server started on port 25566 after 1 seconds
+  FAIL  expected: java.lang.NoClassDefFoundError: net.minecraftforge.javafmlmod/quark
+        got:      net minecraftorgejavatimod/quark
+  FAIL  expected: Crash report saved to E:\Games\MultiMC\crash-reports\crash-2026-11-17.txt
+        got:
+  PASS  Found 475 mods, 2 failed to load
+  PASS  Retrying download of terralith: HTTP status 503
+  PASS  Launching Server Backup 2026 with 4096 MB of memory
+  PASS  sodium 1.20.4 is already installed in 1.16.5 Create
+  PASS  Texture pack reloaded with 847 resources
+  FAIL  expected: Server started on port 25566 after 159 seconds
+        got:      server started on port 25566 after 159 seconds
+  PASS  Could not find com.google.guava for fabric-api, skipping
+  PASS  Found 297 mods, 7 failed to load
+  PASS  Launching 1.20.4 Fabric with 6144 MB of memory
+  FAIL  expected: Chunk loading took 218 ms in dimension minecraft:overworld
+        got:      mineorattoverwerld
+  FAIL  expected: java.lang.NoClassDefFoundError: net.fabricmc.loader/cloth-config
+        got:      vothocig net.fabricmc.loader/
+  FAIL  expected: Could not find org.apache.logging.log4j for xaeros-minimap, skipping
+        got:      vou’ _ skip ano for xaeros-
+  FAIL  expected: Error loading class org.spongepowered.mixin.carpet in carpet-0.14.22.jar
+        got:      sare ac, in org.spongepowered.mixin.carpet in
+  PASS  [INFO] Registered 618 recipes from journeymap
+  FAIL  expected: Missing dependency: com.google.guava version 5.4.0 required by sodium
+        got:      required by sodium com.google.guava version 5.4.0
+  PASS  [INFO] Registered 824 recipes from applied-energistics-2
+  PASS  Found 836 mods, 5 failed to load
+  PASS  [INFO] Registered 450 recipes from alexsmobs
+  FAIL  expected: java.lang.NoClassDefFoundError: net.fabricmc.loader/alexsmobs
+        got:      Javavang. NotlassDelFounderror net.fabricmc.loader/
+  PASS  Retrying download of iris: HTTP status 404
+  FAIL  expected: Could not find com.electronwizard.config for oculus, skipping
+        got:      sKioving. find com.electronwizard.config for oculus,
+  FAIL  expected: Error loading class org.apache.logging.log4j.ironchests in ironchests-1.20.1.jar
+        got:      ronchestss 20 f tar aang: logsroncnests in
+  PASS  Found 748 mods, 2 failed to load
+  PASS  Deleted 792 old log files from E:\Games\MultiMC\logs
+  PASS  waystones 1.20.1 is already installed in 1.20.4 Fabric
+  PASS  Connection timed out while reading packet 98
+  PASS  Downloaded alexsmobs-1.19.2.jar in 47 seconds
+  FAIL  expected: Server started on port 25566 after 66 seconds
+        got:      oerver started on port 25566 after 66 seconds
+  PASS  Downloaded glassseam-fix-0.14.22.jar in 168 seconds
+  FAIL  expected: Loading mod list from C:\Games\MultiMC\instances\1.20.1 6June2026Wiped9Nov2026\mods
+        got:
+  PASS  Connection timed out while reading packet 84
+  FAIL  expected: Mod xaeros-minimap requires Minecraft 1.21 but found 47.4.10
+        got:      Me a osminimap requires Minecraft 1.21 but found
+  PASS  Texture pack reloaded with 786 resources
+  FAIL  expected: The Mod File E:\Games\MultiMC\instances\1.16.5 Create\.minecraft\mods\sodium.jar has mods that were not found
+        got:
+  PASS  [INFO] Registered 353 recipes from jei
+  PASS  Downloaded quark-1.16.5.jar in 76 seconds
+  FAIL  expected: Unable to open D:\Games\MultiMC\libraries\com\google\guava\47.4.10\farmersdelight-47.4.10.jar
+        got:      Games th 0, resco m\google\guava\47.4.10\far-
+  FAIL  expected: Unable to open E:\Games\MultiMC\libraries\net\minecraftforge\fmlcore\47.2.0\carpet-47.2.0.jar
+        got:      ames Ciaresineinineratorgelincre 2
+  FAIL  expected: [WARN] Config file cloth-config-common.toml is out of date
+        got:      Lae Config file cloth-config-common.toml is out of
+  FAIL  expected: Missing dependency: org.spongepowered.mixin version 1.19.2 required by waystones
+        got:      1 19.2 sequired by wa vcores 2 ean version
+  PASS  Deleted 378 old log files from C:\Games\MultiMC\logs
+  PASS  create 47.4.10 is already installed in 1.21 Survival
+  FAIL  expected: Downloaded applied-energistics-2-1.20.1.jar in 111 seconds
+        got:      ~owmioaced applied-energistics-2-1.20.1.jar in 111
+  FAIL  expected: Mod glassseam-fix requires Minecraft 1.16.5 but found 47.4.10
+        got:      ae requires Minecraft 1.16.5 but found
+  PASS  Texture pack reloaded with 114 resources
+  PASS  Retrying download of biomesoplenty: HTTP status 403
+  FAIL  expected: Unable to open E:\Games\MultiMC\libraries\org\lwjgl\glfw\0.15.3\supplementaries-0.15.3.jar
+        got:      amen t Cli ries\org\lwjgl\glfw\0. 15.3\suppleme-
+  FAIL  expected: Could not find com.electronwizard.config for cloth-config, skipping
+        got:      sKioving. find com.electronwizard.config for cloth-config,
+  FAIL  expected: java.lang.NoClassDefFoundError: net.minecraftforge.fmlcore/glassseam-fix
+        got:      aot imin orattfors 3 ‘mlco ‘ol acseeamefix
+  FAIL  expected: Mod carpet requires Minecraft 1.19.2 but found 2.0.0-beta.4
+        got:      foe gape! requires Minecraft 1.19.2 but found 2.0.0-
+  PASS  Downloaded oculus-1.20.4.jar in 39 seconds
+  FAIL  expected: Found 117 mods, 0 failed to load
+        got:      Found 117 mods, O failed to load
+  FAIL  expected: Chunk loading took 238 ms in dimension minecraft:overworld
+        got:      mineorattovewerld
+  FAIL  expected: Chunk loading took 103 ms in dimension minecraft:overworld
+        got:      mineorattoverwerld
+  FAIL  expected: Loading mod list from E:\Games\MultiMC\instances\1.20.1 Forge\mods
+        got:      \GameclM at MC\inetanoes\' .20.1 Forge\mods
+  PASS  Connection timed out while reading packet 39
+  FAIL  expected: Error loading class org.apache.logging.log4j.mekanism in mekanism-1.19.2.jar
+        got:      aor oacing foie oot mekanism in
+  PASS  Deleted 359 old log files from C:\Games\MultiMC\logs
+  PASS  [WARN] Config file iris-common.toml is out of date
+  PASS  Connection timed out while reading packet 115
+  FAIL  expected: Could not find org.apache.logging.log4j for cloth-config, skipping
+        got:      sKioving. find org.apache.logging.log4j for cloth-config,
+  FAIL  expected: Crash report saved to D:\Games\MultiMC\crash-reports\crash-2026-11-07.txt
+        got:
+  PASS  Retrying download of jei: HTTP status 404
+  PASS  Texture pack reloaded with 109 resources
+  FAIL  expected: Mod farmersdelight requires Minecraft 1.20.1 but found 47.2.0
+        got:      Me aeons requires Minecraft 1.20.1 but found
+  FAIL  expected: Could not find net.minecraftforge.javafmlmod for mekanism, skipping
+        got:      vou enor me sing a evaimimod for
+  PASS  Deleted 444 old log files from E:\Games\MultiMC\logs
+  PASS  Downloaded sodium-1.20.4.jar in 80 seconds
+  FAIL  expected: applied-energistics-2 1.16.5 is already installed in Server Backup 2026
+        got:      ap 2008 1.16.5 is already installed in Server
+  PASS  [WARN] Config file carpet-common.toml is out of date
+  FAIL  expected: The Mod File C:\Games\MultiMC\instances\1.20.1 Forge\.minecraft\mods\fabric-api.jar has mods that were not found
+        got:
+  FAIL  expected: Mod farmersdelight requires Minecraft 1.16.5 but found 47.2.0
+        got:      Me aeons requires Minecraft 1.16.5 but found
+  FAIL  expected: Set JVM argument -Xmx6144M for 1.20.1 6June2026Wiped9Nov2026
+        got:      SuuneZ026Wiped9Nov2026
+  PASS  Downloaded glassseam-fix-1.20.1.jar in 27 seconds
+  PASS  [INFO] Registered 489 recipes from xaeros-minimap
+  FAIL  expected: Missing dependency: net.fabricmc.loader version 1.20.4 required by biomesoplenty
+        got:      required by biomesep erty version 1.20.4
+  FAIL  expected: The Mod File D:\Games\MultiMC\instances\1.20.1 Forge\.minecraft\mods\create.jar has mods that were not found
+        got:
+  PASS  Server started on port 8080 after 118 seconds
+  FAIL  expected: Missing dependency: net.minecraftforge.fmlcore version 1.20.1 required by waystones
+        got:      1 20.1 sequired by wa Mtones version
+  FAIL  expected: Chunk loading took 141 ms in dimension minecraft:overworld
+        got:      mineorattoverwerld
+  PASS  Deleted 732 old log files from C:\Games\MultiMC\logs
+  PASS  Launching 1.19.2 Modded with 8192 MB of memory
+  FAIL  expected: Failed to load mod fabric-api 2.0.0-beta.4: missing dependency org.spongepowered.mixin
+        got:      dependency org.spongepoweredmixin
+  FAIL  expected: Loading mod list from E:\Games\MultiMC\instances\1.21 Survival\mods
+        got:      soacing moe ist from E:\Games\MultiMC\instances\1.21
+  FAIL  expected: Missing dependency: org.spongepowered.mixin version 1.21 required by cloth-config
+        got:      1 24 tenultod by clegh Cote version
+  PASS  Connection timed out while reading packet 163
+  FAIL  expected: Failed to load mod cloth-config 0.15.3: missing dependency com.google.guava
+        got:      dependency com google guava
+  PASS  [WARN] Config file oculus-common.toml is out of date
+  FAIL  expected: Server started on port 25566 after 133 seconds
+        got:      server started on port 25566 after 133 seconds
+  FAIL  expected: Failed to load mod fabric-api 47.4.10: missing dependency org.apache.logging.log4j
+        got:      dependency org apache logging logd)
+  PASS  Found 124 mods, 0 failed to load
+  PASS  [INFO] Registered 728 recipes from farmersdelight
+  FAIL  expected: Saved world settings to disk successfully
+        got:      saved world settings to disk successfully
+  FAIL  expected: Chunk loading took 83 ms in dimension minecraft:overworld
+        got:      mineorattoverwerld
+  PASS  Found 657 mods, 0 failed to load
+  PASS  Found 98 mods, 3 failed to load
+  PASS  Mod jei requires Minecraft 1.19.2 but found 2.0.0-beta.4
+  FAIL  expected: java.lang.NoClassDefFoundError: com.electronwizard.config/modmenu
+        got:
+  PASS  Texture pack reloaded with 266 resources
+Rendering 800 training lines in 0_arial (weight 1)
+  rendered 1/800 lines in 0_arial
+  rendered 2/800 lines in 0_arial
+  rendered 3/800 lines in 0_arial
+  rendered 4/800 lines in 0_arial
+  rendered 5/800 lines in 0_arial
+  rendered 6/800 lines in 0_arial
+  rendered 7/800 lines in 0_arial
+  rendered 8/800 lines in 0_arial
+  rendered 9/800 lines in 0_arial
+  rendered 10/800 lines in 0_arial
+  rendered 11/800 lines in 0_arial
+  rendered 12/800 lines in 0_arial
+  rendered 13/800 lines in 0_arial
+  rendered 14/800 lines in 0_arial
+  rendered 15/800 lines in 0_arial
+  rendered 16/800 lines in 0_arial
+  rendered 17/800 lines in 0_arial
+  rendered 18/800 lines in 0_arial
+  rendered 19/800 lines in 0_arial
+  rendered 20/800 lines in 0_arial
+  rendered 21/800 lines in 0_arial
+  rendered 22/800 lines in 0_arial
+  rendered 23/800 lines in 0_arial
+  rendered 24/800 lines in 0_arial
+  rendered 25/800 lines in 0_arial
+  rendered 26/800 lines in 0_arial
+  rendered 27/800 lines in 0_arial
+  rendered 28/800 lines in 0_arial
+  rendered 29/800 lines in 0_arial
+  rendered 30/800 lines in 0_arial
+  rendered 31/800 lines in 0_arial
+  rendered 32/800 lines in 0_arial
+  rendered 33/800 lines in 0_arial
+  rendered 34/800 lines in 0_arial
+  rendered 35/800 lines in 0_arial
+  rendered 36/800 lines in 0_arial
+  rendered 37/800 lines in 0_arial
+  rendered 38/800 lines in 0_arial
+  rendered 39/800 lines in 0_arial
+  rendered 40/800 lines in 0_arial
+  rendered 41/800 lines in 0_arial
+  rendered 42/800 lines in 0_arial
+  rendered 43/800 lines in 0_arial
+  rendered 44/800 lines in 0_arial
+  rendered 45/800 lines in 0_arial
+  rendered 46/800 lines in 0_arial
+  rendered 47/800 lines in 0_arial
+  rendered 48/800 lines in 0_arial
+  rendered 49/800 lines in 0_arial
+  rendered 50/800 lines in 0_arial
+  rendered 51/800 lines in 0_arial
+  rendered 52/800 lines in 0_arial
+  rendered 53/800 lines in 0_arial
+  rendered 54/800 lines in 0_arial
+  rendered 55/800 lines in 0_arial
+  rendered 56/800 lines in 0_arial
+  rendered 57/800 lines in 0_arial
+  rendered 58/800 lines in 0_arial
+  rendered 59/800 lines in 0_arial
+  rendered 60/800 lines in 0_arial
+  rendered 61/800 lines in 0_arial
+  rendered 62/800 lines in 0_arial
+  rendered 63/800 lines in 0_arial
+  rendered 64/800 lines in 0_arial
+  rendered 65/800 lines in 0_arial
+  rendered 66/800 lines in 0_arial
+  rendered 67/800 lines in 0_arial
+  rendered 68/800 lines in 0_arial
+  rendered 69/800 lines in 0_arial
+  rendered 70/800 lines in 0_arial
+  rendered 71/800 lines in 0_arial
+  rendered 72/800 lines in 0_arial
+  rendered 73/800 lines in 0_arial
+  rendered 74/800 lines in 0_arial
+  rendered 75/800 lines in 0_arial
+  rendered 76/800 lines in 0_arial
+  rendered 77/800 lines in 0_arial
+  rendered 78/800 lines in 0_arial
+  rendered 79/800 lines in 0_arial
+  rendered 80/800 lines in 0_arial
+  rendered 81/800 lines in 0_arial
+  rendered 82/800 lines in 0_arial
+  rendered 83/800 lines in 0_arial
+  rendered 84/800 lines in 0_arial
+  rendered 85/800 lines in 0_arial
+  rendered 86/800 lines in 0_arial
+  rendered 87/800 lines in 0_arial
+  rendered 88/800 lines in 0_arial
+  rendered 89/800 lines in 0_arial
+  rendered 90/800 lines in 0_arial
+  rendered 91/800 lines in 0_arial
+  rendered 92/800 lines in 0_arial
+  rendered 93/800 lines in 0_arial
+  rendered 94/800 lines in 0_arial
+  rendered 95/800 lines in 0_arial
+  rendered 96/800 lines in 0_arial
+  rendered 97/800 lines in 0_arial
+  rendered 98/800 lines in 0_arial
+  rendered 99/800 lines in 0_arial
+  rendered 100/800 lines in 0_arial
+  rendered 101/800 lines in 0_arial
+  rendered 102/800 lines in 0_arial
+  rendered 103/800 lines in 0_arial
+  rendered 104/800 lines in 0_arial
+  rendered 105/800 lines in 0_arial
+  rendered 106/800 lines in 0_arial
+  rendered 107/800 lines in 0_arial
+  rendered 108/800 lines in 0_arial
+  rendered 109/800 lines in 0_arial
+  rendered 110/800 lines in 0_arial
+  rendered 111/800 lines in 0_arial
+  rendered 112/800 lines in 0_arial
+  rendered 113/800 lines in 0_arial
+  rendered 114/800 lines in 0_arial
+  rendered 115/800 lines in 0_arial
+  rendered 116/800 lines in 0_arial
+  rendered 117/800 lines in 0_arial
+  rendered 118/800 lines in 0_arial
+  rendered 119/800 lines in 0_arial
+  rendered 120/800 lines in 0_arial
+  rendered 121/800 lines in 0_arial
+  rendered 122/800 lines in 0_arial
+  rendered 123/800 lines in 0_arial
+  rendered 124/800 lines in 0_arial
+  rendered 125/800 lines in 0_arial
+  rendered 126/800 lines in 0_arial
+  rendered 127/800 lines in 0_arial
+  rendered 128/800 lines in 0_arial
+  rendered 129/800 lines in 0_arial
+  rendered 130/800 lines in 0_arial
+  rendered 131/800 lines in 0_arial
+  rendered 132/800 lines in 0_arial
+  rendered 133/800 lines in 0_arial
+  rendered 134/800 lines in 0_arial
+  rendered 135/800 lines in 0_arial
+  rendered 136/800 lines in 0_arial
+  rendered 137/800 lines in 0_arial
+  rendered 138/800 lines in 0_arial
+  rendered 139/800 lines in 0_arial
+  rendered 140/800 lines in 0_arial
+  rendered 141/800 lines in 0_arial
+  rendered 142/800 lines in 0_arial
+  rendered 143/800 lines in 0_arial
+  rendered 144/800 lines in 0_arial
+  rendered 145/800 lines in 0_arial
+  rendered 146/800 lines in 0_arial
+  rendered 147/800 lines in 0_arial
+  rendered 148/800 lines in 0_arial
+  rendered 149/800 lines in 0_arial
+  rendered 150/800 lines in 0_arial
+  rendered 151/800 lines in 0_arial
+  rendered 152/800 lines in 0_arial
+  rendered 153/800 lines in 0_arial
+  rendered 154/800 lines in 0_arial
+  rendered 155/800 lines in 0_arial
+  rendered 156/800 lines in 0_arial
+  rendered 157/800 lines in 0_arial
+  rendered 158/800 lines in 0_arial
+  rendered 159/800 lines in 0_arial
+  rendered 160/800 lines in 0_arial
+  rendered 161/800 lines in 0_arial
+  rendered 162/800 lines in 0_arial
+  rendered 163/800 lines in 0_arial
+  rendered 164/800 lines in 0_arial
+  rendered 165/800 lines in 0_arial
+  rendered 166/800 lines in 0_arial
+  rendered 167/800 lines in 0_arial
+  rendered 168/800 lines in 0_arial
+  rendered 169/800 lines in 0_arial
+  rendered 170/800 lines in 0_arial
+  rendered 171/800 lines in 0_arial
+  rendered 172/800 lines in 0_arial
+  rendered 173/800 lines in 0_arial
+  rendered 174/800 lines in 0_arial
+  rendered 175/800 lines in 0_arial
+  rendered 176/800 lines in 0_arial
+  rendered 177/800 lines in 0_arial
+  rendered 178/800 lines in 0_arial
+  rendered 179/800 lines in 0_arial
+  rendered 180/800 lines in 0_arial
+  rendered 181/800 lines in 0_arial
+  rendered 182/800 lines in 0_arial
+  rendered 183/800 lines in 0_arial
+  rendered 184/800 lines in 0_arial
+  rendered 185/800 lines in 0_arial
+  rendered 186/800 lines in 0_arial
+  rendered 187/800 lines in 0_arial
+  rendered 188/800 lines in 0_arial
+  rendered 189/800 lines in 0_arial
+  rendered 190/800 lines in 0_arial
+  rendered 191/800 lines in 0_arial
+  rendered 192/800 lines in 0_arial
+  rendered 193/800 lines in 0_arial
+  rendered 194/800 lines in 0_arial
+  rendered 195/800 lines in 0_arial
+  rendered 196/800 lines in 0_arial
+  rendered 197/800 lines in 0_arial
+  rendered 198/800 lines in 0_arial
+  rendered 199/800 lines in 0_arial
+  rendered 200/800 lines in 0_arial
+  rendered 201/800 lines in 0_arial
+  rendered 202/800 lines in 0_arial
+  rendered 203/800 lines in 0_arial
+  rendered 204/800 lines in 0_arial
+  rendered 205/800 lines in 0_arial
+  rendered 206/800 lines in 0_arial
+  rendered 207/800 lines in 0_arial
+  rendered 208/800 lines in 0_arial
+  rendered 209/800 lines in 0_arial
+  rendered 210/800 lines in 0_arial
+  rendered 211/800 lines in 0_arial
+  rendered 212/800 lines in 0_arial
+  rendered 213/800 lines in 0_arial
+  rendered 214/800 lines in 0_arial
+  rendered 215/800 lines in 0_arial
+  rendered 216/800 lines in 0_arial
+  rendered 217/800 lines in 0_arial
+  rendered 218/800 lines in 0_arial
+  rendered 219/800 lines in 0_arial
+  rendered 220/800 lines in 0_arial
+  rendered 221/800 lines in 0_arial
+  rendered 222/800 lines in 0_arial
+  rendered 223/800 lines in 0_arial
+  rendered 224/800 lines in 0_arial
+  rendered 225/800 lines in 0_arial
+  rendered 226/800 lines in 0_arial
+  rendered 227/800 lines in 0_arial
+  rendered 228/800 lines in 0_arial
+  rendered 229/800 lines in 0_arial
+  rendered 230/800 lines in 0_arial
+  rendered 231/800 lines in 0_arial
+  rendered 232/800 lines in 0_arial
+  rendered 233/800 lines in 0_arial
+  rendered 234/800 lines in 0_arial
+  rendered 235/800 lines in 0_arial
+  rendered 236/800 lines in 0_arial
+  rendered 237/800 lines in 0_arial
+  rendered 238/800 lines in 0_arial
+  rendered 239/800 lines in 0_arial
+  rendered 240/800 lines in 0_arial
+  rendered 241/800 lines in 0_arial
+  rendered 242/800 lines in 0_arial
+  rendered 243/800 lines in 0_arial
+  rendered 244/800 lines in 0_arial
+  rendered 245/800 lines in 0_arial
+  rendered 246/800 lines in 0_arial
+  rendered 247/800 lines in 0_arial
+  rendered 248/800 lines in 0_arial
+  rendered 249/800 lines in 0_arial
+  rendered 250/800 lines in 0_arial
+  rendered 251/800 lines in 0_arial
+  rendered 252/800 lines in 0_arial
+  rendered 253/800 lines in 0_arial
+  rendered 254/800 lines in 0_arial
+  rendered 255/800 lines in 0_arial
+  rendered 256/800 lines in 0_arial
+  rendered 257/800 lines in 0_arial
+  rendered 258/800 lines in 0_arial
+  rendered 259/800 lines in 0_arial
+  rendered 260/800 lines in 0_arial
+  rendered 261/800 lines in 0_arial
+  rendered 262/800 lines in 0_arial
+  rendered 263/800 lines in 0_arial
+  rendered 264/800 lines in 0_arial
+  rendered 265/800 lines in 0_arial
+  rendered 266/800 lines in 0_arial
+  rendered 267/800 lines in 0_arial
+  rendered 268/800 lines in 0_arial
+  rendered 269/800 lines in 0_arial
+  rendered 270/800 lines in 0_arial
+  rendered 271/800 lines in 0_arial
+  rendered 272/800 lines in 0_arial
+  rendered 273/800 lines in 0_arial
+  rendered 274/800 lines in 0_arial
+  rendered 275/800 lines in 0_arial
+  rendered 276/800 lines in 0_arial
+  rendered 277/800 lines in 0_arial
+  rendered 278/800 lines in 0_arial
+  rendered 279/800 lines in 0_arial
+  rendered 280/800 lines in 0_arial
+  rendered 281/800 lines in 0_arial
+  rendered 282/800 lines in 0_arial
+  rendered 283/800 lines in 0_arial
+  rendered 284/800 lines in 0_arial
+  rendered 285/800 lines in 0_arial
+  rendered 286/800 lines in 0_arial
+  rendered 287/800 lines in 0_arial
+  rendered 288/800 lines in 0_arial
+  rendered 289/800 lines in 0_arial
+  rendered 290/800 lines in 0_arial
+  rendered 291/800 lines in 0_arial
+  rendered 292/800 lines in 0_arial
+  rendered 293/800 lines in 0_arial
+  rendered 294/800 lines in 0_arial
+  rendered 295/800 lines in 0_arial
+  rendered 296/800 lines in 0_arial
+  rendered 297/800 lines in 0_arial
+  rendered 298/800 lines in 0_arial
+  rendered 299/800 lines in 0_arial
+  rendered 300/800 lines in 0_arial
+  rendered 301/800 lines in 0_arial
+  rendered 302/800 lines in 0_arial
+  rendered 303/800 lines in 0_arial
+  rendered 304/800 lines in 0_arial
+  rendered 305/800 lines in 0_arial
+  rendered 306/800 lines in 0_arial
+  rendered 307/800 lines in 0_arial
+  rendered 308/800 lines in 0_arial
+  rendered 309/800 lines in 0_arial
+  rendered 310/800 lines in 0_arial
+  rendered 311/800 lines in 0_arial
+  rendered 312/800 lines in 0_arial
+  rendered 313/800 lines in 0_arial
+  rendered 314/800 lines in 0_arial
+  rendered 315/800 lines in 0_arial
+  rendered 316/800 lines in 0_arial
+  rendered 317/800 lines in 0_arial
+  rendered 318/800 lines in 0_arial
+  rendered 319/800 lines in 0_arial
+  rendered 320/800 lines in 0_arial
+  rendered 321/800 lines in 0_arial
+  rendered 322/800 lines in 0_arial
+  rendered 323/800 lines in 0_arial
+  rendered 324/800 lines in 0_arial
+  rendered 325/800 lines in 0_arial
+  rendered 326/800 lines in 0_arial
+  rendered 327/800 lines in 0_arial
+  rendered 328/800 lines in 0_arial
+  rendered 329/800 lines in 0_arial
+  rendered 330/800 lines in 0_arial
+  rendered 331/800 lines in 0_arial
+  rendered 332/800 lines in 0_arial
+  rendered 333/800 lines in 0_arial
+  rendered 334/800 lines in 0_arial
+  rendered 335/800 lines in 0_arial
+  rendered 336/800 lines in 0_arial
+  rendered 337/800 lines in 0_arial
+  rendered 338/800 lines in 0_arial
+  rendered 339/800 lines in 0_arial
+  rendered 340/800 lines in 0_arial
+  rendered 341/800 lines in 0_arial
+  rendered 342/800 lines in 0_arial
+  rendered 343/800 lines in 0_arial
+  rendered 344/800 lines in 0_arial
+  rendered 345/800 lines in 0_arial
+  rendered 346/800 lines in 0_arial
+  rendered 347/800 lines in 0_arial
+  rendered 348/800 lines in 0_arial
+  rendered 349/800 lines in 0_arial
+  rendered 350/800 lines in 0_arial
+  rendered 351/800 lines in 0_arial
+  rendered 352/800 lines in 0_arial
+  rendered 353/800 lines in 0_arial
+  rendered 354/800 lines in 0_arial
+  rendered 355/800 lines in 0_arial
+  rendered 356/800 lines in 0_arial
+  rendered 357/800 lines in 0_arial
+  rendered 358/800 lines in 0_arial
+  rendered 359/800 lines in 0_arial
+  rendered 360/800 lines in 0_arial
+  rendered 361/800 lines in 0_arial
+  rendered 362/800 lines in 0_arial
+  rendered 363/800 lines in 0_arial
+  rendered 364/800 lines in 0_arial
+  rendered 365/800 lines in 0_arial
+  rendered 366/800 lines in 0_arial
+  rendered 367/800 lines in 0_arial
+  rendered 368/800 lines in 0_arial
+  rendered 369/800 lines in 0_arial
+  rendered 370/800 lines in 0_arial
+  rendered 371/800 lines in 0_arial
+  rendered 372/800 lines in 0_arial
+  rendered 373/800 lines in 0_arial
+  rendered 374/800 lines in 0_arial
+  rendered 375/800 lines in 0_arial
+  rendered 376/800 lines in 0_arial
+  rendered 377/800 lines in 0_arial
+  rendered 378/800 lines in 0_arial
+  rendered 379/800 lines in 0_arial
+  rendered 380/800 lines in 0_arial
+  rendered 381/800 lines in 0_arial
+  rendered 382/800 lines in 0_arial
+  rendered 383/800 lines in 0_arial
+  rendered 384/800 lines in 0_arial
+  rendered 385/800 lines in 0_arial
+  rendered 386/800 lines in 0_arial
+  rendered 387/800 lines in 0_arial
+  rendered 388/800 lines in 0_arial
+  rendered 389/800 lines in 0_arial
+  rendered 390/800 lines in 0_arial
+  rendered 391/800 lines in 0_arial
+  rendered 392/800 lines in 0_arial
+  rendered 393/800 lines in 0_arial
+  rendered 394/800 lines in 0_arial
+  rendered 395/800 lines in 0_arial
+  rendered 396/800 lines in 0_arial
+  rendered 397/800 lines in 0_arial
+  rendered 398/800 lines in 0_arial
+  rendered 399/800 lines in 0_arial
+  rendered 400/800 lines in 0_arial
+  rendered 401/800 lines in 0_arial
+  rendered 402/800 lines in 0_arial
+  rendered 403/800 lines in 0_arial
+  rendered 404/800 lines in 0_arial
+  rendered 405/800 lines in 0_arial
+  rendered 406/800 lines in 0_arial
+  rendered 407/800 lines in 0_arial
+  rendered 408/800 lines in 0_arial
+  rendered 409/800 lines in 0_arial
+  rendered 410/800 lines in 0_arial
+  rendered 411/800 lines in 0_arial
+  rendered 412/800 lines in 0_arial
+  rendered 413/800 lines in 0_arial
+  rendered 414/800 lines in 0_arial
+  rendered 415/800 lines in 0_arial
+  rendered 416/800 lines in 0_arial
+  rendered 417/800 lines in 0_arial
+  rendered 418/800 lines in 0_arial
+  rendered 419/800 lines in 0_arial
+  rendered 420/800 lines in 0_arial
+  rendered 421/800 lines in 0_arial
+  rendered 422/800 lines in 0_arial
+  rendered 423/800 lines in 0_arial
+  rendered 424/800 lines in 0_arial
+  rendered 425/800 lines in 0_arial
+  rendered 426/800 lines in 0_arial
+  rendered 427/800 lines in 0_arial
+  rendered 428/800 lines in 0_arial
+  rendered 429/800 lines in 0_arial
+  rendered 430/800 lines in 0_arial
+  rendered 431/800 lines in 0_arial
+  rendered 432/800 lines in 0_arial
+  rendered 433/800 lines in 0_arial
+  rendered 434/800 lines in 0_arial
+  rendered 435/800 lines in 0_arial
+  rendered 436/800 lines in 0_arial
+  rendered 437/800 lines in 0_arial
+  rendered 438/800 lines in 0_arial
+  rendered 439/800 lines in 0_arial
+  rendered 440/800 lines in 0_arial
+  rendered 441/800 lines in 0_arial
+interrupted by a user

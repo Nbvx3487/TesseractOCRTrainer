@@ -1,0 +1,59 @@
+Run started: 20261126-223132_minecraft
+Model: minecraft
+Iterations: 400, font size: 32px
+Corpus: 1000 lines, generated automatically (copy in logs: 20261126-223132_minecraft_corpus.txt)
+Font: C:\WINDOWS\Fonts\arial.ttf (weight 1)
+Starting the trainer in WSL. The first output can take a little while.
+WSL started (process 6984), waiting for the trainer.
+Trainer started: minecraft, 400 iterations, font size 32px
+$ combine_tessdata -e /mnt/c/Users/Nbvx Teo/Documents/_Programming/GitHub/TesseractOCRTrainer/data/runs/20261126-223132_minecraft/minecraft/base/eng.traineddata /mnt/c/Users/Nbvx Teo/Documents/_Programming/GitHub/TesseractOCRTrainer/data/runs/20261126-223132_minecraft/minecraft/base/eng.lstm
+Extracting tessdata components from /mnt/c/Users/Nbvx Teo/Documents/_Programming/GitHub/TesseractOCRTrainer/data/runs/20261126-223132_minecraft/minecraft/base/eng.traineddata
+Wrote /mnt/c/Users/Nbvx Teo/Documents/_Programming/GitHub/TesseractOCRTrainer/data/runs/20261126-223132_minecraft/minecraft/base/eng.lstm
+Version:4.00.00alpha:eng:synth20170629:[1,36,0,1Ct3,3,16Mp3,3Lfys64Lfx96Lrx96Lfx512O1c1]
+17:lstm:size=11689099, offset=192
+18:lstm-punc-dawg:size=4322, offset=11689291
+19:lstm-word-dawg:size=3694794, offset=11693613
+20:lstm-number-dawg:size=4738, offset=15388407
+21:lstm-unicharset:size=6360, offset=15393145
+22:lstm-recoder:size=1012, offset=15399505
+23:version:size=80, offset=15400517
+Corpus: 800 training lines, 200 held-out lines
+Rendering 200 held-out lines in 0_arial
+  rendered 1/200 lines in 0_arial
+  rendered 2/200 lines in 0_arial
+  rendered 3/200 lines in 0_arial
+  rendered 4/200 lines in 0_arial
+  rendered 5/200 lines in 0_arial
+  rendered 6/200 lines in 0_arial
+  rendered 7/200 lines in 0_arial
+  rendered 8/200 lines in 0_arial
+  rendered 9/200 lines in 0_arial
+  rendered 10/200 lines in 0_arial
+  rendered 11/200 lines in 0_arial
+  rendered 12/200 lines in 0_arial
+  rendered 13/200 lines in 0_arial
+  rendered 14/200 lines in 0_arial
+  rendered 15/200 lines in 0_arial
+  rendered 16/200 lines in 0_arial
+  rendered 17/200 lines in 0_arial
+  rendered 18/200 lines in 0_arial
+  rendered 19/200 lines in 0_arial
+  rendered 20/200 lines in 0_arial
+  rendered 21/200 lines in 0_arial
+  rendered 22/200 lines in 0_arial
+  rendered 23/200 lines in 0_arial
+  rendered 24/200 lines in 0_arial
+  rendered 25/200 lines in 0_arial
+  rendered 26/200 lines in 0_arial
+  rendered 27/200 lines in 0_arial
+  rendered 28/200 lines in 0_arial
+  rendered 29/200 lines in 0_arial
+  rendered 30/200 lines in 0_arial
+  rendered 31/200 lines in 0_arial
+  rendered 32/200 lines in 0_arial
+  rendered 33/200 lines in 0_arial
+  rendered 34/200 lines in 0_arial
+  rendered 35/200 lines in 0_arial
+  rendered 36/200 lines in 0_arial
+  rendered 37/200 lines in 0_arial
+interrupted by a user
