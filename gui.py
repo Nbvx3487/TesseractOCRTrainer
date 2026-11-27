@@ -26,6 +26,10 @@ try:
 except ImportError:  # not on Windows, so the theme cannot be read
     winreg = None
 
+# Draw with software rather than the graphics driver. This avoided a crash on the
+# Windows PC; it must be set before PySide6 loads.
+os.environ.setdefault("QT_OPENGL", "software")
+
 from PySide6.QtCore import QThread, Qt, Signal
 from PySide6.QtWidgets import (
     QAbstractItemView, QApplication, QCheckBox, QFileDialog, QFrame, QHBoxLayout,
