@@ -14,7 +14,9 @@ Steps:
   6. Score the base and trained models on held-out lines, per font.
 """
 
+import json
 import os
+import re
 import shutil
 import subprocess
 from pathlib import Path
@@ -60,15 +62,35 @@ def find_best_model():
     raise FileNotFoundError(BEST_MODEL_HINT)
 
 
-def run(cmd, log):
-    log(f"$ {' '.join(str(c) for c in cmd)}")
-    result = subprocess.run(cmd, capture_output=True, text=True, encoding="utf-8",
-                            errors="replace")
-    if result.stdout.strip():
-        log(result.stdout.strip()[-2000:])
-    if result.returncode != 0:
-        raise RuntimeError(f"{cmd[0]} failed: {result.stderr.strip()[-2000:]}")
-    return result
+ITERATION_LINE = re.compile(r"At iteration (\d+)/")
+
+
+def run(cmd, log, quiet=False, on_line=None):
+    """Run a command and stream its output line by line, so the log keeps moving.
+    quiet=True skips logging the command and its lines (used for per-line steps)."""
+    if not quiet:
+        log(f"$ {' '.join(str(c) for c in cmd)}")
+    process = subprocess.Popen(cmd, stdout=subprocess.PIPE, stderr=subprocess.STDOUT,
+                               text=True, encoding="utf-8", errors="replace")
+    output = []
+    for raw in process.stdout:
+        line = raw.rstrip()
+        if not line:
+            continue
+        output.append(line)
+        if on_line:
+            on_line(line)
+        if not quiet:
+            log(line)
+    code = process.wait()
+    if code != 0:
+        raise RuntimeError(f"{cmd[0]} failed: {' | '.join(output[-5:])[-2000:]}")
+
+
+def report(log, stage, label, current, count, done, total):
+    """A progress line for the window. The window reads these and does not log them."""
+    log("PROGRESS:" + json.dumps({"stage": stage, "label": label, "current": current,
+                                  "count": count, "done": done, "total": total}))
 
 
 def font_label(index, font_path):
@@ -98,24 +120,33 @@ def train_font(name, fonts, corpus, data_root, log, font_size=32, iterations=400
     run(["combine_tessdata", "-e", str(base_dir / "eng.traineddata"),
          str(base_dir / "eng.lstm")], log)
 
-    corpus_text = corpus
-    train_lines, control_lines, dropped = split_corpus(corpus_text)
+    train_lines, control_lines, dropped = split_corpus(corpus)
     log(f"Corpus: {len(train_lines)} training lines, {len(control_lines)} held-out lines")
     if dropped:
         log(f"Skipped {dropped} Cyrillic line(s): the English model cannot learn them.")
+
+    # Progress units: one per training line prepared, one per training iteration,
+    # and two per held-out line scored (before and after) in each font.
+    font_count = len(fonts)
+    prepared_units = font_count * len(train_lines)
+    total = prepared_units + iterations + font_count * len(control_lines) * 2
+    done = 0
 
     # Render training images per font, and list each one weight times.
     lstmf_list = []
     for index, (font_path, weight) in enumerate(fonts):
         label = font_label(index, font_path)
         train_dir = work / "train" / label
+        log(f"Rendering {len(train_lines)} training lines in {label} (weight {weight})")
         tifs = render_lines(train_lines, font_path, train_dir, font_size, prefix="train")
-        log(f"Rendered {len(tifs)} lines in {label} (weight {weight})")
-        for tif in tifs:
+        for number, tif in enumerate(tifs, start=1):
             run(["tesseract", str(tif), str(tif.with_suffix("")),
-                 "--psm", "13", "lstm.train"], log)
+                 "--psm", "13", "lstm.train"], log, quiet=True)
             entry = str(tif.with_suffix(".lstmf"))
             lstmf_list.extend([entry] * weight)
+            done += 1
+            report(log, "prepare", label, number, len(tifs), done, total)
+        log(f"Prepared {len(tifs)} lines in {label}")
 
     list_file = work / "train_list.txt"
     list_file.write_text("\n".join(lstmf_list) + "\n", encoding="utf-8")
@@ -123,12 +154,22 @@ def train_font(name, fonts, corpus, data_root, log, font_size=32, iterations=400
 
     checkpoints = work / "checkpoints"
     checkpoints.mkdir()
+
+    def on_training_line(line):
+        match = ITERATION_LINE.search(line)
+        if match:
+            current = min(int(match.group(1)), iterations)
+            report(log, "train", "all fonts", current, iterations,
+                   prepared_units + current, total)
+
+    report(log, "train", "all fonts", 0, iterations, prepared_units, total)
     run(["lstmtraining",
          "--model_output", str(checkpoints / name),
          "--continue_from", str(base_dir / "eng.lstm"),
          "--traineddata", str(base_dir / "eng.traineddata"),
          "--train_listfile", str(list_file),
-         "--max_iterations", str(iterations)], log)
+         "--max_iterations", str(iterations)], log, on_line=on_training_line)
+    done = prepared_units + iterations
 
     output_dir = work / "model"
     output_dir.mkdir()
@@ -141,10 +182,15 @@ def train_font(name, fonts, corpus, data_root, log, font_size=32, iterations=400
     results = {"name": name, "model": str(output_dir / f"{name}.traineddata"), "scores": {}}
     for index, (font_path, _) in enumerate(fonts):
         label = font_label(index, font_path)
+        log(f"Rendering {len(control_lines)} held-out lines in {label}")
         images = render_lines(control_lines, font_path, work / "control" / label,
                               font_size, prefix="ctrl")
+        report(log, "score", label, 0, len(images), done, total)
+        log(f"Scoring {label}: before training, then after")
         baseline = score_set(images, "eng", system_tessdata)
         trained = score_set(images, name, output_dir)
+        done += len(images) * 2
+        report(log, "score", label, len(images), len(images), done, total)
         results["scores"][label] = {"baseline": baseline, "trained": trained}
         log(f"{label}: before {baseline['exact']}/{len(images)} exact, "
             f"after {trained['exact']}/{len(images)} exact")

@@ -37,8 +37,8 @@ from PySide6.QtCore import QThread, Qt, Signal
 from PySide6.QtNetwork import QLocalServer, QLocalSocket
 from PySide6.QtWidgets import (
     QAbstractItemView, QApplication, QCheckBox, QFileDialog, QFrame, QHBoxLayout,
-    QHeaderView, QLabel, QLayout, QLineEdit, QMessageBox, QPlainTextEdit, QPushButton,
-    QScrollArea, QSpinBox, QTableWidget, QTableWidgetItem, QVBoxLayout, QWidget,
+    QHeaderView, QLabel, QLayout, QLineEdit, QMessageBox, QPlainTextEdit, QProgressBar,
+    QPushButton, QScrollArea, QSpinBox, QTableWidget, QTableWidgetItem, QVBoxLayout, QWidget,
 )
 
 REPO = Path(__file__).resolve().parent
@@ -147,6 +147,79 @@ def clean_line(raw):
     """One output line from WSL. Some WSL output arrives as UTF-16, which leaves a NUL
     after every character; removing the NULs makes it readable."""
     return raw.replace("\x00", "").rstrip()
+
+
+def font_paths(urls):
+    """Local paths of the dropped URLs that are font files."""
+    paths = [url.toLocalFile() for url in urls]
+    return [p for p in paths if p.lower().endswith(FONT_EXTENSIONS)]
+
+
+def another_copy_is_open():
+    """True when another copy of this window is already running."""
+    socket = QLocalSocket()
+    socket.connectToServer(SINGLE_INSTANCE_NAME)
+    connected = socket.waitForConnected(500)
+    socket.abort()
+    return connected
+
+
+class TrainWorker(QThread):
+    """Runs the trainer in the background so the window stays responsive."""
+    line = Signal(str)
+    progress = Signal(dict)
+    done = Signal(dict)
+    failed = Signal(str)
+
+    def __init__(self, args, threads, parent=None):
+        super().__init__(parent)
+        self.args = args
+        self.threads = threads
+        self.process = None
+        self.stopped = False
+
+    def stop(self):
+        """Stop the run. The trainer is inside WSL, so its process is killed there too."""
+        self.stopped = True
+        if self.process is not None:
+            self.process.kill()
+        subprocess.run(["wsl", "--", "pkill", "-f", "trainer.cli"],
+                       creationflags=CREATE_NO_WINDOW)
+
+    def run(self):
+        command = build_command(self.args, self.threads)
+        try:
+            self.process = subprocess.Popen(
+                command, stdout=subprocess.PIPE, stderr=subprocess.STDOUT,
+                text=True, encoding="utf-8", errors="replace",
+                creationflags=CREATE_NO_WINDOW,
+            )
+        except FileNotFoundError:
+            self.failed.emit("WSL was not found. Install WSL and Ubuntu first (see README).")
+            return
+
+        result = None
+        errors = []
+        for raw in self.process.stdout:
+            text = clean_line(raw)
+            if text.startswith("PROGRESS:"):
+                self.progress.emit(json.loads(text[len("PROGRESS:"):]))
+            elif text.startswith("RESULT:"):
+                result = json.loads(text[len("RESULT:"):])
+            elif text.startswith("ERROR:"):
+                errors.append(text)
+                self.line.emit(text)
+            elif text:
+                self.line.emit(text)
+
+        code = self.process.wait()
+        if self.stopped:
+            self.failed.emit("Training stopped.")
+        elif code == 0 and result is not None:
+            self.done.emit(result)
+        else:
+            detail = errors[-1] if errors else f"training stopped with exit code {code}"
+            self.failed.emit(detail)
 
 
 def font_paths(urls):
@@ -302,9 +375,16 @@ class MainWindow(QWidget):
         self.primary = QPushButton("adjust the font")
         self.primary.setObjectName("primary")
         self.primary.setMinimumWidth(220)
-        self.primary.clicked.connect(self.start_training)
+        self.primary.clicked.connect(self.on_primary)
         self.status = QLabel("Ready. Check the fonts and settings, then press adjust the font.")
         self.status.setWordWrap(True)
+        self.current_label = QLabel("Current font: not started")
+        self.current_bar = QProgressBar()
+        self.overall_label = QLabel("All fonts: not started")
+        self.overall_bar = QProgressBar()
+        for bar in (self.current_bar, self.overall_bar):
+            bar.setRange(0, 100)
+            bar.setValue(0)
 
         self.results = QTableWidget(0, 5)
         self.results.setHorizontalHeaderLabels(
@@ -379,6 +459,15 @@ class MainWindow(QWidget):
         banner_layout.setContentsMargins(16, 12, 16, 12)
         banner_layout.addWidget(self.status)
         layout.addWidget(banner)
+
+        progress_body = QVBoxLayout()
+        progress_body.addWidget(self.current_label)
+        progress_body.addWidget(self.current_bar)
+        progress_body.addWidget(self.overall_label)
+        progress_body.addWidget(self.overall_bar)
+        layout.addWidget(self._card(
+            "Progress", "Current font shows the step being done now. All fonts shows the whole run.",
+            progress_body))
 
         fonts_body = QVBoxLayout()
         fonts_body.addWidget(self.table)
@@ -590,6 +679,10 @@ class MainWindow(QWidget):
         name = self.name.text().strip()
         self.log.clear()
         self.results.setRowCount(0)
+        self.current_bar.setValue(0)
+        self.overall_bar.setValue(0)
+        self.current_label.setText("Current font: starting")
+        self.overall_label.setText("All fonts: starting")
         self.model_dir = None
         self.open_run_log(name)
         self.set_running(True)
@@ -619,12 +712,41 @@ class MainWindow(QWidget):
         self.status.setText("Training... this can take a long time. Keep this window open.")
         self.worker = TrainWorker(args, self.cpu_threads.value())
         self.worker.line.connect(self.record)
+        self.worker.progress.connect(self.show_progress)
         self.worker.done.connect(self.show_results)
         self.worker.failed.connect(self.show_failure)
         self.worker.start()
 
+    def on_primary(self):
+        if self.worker is not None and self.worker.isRunning():
+            self.stop_training()
+        else:
+            self.start_training()
+
+    def stop_training(self):
+        if self.worker is not None and self.worker.isRunning():
+            self.status.setText("Stopping...")
+            self.worker.stop()
+
     def set_running(self, on):
-        self.primary.setEnabled(not on)
+        self.primary.setText("Stop training" if on else "adjust the font")
+
+    def show_progress(self, info):
+        """Update both progress bars from a PROGRESS line of the trainer."""
+        total = max(info["total"], 1)
+        overall = int(100 * info["done"] / total)
+        count = max(info["count"], 1)
+        current = int(100 * info["current"] / count)
+        if info["stage"] == "prepare":
+            step = f"Preparing lines {info['current']}/{info['count']}"
+        elif info["stage"] == "train":
+            step = f"Training, iteration {info['current']}/{info['count']}"
+        else:
+            step = f"Scoring on held-out lines ({info['current']}/{info['count']})"
+        self.current_label.setText(f"Current font {info['label']}: {step}")
+        self.current_bar.setValue(current)
+        self.overall_label.setText(f"All fonts: {info['done']}/{info['total']} steps")
+        self.overall_bar.setValue(overall)
 
     def validate(self):
         if self.table.rowCount() == 0:
@@ -711,7 +833,10 @@ class MainWindow(QWidget):
 
     def show_failure(self, detail):
         self.set_running(False)
-        self.status.setText("Training failed. See the log below.")
+        if detail == "Training stopped.":
+            self.status.setText("Training stopped. Nothing was saved.")
+        else:
+            self.status.setText("Training failed. See the log below.")
         self.record(f"\nFAILED: {detail}")
         self.close_run_log()
 
