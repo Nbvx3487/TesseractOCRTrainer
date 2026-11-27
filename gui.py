@@ -1,9 +1,10 @@
 """Desktop window for training Tesseract on a set of fonts.
 
 Runs on Windows. Training itself runs inside WSL, because Tesseract's training
-tools are Linux programs. Common Windows fonts are added at startup. Drop more
-font files anywhere in the window, set a weight for each, enter a model name,
-paste or generate a corpus, and press "adjust the font".
+tools are Linux programs. One page, laid out like PowerToys settings: advanced
+settings on the left, fonts, corpus, run and log on the right. Common Windows
+fonts are added at startup. Drop more font files anywhere in the window. The
+corpus is generated automatically for each run unless you turn that off.
 
 Double-click gui.pyw to open it without a console window.
 
@@ -27,28 +28,32 @@ except ImportError:  # not on Windows, so the theme cannot be read
 
 from PySide6.QtCore import QThread, Qt, Signal
 from PySide6.QtWidgets import (
-    QAbstractItemView, QApplication, QFileDialog, QFrame, QHBoxLayout, QHeaderView,
-    QLabel, QLayout, QLineEdit, QListWidget, QMessageBox, QPlainTextEdit, QPushButton,
-    QSpinBox, QStackedWidget, QTableWidget, QTableWidgetItem, QVBoxLayout, QWidget,
+    QAbstractItemView, QApplication, QCheckBox, QFileDialog, QFrame, QHBoxLayout,
+    QHeaderView, QLabel, QLayout, QLineEdit, QMessageBox, QPlainTextEdit, QPushButton,
+    QScrollArea, QSpinBox, QTableWidget, QTableWidgetItem, QVBoxLayout, QWidget,
 )
 
 REPO = Path(__file__).resolve().parent
 DATA = REPO / "data"
 LOG_DIR = DATA / "logs"
 FONT_EXTENSIONS = (".ttf", ".otf")
-GENERATED_LINES = 200
 CREATE_NO_WINDOW = getattr(subprocess, "CREATE_NO_WINDOW", 0)
 WINDOWS_FONTS = Path(os.environ.get("WINDIR", "C:/Windows")) / "Fonts"
 COMMON_FONTS = [
     "arial.ttf", "times.ttf", "cour.ttf", "verdana.ttf", "georgia.ttf",
     "tahoma.ttf", "calibri.ttf", "consola.ttf", "segoeui.ttf",
 ]
+DEFAULT_ITERATIONS = 400
+DEFAULT_FONT_SIZE = 32
+DEFAULT_GENERATED_LINES = 200
 
 # Colours follow the Windows settings look: light or dark, with a blue accent.
 LIGHT = dict(bg="#F3F3F3", card="#FFFFFF", border="#E5E5E5", hover="#F5F5F5",
-             text="#1A1A1A", subtext="#5C5C5C", accent="#0067C0", on_accent="#FFFFFF")
+             text="#1A1A1A", subtext="#5C5C5C", accent="#0067C0", on_accent="#FFFFFF",
+             banner="#E8F1FB")
 DARK = dict(bg="#202020", card="#2B2B2B", border="#3B3B3B", hover="#353535",
-            text="#FFFFFF", subtext="#C5C5C5", accent="#4CC2FF", on_accent="#000000")
+            text="#FFFFFF", subtext="#C5C5C5", accent="#4CC2FF", on_accent="#000000",
+            banner="#253A4E")
 
 
 def system_is_dark():
@@ -67,13 +72,13 @@ def stylesheet(t):
     return f"""
 QWidget {{ background: {t['bg']}; color: {t['text']}; font-family: "Segoe UI"; }}
 QLabel {{ background: transparent; }}
-QListWidget#nav {{ background: transparent; border: none; outline: 0; padding: 8px 4px; }}
-QListWidget#nav::item {{ padding: 8px 12px; border-radius: 4px; margin: 2px 0; }}
-QListWidget#nav::item:selected {{ background: {t['card']}; color: {t['accent']}; }}
-QListWidget#nav::item:hover {{ background: {t['hover']}; }}
+QScrollArea {{ background: transparent; border: none; }}
+QFrame#panel {{ background: {t['card']}; border-right: 1px solid {t['border']}; }}
+QLabel#panelTitle {{ font-size: 18px; font-weight: 600; }}
 QLabel#pageTitle {{ font-size: 24px; font-weight: 600; }}
 QLabel#pageDesc, QLabel#cardDesc {{ color: {t['subtext']}; }}
 QLabel#cardTitle {{ font-weight: 600; }}
+QFrame#banner {{ background: {t['banner']}; border-radius: 8px; }}
 QFrame#card {{ background: {t['card']}; border: 1px solid {t['border']}; border-radius: 8px; }}
 QPushButton {{ background: {t['card']}; border: 1px solid {t['border']}; border-radius: 4px; padding: 6px 14px; }}
 QPushButton:hover {{ background: {t['hover']}; }}
@@ -101,7 +106,7 @@ def build_command(args):
     return ["wsl", "--cd", to_wsl(REPO), "--", "python3", "-m", "trainer.cli", *args]
 
 
-def generate_lines(count=GENERATED_LINES):
+def generate_lines(count):
     """Minecraft and mod-loader lines from tools/make_corpus.py, with a new seed each time."""
     if str(REPO) not in sys.path:
         sys.path.insert(0, str(REPO))
@@ -167,13 +172,13 @@ class MainWindow(QWidget):
     def __init__(self):
         super().__init__()
         self.setWindowTitle("Tesseract Font Trainer")
-        self.resize(1000, 720)
+        self.resize(1120, 820)
         self.worker = None
         self.run_log = None
         self.run_stamp = None
         self.setAcceptDrops(True)
 
-        # Fonts page
+        # Fonts
         self.table = QTableWidget(0, 3)
         self.table.setHorizontalHeaderLabels(["Font", "Weight", ""])
         self.table.horizontalHeader().setSectionResizeMode(0, QHeaderView.Stretch)
@@ -181,28 +186,52 @@ class MainWindow(QWidget):
         self.table.horizontalHeader().setSectionResizeMode(2, QHeaderView.ResizeToContents)
         self.table.verticalHeader().setVisible(False)
         self.table.setSelectionMode(QAbstractItemView.NoSelection)
-        self.table.setMinimumHeight(260)
+        self.table.setMinimumHeight(220)
         # Let drops reach the window, so any font dropped anywhere is added.
         self.table.setAcceptDrops(False)
         self.table.viewport().setAcceptDrops(False)
         self.add_font_button = QPushButton("Add font...")
         self.add_font_button.clicked.connect(self.browse_fonts)
 
-        # Corpus page
-        self.corpus = QPlainTextEdit()
-        self.corpus.setPlaceholderText(
+        # Corpus: generated automatically unless this is switched off
+        self.auto_corpus = QCheckBox("On")
+        self.auto_corpus.setChecked(True)
+        self.auto_corpus.toggled.connect(self.corpus_mode_changed)
+        self.corpus_edit = QPlainTextEdit()
+        self.corpus_edit.setPlaceholderText(
             "One text line per row, at least 10. English or Latin script only.")
-        self.corpus.setAcceptDrops(False)
-        self.corpus.viewport().setAcceptDrops(False)
-        self.corpus.setMinimumHeight(360)
+        self.corpus_edit.setAcceptDrops(False)
+        self.corpus_edit.viewport().setAcceptDrops(False)
+        self.corpus_edit.setMinimumHeight(220)
         self.load_corpus_button = QPushButton("Load text file...")
         self.load_corpus_button.clicked.connect(self.load_corpus)
-        self.generate_button = QPushButton(f"Generate {GENERATED_LINES} lines")
-        self.generate_button.clicked.connect(self.generate_corpus)
+        self.manual_box = QWidget()
+        manual = QVBoxLayout(self.manual_box)
+        manual.setContentsMargins(0, 0, 0, 0)
+        manual.addWidget(self.corpus_edit)
+        manual_buttons = QHBoxLayout()
+        manual_buttons.addWidget(self.load_corpus_button)
+        manual_buttons.addStretch()
+        manual.addLayout(manual_buttons)
+        self.manual_box.setVisible(False)
 
-        # Training page
+        # Advanced settings (left panel)
         self.name = QLineEdit("minecraft")
-        self.name.setFixedWidth(240)
+        self.name.setFixedWidth(150)
+        self.iterations = QSpinBox()
+        self.iterations.setRange(100, 5000)
+        self.iterations.setValue(DEFAULT_ITERATIONS)
+        self.iterations.setFixedWidth(110)
+        self.font_size = QSpinBox()
+        self.font_size.setRange(16, 96)
+        self.font_size.setValue(DEFAULT_FONT_SIZE)
+        self.font_size.setFixedWidth(110)
+        self.generated_count = QSpinBox()
+        self.generated_count.setRange(20, 1000)
+        self.generated_count.setValue(DEFAULT_GENERATED_LINES)
+        self.generated_count.setFixedWidth(110)
+
+        # Run and log
         self.adjust = QPushButton("adjust the font")
         self.adjust.setObjectName("primary")
         self.adjust.clicked.connect(self.start_training)
@@ -215,41 +244,106 @@ class MainWindow(QWidget):
         self.open_logs_button = QPushButton("Open logs folder")
         self.open_logs_button.clicked.connect(self.open_logs)
 
-        self.nav = QListWidget()
-        self.nav.setObjectName("nav")
-        self.nav.setFixedWidth(170)
-        self.pages = QStackedWidget()
-        for title, page in [("Fonts", self._fonts_page()),
-                            ("Corpus", self._corpus_page()),
-                            ("Training", self._training_page())]:
-            self.nav.addItem(title)
-            self.pages.addWidget(page)
-        self.nav.currentRowChanged.connect(self.pages.setCurrentIndex)
-        self.nav.setCurrentRow(0)
-
         root = QHBoxLayout(self)
         root.setContentsMargins(0, 0, 0, 0)
         root.setSpacing(0)
-        root.addWidget(self.nav)
-        root.addWidget(self.pages, 1)
+        root.addWidget(self._advanced_panel())
+        scroll = QScrollArea()
+        scroll.setWidgetResizable(True)
+        scroll.setFrameShape(QFrame.NoFrame)
+        scroll.setWidget(self._page())
+        root.addWidget(scroll, 1)
 
         self.add_common_fonts()
 
-    # ----- page layout helpers -----
+    # ----- layout helpers -----
 
-    def _page(self, title, subtitle):
-        widget = QWidget()
-        layout = QVBoxLayout(widget)
-        layout.setContentsMargins(24, 20, 24, 20)
-        layout.setSpacing(12)
-        head = QLabel(title)
+    def _advanced_panel(self):
+        panel = QFrame()
+        panel.setObjectName("panel")
+        panel.setFixedWidth(300)
+        layout = QVBoxLayout(panel)
+        layout.setContentsMargins(20, 24, 20, 20)
+        layout.setSpacing(18)
+        title = QLabel("Advanced settings")
+        title.setObjectName("panelTitle")
+        layout.addWidget(title)
+        layout.addLayout(self._setting(
+            "Model name", "Letters, digits, - or _. One name for the whole run.", self.name))
+        layout.addLayout(self._setting(
+            "Iterations", "How long training runs. More takes longer.", self.iterations))
+        layout.addLayout(self._setting(
+            "Font size", "Pixels for each rendered line.", self.font_size))
+        layout.addLayout(self._setting(
+            "Generated lines", "Lines made for each run when generation is on.",
+            self.generated_count))
+        layout.addStretch()
+        return panel
+
+    def _page(self):
+        page = QWidget()
+        page.setObjectName("page")
+        layout = QVBoxLayout(page)
+        layout.setContentsMargins(24, 24, 24, 24)
+        layout.setSpacing(14)
+
+        head = QLabel("Tesseract Font Trainer")
         head.setObjectName("pageTitle")
-        sub = QLabel(subtitle)
+        sub = QLabel("Teach Tesseract the fonts you use. Drop font files anywhere in this window.")
         sub.setObjectName("pageDesc")
         sub.setWordWrap(True)
         layout.addWidget(head)
         layout.addWidget(sub)
-        return widget, layout
+
+        banner = QFrame()
+        banner.setObjectName("banner")
+        banner_layout = QVBoxLayout(banner)
+        banner_layout.setContentsMargins(16, 12, 16, 12)
+        banner_layout.addWidget(QLabel(
+            "Training runs in WSL. Keep this window open while it runs."))
+        layout.addWidget(banner)
+
+        fonts_body = QVBoxLayout()
+        fonts_body.addWidget(self.table)
+        font_buttons = QHBoxLayout()
+        font_buttons.addWidget(self.add_font_button)
+        font_buttons.addStretch()
+        fonts_body.addLayout(font_buttons)
+        layout.addWidget(self._card(
+            "Fonts",
+            "Weight = how many times each training line is rendered in that font. "
+            "Common Windows fonts are added at startup.",
+            fonts_body))
+
+        corpus_body = QVBoxLayout()
+        corpus_body.addLayout(self._setting(
+            "Generate lines automatically",
+            "A new set of random Minecraft and mod-loader lines is made for every run. "
+            "Turn this off to use your own text.",
+            self.auto_corpus))
+        corpus_body.addWidget(self.manual_box)
+        layout.addWidget(self._card("Corpus", None, corpus_body))
+
+        run_body = QVBoxLayout()
+        run_body.addWidget(self.adjust)
+        run_body.addWidget(self.status)
+        layout.addWidget(self._card(
+            "Run",
+            "Trains every font in the list on the corpus, then scores before and after on "
+            "held-out lines.",
+            run_body))
+
+        log_body = QVBoxLayout()
+        log_body.addWidget(self.log)
+        log_buttons = QHBoxLayout()
+        log_buttons.addWidget(self.open_logs_button)
+        log_buttons.addStretch()
+        log_body.addLayout(log_buttons)
+        layout.addWidget(self._card(
+            "Log", "Each run is also saved to data/logs.", log_body))
+
+        layout.addStretch()
+        return page
 
     def _card(self, title, description, body):
         frame = QFrame()
@@ -287,69 +381,6 @@ class MainWindow(QWidget):
         row.addLayout(text, 1)
         row.addWidget(control, 0, Qt.AlignVCenter)
         return row
-
-    def _fonts_page(self):
-        page, layout = self._page(
-            "Fonts",
-            "Drop font files anywhere in this window to add them.")
-        body = QVBoxLayout()
-        body.addWidget(self.table)
-        buttons = QHBoxLayout()
-        buttons.addWidget(self.add_font_button)
-        buttons.addStretch()
-        body.addLayout(buttons)
-        layout.addWidget(self._card(
-            "Fonts in the dataset",
-            "Weight = how many times each training line is rendered in that font. "
-            "Common Windows fonts are added at startup.",
-            body))
-        layout.addStretch()
-        return page
-
-    def _corpus_page(self):
-        page, layout = self._page(
-            "Corpus",
-            "One text line per row. The same corpus is used for every font.")
-        body = QVBoxLayout()
-        body.addWidget(self.corpus)
-        buttons = QHBoxLayout()
-        buttons.addWidget(self.load_corpus_button)
-        buttons.addWidget(self.generate_button)
-        buttons.addStretch()
-        body.addLayout(buttons)
-        layout.addWidget(self._card("Shared corpus", None, body))
-        return page
-
-    def _training_page(self):
-        page, layout = self._page(
-            "Training",
-            "Trains every font in the list, then scores before and after on held-out lines.")
-        layout.addWidget(self._card(
-            "Model",
-            None,
-            self._setting("Model name",
-                          "Letters, digits, - or _. One name for the whole run.",
-                          self.name)))
-
-        run_body = QVBoxLayout()
-        run_body.addWidget(self.adjust)
-        run_body.addWidget(self.status)
-        layout.addWidget(self._card(
-            "Run",
-            "Training can take a long time. Keep the window open while it runs.",
-            run_body))
-
-        log_body = QVBoxLayout()
-        log_body.addWidget(self.log)
-        buttons = QHBoxLayout()
-        buttons.addWidget(self.open_logs_button)
-        buttons.addStretch()
-        log_body.addLayout(buttons)
-        layout.addWidget(self._card(
-            "Log",
-            "Each run is also saved to the logs folder.",
-            log_body))
-        return page
 
     # ----- fonts -----
 
@@ -416,16 +447,21 @@ class MainWindow(QWidget):
 
     # ----- corpus -----
 
+    def corpus_mode_changed(self, on):
+        self.auto_corpus.setText("On" if on else "Off")
+        self.manual_box.setVisible(not on)
+
     def load_corpus(self):
         path, _ = QFileDialog.getOpenFileName(self, "Corpus", "", "Text (*.txt)")
         if path:
-            self.corpus.setPlainText(Path(path).read_text(encoding="utf-8"))
+            self.corpus_edit.setPlainText(Path(path).read_text(encoding="utf-8"))
+            self.auto_corpus.setChecked(False)
 
-    def generate_corpus(self):
-        new_lines = generate_lines()
-        existing = self.corpus.toPlainText().rstrip("\n")
-        text = "\n".join(new_lines)
-        self.corpus.setPlainText(f"{existing}\n{text}" if existing else text)
+    def corpus_lines_for_run(self):
+        """Generated lines when generation is on, otherwise the lines typed or loaded."""
+        if self.auto_corpus.isChecked():
+            return generate_lines(self.generated_count.value())
+        return [l for l in self.corpus_edit.toPlainText().splitlines() if l.strip()]
 
     # ----- training -----
 
@@ -436,23 +472,31 @@ class MainWindow(QWidget):
             return
 
         name = self.name.text().strip()
+        self.log.clear()
+        self.open_run_log(name)
+
+        lines = self.corpus_lines_for_run()
+        corpus_text = "\n".join(lines) + "\n"
         corpus_file = DATA / f"corpus_{name}.txt"
         corpus_file.parent.mkdir(parents=True, exist_ok=True)
-        corpus_file.write_text(self.corpus.toPlainText(), encoding="utf-8")
+        corpus_file.write_text(corpus_text, encoding="utf-8")
+        (LOG_DIR / f"{self.run_stamp}_corpus.txt").write_text(corpus_text, encoding="utf-8")
 
+        source = "generated automatically" if self.auto_corpus.isChecked() else "your own text"
         fonts = [{"path": to_wsl(path), "weight": weight} for path, weight in self.dataset()]
         args = [
             "--fonts-json", json.dumps(fonts),
             "--name", name,
             "--corpus-file", to_wsl(corpus_file),
             "--data-root", to_wsl(DATA / "runs"),
+            "--iterations", str(self.iterations.value()),
+            "--font-size", str(self.font_size.value()),
         ]
 
-        self.log.clear()
-        self.open_run_log(name)
         self.record(f"Model: {name}")
-        corpus_lines = [l for l in self.corpus.toPlainText().splitlines() if l.strip()]
-        self.record(f"Corpus: {len(corpus_lines)} lines")
+        self.record(f"Iterations: {self.iterations.value()}, font size: {self.font_size.value()}px")
+        self.record(f"Corpus: {len(lines)} lines, {source} "
+                    f"(copy in logs: {self.run_stamp}_corpus.txt)")
         for path, weight in self.dataset():
             self.record(f"Font: {path} (weight {weight})")
         self.status.setText("Training... this can take a long time. Keep the window open.")
@@ -468,9 +512,10 @@ class MainWindow(QWidget):
             return "Add at least one font to the dataset."
         if not re.fullmatch(r"[A-Za-z0-9_-]{1,40}", self.name.text().strip()):
             return "Model name: use letters, digits, - or _ (max 40 characters)."
-        lines = [l for l in self.corpus.toPlainText().splitlines() if l.strip()]
-        if len(lines) < 10:
-            return f"The corpus needs at least 10 lines. It has {len(lines)}."
+        if not self.auto_corpus.isChecked():
+            lines = [l for l in self.corpus_edit.toPlainText().splitlines() if l.strip()]
+            if len(lines) < 10:
+                return f"Your own corpus needs at least 10 lines. It has {len(lines)}."
         return None
 
     def open_run_log(self, name):

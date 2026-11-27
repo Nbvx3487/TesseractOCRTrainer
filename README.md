@@ -48,8 +48,10 @@ Load that file with **Load text file...** in the window.
 
 ## Desktop window (Windows)
 
-`gui.py` is a settings-style window with three pages: Fonts, Corpus, and Training (model
-name, the **adjust the font** button, and the log). It follows the Windows light or dark setting.
+`gui.py` is one page laid out like PowerToys settings. The left panel holds the advanced
+settings: model name, iterations, font size, and how many lines to generate. The right side
+holds Fonts, Corpus, Run (the **adjust the font** button), and Log. It follows the Windows
+light or dark setting.
 Training runs in WSL, and the window calls it for you.
 
 Setup on Windows (Python 3.10+):
@@ -71,11 +73,13 @@ training images are not stored in the model file, so the window cannot replay th
 keep the base's fonts from being forgotten, add common fonts you have (for example Arial
 or Times New Roman) as extra rows, with a weight, and they are trained alongside yours.
 
-Model name: one name for the whole run, typed in the Model name field.
+Model name: one name for the whole run, set in the Advanced settings panel.
 
-Corpus: one shared box for all fonts. Paste or load text, or press **Generate 200 lines**
-to append Minecraft and mod-loader lines. The log shows progress, then the before-and-after
-results for each font and the saved model path.
+Corpus: generated automatically for each run, with random Minecraft and mod-loader lines
+(the number is set in Advanced settings). Turn **Generate lines automatically** off to type
+or load your own lines instead. Each run's corpus is saved in `data/logs` as
+`<run>_corpus.txt`. The log shows progress, then the before-and-after results for each font
+and the saved model path.
 
 WSL must have Pillow and the training tools (see Setup above). The window converts
 Windows paths such as C:\Users\me\font.ttf to /mnt/c/Users/me/font.ttf for WSL.

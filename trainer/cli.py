@@ -19,6 +19,8 @@ def main(argv=None):
     parser.add_argument("--name", required=True, help="Model name")
     parser.add_argument("--corpus-file", required=True, help="Text file, one line per row")
     parser.add_argument("--data-root", required=True, help="Folder for run outputs")
+    parser.add_argument("--iterations", type=int, default=400, help="Training iterations")
+    parser.add_argument("--font-size", type=int, default=32, help="Rendered line size in px")
     args = parser.parse_args(argv)
 
     def log(message):
@@ -33,6 +35,8 @@ def main(argv=None):
             corpus=corpus,
             data_root=args.data_root,
             log=log,
+            font_size=args.font_size,
+            iterations=args.iterations,
         )
     except Exception as error:
         print(f"ERROR: {error}", flush=True)
