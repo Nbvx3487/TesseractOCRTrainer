@@ -1,21 +1,22 @@
 """Desktop window for training Tesseract on a set of fonts.
 
 Runs on Windows. Training itself runs inside WSL, because Tesseract's training
-tools are Linux programs. Drop fonts onto the window, set a weight for each,
-paste a corpus, and press "Make good".
+tools are Linux programs. Drop font files anywhere in the window to add them,
+set a weight for each, enter a model name, paste or generate a corpus, and
+press "adjust the font".
 
 Requirements (Windows): pip install -r requirements-gui.txt
 Requirements (WSL): see README.md
 """
 
 import json
+import random
 import re
 import subprocess
 import sys
 from pathlib import Path
 
 from PySide6.QtCore import QThread, Qt, Signal
-from PySide6.QtGui import QFont
 from PySide6.QtWidgets import (
     QAbstractItemView, QApplication, QFileDialog, QHBoxLayout, QHeaderView, QLabel,
     QLineEdit, QMessageBox, QPlainTextEdit, QPushButton, QSpinBox, QTableWidget,
@@ -25,6 +26,7 @@ from PySide6.QtWidgets import (
 REPO = Path(__file__).resolve().parent
 DATA = REPO / "data"
 FONT_EXTENSIONS = (".ttf", ".otf")
+GENERATED_LINES = 200
 CREATE_NO_WINDOW = getattr(subprocess, "CREATE_NO_WINDOW", 0)
 
 
@@ -41,6 +43,14 @@ def to_wsl(path) -> str:
 def build_command(args):
     """The WSL command that runs the trainer CLI inside the repo folder."""
     return ["wsl", "--cd", to_wsl(REPO), "--", "python3", "-m", "trainer.cli", *args]
+
+
+def generate_lines(count=GENERATED_LINES):
+    """Minecraft and mod-loader lines from tools/make_corpus.py, with a new seed each time."""
+    if str(REPO) not in sys.path:
+        sys.path.insert(0, str(REPO))
+    from tools.make_corpus import generate
+    return generate(count, random.randrange(1, 10**9))
 
 
 class TrainWorker(QThread):
@@ -85,40 +95,10 @@ class TrainWorker(QThread):
             self.failed.emit(detail)
 
 
-class DropArea(QLabel):
-    """Accepts dropped font files, or a click to browse for them."""
-
-    def __init__(self, on_fonts, parent=None):
-        super().__init__(parent)
-        self.on_fonts = on_fonts
-        self.setAcceptDrops(True)
-        self.setAlignment(Qt.AlignCenter)
-        self.setMinimumHeight(110)
-        self.setCursor(Qt.PointingHandCursor)
-        self.setText("Drop font files here\n(or click to browse)")
-        self.setStyleSheet("border: 2px dashed #888; border-radius: 8px; padding: 10px;")
-
-    def dragEnterEvent(self, event):
-        if self._font_paths(event.mimeData().urls()):
-            event.acceptProposedAction()
-        else:
-            event.ignore()
-
-    def dropEvent(self, event):
-        paths = self._font_paths(event.mimeData().urls())
-        if paths:
-            self.on_fonts(paths)
-
-    def mousePressEvent(self, event):
-        paths, _ = QFileDialog.getOpenFileNames(
-            self, "Choose fonts", "", "Fonts (*.ttf *.otf)")
-        if paths:
-            self.on_fonts(paths)
-
-    @staticmethod
-    def _font_paths(urls):
-        paths = [url.toLocalFile() for url in urls]
-        return [p for p in paths if p.lower().endswith(FONT_EXTENSIONS)]
+def font_paths(urls):
+    """Local paths of the dropped URLs that are font files."""
+    paths = [url.toLocalFile() for url in urls]
+    return [p for p in paths if p.lower().endswith(FONT_EXTENSIONS)]
 
 
 class MainWindow(QWidget):
@@ -127,15 +107,17 @@ class MainWindow(QWidget):
         self.setWindowTitle("Tesseract Font Trainer")
         self.resize(900, 900)
         self.worker = None
-
-        self.drop = DropArea(self.add_fonts)
+        self.setAcceptDrops(True)
 
         self.table = QTableWidget(0, 2)
         self.table.setHorizontalHeaderLabels(["Font", "Weight"])
         self.table.horizontalHeader().setSectionResizeMode(0, QHeaderView.Stretch)
         self.table.horizontalHeader().setSectionResizeMode(1, QHeaderView.ResizeToContents)
         self.table.setSelectionBehavior(QAbstractItemView.SelectRows)
-        self.table.setMinimumHeight(160)
+        self.table.setMinimumHeight(200)
+        # Let drops reach the window, so any font dropped anywhere is added.
+        self.table.setAcceptDrops(False)
+        self.table.viewport().setAcceptDrops(False)
 
         add_font = QPushButton("Add font...")
         add_font.clicked.connect(self.browse_fonts)
@@ -147,12 +129,16 @@ class MainWindow(QWidget):
         self.corpus = QPlainTextEdit()
         self.corpus.setPlaceholderText(
             "One text line per row, at least 10. English or Latin script only.")
+        self.corpus.setAcceptDrops(False)
+        self.corpus.viewport().setAcceptDrops(False)
         load_corpus = QPushButton("Load text file...")
         load_corpus.clicked.connect(self.load_corpus)
+        generate = QPushButton(f"Generate {GENERATED_LINES} lines")
+        generate.clicked.connect(self.generate_corpus)
 
-        self.make_good = QPushButton("Make good")
-        self.make_good.setMinimumHeight(56)
-        self.make_good.clicked.connect(self.start_training)
+        self.adjust = QPushButton("adjust the font")
+        self.adjust.setMinimumHeight(56)
+        self.adjust.clicked.connect(self.start_training)
 
         self.status = QLabel("")
         self.status.setWordWrap(True)
@@ -162,9 +148,9 @@ class MainWindow(QWidget):
         self.log.setPlaceholderText("Progress will appear here.")
 
         layout = QVBoxLayout(self)
-        layout.addWidget(self.drop)
-
-        layout.addWidget(QLabel("Fonts in the dataset. Weight = how many times each line is trained in that font."))
+        layout.addWidget(QLabel(
+            "Drop font files anywhere in this window. Weight = how many times each "
+            "training line is rendered in that font."))
         layout.addWidget(self.table)
         font_buttons = QHBoxLayout()
         font_buttons.addWidget(add_font)
@@ -177,13 +163,29 @@ class MainWindow(QWidget):
         model_row.addWidget(self.name)
         layout.addLayout(model_row)
 
-        layout.addWidget(QLabel("Corpus:"))
+        layout.addWidget(QLabel("Corpus (shared by all fonts):"))
         layout.addWidget(self.corpus)
-        layout.addWidget(load_corpus)
+        corpus_buttons = QHBoxLayout()
+        corpus_buttons.addWidget(load_corpus)
+        corpus_buttons.addWidget(generate)
+        corpus_buttons.addStretch()
+        layout.addLayout(corpus_buttons)
 
-        layout.addWidget(self.make_good)
+        layout.addWidget(self.adjust)
         layout.addWidget(self.status)
         layout.addWidget(self.log)
+
+    def dragEnterEvent(self, event):
+        if font_paths(event.mimeData().urls()):
+            event.acceptProposedAction()
+        else:
+            event.ignore()
+
+    def dropEvent(self, event):
+        paths = font_paths(event.mimeData().urls())
+        if paths:
+            self.add_fonts(paths)
+            event.acceptProposedAction()
 
     def add_fonts(self, paths):
         existing = {self.table.item(r, 0).data(Qt.UserRole)
@@ -229,6 +231,12 @@ class MainWindow(QWidget):
         if path:
             self.corpus.setPlainText(Path(path).read_text(encoding="utf-8"))
 
+    def generate_corpus(self):
+        new_lines = generate_lines()
+        existing = self.corpus.toPlainText().rstrip("\n")
+        text = "\n".join(new_lines)
+        self.corpus.setPlainText(f"{existing}\n{text}" if existing else text)
+
     def start_training(self):
         problem = self.validate()
         if problem:
@@ -250,7 +258,7 @@ class MainWindow(QWidget):
 
         self.log.clear()
         self.status.setText("Training... this can take a long time. Keep the window open.")
-        self.make_good.setEnabled(False)
+        self.adjust.setEnabled(False)
         self.worker = TrainWorker(args)
         self.worker.line.connect(self.log.appendPlainText)
         self.worker.done.connect(self.show_results)
@@ -268,7 +276,7 @@ class MainWindow(QWidget):
         return None
 
     def show_results(self, result):
-        self.make_good.setEnabled(True)
+        self.adjust.setEnabled(True)
         lines = ["", "Results (exact matches on held-out lines):"]
         for label, scores in result["scores"].items():
             b, t = scores["baseline"], scores["trained"]
@@ -282,7 +290,7 @@ class MainWindow(QWidget):
         self.status.setText("Done.")
 
     def show_failure(self, detail):
-        self.make_good.setEnabled(True)
+        self.adjust.setEnabled(True)
         self.status.setText("Training failed. See the log below.")
         self.log.appendPlainText(f"\nFAILED: {detail}")
 

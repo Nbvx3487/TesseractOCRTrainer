@@ -48,7 +48,7 @@ Load that file with **Load text file...** in the window.
 
 ## Desktop window (Windows)
 
-`gui.py` is a window with a drop area for your font, settings, and a **Make good** button.
+`gui.py` is a window with a font list, a model name, a shared corpus, and an **adjust the font** button.
 Training runs in WSL, and the window calls it for you.
 
 Setup on Windows (Python 3.10+):
@@ -59,16 +59,25 @@ Run it:
 
     python gui.py
 
-Fonts: drop one or more font files onto the window. Each font gets a weight (1 to 10):
-the number of times each training line is rendered and trained in that font, so a
-higher weight means the model sees that font more. Every font is also scored on the
-held-out lines, which shows any loss on the other fonts.
+Fonts: drop one or more font files anywhere in the window, or use **Add font...**. Each
+font gets a weight (1 to 10): the number of times each training line is rendered and
+trained in that font, so a higher weight means the model sees that font more. Every font
+is also scored on the held-out lines, which shows any loss on the other fonts.
 
-Also set the model name and paste or load the corpus. The log shows progress, then the
-before-and-after results for each font and the saved model path.
+Base model: the base is the existing English model, not a row in the list. Its own
+training images are not stored in the model file, so the window cannot replay them. To
+keep the base's fonts from being forgotten, add common fonts you have (for example Arial
+or Times New Roman) as extra rows, with a weight, and they are trained alongside yours.
+
+Model name: one name for the whole run, typed in the Model name field.
+
+Corpus: one shared box for all fonts. Paste or load text, or press **Generate 200 lines**
+to append Minecraft and mod-loader lines. The log shows progress, then the before-and-after
+results for each font and the saved model path.
 
 WSL must have Pillow and the training tools (see Setup above). The window converts
 Windows paths such as C:\Users\me\font.ttf to /mnt/c/Users/me/font.ttf for WSL.
+Before a run starts, the window checks the model name and that the corpus has at least 10 lines.
 
 ## Run
 
