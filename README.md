@@ -48,18 +48,20 @@ Load that file with **Load text file...** in the window.
 
 ## Desktop window (Windows)
 
-`gui.py` is a window with a font list, a model name, a shared corpus, and an **adjust the font** button.
+`gui.py` is a settings-style window with three pages: Fonts, Corpus, and Training (model
+name, the **adjust the font** button, and the log). It follows the Windows light or dark setting.
 Training runs in WSL, and the window calls it for you.
 
 Setup on Windows (Python 3.10+):
 
     pip install -r requirements-gui.txt
 
-Run it:
+Run it by double-clicking `gui.pyw`. It opens without a console window. `python gui.py`
+also works, but it shows a console window behind the app.
 
-    python gui.py
-
-Fonts: drop one or more font files anywhere in the window, or use **Add font...**. Each
+Fonts: the common Windows fonts (Arial, Times New Roman, Verdana and others) are added
+at startup if they are installed. Drop more font files anywhere in the window, or use
+**Add font...**. Remove a font with its **Remove** button. Each
 font gets a weight (1 to 10): the number of times each training line is rendered and
 trained in that font, so a higher weight means the model sees that font more. Every font
 is also scored on the held-out lines, which shows any loss on the other fonts.

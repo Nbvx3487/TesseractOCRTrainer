@@ -1,9 +1,11 @@
 """Desktop window for training Tesseract on a set of fonts.
 
 Runs on Windows. Training itself runs inside WSL, because Tesseract's training
-tools are Linux programs. Drop font files anywhere in the window to add them,
-set a weight for each, enter a model name, paste or generate a corpus, and
-press "adjust the font".
+tools are Linux programs. Common Windows fonts are added at startup. Drop more
+font files anywhere in the window, set a weight for each, enter a model name,
+paste or generate a corpus, and press "adjust the font".
+
+Double-click gui.pyw to open it without a console window.
 
 Requirements (Windows): pip install -r requirements-gui.txt
 Requirements (WSL): see README.md
@@ -18,11 +20,16 @@ import sys
 from datetime import datetime
 from pathlib import Path
 
+try:
+    import winreg
+except ImportError:  # not on Windows, so the theme cannot be read
+    winreg = None
+
 from PySide6.QtCore import QThread, Qt, Signal
 from PySide6.QtWidgets import (
-    QAbstractItemView, QApplication, QFileDialog, QHBoxLayout, QHeaderView, QLabel,
-    QLineEdit, QMessageBox, QPlainTextEdit, QPushButton, QSpinBox, QTableWidget,
-    QTableWidgetItem, QVBoxLayout, QWidget,
+    QAbstractItemView, QApplication, QFileDialog, QFrame, QHBoxLayout, QHeaderView,
+    QLabel, QLayout, QLineEdit, QListWidget, QMessageBox, QPlainTextEdit, QPushButton,
+    QSpinBox, QStackedWidget, QTableWidget, QTableWidgetItem, QVBoxLayout, QWidget,
 )
 
 REPO = Path(__file__).resolve().parent
@@ -31,6 +38,52 @@ LOG_DIR = DATA / "logs"
 FONT_EXTENSIONS = (".ttf", ".otf")
 GENERATED_LINES = 200
 CREATE_NO_WINDOW = getattr(subprocess, "CREATE_NO_WINDOW", 0)
+WINDOWS_FONTS = Path(os.environ.get("WINDIR", "C:/Windows")) / "Fonts"
+COMMON_FONTS = [
+    "arial.ttf", "times.ttf", "cour.ttf", "verdana.ttf", "georgia.ttf",
+    "tahoma.ttf", "calibri.ttf", "consola.ttf", "segoeui.ttf",
+]
+
+# Colours follow the Windows settings look: light or dark, with a blue accent.
+LIGHT = dict(bg="#F3F3F3", card="#FFFFFF", border="#E5E5E5", hover="#F5F5F5",
+             text="#1A1A1A", subtext="#5C5C5C", accent="#0067C0", on_accent="#FFFFFF")
+DARK = dict(bg="#202020", card="#2B2B2B", border="#3B3B3B", hover="#353535",
+            text="#FFFFFF", subtext="#C5C5C5", accent="#4CC2FF", on_accent="#000000")
+
+
+def system_is_dark():
+    """True when Windows is set to dark mode for apps."""
+    if winreg is None:
+        return False
+    try:
+        key_path = r"Software\Microsoft\Windows\CurrentVersion\Themes\Personalize"
+        with winreg.OpenKey(winreg.HKEY_CURRENT_USER, key_path) as key:
+            return winreg.QueryValueEx(key, "AppsUseLightTheme")[0] == 0
+    except OSError:
+        return False
+
+
+def stylesheet(t):
+    return f"""
+QWidget {{ background: {t['bg']}; color: {t['text']}; font-family: "Segoe UI"; }}
+QLabel {{ background: transparent; }}
+QListWidget#nav {{ background: transparent; border: none; outline: 0; padding: 8px 4px; }}
+QListWidget#nav::item {{ padding: 8px 12px; border-radius: 4px; margin: 2px 0; }}
+QListWidget#nav::item:selected {{ background: {t['card']}; color: {t['accent']}; }}
+QListWidget#nav::item:hover {{ background: {t['hover']}; }}
+QLabel#pageTitle {{ font-size: 24px; font-weight: 600; }}
+QLabel#pageDesc, QLabel#cardDesc {{ color: {t['subtext']}; }}
+QLabel#cardTitle {{ font-weight: 600; }}
+QFrame#card {{ background: {t['card']}; border: 1px solid {t['border']}; border-radius: 8px; }}
+QPushButton {{ background: {t['card']}; border: 1px solid {t['border']}; border-radius: 4px; padding: 6px 14px; }}
+QPushButton:hover {{ background: {t['hover']}; }}
+QPushButton:disabled {{ color: {t['subtext']}; }}
+QPushButton#primary {{ background: {t['accent']}; color: {t['on_accent']}; border: none; font-weight: 600; padding: 12px; }}
+QPushButton#primary:disabled {{ background: {t['border']}; }}
+QLineEdit, QPlainTextEdit, QTableWidget, QSpinBox {{ background: {t['card']}; border: 1px solid {t['border']}; border-radius: 4px; padding: 4px; }}
+QTableWidget {{ gridline-color: {t['border']}; }}
+QHeaderView::section {{ background: {t['card']}; color: {t['subtext']}; border: none; border-bottom: 1px solid {t['border']}; padding: 6px; font-weight: 600; }}
+"""
 
 
 def to_wsl(path) -> str:
@@ -114,80 +167,191 @@ class MainWindow(QWidget):
     def __init__(self):
         super().__init__()
         self.setWindowTitle("Tesseract Font Trainer")
-        self.resize(900, 900)
+        self.resize(1000, 720)
         self.worker = None
         self.run_log = None
         self.run_stamp = None
         self.setAcceptDrops(True)
 
-        self.table = QTableWidget(0, 2)
-        self.table.setHorizontalHeaderLabels(["Font", "Weight"])
+        # Fonts page
+        self.table = QTableWidget(0, 3)
+        self.table.setHorizontalHeaderLabels(["Font", "Weight", ""])
         self.table.horizontalHeader().setSectionResizeMode(0, QHeaderView.Stretch)
         self.table.horizontalHeader().setSectionResizeMode(1, QHeaderView.ResizeToContents)
-        self.table.setSelectionBehavior(QAbstractItemView.SelectRows)
-        self.table.setMinimumHeight(200)
+        self.table.horizontalHeader().setSectionResizeMode(2, QHeaderView.ResizeToContents)
+        self.table.verticalHeader().setVisible(False)
+        self.table.setSelectionMode(QAbstractItemView.NoSelection)
+        self.table.setMinimumHeight(260)
         # Let drops reach the window, so any font dropped anywhere is added.
         self.table.setAcceptDrops(False)
         self.table.viewport().setAcceptDrops(False)
+        self.add_font_button = QPushButton("Add font...")
+        self.add_font_button.clicked.connect(self.browse_fonts)
 
-        add_font = QPushButton("Add font...")
-        add_font.clicked.connect(self.browse_fonts)
-        remove_font = QPushButton("Remove selected")
-        remove_font.clicked.connect(self.remove_selected)
-
-        self.name = QLineEdit("minecraft")
-
+        # Corpus page
         self.corpus = QPlainTextEdit()
         self.corpus.setPlaceholderText(
             "One text line per row, at least 10. English or Latin script only.")
         self.corpus.setAcceptDrops(False)
         self.corpus.viewport().setAcceptDrops(False)
-        load_corpus = QPushButton("Load text file...")
-        load_corpus.clicked.connect(self.load_corpus)
-        generate = QPushButton(f"Generate {GENERATED_LINES} lines")
-        generate.clicked.connect(self.generate_corpus)
+        self.corpus.setMinimumHeight(360)
+        self.load_corpus_button = QPushButton("Load text file...")
+        self.load_corpus_button.clicked.connect(self.load_corpus)
+        self.generate_button = QPushButton(f"Generate {GENERATED_LINES} lines")
+        self.generate_button.clicked.connect(self.generate_corpus)
 
+        # Training page
+        self.name = QLineEdit("minecraft")
+        self.name.setFixedWidth(240)
         self.adjust = QPushButton("adjust the font")
-        self.adjust.setMinimumHeight(56)
+        self.adjust.setObjectName("primary")
         self.adjust.clicked.connect(self.start_training)
-
         self.status = QLabel("")
         self.status.setWordWrap(True)
-
         self.log = QPlainTextEdit()
         self.log.setReadOnly(True)
         self.log.setPlaceholderText("Progress will appear here.")
-        open_logs = QPushButton("Open logs folder")
-        open_logs.clicked.connect(self.open_logs)
+        self.log.setMinimumHeight(260)
+        self.open_logs_button = QPushButton("Open logs folder")
+        self.open_logs_button.clicked.connect(self.open_logs)
 
-        layout = QVBoxLayout(self)
-        layout.addWidget(QLabel(
-            "Drop font files anywhere in this window. Weight = how many times each "
-            "training line is rendered in that font."))
-        layout.addWidget(self.table)
-        font_buttons = QHBoxLayout()
-        font_buttons.addWidget(add_font)
-        font_buttons.addWidget(remove_font)
-        font_buttons.addStretch()
-        layout.addLayout(font_buttons)
+        self.nav = QListWidget()
+        self.nav.setObjectName("nav")
+        self.nav.setFixedWidth(170)
+        self.pages = QStackedWidget()
+        for title, page in [("Fonts", self._fonts_page()),
+                            ("Corpus", self._corpus_page()),
+                            ("Training", self._training_page())]:
+            self.nav.addItem(title)
+            self.pages.addWidget(page)
+        self.nav.currentRowChanged.connect(self.pages.setCurrentIndex)
+        self.nav.setCurrentRow(0)
 
-        model_row = QHBoxLayout()
-        model_row.addWidget(QLabel("Model name:"))
-        model_row.addWidget(self.name)
-        layout.addLayout(model_row)
+        root = QHBoxLayout(self)
+        root.setContentsMargins(0, 0, 0, 0)
+        root.setSpacing(0)
+        root.addWidget(self.nav)
+        root.addWidget(self.pages, 1)
 
-        layout.addWidget(QLabel("Corpus (shared by all fonts):"))
-        layout.addWidget(self.corpus)
-        corpus_buttons = QHBoxLayout()
-        corpus_buttons.addWidget(load_corpus)
-        corpus_buttons.addWidget(generate)
-        corpus_buttons.addStretch()
-        layout.addLayout(corpus_buttons)
+        self.add_common_fonts()
 
-        layout.addWidget(self.adjust)
-        layout.addWidget(self.status)
-        layout.addWidget(open_logs)
-        layout.addWidget(self.log)
+    # ----- page layout helpers -----
+
+    def _page(self, title, subtitle):
+        widget = QWidget()
+        layout = QVBoxLayout(widget)
+        layout.setContentsMargins(24, 20, 24, 20)
+        layout.setSpacing(12)
+        head = QLabel(title)
+        head.setObjectName("pageTitle")
+        sub = QLabel(subtitle)
+        sub.setObjectName("pageDesc")
+        sub.setWordWrap(True)
+        layout.addWidget(head)
+        layout.addWidget(sub)
+        return widget, layout
+
+    def _card(self, title, description, body):
+        frame = QFrame()
+        frame.setObjectName("card")
+        layout = QVBoxLayout(frame)
+        layout.setContentsMargins(16, 14, 16, 14)
+        layout.setSpacing(8)
+        head = QLabel(title)
+        head.setObjectName("cardTitle")
+        layout.addWidget(head)
+        if description:
+            desc = QLabel(description)
+            desc.setObjectName("cardDesc")
+            desc.setWordWrap(True)
+            layout.addWidget(desc)
+        if isinstance(body, QLayout):
+            layout.addLayout(body)
+        else:
+            layout.addWidget(body)
+        return frame
+
+    def _setting(self, title, description, control):
+        """A settings row as in Windows: text on the left, the control on the right."""
+        row = QHBoxLayout()
+        text = QVBoxLayout()
+        text.setSpacing(2)
+        head = QLabel(title)
+        head.setObjectName("cardTitle")
+        text.addWidget(head)
+        if description:
+            desc = QLabel(description)
+            desc.setObjectName("cardDesc")
+            desc.setWordWrap(True)
+            text.addWidget(desc)
+        row.addLayout(text, 1)
+        row.addWidget(control, 0, Qt.AlignVCenter)
+        return row
+
+    def _fonts_page(self):
+        page, layout = self._page(
+            "Fonts",
+            "Drop font files anywhere in this window to add them.")
+        body = QVBoxLayout()
+        body.addWidget(self.table)
+        buttons = QHBoxLayout()
+        buttons.addWidget(self.add_font_button)
+        buttons.addStretch()
+        body.addLayout(buttons)
+        layout.addWidget(self._card(
+            "Fonts in the dataset",
+            "Weight = how many times each training line is rendered in that font. "
+            "Common Windows fonts are added at startup.",
+            body))
+        layout.addStretch()
+        return page
+
+    def _corpus_page(self):
+        page, layout = self._page(
+            "Corpus",
+            "One text line per row. The same corpus is used for every font.")
+        body = QVBoxLayout()
+        body.addWidget(self.corpus)
+        buttons = QHBoxLayout()
+        buttons.addWidget(self.load_corpus_button)
+        buttons.addWidget(self.generate_button)
+        buttons.addStretch()
+        body.addLayout(buttons)
+        layout.addWidget(self._card("Shared corpus", None, body))
+        return page
+
+    def _training_page(self):
+        page, layout = self._page(
+            "Training",
+            "Trains every font in the list, then scores before and after on held-out lines.")
+        layout.addWidget(self._card(
+            "Model",
+            None,
+            self._setting("Model name",
+                          "Letters, digits, - or _. One name for the whole run.",
+                          self.name)))
+
+        run_body = QVBoxLayout()
+        run_body.addWidget(self.adjust)
+        run_body.addWidget(self.status)
+        layout.addWidget(self._card(
+            "Run",
+            "Training can take a long time. Keep the window open while it runs.",
+            run_body))
+
+        log_body = QVBoxLayout()
+        log_body.addWidget(self.log)
+        buttons = QHBoxLayout()
+        buttons.addWidget(self.open_logs_button)
+        buttons.addStretch()
+        log_body.addLayout(buttons)
+        layout.addWidget(self._card(
+            "Log",
+            "Each run is also saved to the logs folder.",
+            log_body))
+        return page
+
+    # ----- fonts -----
 
     def dragEnterEvent(self, event):
         if font_paths(event.mimeData().urls()):
@@ -200,6 +364,12 @@ class MainWindow(QWidget):
         if paths:
             self.add_fonts(paths)
             event.acceptProposedAction()
+
+    def add_common_fonts(self):
+        """Add the common Windows fonts that are installed, with weight 1."""
+        found = [str(WINDOWS_FONTS / name) for name in COMMON_FONTS
+                 if (WINDOWS_FONTS / name).exists()]
+        self.add_fonts(found)
 
     def add_fonts(self, paths):
         existing = {self.table.item(r, 0).data(Qt.UserRole)
@@ -225,11 +395,15 @@ class MainWindow(QWidget):
         spin.setRange(1, 10)
         spin.setValue(weight)
         self.table.setCellWidget(row, 1, spin)
+        remove = QPushButton("Remove")
+        remove.clicked.connect(lambda checked=False, p=path: self.remove_path(p))
+        self.table.setCellWidget(row, 2, remove)
 
-    def remove_selected(self):
-        rows = sorted({index.row() for index in self.table.selectedIndexes()}, reverse=True)
-        for row in rows:
-            self.table.removeRow(row)
+    def remove_path(self, path):
+        for row in range(self.table.rowCount()):
+            if self.table.item(row, 0).data(Qt.UserRole) == path:
+                self.table.removeRow(row)
+                return
 
     def dataset(self):
         """List of (path, weight) for every row in the table."""
@@ -239,6 +413,8 @@ class MainWindow(QWidget):
             weight = self.table.cellWidget(row, 1).value()
             fonts.append((path, weight))
         return fonts
+
+    # ----- corpus -----
 
     def load_corpus(self):
         path, _ = QFileDialog.getOpenFileName(self, "Corpus", "", "Text (*.txt)")
@@ -250,6 +426,8 @@ class MainWindow(QWidget):
         existing = self.corpus.toPlainText().rstrip("\n")
         text = "\n".join(new_lines)
         self.corpus.setPlainText(f"{existing}\n{text}" if existing else text)
+
+    # ----- training -----
 
     def start_training(self):
         problem = self.validate()
@@ -273,7 +451,8 @@ class MainWindow(QWidget):
         self.log.clear()
         self.open_run_log(name)
         self.record(f"Model: {name}")
-        self.record(f"Corpus: {len([l for l in self.corpus.toPlainText().splitlines() if l.strip()])} lines")
+        corpus_lines = [l for l in self.corpus.toPlainText().splitlines() if l.strip()]
+        self.record(f"Corpus: {len(corpus_lines)} lines")
         for path, weight in self.dataset():
             self.record(f"Font: {path} (weight {weight})")
         self.status.setText("Training... this can take a long time. Keep the window open.")
@@ -346,9 +525,11 @@ class MainWindow(QWidget):
 
 def main():
     app = QApplication(sys.argv)
+    app.setStyle("Fusion")
     font = app.font()
     font.setPointSize(13)
     app.setFont(font)
+    app.setStyleSheet(stylesheet(DARK if system_is_dark() else LIGHT))
     window = MainWindow()
     window.show()
     sys.exit(app.exec())
