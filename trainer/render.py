@@ -35,8 +35,11 @@ def stage_font(font_path):
     return USER_FONTS
 
 
-def render_lines(lines, font_path, out_dir, font_size=32, prefix="line"):
-    """Render each line to name.tif + name.box + name.gt.txt. Returns the TIFF paths."""
+def render_lines(lines, font_path, out_dir, font_size=32, prefix="line", log=None, label=""):
+    """Render each line to name.tif + name.box + name.gt.txt. Returns the TIFF paths.
+
+    If log is given, one line is logged per rendered image.
+    """
     out_dir = Path(out_dir)
     out_dir.mkdir(parents=True, exist_ok=True)
     family = font_family(font_path)
@@ -57,4 +60,6 @@ def render_lines(lines, font_path, out_dir, font_size=32, prefix="line"):
         stem.with_suffix(".gt.txt").write_text(text + "\n", encoding="utf-8")
         text_file.unlink()
         tiffs.append(stem.with_suffix(".tif"))
+        if log:
+            log(f"  rendered {index + 1}/{len(lines)} lines in {label}")
     return tiffs
