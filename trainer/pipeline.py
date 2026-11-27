@@ -96,8 +96,7 @@ def report(log, stage, label, current, count, done, total):
 def score_and_log(label, images, lang, tessdata_dir, when, log):
     """Score the held-out lines and log each line as PASS or FAIL."""
     def on_line(checked, total):
-        if checked % 10 == 0 or checked == total:
-            log(f"  checked {checked}/{total} lines in {label} ({when})")
+        log(f"  checked {checked}/{total} lines in {label} ({when})")
 
     scores = score_set(images, lang, tessdata_dir, on_line=on_line)
     log(f"{label} {when}: {scores['exact']}/{scores['total']} lines pass, CER {scores['cer']}")
@@ -157,6 +156,7 @@ def train_font(name, fonts, corpus, data_root, log, font_size=32, iterations=400
         log(f"Rendering {len(control_lines)} held-out lines in {label}")
         images = render_lines(control_lines, font_path, work / "control" / label,
                               font_size, prefix="ctrl")
+        log(f"Rendered {len(images)} held-out images in {label}")
         control_images[label] = images
         report(log, "score", label, 0, len(images), done, total)
         baseline_scores[label] = score_and_log(label, images, "eng", system_tessdata,
@@ -171,6 +171,7 @@ def train_font(name, fonts, corpus, data_root, log, font_size=32, iterations=400
         train_dir = work / "train" / label
         log(f"Rendering {len(train_lines)} training lines in {label} (weight {weight})")
         tifs = render_lines(train_lines, font_path, train_dir, font_size, prefix="train")
+        log(f"Rendered {len(tifs)} training images in {label}")
         for number, tif in enumerate(tifs, start=1):
             run(["tesseract", str(tif), str(tif.with_suffix("")),
                  "--psm", "13", "lstm.train"], log, quiet=True)
@@ -178,8 +179,7 @@ def train_font(name, fonts, corpus, data_root, log, font_size=32, iterations=400
             lstmf_list.extend([entry] * weight)
             done += 1
             report(log, "prepare", label, number, len(tifs), done, total)
-            if number % 20 == 0 or number == len(tifs):
-                log(f"  prepared {number}/{len(tifs)} lines in {label}")
+            log(f"  prepared {number}/{len(tifs)} lines in {label}: {tif.name}")
         log(f"Prepared {len(tifs)} lines in {label}")
 
     list_file = work / "train_list.txt"
