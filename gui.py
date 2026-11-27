@@ -259,6 +259,9 @@ class MainWindow(QWidget):
         self.running = False  # True from Start until the run is finished, stopped or failed
         self.render_window = None  # small window with the rendering progress bar
         self.bar_animations = {}  # one smooth-move animation per progress bar
+        self.loading_window = None  # second window: copies of the bars and the latest log
+        self.loading_bars = {}  # main bar -> its copy in the loading window
+        self.loading_labels = {}  # main label -> its copy in the loading window
         self.setAcceptDrops(True)
 
         self._build_controls()
@@ -655,11 +658,12 @@ class MainWindow(QWidget):
         self.results.setRowCount(0)
         self.reset_bar(self.current_bar)
         self.reset_bar(self.overall_bar)
-        self.current_label.setText("Current font: starting")
-        self.overall_label.setText("All fonts: starting")
+        self.set_label(self.current_label, "Current font: starting")
+        self.set_label(self.overall_label, "All fonts: starting")
         self.model_dir = None
         self.open_run_log(name)
         self.set_running(True)
+        self.show_loading_window()
 
         lines = self.corpus_lines_for_run()
         corpus_text = "\n".join(lines) + "\n"
@@ -735,6 +739,8 @@ class MainWindow(QWidget):
             self.heartbeat.stop()
         if not on and self.render_window is not None:
             self.render_window.hide()
+        if not on and self.loading_window is not None:
+            self.loading_window.hide()
         self.primary.setText("Stop training" if on else "adjust the font")
 
     def show_render_window(self, info):
@@ -782,15 +788,58 @@ class MainWindow(QWidget):
             step = f"Training, iteration {info['current']}/{info['count']}"
         else:
             step = f"Scoring on held-out lines ({info['current']}/{info['count']})"
-        self.current_label.setText(f"Current font {info['label']}: {step}")
+        self.set_label(self.current_label, f"Current font {info['label']}: {step}")
         self.move_bar(self.current_bar, current)
-        self.overall_label.setText(f"All fonts: {info['done']}/{info['total']} steps")
+        self.set_label(self.overall_label, f"All fonts: {info['done']}/{info['total']} steps")
         self.move_bar(self.overall_bar, overall)
 
+    def show_loading_window(self):
+        """A second small window with copies of the two progress bars and the latest log
+        lines, so the run can be followed from anywhere on the screen."""
+        if self.loading_window is None:
+            self.loading_window = QDialog(self)
+            self.loading_window.setWindowTitle("Training progress")
+            self.loading_window.setMinimumWidth(560)
+            layout = QVBoxLayout(self.loading_window)
+            for source_label, source_bar in ((self.current_label, self.current_bar),
+                                             (self.overall_label, self.overall_bar)):
+                label = QLabel(source_label.text())
+                bar = QProgressBar()
+                bar.setRange(0, 1000)
+                bar.setValue(source_bar.value())
+                layout.addWidget(label)
+                layout.addWidget(bar)
+                self.loading_labels[source_label] = label
+                self.loading_bars[source_bar] = bar
+            self.loading_log = QPlainTextEdit()
+            self.loading_log.setReadOnly(True)
+            self.loading_log.setMaximumBlockCount(12)
+            layout.addWidget(self.loading_log)
+            buttons = QHBoxLayout()
+            buttons.addStretch(1)
+            stop = QPushButton("Stop training")
+            stop.clicked.connect(self.stop_training)
+            buttons.addWidget(stop)
+            layout.addLayout(buttons)
+        self.loading_log.clear()
+        self.loading_window.show()
+
+    def set_label(self, label, text):
+        label.setText(text)
+        copy = self.loading_labels.get(label)
+        if copy is not None:
+            copy.setText(text)
+
     def move_bar(self, bar, fraction):
-        """Move a progress bar to its new value in small steps, so it never jumps. The
-        time it takes grows with the distance, so the speed stays about the same."""
+        """Move a progress bar (and its copy in the loading window) to the new value in
+        small steps, so it never jumps. The time grows with the distance moved."""
         target = int(round(1000 * min(max(fraction, 0.0), 1.0)))
+        self.animate_bar(bar, target)
+        copy = self.loading_bars.get(bar)
+        if copy is not None:
+            self.animate_bar(copy, target)
+
+    def animate_bar(self, bar, target):
         animation = self.bar_animations.get(bar)
         if animation is None:
             animation = QPropertyAnimation(bar, b"value", self)
@@ -804,10 +853,13 @@ class MainWindow(QWidget):
         animation.start()
 
     def reset_bar(self, bar):
-        animation = self.bar_animations.get(bar)
-        if animation is not None:
-            animation.stop()
-        bar.setValue(0)
+        for item in (bar, self.loading_bars.get(bar)):
+            if item is None:
+                continue
+            animation = self.bar_animations.get(item)
+            if animation is not None:
+                animation.stop()
+            item.setValue(0)
 
     def validate(self):
         if self.table.rowCount() == 0:
@@ -844,6 +896,8 @@ class MainWindow(QWidget):
         if not self.accepting:
             return
         self.last_output = time.monotonic()
+        if self.loading_window is not None:
+            self.loading_log.appendPlainText(text)
         self.log.appendPlainText(text)
         if self.run_log:
             self.run_log.write(text + "\n")
