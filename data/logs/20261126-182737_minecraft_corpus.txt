@@ -1,0 +1,20 @@
+Server started on port 25566 after 219 seconds
+Texture pack reloaded with 306 resources
+The Mod File E:\Games\MultiMC\instances\1.20.1 6June2026Wiped9Nov2026\.minecraft\mods\quark.jar has mods that were not found
+[INFO] Registered 594 recipes from terralith
+Skipping sodium: incompatible with forge 3.1.8
+Mixin apply failed for org.lwjgl.glfw: target class not found
+Failed to load mod fabric-api 2.0.0-beta.4: missing dependency net.fabricmc.loader
+Found 131 mods, 4 failed to load
+Loading mod list from E:\Games\MultiMC\instances\1.20.4 Fabric\mods
+Failed to load mod fabric-api 0.15.3: missing dependency org.apache.logging.log4j
+Downloaded alexsmobs-1.19.2.jar in 219 seconds
+java.lang.NoClassDefFoundError: org.lwjgl.glfw/iris
+Server started on port 25566 after 162 seconds
+Could not find org.spongepowered.mixin for supplementaries, skipping
+[WARN] Config file create-common.toml is out of date
+Mixin apply failed for net.minecraftforge.fmlcore: target class not found
+Server started on port 25565 after 216 seconds
+Error loading class net.minecraftforge.fmlcore.biomesoplenty in biomesoplenty-5.4.0.jar
+Retrying download of fabric-api: HTTP status 500
+Loading mod list from D:\Games\MultiMC\instances\1.20.1 Forge\mods

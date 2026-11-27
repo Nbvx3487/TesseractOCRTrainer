@@ -1,0 +1,20 @@
+Set JVM argument -Xmx6144M for 1.19.2 Modded
+Could not find com.google.guava for sodium, skipping
+Error loading class com.electronwizard.config.iris in iris-1.20.4.jar
+The Mod File D:\Games\MultiMC\instances\1.16.5 Create\.minecraft\mods\terralith.jar has mods that were not found
+Saved world settings to disk successfully
+[INFO] Registered 842 recipes from journeymap
+Skipping alexsmobs: incompatible with forge 47.2.0
+Server started on port 25565 after 137 seconds
+Connection timed out while reading packet 247
+Texture pack reloaded with 486 resources
+Retrying download of sodium: HTTP status 500
+Retrying download of farmersdelight: HTTP status 500
+Mixin apply failed for net.minecraftforge.javafmlmod: target class not found
+Crash report saved to E:\Games\MultiMC\crash-reports\crash-2026-11-21.txt
+Crash report saved to D:\Games\MultiMC\crash-reports\crash-2026-11-25.txt
+The Mod File D:\Games\MultiMC\instances\1.19.2 Modded\.minecraft\mods\xaeros-minimap.jar has mods that were not found
+Mod glassseam-fix requires Minecraft 1.21 but found 2.0.0-beta.4
+Chunk loading took 160 ms in dimension minecraft:overworld
+Missing dependency: org.lwjgl.glfw version 47.4.10 required by iris
+java.lang.NoClassDefFoundError: org.apache.logging.log4j/iris

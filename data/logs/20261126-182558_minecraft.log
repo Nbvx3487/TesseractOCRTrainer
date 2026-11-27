@@ -1,0 +1,9 @@
+Run started: 20261126-182558_minecraft
+Model: minecraft
+Iterations: 400, font size: 32px
+Corpus: 200 lines, generated automatically (copy in logs: 20261126-182558_minecraft_corpus.txt)
+Font: C:\WINDOWS\Fonts\arial.ttf (weight 1)
+ERROR: [Errno 39] Directory not empty: '/mnt/c/Users/Nbvx Teo/Documents/_Programming/GitHub/TesseractOCRTrainer/data/runs/minecraft/train/4_georgia'
+
+FAILED: ERROR: [Errno 39] Directory not empty: '/mnt/c/Users/Nbvx Teo/Documents/_Programming/GitHub/TesseractOCRTrainer/data/runs/minecraft/train/4_georgia'
+Log saved to: C:\Users\Nbvx Teo\Documents\_Programming\GitHub\TesseractOCRTrainer\data\logs\20261126-182558_minecraft.log
