@@ -12,9 +12,9 @@ from pathlib import Path
 
 from PIL import ImageFont
 
-# Linux-side folder that text2image reads fonts from. Fonts on a Windows drive
-# (/mnt/c/...) are often not found by fontconfig, so each font is copied here first.
-FONT_STAGING = Path.home() / ".cache" / "tesstrain_fonts"
+# Per-user font folder on Linux. fontconfig scans it by default, so text2image finds
+# any font copied here. Fonts on a Windows drive (/mnt/c/...) are not scanned.
+USER_FONTS = Path.home() / ".local" / "share" / "fonts"
 
 
 def font_family(font_path):
@@ -24,13 +24,15 @@ def font_family(font_path):
 
 
 def stage_font(font_path):
-    """Copy the font into the Linux staging folder and return that folder."""
-    FONT_STAGING.mkdir(parents=True, exist_ok=True)
+    """Copy the font into the per-user font folder and rebuild that folder's font cache."""
+    USER_FONTS.mkdir(parents=True, exist_ok=True)
     source = Path(font_path)
-    target = FONT_STAGING / source.name
+    target = USER_FONTS / source.name
     if not target.exists() or target.stat().st_size != source.stat().st_size:
         shutil.copy2(source, target)
-    return FONT_STAGING
+        subprocess.run(["fc-cache", "-f", str(USER_FONTS)], check=True,
+                       capture_output=True)
+    return USER_FONTS
 
 
 def render_lines(lines, font_path, out_dir, font_size=32, prefix="line"):
