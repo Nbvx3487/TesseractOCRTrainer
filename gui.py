@@ -896,7 +896,7 @@ class MainWindow(QWidget):
             self.loading_log.appendPlainText(text)
         self.log.appendPlainText(text)
         if self.run_log:
-            self.run_log.write(text + "\n")
+            self.run_log.write(f"{datetime.now():%H:%M:%S} {text}\n")
             self.run_log.flush()
 
     def close_run_log(self):
