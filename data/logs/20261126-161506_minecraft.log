@@ -1,0 +1,18 @@
+Run started: 20261126-161506_minecraft
+Model: minecraft
+Corpus: 200 lines
+Font: C:\WINDOWS\Fonts\arial.ttf (weight 1)
+Font: C:\WINDOWS\Fonts\times.ttf (weight 1)
+Font: C:\WINDOWS\Fonts\cour.ttf (weight 1)
+Font: C:\WINDOWS\Fonts\verdana.ttf (weight 1)
+Font: C:\WINDOWS\Fonts\georgia.ttf (weight 1)
+Font: C:\WINDOWS\Fonts\tahoma.ttf (weight 1)
+Font: C:\WINDOWS\Fonts\calibri.ttf (weight 1)
+Font: C:\WINDOWS\Fonts\consola.ttf (weight 1)
+Font: C:\WINDOWS\Fonts\segoeui.ttf (weight 1)
+Font: C:/Users/Nbvx Teo/Desktop/Monocraft.ttf (weight 1)
+-B>B ?>4A8AB5<0 Windows 4;O Linux =5 CAB0=>2;5=. ;O CAB0=>2:8 2K?>;=8B5 :><0=4C "wsl.exe --install".
+>?>;=8B5;L=K5 A2545=8O A<. 2 https://aka.ms/wslinstall
+
+FAILED: training stopped with exit code 1
+Log saved to: C:\Users\Nbvx Teo\Documents\_Programming\GitHub\TesseractOCRTrainer\data\logs\20261126-161506_minecraft.log
