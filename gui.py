@@ -25,6 +25,7 @@ import random
 import re
 import subprocess
 import sys
+import threading
 import traceback
 from datetime import datetime
 from pathlib import Path
@@ -751,10 +752,11 @@ class MainWindow(QWidget):
         """Stop the run. This works even if the training thread has already ended."""
         if not self.running:
             return
-        self.status.setText("Stopping...")
-        if self.worker is not None:
-            self.worker.stop()
+        # Update the window first. Asking WSL to stop its programs can take a while, so
+        # it runs in the background and the window does not wait for it.
         self.finish_stopped()
+        if self.worker is not None:
+            threading.Thread(target=self.worker.stop, daemon=True).start()
 
     def finish_stopped(self):
         """Close the run now. The trainer's remaining output is ignored from here on."""
