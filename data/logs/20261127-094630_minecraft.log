@@ -1,0 +1,16 @@
+09:46:30 Run started: 20261127-094630_minecraft
+09:46:30 Model: minecraft
+09:46:30 Iterations: 400, font size: 32px
+09:46:30 Corpus: 1000 lines, generated automatically (copy in logs: 20261127-094630_minecraft_corpus.txt)
+09:46:30 Font: C:\WINDOWS\Fonts\arial.ttf (weight 1)
+09:46:30 Font: C:\WINDOWS\Fonts\times.ttf (weight 1)
+09:46:30 Font: C:\WINDOWS\Fonts\cour.ttf (weight 1)
+09:46:30 Font: C:\WINDOWS\Fonts\verdana.ttf (weight 1)
+09:46:30 Font: C:\WINDOWS\Fonts\georgia.ttf (weight 1)
+09:46:30 Font: C:\WINDOWS\Fonts\tahoma.ttf (weight 1)
+09:46:30 Font: C:\WINDOWS\Fonts\calibri.ttf (weight 1)
+09:46:30 Font: C:\WINDOWS\Fonts\consola.ttf (weight 1)
+09:46:30 Font: C:\WINDOWS\Fonts\segoeui.ttf (weight 1)
+09:46:30 Starting the trainer in WSL. The first output can take a little while.
+09:46:30 WSL started (process 26080), waiting for the trainer.
+09:46:32 interrupted by a user

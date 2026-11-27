@@ -1,0 +1,22 @@
+23:33:14 Run started: 20261126-233314_minecraft
+23:33:14 Model: minecraft
+23:33:14 Iterations: 10, font size: 32px
+23:33:14 Corpus: 1000 lines, generated automatically (copy in logs: 20261126-233314_minecraft_corpus.txt)
+23:33:14 Font: C:\WINDOWS\Fonts\arial.ttf (weight 1)
+23:33:14 Starting the trainer in WSL. The first output can take a little while.
+23:33:14 WSL started (process 29564), waiting for the trainer.
+23:33:15 Trainer started: minecraft, 10 iterations, font size 32px
+23:33:15 $ combine_tessdata -e /mnt/c/Users/Nbvx Teo/Documents/_Programming/GitHub/TesseractOCRTrainer/data/runs/20261126-233314_minecraft/minecraft/base/eng.traineddata /mnt/c/Users/Nbvx Teo/Documents/_Programming/GitHub/TesseractOCRTrainer/data/runs/20261126-233314_minecraft/minecraft/base/eng.lstm
+23:33:15 Extracting tessdata components from /mnt/c/Users/Nbvx Teo/Documents/_Programming/GitHub/TesseractOCRTrainer/data/runs/20261126-233314_minecraft/minecraft/base/eng.traineddata
+23:33:15 Wrote /mnt/c/Users/Nbvx Teo/Documents/_Programming/GitHub/TesseractOCRTrainer/data/runs/20261126-233314_minecraft/minecraft/base/eng.lstm
+23:33:15 Version:4.00.00alpha:eng:synth20170629:[1,36,0,1Ct3,3,16Mp3,3Lfys64Lfx96Lrx96Lfx512O1c1]
+23:33:15 17:lstm:size=11689099, offset=192
+23:33:15 18:lstm-punc-dawg:size=4322, offset=11689291
+23:33:15 19:lstm-word-dawg:size=3694794, offset=11693613
+23:33:15 20:lstm-number-dawg:size=4738, offset=15388407
+23:33:15 21:lstm-unicharset:size=6360, offset=15393145
+23:33:15 22:lstm-recoder:size=1012, offset=15399505
+23:33:15 23:version:size=80, offset=15400517
+23:33:15 Corpus: 800 training lines, 200 held-out lines
+23:33:15 Rendering 200 held-out lines in 0_arial
+23:33:15 interrupted by a user

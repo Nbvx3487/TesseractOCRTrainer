@@ -1,0 +1,2066 @@
+{
+  "model": "/mnt/c/Users/Nbvx Teo/Documents/_Programming/GitHub/TesseractOCRTrainer/data/runs/20261126-233316_minecraft/minecraft/model/minecraft.traineddata",
+  "name": "minecraft",
+  "scores": {
+    "0_arial": {
+      "baseline": {
+        "cer": 0.4256,
+        "exact": 84,
+        "lines": [
+          {
+            "expected": "Mod jei requires Minecraft 1.20.4 but found 47.2.0",
+            "got": "Mod jei requires Minecraft 1.20.4 but found 47.2.0",
+            "pass": true
+          },
+          {
+            "expected": "Connection timed out while reading packet 123",
+            "got": "Connection timed out while reading packet 123",
+            "pass": true
+          },
+          {
+            "expected": "Server started on port 25565 after 191 seconds",
+            "got": "server started on port 25565 after 191 seconds",
+            "pass": false
+          },
+          {
+            "expected": "Skipping create: incompatible with forge 47.4.10",
+            "got": "okipping create: incompatible with forge 47.4.10",
+            "pass": false
+          },
+          {
+            "expected": "java.lang.NoClassDefFoundError: com.electronwizard.config/cloth-config",
+            "got": "com electronwizard.confg/clth- config",
+            "pass": false
+          },
+          {
+            "expected": "Found 714 mods, 3 failed to load",
+            "got": "Found 714 mods, 3 failed to load",
+            "pass": true
+          },
+          {
+            "expected": "Error loading class net.minecraftforge.fmlcore.oculus in oculus-1.20.4.jar",
+            "got": "Sor 3120 hier net.minecraftforge.fmlicore.oculus in",
+            "pass": false
+          },
+          {
+            "expected": "Mod mekanism requires Minecraft 1.21 but found 0.15.3",
+            "got": "Mod mekanism requires Minecraft 1.21 but found 0.15.3",
+            "pass": true
+          },
+          {
+            "expected": "The Mod File D:\\Games\\MultiMC\\instances\\Server Backup 2026\\.minecraft\\mods\\fabric-api.jar has mods that were not found",
+            "got": "",
+            "pass": false
+          },
+          {
+            "expected": "Texture pack reloaded with 543 resources",
+            "got": "Texture pack reloaded with 543 resources",
+            "pass": true
+          },
+          {
+            "expected": "Unable to open C:\\Games\\MultiMC\\libraries\\com\\google\\guava\\3.1.8\\iris-3.1.8.jar",
+            "got": "es esi clibra ries\\com\\google\\guava\\3.1 .8\\iris-3. 1",
+            "pass": false
+          },
+          {
+            "expected": "Found 369 mods, 9 failed to load",
+            "got": "Found 369 mods, 9 failed to load",
+            "pass": true
+          },
+          {
+            "expected": "Missing dependency: net.minecraftforge.fmlcore version 1.20.1 required by alexsmobs",
+            "got": "1 20.1 sequired by te netminecrattorge.micore version",
+            "pass": false
+          },
+          {
+            "expected": "Missing dependency: net.fabricmc.loader version 1.19.2 required by ironchests",
+            "got": "required by ionchets nt version 1.19.2",
+            "pass": false
+          },
+          {
+            "expected": "[INFO] Registered 758 recipes from quark",
+            "got": "[INFO] Registered 758 recipes from quark",
+            "pass": true
+          },
+          {
+            "expected": "java.lang.NoClassDefFoundError: net.fabricmc.loader/supplementaries",
+            "got": "iplenentaies net.fabricmc.loader/",
+            "pass": false
+          },
+          {
+            "expected": "java.lang.NoClassDefFoundError: com.electronwizard.config/jei",
+            "got": "",
+            "pass": false
+          },
+          {
+            "expected": "Downloaded oculus-47.4.10.jar in 233 seconds",
+            "got": "Downloaded oculus-47.4.10.jar in 233 seconds",
+            "pass": true
+          },
+          {
+            "expected": "Mod mekanism requires Minecraft 1.16.5 but found 47.2.0",
+            "got": "none requires Minecraft 1.16.5 but found",
+            "pass": false
+          },
+          {
+            "expected": "Connection timed out while reading packet 201",
+            "got": "Connection timed out while reading packet 201",
+            "pass": true
+          },
+          {
+            "expected": "Missing dependency: org.apache.logging.log4j version 1.19.2 required by glassseam-fix",
+            "got": "1.19.2 required by glassseamfx",
+            "pass": false
+          },
+          {
+            "expected": "Unable to open E:\\Games\\MultiMC\\libraries\\net\\minecraftforge\\javafmlmod\\2.0.0-beta.4\\biomesoplenty-2.0.0-beta.4.jar",
+            "got": "",
+            "pass": false
+          },
+          {
+            "expected": "ironchests 1.20.1 is already installed in 1.19.2 Modded",
+            "got": "ironchests 1.20.1 is already installed in 1.19.2 Modded",
+            "pass": true
+          },
+          {
+            "expected": "Could not find org.lwjgl.glfw for glassseam-fix, skipping",
+            "got": "Could not find org.lwjgl.glfw for glassseam-fix, skipping",
+            "pass": true
+          },
+          {
+            "expected": "Unable to open D:\\Games\\MultiMC\\libraries\\net\\minecraftforge\\javafmlmod\\47.2.0\\ironchests-47.2.0.jar",
+            "got": "mesic 2 Oar ee vaimimod",
+            "pass": false
+          },
+          {
+            "expected": "supplementaries 0.14.22 is already installed in 1.20.1 Forge",
+            "got": "rou 0.14.22 is already installed in 1.20.1",
+            "pass": false
+          },
+          {
+            "expected": "Mod carpet requires Minecraft 1.16.5 but found 2.0.0-beta.4",
+            "got": "foe gape! requires Minecraft 1.16.5 but found 2.0.0-",
+            "pass": false
+          },
+          {
+            "expected": "Downloaded modmenu-5.4.0.jar in 25 seconds",
+            "got": "Downloaded modmenu-5.4.0.jar in 25 seconds",
+            "pass": true
+          },
+          {
+            "expected": "Chunk loading took 149 ms in dimension minecraft:overworld",
+            "got": "mineorattoverwerld",
+            "pass": false
+          },
+          {
+            "expected": "Chunk loading took 78 ms in dimension minecraft:overworld",
+            "got": "mineorattoverwerld",
+            "pass": false
+          },
+          {
+            "expected": "Skipping xaeros-minimap: incompatible with forge 2.0.0-beta.4",
+            "got": "Sepp ng xaeros-minimap: incompatible with forge 2.0.0-",
+            "pass": false
+          },
+          {
+            "expected": "Loading mod list from D:\\Games\\MultiMC\\instances\\Server Backup 2026\\mods",
+            "got": "\\Games\\MultiMC\\netances\\Server Backup 2026\\mods",
+            "pass": false
+          },
+          {
+            "expected": "Set JVM argument -Xmx8192M for 1.21 Survival",
+            "got": "set JVM argument -Xmx8192M for 1.21 Survival",
+            "pass": false
+          },
+          {
+            "expected": "Loading mod list from D:\\Games\\MultiMC\\instances\\1.21 Survival\\mods",
+            "got": "soacing moe ist from D:\\Games\\MultiMC\\instances\\1.21",
+            "pass": false
+          },
+          {
+            "expected": "farmersdelight 1.20.4 is already installed in 1.19.2 Modded",
+            "got": "Mmereaougn 1.20.4 is already installed in 1.19.2",
+            "pass": false
+          },
+          {
+            "expected": "Launching 1.20.1 6June2026Wiped9Nov2026 with 4096 MB of memory",
+            "got": "MB of monory 6June2026Wiped9Nov2026 with 4096",
+            "pass": false
+          },
+          {
+            "expected": "Texture pack reloaded with 697 resources",
+            "got": "Texture pack reloaded with 697 resources",
+            "pass": true
+          },
+          {
+            "expected": "Could not find net.fabricmc.loader for ironchests, skipping",
+            "got": "Could not find net.fabricmc.loader for ironchests, skipping",
+            "pass": true
+          },
+          {
+            "expected": "Mod alexsmobs requires Minecraft 1.16.5 but found 3.1.8",
+            "got": "Mod alexsmobs requires Minecraft 1.16.5 but found 3.1.8",
+            "pass": true
+          },
+          {
+            "expected": "Skipping iris: incompatible with forge 47.4.10",
+            "got": "okipping iris: incompatible with forge 47.4.10",
+            "pass": false
+          },
+          {
+            "expected": "Retrying download of sodium: HTTP status 403",
+            "got": "Retrying download of sodium: HTTP status 403",
+            "pass": true
+          },
+          {
+            "expected": "Found 499 mods, 6 failed to load",
+            "got": "Found 499 mods, 6 failed to load",
+            "pass": true
+          },
+          {
+            "expected": "[INFO] Registered 170 recipes from farmersdelight",
+            "got": "[INFO] Registered 170 recipes from farmersdelight",
+            "pass": true
+          },
+          {
+            "expected": "java.lang.NoClassDefFoundError: com.electronwizard.config/supplementaries",
+            "got": "om \u2018lent \u2018on oard.contig/s a 5 slementa ries",
+            "pass": false
+          },
+          {
+            "expected": "[INFO] Registered 555 recipes from jei",
+            "got": "[INFO] Registered 555 recipes from jei",
+            "pass": true
+          },
+          {
+            "expected": "Server started on port 25566 after 164 seconds",
+            "got": "Server started on port 25566 after 164 seconds",
+            "pass": true
+          },
+          {
+            "expected": "Retrying download of journeymap: HTTP status 403",
+            "got": "Retrying download of journeymap: HTTP status 403",
+            "pass": true
+          },
+          {
+            "expected": "Skipping terralith: incompatible with forge 47.2.0",
+            "got": "Skipping terralith: incompatible with forge 47.2.0",
+            "pass": true
+          },
+          {
+            "expected": "Set JVM argument -Xmx6144M for 1.16.5 Create",
+            "got": "set JVM argument -Xmx6144M for 1.16.5 Create",
+            "pass": false
+          },
+          {
+            "expected": "Missing dependency: net.minecraftforge.fmlcore version 1.21 required by oculus",
+            "got": "121 tenuited by codlue en rge-tmicore version",
+            "pass": false
+          },
+          {
+            "expected": "Downloaded xaeros-minimap-1.16.5.jar in 148 seconds",
+            "got": "Downloaded xaeros-minimap-1.16.5.jar in 148 seconds",
+            "pass": true
+          },
+          {
+            "expected": "Crash report saved to D:\\Games\\MultiMC\\crash-reports\\crash-2026-11-11.txt",
+            "got": "",
+            "pass": false
+          },
+          {
+            "expected": "Crash report saved to E:\\Games\\MultiMC\\crash-reports\\crash-2026-11-18.txt",
+            "got": "",
+            "pass": false
+          },
+          {
+            "expected": "Unable to open C:\\Games\\MultiMC\\libraries\\org\\spongepowered\\mixin\\47.2.0\\applied-energistics-2-47.2.0.jar",
+            "got": "Games iuhivC\\raretrssongepowerediiih.2",
+            "pass": false
+          },
+          {
+            "expected": "Skipping biomesoplenty: incompatible with forge 2.0.0-beta.4",
+            "got": "Sepp ng biomesoplenty: incompatible with forge 2.0.0-",
+            "pass": false
+          },
+          {
+            "expected": "Texture pack reloaded with 240 resources",
+            "got": "Texture pack reloaded with 240 resources",
+            "pass": true
+          },
+          {
+            "expected": "Connection timed out while reading packet 61",
+            "got": "Connection timed out while reading packet 61",
+            "pass": true
+          },
+          {
+            "expected": "Texture pack reloaded with 735 resources",
+            "got": "Texture pack reloaded with 735 resources",
+            "pass": true
+          },
+          {
+            "expected": "Set JVM argument -Xmx2048M for 1.20.4 Fabric",
+            "got": "set JVM argument -Xmx2048M for 1.20.4 Fabric",
+            "pass": false
+          },
+          {
+            "expected": "Error loading class com.electronwizard.config.fabric-api in fabric-api-1.19.2.jar",
+            "got": "mal Teapht Olan mara-conligtabric-aP|",
+            "pass": false
+          },
+          {
+            "expected": "Set JVM argument -Xmx8192M for 1.19.2 Modded",
+            "got": "set JVM argument -Xmx8192M for 1.19.2 Modded",
+            "pass": false
+          },
+          {
+            "expected": "java.lang.NoClassDefFoundError: net.fabricmc.loader/jei",
+            "got": "java.lang.NoClassDefFoundError: net.fabricmc.loader/jei",
+            "pass": true
+          },
+          {
+            "expected": "Found 776 mods, 2 failed to load",
+            "got": "Found 776 mods, 2 failed to load",
+            "pass": true
+          },
+          {
+            "expected": "Error loading class net.minecraftforge.javafmlmod.applied-energistics-2 in applied-energistics-2-0.14.22.jar",
+            "got": "",
+            "pass": false
+          },
+          {
+            "expected": "Could not find com.electronwizard.config for xaeros-minimap, skipping",
+            "got": "vou\u2019 : skioping\u2019 econ for xaeros-",
+            "pass": false
+          },
+          {
+            "expected": "Chunk loading took 223 ms in dimension minecraft:overworld",
+            "got": "mineorattoverwerld",
+            "pass": false
+          },
+          {
+            "expected": "Retrying download of fabric-api: HTTP status 500",
+            "got": "Retrying download of fabric-api: HTTP status 500",
+            "pass": true
+          },
+          {
+            "expected": "Error loading class net.minecraftforge.fmlcore.supplementaries in supplementaries-1.16.5.jar",
+            "got": "",
+            "pass": false
+          },
+          {
+            "expected": "java.lang.NoClassDefFoundError: com.google.guava/supplementaries",
+            "got": "iplenentaies com.google.guava/",
+            "pass": false
+          },
+          {
+            "expected": "Could not find net.minecraftforge.fmlcore for waystones, skipping",
+            "got": "sKioving. find net.minecraftforge.fmicore for waystones,",
+            "pass": false
+          },
+          {
+            "expected": "Server started on port 25566 after 31 seconds",
+            "got": "oerver started on port 25566 after 31 seconds",
+            "pass": false
+          },
+          {
+            "expected": "Could not find net.minecraftforge.fmlcore for applied-energistics-2, skipping",
+            "got": "nora mt D skip im for applied-",
+            "pass": false
+          },
+          {
+            "expected": "mekanism 1.19.2 is already installed in 1.19.2 Modded",
+            "got": "mekanism 1.19.2 is already installed in 1.19.2 Modded",
+            "pass": true
+          },
+          {
+            "expected": "Mod farmersdelight requires Minecraft 5.4.0 but found 47.2.0",
+            "got": "Me aeons requires Minecraft 5.4.0 but found",
+            "pass": false
+          },
+          {
+            "expected": "Set JVM argument -Xmx6144M for Server Backup 2026",
+            "got": "set JVM argument -Xmx6144M for Server Backup 2026",
+            "pass": false
+          },
+          {
+            "expected": "Unable to open C:\\Games\\MultiMC\\libraries\\net\\minecraftforge\\javafmlmod\\2.0.0-beta.4\\ironchests-2.0.0-beta.4.jar",
+            "got": "",
+            "pass": false
+          },
+          {
+            "expected": "jei 0.14.22 is already installed in 1.21 Survival",
+            "got": "jei 0.14.22 is already installed in 1.21 Survival",
+            "pass": true
+          },
+          {
+            "expected": "Failed to load mod oculus 47.4.10: missing dependency net.fabricmc.loader",
+            "got": "i pareaneaniieiann 47.4.10: missing dependency",
+            "pass": false
+          },
+          {
+            "expected": "Downloaded jei-5.4.0.jar in 52 seconds",
+            "got": "Downloaded jei-5.4.0.jar in 52 seconds",
+            "pass": true
+          },
+          {
+            "expected": "Could not find org.lwjgl.glfw for xaeros-minimap, skipping",
+            "got": "Could not find org.lwjgl.glfw for xaeros-minimap, skipping",
+            "pass": true
+          },
+          {
+            "expected": "ironchests 1.20.4 is already installed in 1.20.1 6June2026Wiped9Nov2026",
+            "got": "GuuneZ026Wiped9Nov2026-",
+            "pass": false
+          },
+          {
+            "expected": "java.lang.NoClassDefFoundError: net.fabricmc.loader/alexsmobs",
+            "got": "Javavang. NotlassDelFounderror net.fabricmc.loader/",
+            "pass": false
+          },
+          {
+            "expected": "Chunk loading took 155 ms in dimension minecraft:overworld",
+            "got": "mineorattoverwerd",
+            "pass": false
+          },
+          {
+            "expected": "Connection timed out while reading packet 228",
+            "got": "Connection timed out while reading packet 228",
+            "pass": true
+          },
+          {
+            "expected": "[INFO] Registered 864 recipes from xaeros-minimap",
+            "got": "[INFO] Registered 864 recipes from xaeros-minimap",
+            "pass": true
+          },
+          {
+            "expected": "Mod modmenu requires Minecraft 1.21 but found 0.15.3",
+            "got": "Mod modmenu requires Minecraft 1.21 but found 0.15.3",
+            "pass": true
+          },
+          {
+            "expected": "Set JVM argument -Xmx2048M for 1.19.2 Modded",
+            "got": "set JVM argument -Xmx2048M for 1.19.2 Modded",
+            "pass": false
+          },
+          {
+            "expected": "Mod quark requires Minecraft 47.4.10 but found 2.0.0-beta.4",
+            "got": "woe quarks requires Minecraft 47.4.10 but found 2.0.0-",
+            "pass": false
+          },
+          {
+            "expected": "Downloaded biomesoplenty-1.20.1.jar in 144 seconds",
+            "got": "Downloaded biomesoplenty-1.20.1.jar in 144 seconds",
+            "pass": true
+          },
+          {
+            "expected": "Missing dependency: com.electronwizard.config version 1.16.5 required by quark",
+            "got": "1 16-5 vequired bye Com electronwizard.contig version",
+            "pass": false
+          },
+          {
+            "expected": "Error loading class com.electronwizard.config.waystones in waystones-1.19.2.jar",
+            "got": "in wayetones bin Dian areconig.waystones",
+            "pass": false
+          },
+          {
+            "expected": "Downloaded create-0.14.22.jar in 158 seconds",
+            "got": "Downloaded create-0.14.22.jar in 158 seconds",
+            "pass": true
+          },
+          {
+            "expected": "Crash report saved to E:\\Games\\MultiMC\\crash-reports\\crash-2026-11-26.txt",
+            "got": "",
+            "pass": false
+          },
+          {
+            "expected": "Set JVM argument -Xmx2048M for Server Backup 2026",
+            "got": "set JVM argument -Xmx2048M for Server Backup 2026",
+            "pass": false
+          },
+          {
+            "expected": "[INFO] Registered 507 recipes from carpet",
+            "got": "[INFO] Registered 507 recipes from carpet",
+            "pass": true
+          },
+          {
+            "expected": "Error loading class org.spongepowered.mixin.create in create-1.20.1.jar",
+            "got": "Steen an org.spongepowered.mixin.create in",
+            "pass": false
+          },
+          {
+            "expected": "Crash report saved to E:\\Games\\MultiMC\\crash-reports\\crash-2026-11-25.txt",
+            "got": "",
+            "pass": false
+          },
+          {
+            "expected": "Found 534 mods, 8 failed to load",
+            "got": "Found 534 mods, 8 failed to load",
+            "pass": true
+          },
+          {
+            "expected": "Connection timed out while reading packet 165",
+            "got": "Connection timed out while reading packet 165",
+            "pass": true
+          },
+          {
+            "expected": "Crash report saved to D:\\Games\\MultiMC\\crash-reports\\crash-2026-11-23.txt",
+            "got": "",
+            "pass": false
+          },
+          {
+            "expected": "Loading mod list from C:\\Games\\MultiMC\\instances\\Server Backup 2026\\mods",
+            "got": "\\Gamec\\MultiMC\\inetances\\Server Backup 2026\\mods",
+            "pass": false
+          },
+          {
+            "expected": "Chunk loading took 208 ms in dimension minecraft:overworld",
+            "got": "mineorattoverwerld",
+            "pass": false
+          },
+          {
+            "expected": "Chunk loading took 214 ms in dimension minecraft:overworld",
+            "got": "mineorattoverwerld",
+            "pass": false
+          },
+          {
+            "expected": "Deleted 671 old log files from E:\\Games\\MultiMC\\logs",
+            "got": "Deleted 671 old log files from E:\\Games\\MultiMC\\logs",
+            "pass": true
+          },
+          {
+            "expected": "Found 669 mods, 4 failed to load",
+            "got": "Found 669 mods, 4 failed to load",
+            "pass": true
+          },
+          {
+            "expected": "Deleted 362 old log files from E:\\Games\\MultiMC\\logs",
+            "got": "Deleted 362 old log files from E:\\Games\\MultiMC\\logs",
+            "pass": true
+          },
+          {
+            "expected": "java.lang.NoClassDefFoundError: net.minecraftforge.javafmlmod/farmersdelight",
+            "got": "vot minectattforse vavafin nod/farmersdelight",
+            "pass": false
+          },
+          {
+            "expected": "The Mod File C:\\Games\\MultiMC\\instances\\1.20.1 6June2026Wiped9Nov2026\\.minecraft\\mods\\sodium.jar has mods that were not found",
+            "got": "",
+            "pass": false
+          },
+          {
+            "expected": "carpet 1.20.4 is already installed in Server Backup 2026",
+            "got": "carpet 1.20.4 is already installed in Server Backup 2026",
+            "pass": true
+          },
+          {
+            "expected": "Server started on port 25566 after 188 seconds",
+            "got": "server started on port 25566 after 188 seconds",
+            "pass": false
+          },
+          {
+            "expected": "Launching 1.19.2 Modded with 8192 MB of memory",
+            "got": "Launching 1.19.2 Modded with 8192 MB of memory",
+            "pass": true
+          },
+          {
+            "expected": "Unable to open E:\\Games\\MultiMC\\libraries\\org\\apache\\logging\\log4j\\3.1.8\\iris-3.1.8.jar",
+            "got": "S nest Cilibra ries\\org\\apache\\logging\\log4j\\3.1.8\\",
+            "pass": false
+          },
+          {
+            "expected": "Error loading class com.google.guava.supplementaries in supplementaries-1.20.4.jar",
+            "got": "supplemontarieet SO de ya suPpiomentanes in",
+            "pass": false
+          },
+          {
+            "expected": "Error loading class org.apache.logging.log4j.create in create-1.19.2.jar",
+            "got": "Sag an org.apache.logging.log4j.create in",
+            "pass": false
+          },
+          {
+            "expected": "Connection timed out while reading packet 121",
+            "got": "Connection timed out while reading packet 121",
+            "pass": true
+          },
+          {
+            "expected": "The Mod File C:\\Games\\MultiMC\\instances\\1.20.1 Forge\\.minecraft\\mods\\terralith.jar has mods that were not found",
+            "got": "",
+            "pass": false
+          },
+          {
+            "expected": "iris 1.21 is already installed in Server Backup 2026",
+            "got": "iris 1.21 is already installed in Server Backup 2026",
+            "pass": true
+          },
+          {
+            "expected": "Found 885 mods, 7 failed to load",
+            "got": "Found 885 mods, 7 failed to load",
+            "pass": true
+          },
+          {
+            "expected": "The Mod File C:\\Games\\MultiMC\\instances\\1.21 Survival\\.minecraft\\mods\\terralith.jar has mods that were not found",
+            "got": "Sunil vin scraftvn 5 d site valith jar he 5 rods i at were",
+            "pass": false
+          },
+          {
+            "expected": "Mod quark requires Minecraft 1.19.2 but found 3.1.8",
+            "got": "Mod quark requires Minecraft 1.19.2 but found 3.1.8",
+            "pass": true
+          },
+          {
+            "expected": "The Mod File E:\\Games\\MultiMC\\instances\\1.19.2 Modded\\.minecraft\\mods\\fabric-api.jar has mods that were not found",
+            "got": "",
+            "pass": false
+          },
+          {
+            "expected": "Unable to open C:\\Games\\MultiMC\\libraries\\org\\spongepowered\\mixin\\47.2.0\\modmenu-47.2.0.jar",
+            "got": "Games livCbrares ox spongepoweredni472",
+            "pass": false
+          },
+          {
+            "expected": "Found 532 mods, 7 failed to load",
+            "got": "Found 532 mods, 7 failed to load",
+            "pass": true
+          },
+          {
+            "expected": "Texture pack reloaded with 551 resources",
+            "got": "Texture pack reloaded with 551 resources",
+            "pass": true
+          },
+          {
+            "expected": "Connection timed out while reading packet 152",
+            "got": "Connection timed out while reading packet 152",
+            "pass": true
+          },
+          {
+            "expected": "Texture pack reloaded with 696 resources",
+            "got": "Texture pack reloaded with 696 resources",
+            "pass": true
+          },
+          {
+            "expected": "Connection timed out while reading packet 172",
+            "got": "Connection timed out while reading packet 172",
+            "pass": true
+          },
+          {
+            "expected": "java.lang.NoClassDefFoundError: org.apache.logging.log4j/iris",
+            "got": "",
+            "pass": false
+          },
+          {
+            "expected": "Server started on port 25565 after 16 seconds",
+            "got": "oerver started on port 25565 after 16 seconds",
+            "pass": false
+          },
+          {
+            "expected": "The Mod File C:\\Games\\MultiMC\\instances\\1.20.4 Fabric\\.minecraft\\mods\\create.jar has mods that were not found",
+            "got": "",
+            "pass": false
+          },
+          {
+            "expected": "supplementaries 1.21 is already installed in 1.21 Survival",
+            "got": "supplementaries 1.21 is already installed in 1.21 Survival",
+            "pass": true
+          },
+          {
+            "expected": "Mod oculus requires Minecraft 1.20.4 but found 2.0.0-beta.4",
+            "got": "noe culls requires Minecraft 1.20.4 but found 2.0.0-",
+            "pass": false
+          },
+          {
+            "expected": "Set JVM argument -Xmx6144M for 1.19.2 Modded",
+            "got": "set JVM argument -Xmx6144M for 1.19.2 Modded",
+            "pass": false
+          },
+          {
+            "expected": "Chunk loading took 135 ms in dimension minecraft:overworld",
+            "got": "mineorattoverwerld",
+            "pass": false
+          },
+          {
+            "expected": "Mod terralith requires Minecraft 1.21 but found 2.0.0-beta.4",
+            "got": "aia requires Minecraft 1.21 but found 2.0.0-",
+            "pass": false
+          },
+          {
+            "expected": "Chunk loading took 49 ms in dimension minecraft:overworld",
+            "got": "mineorattoverwerld",
+            "pass": false
+          },
+          {
+            "expected": "Retrying download of cloth-config: HTTP status 500",
+            "got": "Retrying download of cloth-config: HTTP status 500",
+            "pass": true
+          },
+          {
+            "expected": "Missing dependency: net.minecraftforge.fmlcore version 1.20.1 required by quark",
+            "got": "1 20.1 sequired bye netminecrantiorge Imicore version",
+            "pass": false
+          },
+          {
+            "expected": "farmersdelight 0.14.22 is already installed in 1.20.4 Fabric",
+            "got": "rormersdelight 0.14.22 is already installed in 1.20.4",
+            "pass": false
+          },
+          {
+            "expected": "Skipping oculus: incompatible with forge 47.4.10",
+            "got": "okipping oculus: incompatible with forge 47.4.10",
+            "pass": false
+          },
+          {
+            "expected": "Failed to load mod glassseam-fix 2.0.0-beta.4: missing dependency org.spongepowered.mixin",
+            "got": "dependency org.spongepoweredmixin",
+            "pass": false
+          },
+          {
+            "expected": "[INFO] Registered 495 recipes from supplementaries",
+            "got": "[INFO] Registered 495 recipes from supplementaries",
+            "pass": true
+          },
+          {
+            "expected": "Downloaded create-47.4.10.jar in 70 seconds",
+            "got": "Downloaded create-47.4.10.jar in 70 seconds",
+            "pass": true
+          },
+          {
+            "expected": "create 1.20.4 is already installed in Server Backup 2026",
+            "got": "create 1.20.4 is already installed in Server Backup 2026",
+            "pass": true
+          },
+          {
+            "expected": "Skipping ironchests: incompatible with forge 47.4.10",
+            "got": "Skipping ironchests: incompatible with forge 47.4.10",
+            "pass": true
+          },
+          {
+            "expected": "Server started on port 25566 after 94 seconds",
+            "got": "oerver started on port 25566 after 94 seconds",
+            "pass": false
+          },
+          {
+            "expected": "Downloaded jei-0.14.22.jar in 240 seconds",
+            "got": "Downloaded jei-0.14.22.jar in 240 seconds",
+            "pass": true
+          },
+          {
+            "expected": "Connection timed out while reading packet 57",
+            "got": "Connection timed out while reading packet 57",
+            "pass": true
+          },
+          {
+            "expected": "Skipping fabric-api: incompatible with forge 0.15.3",
+            "got": "Skipping fabric-api: incompatible with forge 0.15.3",
+            "pass": true
+          },
+          {
+            "expected": "Downloaded terralith-0.14.22.jar in 198 seconds",
+            "got": "Downloaded terralith-0.14.22.jar in 198 seconds",
+            "pass": true
+          },
+          {
+            "expected": "Error loading class net.minecraftforge.javafmlmod.quark in quark-1.20.4.jar",
+            "got": "nual 32 dir net.minecraftforge.javafmlmod.quark",
+            "pass": false
+          },
+          {
+            "expected": "[WARN] Config file ironchests-common.toml is out of date",
+            "got": "[WARN] Config file ironchests-common.toml is out of date",
+            "pass": true
+          },
+          {
+            "expected": "Unable to open D:\\Games\\MultiMC\\libraries\\com\\electronwizard\\config\\47.4.10\\ironchests-47.4.10.jar",
+            "got": "Games PO marcicontigar4",
+            "pass": false
+          },
+          {
+            "expected": "waystones 1.20.4 is already installed in 1.16.5 Create",
+            "got": "waystones 1.20.4 is already installed in 1.16.5 Create",
+            "pass": true
+          },
+          {
+            "expected": "Launching 1.21 Survival with 2048 MB of memory",
+            "got": "Launching 1.21 Survival with 2048 MB of memory",
+            "pass": true
+          },
+          {
+            "expected": "Mixin apply failed for com.google.guava: target class not found",
+            "got": "nn apply failed for com.google.guava: target class not",
+            "pass": false
+          },
+          {
+            "expected": "Loading mod list from D:\\Games\\MultiMC\\instances\\1.16.5 Create\\mods",
+            "got": "enety \u2019 MCNnetances\\ .16.5 Create\\mods",
+            "pass": false
+          },
+          {
+            "expected": "Launching 1.19.2 Modded with 6144 MB of memory",
+            "got": "Launching 1.19.2 Modded with 6144 MB of memory",
+            "pass": true
+          },
+          {
+            "expected": "Downloaded oculus-1.20.4.jar in 25 seconds",
+            "got": "Downloaded oculus-1.20.4.jar in 25 seconds",
+            "pass": true
+          },
+          {
+            "expected": "The Mod File E:\\Games\\MultiMC\\instances\\1.20.4 Fabric\\.minecraft\\mods\\biomesoplenty.jar has mods that were not found",
+            "got": "",
+            "pass": false
+          },
+          {
+            "expected": "Mixin apply failed for com.electronwizard.config: target class not found",
+            "got": "ween app y fares for com.electronwizard.config: target",
+            "pass": false
+          },
+          {
+            "expected": "Mod supplementaries requires Minecraft 0.14.22 but found 47.2.0",
+            "got": "pod oubrementaries requires Minecraft 0.14.22 but",
+            "pass": false
+          },
+          {
+            "expected": "Retrying download of oculus: HTTP status 500",
+            "got": "Retrying download of oculus: HTTP status 500",
+            "pass": true
+          },
+          {
+            "expected": "Mod create requires Minecraft 1.16.5 but found 47.2.0",
+            "got": "Mod create requires Minecraft 1.16.5 but found 47.2.0",
+            "pass": true
+          },
+          {
+            "expected": "Found 455 mods, 3 failed to load",
+            "got": "Found 455 mods, 3 failed to load",
+            "pass": true
+          },
+          {
+            "expected": "Deleted 722 old log files from D:\\Games\\MultiMC\\logs",
+            "got": "Deleted 722 old log files from D:\\Games\\MultiMC\\logs",
+            "pass": true
+          },
+          {
+            "expected": "Missing dependency: net.minecraftforge.javafmlmod version 0.14.22 required by cloth-config",
+            "got": "version 0.14.22 required by coth-coniig,",
+            "pass": false
+          },
+          {
+            "expected": "applied-energistics-2 0.14.22 is already installed in 1.19.2 Modded",
+            "got": "app lear onergistios-2 0.14.22 is already installed in 1.19.2",
+            "pass": false
+          },
+          {
+            "expected": "The Mod File D:\\Games\\MultiMC\\instances\\Server Backup 2026\\.minecraft\\mods\\iris.jar has mods that were not found",
+            "got": "",
+            "pass": false
+          },
+          {
+            "expected": "java.lang.NoClassDefFoundError: net.minecraftforge.fmlcore/carpet",
+            "got": "",
+            "pass": false
+          },
+          {
+            "expected": "Unable to open D:\\Games\\MultiMC\\libraries\\net\\minecraftforge\\fmlcore\\47.2.0\\carpet-47.2.0.jar",
+            "got": "ames Ciaresineinineratorgelncre 2",
+            "pass": false
+          },
+          {
+            "expected": "Skipping sodium: incompatible with forge 3.1.8",
+            "got": "Skipping sodium: incompatible with forge 3.1.8",
+            "pass": true
+          },
+          {
+            "expected": "java.lang.NoClassDefFoundError: org.lwjgl.glfw/create",
+            "got": "java.lang.NoClassDefFoundError: org.|wjgl.glfw/create",
+            "pass": false
+          },
+          {
+            "expected": "Chunk loading took 70 ms in dimension minecraft:overworld",
+            "got": "mineorattoverwerld",
+            "pass": false
+          },
+          {
+            "expected": "Connection timed out while reading packet 27",
+            "got": "Connection timed out while reading packet 27",
+            "pass": true
+          },
+          {
+            "expected": "Error loading class net.fabricmc.loader.cloth-config in cloth-config-1.21.jar",
+            "got": "Sloth-contig. pe net-tabricme.loader.cloth-conig in",
+            "pass": false
+          },
+          {
+            "expected": "The Mod File D:\\Games\\MultiMC\\instances\\1.20.1 6June2026Wiped9Nov2026\\.minecraft\\mods\\create.jar has mods that were not found",
+            "got": "",
+            "pass": false
+          },
+          {
+            "expected": "Downloaded sodium-47.4.10.jar in 173 seconds",
+            "got": "Downloaded sodium-47.4.10.jar in 173 seconds",
+            "pass": true
+          },
+          {
+            "expected": "Could not find com.electronwizard.config for jei, skipping",
+            "got": "Could not find com.electronwizard.config for jei, skipping",
+            "pass": true
+          },
+          {
+            "expected": "Missing dependency: org.lwjgl.glfw version 47.4.10 required by biomesoplenty",
+            "got": "required by biomesep ety version 47.4.10",
+            "pass": false
+          },
+          {
+            "expected": "terralith 1.21 is already installed in 1.16.5 Create",
+            "got": "terralith 1.21 is already installed in 1.16.5 Create",
+            "pass": true
+          },
+          {
+            "expected": "Unable to open C:\\Games\\MultiMC\\libraries\\net\\minecraftforge\\javafmlmod\\47.4.10\\biomesoplenty-47.4.10.jar",
+            "got": "",
+            "pass": false
+          },
+          {
+            "expected": "Texture pack reloaded with 582 resources",
+            "got": "Texture pack reloaded with 582 resources",
+            "pass": true
+          },
+          {
+            "expected": "applied-energistics-2 5.4.0 is already installed in 1.20.4 Fabric",
+            "got": "app lecrenergistios-2 9.4.0 is already installed in 1.20.4",
+            "pass": false
+          },
+          {
+            "expected": "Error loading class net.fabricmc.loader.create in create-1.20.4.jar",
+            "got": "Sang an net.fabricmc.loader.create in",
+            "pass": false
+          },
+          {
+            "expected": "The Mod File C:\\Games\\MultiMC\\instances\\Server Backup 2026\\.minecraft\\mods\\alexsmobs.jar has mods that were not found",
+            "got": "",
+            "pass": false
+          },
+          {
+            "expected": "Connection timed out while reading packet 120",
+            "got": "Connection timed out while reading packet 120",
+            "pass": true
+          },
+          {
+            "expected": "Failed to load mod carpet 47.2.0: missing dependency com.electronwizard.config",
+            "got": "rate to ronwiverd config 47.2.0: missing dependency",
+            "pass": false
+          },
+          {
+            "expected": "Texture pack reloaded with 408 resources",
+            "got": "Texture pack reloaded with 408 resources",
+            "pass": true
+          },
+          {
+            "expected": "Failed to load mod sodium 47.2.0: missing dependency net.fabricmc.loader",
+            "got": "epareaneaniineacaal 47.2.0: missing dependency",
+            "pass": false
+          },
+          {
+            "expected": "Chunk loading took 238 ms in dimension minecraft:overworld",
+            "got": "mineorattovewerld",
+            "pass": false
+          },
+          {
+            "expected": "Loading mod list from D:\\Games\\MultiMC\\instances\\1.20.1 6June2026Wiped9Nov2026\\mods",
+            "got": "",
+            "pass": false
+          },
+          {
+            "expected": "Saved world settings to disk successfully",
+            "got": "saved world settings to disk successfully",
+            "pass": false
+          },
+          {
+            "expected": "Mod modmenu requires Minecraft 5.4.0 but found 47.4.10",
+            "got": "Mod modmenu requires Minecraft 5.4.0 but found 47.4.10",
+            "pass": true
+          },
+          {
+            "expected": "Could not find com.electronwizard.config for supplementaries, skipping",
+            "got": "suppleme ine on Mining for",
+            "pass": false
+          },
+          {
+            "expected": "Unable to open C:\\Games\\MultiMC\\libraries\\com\\google\\guava\\47.2.0\\modmenu-47.2.0.jar",
+            "got": "Games brares com goog guava? 2 0%",
+            "pass": false
+          },
+          {
+            "expected": "Crash report saved to E:\\Games\\MultiMC\\crash-reports\\crash-2026-11-20.txt",
+            "got": "",
+            "pass": false
+          },
+          {
+            "expected": "Chunk loading took 142 ms in dimension minecraft:overworld",
+            "got": "mineorattoverwerld",
+            "pass": false
+          },
+          {
+            "expected": "Chunk loading took 20 ms in dimension minecraft:overworld",
+            "got": "mineorattoverwerld",
+            "pass": false
+          },
+          {
+            "expected": "Found 313 mods, 2 failed to load",
+            "got": "Found 313 mods, 2 failed to load",
+            "pass": true
+          }
+        ],
+        "misses": [
+          {
+            "expected": "Server started on port 25565 after 191 seconds",
+            "got": "server started on port 25565 after 191 seconds"
+          },
+          {
+            "expected": "Skipping create: incompatible with forge 47.4.10",
+            "got": "okipping create: incompatible with forge 47.4.10"
+          },
+          {
+            "expected": "java.lang.NoClassDefFoundError: com.electronwizard.config/cloth-config",
+            "got": "com electronwizard.confg/clth- config"
+          },
+          {
+            "expected": "Error loading class net.minecraftforge.fmlcore.oculus in oculus-1.20.4.jar",
+            "got": "Sor 3120 hier net.minecraftforge.fmlicore.oculus in"
+          },
+          {
+            "expected": "The Mod File D:\\Games\\MultiMC\\instances\\Server Backup 2026\\.minecraft\\mods\\fabric-api.jar has mods that were not found",
+            "got": ""
+          }
+        ],
+        "total": 200
+      },
+      "trained": {
+        "cer": 0.4198,
+        "exact": 102,
+        "lines": [
+          {
+            "expected": "Mod jei requires Minecraft 1.20.4 but found 47.2.0",
+            "got": "Mod jei requires Minecraft 1.20.4 but found 47.2.0",
+            "pass": true
+          },
+          {
+            "expected": "Connection timed out while reading packet 123",
+            "got": "Connection timed out while reading packet 123",
+            "pass": true
+          },
+          {
+            "expected": "Server started on port 25565 after 191 seconds",
+            "got": "Server started on port 25565 after 191 seconds",
+            "pass": true
+          },
+          {
+            "expected": "Skipping create: incompatible with forge 47.4.10",
+            "got": "Skipping create: incompatible with forge 47.4.10",
+            "pass": true
+          },
+          {
+            "expected": "java.lang.NoClassDefFoundError: com.electronwizard.config/cloth-config",
+            "got": "com elechronwizard configcloth-conti",
+            "pass": false
+          },
+          {
+            "expected": "Found 714 mods, 3 failed to load",
+            "got": "Found 714 mods, 3 failed to load",
+            "pass": true
+          },
+          {
+            "expected": "Error loading class net.minecraftforge.fmlcore.oculus in oculus-1.20.4.jar",
+            "got": "=ror pA net.minecraftforge.fmlcore.oculus in",
+            "pass": false
+          },
+          {
+            "expected": "Mod mekanism requires Minecraft 1.21 but found 0.15.3",
+            "got": "Mod mekanism requires Minecraft 1.21 but found 0.15.3",
+            "pass": true
+          },
+          {
+            "expected": "The Mod File D:\\Games\\MultiMC\\instances\\Server Backup 2026\\.minecraft\\mods\\fabric-api.jar has mods that were not found",
+            "got": "",
+            "pass": false
+          },
+          {
+            "expected": "Texture pack reloaded with 543 resources",
+            "got": "Texture pack reloaded with 543 resources",
+            "pass": true
+          },
+          {
+            "expected": "Unable to open C:\\Games\\MultiMC\\libraries\\com\\google\\guava\\3.1.8\\iris-3.1.8.jar",
+            "got": "ca esl Cuibra ries\\com\\google\\guava\\3.1.8\\iris-3.1",
+            "pass": false
+          },
+          {
+            "expected": "Found 369 mods, 9 failed to load",
+            "got": "Found 369 mods, 9 failed to load",
+            "pass": true
+          },
+          {
+            "expected": "Missing dependency: net.minecraftforge.fmlcore version 1.20.1 required by alexsmobs",
+            "got": "120.1 Saad bye net mnecraftiorge.micore version",
+            "pass": false
+          },
+          {
+            "expected": "Missing dependency: net.fabricmc.loader version 1.19.2 required by ironchests",
+            "got": "route br ronchenis aprieme-loader version 1.19.2",
+            "pass": false
+          },
+          {
+            "expected": "[INFO] Registered 758 recipes from quark",
+            "got": "[INFO] Registered 758 recipes from quark",
+            "pass": true
+          },
+          {
+            "expected": "java.lang.NoClassDefFoundError: net.fabricmc.loader/supplementaries",
+            "got": "om rs et oundError net.fabricmc.loader/",
+            "pass": false
+          },
+          {
+            "expected": "java.lang.NoClassDefFoundError: com.electronwizard.config/jei",
+            "got": "",
+            "pass": false
+          },
+          {
+            "expected": "Downloaded oculus-47.4.10.jar in 233 seconds",
+            "got": "Downloaded oculus-47.4.10.jar in 233 seconds",
+            "pass": true
+          },
+          {
+            "expected": "Mod mekanism requires Minecraft 1.16.5 but found 47.2.0",
+            "got": "ag mekanism requires Minecraft 1.16.5 but found",
+            "pass": false
+          },
+          {
+            "expected": "Connection timed out while reading packet 201",
+            "got": "Connection timed out while reading packet 201",
+            "pass": true
+          },
+          {
+            "expected": "Missing dependency: org.apache.logging.log4j version 1.19.2 required by glassseam-fix",
+            "got": "1119.2 roquired by lassssam ooo\"",
+            "pass": false
+          },
+          {
+            "expected": "Unable to open E:\\Games\\MultiMC\\libraries\\net\\minecraftforge\\javafmlmod\\2.0.0-beta.4\\biomesoplenty-2.0.0-beta.4.jar",
+            "got": "",
+            "pass": false
+          },
+          {
+            "expected": "ironchests 1.20.1 is already installed in 1.19.2 Modded",
+            "got": "ironchests 1.20.1 is already installed in 1.19.2 Modded",
+            "pass": true
+          },
+          {
+            "expected": "Could not find org.lwjgl.glfw for glassseam-fix, skipping",
+            "got": "Could not find org.lwjgl.glfw for glassseam-fix, skipping",
+            "pass": true
+          },
+          {
+            "expected": "Unable to open D:\\Games\\MultiMC\\libraries\\net\\minecraftforge\\javafmlmod\\47.2.0\\ironchests-47.2.0.jar",
+            "got": "Games roar ecrantorgeyavaimimod",
+            "pass": false
+          },
+          {
+            "expected": "supplementaries 0.14.22 is already installed in 1.20.1 Forge",
+            "got": "orp menanies 0.14.22 is already installed in 1.20.1",
+            "pass": false
+          },
+          {
+            "expected": "Mod carpet requires Minecraft 1.16.5 but found 2.0.0-beta.4",
+            "got": "viod carpe! requires Minecraft 1.16.5 but found 2.0.0-",
+            "pass": false
+          },
+          {
+            "expected": "Downloaded modmenu-5.4.0.jar in 25 seconds",
+            "got": "Downloaded modmenu-5.4.0.jar in 25 seconds",
+            "pass": true
+          },
+          {
+            "expected": "Chunk loading took 149 ms in dimension minecraft:overworld",
+            "got": "rinecatiovomord",
+            "pass": false
+          },
+          {
+            "expected": "Chunk loading took 78 ms in dimension minecraft:overworld",
+            "got": "inecraftovemord",
+            "pass": false
+          },
+          {
+            "expected": "Skipping xaeros-minimap: incompatible with forge 2.0.0-beta.4",
+            "got": "Sipping xaeros-minimap: incompatible with forge 2.0.0-",
+            "pass": false
+          },
+          {
+            "expected": "Loading mod list from D:\\Games\\MultiMC\\instances\\Server Backup 2026\\mods",
+            "got": "CameaMUMO\\matanees\\Server Backup 2026\\mods",
+            "pass": false
+          },
+          {
+            "expected": "Set JVM argument -Xmx8192M for 1.21 Survival",
+            "got": "Set JVM argument -Xmx8192M for 1.21 Survival",
+            "pass": true
+          },
+          {
+            "expected": "Loading mod list from D:\\Games\\MultiMC\\instances\\1.21 Survival\\mods",
+            "got": "Loading moc Jt from D:\\Games\\MultiMC\\instances\\1.21",
+            "pass": false
+          },
+          {
+            "expected": "farmersdelight 1.20.4 is already installed in 1.19.2 Modded",
+            "got": "armersdelight 1.20.4 is already installed in 1.19.2",
+            "pass": false
+          },
+          {
+            "expected": "Launching 1.20.1 6June2026Wiped9Nov2026 with 4096 MB of memory",
+            "got": "VE of ment 6June2026Wiped9Nov2026 with 4096",
+            "pass": false
+          },
+          {
+            "expected": "Texture pack reloaded with 697 resources",
+            "got": "Texture pack reloaded with 697 resources",
+            "pass": true
+          },
+          {
+            "expected": "Could not find net.fabricmc.loader for ironchests, skipping",
+            "got": "Could not find net.fabricmc.loader for ironchests, skipping",
+            "pass": true
+          },
+          {
+            "expected": "Mod alexsmobs requires Minecraft 1.16.5 but found 3.1.8",
+            "got": "Mod alexsmobs requires Minecraft 1.16.5 but found 3.1.8",
+            "pass": true
+          },
+          {
+            "expected": "Skipping iris: incompatible with forge 47.4.10",
+            "got": "Skipping iris: incompatible with forge 47.4.10",
+            "pass": true
+          },
+          {
+            "expected": "Retrying download of sodium: HTTP status 403",
+            "got": "Retrying download of sodium: HTTP status 403",
+            "pass": true
+          },
+          {
+            "expected": "Found 499 mods, 6 failed to load",
+            "got": "Found 499 mods, 6 failed to load",
+            "pass": true
+          },
+          {
+            "expected": "[INFO] Registered 170 recipes from farmersdelight",
+            "got": "[INFO] Registered 170 recipes from farmersdelight",
+            "pass": true
+          },
+          {
+            "expected": "java.lang.NoClassDefFoundError: com.electronwizard.config/supplementaries",
+            "got": "pies om ed come \" meni ries",
+            "pass": false
+          },
+          {
+            "expected": "[INFO] Registered 555 recipes from jei",
+            "got": "[INFO] Registered 555 recipes from jei",
+            "pass": true
+          },
+          {
+            "expected": "Server started on port 25566 after 164 seconds",
+            "got": "Server started on port 25566 after 164 seconds",
+            "pass": true
+          },
+          {
+            "expected": "Retrying download of journeymap: HTTP status 403",
+            "got": "Retrying download of journeymap: HTTP status 403",
+            "pass": true
+          },
+          {
+            "expected": "Skipping terralith: incompatible with forge 47.2.0",
+            "got": "Skipping terralith: incompatible with forge 47.2.0",
+            "pass": true
+          },
+          {
+            "expected": "Set JVM argument -Xmx6144M for 1.16.5 Create",
+            "got": "Set JVM argument -Xmx6144M for 1.16.5 Create",
+            "pass": true
+          },
+          {
+            "expected": "Missing dependency: net.minecraftforge.fmlcore version 1.21 required by oculus",
+            "got": "121 reg ee TC atorge-fmicore version",
+            "pass": false
+          },
+          {
+            "expected": "Downloaded xaeros-minimap-1.16.5.jar in 148 seconds",
+            "got": "Downloaded xaeros-minimap-1.16.5.jar in 148 seconds",
+            "pass": true
+          },
+          {
+            "expected": "Crash report saved to D:\\Games\\MultiMC\\crash-reports\\crash-2026-11-11.txt",
+            "got": "",
+            "pass": false
+          },
+          {
+            "expected": "Crash report saved to E:\\Games\\MultiMC\\crash-reports\\crash-2026-11-18.txt",
+            "got": "",
+            "pass": false
+          },
+          {
+            "expected": "Unable to open C:\\Games\\MultiMC\\libraries\\org\\spongepowered\\mixin\\47.2.0\\applied-energistics-2-47.2.0.jar",
+            "got": "Comes Cater aor gauss.",
+            "pass": false
+          },
+          {
+            "expected": "Skipping biomesoplenty: incompatible with forge 2.0.0-beta.4",
+            "got": "Sipping biomesoplenty: incompatible with forge 2.0.0-",
+            "pass": false
+          },
+          {
+            "expected": "Texture pack reloaded with 240 resources",
+            "got": "Texture pack reloaded with 240 resources",
+            "pass": true
+          },
+          {
+            "expected": "Connection timed out while reading packet 61",
+            "got": "Connection timed out while reading packet 61",
+            "pass": true
+          },
+          {
+            "expected": "Texture pack reloaded with 735 resources",
+            "got": "Texture pack reloaded with 735 resources",
+            "pass": true
+          },
+          {
+            "expected": "Set JVM argument -Xmx2048M for 1.20.4 Fabric",
+            "got": "Set JVM argument -Xmx2048M for 1.20.4 Fabric",
+            "pass": true
+          },
+          {
+            "expected": "Error loading class com.electronwizard.config.fabric-api in fabric-api-1.19.2.jar",
+            "got": "=ror oe oo coonwizard.config-fabric-ap",
+            "pass": false
+          },
+          {
+            "expected": "Set JVM argument -Xmx8192M for 1.19.2 Modded",
+            "got": "Set JVM argument -Xmx8192M for 1.19.2 Modded",
+            "pass": true
+          },
+          {
+            "expected": "java.lang.NoClassDefFoundError: net.fabricmc.loader/jei",
+            "got": "java.lang.NoClassDefFoundError: net.fabricmc.loader/jei",
+            "pass": true
+          },
+          {
+            "expected": "Found 776 mods, 2 failed to load",
+            "got": "Found 776 mods, 2 failed to load",
+            "pass": true
+          },
+          {
+            "expected": "Error loading class net.minecraftforge.javafmlmod.applied-energistics-2 in applied-energistics-2-0.14.22.jar",
+            "got": "",
+            "pass": false
+          },
+          {
+            "expected": "Could not find com.electronwizard.config for xaeros-minimap, skipping",
+            "got": "\u201could ig Kop CC ronwizard.config for xaeros-",
+            "pass": false
+          },
+          {
+            "expected": "Chunk loading took 223 ms in dimension minecraft:overworld",
+            "got": "rinecattovomord",
+            "pass": false
+          },
+          {
+            "expected": "Retrying download of fabric-api: HTTP status 500",
+            "got": "Retrying download of fabric-api: HTTP status 500",
+            "pass": true
+          },
+          {
+            "expected": "Error loading class net.minecraftforge.fmlcore.supplementaries in supplementaries-1.16.5.jar",
+            "got": "",
+            "pass": false
+          },
+          {
+            "expected": "java.lang.NoClassDefFoundError: com.google.guava/supplementaries",
+            "got": "om rs et oundError com.google.guava/",
+            "pass": false
+          },
+          {
+            "expected": "Could not find net.minecraftforge.fmlcore for waystones, skipping",
+            "got": "Kopi find net.minecraftforge.fmlcore for waystones,",
+            "pass": false
+          },
+          {
+            "expected": "Server started on port 25566 after 31 seconds",
+            "got": "Server started on port 25566 after 31 seconds",
+            "pass": true
+          },
+          {
+            "expected": "Could not find net.minecraftforge.fmlcore for applied-energistics-2, skipping",
+            "got": "Nr not iy co iy rorge-micore for applied-",
+            "pass": false
+          },
+          {
+            "expected": "mekanism 1.19.2 is already installed in 1.19.2 Modded",
+            "got": "mekanism 1.19.2 is already installed in 1.19.2 Modded",
+            "pass": true
+          },
+          {
+            "expected": "Mod farmersdelight requires Minecraft 5.4.0 but found 47.2.0",
+            "got": "ag rmersdelight requires Minecraft 5.4.0 but found",
+            "pass": false
+          },
+          {
+            "expected": "Set JVM argument -Xmx6144M for Server Backup 2026",
+            "got": "Set JVM argument -Xmx6144M for Server Backup 2026",
+            "pass": true
+          },
+          {
+            "expected": "Unable to open C:\\Games\\MultiMC\\libraries\\net\\minecraftforge\\javafmlmod\\2.0.0-beta.4\\ironchests-2.0.0-beta.4.jar",
+            "got": "",
+            "pass": false
+          },
+          {
+            "expected": "jei 0.14.22 is already installed in 1.21 Survival",
+            "got": "jei 0.14.22 is already installed in 1.21 Survival",
+            "pass": true
+          },
+          {
+            "expected": "Failed to load mod oculus 47.4.10: missing dependency net.fabricmc.loader",
+            "got": "ralied to load mad ooulus 47.4.10: missing dependency",
+            "pass": false
+          },
+          {
+            "expected": "Downloaded jei-5.4.0.jar in 52 seconds",
+            "got": "Downloaded jei-5.4.0.jar in 52 seconds",
+            "pass": true
+          },
+          {
+            "expected": "Could not find org.lwjgl.glfw for xaeros-minimap, skipping",
+            "got": "Could not find org.lwjgl.glfw for xaeros-minimap, skipping",
+            "pass": true
+          },
+          {
+            "expected": "ironchests 1.20.4 is already installed in 1.20.1 6June2026Wiped9Nov2026",
+            "got": "6unez0zoWipedoNov202s",
+            "pass": false
+          },
+          {
+            "expected": "java.lang.NoClassDefFoundError: net.fabricmc.loader/alexsmobs",
+            "got": "java. lang MotlassbeffroundEror net.fabricmc.loader/",
+            "pass": false
+          },
+          {
+            "expected": "Chunk loading took 155 ms in dimension minecraft:overworld",
+            "got": "rinecatiovomord",
+            "pass": false
+          },
+          {
+            "expected": "Connection timed out while reading packet 228",
+            "got": "Connection timed out while reading packet 228",
+            "pass": true
+          },
+          {
+            "expected": "[INFO] Registered 864 recipes from xaeros-minimap",
+            "got": "[INFO] Registered 864 recipes from xaeros-minimap",
+            "pass": true
+          },
+          {
+            "expected": "Mod modmenu requires Minecraft 1.21 but found 0.15.3",
+            "got": "Mod modmenu requires Minecraft 1.21 but found 0.15.3",
+            "pass": true
+          },
+          {
+            "expected": "Set JVM argument -Xmx2048M for 1.19.2 Modded",
+            "got": "Set JVM argument -Xmx2048M for 1.19.2 Modded",
+            "pass": true
+          },
+          {
+            "expected": "Mod quark requires Minecraft 47.4.10 but found 2.0.0-beta.4",
+            "got": "vod guark requires Minecraft 47.4.10 but found 2.0.0-",
+            "pass": false
+          },
+          {
+            "expected": "Downloaded biomesoplenty-1.20.1.jar in 144 seconds",
+            "got": "Downloaded biomesoplenty-1.20.1.jar in 144 seconds",
+            "pass": true
+          },
+          {
+            "expected": "Missing dependency: com.electronwizard.config version 1.16.5 required by quark",
+            "got": "16.6 aad by somelectronwizard.config version",
+            "pass": false
+          },
+          {
+            "expected": "Error loading class com.electronwizard.config.waystones in waystones-1.19.2.jar",
+            "got": "aye cass pong \u00a9 Conard. config-waystones",
+            "pass": false
+          },
+          {
+            "expected": "Downloaded create-0.14.22.jar in 158 seconds",
+            "got": "Downloaded create-0.14.22.jar in 158 seconds",
+            "pass": true
+          },
+          {
+            "expected": "Crash report saved to E:\\Games\\MultiMC\\crash-reports\\crash-2026-11-26.txt",
+            "got": "",
+            "pass": false
+          },
+          {
+            "expected": "Set JVM argument -Xmx2048M for Server Backup 2026",
+            "got": "Set JVM argument -Xmx2048M for Server Backup 2026",
+            "pass": true
+          },
+          {
+            "expected": "[INFO] Registered 507 recipes from carpet",
+            "got": "[INFO] Registered 507 recipes from carpet",
+            "pass": true
+          },
+          {
+            "expected": "Error loading class org.spongepowered.mixin.create in create-1.20.1.jar",
+            "got": "emo load po org.spongepowered.mixin.create in",
+            "pass": false
+          },
+          {
+            "expected": "Crash report saved to E:\\Games\\MultiMC\\crash-reports\\crash-2026-11-25.txt",
+            "got": "",
+            "pass": false
+          },
+          {
+            "expected": "Found 534 mods, 8 failed to load",
+            "got": "Found 534 mods, 8 failed to load",
+            "pass": true
+          },
+          {
+            "expected": "Connection timed out while reading packet 165",
+            "got": "Connection timed out while reading packet 165",
+            "pass": true
+          },
+          {
+            "expected": "Crash report saved to D:\\Games\\MultiMC\\crash-reports\\crash-2026-11-23.txt",
+            "got": "",
+            "pass": false
+          },
+          {
+            "expected": "Loading mod list from C:\\Games\\MultiMC\\instances\\Server Backup 2026\\mods",
+            "got": "CamoaMUMOmatarces\\Server Backup 2026\\mods",
+            "pass": false
+          },
+          {
+            "expected": "Chunk loading took 208 ms in dimension minecraft:overworld",
+            "got": "rinecatiovomord",
+            "pass": false
+          },
+          {
+            "expected": "Chunk loading took 214 ms in dimension minecraft:overworld",
+            "got": "inecatiovomord",
+            "pass": false
+          },
+          {
+            "expected": "Deleted 671 old log files from E:\\Games\\MultiMC\\logs",
+            "got": "Deleted 671 old log files from E:\\Games\\MultiMC\\logs",
+            "pass": true
+          },
+          {
+            "expected": "Found 669 mods, 4 failed to load",
+            "got": "Found 669 mods, 4 failed to load",
+            "pass": true
+          },
+          {
+            "expected": "Deleted 362 old log files from E:\\Games\\MultiMC\\logs",
+            "got": "Deleted 362 old log files from E:\\Games\\MultiMC\\logs",
+            "pass": true
+          },
+          {
+            "expected": "java.lang.NoClassDefFoundError: net.minecraftforge.javafmlmod/farmersdelight",
+            "got": "me ators posit mod famersdelight",
+            "pass": false
+          },
+          {
+            "expected": "The Mod File C:\\Games\\MultiMC\\instances\\1.20.1 6June2026Wiped9Nov2026\\.minecraft\\mods\\sodium.jar has mods that were not found",
+            "got": "",
+            "pass": false
+          },
+          {
+            "expected": "carpet 1.20.4 is already installed in Server Backup 2026",
+            "got": "carpet 1.20.4 is already installed in Server Backup 2026",
+            "pass": true
+          },
+          {
+            "expected": "Server started on port 25566 after 188 seconds",
+            "got": "Server started on port 25566 after 188 seconds",
+            "pass": true
+          },
+          {
+            "expected": "Launching 1.19.2 Modded with 8192 MB of memory",
+            "got": "Launching 1.19.2 Modded with 8192 MB of memory",
+            "pass": true
+          },
+          {
+            "expected": "Unable to open E:\\Games\\MultiMC\\libraries\\org\\apache\\logging\\log4j\\3.1.8\\iris-3.1.8.jar",
+            "got": "ca resi Ciibra ries\\org\\apache\\logging\\log4j\\3.1.8\\",
+            "pass": false
+          },
+          {
+            "expected": "Error loading class com.google.guava.supplementaries in supplementaries-1.20.4.jar",
+            "got": "oon roa yJie-guava supplementaries in",
+            "pass": false
+          },
+          {
+            "expected": "Error loading class org.apache.logging.log4j.create in create-1.19.2.jar",
+            "got": "cor loading po org.apache.logging.log4j.create in",
+            "pass": false
+          },
+          {
+            "expected": "Connection timed out while reading packet 121",
+            "got": "Connection timed out while reading packet 121",
+            "pass": true
+          },
+          {
+            "expected": "The Mod File C:\\Games\\MultiMC\\instances\\1.20.1 Forge\\.minecraft\\mods\\terralith.jar has mods that were not found",
+            "got": "",
+            "pass": false
+          },
+          {
+            "expected": "iris 1.21 is already installed in Server Backup 2026",
+            "got": "iris 1.21 is already installed in Server Backup 2026",
+            "pass": true
+          },
+          {
+            "expected": "Found 885 mods, 7 failed to load",
+            "got": "Found 885 mods, 7 failed to load",
+            "pass": true
+          },
+          {
+            "expected": "The Mod File C:\\Games\\MultiMC\\instances\\1.21 Survival\\.minecraft\\mods\\terralith.jar has mods that were not found",
+            "got": "Sunil ir cram o \" Ao ali on Fo N de \" at were",
+            "pass": false
+          },
+          {
+            "expected": "Mod quark requires Minecraft 1.19.2 but found 3.1.8",
+            "got": "Mod quark requires Minecraft 1.19.2 but found 3.1.8",
+            "pass": true
+          },
+          {
+            "expected": "The Mod File E:\\Games\\MultiMC\\instances\\1.19.2 Modded\\.minecraft\\mods\\fabric-api.jar has mods that were not found",
+            "got": "",
+            "pass": false
+          },
+          {
+            "expected": "Unable to open C:\\Games\\MultiMC\\libraries\\org\\spongepowered\\mixin\\47.2.0\\modmenu-47.2.0.jar",
+            "got": "EE)",
+            "pass": false
+          },
+          {
+            "expected": "Found 532 mods, 7 failed to load",
+            "got": "Found 532 mods, 7 failed to load",
+            "pass": true
+          },
+          {
+            "expected": "Texture pack reloaded with 551 resources",
+            "got": "Texture pack reloaded with 551 resources",
+            "pass": true
+          },
+          {
+            "expected": "Connection timed out while reading packet 152",
+            "got": "Connection timed out while reading packet 152",
+            "pass": true
+          },
+          {
+            "expected": "Texture pack reloaded with 696 resources",
+            "got": "Texture pack reloaded with 696 resources",
+            "pass": true
+          },
+          {
+            "expected": "Connection timed out while reading packet 172",
+            "got": "Connection timed out while reading packet 172",
+            "pass": true
+          },
+          {
+            "expected": "java.lang.NoClassDefFoundError: org.apache.logging.log4j/iris",
+            "got": "",
+            "pass": false
+          },
+          {
+            "expected": "Server started on port 25565 after 16 seconds",
+            "got": "Server started on port 25565 after 16 seconds",
+            "pass": true
+          },
+          {
+            "expected": "The Mod File C:\\Games\\MultiMC\\instances\\1.20.4 Fabric\\.minecraft\\mods\\create.jar has mods that were not found",
+            "got": "",
+            "pass": false
+          },
+          {
+            "expected": "supplementaries 1.21 is already installed in 1.21 Survival",
+            "got": "supplementaries 1.21 is already installed in 1.21 Survival",
+            "pass": true
+          },
+          {
+            "expected": "Mod oculus requires Minecraft 1.20.4 but found 2.0.0-beta.4",
+            "got": "vod ooulus requires Minecraft 1.20.4 but found 2.0.0-",
+            "pass": false
+          },
+          {
+            "expected": "Set JVM argument -Xmx6144M for 1.19.2 Modded",
+            "got": "Set JVM argument -Xmx6144M for 1.19.2 Modded",
+            "pass": true
+          },
+          {
+            "expected": "Chunk loading took 135 ms in dimension minecraft:overworld",
+            "got": "rinecatiovomord",
+            "pass": false
+          },
+          {
+            "expected": "Mod terralith requires Minecraft 1.21 but found 2.0.0-beta.4",
+            "got": "vod terrain requires Minecraft 1.21 but found 2.0.0-",
+            "pass": false
+          },
+          {
+            "expected": "Chunk loading took 49 ms in dimension minecraft:overworld",
+            "got": "inecraftovemord",
+            "pass": false
+          },
+          {
+            "expected": "Retrying download of cloth-config: HTTP status 500",
+            "got": "Retrying download of cloth-config: HTTP status 500",
+            "pass": true
+          },
+          {
+            "expected": "Missing dependency: net.minecraftforge.fmlcore version 1.20.1 required by quark",
+            "got": "120.1 Saad by net minecraftiorge.fmicore version",
+            "pass": false
+          },
+          {
+            "expected": "farmersdelight 0.14.22 is already installed in 1.20.4 Fabric",
+            "got": "armersdelight 0.14.22 is already installed in 1.20.4",
+            "pass": false
+          },
+          {
+            "expected": "Skipping oculus: incompatible with forge 47.4.10",
+            "got": "Skipping oculus: incompatible with forge 47.4.10",
+            "pass": true
+          },
+          {
+            "expected": "Failed to load mod glassseam-fix 2.0.0-beta.4: missing dependency org.spongepowered.mixin",
+            "got": "dependency org spongepowereamixin",
+            "pass": false
+          },
+          {
+            "expected": "[INFO] Registered 495 recipes from supplementaries",
+            "got": "[INFO] Registered 495 recipes from supplementaries",
+            "pass": true
+          },
+          {
+            "expected": "Downloaded create-47.4.10.jar in 70 seconds",
+            "got": "Downloaded create-47.4.10.jar in 70 seconds",
+            "pass": true
+          },
+          {
+            "expected": "create 1.20.4 is already installed in Server Backup 2026",
+            "got": "create 1.20.4 is already installed in Server Backup 2026",
+            "pass": true
+          },
+          {
+            "expected": "Skipping ironchests: incompatible with forge 47.4.10",
+            "got": "Skipping ironchests: incompatible with forge 47.4.10",
+            "pass": true
+          },
+          {
+            "expected": "Server started on port 25566 after 94 seconds",
+            "got": "Server started on port 25566 after 94 seconds",
+            "pass": true
+          },
+          {
+            "expected": "Downloaded jei-0.14.22.jar in 240 seconds",
+            "got": "Downloaded jei-0.14.22.jar in 240 seconds",
+            "pass": true
+          },
+          {
+            "expected": "Connection timed out while reading packet 57",
+            "got": "Connection timed out while reading packet 57",
+            "pass": true
+          },
+          {
+            "expected": "Skipping fabric-api: incompatible with forge 0.15.3",
+            "got": "Skipping fabric-api: incompatible with forge 0.15.3",
+            "pass": true
+          },
+          {
+            "expected": "Downloaded terralith-0.14.22.jar in 198 seconds",
+            "got": "Downloaded terralith-0.14.22.jar in 198 seconds",
+            "pass": true
+          },
+          {
+            "expected": "Error loading class net.minecraftforge.javafmlmod.quark in quark-1.20.4.jar",
+            "got": "oar 29 ps net.minecraftforge.javafmimod.quark",
+            "pass": false
+          },
+          {
+            "expected": "[WARN] Config file ironchests-common.toml is out of date",
+            "got": "[WARN] Config file ironchests-common.toml is out of date",
+            "pass": true
+          },
+          {
+            "expected": "Unable to open D:\\Games\\MultiMC\\libraries\\com\\electronwizard\\config\\47.4.10\\ironchests-47.4.10.jar",
+            "got": "Games ro clectronwizardicontigidr.4",
+            "pass": false
+          },
+          {
+            "expected": "waystones 1.20.4 is already installed in 1.16.5 Create",
+            "got": "waystones 1.20.4 is already installed in 1.16.5 Create",
+            "pass": true
+          },
+          {
+            "expected": "Launching 1.21 Survival with 2048 MB of memory",
+            "got": "Launching 1.21 Survival with 2048 MB of memory",
+            "pass": true
+          },
+          {
+            "expected": "Mixin apply failed for com.google.guava: target class not found",
+            "got": "in apply failed for com.google.guava: target class not",
+            "pass": false
+          },
+          {
+            "expected": "Loading mod list from D:\\Games\\MultiMC\\instances\\1.16.5 Create\\mods",
+            "got": "pos ; : A .16.5 Create\\mods",
+            "pass": false
+          },
+          {
+            "expected": "Launching 1.19.2 Modded with 6144 MB of memory",
+            "got": "Launching 1.19.2 Modded with 6144 MB of memory",
+            "pass": true
+          },
+          {
+            "expected": "Downloaded oculus-1.20.4.jar in 25 seconds",
+            "got": "Downloaded oculus-1.20.4.jar in 25 seconds",
+            "pass": true
+          },
+          {
+            "expected": "The Mod File E:\\Games\\MultiMC\\instances\\1.20.4 Fabric\\.minecraft\\mods\\biomesoplenty.jar has mods that were not found",
+            "got": "",
+            "pass": false
+          },
+          {
+            "expected": "Mixin apply failed for com.electronwizard.config: target class not found",
+            "got": "vor app railed for com.electronwizard.config: target",
+            "pass": false
+          },
+          {
+            "expected": "Mod supplementaries requires Minecraft 0.14.22 but found 47.2.0",
+            "got": "vod Supp ementaries requires Minecraft 0.14.22 but",
+            "pass": false
+          },
+          {
+            "expected": "Retrying download of oculus: HTTP status 500",
+            "got": "Retrying download of oculus: HTTP status 500",
+            "pass": true
+          },
+          {
+            "expected": "Mod create requires Minecraft 1.16.5 but found 47.2.0",
+            "got": "Mod create requires Minecraft 1.16.5 but found 47.2.0",
+            "pass": true
+          },
+          {
+            "expected": "Found 455 mods, 3 failed to load",
+            "got": "Found 455 mods, 3 failed to load",
+            "pass": true
+          },
+          {
+            "expected": "Deleted 722 old log files from D:\\Games\\MultiMC\\logs",
+            "got": "Deleted 722 old log files from D:\\Games\\MultiMC\\logs",
+            "pass": true
+          },
+          {
+            "expected": "Missing dependency: net.minecraftforge.javafmlmod version 0.14.22 required by cloth-config",
+            "got": "version 0.14.22 required by dlotnconty",
+            "pass": false
+          },
+          {
+            "expected": "applied-energistics-2 0.14.22 is already installed in 1.19.2 Modded",
+            "got": "app ioc energistics-2 0.14.22 is already installed in 1.19.2",
+            "pass": false
+          },
+          {
+            "expected": "The Mod File D:\\Games\\MultiMC\\instances\\Server Backup 2026\\.minecraft\\mods\\iris.jar has mods that were not found",
+            "got": "",
+            "pass": false
+          },
+          {
+            "expected": "java.lang.NoClassDefFoundError: net.minecraftforge.fmlcore/carpet",
+            "got": "",
+            "pass": false
+          },
+          {
+            "expected": "Unable to open D:\\Games\\MultiMC\\libraries\\net\\minecraftforge\\fmlcore\\47.2.0\\carpet-47.2.0.jar",
+            "got": "Games Cltrarisiatinecrtiorglmcra",
+            "pass": false
+          },
+          {
+            "expected": "Skipping sodium: incompatible with forge 3.1.8",
+            "got": "Skipping sodium: incompatible with forge 3.1.8",
+            "pass": true
+          },
+          {
+            "expected": "java.lang.NoClassDefFoundError: org.lwjgl.glfw/create",
+            "got": "java.lang.NoClassDefFoundError: org.lwjgl.glfw/create",
+            "pass": true
+          },
+          {
+            "expected": "Chunk loading took 70 ms in dimension minecraft:overworld",
+            "got": "inecraftovemord",
+            "pass": false
+          },
+          {
+            "expected": "Connection timed out while reading packet 27",
+            "got": "Connection timed out while reading packet 27",
+            "pass": true
+          },
+          {
+            "expected": "Error loading class net.fabricmc.loader.cloth-config in cloth-config-1.21.jar",
+            "got": "othoanfiod pops net fabricmo.Joader.cloth-config in",
+            "pass": false
+          },
+          {
+            "expected": "The Mod File D:\\Games\\MultiMC\\instances\\1.20.1 6June2026Wiped9Nov2026\\.minecraft\\mods\\create.jar has mods that were not found",
+            "got": "",
+            "pass": false
+          },
+          {
+            "expected": "Downloaded sodium-47.4.10.jar in 173 seconds",
+            "got": "Downloaded sodium-47.4.10.jar in 173 seconds",
+            "pass": true
+          },
+          {
+            "expected": "Could not find com.electronwizard.config for jei, skipping",
+            "got": "Could not find com.electronwizard.config for jei, skipping",
+            "pass": true
+          },
+          {
+            "expected": "Missing dependency: org.lwjgl.glfw version 47.4.10 required by biomesoplenty",
+            "got": "oui bo oma 10th version 47.4.10",
+            "pass": false
+          },
+          {
+            "expected": "terralith 1.21 is already installed in 1.16.5 Create",
+            "got": "terralith 1.21 is already installed in 1.16.5 Create",
+            "pass": true
+          },
+          {
+            "expected": "Unable to open C:\\Games\\MultiMC\\libraries\\net\\minecraftforge\\javafmlmod\\47.4.10\\biomesoplenty-47.4.10.jar",
+            "got": "",
+            "pass": false
+          },
+          {
+            "expected": "Texture pack reloaded with 582 resources",
+            "got": "Texture pack reloaded with 582 resources",
+            "pass": true
+          },
+          {
+            "expected": "applied-energistics-2 5.4.0 is already installed in 1.20.4 Fabric",
+            "got": "appled-energistics-2 5.4.0 is already installed in 1.20.4",
+            "pass": false
+          },
+          {
+            "expected": "Error loading class net.fabricmc.loader.create in create-1.20.4.jar",
+            "got": "cor loading po net.fabricmc.loader.create in",
+            "pass": false
+          },
+          {
+            "expected": "The Mod File C:\\Games\\MultiMC\\instances\\Server Backup 2026\\.minecraft\\mods\\alexsmobs.jar has mods that were not found",
+            "got": "",
+            "pass": false
+          },
+          {
+            "expected": "Connection timed out while reading packet 120",
+            "got": "Connection timed out while reading packet 120",
+            "pass": true
+          },
+          {
+            "expected": "Failed to load mod carpet 47.2.0: missing dependency com.electronwizard.config",
+            "got": "railed to rawirard cont 47.2.0: missing dependency",
+            "pass": false
+          },
+          {
+            "expected": "Texture pack reloaded with 408 resources",
+            "got": "Texture pack reloaded with 408 resources",
+            "pass": true
+          },
+          {
+            "expected": "Failed to load mod sodium 47.2.0: missing dependency net.fabricmc.loader",
+            "got": "ralied to load mad sodium 47.2.0: missing dependency",
+            "pass": false
+          },
+          {
+            "expected": "Chunk loading took 238 ms in dimension minecraft:overworld",
+            "got": "rinecatiovomord",
+            "pass": false
+          },
+          {
+            "expected": "Loading mod list from D:\\Games\\MultiMC\\instances\\1.20.1 6June2026Wiped9Nov2026\\mods",
+            "got": "",
+            "pass": false
+          },
+          {
+            "expected": "Saved world settings to disk successfully",
+            "got": "Saved world settings to disk successfully",
+            "pass": true
+          },
+          {
+            "expected": "Mod modmenu requires Minecraft 5.4.0 but found 47.4.10",
+            "got": "Mod modmenu requires Minecraft 5.4.0 but found 47.4.10",
+            "pass": true
+          },
+          {
+            "expected": "Could not find com.electronwizard.config for supplementaries, skipping",
+            "got": "enrioms nnd gh neo reontie for",
+            "pass": false
+          },
+          {
+            "expected": "Unable to open C:\\Games\\MultiMC\\libraries\\com\\google\\guava\\47.2.0\\modmenu-47.2.0.jar",
+            "got": "ames UHCI comgooglguavad? 2c",
+            "pass": false
+          },
+          {
+            "expected": "Crash report saved to E:\\Games\\MultiMC\\crash-reports\\crash-2026-11-20.txt",
+            "got": "",
+            "pass": false
+          },
+          {
+            "expected": "Chunk loading took 142 ms in dimension minecraft:overworld",
+            "got": "rinecatiovomord",
+            "pass": false
+          },
+          {
+            "expected": "Chunk loading took 20 ms in dimension minecraft:overworld",
+            "got": "inecaftovemord",
+            "pass": false
+          },
+          {
+            "expected": "Found 313 mods, 2 failed to load",
+            "got": "Found 313 mods, 2 failed to load",
+            "pass": true
+          }
+        ],
+        "misses": [
+          {
+            "expected": "java.lang.NoClassDefFoundError: com.electronwizard.config/cloth-config",
+            "got": "com elechronwizard configcloth-conti"
+          },
+          {
+            "expected": "Error loading class net.minecraftforge.fmlcore.oculus in oculus-1.20.4.jar",
+            "got": "=ror pA net.minecraftforge.fmlcore.oculus in"
+          },
+          {
+            "expected": "The Mod File D:\\Games\\MultiMC\\instances\\Server Backup 2026\\.minecraft\\mods\\fabric-api.jar has mods that were not found",
+            "got": ""
+          },
+          {
+            "expected": "Unable to open C:\\Games\\MultiMC\\libraries\\com\\google\\guava\\3.1.8\\iris-3.1.8.jar",
+            "got": "ca esl Cuibra ries\\com\\google\\guava\\3.1.8\\iris-3.1"
+          },
+          {
+            "expected": "Missing dependency: net.minecraftforge.fmlcore version 1.20.1 required by alexsmobs",
+            "got": "120.1 Saad bye net mnecraftiorge.micore version"
+          }
+        ],
+        "total": 200
+      }
+    }
+  }
+}

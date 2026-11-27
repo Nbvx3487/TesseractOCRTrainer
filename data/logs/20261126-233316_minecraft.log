@@ -1,0 +1,2865 @@
+23:33:16 Run started: 20261126-233316_minecraft
+23:33:16 Model: minecraft
+23:33:16 Iterations: 10, font size: 32px
+23:33:16 Corpus: 1000 lines, generated automatically (copy in logs: 20261126-233316_minecraft_corpus.txt)
+23:33:16 Font: C:\WINDOWS\Fonts\arial.ttf (weight 1)
+23:33:16 Starting the trainer in WSL. The first output can take a little while.
+23:33:16 WSL started (process 28616), waiting for the trainer.
+23:33:16 Trainer started: minecraft, 10 iterations, font size 32px
+23:33:16 $ combine_tessdata -e /mnt/c/Users/Nbvx Teo/Documents/_Programming/GitHub/TesseractOCRTrainer/data/runs/20261126-233316_minecraft/minecraft/base/eng.traineddata /mnt/c/Users/Nbvx Teo/Documents/_Programming/GitHub/TesseractOCRTrainer/data/runs/20261126-233316_minecraft/minecraft/base/eng.lstm
+23:33:16 Extracting tessdata components from /mnt/c/Users/Nbvx Teo/Documents/_Programming/GitHub/TesseractOCRTrainer/data/runs/20261126-233316_minecraft/minecraft/base/eng.traineddata
+23:33:16 Wrote /mnt/c/Users/Nbvx Teo/Documents/_Programming/GitHub/TesseractOCRTrainer/data/runs/20261126-233316_minecraft/minecraft/base/eng.lstm
+23:33:16 Version:4.00.00alpha:eng:synth20170629:[1,36,0,1Ct3,3,16Mp3,3Lfys64Lfx96Lrx96Lfx512O1c1]
+23:33:16 17:lstm:size=11689099, offset=192
+23:33:16 18:lstm-punc-dawg:size=4322, offset=11689291
+23:33:16 19:lstm-word-dawg:size=3694794, offset=11693613
+23:33:16 20:lstm-number-dawg:size=4738, offset=15388407
+23:33:16 21:lstm-unicharset:size=6360, offset=15393145
+23:33:16 22:lstm-recoder:size=1012, offset=15399505
+23:33:16 23:version:size=80, offset=15400517
+23:33:16 Corpus: 800 training lines, 200 held-out lines
+23:33:16 Rendering 200 held-out lines in 0_arial
+23:33:17   rendered 1/200 lines in 0_arial
+23:33:17   rendered 2/200 lines in 0_arial
+23:33:17   rendered 3/200 lines in 0_arial
+23:33:17   rendered 4/200 lines in 0_arial
+23:33:18   rendered 5/200 lines in 0_arial
+23:33:18   rendered 6/200 lines in 0_arial
+23:33:18   rendered 7/200 lines in 0_arial
+23:33:18   rendered 8/200 lines in 0_arial
+23:33:19   rendered 9/200 lines in 0_arial
+23:33:19   rendered 10/200 lines in 0_arial
+23:33:19   rendered 11/200 lines in 0_arial
+23:33:19   rendered 12/200 lines in 0_arial
+23:33:20   rendered 13/200 lines in 0_arial
+23:33:20   rendered 14/200 lines in 0_arial
+23:33:20   rendered 15/200 lines in 0_arial
+23:33:20   rendered 16/200 lines in 0_arial
+23:33:21   rendered 17/200 lines in 0_arial
+23:33:21   rendered 18/200 lines in 0_arial
+23:33:21   rendered 19/200 lines in 0_arial
+23:33:21   rendered 20/200 lines in 0_arial
+23:33:22   rendered 21/200 lines in 0_arial
+23:33:22   rendered 22/200 lines in 0_arial
+23:33:22   rendered 23/200 lines in 0_arial
+23:33:22   rendered 24/200 lines in 0_arial
+23:33:23   rendered 25/200 lines in 0_arial
+23:33:23   rendered 26/200 lines in 0_arial
+23:33:23   rendered 27/200 lines in 0_arial
+23:33:23   rendered 28/200 lines in 0_arial
+23:33:24   rendered 29/200 lines in 0_arial
+23:33:24   rendered 30/200 lines in 0_arial
+23:33:24   rendered 31/200 lines in 0_arial
+23:33:24   rendered 32/200 lines in 0_arial
+23:33:25   rendered 33/200 lines in 0_arial
+23:33:25   rendered 34/200 lines in 0_arial
+23:33:25   rendered 35/200 lines in 0_arial
+23:33:25   rendered 36/200 lines in 0_arial
+23:33:26   rendered 37/200 lines in 0_arial
+23:33:26   rendered 38/200 lines in 0_arial
+23:33:26   rendered 39/200 lines in 0_arial
+23:33:26   rendered 40/200 lines in 0_arial
+23:33:27   rendered 41/200 lines in 0_arial
+23:33:27   rendered 42/200 lines in 0_arial
+23:33:27   rendered 43/200 lines in 0_arial
+23:33:27   rendered 44/200 lines in 0_arial
+23:33:27   rendered 45/200 lines in 0_arial
+23:33:28   rendered 46/200 lines in 0_arial
+23:33:28   rendered 47/200 lines in 0_arial
+23:33:28   rendered 48/200 lines in 0_arial
+23:33:28   rendered 49/200 lines in 0_arial
+23:33:28   rendered 50/200 lines in 0_arial
+23:33:29   rendered 51/200 lines in 0_arial
+23:33:29   rendered 52/200 lines in 0_arial
+23:33:29   rendered 53/200 lines in 0_arial
+23:33:30   rendered 54/200 lines in 0_arial
+23:33:30   rendered 55/200 lines in 0_arial
+23:33:30   rendered 56/200 lines in 0_arial
+23:33:30   rendered 57/200 lines in 0_arial
+23:33:31   rendered 58/200 lines in 0_arial
+23:33:31   rendered 59/200 lines in 0_arial
+23:33:31   rendered 60/200 lines in 0_arial
+23:33:31   rendered 61/200 lines in 0_arial
+23:33:31   rendered 62/200 lines in 0_arial
+23:33:32   rendered 63/200 lines in 0_arial
+23:33:32   rendered 64/200 lines in 0_arial
+23:33:32   rendered 65/200 lines in 0_arial
+23:33:32   rendered 66/200 lines in 0_arial
+23:33:33   rendered 67/200 lines in 0_arial
+23:33:33   rendered 68/200 lines in 0_arial
+23:33:33   rendered 69/200 lines in 0_arial
+23:33:33   rendered 70/200 lines in 0_arial
+23:33:34   rendered 71/200 lines in 0_arial
+23:33:34   rendered 72/200 lines in 0_arial
+23:33:34   rendered 73/200 lines in 0_arial
+23:33:34   rendered 74/200 lines in 0_arial
+23:33:35   rendered 75/200 lines in 0_arial
+23:33:35   rendered 76/200 lines in 0_arial
+23:33:35   rendered 77/200 lines in 0_arial
+23:33:35   rendered 78/200 lines in 0_arial
+23:33:36   rendered 79/200 lines in 0_arial
+23:33:36   rendered 80/200 lines in 0_arial
+23:33:36   rendered 81/200 lines in 0_arial
+23:33:36   rendered 82/200 lines in 0_arial
+23:33:37   rendered 83/200 lines in 0_arial
+23:33:37   rendered 84/200 lines in 0_arial
+23:33:37   rendered 85/200 lines in 0_arial
+23:33:37   rendered 86/200 lines in 0_arial
+23:33:38   rendered 87/200 lines in 0_arial
+23:33:38   rendered 88/200 lines in 0_arial
+23:33:38   rendered 89/200 lines in 0_arial
+23:33:38   rendered 90/200 lines in 0_arial
+23:33:39   rendered 91/200 lines in 0_arial
+23:33:39   rendered 92/200 lines in 0_arial
+23:33:39   rendered 93/200 lines in 0_arial
+23:33:39   rendered 94/200 lines in 0_arial
+23:33:40   rendered 95/200 lines in 0_arial
+23:33:40   rendered 96/200 lines in 0_arial
+23:33:40   rendered 97/200 lines in 0_arial
+23:33:40   rendered 98/200 lines in 0_arial
+23:33:41   rendered 99/200 lines in 0_arial
+23:33:41   rendered 100/200 lines in 0_arial
+23:33:41   rendered 101/200 lines in 0_arial
+23:33:41   rendered 102/200 lines in 0_arial
+23:33:41   rendered 103/200 lines in 0_arial
+23:33:42   rendered 104/200 lines in 0_arial
+23:33:42   rendered 105/200 lines in 0_arial
+23:33:42   rendered 106/200 lines in 0_arial
+23:33:42   rendered 107/200 lines in 0_arial
+23:33:42   rendered 108/200 lines in 0_arial
+23:33:43   rendered 109/200 lines in 0_arial
+23:33:43   rendered 110/200 lines in 0_arial
+23:33:43   rendered 111/200 lines in 0_arial
+23:33:43   rendered 112/200 lines in 0_arial
+23:33:44   rendered 113/200 lines in 0_arial
+23:33:44   rendered 114/200 lines in 0_arial
+23:33:44   rendered 115/200 lines in 0_arial
+23:33:44   rendered 116/200 lines in 0_arial
+23:33:45   rendered 117/200 lines in 0_arial
+23:33:45   rendered 118/200 lines in 0_arial
+23:33:45   rendered 119/200 lines in 0_arial
+23:33:45   rendered 120/200 lines in 0_arial
+23:33:46   rendered 121/200 lines in 0_arial
+23:33:46   rendered 122/200 lines in 0_arial
+23:33:46   rendered 123/200 lines in 0_arial
+23:33:46   rendered 124/200 lines in 0_arial
+23:33:47   rendered 125/200 lines in 0_arial
+23:33:47   rendered 126/200 lines in 0_arial
+23:33:47   rendered 127/200 lines in 0_arial
+23:33:47   rendered 128/200 lines in 0_arial
+23:33:48   rendered 129/200 lines in 0_arial
+23:33:48   rendered 130/200 lines in 0_arial
+23:33:48   rendered 131/200 lines in 0_arial
+23:33:48   rendered 132/200 lines in 0_arial
+23:33:49   rendered 133/200 lines in 0_arial
+23:33:49   rendered 134/200 lines in 0_arial
+23:33:49   rendered 135/200 lines in 0_arial
+23:33:49   rendered 136/200 lines in 0_arial
+23:33:50   rendered 137/200 lines in 0_arial
+23:33:50   rendered 138/200 lines in 0_arial
+23:33:50   rendered 139/200 lines in 0_arial
+23:33:50   rendered 140/200 lines in 0_arial
+23:33:51   rendered 141/200 lines in 0_arial
+23:33:51   rendered 142/200 lines in 0_arial
+23:33:51   rendered 143/200 lines in 0_arial
+23:33:51   rendered 144/200 lines in 0_arial
+23:33:51   rendered 145/200 lines in 0_arial
+23:33:51   rendered 146/200 lines in 0_arial
+23:33:52   rendered 147/200 lines in 0_arial
+23:33:52   rendered 148/200 lines in 0_arial
+23:33:52   rendered 149/200 lines in 0_arial
+23:33:52   rendered 150/200 lines in 0_arial
+23:33:53   rendered 151/200 lines in 0_arial
+23:33:53   rendered 152/200 lines in 0_arial
+23:33:53   rendered 153/200 lines in 0_arial
+23:33:53   rendered 154/200 lines in 0_arial
+23:33:54   rendered 155/200 lines in 0_arial
+23:33:54   rendered 156/200 lines in 0_arial
+23:33:54   rendered 157/200 lines in 0_arial
+23:33:54   rendered 158/200 lines in 0_arial
+23:33:55   rendered 159/200 lines in 0_arial
+23:33:55   rendered 160/200 lines in 0_arial
+23:33:55   rendered 161/200 lines in 0_arial
+23:33:55   rendered 162/200 lines in 0_arial
+23:33:56   rendered 163/200 lines in 0_arial
+23:33:56   rendered 164/200 lines in 0_arial
+23:33:56   rendered 165/200 lines in 0_arial
+23:33:56   rendered 166/200 lines in 0_arial
+23:33:57   rendered 167/200 lines in 0_arial
+23:33:57   rendered 168/200 lines in 0_arial
+23:33:57   rendered 169/200 lines in 0_arial
+23:33:57   rendered 170/200 lines in 0_arial
+23:33:58   rendered 171/200 lines in 0_arial
+23:33:58   rendered 172/200 lines in 0_arial
+23:33:58   rendered 173/200 lines in 0_arial
+23:33:58   rendered 174/200 lines in 0_arial
+23:33:59   rendered 175/200 lines in 0_arial
+23:33:59   rendered 176/200 lines in 0_arial
+23:33:59   rendered 177/200 lines in 0_arial
+23:33:59   rendered 178/200 lines in 0_arial
+23:34:00   rendered 179/200 lines in 0_arial
+23:34:00   rendered 180/200 lines in 0_arial
+23:34:00   rendered 181/200 lines in 0_arial
+23:34:00   rendered 182/200 lines in 0_arial
+23:34:01   rendered 183/200 lines in 0_arial
+23:34:01   rendered 184/200 lines in 0_arial
+23:34:01   rendered 185/200 lines in 0_arial
+23:34:01   rendered 186/200 lines in 0_arial
+23:34:02   rendered 187/200 lines in 0_arial
+23:34:02   rendered 188/200 lines in 0_arial
+23:34:02   rendered 189/200 lines in 0_arial
+23:34:02   rendered 190/200 lines in 0_arial
+23:34:03   rendered 191/200 lines in 0_arial
+23:34:03   rendered 192/200 lines in 0_arial
+23:34:03   rendered 193/200 lines in 0_arial
+23:34:03   rendered 194/200 lines in 0_arial
+23:34:04   rendered 195/200 lines in 0_arial
+23:34:04   rendered 196/200 lines in 0_arial
+23:34:04   rendered 197/200 lines in 0_arial
+23:34:04   rendered 198/200 lines in 0_arial
+23:34:04   rendered 199/200 lines in 0_arial
+23:34:04   rendered 200/200 lines in 0_arial
+23:34:04 Rendered 200 held-out images in 0_arial
+23:34:05   checked 1/200 lines in 0_arial (before training)
+23:34:05   checked 2/200 lines in 0_arial (before training)
+23:34:05   checked 3/200 lines in 0_arial (before training)
+23:34:05   checked 4/200 lines in 0_arial (before training)
+23:34:05   checked 5/200 lines in 0_arial (before training)
+23:34:06   checked 6/200 lines in 0_arial (before training)
+23:34:06   checked 7/200 lines in 0_arial (before training)
+23:34:06   checked 8/200 lines in 0_arial (before training)
+23:34:06   checked 9/200 lines in 0_arial (before training)
+23:34:06   checked 10/200 lines in 0_arial (before training)
+23:34:06   checked 11/200 lines in 0_arial (before training)
+23:34:07   checked 12/200 lines in 0_arial (before training)
+23:34:07   checked 13/200 lines in 0_arial (before training)
+23:34:07   checked 14/200 lines in 0_arial (before training)
+23:34:07   checked 15/200 lines in 0_arial (before training)
+23:34:07   checked 16/200 lines in 0_arial (before training)
+23:34:08   checked 17/200 lines in 0_arial (before training)
+23:34:08   checked 18/200 lines in 0_arial (before training)
+23:34:08   checked 19/200 lines in 0_arial (before training)
+23:34:08   checked 20/200 lines in 0_arial (before training)
+23:34:08   checked 21/200 lines in 0_arial (before training)
+23:34:08   checked 22/200 lines in 0_arial (before training)
+23:34:09   checked 23/200 lines in 0_arial (before training)
+23:34:09   checked 24/200 lines in 0_arial (before training)
+23:34:09   checked 25/200 lines in 0_arial (before training)
+23:34:09   checked 26/200 lines in 0_arial (before training)
+23:34:09   checked 27/200 lines in 0_arial (before training)
+23:34:10   checked 28/200 lines in 0_arial (before training)
+23:34:10   checked 29/200 lines in 0_arial (before training)
+23:34:10   checked 30/200 lines in 0_arial (before training)
+23:34:10   checked 31/200 lines in 0_arial (before training)
+23:34:10   checked 32/200 lines in 0_arial (before training)
+23:34:11   checked 33/200 lines in 0_arial (before training)
+23:34:11   checked 34/200 lines in 0_arial (before training)
+23:34:11   checked 35/200 lines in 0_arial (before training)
+23:34:11   checked 36/200 lines in 0_arial (before training)
+23:34:11   checked 37/200 lines in 0_arial (before training)
+23:34:11   checked 38/200 lines in 0_arial (before training)
+23:34:12   checked 39/200 lines in 0_arial (before training)
+23:34:12   checked 40/200 lines in 0_arial (before training)
+23:34:12   checked 41/200 lines in 0_arial (before training)
+23:34:12   checked 42/200 lines in 0_arial (before training)
+23:34:12   checked 43/200 lines in 0_arial (before training)
+23:34:13   checked 44/200 lines in 0_arial (before training)
+23:34:13   checked 45/200 lines in 0_arial (before training)
+23:34:13   checked 46/200 lines in 0_arial (before training)
+23:34:13   checked 47/200 lines in 0_arial (before training)
+23:34:13   checked 48/200 lines in 0_arial (before training)
+23:34:14   checked 49/200 lines in 0_arial (before training)
+23:34:14   checked 50/200 lines in 0_arial (before training)
+23:34:14   checked 51/200 lines in 0_arial (before training)
+23:34:14   checked 52/200 lines in 0_arial (before training)
+23:34:14   checked 53/200 lines in 0_arial (before training)
+23:34:15   checked 54/200 lines in 0_arial (before training)
+23:34:15   checked 55/200 lines in 0_arial (before training)
+23:34:15   checked 56/200 lines in 0_arial (before training)
+23:34:15   checked 57/200 lines in 0_arial (before training)
+23:34:15   checked 58/200 lines in 0_arial (before training)
+23:34:15   checked 59/200 lines in 0_arial (before training)
+23:34:16   checked 60/200 lines in 0_arial (before training)
+23:34:16   checked 61/200 lines in 0_arial (before training)
+23:34:16   checked 62/200 lines in 0_arial (before training)
+23:34:16   checked 63/200 lines in 0_arial (before training)
+23:34:16   checked 64/200 lines in 0_arial (before training)
+23:34:17   checked 65/200 lines in 0_arial (before training)
+23:34:17   checked 66/200 lines in 0_arial (before training)
+23:34:17   checked 67/200 lines in 0_arial (before training)
+23:34:17   checked 68/200 lines in 0_arial (before training)
+23:34:17   checked 69/200 lines in 0_arial (before training)
+23:34:17   checked 70/200 lines in 0_arial (before training)
+23:34:18   checked 71/200 lines in 0_arial (before training)
+23:34:18   checked 72/200 lines in 0_arial (before training)
+23:34:18   checked 73/200 lines in 0_arial (before training)
+23:34:18   checked 74/200 lines in 0_arial (before training)
+23:34:18   checked 75/200 lines in 0_arial (before training)
+23:34:19   checked 76/200 lines in 0_arial (before training)
+23:34:19   checked 77/200 lines in 0_arial (before training)
+23:34:19   checked 78/200 lines in 0_arial (before training)
+23:34:19   checked 79/200 lines in 0_arial (before training)
+23:34:19   checked 80/200 lines in 0_arial (before training)
+23:34:20   checked 81/200 lines in 0_arial (before training)
+23:34:20   checked 82/200 lines in 0_arial (before training)
+23:34:20   checked 83/200 lines in 0_arial (before training)
+23:34:20   checked 84/200 lines in 0_arial (before training)
+23:34:20   checked 85/200 lines in 0_arial (before training)
+23:34:20   checked 86/200 lines in 0_arial (before training)
+23:34:21   checked 87/200 lines in 0_arial (before training)
+23:34:21   checked 88/200 lines in 0_arial (before training)
+23:34:21   checked 89/200 lines in 0_arial (before training)
+23:34:21   checked 90/200 lines in 0_arial (before training)
+23:34:21   checked 91/200 lines in 0_arial (before training)
+23:34:22   checked 92/200 lines in 0_arial (before training)
+23:34:22   checked 93/200 lines in 0_arial (before training)
+23:34:22   checked 94/200 lines in 0_arial (before training)
+23:34:22   checked 95/200 lines in 0_arial (before training)
+23:34:22   checked 96/200 lines in 0_arial (before training)
+23:34:23   checked 97/200 lines in 0_arial (before training)
+23:34:23   checked 98/200 lines in 0_arial (before training)
+23:34:23   checked 99/200 lines in 0_arial (before training)
+23:34:23   checked 100/200 lines in 0_arial (before training)
+23:34:23   checked 101/200 lines in 0_arial (before training)
+23:34:24   checked 102/200 lines in 0_arial (before training)
+23:34:24   checked 103/200 lines in 0_arial (before training)
+23:34:24   checked 104/200 lines in 0_arial (before training)
+23:34:24   checked 105/200 lines in 0_arial (before training)
+23:34:24   checked 106/200 lines in 0_arial (before training)
+23:34:24   checked 107/200 lines in 0_arial (before training)
+23:34:25   checked 108/200 lines in 0_arial (before training)
+23:34:25   checked 109/200 lines in 0_arial (before training)
+23:34:25   checked 110/200 lines in 0_arial (before training)
+23:34:25   checked 111/200 lines in 0_arial (before training)
+23:34:25   checked 112/200 lines in 0_arial (before training)
+23:34:26   checked 113/200 lines in 0_arial (before training)
+23:34:26   checked 114/200 lines in 0_arial (before training)
+23:34:26   checked 115/200 lines in 0_arial (before training)
+23:34:26   checked 116/200 lines in 0_arial (before training)
+23:34:26   checked 117/200 lines in 0_arial (before training)
+23:34:27   checked 118/200 lines in 0_arial (before training)
+23:34:27   checked 119/200 lines in 0_arial (before training)
+23:34:27   checked 120/200 lines in 0_arial (before training)
+23:34:27   checked 121/200 lines in 0_arial (before training)
+23:34:27   checked 122/200 lines in 0_arial (before training)
+23:34:28   checked 123/200 lines in 0_arial (before training)
+23:34:28   checked 124/200 lines in 0_arial (before training)
+23:34:28   checked 125/200 lines in 0_arial (before training)
+23:34:28   checked 126/200 lines in 0_arial (before training)
+23:34:28   checked 127/200 lines in 0_arial (before training)
+23:34:29   checked 128/200 lines in 0_arial (before training)
+23:34:29   checked 129/200 lines in 0_arial (before training)
+23:34:29   checked 130/200 lines in 0_arial (before training)
+23:34:29   checked 131/200 lines in 0_arial (before training)
+23:34:29   checked 132/200 lines in 0_arial (before training)
+23:34:30   checked 133/200 lines in 0_arial (before training)
+23:34:30   checked 134/200 lines in 0_arial (before training)
+23:34:30   checked 135/200 lines in 0_arial (before training)
+23:34:30   checked 136/200 lines in 0_arial (before training)
+23:34:30   checked 137/200 lines in 0_arial (before training)
+23:34:31   checked 138/200 lines in 0_arial (before training)
+23:34:31   checked 139/200 lines in 0_arial (before training)
+23:34:31   checked 140/200 lines in 0_arial (before training)
+23:34:31   checked 141/200 lines in 0_arial (before training)
+23:34:31   checked 142/200 lines in 0_arial (before training)
+23:34:31   checked 143/200 lines in 0_arial (before training)
+23:34:32   checked 144/200 lines in 0_arial (before training)
+23:34:32   checked 145/200 lines in 0_arial (before training)
+23:34:32   checked 146/200 lines in 0_arial (before training)
+23:34:32   checked 147/200 lines in 0_arial (before training)
+23:34:32   checked 148/200 lines in 0_arial (before training)
+23:34:33   checked 149/200 lines in 0_arial (before training)
+23:34:33   checked 150/200 lines in 0_arial (before training)
+23:34:33   checked 151/200 lines in 0_arial (before training)
+23:34:33   checked 152/200 lines in 0_arial (before training)
+23:34:33   checked 153/200 lines in 0_arial (before training)
+23:34:34   checked 154/200 lines in 0_arial (before training)
+23:34:34   checked 155/200 lines in 0_arial (before training)
+23:34:34   checked 156/200 lines in 0_arial (before training)
+23:34:34   checked 157/200 lines in 0_arial (before training)
+23:34:34   checked 158/200 lines in 0_arial (before training)
+23:34:34   checked 159/200 lines in 0_arial (before training)
+23:34:35   checked 160/200 lines in 0_arial (before training)
+23:34:35   checked 161/200 lines in 0_arial (before training)
+23:34:35   checked 162/200 lines in 0_arial (before training)
+23:34:35   checked 163/200 lines in 0_arial (before training)
+23:34:35   checked 164/200 lines in 0_arial (before training)
+23:34:36   checked 165/200 lines in 0_arial (before training)
+23:34:36   checked 166/200 lines in 0_arial (before training)
+23:34:36   checked 167/200 lines in 0_arial (before training)
+23:34:36   checked 168/200 lines in 0_arial (before training)
+23:34:36   checked 169/200 lines in 0_arial (before training)
+23:34:36   checked 170/200 lines in 0_arial (before training)
+23:34:37   checked 171/200 lines in 0_arial (before training)
+23:34:37   checked 172/200 lines in 0_arial (before training)
+23:34:37   checked 173/200 lines in 0_arial (before training)
+23:34:37   checked 174/200 lines in 0_arial (before training)
+23:34:37   checked 175/200 lines in 0_arial (before training)
+23:34:38   checked 176/200 lines in 0_arial (before training)
+23:34:38   checked 177/200 lines in 0_arial (before training)
+23:34:38   checked 178/200 lines in 0_arial (before training)
+23:34:38   checked 179/200 lines in 0_arial (before training)
+23:34:38   checked 180/200 lines in 0_arial (before training)
+23:34:39   checked 181/200 lines in 0_arial (before training)
+23:34:39   checked 182/200 lines in 0_arial (before training)
+23:34:39   checked 183/200 lines in 0_arial (before training)
+23:34:39   checked 184/200 lines in 0_arial (before training)
+23:34:39   checked 185/200 lines in 0_arial (before training)
+23:34:40   checked 186/200 lines in 0_arial (before training)
+23:34:40   checked 187/200 lines in 0_arial (before training)
+23:34:40   checked 188/200 lines in 0_arial (before training)
+23:34:40   checked 189/200 lines in 0_arial (before training)
+23:34:40   checked 190/200 lines in 0_arial (before training)
+23:34:41   checked 191/200 lines in 0_arial (before training)
+23:34:41   checked 192/200 lines in 0_arial (before training)
+23:34:41   checked 193/200 lines in 0_arial (before training)
+23:34:41   checked 194/200 lines in 0_arial (before training)
+23:34:41   checked 195/200 lines in 0_arial (before training)
+23:34:41   checked 196/200 lines in 0_arial (before training)
+23:34:42   checked 197/200 lines in 0_arial (before training)
+23:34:42   checked 198/200 lines in 0_arial (before training)
+23:34:42   checked 199/200 lines in 0_arial (before training)
+23:34:42   checked 200/200 lines in 0_arial (before training)
+23:34:42 0_arial before training: 84/200 lines pass, CER 0.4256
+23:34:42   PASS  Mod jei requires Minecraft 1.20.4 but found 47.2.0
+23:34:42   PASS  Connection timed out while reading packet 123
+23:34:42   FAIL  expected: Server started on port 25565 after 191 seconds
+23:34:42         got:      server started on port 25565 after 191 seconds
+23:34:42   FAIL  expected: Skipping create: incompatible with forge 47.4.10
+23:34:42         got:      okipping create: incompatible with forge 47.4.10
+23:34:42   FAIL  expected: java.lang.NoClassDefFoundError: com.electronwizard.config/cloth-config
+23:34:42         got:      com electronwizard.confg/clth- config
+23:34:42   PASS  Found 714 mods, 3 failed to load
+23:34:42   FAIL  expected: Error loading class net.minecraftforge.fmlcore.oculus in oculus-1.20.4.jar
+23:34:42         got:      Sor 3120 hier net.minecraftforge.fmlicore.oculus in
+23:34:42   PASS  Mod mekanism requires Minecraft 1.21 but found 0.15.3
+23:34:42   FAIL  expected: The Mod File D:\Games\MultiMC\instances\Server Backup 2026\.minecraft\mods\fabric-api.jar has mods that were not found
+23:34:42         got:
+23:34:42   PASS  Texture pack reloaded with 543 resources
+23:34:42   FAIL  expected: Unable to open C:\Games\MultiMC\libraries\com\google\guava\3.1.8\iris-3.1.8.jar
+23:34:42         got:      es esi clibra ries\com\google\guava\3.1 .8\iris-3. 1
+23:34:42   PASS  Found 369 mods, 9 failed to load
+23:34:42   FAIL  expected: Missing dependency: net.minecraftforge.fmlcore version 1.20.1 required by alexsmobs
+23:34:42         got:      1 20.1 sequired by te netminecrattorge.micore version
+23:34:42   FAIL  expected: Missing dependency: net.fabricmc.loader version 1.19.2 required by ironchests
+23:34:42         got:      required by ionchets nt version 1.19.2
+23:34:42   PASS  [INFO] Registered 758 recipes from quark
+23:34:42   FAIL  expected: java.lang.NoClassDefFoundError: net.fabricmc.loader/supplementaries
+23:34:42         got:      iplenentaies net.fabricmc.loader/
+23:34:42   FAIL  expected: java.lang.NoClassDefFoundError: com.electronwizard.config/jei
+23:34:42         got:
+23:34:42   PASS  Downloaded oculus-47.4.10.jar in 233 seconds
+23:34:42   FAIL  expected: Mod mekanism requires Minecraft 1.16.5 but found 47.2.0
+23:34:42         got:      none requires Minecraft 1.16.5 but found
+23:34:42   PASS  Connection timed out while reading packet 201
+23:34:42   FAIL  expected: Missing dependency: org.apache.logging.log4j version 1.19.2 required by glassseam-fix
+23:34:42         got:      1.19.2 required by glassseamfx
+23:34:42   FAIL  expected: Unable to open E:\Games\MultiMC\libraries\net\minecraftforge\javafmlmod\2.0.0-beta.4\biomesoplenty-2.0.0-beta.4.jar
+23:34:42         got:
+23:34:42   PASS  ironchests 1.20.1 is already installed in 1.19.2 Modded
+23:34:42   PASS  Could not find org.lwjgl.glfw for glassseam-fix, skipping
+23:34:42   FAIL  expected: Unable to open D:\Games\MultiMC\libraries\net\minecraftforge\javafmlmod\47.2.0\ironchests-47.2.0.jar
+23:34:42         got:      mesic 2 Oar ee vaimimod
+23:34:42   FAIL  expected: supplementaries 0.14.22 is already installed in 1.20.1 Forge
+23:34:42         got:      rou 0.14.22 is already installed in 1.20.1
+23:34:42   FAIL  expected: Mod carpet requires Minecraft 1.16.5 but found 2.0.0-beta.4
+23:34:42         got:      foe gape! requires Minecraft 1.16.5 but found 2.0.0-
+23:34:42   PASS  Downloaded modmenu-5.4.0.jar in 25 seconds
+23:34:42   FAIL  expected: Chunk loading took 149 ms in dimension minecraft:overworld
+23:34:42         got:      mineorattoverwerld
+23:34:42   FAIL  expected: Chunk loading took 78 ms in dimension minecraft:overworld
+23:34:42         got:      mineorattoverwerld
+23:34:42   FAIL  expected: Skipping xaeros-minimap: incompatible with forge 2.0.0-beta.4
+23:34:42         got:      Sepp ng xaeros-minimap: incompatible with forge 2.0.0-
+23:34:42   FAIL  expected: Loading mod list from D:\Games\MultiMC\instances\Server Backup 2026\mods
+23:34:42         got:      \Games\MultiMC\netances\Server Backup 2026\mods
+23:34:42   FAIL  expected: Set JVM argument -Xmx8192M for 1.21 Survival
+23:34:42         got:      set JVM argument -Xmx8192M for 1.21 Survival
+23:34:42   FAIL  expected: Loading mod list from D:\Games\MultiMC\instances\1.21 Survival\mods
+23:34:42         got:      soacing moe ist from D:\Games\MultiMC\instances\1.21
+23:34:42   FAIL  expected: farmersdelight 1.20.4 is already installed in 1.19.2 Modded
+23:34:42         got:      Mmereaougn 1.20.4 is already installed in 1.19.2
+23:34:42   FAIL  expected: Launching 1.20.1 6June2026Wiped9Nov2026 with 4096 MB of memory
+23:34:42         got:      MB of monory 6June2026Wiped9Nov2026 with 4096
+23:34:42   PASS  Texture pack reloaded with 697 resources
+23:34:42   PASS  Could not find net.fabricmc.loader for ironchests, skipping
+23:34:42   PASS  Mod alexsmobs requires Minecraft 1.16.5 but found 3.1.8
+23:34:42   FAIL  expected: Skipping iris: incompatible with forge 47.4.10
+23:34:42         got:      okipping iris: incompatible with forge 47.4.10
+23:34:42   PASS  Retrying download of sodium: HTTP status 403
+23:34:42   PASS  Found 499 mods, 6 failed to load
+23:34:42   PASS  [INFO] Registered 170 recipes from farmersdelight
+23:34:42   FAIL  expected: java.lang.NoClassDefFoundError: com.electronwizard.config/supplementaries
+23:34:42         got:      om ‘lent ‘on oard.contig/s a 5 slementa ries
+23:34:42   PASS  [INFO] Registered 555 recipes from jei
+23:34:42   PASS  Server started on port 25566 after 164 seconds
+23:34:42   PASS  Retrying download of journeymap: HTTP status 403
+23:34:42   PASS  Skipping terralith: incompatible with forge 47.2.0
+23:34:42   FAIL  expected: Set JVM argument -Xmx6144M for 1.16.5 Create
+23:34:42         got:      set JVM argument -Xmx6144M for 1.16.5 Create
+23:34:42   FAIL  expected: Missing dependency: net.minecraftforge.fmlcore version 1.21 required by oculus
+23:34:42         got:      121 tenuited by codlue en rge-tmicore version
+23:34:42   PASS  Downloaded xaeros-minimap-1.16.5.jar in 148 seconds
+23:34:42   FAIL  expected: Crash report saved to D:\Games\MultiMC\crash-reports\crash-2026-11-11.txt
+23:34:42         got:
+23:34:42   FAIL  expected: Crash report saved to E:\Games\MultiMC\crash-reports\crash-2026-11-18.txt
+23:34:42         got:
+23:34:42   FAIL  expected: Unable to open C:\Games\MultiMC\libraries\org\spongepowered\mixin\47.2.0\applied-energistics-2-47.2.0.jar
+23:34:42         got:      Games iuhivC\raretrssongepowerediiih.2
+23:34:42   FAIL  expected: Skipping biomesoplenty: incompatible with forge 2.0.0-beta.4
+23:34:42         got:      Sepp ng biomesoplenty: incompatible with forge 2.0.0-
+23:34:42   PASS  Texture pack reloaded with 240 resources
+23:34:42   PASS  Connection timed out while reading packet 61
+23:34:42   PASS  Texture pack reloaded with 735 resources
+23:34:42   FAIL  expected: Set JVM argument -Xmx2048M for 1.20.4 Fabric
+23:34:42         got:      set JVM argument -Xmx2048M for 1.20.4 Fabric
+23:34:42   FAIL  expected: Error loading class com.electronwizard.config.fabric-api in fabric-api-1.19.2.jar
+23:34:42         got:      mal Teapht Olan mara-conligtabric-aP|
+23:34:42   FAIL  expected: Set JVM argument -Xmx8192M for 1.19.2 Modded
+23:34:42         got:      set JVM argument -Xmx8192M for 1.19.2 Modded
+23:34:42   PASS  java.lang.NoClassDefFoundError: net.fabricmc.loader/jei
+23:34:42   PASS  Found 776 mods, 2 failed to load
+23:34:42   FAIL  expected: Error loading class net.minecraftforge.javafmlmod.applied-energistics-2 in applied-energistics-2-0.14.22.jar
+23:34:42         got:
+23:34:42   FAIL  expected: Could not find com.electronwizard.config for xaeros-minimap, skipping
+23:34:42         got:      vou’ : skioping’ econ for xaeros-
+23:34:42   FAIL  expected: Chunk loading took 223 ms in dimension minecraft:overworld
+23:34:42         got:      mineorattoverwerld
+23:34:42   PASS  Retrying download of fabric-api: HTTP status 500
+23:34:42   FAIL  expected: Error loading class net.minecraftforge.fmlcore.supplementaries in supplementaries-1.16.5.jar
+23:34:42         got:
+23:34:42   FAIL  expected: java.lang.NoClassDefFoundError: com.google.guava/supplementaries
+23:34:42         got:      iplenentaies com.google.guava/
+23:34:42   FAIL  expected: Could not find net.minecraftforge.fmlcore for waystones, skipping
+23:34:42         got:      sKioving. find net.minecraftforge.fmicore for waystones,
+23:34:42   FAIL  expected: Server started on port 25566 after 31 seconds
+23:34:42         got:      oerver started on port 25566 after 31 seconds
+23:34:42   FAIL  expected: Could not find net.minecraftforge.fmlcore for applied-energistics-2, skipping
+23:34:42         got:      nora mt D skip im for applied-
+23:34:42   PASS  mekanism 1.19.2 is already installed in 1.19.2 Modded
+23:34:42   FAIL  expected: Mod farmersdelight requires Minecraft 5.4.0 but found 47.2.0
+23:34:42         got:      Me aeons requires Minecraft 5.4.0 but found
+23:34:42   FAIL  expected: Set JVM argument -Xmx6144M for Server Backup 2026
+23:34:42         got:      set JVM argument -Xmx6144M for Server Backup 2026
+23:34:42   FAIL  expected: Unable to open C:\Games\MultiMC\libraries\net\minecraftforge\javafmlmod\2.0.0-beta.4\ironchests-2.0.0-beta.4.jar
+23:34:42         got:
+23:34:42   PASS  jei 0.14.22 is already installed in 1.21 Survival
+23:34:42   FAIL  expected: Failed to load mod oculus 47.4.10: missing dependency net.fabricmc.loader
+23:34:42         got:      i pareaneaniieiann 47.4.10: missing dependency
+23:34:42   PASS  Downloaded jei-5.4.0.jar in 52 seconds
+23:34:42   PASS  Could not find org.lwjgl.glfw for xaeros-minimap, skipping
+23:34:42   FAIL  expected: ironchests 1.20.4 is already installed in 1.20.1 6June2026Wiped9Nov2026
+23:34:42         got:      GuuneZ026Wiped9Nov2026-
+23:34:42   FAIL  expected: java.lang.NoClassDefFoundError: net.fabricmc.loader/alexsmobs
+23:34:42         got:      Javavang. NotlassDelFounderror net.fabricmc.loader/
+23:34:42   FAIL  expected: Chunk loading took 155 ms in dimension minecraft:overworld
+23:34:42         got:      mineorattoverwerd
+23:34:42   PASS  Connection timed out while reading packet 228
+23:34:42   PASS  [INFO] Registered 864 recipes from xaeros-minimap
+23:34:42   PASS  Mod modmenu requires Minecraft 1.21 but found 0.15.3
+23:34:42   FAIL  expected: Set JVM argument -Xmx2048M for 1.19.2 Modded
+23:34:42         got:      set JVM argument -Xmx2048M for 1.19.2 Modded
+23:34:42   FAIL  expected: Mod quark requires Minecraft 47.4.10 but found 2.0.0-beta.4
+23:34:42         got:      woe quarks requires Minecraft 47.4.10 but found 2.0.0-
+23:34:42   PASS  Downloaded biomesoplenty-1.20.1.jar in 144 seconds
+23:34:42   FAIL  expected: Missing dependency: com.electronwizard.config version 1.16.5 required by quark
+23:34:42         got:      1 16-5 vequired bye Com electronwizard.contig version
+23:34:42   FAIL  expected: Error loading class com.electronwizard.config.waystones in waystones-1.19.2.jar
+23:34:42         got:      in wayetones bin Dian areconig.waystones
+23:34:42   PASS  Downloaded create-0.14.22.jar in 158 seconds
+23:34:42   FAIL  expected: Crash report saved to E:\Games\MultiMC\crash-reports\crash-2026-11-26.txt
+23:34:42         got:
+23:34:42   FAIL  expected: Set JVM argument -Xmx2048M for Server Backup 2026
+23:34:42         got:      set JVM argument -Xmx2048M for Server Backup 2026
+23:34:42   PASS  [INFO] Registered 507 recipes from carpet
+23:34:42   FAIL  expected: Error loading class org.spongepowered.mixin.create in create-1.20.1.jar
+23:34:42         got:      Steen an org.spongepowered.mixin.create in
+23:34:42   FAIL  expected: Crash report saved to E:\Games\MultiMC\crash-reports\crash-2026-11-25.txt
+23:34:42         got:
+23:34:42   PASS  Found 534 mods, 8 failed to load
+23:34:42   PASS  Connection timed out while reading packet 165
+23:34:42   FAIL  expected: Crash report saved to D:\Games\MultiMC\crash-reports\crash-2026-11-23.txt
+23:34:42         got:
+23:34:42   FAIL  expected: Loading mod list from C:\Games\MultiMC\instances\Server Backup 2026\mods
+23:34:42         got:      \Gamec\MultiMC\inetances\Server Backup 2026\mods
+23:34:42   FAIL  expected: Chunk loading took 208 ms in dimension minecraft:overworld
+23:34:42         got:      mineorattoverwerld
+23:34:42   FAIL  expected: Chunk loading took 214 ms in dimension minecraft:overworld
+23:34:42         got:      mineorattoverwerld
+23:34:42   PASS  Deleted 671 old log files from E:\Games\MultiMC\logs
+23:34:42   PASS  Found 669 mods, 4 failed to load
+23:34:42   PASS  Deleted 362 old log files from E:\Games\MultiMC\logs
+23:34:42   FAIL  expected: java.lang.NoClassDefFoundError: net.minecraftforge.javafmlmod/farmersdelight
+23:34:42         got:      vot minectattforse vavafin nod/farmersdelight
+23:34:42   FAIL  expected: The Mod File C:\Games\MultiMC\instances\1.20.1 6June2026Wiped9Nov2026\.minecraft\mods\sodium.jar has mods that were not found
+23:34:42         got:
+23:34:42   PASS  carpet 1.20.4 is already installed in Server Backup 2026
+23:34:42   FAIL  expected: Server started on port 25566 after 188 seconds
+23:34:42         got:      server started on port 25566 after 188 seconds
+23:34:42   PASS  Launching 1.19.2 Modded with 8192 MB of memory
+23:34:42   FAIL  expected: Unable to open E:\Games\MultiMC\libraries\org\apache\logging\log4j\3.1.8\iris-3.1.8.jar
+23:34:42         got:      S nest Cilibra ries\org\apache\logging\log4j\3.1.8\
+23:34:42   FAIL  expected: Error loading class com.google.guava.supplementaries in supplementaries-1.20.4.jar
+23:34:42         got:      supplemontarieet SO de ya suPpiomentanes in
+23:34:42   FAIL  expected: Error loading class org.apache.logging.log4j.create in create-1.19.2.jar
+23:34:42         got:      Sag an org.apache.logging.log4j.create in
+23:34:42   PASS  Connection timed out while reading packet 121
+23:34:42   FAIL  expected: The Mod File C:\Games\MultiMC\instances\1.20.1 Forge\.minecraft\mods\terralith.jar has mods that were not found
+23:34:42         got:
+23:34:42   PASS  iris 1.21 is already installed in Server Backup 2026
+23:34:42   PASS  Found 885 mods, 7 failed to load
+23:34:42   FAIL  expected: The Mod File C:\Games\MultiMC\instances\1.21 Survival\.minecraft\mods\terralith.jar has mods that were not found
+23:34:42         got:      Sunil vin scraftvn 5 d site valith jar he 5 rods i at were
+23:34:42   PASS  Mod quark requires Minecraft 1.19.2 but found 3.1.8
+23:34:42   FAIL  expected: The Mod File E:\Games\MultiMC\instances\1.19.2 Modded\.minecraft\mods\fabric-api.jar has mods that were not found
+23:34:42         got:
+23:34:42   FAIL  expected: Unable to open C:\Games\MultiMC\libraries\org\spongepowered\mixin\47.2.0\modmenu-47.2.0.jar
+23:34:42         got:      Games livCbrares ox spongepoweredni472
+23:34:42   PASS  Found 532 mods, 7 failed to load
+23:34:42   PASS  Texture pack reloaded with 551 resources
+23:34:42   PASS  Connection timed out while reading packet 152
+23:34:42   PASS  Texture pack reloaded with 696 resources
+23:34:42   PASS  Connection timed out while reading packet 172
+23:34:42   FAIL  expected: java.lang.NoClassDefFoundError: org.apache.logging.log4j/iris
+23:34:42         got:
+23:34:42   FAIL  expected: Server started on port 25565 after 16 seconds
+23:34:42         got:      oerver started on port 25565 after 16 seconds
+23:34:42   FAIL  expected: The Mod File C:\Games\MultiMC\instances\1.20.4 Fabric\.minecraft\mods\create.jar has mods that were not found
+23:34:42         got:
+23:34:42   PASS  supplementaries 1.21 is already installed in 1.21 Survival
+23:34:42   FAIL  expected: Mod oculus requires Minecraft 1.20.4 but found 2.0.0-beta.4
+23:34:42         got:      noe culls requires Minecraft 1.20.4 but found 2.0.0-
+23:34:42   FAIL  expected: Set JVM argument -Xmx6144M for 1.19.2 Modded
+23:34:42         got:      set JVM argument -Xmx6144M for 1.19.2 Modded
+23:34:42   FAIL  expected: Chunk loading took 135 ms in dimension minecraft:overworld
+23:34:42         got:      mineorattoverwerld
+23:34:42   FAIL  expected: Mod terralith requires Minecraft 1.21 but found 2.0.0-beta.4
+23:34:42         got:      aia requires Minecraft 1.21 but found 2.0.0-
+23:34:42   FAIL  expected: Chunk loading took 49 ms in dimension minecraft:overworld
+23:34:42         got:      mineorattoverwerld
+23:34:42   PASS  Retrying download of cloth-config: HTTP status 500
+23:34:42   FAIL  expected: Missing dependency: net.minecraftforge.fmlcore version 1.20.1 required by quark
+23:34:42         got:      1 20.1 sequired bye netminecrantiorge Imicore version
+23:34:42   FAIL  expected: farmersdelight 0.14.22 is already installed in 1.20.4 Fabric
+23:34:42         got:      rormersdelight 0.14.22 is already installed in 1.20.4
+23:34:42   FAIL  expected: Skipping oculus: incompatible with forge 47.4.10
+23:34:42         got:      okipping oculus: incompatible with forge 47.4.10
+23:34:42   FAIL  expected: Failed to load mod glassseam-fix 2.0.0-beta.4: missing dependency org.spongepowered.mixin
+23:34:42         got:      dependency org.spongepoweredmixin
+23:34:42   PASS  [INFO] Registered 495 recipes from supplementaries
+23:34:42   PASS  Downloaded create-47.4.10.jar in 70 seconds
+23:34:42   PASS  create 1.20.4 is already installed in Server Backup 2026
+23:34:42   PASS  Skipping ironchests: incompatible with forge 47.4.10
+23:34:42   FAIL  expected: Server started on port 25566 after 94 seconds
+23:34:42         got:      oerver started on port 25566 after 94 seconds
+23:34:42   PASS  Downloaded jei-0.14.22.jar in 240 seconds
+23:34:42   PASS  Connection timed out while reading packet 57
+23:34:42   PASS  Skipping fabric-api: incompatible with forge 0.15.3
+23:34:42   PASS  Downloaded terralith-0.14.22.jar in 198 seconds
+23:34:42   FAIL  expected: Error loading class net.minecraftforge.javafmlmod.quark in quark-1.20.4.jar
+23:34:42         got:      nual 32 dir net.minecraftforge.javafmlmod.quark
+23:34:42   PASS  [WARN] Config file ironchests-common.toml is out of date
+23:34:42   FAIL  expected: Unable to open D:\Games\MultiMC\libraries\com\electronwizard\config\47.4.10\ironchests-47.4.10.jar
+23:34:42         got:      Games PO marcicontigar4
+23:34:42   PASS  waystones 1.20.4 is already installed in 1.16.5 Create
+23:34:42   PASS  Launching 1.21 Survival with 2048 MB of memory
+23:34:42   FAIL  expected: Mixin apply failed for com.google.guava: target class not found
+23:34:42         got:      nn apply failed for com.google.guava: target class not
+23:34:42   FAIL  expected: Loading mod list from D:\Games\MultiMC\instances\1.16.5 Create\mods
+23:34:42         got:      enety ’ MCNnetances\ .16.5 Create\mods
+23:34:42   PASS  Launching 1.19.2 Modded with 6144 MB of memory
+23:34:42   PASS  Downloaded oculus-1.20.4.jar in 25 seconds
+23:34:42   FAIL  expected: The Mod File E:\Games\MultiMC\instances\1.20.4 Fabric\.minecraft\mods\biomesoplenty.jar has mods that were not found
+23:34:42         got:
+23:34:42   FAIL  expected: Mixin apply failed for com.electronwizard.config: target class not found
+23:34:42         got:      ween app y fares for com.electronwizard.config: target
+23:34:42   FAIL  expected: Mod supplementaries requires Minecraft 0.14.22 but found 47.2.0
+23:34:42         got:      pod oubrementaries requires Minecraft 0.14.22 but
+23:34:42   PASS  Retrying download of oculus: HTTP status 500
+23:34:42   PASS  Mod create requires Minecraft 1.16.5 but found 47.2.0
+23:34:42   PASS  Found 455 mods, 3 failed to load
+23:34:42   PASS  Deleted 722 old log files from D:\Games\MultiMC\logs
+23:34:42   FAIL  expected: Missing dependency: net.minecraftforge.javafmlmod version 0.14.22 required by cloth-config
+23:34:42         got:      version 0.14.22 required by coth-coniig,
+23:34:42   FAIL  expected: applied-energistics-2 0.14.22 is already installed in 1.19.2 Modded
+23:34:42         got:      app lear onergistios-2 0.14.22 is already installed in 1.19.2
+23:34:42   FAIL  expected: The Mod File D:\Games\MultiMC\instances\Server Backup 2026\.minecraft\mods\iris.jar has mods that were not found
+23:34:42         got:
+23:34:42   FAIL  expected: java.lang.NoClassDefFoundError: net.minecraftforge.fmlcore/carpet
+23:34:42         got:
+23:34:42   FAIL  expected: Unable to open D:\Games\MultiMC\libraries\net\minecraftforge\fmlcore\47.2.0\carpet-47.2.0.jar
+23:34:42         got:      ames Ciaresineinineratorgelncre 2
+23:34:42   PASS  Skipping sodium: incompatible with forge 3.1.8
+23:34:42   FAIL  expected: java.lang.NoClassDefFoundError: org.lwjgl.glfw/create
+23:34:42         got:      java.lang.NoClassDefFoundError: org.|wjgl.glfw/create
+23:34:42   FAIL  expected: Chunk loading took 70 ms in dimension minecraft:overworld
+23:34:42         got:      mineorattoverwerld
+23:34:42   PASS  Connection timed out while reading packet 27
+23:34:42   FAIL  expected: Error loading class net.fabricmc.loader.cloth-config in cloth-config-1.21.jar
+23:34:42         got:      Sloth-contig. pe net-tabricme.loader.cloth-conig in
+23:34:42   FAIL  expected: The Mod File D:\Games\MultiMC\instances\1.20.1 6June2026Wiped9Nov2026\.minecraft\mods\create.jar has mods that were not found
+23:34:42         got:
+23:34:42   PASS  Downloaded sodium-47.4.10.jar in 173 seconds
+23:34:42   PASS  Could not find com.electronwizard.config for jei, skipping
+23:34:42   FAIL  expected: Missing dependency: org.lwjgl.glfw version 47.4.10 required by biomesoplenty
+23:34:42         got:      required by biomesep ety version 47.4.10
+23:34:42   PASS  terralith 1.21 is already installed in 1.16.5 Create
+23:34:42   FAIL  expected: Unable to open C:\Games\MultiMC\libraries\net\minecraftforge\javafmlmod\47.4.10\biomesoplenty-47.4.10.jar
+23:34:42         got:
+23:34:42   PASS  Texture pack reloaded with 582 resources
+23:34:42   FAIL  expected: applied-energistics-2 5.4.0 is already installed in 1.20.4 Fabric
+23:34:42         got:      app lecrenergistios-2 9.4.0 is already installed in 1.20.4
+23:34:42   FAIL  expected: Error loading class net.fabricmc.loader.create in create-1.20.4.jar
+23:34:42         got:      Sang an net.fabricmc.loader.create in
+23:34:42   FAIL  expected: The Mod File C:\Games\MultiMC\instances\Server Backup 2026\.minecraft\mods\alexsmobs.jar has mods that were not found
+23:34:42         got:
+23:34:42   PASS  Connection timed out while reading packet 120
+23:34:42   FAIL  expected: Failed to load mod carpet 47.2.0: missing dependency com.electronwizard.config
+23:34:42         got:      rate to ronwiverd config 47.2.0: missing dependency
+23:34:42   PASS  Texture pack reloaded with 408 resources
+23:34:42   FAIL  expected: Failed to load mod sodium 47.2.0: missing dependency net.fabricmc.loader
+23:34:42         got:      epareaneaniineacaal 47.2.0: missing dependency
+23:34:42   FAIL  expected: Chunk loading took 238 ms in dimension minecraft:overworld
+23:34:42         got:      mineorattovewerld
+23:34:42   FAIL  expected: Loading mod list from D:\Games\MultiMC\instances\1.20.1 6June2026Wiped9Nov2026\mods
+23:34:42         got:
+23:34:42   FAIL  expected: Saved world settings to disk successfully
+23:34:42         got:      saved world settings to disk successfully
+23:34:42   PASS  Mod modmenu requires Minecraft 5.4.0 but found 47.4.10
+23:34:42   FAIL  expected: Could not find com.electronwizard.config for supplementaries, skipping
+23:34:42         got:      suppleme ine on Mining for
+23:34:42   FAIL  expected: Unable to open C:\Games\MultiMC\libraries\com\google\guava\47.2.0\modmenu-47.2.0.jar
+23:34:42         got:      Games brares com goog guava? 2 0%
+23:34:42   FAIL  expected: Crash report saved to E:\Games\MultiMC\crash-reports\crash-2026-11-20.txt
+23:34:42         got:
+23:34:42   FAIL  expected: Chunk loading took 142 ms in dimension minecraft:overworld
+23:34:42         got:      mineorattoverwerld
+23:34:42   FAIL  expected: Chunk loading took 20 ms in dimension minecraft:overworld
+23:34:42         got:      mineorattoverwerld
+23:34:42   PASS  Found 313 mods, 2 failed to load
+23:34:42 Rendering 800 training lines in 0_arial (weight 1)
+23:34:43   rendered 1/800 lines in 0_arial
+23:34:43   rendered 2/800 lines in 0_arial
+23:34:43   rendered 3/800 lines in 0_arial
+23:34:43   rendered 4/800 lines in 0_arial
+23:34:44   rendered 5/800 lines in 0_arial
+23:34:44   rendered 6/800 lines in 0_arial
+23:34:44   rendered 7/800 lines in 0_arial
+23:34:44   rendered 8/800 lines in 0_arial
+23:34:45   rendered 9/800 lines in 0_arial
+23:34:45   rendered 10/800 lines in 0_arial
+23:34:45   rendered 11/800 lines in 0_arial
+23:34:45   rendered 12/800 lines in 0_arial
+23:34:46   rendered 13/800 lines in 0_arial
+23:34:46   rendered 14/800 lines in 0_arial
+23:34:46   rendered 15/800 lines in 0_arial
+23:34:46   rendered 16/800 lines in 0_arial
+23:34:47   rendered 17/800 lines in 0_arial
+23:34:47   rendered 18/800 lines in 0_arial
+23:34:47   rendered 19/800 lines in 0_arial
+23:34:47   rendered 20/800 lines in 0_arial
+23:34:47   rendered 21/800 lines in 0_arial
+23:34:47   rendered 22/800 lines in 0_arial
+23:34:48   rendered 23/800 lines in 0_arial
+23:34:48   rendered 24/800 lines in 0_arial
+23:34:48   rendered 25/800 lines in 0_arial
+23:34:48   rendered 26/800 lines in 0_arial
+23:34:49   rendered 27/800 lines in 0_arial
+23:34:49   rendered 28/800 lines in 0_arial
+23:34:49   rendered 29/800 lines in 0_arial
+23:34:49   rendered 30/800 lines in 0_arial
+23:34:50   rendered 31/800 lines in 0_arial
+23:34:50   rendered 32/800 lines in 0_arial
+23:34:50   rendered 33/800 lines in 0_arial
+23:34:50   rendered 34/800 lines in 0_arial
+23:34:51   rendered 35/800 lines in 0_arial
+23:34:51   rendered 36/800 lines in 0_arial
+23:34:51   rendered 37/800 lines in 0_arial
+23:34:51   rendered 38/800 lines in 0_arial
+23:34:52   rendered 39/800 lines in 0_arial
+23:34:52   rendered 40/800 lines in 0_arial
+23:34:52   rendered 41/800 lines in 0_arial
+23:34:52   rendered 42/800 lines in 0_arial
+23:34:53   rendered 43/800 lines in 0_arial
+23:34:53   rendered 44/800 lines in 0_arial
+23:34:53   rendered 45/800 lines in 0_arial
+23:34:53   rendered 46/800 lines in 0_arial
+23:34:54   rendered 47/800 lines in 0_arial
+23:34:54   rendered 48/800 lines in 0_arial
+23:34:54   rendered 49/800 lines in 0_arial
+23:34:54   rendered 50/800 lines in 0_arial
+23:34:55   rendered 51/800 lines in 0_arial
+23:34:55   rendered 52/800 lines in 0_arial
+23:34:55   rendered 53/800 lines in 0_arial
+23:34:55   rendered 54/800 lines in 0_arial
+23:34:56   rendered 55/800 lines in 0_arial
+23:34:56   rendered 56/800 lines in 0_arial
+23:34:56   rendered 57/800 lines in 0_arial
+23:34:56   rendered 58/800 lines in 0_arial
+23:34:56   rendered 59/800 lines in 0_arial
+23:34:56   rendered 60/800 lines in 0_arial
+23:34:57   rendered 61/800 lines in 0_arial
+23:34:57   rendered 62/800 lines in 0_arial
+23:34:57   rendered 63/800 lines in 0_arial
+23:34:57   rendered 64/800 lines in 0_arial
+23:34:58   rendered 65/800 lines in 0_arial
+23:34:58   rendered 66/800 lines in 0_arial
+23:34:58   rendered 67/800 lines in 0_arial
+23:34:58   rendered 68/800 lines in 0_arial
+23:34:59   rendered 69/800 lines in 0_arial
+23:34:59   rendered 70/800 lines in 0_arial
+23:34:59   rendered 71/800 lines in 0_arial
+23:34:59   rendered 72/800 lines in 0_arial
+23:35:00   rendered 73/800 lines in 0_arial
+23:35:00   rendered 74/800 lines in 0_arial
+23:35:00   rendered 75/800 lines in 0_arial
+23:35:00   rendered 76/800 lines in 0_arial
+23:35:01   rendered 77/800 lines in 0_arial
+23:35:01   rendered 78/800 lines in 0_arial
+23:35:01   rendered 79/800 lines in 0_arial
+23:35:01   rendered 80/800 lines in 0_arial
+23:35:02   rendered 81/800 lines in 0_arial
+23:35:02   rendered 82/800 lines in 0_arial
+23:35:02   rendered 83/800 lines in 0_arial
+23:35:02   rendered 84/800 lines in 0_arial
+23:35:03   rendered 85/800 lines in 0_arial
+23:35:03   rendered 86/800 lines in 0_arial
+23:35:03   rendered 87/800 lines in 0_arial
+23:35:03   rendered 88/800 lines in 0_arial
+23:35:03   rendered 89/800 lines in 0_arial
+23:35:04   rendered 90/800 lines in 0_arial
+23:35:04   rendered 91/800 lines in 0_arial
+23:35:04   rendered 92/800 lines in 0_arial
+23:35:04   rendered 93/800 lines in 0_arial
+23:35:04   rendered 94/800 lines in 0_arial
+23:35:05   rendered 95/800 lines in 0_arial
+23:35:05   rendered 96/800 lines in 0_arial
+23:35:05   rendered 97/800 lines in 0_arial
+23:35:05   rendered 98/800 lines in 0_arial
+23:35:06   rendered 99/800 lines in 0_arial
+23:35:06   rendered 100/800 lines in 0_arial
+23:35:06   rendered 101/800 lines in 0_arial
+23:35:06   rendered 102/800 lines in 0_arial
+23:35:07   rendered 103/800 lines in 0_arial
+23:35:07   rendered 104/800 lines in 0_arial
+23:35:07   rendered 105/800 lines in 0_arial
+23:35:07   rendered 106/800 lines in 0_arial
+23:35:08   rendered 107/800 lines in 0_arial
+23:35:08   rendered 108/800 lines in 0_arial
+23:35:08   rendered 109/800 lines in 0_arial
+23:35:08   rendered 110/800 lines in 0_arial
+23:35:09   rendered 111/800 lines in 0_arial
+23:35:09   rendered 112/800 lines in 0_arial
+23:35:09   rendered 113/800 lines in 0_arial
+23:35:09   rendered 114/800 lines in 0_arial
+23:35:10   rendered 115/800 lines in 0_arial
+23:35:10   rendered 116/800 lines in 0_arial
+23:35:10   rendered 117/800 lines in 0_arial
+23:35:10   rendered 118/800 lines in 0_arial
+23:35:11   rendered 119/800 lines in 0_arial
+23:35:11   rendered 120/800 lines in 0_arial
+23:35:11   rendered 121/800 lines in 0_arial
+23:35:11   rendered 122/800 lines in 0_arial
+23:35:12   rendered 123/800 lines in 0_arial
+23:35:12   rendered 124/800 lines in 0_arial
+23:35:12   rendered 125/800 lines in 0_arial
+23:35:12   rendered 126/800 lines in 0_arial
+23:35:12   rendered 127/800 lines in 0_arial
+23:35:12   rendered 128/800 lines in 0_arial
+23:35:13   rendered 129/800 lines in 0_arial
+23:35:13   rendered 130/800 lines in 0_arial
+23:35:13   rendered 131/800 lines in 0_arial
+23:35:13   rendered 132/800 lines in 0_arial
+23:35:14   rendered 133/800 lines in 0_arial
+23:35:14   rendered 134/800 lines in 0_arial
+23:35:14   rendered 135/800 lines in 0_arial
+23:35:14   rendered 136/800 lines in 0_arial
+23:35:15   rendered 137/800 lines in 0_arial
+23:35:15   rendered 138/800 lines in 0_arial
+23:35:15   rendered 139/800 lines in 0_arial
+23:35:15   rendered 140/800 lines in 0_arial
+23:35:16   rendered 141/800 lines in 0_arial
+23:35:16   rendered 142/800 lines in 0_arial
+23:35:16   rendered 143/800 lines in 0_arial
+23:35:16   rendered 144/800 lines in 0_arial
+23:35:17   rendered 145/800 lines in 0_arial
+23:35:17   rendered 146/800 lines in 0_arial
+23:35:17   rendered 147/800 lines in 0_arial
+23:35:17   rendered 148/800 lines in 0_arial
+23:35:18   rendered 149/800 lines in 0_arial
+23:35:18   rendered 150/800 lines in 0_arial
+23:35:18   rendered 151/800 lines in 0_arial
+23:35:18   rendered 152/800 lines in 0_arial
+23:35:19   rendered 153/800 lines in 0_arial
+23:35:19   rendered 154/800 lines in 0_arial
+23:35:19   rendered 155/800 lines in 0_arial
+23:35:19   rendered 156/800 lines in 0_arial
+23:35:20   rendered 157/800 lines in 0_arial
+23:35:20   rendered 158/800 lines in 0_arial
+23:35:20   rendered 159/800 lines in 0_arial
+23:35:20   rendered 160/800 lines in 0_arial
+23:35:21   rendered 161/800 lines in 0_arial
+23:35:21   rendered 162/800 lines in 0_arial
+23:35:21   rendered 163/800 lines in 0_arial
+23:35:21   rendered 164/800 lines in 0_arial
+23:35:21   rendered 165/800 lines in 0_arial
+23:35:22   rendered 166/800 lines in 0_arial
+23:35:22   rendered 167/800 lines in 0_arial
+23:35:22   rendered 168/800 lines in 0_arial
+23:35:22   rendered 169/800 lines in 0_arial
+23:35:22   rendered 170/800 lines in 0_arial
+23:35:23   rendered 171/800 lines in 0_arial
+23:35:23   rendered 172/800 lines in 0_arial
+23:35:23   rendered 173/800 lines in 0_arial
+23:35:23   rendered 174/800 lines in 0_arial
+23:35:24   rendered 175/800 lines in 0_arial
+23:35:24   rendered 176/800 lines in 0_arial
+23:35:24   rendered 177/800 lines in 0_arial
+23:35:24   rendered 178/800 lines in 0_arial
+23:35:25   rendered 179/800 lines in 0_arial
+23:35:25   rendered 180/800 lines in 0_arial
+23:35:25   rendered 181/800 lines in 0_arial
+23:35:25   rendered 182/800 lines in 0_arial
+23:35:26   rendered 183/800 lines in 0_arial
+23:35:26   rendered 184/800 lines in 0_arial
+23:35:26   rendered 185/800 lines in 0_arial
+23:35:26   rendered 186/800 lines in 0_arial
+23:35:27   rendered 187/800 lines in 0_arial
+23:35:27   rendered 188/800 lines in 0_arial
+23:35:27   rendered 189/800 lines in 0_arial
+23:35:27   rendered 190/800 lines in 0_arial
+23:35:28   rendered 191/800 lines in 0_arial
+23:35:28   rendered 192/800 lines in 0_arial
+23:35:28   rendered 193/800 lines in 0_arial
+23:35:28   rendered 194/800 lines in 0_arial
+23:35:29   rendered 195/800 lines in 0_arial
+23:35:29   rendered 196/800 lines in 0_arial
+23:35:29   rendered 197/800 lines in 0_arial
+23:35:29   rendered 198/800 lines in 0_arial
+23:35:30   rendered 199/800 lines in 0_arial
+23:35:30   rendered 200/800 lines in 0_arial
+23:35:30   rendered 201/800 lines in 0_arial
+23:35:30   rendered 202/800 lines in 0_arial
+23:35:31   rendered 203/800 lines in 0_arial
+23:35:31   rendered 204/800 lines in 0_arial
+23:35:31   rendered 205/800 lines in 0_arial
+23:35:31   rendered 206/800 lines in 0_arial
+23:35:32   rendered 207/800 lines in 0_arial
+23:35:32   rendered 208/800 lines in 0_arial
+23:35:32   rendered 209/800 lines in 0_arial
+23:35:32   rendered 210/800 lines in 0_arial
+23:35:33   rendered 211/800 lines in 0_arial
+23:35:33   rendered 212/800 lines in 0_arial
+23:35:33   rendered 213/800 lines in 0_arial
+23:35:33   rendered 214/800 lines in 0_arial
+23:35:33   rendered 215/800 lines in 0_arial
+23:35:33   rendered 216/800 lines in 0_arial
+23:35:34   rendered 217/800 lines in 0_arial
+23:35:34   rendered 218/800 lines in 0_arial
+23:35:34   rendered 219/800 lines in 0_arial
+23:35:34   rendered 220/800 lines in 0_arial
+23:35:35   rendered 221/800 lines in 0_arial
+23:35:35   rendered 222/800 lines in 0_arial
+23:35:35   rendered 223/800 lines in 0_arial
+23:35:35   rendered 224/800 lines in 0_arial
+23:35:36   rendered 225/800 lines in 0_arial
+23:35:36   rendered 226/800 lines in 0_arial
+23:35:36   rendered 227/800 lines in 0_arial
+23:35:36   rendered 228/800 lines in 0_arial
+23:35:37   rendered 229/800 lines in 0_arial
+23:35:37   rendered 230/800 lines in 0_arial
+23:35:37   rendered 231/800 lines in 0_arial
+23:35:37   rendered 232/800 lines in 0_arial
+23:35:38   rendered 233/800 lines in 0_arial
+23:35:38   rendered 234/800 lines in 0_arial
+23:35:38   rendered 235/800 lines in 0_arial
+23:35:38   rendered 236/800 lines in 0_arial
+23:35:39   rendered 237/800 lines in 0_arial
+23:35:39   rendered 238/800 lines in 0_arial
+23:35:39   rendered 239/800 lines in 0_arial
+23:35:39   rendered 240/800 lines in 0_arial
+23:35:40   rendered 241/800 lines in 0_arial
+23:35:40   rendered 242/800 lines in 0_arial
+23:35:40   rendered 243/800 lines in 0_arial
+23:35:40   rendered 244/800 lines in 0_arial
+23:35:41   rendered 245/800 lines in 0_arial
+23:35:41   rendered 246/800 lines in 0_arial
+23:35:41   rendered 247/800 lines in 0_arial
+23:35:41   rendered 248/800 lines in 0_arial
+23:35:42   rendered 249/800 lines in 0_arial
+23:35:42   rendered 250/800 lines in 0_arial
+23:35:42   rendered 251/800 lines in 0_arial
+23:35:42   rendered 252/800 lines in 0_arial
+23:35:43   rendered 253/800 lines in 0_arial
+23:35:43   rendered 254/800 lines in 0_arial
+23:35:43   rendered 255/800 lines in 0_arial
+23:35:43   rendered 256/800 lines in 0_arial
+23:35:44   rendered 257/800 lines in 0_arial
+23:35:44   rendered 258/800 lines in 0_arial
+23:35:44   rendered 259/800 lines in 0_arial
+23:35:44   rendered 260/800 lines in 0_arial
+23:35:45   rendered 261/800 lines in 0_arial
+23:35:45   rendered 262/800 lines in 0_arial
+23:35:45   rendered 263/800 lines in 0_arial
+23:35:45   rendered 264/800 lines in 0_arial
+23:35:46   rendered 265/800 lines in 0_arial
+23:35:46   rendered 266/800 lines in 0_arial
+23:35:46   rendered 267/800 lines in 0_arial
+23:35:46   rendered 268/800 lines in 0_arial
+23:35:46   rendered 269/800 lines in 0_arial
+23:35:46   rendered 270/800 lines in 0_arial
+23:35:47   rendered 271/800 lines in 0_arial
+23:35:47   rendered 272/800 lines in 0_arial
+23:35:47   rendered 273/800 lines in 0_arial
+23:35:47   rendered 274/800 lines in 0_arial
+23:35:48   rendered 275/800 lines in 0_arial
+23:35:48   rendered 276/800 lines in 0_arial
+23:35:48   rendered 277/800 lines in 0_arial
+23:35:48   rendered 278/800 lines in 0_arial
+23:35:49   rendered 279/800 lines in 0_arial
+23:35:49   rendered 280/800 lines in 0_arial
+23:35:49   rendered 281/800 lines in 0_arial
+23:35:49   rendered 282/800 lines in 0_arial
+23:35:50   rendered 283/800 lines in 0_arial
+23:35:50   rendered 284/800 lines in 0_arial
+23:35:50   rendered 285/800 lines in 0_arial
+23:35:50   rendered 286/800 lines in 0_arial
+23:35:51   rendered 287/800 lines in 0_arial
+23:35:51   rendered 288/800 lines in 0_arial
+23:35:51   rendered 289/800 lines in 0_arial
+23:35:51   rendered 290/800 lines in 0_arial
+23:35:52   rendered 291/800 lines in 0_arial
+23:35:52   rendered 292/800 lines in 0_arial
+23:35:52   rendered 293/800 lines in 0_arial
+23:35:52   rendered 294/800 lines in 0_arial
+23:35:53   rendered 295/800 lines in 0_arial
+23:35:53   rendered 296/800 lines in 0_arial
+23:35:53   rendered 297/800 lines in 0_arial
+23:35:53   rendered 298/800 lines in 0_arial
+23:35:54   rendered 299/800 lines in 0_arial
+23:35:54   rendered 300/800 lines in 0_arial
+23:35:54   rendered 301/800 lines in 0_arial
+23:35:54   rendered 302/800 lines in 0_arial
+23:35:55   rendered 303/800 lines in 0_arial
+23:35:55   rendered 304/800 lines in 0_arial
+23:35:55   rendered 305/800 lines in 0_arial
+23:35:55   rendered 306/800 lines in 0_arial
+23:35:56   rendered 307/800 lines in 0_arial
+23:35:56   rendered 308/800 lines in 0_arial
+23:35:56   rendered 309/800 lines in 0_arial
+23:35:56   rendered 310/800 lines in 0_arial
+23:35:57   rendered 311/800 lines in 0_arial
+23:35:57   rendered 312/800 lines in 0_arial
+23:35:57   rendered 313/800 lines in 0_arial
+23:35:57   rendered 314/800 lines in 0_arial
+23:35:58   rendered 315/800 lines in 0_arial
+23:35:58   rendered 316/800 lines in 0_arial
+23:35:58   rendered 317/800 lines in 0_arial
+23:35:58   rendered 318/800 lines in 0_arial
+23:35:59   rendered 319/800 lines in 0_arial
+23:35:59   rendered 320/800 lines in 0_arial
+23:35:59   rendered 321/800 lines in 0_arial
+23:35:59   rendered 322/800 lines in 0_arial
+23:35:59   rendered 323/800 lines in 0_arial
+23:35:59   rendered 324/800 lines in 0_arial
+23:36:00   rendered 325/800 lines in 0_arial
+23:36:00   rendered 326/800 lines in 0_arial
+23:36:00   rendered 327/800 lines in 0_arial
+23:36:00   rendered 328/800 lines in 0_arial
+23:36:01   rendered 329/800 lines in 0_arial
+23:36:01   rendered 330/800 lines in 0_arial
+23:36:01   rendered 331/800 lines in 0_arial
+23:36:01   rendered 332/800 lines in 0_arial
+23:36:02   rendered 333/800 lines in 0_arial
+23:36:02   rendered 334/800 lines in 0_arial
+23:36:02   rendered 335/800 lines in 0_arial
+23:36:02   rendered 336/800 lines in 0_arial
+23:36:03   rendered 337/800 lines in 0_arial
+23:36:03   rendered 338/800 lines in 0_arial
+23:36:03   rendered 339/800 lines in 0_arial
+23:36:03   rendered 340/800 lines in 0_arial
+23:36:04   rendered 341/800 lines in 0_arial
+23:36:04   rendered 342/800 lines in 0_arial
+23:36:04   rendered 343/800 lines in 0_arial
+23:36:04   rendered 344/800 lines in 0_arial
+23:36:05   rendered 345/800 lines in 0_arial
+23:36:05   rendered 346/800 lines in 0_arial
+23:36:05   rendered 347/800 lines in 0_arial
+23:36:05   rendered 348/800 lines in 0_arial
+23:36:06   rendered 349/800 lines in 0_arial
+23:36:06   rendered 350/800 lines in 0_arial
+23:36:06   rendered 351/800 lines in 0_arial
+23:36:06   rendered 352/800 lines in 0_arial
+23:36:07   rendered 353/800 lines in 0_arial
+23:36:07   rendered 354/800 lines in 0_arial
+23:36:07   rendered 355/800 lines in 0_arial
+23:36:07   rendered 356/800 lines in 0_arial
+23:36:08   rendered 357/800 lines in 0_arial
+23:36:08   rendered 358/800 lines in 0_arial
+23:36:08   rendered 359/800 lines in 0_arial
+23:36:08   rendered 360/800 lines in 0_arial
+23:36:09   rendered 361/800 lines in 0_arial
+23:36:09   rendered 362/800 lines in 0_arial
+23:36:09   rendered 363/800 lines in 0_arial
+23:36:09   rendered 364/800 lines in 0_arial
+23:36:10   rendered 365/800 lines in 0_arial
+23:36:10   rendered 366/800 lines in 0_arial
+23:36:10   rendered 367/800 lines in 0_arial
+23:36:10   rendered 368/800 lines in 0_arial
+23:36:11   rendered 369/800 lines in 0_arial
+23:36:11   rendered 370/800 lines in 0_arial
+23:36:11   rendered 371/800 lines in 0_arial
+23:36:11   rendered 372/800 lines in 0_arial
+23:36:12   rendered 373/800 lines in 0_arial
+23:36:12   rendered 374/800 lines in 0_arial
+23:36:12   rendered 375/800 lines in 0_arial
+23:36:12   rendered 376/800 lines in 0_arial
+23:36:13   rendered 377/800 lines in 0_arial
+23:36:13   rendered 378/800 lines in 0_arial
+23:36:13   rendered 379/800 lines in 0_arial
+23:36:13   rendered 380/800 lines in 0_arial
+23:36:14   rendered 381/800 lines in 0_arial
+23:36:14   rendered 382/800 lines in 0_arial
+23:36:14   rendered 383/800 lines in 0_arial
+23:36:14   rendered 384/800 lines in 0_arial
+23:36:15   rendered 385/800 lines in 0_arial
+23:36:15   rendered 386/800 lines in 0_arial
+23:36:15   rendered 387/800 lines in 0_arial
+23:36:15   rendered 388/800 lines in 0_arial
+23:36:15   rendered 389/800 lines in 0_arial
+23:36:16   rendered 390/800 lines in 0_arial
+23:36:16   rendered 391/800 lines in 0_arial
+23:36:16   rendered 392/800 lines in 0_arial
+23:36:16   rendered 393/800 lines in 0_arial
+23:36:17   rendered 394/800 lines in 0_arial
+23:36:17   rendered 395/800 lines in 0_arial
+23:36:17   rendered 396/800 lines in 0_arial
+23:36:17   rendered 397/800 lines in 0_arial
+23:36:18   rendered 398/800 lines in 0_arial
+23:36:18   rendered 399/800 lines in 0_arial
+23:36:18   rendered 400/800 lines in 0_arial
+23:36:18   rendered 401/800 lines in 0_arial
+23:36:19   rendered 402/800 lines in 0_arial
+23:36:19   rendered 403/800 lines in 0_arial
+23:36:19   rendered 404/800 lines in 0_arial
+23:36:19   rendered 405/800 lines in 0_arial
+23:36:20   rendered 406/800 lines in 0_arial
+23:36:20   rendered 407/800 lines in 0_arial
+23:36:20   rendered 408/800 lines in 0_arial
+23:36:20   rendered 409/800 lines in 0_arial
+23:36:21   rendered 410/800 lines in 0_arial
+23:36:21   rendered 411/800 lines in 0_arial
+23:36:21   rendered 412/800 lines in 0_arial
+23:36:21   rendered 413/800 lines in 0_arial
+23:36:21   rendered 414/800 lines in 0_arial
+23:36:22   rendered 415/800 lines in 0_arial
+23:36:22   rendered 416/800 lines in 0_arial
+23:36:22   rendered 417/800 lines in 0_arial
+23:36:22   rendered 418/800 lines in 0_arial
+23:36:23   rendered 419/800 lines in 0_arial
+23:36:23   rendered 420/800 lines in 0_arial
+23:36:23   rendered 421/800 lines in 0_arial
+23:36:23   rendered 422/800 lines in 0_arial
+23:36:24   rendered 423/800 lines in 0_arial
+23:36:24   rendered 424/800 lines in 0_arial
+23:36:24   rendered 425/800 lines in 0_arial
+23:36:24   rendered 426/800 lines in 0_arial
+23:36:25   rendered 427/800 lines in 0_arial
+23:36:25   rendered 428/800 lines in 0_arial
+23:36:25   rendered 429/800 lines in 0_arial
+23:36:25   rendered 430/800 lines in 0_arial
+23:36:26   rendered 431/800 lines in 0_arial
+23:36:26   rendered 432/800 lines in 0_arial
+23:36:26   rendered 433/800 lines in 0_arial
+23:36:26   rendered 434/800 lines in 0_arial
+23:36:26   rendered 435/800 lines in 0_arial
+23:36:27   rendered 436/800 lines in 0_arial
+23:36:27   rendered 437/800 lines in 0_arial
+23:36:27   rendered 438/800 lines in 0_arial
+23:36:27   rendered 439/800 lines in 0_arial
+23:36:28   rendered 440/800 lines in 0_arial
+23:36:28   rendered 441/800 lines in 0_arial
+23:36:28   rendered 442/800 lines in 0_arial
+23:36:28   rendered 443/800 lines in 0_arial
+23:36:28   rendered 444/800 lines in 0_arial
+23:36:29   rendered 445/800 lines in 0_arial
+23:36:29   rendered 446/800 lines in 0_arial
+23:36:29   rendered 447/800 lines in 0_arial
+23:36:29   rendered 448/800 lines in 0_arial
+23:36:30   rendered 449/800 lines in 0_arial
+23:36:30   rendered 450/800 lines in 0_arial
+23:36:30   rendered 451/800 lines in 0_arial
+23:36:30   rendered 452/800 lines in 0_arial
+23:36:31   rendered 453/800 lines in 0_arial
+23:36:31   rendered 454/800 lines in 0_arial
+23:36:31   rendered 455/800 lines in 0_arial
+23:36:31   rendered 456/800 lines in 0_arial
+23:36:32   rendered 457/800 lines in 0_arial
+23:36:32   rendered 458/800 lines in 0_arial
+23:36:32   rendered 459/800 lines in 0_arial
+23:36:32   rendered 460/800 lines in 0_arial
+23:36:33   rendered 461/800 lines in 0_arial
+23:36:33   rendered 462/800 lines in 0_arial
+23:36:33   rendered 463/800 lines in 0_arial
+23:36:33   rendered 464/800 lines in 0_arial
+23:36:34   rendered 465/800 lines in 0_arial
+23:36:34   rendered 466/800 lines in 0_arial
+23:36:34   rendered 467/800 lines in 0_arial
+23:36:34   rendered 468/800 lines in 0_arial
+23:36:35   rendered 469/800 lines in 0_arial
+23:36:35   rendered 470/800 lines in 0_arial
+23:36:35   rendered 471/800 lines in 0_arial
+23:36:35   rendered 472/800 lines in 0_arial
+23:36:36   rendered 473/800 lines in 0_arial
+23:36:36   rendered 474/800 lines in 0_arial
+23:36:36   rendered 475/800 lines in 0_arial
+23:36:36   rendered 476/800 lines in 0_arial
+23:36:37   rendered 477/800 lines in 0_arial
+23:36:37   rendered 478/800 lines in 0_arial
+23:36:37   rendered 479/800 lines in 0_arial
+23:36:37   rendered 480/800 lines in 0_arial
+23:36:38   rendered 481/800 lines in 0_arial
+23:36:38   rendered 482/800 lines in 0_arial
+23:36:38   rendered 483/800 lines in 0_arial
+23:36:38   rendered 484/800 lines in 0_arial
+23:36:38   rendered 485/800 lines in 0_arial
+23:36:39   rendered 486/800 lines in 0_arial
+23:36:39   rendered 487/800 lines in 0_arial
+23:36:39   rendered 488/800 lines in 0_arial
+23:36:39   rendered 489/800 lines in 0_arial
+23:36:40   rendered 490/800 lines in 0_arial
+23:36:40   rendered 491/800 lines in 0_arial
+23:36:40   rendered 492/800 lines in 0_arial
+23:36:40   rendered 493/800 lines in 0_arial
+23:36:41   rendered 494/800 lines in 0_arial
+23:36:41   rendered 495/800 lines in 0_arial
+23:36:41   rendered 496/800 lines in 0_arial
+23:36:41   rendered 497/800 lines in 0_arial
+23:36:42   rendered 498/800 lines in 0_arial
+23:36:42   rendered 499/800 lines in 0_arial
+23:36:42   rendered 500/800 lines in 0_arial
+23:36:42   rendered 501/800 lines in 0_arial
+23:36:42   rendered 502/800 lines in 0_arial
+23:36:43   rendered 503/800 lines in 0_arial
+23:36:43   rendered 504/800 lines in 0_arial
+23:36:43   rendered 505/800 lines in 0_arial
+23:36:43   rendered 506/800 lines in 0_arial
+23:36:44   rendered 507/800 lines in 0_arial
+23:36:44   rendered 508/800 lines in 0_arial
+23:36:44   rendered 509/800 lines in 0_arial
+23:36:44   rendered 510/800 lines in 0_arial
+23:36:45   rendered 511/800 lines in 0_arial
+23:36:45   rendered 512/800 lines in 0_arial
+23:36:45   rendered 513/800 lines in 0_arial
+23:36:45   rendered 514/800 lines in 0_arial
+23:36:46   rendered 515/800 lines in 0_arial
+23:36:46   rendered 516/800 lines in 0_arial
+23:36:46   rendered 517/800 lines in 0_arial
+23:36:46   rendered 518/800 lines in 0_arial
+23:36:47   rendered 519/800 lines in 0_arial
+23:36:47   rendered 520/800 lines in 0_arial
+23:36:47   rendered 521/800 lines in 0_arial
+23:36:47   rendered 522/800 lines in 0_arial
+23:36:48   rendered 523/800 lines in 0_arial
+23:36:48   rendered 524/800 lines in 0_arial
+23:36:48   rendered 525/800 lines in 0_arial
+23:36:48   rendered 526/800 lines in 0_arial
+23:36:49   rendered 527/800 lines in 0_arial
+23:36:49   rendered 528/800 lines in 0_arial
+23:36:49   rendered 529/800 lines in 0_arial
+23:36:49   rendered 530/800 lines in 0_arial
+23:36:50   rendered 531/800 lines in 0_arial
+23:36:50   rendered 532/800 lines in 0_arial
+23:36:50   rendered 533/800 lines in 0_arial
+23:36:50   rendered 534/800 lines in 0_arial
+23:36:51   rendered 535/800 lines in 0_arial
+23:36:51   rendered 536/800 lines in 0_arial
+23:36:51   rendered 537/800 lines in 0_arial
+23:36:51   rendered 538/800 lines in 0_arial
+23:36:52   rendered 539/800 lines in 0_arial
+23:36:52   rendered 540/800 lines in 0_arial
+23:36:52   rendered 541/800 lines in 0_arial
+23:36:52   rendered 542/800 lines in 0_arial
+23:36:53   rendered 543/800 lines in 0_arial
+23:36:53   rendered 544/800 lines in 0_arial
+23:36:53   rendered 545/800 lines in 0_arial
+23:36:53   rendered 546/800 lines in 0_arial
+23:36:54   rendered 547/800 lines in 0_arial
+23:36:54   rendered 548/800 lines in 0_arial
+23:36:54   rendered 549/800 lines in 0_arial
+23:36:54   rendered 550/800 lines in 0_arial
+23:36:55   rendered 551/800 lines in 0_arial
+23:36:55   rendered 552/800 lines in 0_arial
+23:36:55   rendered 553/800 lines in 0_arial
+23:36:55   rendered 554/800 lines in 0_arial
+23:36:55   rendered 555/800 lines in 0_arial
+23:36:56   rendered 556/800 lines in 0_arial
+23:36:56   rendered 557/800 lines in 0_arial
+23:36:56   rendered 558/800 lines in 0_arial
+23:36:56   rendered 559/800 lines in 0_arial
+23:36:56   rendered 560/800 lines in 0_arial
+23:36:57   rendered 561/800 lines in 0_arial
+23:36:57   rendered 562/800 lines in 0_arial
+23:36:57   rendered 563/800 lines in 0_arial
+23:36:57   rendered 564/800 lines in 0_arial
+23:36:58   rendered 565/800 lines in 0_arial
+23:36:58   rendered 566/800 lines in 0_arial
+23:36:58   rendered 567/800 lines in 0_arial
+23:36:58   rendered 568/800 lines in 0_arial
+23:36:59   rendered 569/800 lines in 0_arial
+23:36:59   rendered 570/800 lines in 0_arial
+23:36:59   rendered 571/800 lines in 0_arial
+23:36:59   rendered 572/800 lines in 0_arial
+23:37:00   rendered 573/800 lines in 0_arial
+23:37:00   rendered 574/800 lines in 0_arial
+23:37:00   rendered 575/800 lines in 0_arial
+23:37:00   rendered 576/800 lines in 0_arial
+23:37:01   rendered 577/800 lines in 0_arial
+23:37:01   rendered 578/800 lines in 0_arial
+23:37:01   rendered 579/800 lines in 0_arial
+23:37:01   rendered 580/800 lines in 0_arial
+23:37:02   rendered 581/800 lines in 0_arial
+23:37:02   rendered 582/800 lines in 0_arial
+23:37:02   rendered 583/800 lines in 0_arial
+23:37:02   rendered 584/800 lines in 0_arial
+23:37:03   rendered 585/800 lines in 0_arial
+23:37:03   rendered 586/800 lines in 0_arial
+23:37:03   rendered 587/800 lines in 0_arial
+23:37:03   rendered 588/800 lines in 0_arial
+23:37:04   rendered 589/800 lines in 0_arial
+23:37:04   rendered 590/800 lines in 0_arial
+23:37:04   rendered 591/800 lines in 0_arial
+23:37:04   rendered 592/800 lines in 0_arial
+23:37:05   rendered 593/800 lines in 0_arial
+23:37:05   rendered 594/800 lines in 0_arial
+23:37:05   rendered 595/800 lines in 0_arial
+23:37:05   rendered 596/800 lines in 0_arial
+23:37:06   rendered 597/800 lines in 0_arial
+23:37:06   rendered 598/800 lines in 0_arial
+23:37:06   rendered 599/800 lines in 0_arial
+23:37:06   rendered 600/800 lines in 0_arial
+23:37:06   rendered 601/800 lines in 0_arial
+23:37:07   rendered 602/800 lines in 0_arial
+23:37:07   rendered 603/800 lines in 0_arial
+23:37:07   rendered 604/800 lines in 0_arial
+23:37:07   rendered 605/800 lines in 0_arial
+23:37:07   rendered 606/800 lines in 0_arial
+23:37:08   rendered 607/800 lines in 0_arial
+23:37:08   rendered 608/800 lines in 0_arial
+23:37:08   rendered 609/800 lines in 0_arial
+23:37:08   rendered 610/800 lines in 0_arial
+23:37:09   rendered 611/800 lines in 0_arial
+23:37:09   rendered 612/800 lines in 0_arial
+23:37:09   rendered 613/800 lines in 0_arial
+23:37:09   rendered 614/800 lines in 0_arial
+23:37:10   rendered 615/800 lines in 0_arial
+23:37:10   rendered 616/800 lines in 0_arial
+23:37:10   rendered 617/800 lines in 0_arial
+23:37:10   rendered 618/800 lines in 0_arial
+23:37:11   rendered 619/800 lines in 0_arial
+23:37:11   rendered 620/800 lines in 0_arial
+23:37:11   rendered 621/800 lines in 0_arial
+23:37:11   rendered 622/800 lines in 0_arial
+23:37:12   rendered 623/800 lines in 0_arial
+23:37:12   rendered 624/800 lines in 0_arial
+23:37:12   rendered 625/800 lines in 0_arial
+23:37:12   rendered 626/800 lines in 0_arial
+23:37:13   rendered 627/800 lines in 0_arial
+23:37:13   rendered 628/800 lines in 0_arial
+23:37:13   rendered 629/800 lines in 0_arial
+23:37:13   rendered 630/800 lines in 0_arial
+23:37:14   rendered 631/800 lines in 0_arial
+23:37:14   rendered 632/800 lines in 0_arial
+23:37:14   rendered 633/800 lines in 0_arial
+23:37:14   rendered 634/800 lines in 0_arial
+23:37:15   rendered 635/800 lines in 0_arial
+23:37:15   rendered 636/800 lines in 0_arial
+23:37:15   rendered 637/800 lines in 0_arial
+23:37:15   rendered 638/800 lines in 0_arial
+23:37:15   rendered 639/800 lines in 0_arial
+23:37:16   rendered 640/800 lines in 0_arial
+23:37:16   rendered 641/800 lines in 0_arial
+23:37:16   rendered 642/800 lines in 0_arial
+23:37:16   rendered 643/800 lines in 0_arial
+23:37:16   rendered 644/800 lines in 0_arial
+23:37:17   rendered 645/800 lines in 0_arial
+23:37:17   rendered 646/800 lines in 0_arial
+23:37:17   rendered 647/800 lines in 0_arial
+23:37:17   rendered 648/800 lines in 0_arial
+23:37:18   rendered 649/800 lines in 0_arial
+23:37:18   rendered 650/800 lines in 0_arial
+23:37:18   rendered 651/800 lines in 0_arial
+23:37:18   rendered 652/800 lines in 0_arial
+23:37:19   rendered 653/800 lines in 0_arial
+23:37:19   rendered 654/800 lines in 0_arial
+23:37:19   rendered 655/800 lines in 0_arial
+23:37:19   rendered 656/800 lines in 0_arial
+23:37:20   rendered 657/800 lines in 0_arial
+23:37:20   rendered 658/800 lines in 0_arial
+23:37:20   rendered 659/800 lines in 0_arial
+23:37:20   rendered 660/800 lines in 0_arial
+23:37:21   rendered 661/800 lines in 0_arial
+23:37:21   rendered 662/800 lines in 0_arial
+23:37:21   rendered 663/800 lines in 0_arial
+23:37:21   rendered 664/800 lines in 0_arial
+23:37:22   rendered 665/800 lines in 0_arial
+23:37:22   rendered 666/800 lines in 0_arial
+23:37:22   rendered 667/800 lines in 0_arial
+23:37:22   rendered 668/800 lines in 0_arial
+23:37:23   rendered 669/800 lines in 0_arial
+23:37:23   rendered 670/800 lines in 0_arial
+23:37:23   rendered 671/800 lines in 0_arial
+23:37:23   rendered 672/800 lines in 0_arial
+23:37:24   rendered 673/800 lines in 0_arial
+23:37:24   rendered 674/800 lines in 0_arial
+23:37:24   rendered 675/800 lines in 0_arial
+23:37:24   rendered 676/800 lines in 0_arial
+23:37:25   rendered 677/800 lines in 0_arial
+23:37:25   rendered 678/800 lines in 0_arial
+23:37:25   rendered 679/800 lines in 0_arial
+23:37:25   rendered 680/800 lines in 0_arial
+23:37:26   rendered 681/800 lines in 0_arial
+23:37:26   rendered 682/800 lines in 0_arial
+23:37:26   rendered 683/800 lines in 0_arial
+23:37:26   rendered 684/800 lines in 0_arial
+23:37:27   rendered 685/800 lines in 0_arial
+23:37:27   rendered 686/800 lines in 0_arial
+23:37:27   rendered 687/800 lines in 0_arial
+23:37:27   rendered 688/800 lines in 0_arial
+23:37:28   rendered 689/800 lines in 0_arial
+23:37:28   rendered 690/800 lines in 0_arial
+23:37:28   rendered 691/800 lines in 0_arial
+23:37:28   rendered 692/800 lines in 0_arial
+23:37:29   rendered 693/800 lines in 0_arial
+23:37:29   rendered 694/800 lines in 0_arial
+23:37:29   rendered 695/800 lines in 0_arial
+23:37:29   rendered 696/800 lines in 0_arial
+23:37:30   rendered 697/800 lines in 0_arial
+23:37:30   rendered 698/800 lines in 0_arial
+23:37:30   rendered 699/800 lines in 0_arial
+23:37:30   rendered 700/800 lines in 0_arial
+23:37:31   rendered 701/800 lines in 0_arial
+23:37:31   rendered 702/800 lines in 0_arial
+23:37:31   rendered 703/800 lines in 0_arial
+23:37:31   rendered 704/800 lines in 0_arial
+23:37:32   rendered 705/800 lines in 0_arial
+23:37:32   rendered 706/800 lines in 0_arial
+23:37:32   rendered 707/800 lines in 0_arial
+23:37:32   rendered 708/800 lines in 0_arial
+23:37:32   rendered 709/800 lines in 0_arial
+23:37:33   rendered 710/800 lines in 0_arial
+23:37:33   rendered 711/800 lines in 0_arial
+23:37:33   rendered 712/800 lines in 0_arial
+23:37:33   rendered 713/800 lines in 0_arial
+23:37:34   rendered 714/800 lines in 0_arial
+23:37:34   rendered 715/800 lines in 0_arial
+23:37:34   rendered 716/800 lines in 0_arial
+23:37:34   rendered 717/800 lines in 0_arial
+23:37:34   rendered 718/800 lines in 0_arial
+23:37:35   rendered 719/800 lines in 0_arial
+23:37:35   rendered 720/800 lines in 0_arial
+23:37:35   rendered 721/800 lines in 0_arial
+23:37:35   rendered 722/800 lines in 0_arial
+23:37:36   rendered 723/800 lines in 0_arial
+23:37:36   rendered 724/800 lines in 0_arial
+23:37:36   rendered 725/800 lines in 0_arial
+23:37:36   rendered 726/800 lines in 0_arial
+23:37:37   rendered 727/800 lines in 0_arial
+23:37:37   rendered 728/800 lines in 0_arial
+23:37:37   rendered 729/800 lines in 0_arial
+23:37:37   rendered 730/800 lines in 0_arial
+23:37:38   rendered 731/800 lines in 0_arial
+23:37:38   rendered 732/800 lines in 0_arial
+23:37:38   rendered 733/800 lines in 0_arial
+23:37:38   rendered 734/800 lines in 0_arial
+23:37:39   rendered 735/800 lines in 0_arial
+23:37:39   rendered 736/800 lines in 0_arial
+23:37:39   rendered 737/800 lines in 0_arial
+23:37:39   rendered 738/800 lines in 0_arial
+23:37:40   rendered 739/800 lines in 0_arial
+23:37:40   rendered 740/800 lines in 0_arial
+23:37:40   rendered 741/800 lines in 0_arial
+23:37:40   rendered 742/800 lines in 0_arial
+23:37:41   rendered 743/800 lines in 0_arial
+23:37:41   rendered 744/800 lines in 0_arial
+23:37:41   rendered 745/800 lines in 0_arial
+23:37:41   rendered 746/800 lines in 0_arial
+23:37:42   rendered 747/800 lines in 0_arial
+23:37:42   rendered 748/800 lines in 0_arial
+23:37:42   rendered 749/800 lines in 0_arial
+23:37:42   rendered 750/800 lines in 0_arial
+23:37:43   rendered 751/800 lines in 0_arial
+23:37:43   rendered 752/800 lines in 0_arial
+23:37:43   rendered 753/800 lines in 0_arial
+23:37:43   rendered 754/800 lines in 0_arial
+23:37:44   rendered 755/800 lines in 0_arial
+23:37:44   rendered 756/800 lines in 0_arial
+23:37:44   rendered 757/800 lines in 0_arial
+23:37:44   rendered 758/800 lines in 0_arial
+23:37:45   rendered 759/800 lines in 0_arial
+23:37:45   rendered 760/800 lines in 0_arial
+23:37:45   rendered 761/800 lines in 0_arial
+23:37:45   rendered 762/800 lines in 0_arial
+23:37:46   rendered 763/800 lines in 0_arial
+23:37:46   rendered 764/800 lines in 0_arial
+23:37:46   rendered 765/800 lines in 0_arial
+23:37:46   rendered 766/800 lines in 0_arial
+23:37:47   rendered 767/800 lines in 0_arial
+23:37:47   rendered 768/800 lines in 0_arial
+23:37:47   rendered 769/800 lines in 0_arial
+23:37:47   rendered 770/800 lines in 0_arial
+23:37:48   rendered 771/800 lines in 0_arial
+23:37:48   rendered 772/800 lines in 0_arial
+23:37:48   rendered 773/800 lines in 0_arial
+23:37:48   rendered 774/800 lines in 0_arial
+23:37:49   rendered 775/800 lines in 0_arial
+23:37:49   rendered 776/800 lines in 0_arial
+23:37:49   rendered 777/800 lines in 0_arial
+23:37:49   rendered 778/800 lines in 0_arial
+23:37:50   rendered 779/800 lines in 0_arial
+23:37:50   rendered 780/800 lines in 0_arial
+23:37:50   rendered 781/800 lines in 0_arial
+23:37:50   rendered 782/800 lines in 0_arial
+23:37:51   rendered 783/800 lines in 0_arial
+23:37:51   rendered 784/800 lines in 0_arial
+23:37:51   rendered 785/800 lines in 0_arial
+23:37:51   rendered 786/800 lines in 0_arial
+23:37:51   rendered 787/800 lines in 0_arial
+23:37:51   rendered 788/800 lines in 0_arial
+23:37:52   rendered 789/800 lines in 0_arial
+23:37:52   rendered 790/800 lines in 0_arial
+23:37:52   rendered 791/800 lines in 0_arial
+23:37:52   rendered 792/800 lines in 0_arial
+23:37:53   rendered 793/800 lines in 0_arial
+23:37:53   rendered 794/800 lines in 0_arial
+23:37:53   rendered 795/800 lines in 0_arial
+23:37:53   rendered 796/800 lines in 0_arial
+23:37:54   rendered 797/800 lines in 0_arial
+23:37:54   rendered 798/800 lines in 0_arial
+23:37:54   rendered 799/800 lines in 0_arial
+23:37:54   rendered 800/800 lines in 0_arial
+23:37:54 Rendered 800 training images in 0_arial
+23:37:55   prepared 1/800 lines in 0_arial: train_0000.tif
+23:37:55   prepared 2/800 lines in 0_arial: train_0001.tif
+23:37:55   prepared 3/800 lines in 0_arial: train_0002.tif
+23:37:55   prepared 4/800 lines in 0_arial: train_0003.tif
+23:37:55   prepared 5/800 lines in 0_arial: train_0004.tif
+23:37:55   prepared 6/800 lines in 0_arial: train_0005.tif
+23:37:55   prepared 7/800 lines in 0_arial: train_0006.tif
+23:37:55   prepared 8/800 lines in 0_arial: train_0007.tif
+23:37:55   prepared 9/800 lines in 0_arial: train_0008.tif
+23:37:55   prepared 10/800 lines in 0_arial: train_0009.tif
+23:37:56   prepared 11/800 lines in 0_arial: train_0010.tif
+23:37:56   prepared 12/800 lines in 0_arial: train_0011.tif
+23:37:56   prepared 13/800 lines in 0_arial: train_0012.tif
+23:37:56   prepared 14/800 lines in 0_arial: train_0013.tif
+23:37:56   prepared 15/800 lines in 0_arial: train_0014.tif
+23:37:56   prepared 16/800 lines in 0_arial: train_0015.tif
+23:37:56   prepared 17/800 lines in 0_arial: train_0016.tif
+23:37:56   prepared 18/800 lines in 0_arial: train_0017.tif
+23:37:56   prepared 19/800 lines in 0_arial: train_0018.tif
+23:37:57   prepared 20/800 lines in 0_arial: train_0019.tif
+23:37:57   prepared 21/800 lines in 0_arial: train_0020.tif
+23:37:57   prepared 22/800 lines in 0_arial: train_0021.tif
+23:37:57   prepared 23/800 lines in 0_arial: train_0022.tif
+23:37:57   prepared 24/800 lines in 0_arial: train_0023.tif
+23:37:57   prepared 25/800 lines in 0_arial: train_0024.tif
+23:37:57   prepared 26/800 lines in 0_arial: train_0025.tif
+23:37:57   prepared 27/800 lines in 0_arial: train_0026.tif
+23:37:57   prepared 28/800 lines in 0_arial: train_0027.tif
+23:37:57   prepared 29/800 lines in 0_arial: train_0028.tif
+23:37:58   prepared 30/800 lines in 0_arial: train_0029.tif
+23:37:58   prepared 31/800 lines in 0_arial: train_0030.tif
+23:37:58   prepared 32/800 lines in 0_arial: train_0031.tif
+23:37:58   prepared 33/800 lines in 0_arial: train_0032.tif
+23:37:58   prepared 34/800 lines in 0_arial: train_0033.tif
+23:37:58   prepared 35/800 lines in 0_arial: train_0034.tif
+23:37:58   prepared 36/800 lines in 0_arial: train_0035.tif
+23:37:58   prepared 37/800 lines in 0_arial: train_0036.tif
+23:37:58   prepared 38/800 lines in 0_arial: train_0037.tif
+23:37:58   prepared 39/800 lines in 0_arial: train_0038.tif
+23:37:59   prepared 40/800 lines in 0_arial: train_0039.tif
+23:37:59   prepared 41/800 lines in 0_arial: train_0040.tif
+23:37:59   prepared 42/800 lines in 0_arial: train_0041.tif
+23:37:59   prepared 43/800 lines in 0_arial: train_0042.tif
+23:37:59   prepared 44/800 lines in 0_arial: train_0043.tif
+23:37:59   prepared 45/800 lines in 0_arial: train_0044.tif
+23:37:59   prepared 46/800 lines in 0_arial: train_0045.tif
+23:37:59   prepared 47/800 lines in 0_arial: train_0046.tif
+23:37:59   prepared 48/800 lines in 0_arial: train_0047.tif
+23:37:59   prepared 49/800 lines in 0_arial: train_0048.tif
+23:38:00   prepared 50/800 lines in 0_arial: train_0049.tif
+23:38:00   prepared 51/800 lines in 0_arial: train_0050.tif
+23:38:00   prepared 52/800 lines in 0_arial: train_0051.tif
+23:38:00   prepared 53/800 lines in 0_arial: train_0052.tif
+23:38:00   prepared 54/800 lines in 0_arial: train_0053.tif
+23:38:00   prepared 55/800 lines in 0_arial: train_0054.tif
+23:38:00   prepared 56/800 lines in 0_arial: train_0055.tif
+23:38:00   prepared 57/800 lines in 0_arial: train_0056.tif
+23:38:00   prepared 58/800 lines in 0_arial: train_0057.tif
+23:38:01   prepared 59/800 lines in 0_arial: train_0058.tif
+23:38:01   prepared 60/800 lines in 0_arial: train_0059.tif
+23:38:01   prepared 61/800 lines in 0_arial: train_0060.tif
+23:38:01   prepared 62/800 lines in 0_arial: train_0061.tif
+23:38:01   prepared 63/800 lines in 0_arial: train_0062.tif
+23:38:01   prepared 64/800 lines in 0_arial: train_0063.tif
+23:38:01   prepared 65/800 lines in 0_arial: train_0064.tif
+23:38:01   prepared 66/800 lines in 0_arial: train_0065.tif
+23:38:01   prepared 67/800 lines in 0_arial: train_0066.tif
+23:38:01   prepared 68/800 lines in 0_arial: train_0067.tif
+23:38:02   prepared 69/800 lines in 0_arial: train_0068.tif
+23:38:02   prepared 70/800 lines in 0_arial: train_0069.tif
+23:38:02   prepared 71/800 lines in 0_arial: train_0070.tif
+23:38:02   prepared 72/800 lines in 0_arial: train_0071.tif
+23:38:02   prepared 73/800 lines in 0_arial: train_0072.tif
+23:38:02   prepared 74/800 lines in 0_arial: train_0073.tif
+23:38:02   prepared 75/800 lines in 0_arial: train_0074.tif
+23:38:02   prepared 76/800 lines in 0_arial: train_0075.tif
+23:38:02   prepared 77/800 lines in 0_arial: train_0076.tif
+23:38:02   prepared 78/800 lines in 0_arial: train_0077.tif
+23:38:03   prepared 79/800 lines in 0_arial: train_0078.tif
+23:38:03   prepared 80/800 lines in 0_arial: train_0079.tif
+23:38:03   prepared 81/800 lines in 0_arial: train_0080.tif
+23:38:03   prepared 82/800 lines in 0_arial: train_0081.tif
+23:38:03   prepared 83/800 lines in 0_arial: train_0082.tif
+23:38:03   prepared 84/800 lines in 0_arial: train_0083.tif
+23:38:03   prepared 85/800 lines in 0_arial: train_0084.tif
+23:38:03   prepared 86/800 lines in 0_arial: train_0085.tif
+23:38:03   prepared 87/800 lines in 0_arial: train_0086.tif
+23:38:04   prepared 88/800 lines in 0_arial: train_0087.tif
+23:38:04   prepared 89/800 lines in 0_arial: train_0088.tif
+23:38:04   prepared 90/800 lines in 0_arial: train_0089.tif
+23:38:04   prepared 91/800 lines in 0_arial: train_0090.tif
+23:38:04   prepared 92/800 lines in 0_arial: train_0091.tif
+23:38:04   prepared 93/800 lines in 0_arial: train_0092.tif
+23:38:04   prepared 94/800 lines in 0_arial: train_0093.tif
+23:38:04   prepared 95/800 lines in 0_arial: train_0094.tif
+23:38:04   prepared 96/800 lines in 0_arial: train_0095.tif
+23:38:05   prepared 97/800 lines in 0_arial: train_0096.tif
+23:38:05   prepared 98/800 lines in 0_arial: train_0097.tif
+23:38:05   prepared 99/800 lines in 0_arial: train_0098.tif
+23:38:05   prepared 100/800 lines in 0_arial: train_0099.tif
+23:38:05   prepared 101/800 lines in 0_arial: train_0100.tif
+23:38:05   prepared 102/800 lines in 0_arial: train_0101.tif
+23:38:05   prepared 103/800 lines in 0_arial: train_0102.tif
+23:38:05   prepared 104/800 lines in 0_arial: train_0103.tif
+23:38:05   prepared 105/800 lines in 0_arial: train_0104.tif
+23:38:05   prepared 106/800 lines in 0_arial: train_0105.tif
+23:38:06   prepared 107/800 lines in 0_arial: train_0106.tif
+23:38:06   prepared 108/800 lines in 0_arial: train_0107.tif
+23:38:06   prepared 109/800 lines in 0_arial: train_0108.tif
+23:38:06   prepared 110/800 lines in 0_arial: train_0109.tif
+23:38:06   prepared 111/800 lines in 0_arial: train_0110.tif
+23:38:06   prepared 112/800 lines in 0_arial: train_0111.tif
+23:38:06   prepared 113/800 lines in 0_arial: train_0112.tif
+23:38:06   prepared 114/800 lines in 0_arial: train_0113.tif
+23:38:06   prepared 115/800 lines in 0_arial: train_0114.tif
+23:38:06   prepared 116/800 lines in 0_arial: train_0115.tif
+23:38:07   prepared 117/800 lines in 0_arial: train_0116.tif
+23:38:07   prepared 118/800 lines in 0_arial: train_0117.tif
+23:38:07   prepared 119/800 lines in 0_arial: train_0118.tif
+23:38:07   prepared 120/800 lines in 0_arial: train_0119.tif
+23:38:07   prepared 121/800 lines in 0_arial: train_0120.tif
+23:38:07   prepared 122/800 lines in 0_arial: train_0121.tif
+23:38:07   prepared 123/800 lines in 0_arial: train_0122.tif
+23:38:07   prepared 124/800 lines in 0_arial: train_0123.tif
+23:38:07   prepared 125/800 lines in 0_arial: train_0124.tif
+23:38:07   prepared 126/800 lines in 0_arial: train_0125.tif
+23:38:08   prepared 127/800 lines in 0_arial: train_0126.tif
+23:38:08   prepared 128/800 lines in 0_arial: train_0127.tif
+23:38:08   prepared 129/800 lines in 0_arial: train_0128.tif
+23:38:08   prepared 130/800 lines in 0_arial: train_0129.tif
+23:38:08   prepared 131/800 lines in 0_arial: train_0130.tif
+23:38:08   prepared 132/800 lines in 0_arial: train_0131.tif
+23:38:08   prepared 133/800 lines in 0_arial: train_0132.tif
+23:38:08   prepared 134/800 lines in 0_arial: train_0133.tif
+23:38:08   prepared 135/800 lines in 0_arial: train_0134.tif
+23:38:08   prepared 136/800 lines in 0_arial: train_0135.tif
+23:38:08   prepared 137/800 lines in 0_arial: train_0136.tif
+23:38:09   prepared 138/800 lines in 0_arial: train_0137.tif
+23:38:09   prepared 139/800 lines in 0_arial: train_0138.tif
+23:38:09   prepared 140/800 lines in 0_arial: train_0139.tif
+23:38:09   prepared 141/800 lines in 0_arial: train_0140.tif
+23:38:09   prepared 142/800 lines in 0_arial: train_0141.tif
+23:38:09   prepared 143/800 lines in 0_arial: train_0142.tif
+23:38:09   prepared 144/800 lines in 0_arial: train_0143.tif
+23:38:09   prepared 145/800 lines in 0_arial: train_0144.tif
+23:38:09   prepared 146/800 lines in 0_arial: train_0145.tif
+23:38:09   prepared 147/800 lines in 0_arial: train_0146.tif
+23:38:10   prepared 148/800 lines in 0_arial: train_0147.tif
+23:38:10   prepared 149/800 lines in 0_arial: train_0148.tif
+23:38:10   prepared 150/800 lines in 0_arial: train_0149.tif
+23:38:10   prepared 151/800 lines in 0_arial: train_0150.tif
+23:38:10   prepared 152/800 lines in 0_arial: train_0151.tif
+23:38:10   prepared 153/800 lines in 0_arial: train_0152.tif
+23:38:10   prepared 154/800 lines in 0_arial: train_0153.tif
+23:38:10   prepared 155/800 lines in 0_arial: train_0154.tif
+23:38:10   prepared 156/800 lines in 0_arial: train_0155.tif
+23:38:10   prepared 157/800 lines in 0_arial: train_0156.tif
+23:38:11   prepared 158/800 lines in 0_arial: train_0157.tif
+23:38:11   prepared 159/800 lines in 0_arial: train_0158.tif
+23:38:11   prepared 160/800 lines in 0_arial: train_0159.tif
+23:38:11   prepared 161/800 lines in 0_arial: train_0160.tif
+23:38:11   prepared 162/800 lines in 0_arial: train_0161.tif
+23:38:11   prepared 163/800 lines in 0_arial: train_0162.tif
+23:38:11   prepared 164/800 lines in 0_arial: train_0163.tif
+23:38:11   prepared 165/800 lines in 0_arial: train_0164.tif
+23:38:11   prepared 166/800 lines in 0_arial: train_0165.tif
+23:38:11   prepared 167/800 lines in 0_arial: train_0166.tif
+23:38:12   prepared 168/800 lines in 0_arial: train_0167.tif
+23:38:12   prepared 169/800 lines in 0_arial: train_0168.tif
+23:38:12   prepared 170/800 lines in 0_arial: train_0169.tif
+23:38:12   prepared 171/800 lines in 0_arial: train_0170.tif
+23:38:12   prepared 172/800 lines in 0_arial: train_0171.tif
+23:38:12   prepared 173/800 lines in 0_arial: train_0172.tif
+23:38:12   prepared 174/800 lines in 0_arial: train_0173.tif
+23:38:12   prepared 175/800 lines in 0_arial: train_0174.tif
+23:38:12   prepared 176/800 lines in 0_arial: train_0175.tif
+23:38:13   prepared 177/800 lines in 0_arial: train_0176.tif
+23:38:13   prepared 178/800 lines in 0_arial: train_0177.tif
+23:38:13   prepared 179/800 lines in 0_arial: train_0178.tif
+23:38:13   prepared 180/800 lines in 0_arial: train_0179.tif
+23:38:13   prepared 181/800 lines in 0_arial: train_0180.tif
+23:38:13   prepared 182/800 lines in 0_arial: train_0181.tif
+23:38:13   prepared 183/800 lines in 0_arial: train_0182.tif
+23:38:13   prepared 184/800 lines in 0_arial: train_0183.tif
+23:38:13   prepared 185/800 lines in 0_arial: train_0184.tif
+23:38:13   prepared 186/800 lines in 0_arial: train_0185.tif
+23:38:14   prepared 187/800 lines in 0_arial: train_0186.tif
+23:38:14   prepared 188/800 lines in 0_arial: train_0187.tif
+23:38:14   prepared 189/800 lines in 0_arial: train_0188.tif
+23:38:14   prepared 190/800 lines in 0_arial: train_0189.tif
+23:38:14   prepared 191/800 lines in 0_arial: train_0190.tif
+23:38:14   prepared 192/800 lines in 0_arial: train_0191.tif
+23:38:14   prepared 193/800 lines in 0_arial: train_0192.tif
+23:38:14   prepared 194/800 lines in 0_arial: train_0193.tif
+23:38:14   prepared 195/800 lines in 0_arial: train_0194.tif
+23:38:14   prepared 196/800 lines in 0_arial: train_0195.tif
+23:38:15   prepared 197/800 lines in 0_arial: train_0196.tif
+23:38:15   prepared 198/800 lines in 0_arial: train_0197.tif
+23:38:15   prepared 199/800 lines in 0_arial: train_0198.tif
+23:38:15   prepared 200/800 lines in 0_arial: train_0199.tif
+23:38:15   prepared 201/800 lines in 0_arial: train_0200.tif
+23:38:15   prepared 202/800 lines in 0_arial: train_0201.tif
+23:38:15   prepared 203/800 lines in 0_arial: train_0202.tif
+23:38:15   prepared 204/800 lines in 0_arial: train_0203.tif
+23:38:15   prepared 205/800 lines in 0_arial: train_0204.tif
+23:38:15   prepared 206/800 lines in 0_arial: train_0205.tif
+23:38:15   prepared 207/800 lines in 0_arial: train_0206.tif
+23:38:16   prepared 208/800 lines in 0_arial: train_0207.tif
+23:38:16   prepared 209/800 lines in 0_arial: train_0208.tif
+23:38:16   prepared 210/800 lines in 0_arial: train_0209.tif
+23:38:16   prepared 211/800 lines in 0_arial: train_0210.tif
+23:38:16   prepared 212/800 lines in 0_arial: train_0211.tif
+23:38:16   prepared 213/800 lines in 0_arial: train_0212.tif
+23:38:16   prepared 214/800 lines in 0_arial: train_0213.tif
+23:38:16   prepared 215/800 lines in 0_arial: train_0214.tif
+23:38:16   prepared 216/800 lines in 0_arial: train_0215.tif
+23:38:16   prepared 217/800 lines in 0_arial: train_0216.tif
+23:38:17   prepared 218/800 lines in 0_arial: train_0217.tif
+23:38:17   prepared 219/800 lines in 0_arial: train_0218.tif
+23:38:17   prepared 220/800 lines in 0_arial: train_0219.tif
+23:38:17   prepared 221/800 lines in 0_arial: train_0220.tif
+23:38:17   prepared 222/800 lines in 0_arial: train_0221.tif
+23:38:17   prepared 223/800 lines in 0_arial: train_0222.tif
+23:38:17   prepared 224/800 lines in 0_arial: train_0223.tif
+23:38:17   prepared 225/800 lines in 0_arial: train_0224.tif
+23:38:17   prepared 226/800 lines in 0_arial: train_0225.tif
+23:38:17   prepared 227/800 lines in 0_arial: train_0226.tif
+23:38:18   prepared 228/800 lines in 0_arial: train_0227.tif
+23:38:18   prepared 229/800 lines in 0_arial: train_0228.tif
+23:38:18   prepared 230/800 lines in 0_arial: train_0229.tif
+23:38:18   prepared 231/800 lines in 0_arial: train_0230.tif
+23:38:18   prepared 232/800 lines in 0_arial: train_0231.tif
+23:38:18   prepared 233/800 lines in 0_arial: train_0232.tif
+23:38:18   prepared 234/800 lines in 0_arial: train_0233.tif
+23:38:18   prepared 235/800 lines in 0_arial: train_0234.tif
+23:38:18   prepared 236/800 lines in 0_arial: train_0235.tif
+23:38:19   prepared 237/800 lines in 0_arial: train_0236.tif
+23:38:19   prepared 238/800 lines in 0_arial: train_0237.tif
+23:38:19   prepared 239/800 lines in 0_arial: train_0238.tif
+23:38:19   prepared 240/800 lines in 0_arial: train_0239.tif
+23:38:19   prepared 241/800 lines in 0_arial: train_0240.tif
+23:38:19   prepared 242/800 lines in 0_arial: train_0241.tif
+23:38:19   prepared 243/800 lines in 0_arial: train_0242.tif
+23:38:19   prepared 244/800 lines in 0_arial: train_0243.tif
+23:38:19   prepared 245/800 lines in 0_arial: train_0244.tif
+23:38:19   prepared 246/800 lines in 0_arial: train_0245.tif
+23:38:20   prepared 247/800 lines in 0_arial: train_0246.tif
+23:38:20   prepared 248/800 lines in 0_arial: train_0247.tif
+23:38:20   prepared 249/800 lines in 0_arial: train_0248.tif
+23:38:20   prepared 250/800 lines in 0_arial: train_0249.tif
+23:38:20   prepared 251/800 lines in 0_arial: train_0250.tif
+23:38:20   prepared 252/800 lines in 0_arial: train_0251.tif
+23:38:20   prepared 253/800 lines in 0_arial: train_0252.tif
+23:38:20   prepared 254/800 lines in 0_arial: train_0253.tif
+23:38:20   prepared 255/800 lines in 0_arial: train_0254.tif
+23:38:21   prepared 256/800 lines in 0_arial: train_0255.tif
+23:38:21   prepared 257/800 lines in 0_arial: train_0256.tif
+23:38:21   prepared 258/800 lines in 0_arial: train_0257.tif
+23:38:21   prepared 259/800 lines in 0_arial: train_0258.tif
+23:38:21   prepared 260/800 lines in 0_arial: train_0259.tif
+23:38:21   prepared 261/800 lines in 0_arial: train_0260.tif
+23:38:21   prepared 262/800 lines in 0_arial: train_0261.tif
+23:38:21   prepared 263/800 lines in 0_arial: train_0262.tif
+23:38:21   prepared 264/800 lines in 0_arial: train_0263.tif
+23:38:22   prepared 265/800 lines in 0_arial: train_0264.tif
+23:38:22   prepared 266/800 lines in 0_arial: train_0265.tif
+23:38:22   prepared 267/800 lines in 0_arial: train_0266.tif
+23:38:22   prepared 268/800 lines in 0_arial: train_0267.tif
+23:38:22   prepared 269/800 lines in 0_arial: train_0268.tif
+23:38:22   prepared 270/800 lines in 0_arial: train_0269.tif
+23:38:22   prepared 271/800 lines in 0_arial: train_0270.tif
+23:38:22   prepared 272/800 lines in 0_arial: train_0271.tif
+23:38:23   prepared 273/800 lines in 0_arial: train_0272.tif
+23:38:23   prepared 274/800 lines in 0_arial: train_0273.tif
+23:38:23   prepared 275/800 lines in 0_arial: train_0274.tif
+23:38:23   prepared 276/800 lines in 0_arial: train_0275.tif
+23:38:23   prepared 277/800 lines in 0_arial: train_0276.tif
+23:38:23   prepared 278/800 lines in 0_arial: train_0277.tif
+23:38:23   prepared 279/800 lines in 0_arial: train_0278.tif
+23:38:23   prepared 280/800 lines in 0_arial: train_0279.tif
+23:38:23   prepared 281/800 lines in 0_arial: train_0280.tif
+23:38:24   prepared 282/800 lines in 0_arial: train_0281.tif
+23:38:24   prepared 283/800 lines in 0_arial: train_0282.tif
+23:38:24   prepared 284/800 lines in 0_arial: train_0283.tif
+23:38:24   prepared 285/800 lines in 0_arial: train_0284.tif
+23:38:24   prepared 286/800 lines in 0_arial: train_0285.tif
+23:38:24   prepared 287/800 lines in 0_arial: train_0286.tif
+23:38:24   prepared 288/800 lines in 0_arial: train_0287.tif
+23:38:24   prepared 289/800 lines in 0_arial: train_0288.tif
+23:38:24   prepared 290/800 lines in 0_arial: train_0289.tif
+23:38:24   prepared 291/800 lines in 0_arial: train_0290.tif
+23:38:25   prepared 292/800 lines in 0_arial: train_0291.tif
+23:38:25   prepared 293/800 lines in 0_arial: train_0292.tif
+23:38:25   prepared 294/800 lines in 0_arial: train_0293.tif
+23:38:25   prepared 295/800 lines in 0_arial: train_0294.tif
+23:38:25   prepared 296/800 lines in 0_arial: train_0295.tif
+23:38:25   prepared 297/800 lines in 0_arial: train_0296.tif
+23:38:25   prepared 298/800 lines in 0_arial: train_0297.tif
+23:38:25   prepared 299/800 lines in 0_arial: train_0298.tif
+23:38:25   prepared 300/800 lines in 0_arial: train_0299.tif
+23:38:26   prepared 301/800 lines in 0_arial: train_0300.tif
+23:38:26   prepared 302/800 lines in 0_arial: train_0301.tif
+23:38:26   prepared 303/800 lines in 0_arial: train_0302.tif
+23:38:26   prepared 304/800 lines in 0_arial: train_0303.tif
+23:38:26   prepared 305/800 lines in 0_arial: train_0304.tif
+23:38:26   prepared 306/800 lines in 0_arial: train_0305.tif
+23:38:26   prepared 307/800 lines in 0_arial: train_0306.tif
+23:38:26   prepared 308/800 lines in 0_arial: train_0307.tif
+23:38:26   prepared 309/800 lines in 0_arial: train_0308.tif
+23:38:26   prepared 310/800 lines in 0_arial: train_0309.tif
+23:38:27   prepared 311/800 lines in 0_arial: train_0310.tif
+23:38:27   prepared 312/800 lines in 0_arial: train_0311.tif
+23:38:27   prepared 313/800 lines in 0_arial: train_0312.tif
+23:38:27   prepared 314/800 lines in 0_arial: train_0313.tif
+23:38:27   prepared 315/800 lines in 0_arial: train_0314.tif
+23:38:27   prepared 316/800 lines in 0_arial: train_0315.tif
+23:38:27   prepared 317/800 lines in 0_arial: train_0316.tif
+23:38:27   prepared 318/800 lines in 0_arial: train_0317.tif
+23:38:27   prepared 319/800 lines in 0_arial: train_0318.tif
+23:38:28   prepared 320/800 lines in 0_arial: train_0319.tif
+23:38:28   prepared 321/800 lines in 0_arial: train_0320.tif
+23:38:28   prepared 322/800 lines in 0_arial: train_0321.tif
+23:38:28   prepared 323/800 lines in 0_arial: train_0322.tif
+23:38:28   prepared 324/800 lines in 0_arial: train_0323.tif
+23:38:28   prepared 325/800 lines in 0_arial: train_0324.tif
+23:38:28   prepared 326/800 lines in 0_arial: train_0325.tif
+23:38:28   prepared 327/800 lines in 0_arial: train_0326.tif
+23:38:28   prepared 328/800 lines in 0_arial: train_0327.tif
+23:38:29   prepared 329/800 lines in 0_arial: train_0328.tif
+23:38:29   prepared 330/800 lines in 0_arial: train_0329.tif
+23:38:29   prepared 331/800 lines in 0_arial: train_0330.tif
+23:38:29   prepared 332/800 lines in 0_arial: train_0331.tif
+23:38:29   prepared 333/800 lines in 0_arial: train_0332.tif
+23:38:29   prepared 334/800 lines in 0_arial: train_0333.tif
+23:38:29   prepared 335/800 lines in 0_arial: train_0334.tif
+23:38:29   prepared 336/800 lines in 0_arial: train_0335.tif
+23:38:29   prepared 337/800 lines in 0_arial: train_0336.tif
+23:38:30   prepared 338/800 lines in 0_arial: train_0337.tif
+23:38:30   prepared 339/800 lines in 0_arial: train_0338.tif
+23:38:30   prepared 340/800 lines in 0_arial: train_0339.tif
+23:38:30   prepared 341/800 lines in 0_arial: train_0340.tif
+23:38:30   prepared 342/800 lines in 0_arial: train_0341.tif
+23:38:30   prepared 343/800 lines in 0_arial: train_0342.tif
+23:38:30   prepared 344/800 lines in 0_arial: train_0343.tif
+23:38:30   prepared 345/800 lines in 0_arial: train_0344.tif
+23:38:31   prepared 346/800 lines in 0_arial: train_0345.tif
+23:38:31   prepared 347/800 lines in 0_arial: train_0346.tif
+23:38:31   prepared 348/800 lines in 0_arial: train_0347.tif
+23:38:31   prepared 349/800 lines in 0_arial: train_0348.tif
+23:38:31   prepared 350/800 lines in 0_arial: train_0349.tif
+23:38:31   prepared 351/800 lines in 0_arial: train_0350.tif
+23:38:31   prepared 352/800 lines in 0_arial: train_0351.tif
+23:38:31   prepared 353/800 lines in 0_arial: train_0352.tif
+23:38:31   prepared 354/800 lines in 0_arial: train_0353.tif
+23:38:31   prepared 355/800 lines in 0_arial: train_0354.tif
+23:38:32   prepared 356/800 lines in 0_arial: train_0355.tif
+23:38:32   prepared 357/800 lines in 0_arial: train_0356.tif
+23:38:32   prepared 358/800 lines in 0_arial: train_0357.tif
+23:38:32   prepared 359/800 lines in 0_arial: train_0358.tif
+23:38:32   prepared 360/800 lines in 0_arial: train_0359.tif
+23:38:32   prepared 361/800 lines in 0_arial: train_0360.tif
+23:38:32   prepared 362/800 lines in 0_arial: train_0361.tif
+23:38:32   prepared 363/800 lines in 0_arial: train_0362.tif
+23:38:32   prepared 364/800 lines in 0_arial: train_0363.tif
+23:38:33   prepared 365/800 lines in 0_arial: train_0364.tif
+23:38:33   prepared 366/800 lines in 0_arial: train_0365.tif
+23:38:33   prepared 367/800 lines in 0_arial: train_0366.tif
+23:38:33   prepared 368/800 lines in 0_arial: train_0367.tif
+23:38:33   prepared 369/800 lines in 0_arial: train_0368.tif
+23:38:33   prepared 370/800 lines in 0_arial: train_0369.tif
+23:38:33   prepared 371/800 lines in 0_arial: train_0370.tif
+23:38:33   prepared 372/800 lines in 0_arial: train_0371.tif
+23:38:34   prepared 373/800 lines in 0_arial: train_0372.tif
+23:38:34   prepared 374/800 lines in 0_arial: train_0373.tif
+23:38:34   prepared 375/800 lines in 0_arial: train_0374.tif
+23:38:34   prepared 376/800 lines in 0_arial: train_0375.tif
+23:38:34   prepared 377/800 lines in 0_arial: train_0376.tif
+23:38:34   prepared 378/800 lines in 0_arial: train_0377.tif
+23:38:34   prepared 379/800 lines in 0_arial: train_0378.tif
+23:38:34   prepared 380/800 lines in 0_arial: train_0379.tif
+23:38:34   prepared 381/800 lines in 0_arial: train_0380.tif
+23:38:35   prepared 382/800 lines in 0_arial: train_0381.tif
+23:38:35   prepared 383/800 lines in 0_arial: train_0382.tif
+23:38:35   prepared 384/800 lines in 0_arial: train_0383.tif
+23:38:35   prepared 385/800 lines in 0_arial: train_0384.tif
+23:38:35   prepared 386/800 lines in 0_arial: train_0385.tif
+23:38:35   prepared 387/800 lines in 0_arial: train_0386.tif
+23:38:35   prepared 388/800 lines in 0_arial: train_0387.tif
+23:38:35   prepared 389/800 lines in 0_arial: train_0388.tif
+23:38:35   prepared 390/800 lines in 0_arial: train_0389.tif
+23:38:35   prepared 391/800 lines in 0_arial: train_0390.tif
+23:38:36   prepared 392/800 lines in 0_arial: train_0391.tif
+23:38:36   prepared 393/800 lines in 0_arial: train_0392.tif
+23:38:36   prepared 394/800 lines in 0_arial: train_0393.tif
+23:38:36   prepared 395/800 lines in 0_arial: train_0394.tif
+23:38:36   prepared 396/800 lines in 0_arial: train_0395.tif
+23:38:36   prepared 397/800 lines in 0_arial: train_0396.tif
+23:38:36   prepared 398/800 lines in 0_arial: train_0397.tif
+23:38:36   prepared 399/800 lines in 0_arial: train_0398.tif
+23:38:36   prepared 400/800 lines in 0_arial: train_0399.tif
+23:38:37   prepared 401/800 lines in 0_arial: train_0400.tif
+23:38:37   prepared 402/800 lines in 0_arial: train_0401.tif
+23:38:37   prepared 403/800 lines in 0_arial: train_0402.tif
+23:38:37   prepared 404/800 lines in 0_arial: train_0403.tif
+23:38:37   prepared 405/800 lines in 0_arial: train_0404.tif
+23:38:37   prepared 406/800 lines in 0_arial: train_0405.tif
+23:38:37   prepared 407/800 lines in 0_arial: train_0406.tif
+23:38:37   prepared 408/800 lines in 0_arial: train_0407.tif
+23:38:37   prepared 409/800 lines in 0_arial: train_0408.tif
+23:38:37   prepared 410/800 lines in 0_arial: train_0409.tif
+23:38:38   prepared 411/800 lines in 0_arial: train_0410.tif
+23:38:38   prepared 412/800 lines in 0_arial: train_0411.tif
+23:38:38   prepared 413/800 lines in 0_arial: train_0412.tif
+23:38:38   prepared 414/800 lines in 0_arial: train_0413.tif
+23:38:38   prepared 415/800 lines in 0_arial: train_0414.tif
+23:38:38   prepared 416/800 lines in 0_arial: train_0415.tif
+23:38:38   prepared 417/800 lines in 0_arial: train_0416.tif
+23:38:38   prepared 418/800 lines in 0_arial: train_0417.tif
+23:38:38   prepared 419/800 lines in 0_arial: train_0418.tif
+23:38:38   prepared 420/800 lines in 0_arial: train_0419.tif
+23:38:39   prepared 421/800 lines in 0_arial: train_0420.tif
+23:38:39   prepared 422/800 lines in 0_arial: train_0421.tif
+23:38:39   prepared 423/800 lines in 0_arial: train_0422.tif
+23:38:39   prepared 424/800 lines in 0_arial: train_0423.tif
+23:38:39   prepared 425/800 lines in 0_arial: train_0424.tif
+23:38:39   prepared 426/800 lines in 0_arial: train_0425.tif
+23:38:39   prepared 427/800 lines in 0_arial: train_0426.tif
+23:38:39   prepared 428/800 lines in 0_arial: train_0427.tif
+23:38:39   prepared 429/800 lines in 0_arial: train_0428.tif
+23:38:40   prepared 430/800 lines in 0_arial: train_0429.tif
+23:38:40   prepared 431/800 lines in 0_arial: train_0430.tif
+23:38:40   prepared 432/800 lines in 0_arial: train_0431.tif
+23:38:40   prepared 433/800 lines in 0_arial: train_0432.tif
+23:38:40   prepared 434/800 lines in 0_arial: train_0433.tif
+23:38:40   prepared 435/800 lines in 0_arial: train_0434.tif
+23:38:40   prepared 436/800 lines in 0_arial: train_0435.tif
+23:38:40   prepared 437/800 lines in 0_arial: train_0436.tif
+23:38:40   prepared 438/800 lines in 0_arial: train_0437.tif
+23:38:41   prepared 439/800 lines in 0_arial: train_0438.tif
+23:38:41   prepared 440/800 lines in 0_arial: train_0439.tif
+23:38:41   prepared 441/800 lines in 0_arial: train_0440.tif
+23:38:41   prepared 442/800 lines in 0_arial: train_0441.tif
+23:38:41   prepared 443/800 lines in 0_arial: train_0442.tif
+23:38:41   prepared 444/800 lines in 0_arial: train_0443.tif
+23:38:41   prepared 445/800 lines in 0_arial: train_0444.tif
+23:38:41   prepared 446/800 lines in 0_arial: train_0445.tif
+23:38:41   prepared 447/800 lines in 0_arial: train_0446.tif
+23:38:41   prepared 448/800 lines in 0_arial: train_0447.tif
+23:38:42   prepared 449/800 lines in 0_arial: train_0448.tif
+23:38:42   prepared 450/800 lines in 0_arial: train_0449.tif
+23:38:42   prepared 451/800 lines in 0_arial: train_0450.tif
+23:38:42   prepared 452/800 lines in 0_arial: train_0451.tif
+23:38:42   prepared 453/800 lines in 0_arial: train_0452.tif
+23:38:42   prepared 454/800 lines in 0_arial: train_0453.tif
+23:38:42   prepared 455/800 lines in 0_arial: train_0454.tif
+23:38:42   prepared 456/800 lines in 0_arial: train_0455.tif
+23:38:42   prepared 457/800 lines in 0_arial: train_0456.tif
+23:38:42   prepared 458/800 lines in 0_arial: train_0457.tif
+23:38:43   prepared 459/800 lines in 0_arial: train_0458.tif
+23:38:43   prepared 460/800 lines in 0_arial: train_0459.tif
+23:38:43   prepared 461/800 lines in 0_arial: train_0460.tif
+23:38:43   prepared 462/800 lines in 0_arial: train_0461.tif
+23:38:43   prepared 463/800 lines in 0_arial: train_0462.tif
+23:38:43   prepared 464/800 lines in 0_arial: train_0463.tif
+23:38:43   prepared 465/800 lines in 0_arial: train_0464.tif
+23:38:43   prepared 466/800 lines in 0_arial: train_0465.tif
+23:38:43   prepared 467/800 lines in 0_arial: train_0466.tif
+23:38:43   prepared 468/800 lines in 0_arial: train_0467.tif
+23:38:44   prepared 469/800 lines in 0_arial: train_0468.tif
+23:38:44   prepared 470/800 lines in 0_arial: train_0469.tif
+23:38:44   prepared 471/800 lines in 0_arial: train_0470.tif
+23:38:44   prepared 472/800 lines in 0_arial: train_0471.tif
+23:38:44   prepared 473/800 lines in 0_arial: train_0472.tif
+23:38:44   prepared 474/800 lines in 0_arial: train_0473.tif
+23:38:44   prepared 475/800 lines in 0_arial: train_0474.tif
+23:38:44   prepared 476/800 lines in 0_arial: train_0475.tif
+23:38:44   prepared 477/800 lines in 0_arial: train_0476.tif
+23:38:44   prepared 478/800 lines in 0_arial: train_0477.tif
+23:38:45   prepared 479/800 lines in 0_arial: train_0478.tif
+23:38:45   prepared 480/800 lines in 0_arial: train_0479.tif
+23:38:45   prepared 481/800 lines in 0_arial: train_0480.tif
+23:38:45   prepared 482/800 lines in 0_arial: train_0481.tif
+23:38:45   prepared 483/800 lines in 0_arial: train_0482.tif
+23:38:45   prepared 484/800 lines in 0_arial: train_0483.tif
+23:38:45   prepared 485/800 lines in 0_arial: train_0484.tif
+23:38:45   prepared 486/800 lines in 0_arial: train_0485.tif
+23:38:45   prepared 487/800 lines in 0_arial: train_0486.tif
+23:38:45   prepared 488/800 lines in 0_arial: train_0487.tif
+23:38:46   prepared 489/800 lines in 0_arial: train_0488.tif
+23:38:46   prepared 490/800 lines in 0_arial: train_0489.tif
+23:38:46   prepared 491/800 lines in 0_arial: train_0490.tif
+23:38:46   prepared 492/800 lines in 0_arial: train_0491.tif
+23:38:46   prepared 493/800 lines in 0_arial: train_0492.tif
+23:38:46   prepared 494/800 lines in 0_arial: train_0493.tif
+23:38:46   prepared 495/800 lines in 0_arial: train_0494.tif
+23:38:46   prepared 496/800 lines in 0_arial: train_0495.tif
+23:38:47   prepared 497/800 lines in 0_arial: train_0496.tif
+23:38:47   prepared 498/800 lines in 0_arial: train_0497.tif
+23:38:47   prepared 499/800 lines in 0_arial: train_0498.tif
+23:38:47   prepared 500/800 lines in 0_arial: train_0499.tif
+23:38:47   prepared 501/800 lines in 0_arial: train_0500.tif
+23:38:47   prepared 502/800 lines in 0_arial: train_0501.tif
+23:38:47   prepared 503/800 lines in 0_arial: train_0502.tif
+23:38:47   prepared 504/800 lines in 0_arial: train_0503.tif
+23:38:47   prepared 505/800 lines in 0_arial: train_0504.tif
+23:38:48   prepared 506/800 lines in 0_arial: train_0505.tif
+23:38:48   prepared 507/800 lines in 0_arial: train_0506.tif
+23:38:48   prepared 508/800 lines in 0_arial: train_0507.tif
+23:38:48   prepared 509/800 lines in 0_arial: train_0508.tif
+23:38:48   prepared 510/800 lines in 0_arial: train_0509.tif
+23:38:48   prepared 511/800 lines in 0_arial: train_0510.tif
+23:38:48   prepared 512/800 lines in 0_arial: train_0511.tif
+23:38:48   prepared 513/800 lines in 0_arial: train_0512.tif
+23:38:48   prepared 514/800 lines in 0_arial: train_0513.tif
+23:38:48   prepared 515/800 lines in 0_arial: train_0514.tif
+23:38:49   prepared 516/800 lines in 0_arial: train_0515.tif
+23:38:49   prepared 517/800 lines in 0_arial: train_0516.tif
+23:38:49   prepared 518/800 lines in 0_arial: train_0517.tif
+23:38:49   prepared 519/800 lines in 0_arial: train_0518.tif
+23:38:49   prepared 520/800 lines in 0_arial: train_0519.tif
+23:38:49   prepared 521/800 lines in 0_arial: train_0520.tif
+23:38:49   prepared 522/800 lines in 0_arial: train_0521.tif
+23:38:49   prepared 523/800 lines in 0_arial: train_0522.tif
+23:38:50   prepared 524/800 lines in 0_arial: train_0523.tif
+23:38:50   prepared 525/800 lines in 0_arial: train_0524.tif
+23:38:50   prepared 526/800 lines in 0_arial: train_0525.tif
+23:38:50   prepared 527/800 lines in 0_arial: train_0526.tif
+23:38:50   prepared 528/800 lines in 0_arial: train_0527.tif
+23:38:50   prepared 529/800 lines in 0_arial: train_0528.tif
+23:38:50   prepared 530/800 lines in 0_arial: train_0529.tif
+23:38:50   prepared 531/800 lines in 0_arial: train_0530.tif
+23:38:50   prepared 532/800 lines in 0_arial: train_0531.tif
+23:38:51   prepared 533/800 lines in 0_arial: train_0532.tif
+23:38:51   prepared 534/800 lines in 0_arial: train_0533.tif
+23:38:51   prepared 535/800 lines in 0_arial: train_0534.tif
+23:38:51   prepared 536/800 lines in 0_arial: train_0535.tif
+23:38:51   prepared 537/800 lines in 0_arial: train_0536.tif
+23:38:51   prepared 538/800 lines in 0_arial: train_0537.tif
+23:38:51   prepared 539/800 lines in 0_arial: train_0538.tif
+23:38:51   prepared 540/800 lines in 0_arial: train_0539.tif
+23:38:52   prepared 541/800 lines in 0_arial: train_0540.tif
+23:38:52   prepared 542/800 lines in 0_arial: train_0541.tif
+23:38:52   prepared 543/800 lines in 0_arial: train_0542.tif
+23:38:52   prepared 544/800 lines in 0_arial: train_0543.tif
+23:38:52   prepared 545/800 lines in 0_arial: train_0544.tif
+23:38:52   prepared 546/800 lines in 0_arial: train_0545.tif
+23:38:52   prepared 547/800 lines in 0_arial: train_0546.tif
+23:38:52   prepared 548/800 lines in 0_arial: train_0547.tif
+23:38:52   prepared 549/800 lines in 0_arial: train_0548.tif
+23:38:52   prepared 550/800 lines in 0_arial: train_0549.tif
+23:38:53   prepared 551/800 lines in 0_arial: train_0550.tif
+23:38:53   prepared 552/800 lines in 0_arial: train_0551.tif
+23:38:53   prepared 553/800 lines in 0_arial: train_0552.tif
+23:38:53   prepared 554/800 lines in 0_arial: train_0553.tif
+23:38:53   prepared 555/800 lines in 0_arial: train_0554.tif
+23:38:53   prepared 556/800 lines in 0_arial: train_0555.tif
+23:38:53   prepared 557/800 lines in 0_arial: train_0556.tif
+23:38:53   prepared 558/800 lines in 0_arial: train_0557.tif
+23:38:53   prepared 559/800 lines in 0_arial: train_0558.tif
+23:38:53   prepared 560/800 lines in 0_arial: train_0559.tif
+23:38:54   prepared 561/800 lines in 0_arial: train_0560.tif
+23:38:54   prepared 562/800 lines in 0_arial: train_0561.tif
+23:38:54   prepared 563/800 lines in 0_arial: train_0562.tif
+23:38:54   prepared 564/800 lines in 0_arial: train_0563.tif
+23:38:54   prepared 565/800 lines in 0_arial: train_0564.tif
+23:38:54   prepared 566/800 lines in 0_arial: train_0565.tif
+23:38:54   prepared 567/800 lines in 0_arial: train_0566.tif
+23:38:54   prepared 568/800 lines in 0_arial: train_0567.tif
+23:38:54   prepared 569/800 lines in 0_arial: train_0568.tif
+23:38:54   prepared 570/800 lines in 0_arial: train_0569.tif
+23:38:54   prepared 571/800 lines in 0_arial: train_0570.tif
+23:38:55   prepared 572/800 lines in 0_arial: train_0571.tif
+23:38:55   prepared 573/800 lines in 0_arial: train_0572.tif
+23:38:55   prepared 574/800 lines in 0_arial: train_0573.tif
+23:38:55   prepared 575/800 lines in 0_arial: train_0574.tif
+23:38:55   prepared 576/800 lines in 0_arial: train_0575.tif
+23:38:55   prepared 577/800 lines in 0_arial: train_0576.tif
+23:38:55   prepared 578/800 lines in 0_arial: train_0577.tif
+23:38:55   prepared 579/800 lines in 0_arial: train_0578.tif
+23:38:55   prepared 580/800 lines in 0_arial: train_0579.tif
+23:38:56   prepared 581/800 lines in 0_arial: train_0580.tif
+23:38:56   prepared 582/800 lines in 0_arial: train_0581.tif
+23:38:56   prepared 583/800 lines in 0_arial: train_0582.tif
+23:38:56   prepared 584/800 lines in 0_arial: train_0583.tif
+23:38:56   prepared 585/800 lines in 0_arial: train_0584.tif
+23:38:56   prepared 586/800 lines in 0_arial: train_0585.tif
+23:38:56   prepared 587/800 lines in 0_arial: train_0586.tif
+23:38:56   prepared 588/800 lines in 0_arial: train_0587.tif
+23:38:56   prepared 589/800 lines in 0_arial: train_0588.tif
+23:38:56   prepared 590/800 lines in 0_arial: train_0589.tif
+23:38:57   prepared 591/800 lines in 0_arial: train_0590.tif
+23:38:57   prepared 592/800 lines in 0_arial: train_0591.tif
+23:38:57   prepared 593/800 lines in 0_arial: train_0592.tif
+23:38:57   prepared 594/800 lines in 0_arial: train_0593.tif
+23:38:57   prepared 595/800 lines in 0_arial: train_0594.tif
+23:38:57   prepared 596/800 lines in 0_arial: train_0595.tif
+23:38:57   prepared 597/800 lines in 0_arial: train_0596.tif
+23:38:57   prepared 598/800 lines in 0_arial: train_0597.tif
+23:38:57   prepared 599/800 lines in 0_arial: train_0598.tif
+23:38:57   prepared 600/800 lines in 0_arial: train_0599.tif
+23:38:57   prepared 601/800 lines in 0_arial: train_0600.tif
+23:38:58   prepared 602/800 lines in 0_arial: train_0601.tif
+23:38:58   prepared 603/800 lines in 0_arial: train_0602.tif
+23:38:58   prepared 604/800 lines in 0_arial: train_0603.tif
+23:38:58   prepared 605/800 lines in 0_arial: train_0604.tif
+23:38:58   prepared 606/800 lines in 0_arial: train_0605.tif
+23:38:58   prepared 607/800 lines in 0_arial: train_0606.tif
+23:38:58   prepared 608/800 lines in 0_arial: train_0607.tif
+23:38:58   prepared 609/800 lines in 0_arial: train_0608.tif
+23:38:58   prepared 610/800 lines in 0_arial: train_0609.tif
+23:38:58   prepared 611/800 lines in 0_arial: train_0610.tif
+23:38:59   prepared 612/800 lines in 0_arial: train_0611.tif
+23:38:59   prepared 613/800 lines in 0_arial: train_0612.tif
+23:38:59   prepared 614/800 lines in 0_arial: train_0613.tif
+23:38:59   prepared 615/800 lines in 0_arial: train_0614.tif
+23:38:59   prepared 616/800 lines in 0_arial: train_0615.tif
+23:38:59   prepared 617/800 lines in 0_arial: train_0616.tif
+23:38:59   prepared 618/800 lines in 0_arial: train_0617.tif
+23:38:59   prepared 619/800 lines in 0_arial: train_0618.tif
+23:38:59   prepared 620/800 lines in 0_arial: train_0619.tif
+23:38:59   prepared 621/800 lines in 0_arial: train_0620.tif
+23:38:59   prepared 622/800 lines in 0_arial: train_0621.tif
+23:39:00   prepared 623/800 lines in 0_arial: train_0622.tif
+23:39:00   prepared 624/800 lines in 0_arial: train_0623.tif
+23:39:00   prepared 625/800 lines in 0_arial: train_0624.tif
+23:39:00   prepared 626/800 lines in 0_arial: train_0625.tif
+23:39:00   prepared 627/800 lines in 0_arial: train_0626.tif
+23:39:00   prepared 628/800 lines in 0_arial: train_0627.tif
+23:39:00   prepared 629/800 lines in 0_arial: train_0628.tif
+23:39:00   prepared 630/800 lines in 0_arial: train_0629.tif
+23:39:00   prepared 631/800 lines in 0_arial: train_0630.tif
+23:39:00   prepared 632/800 lines in 0_arial: train_0631.tif
+23:39:00   prepared 633/800 lines in 0_arial: train_0632.tif
+23:39:01   prepared 634/800 lines in 0_arial: train_0633.tif
+23:39:01   prepared 635/800 lines in 0_arial: train_0634.tif
+23:39:01   prepared 636/800 lines in 0_arial: train_0635.tif
+23:39:01   prepared 637/800 lines in 0_arial: train_0636.tif
+23:39:01   prepared 638/800 lines in 0_arial: train_0637.tif
+23:39:01   prepared 639/800 lines in 0_arial: train_0638.tif
+23:39:01   prepared 640/800 lines in 0_arial: train_0639.tif
+23:39:01   prepared 641/800 lines in 0_arial: train_0640.tif
+23:39:01   prepared 642/800 lines in 0_arial: train_0641.tif
+23:39:02   prepared 643/800 lines in 0_arial: train_0642.tif
+23:39:02   prepared 644/800 lines in 0_arial: train_0643.tif
+23:39:02   prepared 645/800 lines in 0_arial: train_0644.tif
+23:39:02   prepared 646/800 lines in 0_arial: train_0645.tif
+23:39:02   prepared 647/800 lines in 0_arial: train_0646.tif
+23:39:02   prepared 648/800 lines in 0_arial: train_0647.tif
+23:39:02   prepared 649/800 lines in 0_arial: train_0648.tif
+23:39:02   prepared 650/800 lines in 0_arial: train_0649.tif
+23:39:02   prepared 651/800 lines in 0_arial: train_0650.tif
+23:39:02   prepared 652/800 lines in 0_arial: train_0651.tif
+23:39:03   prepared 653/800 lines in 0_arial: train_0652.tif
+23:39:03   prepared 654/800 lines in 0_arial: train_0653.tif
+23:39:03   prepared 655/800 lines in 0_arial: train_0654.tif
+23:39:03   prepared 656/800 lines in 0_arial: train_0655.tif
+23:39:03   prepared 657/800 lines in 0_arial: train_0656.tif
+23:39:03   prepared 658/800 lines in 0_arial: train_0657.tif
+23:39:03   prepared 659/800 lines in 0_arial: train_0658.tif
+23:39:03   prepared 660/800 lines in 0_arial: train_0659.tif
+23:39:03   prepared 661/800 lines in 0_arial: train_0660.tif
+23:39:03   prepared 662/800 lines in 0_arial: train_0661.tif
+23:39:04   prepared 663/800 lines in 0_arial: train_0662.tif
+23:39:04   prepared 664/800 lines in 0_arial: train_0663.tif
+23:39:04   prepared 665/800 lines in 0_arial: train_0664.tif
+23:39:04   prepared 666/800 lines in 0_arial: train_0665.tif
+23:39:04   prepared 667/800 lines in 0_arial: train_0666.tif
+23:39:04   prepared 668/800 lines in 0_arial: train_0667.tif
+23:39:04   prepared 669/800 lines in 0_arial: train_0668.tif
+23:39:04   prepared 670/800 lines in 0_arial: train_0669.tif
+23:39:04   prepared 671/800 lines in 0_arial: train_0670.tif
+23:39:04   prepared 672/800 lines in 0_arial: train_0671.tif
+23:39:05   prepared 673/800 lines in 0_arial: train_0672.tif
+23:39:05   prepared 674/800 lines in 0_arial: train_0673.tif
+23:39:05   prepared 675/800 lines in 0_arial: train_0674.tif
+23:39:05   prepared 676/800 lines in 0_arial: train_0675.tif
+23:39:05   prepared 677/800 lines in 0_arial: train_0676.tif
+23:39:05   prepared 678/800 lines in 0_arial: train_0677.tif
+23:39:05   prepared 679/800 lines in 0_arial: train_0678.tif
+23:39:05   prepared 680/800 lines in 0_arial: train_0679.tif
+23:39:05   prepared 681/800 lines in 0_arial: train_0680.tif
+23:39:05   prepared 682/800 lines in 0_arial: train_0681.tif
+23:39:06   prepared 683/800 lines in 0_arial: train_0682.tif
+23:39:06   prepared 684/800 lines in 0_arial: train_0683.tif
+23:39:06   prepared 685/800 lines in 0_arial: train_0684.tif
+23:39:06   prepared 686/800 lines in 0_arial: train_0685.tif
+23:39:06   prepared 687/800 lines in 0_arial: train_0686.tif
+23:39:06   prepared 688/800 lines in 0_arial: train_0687.tif
+23:39:06   prepared 689/800 lines in 0_arial: train_0688.tif
+23:39:06   prepared 690/800 lines in 0_arial: train_0689.tif
+23:39:06   prepared 691/800 lines in 0_arial: train_0690.tif
+23:39:06   prepared 692/800 lines in 0_arial: train_0691.tif
+23:39:07   prepared 693/800 lines in 0_arial: train_0692.tif
+23:39:07   prepared 694/800 lines in 0_arial: train_0693.tif
+23:39:07   prepared 695/800 lines in 0_arial: train_0694.tif
+23:39:07   prepared 696/800 lines in 0_arial: train_0695.tif
+23:39:07   prepared 697/800 lines in 0_arial: train_0696.tif
+23:39:07   prepared 698/800 lines in 0_arial: train_0697.tif
+23:39:07   prepared 699/800 lines in 0_arial: train_0698.tif
+23:39:07   prepared 700/800 lines in 0_arial: train_0699.tif
+23:39:07   prepared 701/800 lines in 0_arial: train_0700.tif
+23:39:07   prepared 702/800 lines in 0_arial: train_0701.tif
+23:39:07   prepared 703/800 lines in 0_arial: train_0702.tif
+23:39:08   prepared 704/800 lines in 0_arial: train_0703.tif
+23:39:08   prepared 705/800 lines in 0_arial: train_0704.tif
+23:39:08   prepared 706/800 lines in 0_arial: train_0705.tif
+23:39:08   prepared 707/800 lines in 0_arial: train_0706.tif
+23:39:08   prepared 708/800 lines in 0_arial: train_0707.tif
+23:39:08   prepared 709/800 lines in 0_arial: train_0708.tif
+23:39:08   prepared 710/800 lines in 0_arial: train_0709.tif
+23:39:08   prepared 711/800 lines in 0_arial: train_0710.tif
+23:39:08   prepared 712/800 lines in 0_arial: train_0711.tif
+23:39:08   prepared 713/800 lines in 0_arial: train_0712.tif
+23:39:09   prepared 714/800 lines in 0_arial: train_0713.tif
+23:39:09   prepared 715/800 lines in 0_arial: train_0714.tif
+23:39:09   prepared 716/800 lines in 0_arial: train_0715.tif
+23:39:09   prepared 717/800 lines in 0_arial: train_0716.tif
+23:39:09   prepared 718/800 lines in 0_arial: train_0717.tif
+23:39:09   prepared 719/800 lines in 0_arial: train_0718.tif
+23:39:09   prepared 720/800 lines in 0_arial: train_0719.tif
+23:39:09   prepared 721/800 lines in 0_arial: train_0720.tif
+23:39:09   prepared 722/800 lines in 0_arial: train_0721.tif
+23:39:10   prepared 723/800 lines in 0_arial: train_0722.tif
+23:39:10   prepared 724/800 lines in 0_arial: train_0723.tif
+23:39:10   prepared 725/800 lines in 0_arial: train_0724.tif
+23:39:10   prepared 726/800 lines in 0_arial: train_0725.tif
+23:39:10   prepared 727/800 lines in 0_arial: train_0726.tif
+23:39:10   prepared 728/800 lines in 0_arial: train_0727.tif
+23:39:10   prepared 729/800 lines in 0_arial: train_0728.tif
+23:39:10   prepared 730/800 lines in 0_arial: train_0729.tif
+23:39:10   prepared 731/800 lines in 0_arial: train_0730.tif
+23:39:10   prepared 732/800 lines in 0_arial: train_0731.tif
+23:39:11   prepared 733/800 lines in 0_arial: train_0732.tif
+23:39:11   prepared 734/800 lines in 0_arial: train_0733.tif
+23:39:11   prepared 735/800 lines in 0_arial: train_0734.tif
+23:39:11   prepared 736/800 lines in 0_arial: train_0735.tif
+23:39:11   prepared 737/800 lines in 0_arial: train_0736.tif
+23:39:11   prepared 738/800 lines in 0_arial: train_0737.tif
+23:39:11   prepared 739/800 lines in 0_arial: train_0738.tif
+23:39:11   prepared 740/800 lines in 0_arial: train_0739.tif
+23:39:11   prepared 741/800 lines in 0_arial: train_0740.tif
+23:39:11   prepared 742/800 lines in 0_arial: train_0741.tif
+23:39:12   prepared 743/800 lines in 0_arial: train_0742.tif
+23:39:12   prepared 744/800 lines in 0_arial: train_0743.tif
+23:39:12   prepared 745/800 lines in 0_arial: train_0744.tif
+23:39:12   prepared 746/800 lines in 0_arial: train_0745.tif
+23:39:12   prepared 747/800 lines in 0_arial: train_0746.tif
+23:39:12   prepared 748/800 lines in 0_arial: train_0747.tif
+23:39:12   prepared 749/800 lines in 0_arial: train_0748.tif
+23:39:12   prepared 750/800 lines in 0_arial: train_0749.tif
+23:39:12   prepared 751/800 lines in 0_arial: train_0750.tif
+23:39:13   prepared 752/800 lines in 0_arial: train_0751.tif
+23:39:13   prepared 753/800 lines in 0_arial: train_0752.tif
+23:39:13   prepared 754/800 lines in 0_arial: train_0753.tif
+23:39:13   prepared 755/800 lines in 0_arial: train_0754.tif
+23:39:13   prepared 756/800 lines in 0_arial: train_0755.tif
+23:39:13   prepared 757/800 lines in 0_arial: train_0756.tif
+23:39:13   prepared 758/800 lines in 0_arial: train_0757.tif
+23:39:13   prepared 759/800 lines in 0_arial: train_0758.tif
+23:39:13   prepared 760/800 lines in 0_arial: train_0759.tif
+23:39:13   prepared 761/800 lines in 0_arial: train_0760.tif
+23:39:13   prepared 762/800 lines in 0_arial: train_0761.tif
+23:39:14   prepared 763/800 lines in 0_arial: train_0762.tif
+23:39:14   prepared 764/800 lines in 0_arial: train_0763.tif
+23:39:14   prepared 765/800 lines in 0_arial: train_0764.tif
+23:39:14   prepared 766/800 lines in 0_arial: train_0765.tif
+23:39:14   prepared 767/800 lines in 0_arial: train_0766.tif
+23:39:14   prepared 768/800 lines in 0_arial: train_0767.tif
+23:39:14   prepared 769/800 lines in 0_arial: train_0768.tif
+23:39:14   prepared 770/800 lines in 0_arial: train_0769.tif
+23:39:14   prepared 771/800 lines in 0_arial: train_0770.tif
+23:39:14   prepared 772/800 lines in 0_arial: train_0771.tif
+23:39:15   prepared 773/800 lines in 0_arial: train_0772.tif
+23:39:15   prepared 774/800 lines in 0_arial: train_0773.tif
+23:39:15   prepared 775/800 lines in 0_arial: train_0774.tif
+23:39:15   prepared 776/800 lines in 0_arial: train_0775.tif
+23:39:15   prepared 777/800 lines in 0_arial: train_0776.tif
+23:39:15   prepared 778/800 lines in 0_arial: train_0777.tif
+23:39:15   prepared 779/800 lines in 0_arial: train_0778.tif
+23:39:15   prepared 780/800 lines in 0_arial: train_0779.tif
+23:39:15   prepared 781/800 lines in 0_arial: train_0780.tif
+23:39:16   prepared 782/800 lines in 0_arial: train_0781.tif
+23:39:16   prepared 783/800 lines in 0_arial: train_0782.tif
+23:39:16   prepared 784/800 lines in 0_arial: train_0783.tif
+23:39:16   prepared 785/800 lines in 0_arial: train_0784.tif
+23:39:16   prepared 786/800 lines in 0_arial: train_0785.tif
+23:39:16   prepared 787/800 lines in 0_arial: train_0786.tif
+23:39:16   prepared 788/800 lines in 0_arial: train_0787.tif
+23:39:16   prepared 789/800 lines in 0_arial: train_0788.tif
+23:39:16   prepared 790/800 lines in 0_arial: train_0789.tif
+23:39:17   prepared 791/800 lines in 0_arial: train_0790.tif
+23:39:17   prepared 792/800 lines in 0_arial: train_0791.tif
+23:39:17   prepared 793/800 lines in 0_arial: train_0792.tif
+23:39:17   prepared 794/800 lines in 0_arial: train_0793.tif
+23:39:17   prepared 795/800 lines in 0_arial: train_0794.tif
+23:39:17   prepared 796/800 lines in 0_arial: train_0795.tif
+23:39:17   prepared 797/800 lines in 0_arial: train_0796.tif
+23:39:17   prepared 798/800 lines in 0_arial: train_0797.tif
+23:39:17   prepared 799/800 lines in 0_arial: train_0798.tif
+23:39:18   prepared 800/800 lines in 0_arial: train_0799.tif
+23:39:18 Prepared 800 lines in 0_arial
+23:39:18 Training list: 800 entries
+23:39:18 $ lstmtraining --model_output /mnt/c/Users/Nbvx Teo/Documents/_Programming/GitHub/TesseractOCRTrainer/data/runs/20261126-233316_minecraft/minecraft/checkpoints/minecraft --continue_from /mnt/c/Users/Nbvx Teo/Documents/_Programming/GitHub/TesseractOCRTrainer/data/runs/20261126-233316_minecraft/minecraft/base/eng.lstm --traineddata /mnt/c/Users/Nbvx Teo/Documents/_Programming/GitHub/TesseractOCRTrainer/data/runs/20261126-233316_minecraft/minecraft/base/eng.traineddata --train_listfile /mnt/c/Users/Nbvx Teo/Documents/_Programming/GitHub/TesseractOCRTrainer/data/runs/20261126-233316_minecraft/minecraft/train_list.txt --max_iterations 10
+23:39:18 Loaded file /mnt/c/Users/Nbvx Teo/Documents/_Programming/GitHub/TesseractOCRTrainer/data/runs/20261126-233316_minecraft/minecraft/base/eng.lstm, unpacking...
+23:39:18 Warning: LSTMTrainer deserialized an LSTMRecognizer!
+23:39:18 Continuing from /mnt/c/Users/Nbvx Teo/Documents/_Programming/GitHub/TesseractOCRTrainer/data/runs/20261126-233316_minecraft/minecraft/base/eng.lstm
+23:39:18 Loaded 2/2 lines (1-2) of document /mnt/c/Users/Nbvx Teo/Documents/_Programming/GitHub/TesseractOCRTrainer/data/runs/20261126-233316_minecraft/minecraft/train/0_arial/train_0000.lstmf
+23:39:18 Loaded 2/2 lines (1-2) of document /mnt/c/Users/Nbvx Teo/Documents/_Programming/GitHub/TesseractOCRTrainer/data/runs/20261126-233316_minecraft/minecraft/train/0_arial/train_0002.lstmf
+23:39:18 Loaded 2/2 lines (1-2) of document /mnt/c/Users/Nbvx Teo/Documents/_Programming/GitHub/TesseractOCRTrainer/data/runs/20261126-233316_minecraft/minecraft/train/0_arial/train_0003.lstmf
+23:39:18 Loaded 2/2 lines (1-2) of document /mnt/c/Users/Nbvx Teo/Documents/_Programming/GitHub/TesseractOCRTrainer/data/runs/20261126-233316_minecraft/minecraft/train/0_arial/train_0004.lstmf
+23:39:18 Loaded 2/2 lines (1-2) of document /mnt/c/Users/Nbvx Teo/Documents/_Programming/GitHub/TesseractOCRTrainer/data/runs/20261126-233316_minecraft/minecraft/train/0_arial/train_0005.lstmf
+23:39:18 Loaded 2/2 lines (1-2) of document /mnt/c/Users/Nbvx Teo/Documents/_Programming/GitHub/TesseractOCRTrainer/data/runs/20261126-233316_minecraft/minecraft/train/0_arial/train_0007.lstmf
+23:39:18 Loaded 2/2 lines (1-2) of document /mnt/c/Users/Nbvx Teo/Documents/_Programming/GitHub/TesseractOCRTrainer/data/runs/20261126-233316_minecraft/minecraft/train/0_arial/train_0011.lstmf
+23:39:18 Loaded 2/2 lines (1-2) of document /mnt/c/Users/Nbvx Teo/Documents/_Programming/GitHub/TesseractOCRTrainer/data/runs/20261126-233316_minecraft/minecraft/train/0_arial/train_0012.lstmf
+23:39:18 Loaded 2/2 lines (1-2) of document /mnt/c/Users/Nbvx Teo/Documents/_Programming/GitHub/TesseractOCRTrainer/data/runs/20261126-233316_minecraft/minecraft/train/0_arial/train_0013.lstmf
+23:39:19 2 Percent improvement time=1, best error was 100 @ 0
+23:39:20 At iteration 1/10/10, mean rms=0.268%, delta=0.246%, BCER train=0.870%, BWER train=5.000%, skip ratio=0.000%, New best BCER = 0.870 Transitioned to stage 1 wrote best model:/mnt/c/Users/Nbvx Teo/Documents/_Programming/GitHub/TesseractOCRTrainer/data/runs/20261126-233316_minecraft/minecraft/checkpoints/minecraft_0.870_1_10.checkpoint wrote checkpoint.
+23:39:20 Finished! Selected model with minimal training error rate (BCER) = 0.87
+23:39:20 $ lstmtraining --stop_training --continue_from /mnt/c/Users/Nbvx Teo/Documents/_Programming/GitHub/TesseractOCRTrainer/data/runs/20261126-233316_minecraft/minecraft/checkpoints/minecraft_checkpoint --traineddata /mnt/c/Users/Nbvx Teo/Documents/_Programming/GitHub/TesseractOCRTrainer/data/runs/20261126-233316_minecraft/minecraft/base/eng.traineddata --model_output /mnt/c/Users/Nbvx Teo/Documents/_Programming/GitHub/TesseractOCRTrainer/data/runs/20261126-233316_minecraft/minecraft/model/minecraft.traineddata
+23:39:20 Loaded file /mnt/c/Users/Nbvx Teo/Documents/_Programming/GitHub/TesseractOCRTrainer/data/runs/20261126-233316_minecraft/minecraft/checkpoints/minecraft_checkpoint, unpacking...
+23:39:21   checked 1/200 lines in 0_arial (after training)
+23:39:21   checked 2/200 lines in 0_arial (after training)
+23:39:21   checked 3/200 lines in 0_arial (after training)
+23:39:22   checked 4/200 lines in 0_arial (after training)
+23:39:22   checked 5/200 lines in 0_arial (after training)
+23:39:22   checked 6/200 lines in 0_arial (after training)
+23:39:23   checked 7/200 lines in 0_arial (after training)
+23:39:23   checked 8/200 lines in 0_arial (after training)
+23:39:23   checked 9/200 lines in 0_arial (after training)
+23:39:23   checked 10/200 lines in 0_arial (after training)
+23:39:24   checked 11/200 lines in 0_arial (after training)
+23:39:24   checked 12/200 lines in 0_arial (after training)
+23:39:24   checked 13/200 lines in 0_arial (after training)
+23:39:25   checked 14/200 lines in 0_arial (after training)
+23:39:25   checked 15/200 lines in 0_arial (after training)
+23:39:25   checked 16/200 lines in 0_arial (after training)
+23:39:26   checked 17/200 lines in 0_arial (after training)
+23:39:26   checked 18/200 lines in 0_arial (after training)
+23:39:26   checked 19/200 lines in 0_arial (after training)
+23:39:27   checked 20/200 lines in 0_arial (after training)
+23:39:27   checked 21/200 lines in 0_arial (after training)
+23:39:27   checked 22/200 lines in 0_arial (after training)
+23:39:28   checked 23/200 lines in 0_arial (after training)
+23:39:28   checked 24/200 lines in 0_arial (after training)
+23:39:28   checked 25/200 lines in 0_arial (after training)
+23:39:29   checked 26/200 lines in 0_arial (after training)
+23:39:29   checked 27/200 lines in 0_arial (after training)
+23:39:29   checked 28/200 lines in 0_arial (after training)
+23:39:30   checked 29/200 lines in 0_arial (after training)
+23:39:30   checked 30/200 lines in 0_arial (after training)
+23:39:30   checked 31/200 lines in 0_arial (after training)
+23:39:31   checked 32/200 lines in 0_arial (after training)
+23:39:31   checked 33/200 lines in 0_arial (after training)
+23:39:31   checked 34/200 lines in 0_arial (after training)
+23:39:31   checked 35/200 lines in 0_arial (after training)
+23:39:32   checked 36/200 lines in 0_arial (after training)
+23:39:32   checked 37/200 lines in 0_arial (after training)
+23:39:32   checked 38/200 lines in 0_arial (after training)
+23:39:33   checked 39/200 lines in 0_arial (after training)
+23:39:33   checked 40/200 lines in 0_arial (after training)
+23:39:33   checked 41/200 lines in 0_arial (after training)
+23:39:34   checked 42/200 lines in 0_arial (after training)
+23:39:34   checked 43/200 lines in 0_arial (after training)
+23:39:34   checked 44/200 lines in 0_arial (after training)
+23:39:35   checked 45/200 lines in 0_arial (after training)
+23:39:35   checked 46/200 lines in 0_arial (after training)
+23:39:35   checked 47/200 lines in 0_arial (after training)
+23:39:35   checked 48/200 lines in 0_arial (after training)
+23:39:36   checked 49/200 lines in 0_arial (after training)
+23:39:36   checked 50/200 lines in 0_arial (after training)
+23:39:36   checked 51/200 lines in 0_arial (after training)
+23:39:37   checked 52/200 lines in 0_arial (after training)
+23:39:37   checked 53/200 lines in 0_arial (after training)
+23:39:37   checked 54/200 lines in 0_arial (after training)
+23:39:38   checked 55/200 lines in 0_arial (after training)
+23:39:38   checked 56/200 lines in 0_arial (after training)
+23:39:39   checked 57/200 lines in 0_arial (after training)
+23:39:39   checked 58/200 lines in 0_arial (after training)
+23:39:39   checked 59/200 lines in 0_arial (after training)
+23:39:39   checked 60/200 lines in 0_arial (after training)
+23:39:40   checked 61/200 lines in 0_arial (after training)
+23:39:40   checked 62/200 lines in 0_arial (after training)
+23:39:40   checked 63/200 lines in 0_arial (after training)
+23:39:41   checked 64/200 lines in 0_arial (after training)
+23:39:41   checked 65/200 lines in 0_arial (after training)
+23:39:42   checked 66/200 lines in 0_arial (after training)
+23:39:42   checked 67/200 lines in 0_arial (after training)
+23:39:42   checked 68/200 lines in 0_arial (after training)
+23:39:42   checked 69/200 lines in 0_arial (after training)
+23:39:43   checked 70/200 lines in 0_arial (after training)
+23:39:43   checked 71/200 lines in 0_arial (after training)
+23:39:43   checked 72/200 lines in 0_arial (after training)
+23:39:44   checked 73/200 lines in 0_arial (after training)
+23:39:44   checked 74/200 lines in 0_arial (after training)
+23:39:44   checked 75/200 lines in 0_arial (after training)
+23:39:45   checked 76/200 lines in 0_arial (after training)
+23:39:45   checked 77/200 lines in 0_arial (after training)
+23:39:45   checked 78/200 lines in 0_arial (after training)
+23:39:46   checked 79/200 lines in 0_arial (after training)
+23:39:46   checked 80/200 lines in 0_arial (after training)
+23:39:46   checked 81/200 lines in 0_arial (after training)
+23:39:47   checked 82/200 lines in 0_arial (after training)
+23:39:47   checked 83/200 lines in 0_arial (after training)
+23:39:47   checked 84/200 lines in 0_arial (after training)
+23:39:48   checked 85/200 lines in 0_arial (after training)
+23:39:48   checked 86/200 lines in 0_arial (after training)
+23:39:48   checked 87/200 lines in 0_arial (after training)
+23:39:49   checked 88/200 lines in 0_arial (after training)
+23:39:49   checked 89/200 lines in 0_arial (after training)
+23:39:49   checked 90/200 lines in 0_arial (after training)
+23:39:50   checked 91/200 lines in 0_arial (after training)
+23:39:50   checked 92/200 lines in 0_arial (after training)
+23:39:50   checked 93/200 lines in 0_arial (after training)
+23:39:51   checked 94/200 lines in 0_arial (after training)
+23:39:51   checked 95/200 lines in 0_arial (after training)
+23:39:51   checked 96/200 lines in 0_arial (after training)
+23:39:51   checked 97/200 lines in 0_arial (after training)
+23:39:52   checked 98/200 lines in 0_arial (after training)
+23:39:52   checked 99/200 lines in 0_arial (after training)
+23:39:52   checked 100/200 lines in 0_arial (after training)
+23:39:53   checked 101/200 lines in 0_arial (after training)
+23:39:53   checked 102/200 lines in 0_arial (after training)
+23:39:53   checked 103/200 lines in 0_arial (after training)
+23:39:54   checked 104/200 lines in 0_arial (after training)
+23:39:54   checked 105/200 lines in 0_arial (after training)
+23:39:54   checked 106/200 lines in 0_arial (after training)
+23:39:54   checked 107/200 lines in 0_arial (after training)
+23:39:55   checked 108/200 lines in 0_arial (after training)
+23:39:55   checked 109/200 lines in 0_arial (after training)
+23:39:55   checked 110/200 lines in 0_arial (after training)
+23:39:56   checked 111/200 lines in 0_arial (after training)
+23:39:56   checked 112/200 lines in 0_arial (after training)
+23:39:56   checked 113/200 lines in 0_arial (after training)
+23:39:57   checked 114/200 lines in 0_arial (after training)
+23:39:57   checked 115/200 lines in 0_arial (after training)
+23:39:57   checked 116/200 lines in 0_arial (after training)
+23:39:58   checked 117/200 lines in 0_arial (after training)
+23:39:58   checked 118/200 lines in 0_arial (after training)
+23:39:58   checked 119/200 lines in 0_arial (after training)
+23:39:58   checked 120/200 lines in 0_arial (after training)
+23:39:59   checked 121/200 lines in 0_arial (after training)
+23:39:59   checked 122/200 lines in 0_arial (after training)
+23:39:59   checked 123/200 lines in 0_arial (after training)
+23:40:00   checked 124/200 lines in 0_arial (after training)
+23:40:00   checked 125/200 lines in 0_arial (after training)
+23:40:00   checked 126/200 lines in 0_arial (after training)
+23:40:01   checked 127/200 lines in 0_arial (after training)
+23:40:01   checked 128/200 lines in 0_arial (after training)
+23:40:01   checked 129/200 lines in 0_arial (after training)
+23:40:02   checked 130/200 lines in 0_arial (after training)
+23:40:02   checked 131/200 lines in 0_arial (after training)
+23:40:02   checked 132/200 lines in 0_arial (after training)
+23:40:02   checked 133/200 lines in 0_arial (after training)
+23:40:03   checked 134/200 lines in 0_arial (after training)
+23:40:03   checked 135/200 lines in 0_arial (after training)
+23:40:03   checked 136/200 lines in 0_arial (after training)
+23:40:04   checked 137/200 lines in 0_arial (after training)
+23:40:04   checked 138/200 lines in 0_arial (after training)
+23:40:04   checked 139/200 lines in 0_arial (after training)
+23:40:05   checked 140/200 lines in 0_arial (after training)
+23:40:05   checked 141/200 lines in 0_arial (after training)
+23:40:05   checked 142/200 lines in 0_arial (after training)
+23:40:05   checked 143/200 lines in 0_arial (after training)
+23:40:06   checked 144/200 lines in 0_arial (after training)
+23:40:06   checked 145/200 lines in 0_arial (after training)
+23:40:06   checked 146/200 lines in 0_arial (after training)
+23:40:07   checked 147/200 lines in 0_arial (after training)
+23:40:07   checked 148/200 lines in 0_arial (after training)
+23:40:07   checked 149/200 lines in 0_arial (after training)
+23:40:08   checked 150/200 lines in 0_arial (after training)
+23:40:08   checked 151/200 lines in 0_arial (after training)
+23:40:08   checked 152/200 lines in 0_arial (after training)
+23:40:09   checked 153/200 lines in 0_arial (after training)
+23:40:09   checked 154/200 lines in 0_arial (after training)
+23:40:09   checked 155/200 lines in 0_arial (after training)
+23:40:10   checked 156/200 lines in 0_arial (after training)
+23:40:10   checked 157/200 lines in 0_arial (after training)
+23:40:10   checked 158/200 lines in 0_arial (after training)
+23:40:11   checked 159/200 lines in 0_arial (after training)
+23:40:11   checked 160/200 lines in 0_arial (after training)
+23:40:11   checked 161/200 lines in 0_arial (after training)
+23:40:12   checked 162/200 lines in 0_arial (after training)
+23:40:12   checked 163/200 lines in 0_arial (after training)
+23:40:12   checked 164/200 lines in 0_arial (after training)
+23:40:12   checked 165/200 lines in 0_arial (after training)
+23:40:13   checked 166/200 lines in 0_arial (after training)
+23:40:13   checked 167/200 lines in 0_arial (after training)
+23:40:13   checked 168/200 lines in 0_arial (after training)
+23:40:14   checked 169/200 lines in 0_arial (after training)
+23:40:14   checked 170/200 lines in 0_arial (after training)
+23:40:14   checked 171/200 lines in 0_arial (after training)
+23:40:14   checked 172/200 lines in 0_arial (after training)
+23:40:15   checked 173/200 lines in 0_arial (after training)
+23:40:15   checked 174/200 lines in 0_arial (after training)
+23:40:15   checked 175/200 lines in 0_arial (after training)
+23:40:16   checked 176/200 lines in 0_arial (after training)
+23:40:16   checked 177/200 lines in 0_arial (after training)
+23:40:16   checked 178/200 lines in 0_arial (after training)
+23:40:17   checked 179/200 lines in 0_arial (after training)
+23:40:17   checked 180/200 lines in 0_arial (after training)
+23:40:17   checked 181/200 lines in 0_arial (after training)
+23:40:17   checked 182/200 lines in 0_arial (after training)
+23:40:18   checked 183/200 lines in 0_arial (after training)
+23:40:18   checked 184/200 lines in 0_arial (after training)
+23:40:18   checked 185/200 lines in 0_arial (after training)
+23:40:19   checked 186/200 lines in 0_arial (after training)
+23:40:19   checked 187/200 lines in 0_arial (after training)
+23:40:19   checked 188/200 lines in 0_arial (after training)
+23:40:20   checked 189/200 lines in 0_arial (after training)
+23:40:20   checked 190/200 lines in 0_arial (after training)
+23:40:20   checked 191/200 lines in 0_arial (after training)
+23:40:21   checked 192/200 lines in 0_arial (after training)
+23:40:21   checked 193/200 lines in 0_arial (after training)
+23:40:21   checked 194/200 lines in 0_arial (after training)
+23:40:22   checked 195/200 lines in 0_arial (after training)
+23:40:22   checked 196/200 lines in 0_arial (after training)
+23:40:22   checked 197/200 lines in 0_arial (after training)
+23:40:22   checked 198/200 lines in 0_arial (after training)
+23:40:23   checked 199/200 lines in 0_arial (after training)
+23:40:23   checked 200/200 lines in 0_arial (after training)
+23:40:23 0_arial after training: 102/200 lines pass, CER 0.4198
+23:40:23   PASS  Mod jei requires Minecraft 1.20.4 but found 47.2.0
+23:40:23   PASS  Connection timed out while reading packet 123
+23:40:23   PASS  Server started on port 25565 after 191 seconds
+23:40:23   PASS  Skipping create: incompatible with forge 47.4.10
+23:40:23   FAIL  expected: java.lang.NoClassDefFoundError: com.electronwizard.config/cloth-config
+23:40:23         got:      com elechronwizard configcloth-conti
+23:40:23   PASS  Found 714 mods, 3 failed to load
+23:40:23   FAIL  expected: Error loading class net.minecraftforge.fmlcore.oculus in oculus-1.20.4.jar
+23:40:23         got:      =ror pA net.minecraftforge.fmlcore.oculus in
+23:40:23   PASS  Mod mekanism requires Minecraft 1.21 but found 0.15.3
+23:40:23   FAIL  expected: The Mod File D:\Games\MultiMC\instances\Server Backup 2026\.minecraft\mods\fabric-api.jar has mods that were not found
+23:40:23         got:
+23:40:23   PASS  Texture pack reloaded with 543 resources
+23:40:23   FAIL  expected: Unable to open C:\Games\MultiMC\libraries\com\google\guava\3.1.8\iris-3.1.8.jar
+23:40:23         got:      ca esl Cuibra ries\com\google\guava\3.1.8\iris-3.1
+23:40:23   PASS  Found 369 mods, 9 failed to load
+23:40:23   FAIL  expected: Missing dependency: net.minecraftforge.fmlcore version 1.20.1 required by alexsmobs
+23:40:23         got:      120.1 Saad bye net mnecraftiorge.micore version
+23:40:23   FAIL  expected: Missing dependency: net.fabricmc.loader version 1.19.2 required by ironchests
+23:40:23         got:      route br ronchenis aprieme-loader version 1.19.2
+23:40:23   PASS  [INFO] Registered 758 recipes from quark
+23:40:23   FAIL  expected: java.lang.NoClassDefFoundError: net.fabricmc.loader/supplementaries
+23:40:23         got:      om rs et oundError net.fabricmc.loader/
+23:40:23   FAIL  expected: java.lang.NoClassDefFoundError: com.electronwizard.config/jei
+23:40:23         got:
+23:40:23   PASS  Downloaded oculus-47.4.10.jar in 233 seconds
+23:40:23   FAIL  expected: Mod mekanism requires Minecraft 1.16.5 but found 47.2.0
+23:40:23         got:      ag mekanism requires Minecraft 1.16.5 but found
+23:40:23   PASS  Connection timed out while reading packet 201
+23:40:23   FAIL  expected: Missing dependency: org.apache.logging.log4j version 1.19.2 required by glassseam-fix
+23:40:23         got:      1119.2 roquired by lassssam ooo"
+23:40:23   FAIL  expected: Unable to open E:\Games\MultiMC\libraries\net\minecraftforge\javafmlmod\2.0.0-beta.4\biomesoplenty-2.0.0-beta.4.jar
+23:40:23         got:
+23:40:23   PASS  ironchests 1.20.1 is already installed in 1.19.2 Modded
+23:40:23   PASS  Could not find org.lwjgl.glfw for glassseam-fix, skipping
+23:40:23   FAIL  expected: Unable to open D:\Games\MultiMC\libraries\net\minecraftforge\javafmlmod\47.2.0\ironchests-47.2.0.jar
+23:40:23         got:      Games roar ecrantorgeyavaimimod
+23:40:23   FAIL  expected: supplementaries 0.14.22 is already installed in 1.20.1 Forge
+23:40:23         got:      orp menanies 0.14.22 is already installed in 1.20.1
+23:40:23   FAIL  expected: Mod carpet requires Minecraft 1.16.5 but found 2.0.0-beta.4
+23:40:23         got:      viod carpe! requires Minecraft 1.16.5 but found 2.0.0-
+23:40:23   PASS  Downloaded modmenu-5.4.0.jar in 25 seconds
+23:40:23   FAIL  expected: Chunk loading took 149 ms in dimension minecraft:overworld
+23:40:23         got:      rinecatiovomord
+23:40:23   FAIL  expected: Chunk loading took 78 ms in dimension minecraft:overworld
+23:40:23         got:      inecraftovemord
+23:40:23   FAIL  expected: Skipping xaeros-minimap: incompatible with forge 2.0.0-beta.4
+23:40:23         got:      Sipping xaeros-minimap: incompatible with forge 2.0.0-
+23:40:23   FAIL  expected: Loading mod list from D:\Games\MultiMC\instances\Server Backup 2026\mods
+23:40:23         got:      CameaMUMO\matanees\Server Backup 2026\mods
+23:40:23   PASS  Set JVM argument -Xmx8192M for 1.21 Survival
+23:40:23   FAIL  expected: Loading mod list from D:\Games\MultiMC\instances\1.21 Survival\mods
+23:40:23         got:      Loading moc Jt from D:\Games\MultiMC\instances\1.21
+23:40:23   FAIL  expected: farmersdelight 1.20.4 is already installed in 1.19.2 Modded
+23:40:23         got:      armersdelight 1.20.4 is already installed in 1.19.2
+23:40:23   FAIL  expected: Launching 1.20.1 6June2026Wiped9Nov2026 with 4096 MB of memory
+23:40:23         got:      VE of ment 6June2026Wiped9Nov2026 with 4096
+23:40:23   PASS  Texture pack reloaded with 697 resources
+23:40:23   PASS  Could not find net.fabricmc.loader for ironchests, skipping
+23:40:23   PASS  Mod alexsmobs requires Minecraft 1.16.5 but found 3.1.8
+23:40:23   PASS  Skipping iris: incompatible with forge 47.4.10
+23:40:23   PASS  Retrying download of sodium: HTTP status 403
+23:40:23   PASS  Found 499 mods, 6 failed to load
+23:40:23   PASS  [INFO] Registered 170 recipes from farmersdelight
+23:40:23   FAIL  expected: java.lang.NoClassDefFoundError: com.electronwizard.config/supplementaries
+23:40:23         got:      pies om ed come " meni ries
+23:40:23   PASS  [INFO] Registered 555 recipes from jei
+23:40:23   PASS  Server started on port 25566 after 164 seconds
+23:40:23   PASS  Retrying download of journeymap: HTTP status 403
+23:40:23   PASS  Skipping terralith: incompatible with forge 47.2.0
+23:40:23   PASS  Set JVM argument -Xmx6144M for 1.16.5 Create
+23:40:23   FAIL  expected: Missing dependency: net.minecraftforge.fmlcore version 1.21 required by oculus
+23:40:23         got:      121 reg ee TC atorge-fmicore version
+23:40:23   PASS  Downloaded xaeros-minimap-1.16.5.jar in 148 seconds
+23:40:23   FAIL  expected: Crash report saved to D:\Games\MultiMC\crash-reports\crash-2026-11-11.txt
+23:40:23         got:
+23:40:23   FAIL  expected: Crash report saved to E:\Games\MultiMC\crash-reports\crash-2026-11-18.txt
+23:40:23         got:
+23:40:23   FAIL  expected: Unable to open C:\Games\MultiMC\libraries\org\spongepowered\mixin\47.2.0\applied-energistics-2-47.2.0.jar
+23:40:23         got:      Comes Cater aor gauss.
+23:40:23   FAIL  expected: Skipping biomesoplenty: incompatible with forge 2.0.0-beta.4
+23:40:23         got:      Sipping biomesoplenty: incompatible with forge 2.0.0-
+23:40:23   PASS  Texture pack reloaded with 240 resources
+23:40:23   PASS  Connection timed out while reading packet 61
+23:40:23   PASS  Texture pack reloaded with 735 resources
+23:40:23   PASS  Set JVM argument -Xmx2048M for 1.20.4 Fabric
+23:40:23   FAIL  expected: Error loading class com.electronwizard.config.fabric-api in fabric-api-1.19.2.jar
+23:40:23         got:      =ror oe oo coonwizard.config-fabric-ap
+23:40:23   PASS  Set JVM argument -Xmx8192M for 1.19.2 Modded
+23:40:23   PASS  java.lang.NoClassDefFoundError: net.fabricmc.loader/jei
+23:40:23   PASS  Found 776 mods, 2 failed to load
+23:40:23   FAIL  expected: Error loading class net.minecraftforge.javafmlmod.applied-energistics-2 in applied-energistics-2-0.14.22.jar
+23:40:23         got:
+23:40:23   FAIL  expected: Could not find com.electronwizard.config for xaeros-minimap, skipping
+23:40:23         got:      “ould ig Kop CC ronwizard.config for xaeros-
+23:40:23   FAIL  expected: Chunk loading took 223 ms in dimension minecraft:overworld
+23:40:23         got:      rinecattovomord
+23:40:23   PASS  Retrying download of fabric-api: HTTP status 500
+23:40:23   FAIL  expected: Error loading class net.minecraftforge.fmlcore.supplementaries in supplementaries-1.16.5.jar
+23:40:23         got:
+23:40:23   FAIL  expected: java.lang.NoClassDefFoundError: com.google.guava/supplementaries
+23:40:23         got:      om rs et oundError com.google.guava/
+23:40:23   FAIL  expected: Could not find net.minecraftforge.fmlcore for waystones, skipping
+23:40:23         got:      Kopi find net.minecraftforge.fmlcore for waystones,
+23:40:23   PASS  Server started on port 25566 after 31 seconds
+23:40:23   FAIL  expected: Could not find net.minecraftforge.fmlcore for applied-energistics-2, skipping
+23:40:23         got:      Nr not iy co iy rorge-micore for applied-
+23:40:23   PASS  mekanism 1.19.2 is already installed in 1.19.2 Modded
+23:40:23   FAIL  expected: Mod farmersdelight requires Minecraft 5.4.0 but found 47.2.0
+23:40:23         got:      ag rmersdelight requires Minecraft 5.4.0 but found
+23:40:23   PASS  Set JVM argument -Xmx6144M for Server Backup 2026
+23:40:23   FAIL  expected: Unable to open C:\Games\MultiMC\libraries\net\minecraftforge\javafmlmod\2.0.0-beta.4\ironchests-2.0.0-beta.4.jar
+23:40:23         got:
+23:40:23   PASS  jei 0.14.22 is already installed in 1.21 Survival
+23:40:23   FAIL  expected: Failed to load mod oculus 47.4.10: missing dependency net.fabricmc.loader
+23:40:23         got:      ralied to load mad ooulus 47.4.10: missing dependency
+23:40:23   PASS  Downloaded jei-5.4.0.jar in 52 seconds
+23:40:23   PASS  Could not find org.lwjgl.glfw for xaeros-minimap, skipping
+23:40:23   FAIL  expected: ironchests 1.20.4 is already installed in 1.20.1 6June2026Wiped9Nov2026
+23:40:23         got:      6unez0zoWipedoNov202s
+23:40:23   FAIL  expected: java.lang.NoClassDefFoundError: net.fabricmc.loader/alexsmobs
+23:40:23         got:      java. lang MotlassbeffroundEror net.fabricmc.loader/
+23:40:23   FAIL  expected: Chunk loading took 155 ms in dimension minecraft:overworld
+23:40:23         got:      rinecatiovomord
+23:40:23   PASS  Connection timed out while reading packet 228
+23:40:23   PASS  [INFO] Registered 864 recipes from xaeros-minimap
+23:40:23   PASS  Mod modmenu requires Minecraft 1.21 but found 0.15.3
+23:40:23   PASS  Set JVM argument -Xmx2048M for 1.19.2 Modded
+23:40:23   FAIL  expected: Mod quark requires Minecraft 47.4.10 but found 2.0.0-beta.4
+23:40:23         got:      vod guark requires Minecraft 47.4.10 but found 2.0.0-
+23:40:23   PASS  Downloaded biomesoplenty-1.20.1.jar in 144 seconds
+23:40:23   FAIL  expected: Missing dependency: com.electronwizard.config version 1.16.5 required by quark
+23:40:23         got:      16.6 aad by somelectronwizard.config version
+23:40:23   FAIL  expected: Error loading class com.electronwizard.config.waystones in waystones-1.19.2.jar
+23:40:23         got:      aye cass pong © Conard. config-waystones
+23:40:23   PASS  Downloaded create-0.14.22.jar in 158 seconds
+23:40:23   FAIL  expected: Crash report saved to E:\Games\MultiMC\crash-reports\crash-2026-11-26.txt
+23:40:23         got:
+23:40:23   PASS  Set JVM argument -Xmx2048M for Server Backup 2026
+23:40:23   PASS  [INFO] Registered 507 recipes from carpet
+23:40:23   FAIL  expected: Error loading class org.spongepowered.mixin.create in create-1.20.1.jar
+23:40:23         got:      emo load po org.spongepowered.mixin.create in
+23:40:23   FAIL  expected: Crash report saved to E:\Games\MultiMC\crash-reports\crash-2026-11-25.txt
+23:40:23         got:
+23:40:23   PASS  Found 534 mods, 8 failed to load
+23:40:23   PASS  Connection timed out while reading packet 165
+23:40:23   FAIL  expected: Crash report saved to D:\Games\MultiMC\crash-reports\crash-2026-11-23.txt
+23:40:23         got:
+23:40:23   FAIL  expected: Loading mod list from C:\Games\MultiMC\instances\Server Backup 2026\mods
+23:40:23         got:      CamoaMUMOmatarces\Server Backup 2026\mods
+23:40:23   FAIL  expected: Chunk loading took 208 ms in dimension minecraft:overworld
+23:40:23         got:      rinecatiovomord
+23:40:23   FAIL  expected: Chunk loading took 214 ms in dimension minecraft:overworld
+23:40:23         got:      inecatiovomord
+23:40:23   PASS  Deleted 671 old log files from E:\Games\MultiMC\logs
+23:40:23   PASS  Found 669 mods, 4 failed to load
+23:40:23   PASS  Deleted 362 old log files from E:\Games\MultiMC\logs
+23:40:23   FAIL  expected: java.lang.NoClassDefFoundError: net.minecraftforge.javafmlmod/farmersdelight
+23:40:23         got:      me ators posit mod famersdelight
+23:40:23   FAIL  expected: The Mod File C:\Games\MultiMC\instances\1.20.1 6June2026Wiped9Nov2026\.minecraft\mods\sodium.jar has mods that were not found
+23:40:23         got:
+23:40:23   PASS  carpet 1.20.4 is already installed in Server Backup 2026
+23:40:23   PASS  Server started on port 25566 after 188 seconds
+23:40:23   PASS  Launching 1.19.2 Modded with 8192 MB of memory
+23:40:23   FAIL  expected: Unable to open E:\Games\MultiMC\libraries\org\apache\logging\log4j\3.1.8\iris-3.1.8.jar
+23:40:23         got:      ca resi Ciibra ries\org\apache\logging\log4j\3.1.8\
+23:40:23   FAIL  expected: Error loading class com.google.guava.supplementaries in supplementaries-1.20.4.jar
+23:40:23         got:      oon roa yJie-guava supplementaries in
+23:40:23   FAIL  expected: Error loading class org.apache.logging.log4j.create in create-1.19.2.jar
+23:40:23         got:      cor loading po org.apache.logging.log4j.create in
+23:40:23   PASS  Connection timed out while reading packet 121
+23:40:23   FAIL  expected: The Mod File C:\Games\MultiMC\instances\1.20.1 Forge\.minecraft\mods\terralith.jar has mods that were not found
+23:40:23         got:
+23:40:23   PASS  iris 1.21 is already installed in Server Backup 2026
+23:40:23   PASS  Found 885 mods, 7 failed to load
+23:40:23   FAIL  expected: The Mod File C:\Games\MultiMC\instances\1.21 Survival\.minecraft\mods\terralith.jar has mods that were not found
+23:40:23         got:      Sunil ir cram o " Ao ali on Fo N de " at were
+23:40:23   PASS  Mod quark requires Minecraft 1.19.2 but found 3.1.8
+23:40:23   FAIL  expected: The Mod File E:\Games\MultiMC\instances\1.19.2 Modded\.minecraft\mods\fabric-api.jar has mods that were not found
+23:40:23         got:
+23:40:23   FAIL  expected: Unable to open C:\Games\MultiMC\libraries\org\spongepowered\mixin\47.2.0\modmenu-47.2.0.jar
+23:40:23         got:      EE)
+23:40:23   PASS  Found 532 mods, 7 failed to load
+23:40:23   PASS  Texture pack reloaded with 551 resources
+23:40:23   PASS  Connection timed out while reading packet 152
+23:40:23   PASS  Texture pack reloaded with 696 resources
+23:40:23   PASS  Connection timed out while reading packet 172
+23:40:23   FAIL  expected: java.lang.NoClassDefFoundError: org.apache.logging.log4j/iris
+23:40:23         got:
+23:40:23   PASS  Server started on port 25565 after 16 seconds
+23:40:23   FAIL  expected: The Mod File C:\Games\MultiMC\instances\1.20.4 Fabric\.minecraft\mods\create.jar has mods that were not found
+23:40:23         got:
+23:40:23   PASS  supplementaries 1.21 is already installed in 1.21 Survival
+23:40:23   FAIL  expected: Mod oculus requires Minecraft 1.20.4 but found 2.0.0-beta.4
+23:40:23         got:      vod ooulus requires Minecraft 1.20.4 but found 2.0.0-
+23:40:23   PASS  Set JVM argument -Xmx6144M for 1.19.2 Modded
+23:40:23   FAIL  expected: Chunk loading took 135 ms in dimension minecraft:overworld
+23:40:23         got:      rinecatiovomord
+23:40:23   FAIL  expected: Mod terralith requires Minecraft 1.21 but found 2.0.0-beta.4
+23:40:23         got:      vod terrain requires Minecraft 1.21 but found 2.0.0-
+23:40:23   FAIL  expected: Chunk loading took 49 ms in dimension minecraft:overworld
+23:40:23         got:      inecraftovemord
+23:40:23   PASS  Retrying download of cloth-config: HTTP status 500
+23:40:23   FAIL  expected: Missing dependency: net.minecraftforge.fmlcore version 1.20.1 required by quark
+23:40:23         got:      120.1 Saad by net minecraftiorge.fmicore version
+23:40:23   FAIL  expected: farmersdelight 0.14.22 is already installed in 1.20.4 Fabric
+23:40:23         got:      armersdelight 0.14.22 is already installed in 1.20.4
+23:40:23   PASS  Skipping oculus: incompatible with forge 47.4.10
+23:40:23   FAIL  expected: Failed to load mod glassseam-fix 2.0.0-beta.4: missing dependency org.spongepowered.mixin
+23:40:23         got:      dependency org spongepowereamixin
+23:40:23   PASS  [INFO] Registered 495 recipes from supplementaries
+23:40:23   PASS  Downloaded create-47.4.10.jar in 70 seconds
+23:40:23   PASS  create 1.20.4 is already installed in Server Backup 2026
+23:40:23   PASS  Skipping ironchests: incompatible with forge 47.4.10
+23:40:23   PASS  Server started on port 25566 after 94 seconds
+23:40:23   PASS  Downloaded jei-0.14.22.jar in 240 seconds
+23:40:23   PASS  Connection timed out while reading packet 57
+23:40:23   PASS  Skipping fabric-api: incompatible with forge 0.15.3
+23:40:23   PASS  Downloaded terralith-0.14.22.jar in 198 seconds
+23:40:23   FAIL  expected: Error loading class net.minecraftforge.javafmlmod.quark in quark-1.20.4.jar
+23:40:23         got:      oar 29 ps net.minecraftforge.javafmimod.quark
+23:40:23   PASS  [WARN] Config file ironchests-common.toml is out of date
+23:40:23   FAIL  expected: Unable to open D:\Games\MultiMC\libraries\com\electronwizard\config\47.4.10\ironchests-47.4.10.jar
+23:40:23         got:      Games ro clectronwizardicontigidr.4
+23:40:23   PASS  waystones 1.20.4 is already installed in 1.16.5 Create
+23:40:23   PASS  Launching 1.21 Survival with 2048 MB of memory
+23:40:23   FAIL  expected: Mixin apply failed for com.google.guava: target class not found
+23:40:23         got:      in apply failed for com.google.guava: target class not
+23:40:23   FAIL  expected: Loading mod list from D:\Games\MultiMC\instances\1.16.5 Create\mods
+23:40:23         got:      pos ; : A .16.5 Create\mods
+23:40:23   PASS  Launching 1.19.2 Modded with 6144 MB of memory
+23:40:23   PASS  Downloaded oculus-1.20.4.jar in 25 seconds
+23:40:23   FAIL  expected: The Mod File E:\Games\MultiMC\instances\1.20.4 Fabric\.minecraft\mods\biomesoplenty.jar has mods that were not found
+23:40:23         got:
+23:40:23   FAIL  expected: Mixin apply failed for com.electronwizard.config: target class not found
+23:40:23         got:      vor app railed for com.electronwizard.config: target
+23:40:23   FAIL  expected: Mod supplementaries requires Minecraft 0.14.22 but found 47.2.0
+23:40:23         got:      vod Supp ementaries requires Minecraft 0.14.22 but
+23:40:23   PASS  Retrying download of oculus: HTTP status 500
+23:40:23   PASS  Mod create requires Minecraft 1.16.5 but found 47.2.0
+23:40:23   PASS  Found 455 mods, 3 failed to load
+23:40:23   PASS  Deleted 722 old log files from D:\Games\MultiMC\logs
+23:40:23   FAIL  expected: Missing dependency: net.minecraftforge.javafmlmod version 0.14.22 required by cloth-config
+23:40:23         got:      version 0.14.22 required by dlotnconty
+23:40:23   FAIL  expected: applied-energistics-2 0.14.22 is already installed in 1.19.2 Modded
+23:40:23         got:      app ioc energistics-2 0.14.22 is already installed in 1.19.2
+23:40:23   FAIL  expected: The Mod File D:\Games\MultiMC\instances\Server Backup 2026\.minecraft\mods\iris.jar has mods that were not found
+23:40:23         got:
+23:40:23   FAIL  expected: java.lang.NoClassDefFoundError: net.minecraftforge.fmlcore/carpet
+23:40:23         got:
+23:40:23   FAIL  expected: Unable to open D:\Games\MultiMC\libraries\net\minecraftforge\fmlcore\47.2.0\carpet-47.2.0.jar
+23:40:23         got:      Games Cltrarisiatinecrtiorglmcra
+23:40:23   PASS  Skipping sodium: incompatible with forge 3.1.8
+23:40:23   PASS  java.lang.NoClassDefFoundError: org.lwjgl.glfw/create
+23:40:23   FAIL  expected: Chunk loading took 70 ms in dimension minecraft:overworld
+23:40:23         got:      inecraftovemord
+23:40:23   PASS  Connection timed out while reading packet 27
+23:40:23   FAIL  expected: Error loading class net.fabricmc.loader.cloth-config in cloth-config-1.21.jar
+23:40:23         got:      othoanfiod pops net fabricmo.Joader.cloth-config in
+23:40:23   FAIL  expected: The Mod File D:\Games\MultiMC\instances\1.20.1 6June2026Wiped9Nov2026\.minecraft\mods\create.jar has mods that were not found
+23:40:23         got:
+23:40:23   PASS  Downloaded sodium-47.4.10.jar in 173 seconds
+23:40:23   PASS  Could not find com.electronwizard.config for jei, skipping
+23:40:23   FAIL  expected: Missing dependency: org.lwjgl.glfw version 47.4.10 required by biomesoplenty
+23:40:23         got:      oui bo oma 10th version 47.4.10
+23:40:23   PASS  terralith 1.21 is already installed in 1.16.5 Create
+23:40:23   FAIL  expected: Unable to open C:\Games\MultiMC\libraries\net\minecraftforge\javafmlmod\47.4.10\biomesoplenty-47.4.10.jar
+23:40:23         got:
+23:40:23   PASS  Texture pack reloaded with 582 resources
+23:40:23   FAIL  expected: applied-energistics-2 5.4.0 is already installed in 1.20.4 Fabric
+23:40:23         got:      appled-energistics-2 5.4.0 is already installed in 1.20.4
+23:40:23   FAIL  expected: Error loading class net.fabricmc.loader.create in create-1.20.4.jar
+23:40:23         got:      cor loading po net.fabricmc.loader.create in
+23:40:23   FAIL  expected: The Mod File C:\Games\MultiMC\instances\Server Backup 2026\.minecraft\mods\alexsmobs.jar has mods that were not found
+23:40:23         got:
+23:40:23   PASS  Connection timed out while reading packet 120
+23:40:23   FAIL  expected: Failed to load mod carpet 47.2.0: missing dependency com.electronwizard.config
+23:40:23         got:      railed to rawirard cont 47.2.0: missing dependency
+23:40:23   PASS  Texture pack reloaded with 408 resources
+23:40:23   FAIL  expected: Failed to load mod sodium 47.2.0: missing dependency net.fabricmc.loader
+23:40:23         got:      ralied to load mad sodium 47.2.0: missing dependency
+23:40:23   FAIL  expected: Chunk loading took 238 ms in dimension minecraft:overworld
+23:40:23         got:      rinecatiovomord
+23:40:23   FAIL  expected: Loading mod list from D:\Games\MultiMC\instances\1.20.1 6June2026Wiped9Nov2026\mods
+23:40:23         got:
+23:40:23   PASS  Saved world settings to disk successfully
+23:40:23   PASS  Mod modmenu requires Minecraft 5.4.0 but found 47.4.10
+23:40:23   FAIL  expected: Could not find com.electronwizard.config for supplementaries, skipping
+23:40:23         got:      enrioms nnd gh neo reontie for
+23:40:23   FAIL  expected: Unable to open C:\Games\MultiMC\libraries\com\google\guava\47.2.0\modmenu-47.2.0.jar
+23:40:23         got:      ames UHCI comgooglguavad? 2c
+23:40:23   FAIL  expected: Crash report saved to E:\Games\MultiMC\crash-reports\crash-2026-11-20.txt
+23:40:23         got:
+23:40:23   FAIL  expected: Chunk loading took 142 ms in dimension minecraft:overworld
+23:40:23         got:      rinecatiovomord
+23:40:23   FAIL  expected: Chunk loading took 20 ms in dimension minecraft:overworld
+23:40:23         got:      inecaftovemord
+23:40:23   PASS  Found 313 mods, 2 failed to load
+23:40:23 
+Results (exact matches on held-out lines):
+  arial: before 84/200 (CER 0.4256), after 102/200 (CER 0.4198)
+Model saved to: C:\Users\Nbvx Teo\Documents\_Programming\GitHub\TesseractOCRTrainer\data\runs\20261126-233316_minecraft\minecraft\model\minecraft.traineddata
+23:40:23 Log saved to: C:\Users\Nbvx Teo\Documents\_Programming\GitHub\TesseractOCRTrainer\data\logs\20261126-233316_minecraft.log

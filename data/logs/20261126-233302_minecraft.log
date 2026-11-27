@@ -1,0 +1,48 @@
+23:33:02 Run started: 20261126-233302_minecraft
+23:33:02 Model: minecraft
+23:33:02 Iterations: 10, font size: 32px
+23:33:02 Corpus: 1000 lines, generated automatically (copy in logs: 20261126-233302_minecraft_corpus.txt)
+23:33:02 Font: C:\WINDOWS\Fonts\arial.ttf (weight 1)
+23:33:02 Starting the trainer in WSL. The first output can take a little while.
+23:33:02 WSL started (process 9244), waiting for the trainer.
+23:33:02 Trainer started: minecraft, 10 iterations, font size 32px
+23:33:03 $ combine_tessdata -e /mnt/c/Users/Nbvx Teo/Documents/_Programming/GitHub/TesseractOCRTrainer/data/runs/20261126-233302_minecraft/minecraft/base/eng.traineddata /mnt/c/Users/Nbvx Teo/Documents/_Programming/GitHub/TesseractOCRTrainer/data/runs/20261126-233302_minecraft/minecraft/base/eng.lstm
+23:33:03 Extracting tessdata components from /mnt/c/Users/Nbvx Teo/Documents/_Programming/GitHub/TesseractOCRTrainer/data/runs/20261126-233302_minecraft/minecraft/base/eng.traineddata
+23:33:03 Wrote /mnt/c/Users/Nbvx Teo/Documents/_Programming/GitHub/TesseractOCRTrainer/data/runs/20261126-233302_minecraft/minecraft/base/eng.lstm
+23:33:03 Version:4.00.00alpha:eng:synth20170629:[1,36,0,1Ct3,3,16Mp3,3Lfys64Lfx96Lrx96Lfx512O1c1]
+23:33:03 17:lstm:size=11689099, offset=192
+23:33:03 18:lstm-punc-dawg:size=4322, offset=11689291
+23:33:03 19:lstm-word-dawg:size=3694794, offset=11693613
+23:33:03 20:lstm-number-dawg:size=4738, offset=15388407
+23:33:03 21:lstm-unicharset:size=6360, offset=15393145
+23:33:03 22:lstm-recoder:size=1012, offset=15399505
+23:33:03 23:version:size=80, offset=15400517
+23:33:03 Corpus: 800 training lines, 200 held-out lines
+23:33:03 Rendering 200 held-out lines in 0_arial
+23:33:03   rendered 1/200 lines in 0_arial
+23:33:03   rendered 2/200 lines in 0_arial
+23:33:04   rendered 3/200 lines in 0_arial
+23:33:04   rendered 4/200 lines in 0_arial
+23:33:04   rendered 5/200 lines in 0_arial
+23:33:04   rendered 6/200 lines in 0_arial
+23:33:05   rendered 7/200 lines in 0_arial
+23:33:05   rendered 8/200 lines in 0_arial
+23:33:05   rendered 9/200 lines in 0_arial
+23:33:05   rendered 10/200 lines in 0_arial
+23:33:06   rendered 11/200 lines in 0_arial
+23:33:06   rendered 12/200 lines in 0_arial
+23:33:06   rendered 13/200 lines in 0_arial
+23:33:06   rendered 14/200 lines in 0_arial
+23:33:07   rendered 15/200 lines in 0_arial
+23:33:07   rendered 16/200 lines in 0_arial
+23:33:07   rendered 17/200 lines in 0_arial
+23:33:07   rendered 18/200 lines in 0_arial
+23:33:08   rendered 19/200 lines in 0_arial
+23:33:08   rendered 20/200 lines in 0_arial
+23:33:08   rendered 21/200 lines in 0_arial
+23:33:08   rendered 22/200 lines in 0_arial
+23:33:09   rendered 23/200 lines in 0_arial
+23:33:09   rendered 24/200 lines in 0_arial
+23:33:09   rendered 25/200 lines in 0_arial
+23:33:09   rendered 26/200 lines in 0_arial
+23:33:10 interrupted by a user
