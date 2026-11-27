@@ -34,7 +34,7 @@ try:
 except ImportError:  # not on Windows, so the theme cannot be read
     winreg = None
 
-from PySide6.QtCore import QEasingCurve, QPropertyAnimation, QThread, QTimer, Qt, Signal
+from PySide6.QtCore import QThread, QTimer, Qt, Signal
 from PySide6.QtNetwork import QLocalServer, QLocalSocket
 from PySide6.QtWidgets import (
     QAbstractItemView, QApplication, QCheckBox, QFileDialog, QFormLayout, QFrame,
@@ -322,7 +322,6 @@ class MainWindow(QMainWindow):
         self.model_dir = None
         self.last_output = 0.0
         self.run_started = 0.0
-        self.animations = {}
 
         self.heartbeat = QTimer(self)
         self.heartbeat.timeout.connect(self.heartbeat_tick)
@@ -911,24 +910,10 @@ class MainWindow(QMainWindow):
         label.setText(text)
 
     def animate_bar(self, bar, fraction):
-        """Move a bar in small steps, so it never jumps. The time grows with the distance."""
-        target = int(round(BAR_STEPS * min(max(fraction, 0.0), 1.0)))
-        animation = self.animations.get(bar)
-        if animation is None:
-            animation = QPropertyAnimation(bar, b"value", self)
-            animation.setEasingCurve(QEasingCurve.Type.Linear)
-            self.animations[bar] = animation
-        animation.stop()
-        distance = abs(target - bar.value())
-        animation.setDuration(max(80, min(1500, distance * 12)))
-        animation.setStartValue(bar.value())
-        animation.setEndValue(target)
-        animation.start()
+        """Set a bar to the new value directly. The bar jumps to each reported value."""
+        bar.setValue(int(round(BAR_STEPS * min(max(fraction, 0.0), 1.0))))
 
     def reset_bar(self, bar):
-        animation = self.animations.get(bar)
-        if animation is not None:
-            animation.stop()
         bar.setValue(0)
 
     # ----- window events -----
