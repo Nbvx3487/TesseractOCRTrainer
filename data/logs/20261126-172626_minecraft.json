@@ -1,0 +1,566 @@
+{
+  "model": "/mnt/c/Users/Nbvx Teo/Documents/_Programming/GitHub/TesseractOCRTrainer/data/runs/minecraft/model/minecraft.traineddata",
+  "name": "minecraft",
+  "scores": {
+    "0_arial": {
+      "baseline": {
+        "cer": 0.3167,
+        "exact": 19,
+        "misses": [
+          {
+            "expected": "java.lang.NoClassDefFoundError: com.google.guava/oculus",
+            "got": "Java'ang. NoClassDelF ound ror com.google.guava/"
+          },
+          {
+            "expected": "The Mod File D:\\Games\\MultiMC\\instances\\1.20.4 Fabric\\.minecraft\\mods\\journeymap.jar has mods that were not found",
+            "got": ""
+          },
+          {
+            "expected": "Failed to load mod carpet 2.0.0-beta.4: missing dependency net.minecraftforge.fmlcore",
+            "got": "dependency netminecratforgemicore"
+          },
+          {
+            "expected": "Failed to load mod terralith 47.4.10: missing dependency com.electronwizard.config",
+            "got": "ene honwiverd contig 47.4.10: missing dependency"
+          },
+          {
+            "expected": "glassseam-fix 47.4.10 is already installed in Server Backup 2026",
+            "got": "Backup 2026 47.4.10 is already installed in Server"
+          }
+        ],
+        "total": 40
+      },
+      "trained": {
+        "cer": 0.3268,
+        "exact": 23,
+        "misses": [
+          {
+            "expected": "java.lang.NoClassDefFoundError: com.google.guava/oculus",
+            "got": "java.lang.NoClassbefFoundError com.google.guava/"
+          },
+          {
+            "expected": "The Mod File D:\\Games\\MultiMC\\instances\\1.20.4 Fabric\\.minecraft\\mods\\journeymap.jar has mods that were not found",
+            "got": ""
+          },
+          {
+            "expected": "Failed to load mod carpet 2.0.0-beta.4: missing dependency net.minecraftforge.fmlcore",
+            "got": "SGpondency netminecratiorsetmicore"
+          },
+          {
+            "expected": "Failed to load mod terralith 47.4.10: missing dependency com.electronwizard.config",
+            "got": "rated 0 ard cote 47.4.10: missing dependency"
+          },
+          {
+            "expected": "glassseam-fix 47.4.10 is already installed in Server Backup 2026",
+            "got": "Sey 47.4.10 is already installed in Server"
+          }
+        ],
+        "total": 40
+      }
+    },
+    "1_times": {
+      "baseline": {
+        "cer": 0.2357,
+        "exact": 27,
+        "misses": [
+          {
+            "expected": "The Mod File D:\\Games\\MultiMC\\instances\\1.20.4 Fabric\\.minecraft\\mods\\journeymap.jar has mods that were not found",
+            "got": "bri minerfimods ous ar has vmod that were not"
+          },
+          {
+            "expected": "Failed to load mod carpet 2.0.0-beta.4: missing dependency net.minecraftforge.fmlcore",
+            "got": "; ae nectattforse cue! aan missing dependency"
+          },
+          {
+            "expected": "Failed to load mod terralith 47.4.10: missing dependency com.electronwizard.config",
+            "got": "comelectonwizardeonfg."
+          },
+          {
+            "expected": "glassseam-fix 47.4.10 is already installed in Server Backup 2026",
+            "got": "umN 47.4.10 is already installed in Server Backup"
+          },
+          {
+            "expected": "Launching 1.20.1 6June2026Wiped9Nov2026 with 4096 MB of memory",
+            "got": "of memos 1.20.1 6June2026Wiped9Nov2026 with 4096 MB"
+          }
+        ],
+        "total": 40
+      },
+      "trained": {
+        "cer": 0.2158,
+        "exact": 27,
+        "misses": [
+          {
+            "expected": "The Mod File D:\\Games\\MultiMC\\instances\\1.20.4 Fabric\\.minecraft\\mods\\journeymap.jar has mods that were not found",
+            "got": "Fei miner mosey rh ons iat were not"
+          },
+          {
+            "expected": "Failed to load mod carpet 2.0.0-beta.4: missing dependency net.minecraftforge.fmlcore",
+            "got": "j ailed ifs carpet 20.0-bead; missing dependency"
+          },
+          {
+            "expected": "Failed to load mod terralith 47.4.10: missing dependency com.electronwizard.config",
+            "got": "com locromwisardeontiy |e dependeney"
+          },
+          {
+            "expected": "glassseam-fix 47.4.10 is already installed in Server Backup 2026",
+            "got": "glassseam-fix 47.4.10 is already installed in Server Backup"
+          },
+          {
+            "expected": "Launching 1.20.1 6June2026Wiped9Nov2026 with 4096 MB of memory",
+            "got": "ee 1.20.1 6June2026Wiped9Nov2026 with 4096 MB"
+          }
+        ],
+        "total": 40
+      }
+    },
+    "2_cour": {
+      "baseline": {
+        "cer": 0.6223,
+        "exact": 6,
+        "misses": [
+          {
+            "expected": "java.lang.NoClassDefFoundError: com.google.guava/oculus",
+            "got": "com.google.quava/oculus"
+          },
+          {
+            "expected": "The Mod File D:\\Games\\MultiMC\\instances\\1.20.4 Fabric\\.minecraft\\mods\\journeymap.jar has mods that were not found",
+            "got": ""
+          },
+          {
+            "expected": "Launching 1.19.2 Modded with 2048 MB of memory",
+            "got": "nonce 1.19.2 Modded with 2048 MB of"
+          },
+          {
+            "expected": "Failed to load mod carpet 2.0.0-beta.4: missing dependency net.minecraftforge.fmlcore",
+            "got": ""
+          },
+          {
+            "expected": "Retrying download of glassseam-fix: HTTP status 503",
+            "got": "Seed commons of glassseam-fix: HTTP"
+          }
+        ],
+        "total": 40
+      },
+      "trained": {
+        "cer": 0.6055,
+        "exact": 6,
+        "misses": [
+          {
+            "expected": "java.lang.NoClassDefFoundError: com.google.guava/oculus",
+            "got": "com sosoic.quarasosulus"
+          },
+          {
+            "expected": "The Mod File D:\\Games\\MultiMC\\instances\\1.20.4 Fabric\\.minecraft\\mods\\journeymap.jar has mods that were not found",
+            "got": ""
+          },
+          {
+            "expected": "Launching 1.19.2 Modded with 2048 MB of memory",
+            "got": "Sune 1.19.2 Modded with 2048 MB of"
+          },
+          {
+            "expected": "Failed to load mod carpet 2.0.0-beta.4: missing dependency net.minecraftforge.fmlcore",
+            "got": ""
+          },
+          {
+            "expected": "Retrying download of glassseam-fix: HTTP status 503",
+            "got": "Retrying downioad of glassseam-fix: HTTP"
+          }
+        ],
+        "total": 40
+      }
+    },
+    "3_verdana": {
+      "baseline": {
+        "cer": 0.4498,
+        "exact": 12,
+        "misses": [
+          {
+            "expected": "java.lang.NoClassDefFoundError: com.google.guava/oculus",
+            "got": "com google.guava/oculus"
+          },
+          {
+            "expected": "The Mod File D:\\Games\\MultiMC\\instances\\1.20.4 Fabric\\.minecraft\\mods\\journeymap.jar has mods that were not found",
+            "got": ""
+          },
+          {
+            "expected": "Launching 1.19.2 Modded with 2048 MB of memory",
+            "got": "nomonr 1.19.2 Modded with 2048 MB of"
+          },
+          {
+            "expected": "Failed to load mod carpet 2.0.0-beta.4: missing dependency net.minecraftforge.fmlcore",
+            "got": "dependency netiminecraftforgefmlcore"
+          },
+          {
+            "expected": "Retrying download of glassseam-fix: HTTP status 503",
+            "got": "ne ying download of glassseam-fix: HTTP status"
+          }
+        ],
+        "total": 40
+      },
+      "trained": {
+        "cer": 0.4737,
+        "exact": 13,
+        "misses": [
+          {
+            "expected": "java.lang.NoClassDefFoundError: com.google.guava/oculus",
+            "got": "tomgoosle.guavarocus |"
+          },
+          {
+            "expected": "The Mod File D:\\Games\\MultiMC\\instances\\1.20.4 Fabric\\.minecraft\\mods\\journeymap.jar has mods that were not found",
+            "got": ""
+          },
+          {
+            "expected": "Launching 1.19.2 Modded with 2048 MB of memory",
+            "got": "meng 1.19.2 Modded with 2048 MB of"
+          },
+          {
+            "expected": "Failed to load mod carpet 2.0.0-beta.4: missing dependency net.minecraftforge.fmlcore",
+            "got": "dependency net minecrafiorsefmicore"
+          },
+          {
+            "expected": "Retrying download of glassseam-fix: HTTP status 503",
+            "got": "Roving download of glassseam-fix: HTTP status"
+          }
+        ],
+        "total": 40
+      }
+    },
+    "4_georgia": {
+      "baseline": {
+        "cer": 0.3516,
+        "exact": 21,
+        "misses": [
+          {
+            "expected": "java.lang.NoClassDefFoundError: com.google.guava/oculus",
+            "got": "Javas ang. NoClassDetk oundError: com.google.guava/"
+          },
+          {
+            "expected": "The Mod File D:\\Games\\MultiMC\\instances\\1.20.4 Fabric\\.minecraft\\mods\\journeymap.jar has mods that were not found",
+            "got": ""
+          },
+          {
+            "expected": "Failed to load mod carpet 2.0.0-beta.4: missing dependency net.minecraftforge.fmlcore",
+            "got": "dependency net minecrafforge\u2018nleore"
+          },
+          {
+            "expected": "Failed to load mod terralith 47.4.10: missing dependency com.electronwizard.config",
+            "got": "comeleetronwizardconfig"
+          },
+          {
+            "expected": "glassseam-fix 47.4.10 is already installed in Server Backup 2026",
+            "got": "Packupoga6 47.4.10 is already installed in Server"
+          }
+        ],
+        "total": 40
+      },
+      "trained": {
+        "cer": 0.3538,
+        "exact": 23,
+        "misses": [
+          {
+            "expected": "java.lang.NoClassDefFoundError: com.google.guava/oculus",
+            "got": "java. ang NoClassDef oundError: com.google.guava/"
+          },
+          {
+            "expected": "The Mod File D:\\Games\\MultiMC\\instances\\1.20.4 Fabric\\.minecraft\\mods\\journeymap.jar has mods that were not found",
+            "got": ""
+          },
+          {
+            "expected": "Failed to load mod carpet 2.0.0-beta.4: missing dependency net.minecraftforge.fmlcore",
+            "got": "dependency netminecraftorsetmlene"
+          },
+          {
+            "expected": "Failed to load mod terralith 47.4.10: missing dependency com.electronwizard.config",
+            "got": "com clectronwisardeonfig |e dependeney"
+          },
+          {
+            "expected": "glassseam-fix 47.4.10 is already installed in Server Backup 2026",
+            "got": "A 47.4.10 is already installed in Server"
+          }
+        ],
+        "total": 40
+      }
+    },
+    "5_tahoma": {
+      "baseline": {
+        "cer": 0.3038,
+        "exact": 23,
+        "misses": [
+          {
+            "expected": "java.lang.NoClassDefFoundError: com.google.guava/oculus",
+            "got": "Java. ang, Noclassperround ror com.google.guava/"
+          },
+          {
+            "expected": "The Mod File D:\\Games\\MultiMC\\instances\\1.20.4 Fabric\\.minecraft\\mods\\journeymap.jar has mods that were not found",
+            "got": ""
+          },
+          {
+            "expected": "Failed to load mod carpet 2.0.0-beta.4: missing dependency net.minecraftforge.fmlcore",
+            "got": "dependency netiminecraftforge fmicore"
+          },
+          {
+            "expected": "Failed to load mod terralith 47.4.10: missing dependency com.electronwizard.config",
+            "got": "Failed \u2018 honwieerdeoute 47.4.10: missing dependency"
+          },
+          {
+            "expected": "glassseam-fix 47.4.10 is already installed in Server Backup 2026",
+            "got": "Backup 2026 47.4.10 is already installed in Server"
+          }
+        ],
+        "total": 40
+      },
+      "trained": {
+        "cer": 0.3171,
+        "exact": 23,
+        "misses": [
+          {
+            "expected": "java.lang.NoClassDefFoundError: com.google.guava/oculus",
+            "got": "java, ang:NoClassbefrounderror com.google.guava/"
+          },
+          {
+            "expected": "The Mod File D:\\Games\\MultiMC\\instances\\1.20.4 Fabric\\.minecraft\\mods\\journeymap.jar has mods that were not found",
+            "got": ""
+          },
+          {
+            "expected": "Failed to load mod carpet 2.0.0-beta.4: missing dependency net.minecraftforge.fmlcore",
+            "got": "depondancy net minecrttorse micore"
+          },
+          {
+            "expected": "Failed to load mod terralith 47.4.10: missing dependency com.electronwizard.config",
+            "got": "Failed \u00a9 eran 47.4.10: missing dependency"
+          },
+          {
+            "expected": "glassseam-fix 47.4.10 is already installed in Server Backup 2026",
+            "got": "Ee 47.4.10 is already installed in Server"
+          }
+        ],
+        "total": 40
+      }
+    },
+    "6_calibri": {
+      "baseline": {
+        "cer": 0.2477,
+        "exact": 27,
+        "misses": [
+          {
+            "expected": "The Mod File D:\\Games\\MultiMC\\instances\\1.20.4 Fabric\\.minecraft\\mods\\journeymap.jar has mods that were not found",
+            "got": ""
+          },
+          {
+            "expected": "Failed to load mod carpet 2.0.0-beta.4: missing dependency net.minecraftforge.fmlcore",
+            "got": "\u201cet minecrftforsefuiere missing dependency"
+          },
+          {
+            "expected": "Failed to load mod terralith 47.4.10: missing dependency com.electronwizard.config",
+            "got": "ran eloctonwionrd cacti 47.4.10: missing dependency"
+          },
+          {
+            "expected": "glassseam-fix 47.4.10 is already installed in Server Backup 2026",
+            "got": "Blassseam-I% 47.4.10 is already installed in Server Backup"
+          },
+          {
+            "expected": "Launching 1.20.1 6June2026Wiped9Nov2026 with 4096 MB of memory",
+            "got": "memory. 1.20.1 6June2026Wiped9Nov2026 with 4096 MB of"
+          }
+        ],
+        "total": 40
+      },
+      "trained": {
+        "cer": 0.2331,
+        "exact": 26,
+        "misses": [
+          {
+            "expected": "The Mod File D:\\Games\\MultiMC\\instances\\1.20.4 Fabric\\.minecraft\\mods\\journeymap.jar has mods that were not found",
+            "got": ""
+          },
+          {
+            "expected": "Failed to load mod carpet 2.0.0-beta.4: missing dependency net.minecraftforge.fmlcore",
+            "got": "i food carbo: 20.0-beta 4 missing dependency"
+          },
+          {
+            "expected": "Failed to load mod terralith 47.4.10: missing dependency com.electronwizard.config",
+            "got": "EO oat 47.4.10: missing dependency"
+          },
+          {
+            "expected": "glassseam-fix 47.4.10 is already installed in Server Backup 2026",
+            "got": "glassseam-fix 47.4.10 is already installed in Server Backup"
+          },
+          {
+            "expected": "Launching 1.20.1 6June2026Wiped9Nov2026 with 4096 MB of memory",
+            "got": "mpl 1.20.1 6June2026Wiped9Nov2026 with 4096 MB of"
+          }
+        ],
+        "total": 40
+      }
+    },
+    "7_consola": {
+      "baseline": {
+        "cer": 0.4693,
+        "exact": 14,
+        "misses": [
+          {
+            "expected": "java.lang.NoClassDefFoundError: com.google.guava/oculus",
+            "got": "com google-guava/oculus"
+          },
+          {
+            "expected": "The Mod File D:\\Games\\MultiMC\\instances\\1.20.4 Fabric\\.minecraft\\mods\\journeymap.jar has mods that were not found",
+            "got": ""
+          },
+          {
+            "expected": "Failed to load mod carpet 2.0.0-beta.4: missing dependency net.minecraftforge.fmlcore",
+            "got": "rissing deoendency net\u2019 minecrafttores.tmlcore"
+          },
+          {
+            "expected": "Retrying download of glassseam-fix: HTTP status 503",
+            "got": "pevey ang download of glassseam-fix: HTTP"
+          },
+          {
+            "expected": "Deleted 795 old log files from D:\\Games\\MultiMC\\logs",
+            "got": "\\Games\\MultiMc\\logs"
+          }
+        ],
+        "total": 40
+      },
+      "trained": {
+        "cer": 0.4896,
+        "exact": 14,
+        "misses": [
+          {
+            "expected": "java.lang.NoClassDefFoundError: com.google.guava/oculus",
+            "got": "on tosis. guavarocutus"
+          },
+          {
+            "expected": "The Mod File D:\\Games\\MultiMC\\instances\\1.20.4 Fabric\\.minecraft\\mods\\journeymap.jar has mods that were not found",
+            "got": ""
+          },
+          {
+            "expected": "Failed to load mod carpet 2.0.0-beta.4: missing dependency net.minecraftforge.fmlcore",
+            "got": "ing depondency Pe necoattoroe tnlcore"
+          },
+          {
+            "expected": "Retrying download of glassseam-fix: HTTP status 503",
+            "got": "Retrying download of glassseam-fix: HTTP"
+          },
+          {
+            "expected": "Deleted 795 old log files from D:\\Games\\MultiMC\\logs",
+            "got": "Games\\mtinc\\loge oO]"
+          }
+        ],
+        "total": 40
+      }
+    },
+    "8_segoeui": {
+      "baseline": {
+        "cer": 0.3193,
+        "exact": 22,
+        "misses": [
+          {
+            "expected": "java.lang.NoClassDefFoundError: com.google.guava/oculus",
+            "got": "Jay anang. NoclassDetFoun Error: com.google.guava/"
+          },
+          {
+            "expected": "The Mod File D:\\Games\\MultiMC\\instances\\1.20.4 Fabric\\.minecraft\\mods\\journeymap.jar has mods that were not found",
+            "got": ""
+          },
+          {
+            "expected": "Failed to load mod carpet 2.0.0-beta.4: missing dependency net.minecraftforge.fmlcore",
+            "got": "dependency netminecraftforgefmlcore"
+          },
+          {
+            "expected": "Failed to load mod terralith 47.4.10: missing dependency com.electronwizard.config",
+            "got": "vase \u00b0 honwiendeantiq 47.4.10: missing dependency"
+          },
+          {
+            "expected": "glassseam-fix 47.4.10 is already installed in Server Backup 2026",
+            "got": "a ossseame 47.4.10 is already installed in Server Backup"
+          }
+        ],
+        "total": 40
+      },
+      "trained": {
+        "cer": 0.3348,
+        "exact": 22,
+        "misses": [
+          {
+            "expected": "java.lang.NoClassDefFoundError: com.google.guava/oculus",
+            "got": "Java:ang.NoClassDeffound Error: com.google.guava/"
+          },
+          {
+            "expected": "The Mod File D:\\Games\\MultiMC\\instances\\1.20.4 Fabric\\.minecraft\\mods\\journeymap.jar has mods that were not found",
+            "got": ""
+          },
+          {
+            "expected": "Failed to load mod carpet 2.0.0-beta.4: missing dependency net.minecraftforge.fmlcore",
+            "got": "sepondeney netminecattorgumlcore"
+          },
+          {
+            "expected": "Failed to load mod terralith 47.4.10: missing dependency com.electronwizard.config",
+            "got": "raed hy | 47.4.10: missing dependency"
+          },
+          {
+            "expected": "glassseam-fix 47.4.10 is already installed in Server Backup 2026",
+            "got": "g ssseam-ti 47.4.10 is already installed in Server Backup"
+          }
+        ],
+        "total": 40
+      }
+    },
+    "9_Monocraft": {
+      "baseline": {
+        "cer": 0.6816,
+        "exact": 0,
+        "misses": [
+          {
+            "expected": "Found 194 mods, 2 failed to load",
+            "got": "Found 194 mods. 2 failed to Load"
+          },
+          {
+            "expected": "java.lang.NoClassDefFoundError: com.google.guava/oculus",
+            "got": "Son google. guavavoculus"
+          },
+          {
+            "expected": "The Mod File D:\\Games\\MultiMC\\instances\\1.20.4 Fabric\\.minecraft\\mods\\journeymap.jar has mods that were not found",
+            "got": ""
+          },
+          {
+            "expected": "Launching 1.19.2 Modded with 2048 MB of memory",
+            "got": "SP momar 1.19.2 Modded with 2648 MB"
+          },
+          {
+            "expected": "Failed to load mod carpet 2.0.0-beta.4: missing dependency net.minecraftforge.fmlcore",
+            "got": ""
+          }
+        ],
+        "total": 40
+      },
+      "trained": {
+        "cer": 0.6727,
+        "exact": 0,
+        "misses": [
+          {
+            "expected": "Found 194 mods, 2 failed to load",
+            "got": "Found 194 mods. 2 failed to Load"
+          },
+          {
+            "expected": "java.lang.NoClassDefFoundError: com.google.guava/oculus",
+            "got": "Jon aooste. ausvarosutus To"
+          },
+          {
+            "expected": "The Mod File D:\\Games\\MultiMC\\instances\\1.20.4 Fabric\\.minecraft\\mods\\journeymap.jar has mods that were not found",
+            "got": ""
+          },
+          {
+            "expected": "Launching 1.19.2 Modded with 2048 MB of memory",
+            "got": "Sgunehing 1.19.2 Modded with 2843 HB"
+          },
+          {
+            "expected": "Failed to load mod carpet 2.0.0-beta.4: missing dependency net.minecraftforge.fmlcore",
+            "got": ""
+          }
+        ],
+        "total": 40
+      }
+    }
+  }
+}
