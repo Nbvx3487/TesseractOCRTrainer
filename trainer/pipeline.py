@@ -19,6 +19,7 @@ import os
 import re
 import shutil
 import subprocess
+import time
 from pathlib import Path
 
 from .corpus import split_corpus
@@ -149,6 +150,10 @@ def train_font(name, fonts, corpus, data_root, log, font_size=32, iterations=400
     prepared_units = font_count * len(train_lines)
     total = font_count * len(control_lines) * 2 + prepared_units + iterations
     done = 0
+    # Time spent on each step, saved with the result so the next estimate can use it.
+    timings = {"render_seconds": 0.0, "rendered_images": 0, "prepare_seconds": 0.0,
+               "prepared_images": 0, "train_seconds": 0.0, "iterations": 0,
+               "score_seconds": 0.0, "scored_images": 0}
 
     # Held-out check before training: the untrained English model, font by font.
     control_images = {}
@@ -156,14 +161,20 @@ def train_font(name, fonts, corpus, data_root, log, font_size=32, iterations=400
     for index, (font_path, _) in enumerate(fonts):
         label = font_label(index, font_path)
         log(f"Rendering {len(control_lines)} held-out lines in {label}")
+        render_start = time.monotonic()
         images = render_lines(control_lines, font_path, work / "control" / label,
                               font_size, prefix="ctrl", log=log, label=label,
                               progress=lambda cur, cnt: report(log, "render", label, cur, cnt, 0, 1))
+        timings["render_seconds"] += time.monotonic() - render_start
+        timings["rendered_images"] += len(images)
         log(f"Rendered {len(images)} held-out images in {label}")
         control_images[label] = images
         report(log, "score", label, 0, len(images), done, total)
+        score_start = time.monotonic()
         baseline_scores[label] = score_and_log(label, images, "eng", system_tessdata,
                                                "before training", log)
+        timings["score_seconds"] += time.monotonic() - score_start
+        timings["scored_images"] += len(images)
         done += len(images)
         report(log, "score", label, len(images), len(images), done, total)
 
@@ -173,9 +184,13 @@ def train_font(name, fonts, corpus, data_root, log, font_size=32, iterations=400
         label = font_label(index, font_path)
         train_dir = work / "train" / label
         log(f"Rendering {len(train_lines)} training lines in {label} (weight {weight})")
+        render_start = time.monotonic()
         tifs = render_lines(train_lines, font_path, train_dir, font_size, prefix="train",
                             log=log, label=label,
                             progress=lambda cur, cnt: report(log, "render", label, cur, cnt, 0, 1))
+        timings["render_seconds"] += time.monotonic() - render_start
+        timings["rendered_images"] += len(tifs)
+        prepare_start = time.monotonic()
         log(f"Rendered {len(tifs)} training images in {label}")
         for number, tif in enumerate(tifs, start=1):
             run(["tesseract", str(tif), str(tif.with_suffix("")),
@@ -185,6 +200,8 @@ def train_font(name, fonts, corpus, data_root, log, font_size=32, iterations=400
             done += 1
             report(log, "prepare", label, number, len(tifs), done, total)
             log(f"  prepared {number}/{len(tifs)} lines in {label}: {tif.name}")
+        timings["prepare_seconds"] += time.monotonic() - prepare_start
+        timings["prepared_images"] += len(tifs)
         log(f"Prepared {len(tifs)} lines in {label}")
 
     list_file = work / "train_list.txt"
@@ -214,6 +231,7 @@ def train_font(name, fonts, corpus, data_root, log, font_size=32, iterations=400
 
     def run_check(iteration):
         """Turn the checkpoint into a model and score it on the held-out lines."""
+        check_start = time.monotonic()
         check_dir = work / "checks" / f"iteration_{iteration:04d}"
         check_dir.mkdir(parents=True, exist_ok=True)
         run(["lstmtraining", "--stop_training",
@@ -228,28 +246,34 @@ def train_font(name, fonts, corpus, data_root, log, font_size=32, iterations=400
                                      "cer": score["cer"]}
             log(f"Check at iteration {iteration}: {label} {score['exact']}/{score['total']} "
                 f"lines pass, CER {score['cer']}")
+        timings["score_seconds"] += time.monotonic() - check_start
+        timings["scored_images"] += sum(len(images) for images in control_images.values())
         return entry
 
     checks = []
     if check_every <= 0:
+        train_start = time.monotonic()
         run(["lstmtraining",
              "--model_output", str(checkpoints / name),
              "--continue_from", str(base_dir / "eng.lstm"),
              "--traineddata", str(base_dir / "eng.traineddata"),
              "--train_listfile", str(list_file),
              "--max_iterations", str(iterations)], log, on_line=on_training_line)
+        timings["train_seconds"] += time.monotonic() - train_start
     else:
         source = base_dir / "eng.lstm"
         target = 0
         while target < iterations and not state["finished"]:
             target = min(target + check_every, iterations)
             log(f"Training to iteration {target} of {iterations}")
+            chunk_start = time.monotonic()
             run(["lstmtraining",
                  "--model_output", str(checkpoints / name),
                  "--continue_from", str(source),
                  "--traineddata", str(base_dir / "eng.traineddata"),
                  "--train_listfile", str(list_file),
                  "--max_iterations", str(target)], log, on_line=on_chunk_line)
+            timings["train_seconds"] += time.monotonic() - chunk_start
             source = checkpoints / f"{name}_checkpoint"
             checks.append(run_check(state["last"] or target))
             (work / "metrics.json").write_text(json.dumps(checks, indent=2), encoding="utf-8")
@@ -264,12 +288,19 @@ def train_font(name, fonts, corpus, data_root, log, font_size=32, iterations=400
 
     # Held-out check after training, with the same lines as before.
     results = {"name": name, "model": str(output_dir / f"{name}.traineddata"), "scores": {},
-               "checks": checks}
+               "checks": checks,
+               "timings": dict(timings, iterations=iterations, fonts=font_count,
+                               lines=len(train_lines) + len(control_lines),
+                               train_lines=len(train_lines), control_lines=len(control_lines),
+                               check_every=check_every, checks=len(checks))}
     for index, (font_path, _) in enumerate(fonts):
         label = font_label(index, font_path)
         images = control_images[label]
         report(log, "score", label, 0, len(images), done, total)
+        score_start = time.monotonic()
         trained = score_and_log(label, images, name, output_dir, "after training", log)
+        timings["score_seconds"] += time.monotonic() - score_start
+        timings["scored_images"] += len(images)
         done += len(images)
         report(log, "score", label, len(images), len(images), done, total)
         results["scores"][label] = {"baseline": baseline_scores[label], "trained": trained}

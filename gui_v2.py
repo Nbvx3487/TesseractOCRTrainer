@@ -478,6 +478,33 @@ def percent(score):
     return 100.0 * score["exact"] / score["total"] if score["total"] else 0.0
 
 
+def load_timing_runs():
+    """The timings saved with each finished run (runs from before timings were saved are skipped)."""
+    runs = []
+    for stamp in list_result_runs():
+        try:
+            timings = json.loads((LOG_DIR / f"{stamp}.json").read_text(encoding="utf-8")).get("timings")
+        except (OSError, ValueError):
+            continue
+        if timings:
+            runs.append(timings)
+    return runs
+
+
+def estimate_parts(timings, fonts, lines, train, control, iterations, checks):
+    """Seconds for each step of a new run, from the speed of one earlier run."""
+    render_rate = timings["render_seconds"] / max(timings["rendered_images"], 1)
+    prepare_rate = timings["prepare_seconds"] / max(timings["prepared_images"], 1)
+    train_rate = timings["train_seconds"] / max(timings["iterations"], 1)
+    score_rate = timings["score_seconds"] / max(timings["scored_images"], 1)
+    return {
+        "render": fonts * lines * render_rate,
+        "prepare": fonts * train * prepare_rate,
+        "train": iterations * train_rate,
+        "scoring": fonts * control * (2 + checks) * score_rate,
+    }
+
+
 def format_time(seconds):
     if seconds is None:
         return "estimating..."
@@ -578,6 +605,7 @@ class MainWindow(QMainWindow):
         self.iterations = QSpinBox()
         self.iterations.setRange(1, 5000)
         self.iterations.setValue(DEFAULT_ITERATIONS)
+        self.iterations.valueChanged.connect(lambda _value: self.update_prestart_estimate())
         self.font_size = QSpinBox()
         self.font_size.setRange(16, 96)
         self.font_size.setValue(DEFAULT_FONT_SIZE)
@@ -843,6 +871,44 @@ class MainWindow(QMainWindow):
             notes.append("No training error lines were found in this run's log.")
         self.metrics_note.setText(" ".join(notes))
 
+    def update_prestart_estimate(self):
+        """Before a run: the estimate from earlier runs, for the settings on this page."""
+        if self.running:
+            return
+        runs = load_timing_runs()
+        lines = self.generated_count.value() if self.auto_corpus.isChecked() else len(self.custom_lines())
+        if not self.fonts or not runs or lines < MIN_LINES:
+            self.eta_total.setText("No earlier run to learn from yet. Finish one run and the "
+                                   "estimate will appear here.")
+            for label in (self.eta_render, self.eta_prepare, self.eta_train):
+                label.setText("")
+            return
+        control = max(round(0.2 * lines), 1)
+        train = lines - control
+        iterations = self.iterations.value()
+        checks = iterations // CHECK_EVERY if self.series_mode.isChecked() else 0
+        fonts = len(self.fonts)
+        per_run = [estimate_parts(t, fonts, lines, train, control, iterations, checks) for t in runs]
+        totals = [sum(parts.values()) for parts in per_run]
+        if len(totals) == 1:
+            low, high = totals[0] * 0.85, totals[0] * 1.15
+        else:
+            low, high = min(totals), max(totals)
+
+        def mean(key):
+            return sum(parts[key] for parts in per_run) / len(per_run)
+
+        count = len(runs)
+        self.eta_total.setText(
+            f"Before you start: about {format_time(low)} to {format_time(high)}, "
+            f"from {count} earlier run{'s' if count > 1 else ''}.")
+        self.eta_render.setText(f"Rendering lines: about {format_time(mean('render'))}")
+        self.eta_prepare.setText(f"Preparing lines: about {format_time(mean('prepare'))}")
+        self.eta_train.setText(
+            f"Training ({iterations} iterations): about {format_time(mean('train'))}. "
+            f"Scoring the held-out lines: about {format_time(mean('scoring'))}"
+            f"{' (including ' + str(checks) + ' checks)' if checks else ''}.")
+
     def build_logs_page(self):
         page = QWidget()
         layout = QVBoxLayout(page)
@@ -931,6 +997,7 @@ class MainWindow(QMainWindow):
         layout.addStretch(1)
 
         self.series_mode.toggled.connect(self.update_thread_rows)
+        self.series_mode.toggled.connect(lambda _checked: self.update_prestart_estimate())
         for spin in (self.series_threads, self.training_threads, self.scoring_threads):
             spin.valueChanged.connect(self.update_thread_rows)
         self.update_thread_rows()
@@ -992,6 +1059,7 @@ class MainWindow(QMainWindow):
         self.fonts[index]["weight"] = value
 
     def refresh_font_table(self):
+        self.update_prestart_estimate()
         self.font_table.setRowCount(len(self.fonts))
         for row, item in enumerate(self.fonts):
             self.font_table.setItem(row, 0, QTableWidgetItem(Path(item["path"]).name))
@@ -1018,6 +1086,7 @@ class MainWindow(QMainWindow):
     # ----- corpus -----
 
     def update_corpus_state(self):
+        self.update_prestart_estimate()
         auto = self.auto_corpus.isChecked()
         self.generated_count.setEnabled(auto)
         self.corpus_edit.setEnabled(not auto)
@@ -1165,6 +1234,7 @@ class MainWindow(QMainWindow):
     def finish_run(self):
         """Close the run: the log is saved and the window goes back to idle."""
         self.running = False
+        self.update_prestart_estimate()
         self.heartbeat.stop()
         self.set_primary_mode(stop=False)
         if self.run_log is not None:
