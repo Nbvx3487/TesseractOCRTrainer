@@ -1,19 +1,26 @@
 """Desktop window for training Tesseract on a set of fonts.
 
 Runs on Windows. Training itself runs inside WSL, because Tesseract's training
-tools are Linux programs. One page, laid out like PowerToys settings: advanced
-settings on the left, fonts, corpus, run and log on the right. Common Windows
-fonts are added at startup. Drop more font files anywhere in the window. The
-corpus is generated automatically for each run unless you turn that off.
+tools are Linux programs.
 
-Double-click gui.pyw to open it without a console window.
+Layout: resource limits on the left. On the right, from top to bottom: the main
+action, the fonts to train, the corpus, the training settings, the results of
+the last run, and the log. Common Windows fonts are added at startup, and any
+font file dropped on the window is added to the list.
+
+Only one copy of the window runs at a time. Double-click gui.pyw to open it
+without a console window.
 
 Requirements (Windows): pip install -r requirements-gui.txt
 Requirements (WSL): see README.md
 """
 
-import json
+# Draw with software rendering rather than the graphics driver. This avoided a
+# crash on the Windows PC. It must be set before PySide6 loads.
 import os
+os.environ.setdefault("QT_OPENGL", "software")
+
+import json
 import random
 import re
 import subprocess
@@ -26,11 +33,8 @@ try:
 except ImportError:  # not on Windows, so the theme cannot be read
     winreg = None
 
-# Draw with software rather than the graphics driver. This avoided a crash on the
-# Windows PC; it must be set before PySide6 loads.
-os.environ.setdefault("QT_OPENGL", "software")
-
 from PySide6.QtCore import QThread, Qt, Signal
+from PySide6.QtNetwork import QLocalServer, QLocalSocket
 from PySide6.QtWidgets import (
     QAbstractItemView, QApplication, QCheckBox, QFileDialog, QFrame, QHBoxLayout,
     QHeaderView, QLabel, QLayout, QLineEdit, QMessageBox, QPlainTextEdit, QPushButton,
@@ -47,6 +51,7 @@ COMMON_FONTS = [
     "arial.ttf", "times.ttf", "cour.ttf", "verdana.ttf", "georgia.ttf",
     "tahoma.ttf", "calibri.ttf", "consola.ttf", "segoeui.ttf",
 ]
+SINGLE_INSTANCE_NAME = "TesseractFontTrainer"
 DEFAULT_ITERATIONS = 400
 DEFAULT_FONT_SIZE = 32
 DEFAULT_GENERATED_LINES = 200
@@ -89,7 +94,7 @@ QFrame#card {{ background: {t['card']}; border: 1px solid {t['border']}; border-
 QPushButton {{ background: {t['card']}; border: 1px solid {t['border']}; border-radius: 4px; padding: 6px 14px; }}
 QPushButton:hover {{ background: {t['hover']}; }}
 QPushButton:disabled {{ color: {t['subtext']}; }}
-QPushButton#primary {{ background: {t['accent']}; color: {t['on_accent']}; border: none; font-weight: 600; padding: 12px; }}
+QPushButton#primary {{ background: {t['accent']}; color: {t['on_accent']}; border: none; font-weight: 600; padding: 12px 24px; }}
 QPushButton#primary:disabled {{ background: {t['border']}; }}
 QLineEdit, QPlainTextEdit, QTableWidget, QSpinBox {{ background: {t['card']}; border: 1px solid {t['border']}; border-radius: 4px; padding: 4px; }}
 QTableWidget {{ gridline-color: {t['border']}; }}
@@ -144,6 +149,21 @@ def clean_line(raw):
     return raw.replace("\x00", "").rstrip()
 
 
+def font_paths(urls):
+    """Local paths of the dropped URLs that are font files."""
+    paths = [url.toLocalFile() for url in urls]
+    return [p for p in paths if p.lower().endswith(FONT_EXTENSIONS)]
+
+
+def another_copy_is_open():
+    """True when another copy of this window is already running."""
+    socket = QLocalSocket()
+    socket.connectToServer(SINGLE_INSTANCE_NAME)
+    connected = socket.waitForConnected(500)
+    socket.abort()
+    return connected
+
+
 class TrainWorker(QThread):
     """Runs the trainer in the background so the window stays responsive."""
     line = Signal(str)
@@ -187,22 +207,35 @@ class TrainWorker(QThread):
             self.failed.emit(detail)
 
 
-def font_paths(urls):
-    """Local paths of the dropped URLs that are font files."""
-    paths = [url.toLocalFile() for url in urls]
-    return [p for p in paths if p.lower().endswith(FONT_EXTENSIONS)]
-
-
 class MainWindow(QWidget):
     def __init__(self):
         super().__init__()
         self.setWindowTitle("Tesseract Font Trainer")
-        self.resize(1120, 820)
+        self.resize(1120, 860)
         self.worker = None
         self.run_log = None
         self.run_stamp = None
+        self.model_dir = None
         self.setAcceptDrops(True)
 
+        self._build_controls()
+
+        root = QHBoxLayout(self)
+        root.setContentsMargins(0, 0, 0, 0)
+        root.setSpacing(0)
+        root.addWidget(self._resources_panel())
+        scroll = QScrollArea()
+        scroll.setWidgetResizable(True)
+        scroll.setFrameShape(QFrame.NoFrame)
+        scroll.setWidget(self._page())
+        root.addWidget(scroll, 1)
+
+        self.corpus_mode_changed(self.auto_corpus.isChecked())
+        self.add_common_fonts()
+
+    # ----- controls -----
+
+    def _build_controls(self):
         # Fonts
         self.table = QTableWidget(0, 3)
         self.table.setHorizontalHeaderLabels(["Font", "Weight", ""])
@@ -218,16 +251,20 @@ class MainWindow(QWidget):
         self.add_font_button = QPushButton("Add font...")
         self.add_font_button.clicked.connect(self.browse_fonts)
 
-        # Corpus: generated automatically unless this is switched off
+        # Corpus
         self.auto_corpus = QCheckBox("On")
         self.auto_corpus.setChecked(True)
         self.auto_corpus.toggled.connect(self.corpus_mode_changed)
+        self.generated_count = QSpinBox()
+        self.generated_count.setRange(1, 1000)
+        self.generated_count.setValue(DEFAULT_GENERATED_LINES)
+        self.generated_count.setFixedWidth(110)
         self.corpus_edit = QPlainTextEdit()
         self.corpus_edit.setPlaceholderText(
             "One text line per row, at least 10. English or Latin script only.")
         self.corpus_edit.setAcceptDrops(False)
         self.corpus_edit.viewport().setAcceptDrops(False)
-        self.corpus_edit.setMinimumHeight(220)
+        self.corpus_edit.setMinimumHeight(200)
         self.load_corpus_button = QPushButton("Load text file...")
         self.load_corpus_button.clicked.connect(self.load_corpus)
         self.manual_box = QWidget()
@@ -238,11 +275,10 @@ class MainWindow(QWidget):
         manual_buttons.addWidget(self.load_corpus_button)
         manual_buttons.addStretch()
         manual.addLayout(manual_buttons)
-        self.manual_box.setVisible(False)
 
-        # Advanced settings (left panel)
+        # Training
         self.name = QLineEdit("minecraft")
-        self.name.setFixedWidth(150)
+        self.name.setFixedWidth(160)
         self.iterations = QSpinBox()
         self.iterations.setRange(1, 5000)
         self.iterations.setValue(DEFAULT_ITERATIONS)
@@ -251,12 +287,8 @@ class MainWindow(QWidget):
         self.font_size.setRange(16, 96)
         self.font_size.setValue(DEFAULT_FONT_SIZE)
         self.font_size.setFixedWidth(110)
-        self.generated_count = QSpinBox()
-        self.generated_count.setRange(1, 1000)
-        self.generated_count.setValue(DEFAULT_GENERATED_LINES)
-        self.generated_count.setFixedWidth(110)
 
-        # Resource limits (left panel). Memory and CPU apply to WSL.
+        # Resources
         self.memory_gb = QSpinBox()
         self.memory_gb.setRange(4, 128)
         self.memory_gb.setValue(DEFAULT_MEMORY_GB)
@@ -266,12 +298,27 @@ class MainWindow(QWidget):
         self.cpu_threads.setValue(min(DEFAULT_THREADS, os.cpu_count() or 1))
         self.cpu_threads.setFixedWidth(110)
 
-        # Run and log
-        self.adjust = QPushButton("adjust the font")
-        self.adjust.setObjectName("primary")
-        self.adjust.clicked.connect(self.start_training)
-        self.status = QLabel("")
+        # Run, results and log
+        self.primary = QPushButton("adjust the font")
+        self.primary.setObjectName("primary")
+        self.primary.setMinimumWidth(220)
+        self.primary.clicked.connect(self.start_training)
+        self.status = QLabel("Ready. Check the fonts and settings, then press adjust the font.")
         self.status.setWordWrap(True)
+
+        self.results = QTableWidget(0, 5)
+        self.results.setHorizontalHeaderLabels(
+            ["Font", "Before", "After", "CER before", "CER after"])
+        self.results.horizontalHeader().setSectionResizeMode(0, QHeaderView.Stretch)
+        for column in range(1, 5):
+            self.results.horizontalHeader().setSectionResizeMode(
+                column, QHeaderView.ResizeToContents)
+        self.results.verticalHeader().setVisible(False)
+        self.results.setSelectionMode(QAbstractItemView.NoSelection)
+        self.results.setMinimumHeight(120)
+        self.open_model_button = QPushButton("Open model folder")
+        self.open_model_button.clicked.connect(self.open_model_folder)
+
         self.log = QPlainTextEdit()
         self.log.setReadOnly(True)
         self.log.setPlaceholderText("Progress will appear here.")
@@ -279,21 +326,9 @@ class MainWindow(QWidget):
         self.open_logs_button = QPushButton("Open logs folder")
         self.open_logs_button.clicked.connect(self.open_logs)
 
-        root = QHBoxLayout(self)
-        root.setContentsMargins(0, 0, 0, 0)
-        root.setSpacing(0)
-        root.addWidget(self._advanced_panel())
-        scroll = QScrollArea()
-        scroll.setWidgetResizable(True)
-        scroll.setFrameShape(QFrame.NoFrame)
-        scroll.setWidget(self._page())
-        root.addWidget(scroll, 1)
+    # ----- layout -----
 
-        self.add_common_fonts()
-
-    # ----- layout helpers -----
-
-    def _advanced_panel(self):
+    def _resources_panel(self):
         panel = QFrame()
         panel.setObjectName("panel")
         panel.setFixedWidth(300)
@@ -304,38 +339,45 @@ class MainWindow(QWidget):
         title.setObjectName("panelTitle")
         layout.addWidget(title)
         layout.addLayout(self._setting(
-            "Memory limit", "Most memory WSL may use. Applies after WSL restarts.",
-            self.memory_gb))
+            "Memory limit", "Most memory WSL may use.", self.memory_gb))
         layout.addLayout(self._setting(
             "CPU threads", "Most processor threads training may use.", self.cpu_threads))
         gpu = QLabel("Not used")
         gpu.setObjectName("cardDesc")
         layout.addLayout(self._setting(
             "GPU", "Tesseract training runs on the CPU only.", gpu))
+        note = QLabel("Memory and CPU limits apply the next time you press adjust the font. "
+                      "If they change, WSL restarts first.")
+        note.setObjectName("cardDesc")
+        note.setWordWrap(True)
+        layout.addWidget(note)
         layout.addStretch()
         return panel
 
     def _page(self):
         page = QWidget()
-        page.setObjectName("page")
         layout = QVBoxLayout(page)
         layout.setContentsMargins(24, 24, 24, 24)
         layout.setSpacing(14)
 
+        header = QHBoxLayout()
+        titles = QVBoxLayout()
+        titles.setSpacing(2)
         head = QLabel("Tesseract Font Trainer")
         head.setObjectName("pageTitle")
-        sub = QLabel("Teach Tesseract the fonts you use. Drop font files anywhere in this window.")
+        sub = QLabel("Teach Tesseract the fonts you use, then check how much it improved.")
         sub.setObjectName("pageDesc")
-        sub.setWordWrap(True)
-        layout.addWidget(head)
-        layout.addWidget(sub)
+        titles.addWidget(head)
+        titles.addWidget(sub)
+        header.addLayout(titles, 1)
+        header.addWidget(self.primary, 0, Qt.AlignVCenter)
+        layout.addLayout(header)
 
         banner = QFrame()
         banner.setObjectName("banner")
         banner_layout = QVBoxLayout(banner)
         banner_layout.setContentsMargins(16, 12, 16, 12)
-        banner_layout.addWidget(QLabel(
-            "Training runs in WSL. Keep this window open while it runs."))
+        banner_layout.addWidget(self.status)
         layout.addWidget(banner)
 
         fonts_body = QVBoxLayout()
@@ -346,8 +388,8 @@ class MainWindow(QWidget):
         fonts_body.addLayout(font_buttons)
         layout.addWidget(self._card(
             "Fonts",
-            "Weight = how many times each training line is rendered in that font. "
-            "Common Windows fonts are added at startup.",
+            "Drop font files anywhere in this window. Weight = how many times each training "
+            "line is rendered in that font. Common Windows fonts are added at startup.",
             fonts_body))
 
         corpus_body = QVBoxLayout()
@@ -356,26 +398,35 @@ class MainWindow(QWidget):
             "A new set of random Minecraft and mod-loader lines is made for every run. "
             "Turn this off to use your own text.",
             self.auto_corpus))
+        corpus_body.addLayout(self._setting(
+            "Lines per run", "Only used when generation is on.", self.generated_count))
         corpus_body.addWidget(self.manual_box)
-        layout.addWidget(self._card("Corpus", None, corpus_body))
-
-        run_body = QVBoxLayout()
-        run_body.addLayout(self._setting(
-            "Model name", "Letters, digits, - or _. One name for the whole run.", self.name))
-        run_body.addLayout(self._setting(
-            "Iterations", "How long training runs. More takes longer.", self.iterations))
-        run_body.addLayout(self._setting(
-            "Font size", "Pixels for each rendered line.", self.font_size))
-        run_body.addLayout(self._setting(
-            "Generated lines", "Lines made for each run when generation is on.",
-            self.generated_count))
-        run_body.addWidget(self.adjust)
-        run_body.addWidget(self.status)
         layout.addWidget(self._card(
-            "Run",
-            "Trains every font in the list on the corpus, then scores before and after on "
-            "held-out lines.",
-            run_body))
+            "Corpus",
+            "The text lines the font is trained on. At least 10 lines are needed.",
+            corpus_body))
+
+        training_body = QVBoxLayout()
+        training_body.addLayout(self._setting(
+            "Model name", "Letters, digits, - or _. One name for the whole run.", self.name))
+        training_body.addLayout(self._setting(
+            "Iterations", "How long training runs. More takes longer.", self.iterations))
+        training_body.addLayout(self._setting(
+            "Font size", "Pixels for each rendered line.", self.font_size))
+        layout.addWidget(self._card(
+            "Training", None, training_body))
+
+        results_body = QVBoxLayout()
+        results_body.addWidget(self.results)
+        results_buttons = QHBoxLayout()
+        results_buttons.addWidget(self.open_model_button)
+        results_buttons.addStretch()
+        results_body.addLayout(results_buttons)
+        layout.addWidget(self._card(
+            "Results",
+            "Exact matches on held-out lines, before and after training. Filled in when a "
+            "run finishes.",
+            results_body))
 
         log_body = QVBoxLayout()
         log_body.addWidget(self.log)
@@ -410,7 +461,7 @@ class MainWindow(QWidget):
         return frame
 
     def _setting(self, title, description, control):
-        """A settings row as in Windows: text on the left, the control on the right."""
+        """A settings row: text on the left, the control on the right."""
         row = QHBoxLayout()
         text = QVBoxLayout()
         text.setSpacing(2)
@@ -493,6 +544,7 @@ class MainWindow(QWidget):
 
     def corpus_mode_changed(self, on):
         self.auto_corpus.setText("On" if on else "Off")
+        self.generated_count.setEnabled(on)
         self.manual_box.setVisible(not on)
 
     def load_corpus(self):
@@ -537,7 +589,10 @@ class MainWindow(QWidget):
 
         name = self.name.text().strip()
         self.log.clear()
+        self.results.setRowCount(0)
+        self.model_dir = None
         self.open_run_log(name)
+        self.set_running(True)
 
         lines = self.corpus_lines_for_run()
         corpus_text = "\n".join(lines) + "\n"
@@ -561,13 +616,15 @@ class MainWindow(QWidget):
                     f"(copy in logs: {self.run_stamp}_corpus.txt)")
         for path, weight in self.dataset():
             self.record(f"Font: {path} (weight {weight})")
-        self.status.setText("Training... this can take a long time. Keep the window open.")
-        self.adjust.setEnabled(False)
+        self.status.setText("Training... this can take a long time. Keep this window open.")
         self.worker = TrainWorker(args, self.cpu_threads.value())
         self.worker.line.connect(self.record)
         self.worker.done.connect(self.show_results)
         self.worker.failed.connect(self.show_failure)
         self.worker.start()
+
+    def set_running(self, on):
+        self.primary.setEnabled(not on)
 
     def validate(self):
         if self.table.rowCount() == 0:
@@ -579,8 +636,10 @@ class MainWindow(QWidget):
             if len(lines) < 10:
                 return f"Your own corpus needs at least 10 lines. It has {len(lines)}."
         elif self.generated_count.value() < 10:
-            return "Generated lines must be at least 10. Training needs 10 lines to split."
+            return "Lines per run must be at least 10. Training needs 10 lines to split."
         return None
+
+    # ----- run log -----
 
     def open_run_log(self, name):
         """Every run gets a text log and a JSON result in data/logs, so you can read them later."""
@@ -603,30 +662,55 @@ class MainWindow(QWidget):
 
     def open_logs(self):
         LOG_DIR.mkdir(parents=True, exist_ok=True)
-        if hasattr(os, "startfile"):
-            os.startfile(LOG_DIR)
+        self._open_folder(LOG_DIR)
+
+    def open_model_folder(self):
+        if self.model_dir and self.model_dir.exists():
+            self._open_folder(self.model_dir)
         else:
-            self.status.setText(f"Logs are in {LOG_DIR}")
+            self.status.setText("No trained model yet. Finish a run first.")
+
+    def _open_folder(self, folder):
+        if hasattr(os, "startfile"):
+            os.startfile(folder)
+        else:
+            self.status.setText(f"Folder: {folder}")
+
+    # ----- results -----
 
     def show_results(self, result):
-        self.adjust.setEnabled(True)
+        self.set_running(False)
         (LOG_DIR / f"{self.run_stamp}.json").write_text(
             json.dumps(result, indent=2), encoding="utf-8")
+
+        self.results.setRowCount(0)
         lines = ["", "Results (exact matches on held-out lines):"]
         for label, scores in result["scores"].items():
             b, t = scores["baseline"], scores["trained"]
             font = label.split("_", 1)[-1]
+            self._add_result_row(font, b, t)
             lines.append(
                 f"  {font}: before {b['exact']}/{b['total']} (CER {b['cer']}), "
                 f"after {t['exact']}/{t['total']} (CER {t['cer']})")
-        model = DATA / "runs" / self.run_stamp / result["name"] / "model" / f"{result['name']}.traineddata"
+
+        self.model_dir = DATA / "runs" / self.run_stamp / result["name"] / "model"
+        model = self.model_dir / f"{result['name']}.traineddata"
         lines.append(f"Model saved to: {model}")
         self.record("\n".join(lines))
         self.close_run_log()
-        self.status.setText("Done. The log is in the logs folder.")
+        self.status.setText("Done. The model is saved. Results are in the table below.")
+
+    def _add_result_row(self, font, before, after):
+        row = self.results.rowCount()
+        self.results.insertRow(row)
+        values = [font, f"{before['exact']}/{before['total']}",
+                  f"{after['exact']}/{after['total']}",
+                  str(before["cer"]), str(after["cer"])]
+        for column, value in enumerate(values):
+            self.results.setItem(row, column, QTableWidgetItem(value))
 
     def show_failure(self, detail):
-        self.adjust.setEnabled(True)
+        self.set_running(False)
         self.status.setText("Training failed. See the log below.")
         self.record(f"\nFAILED: {detail}")
         self.close_run_log()
@@ -639,6 +723,15 @@ def main():
     font.setPointSize(13)
     app.setFont(font)
     app.setStyleSheet(stylesheet(DARK if system_is_dark() else LIGHT))
+
+    if another_copy_is_open():
+        QMessageBox.information(None, "Tesseract Font Trainer",
+                                "The trainer is already open. Use that window.")
+        return
+    QLocalServer.removeServer(SINGLE_INSTANCE_NAME)
+    instance_server = QLocalServer()
+    instance_server.listen(SINGLE_INSTANCE_NAME)
+
     window = MainWindow()
     window.show()
     sys.exit(app.exec())
