@@ -179,12 +179,15 @@ class TrainWorker(QThread):
         self.stopped = False
 
     def stop(self):
-        """Stop the run. The trainer is inside WSL, so its process is killed there too."""
+        """Stop the run. The trainer and the programs it started run inside WSL, so they
+        are killed there. Killing only the Windows side leaves them running and keeps the
+        output pipe open."""
         self.stopped = True
+        subprocess.Popen(
+            ["wsl", "--", "pkill", "-f", "trainer.cli|lstmtraining|text2image|tesseract"],
+            creationflags=CREATE_NO_WINDOW)
         if self.process is not None:
             self.process.kill()
-        subprocess.run(["wsl", "--", "pkill", "-f", "trainer.cli"],
-                       creationflags=CREATE_NO_WINDOW)
 
     def run(self):
         command = build_command(self.args, self.threads)
@@ -835,8 +838,12 @@ class MainWindow(QWidget):
         self.set_running(False)
         if detail == "Training stopped.":
             self.status.setText("Training stopped. Nothing was saved.")
-        else:
-            self.status.setText("Training failed. See the log below.")
+            self.record("interrupted by a user")
+            if self.run_log:
+                self.run_log.close()
+                self.run_log = None
+            return
+        self.status.setText("Training failed. See the log below.")
         self.record(f"\nFAILED: {detail}")
         self.close_run_log()
 
