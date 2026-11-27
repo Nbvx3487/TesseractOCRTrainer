@@ -25,6 +25,7 @@ import random
 import re
 import subprocess
 import sys
+import traceback
 from datetime import datetime
 from pathlib import Path
 
@@ -183,13 +184,27 @@ class TrainWorker(QThread):
         are killed there. Killing only the Windows side leaves them running and keeps the
         output pipe open."""
         self.stopped = True
-        subprocess.Popen(
-            ["wsl", "--", "pkill", "-f", "trainer.cli|lstmtraining|text2image|tesseract"],
-            creationflags=CREATE_NO_WINDOW)
+        try:
+            subprocess.Popen(
+                ["wsl", "--", "pkill", "-f", "trainer.cli|lstmtraining|text2image|tesseract"],
+                creationflags=CREATE_NO_WINDOW)
+        except OSError:
+            pass
         if self.process is not None:
-            self.process.kill()
+            try:
+                self.process.kill()
+            except OSError:
+                pass
 
     def run(self):
+        # Any error here must reach the window. Otherwise the thread ends silently and
+        # the window keeps showing a run that is no longer running.
+        try:
+            self._run_trainer()
+        except Exception:
+            self.failed.emit("Window error:\n" + traceback.format_exc())
+
+    def _run_trainer(self):
         command = build_command(self.args, self.threads)
         try:
             self.process = subprocess.Popen(
@@ -293,6 +308,7 @@ class MainWindow(QWidget):
         self.run_stamp = None
         self.model_dir = None
         self.accepting = False  # True only while a run is shown; late output is ignored
+        self.running = False  # True from Start until the run is finished, stopped or failed
         self.setAcceptDrops(True)
 
         self._build_controls()
@@ -673,6 +689,8 @@ class MainWindow(QWidget):
         return True
 
     def start_training(self):
+        if self.running:
+            return
         problem = self.validate()
         if problem:
             QMessageBox.warning(self, "Cannot start", problem)
@@ -682,6 +700,7 @@ class MainWindow(QWidget):
 
         name = self.name.text().strip()
         self.accepting = True
+        self.running = True
         self.log.clear()
         self.results.setRowCount(0)
         self.current_bar.setValue(0)
@@ -723,17 +742,18 @@ class MainWindow(QWidget):
         self.worker.start()
 
     def on_primary(self):
-        if self.worker is not None and self.worker.isRunning():
-            if not self.worker.stopped:
-                self.stop_training()
-            return
-        self.start_training()
+        if self.running:
+            self.stop_training()
+        else:
+            self.start_training()
 
     def stop_training(self):
-        if self.worker is None or not self.worker.isRunning():
+        """Stop the run. This works even if the training thread has already ended."""
+        if not self.running:
             return
         self.status.setText("Stopping...")
-        self.worker.stop()
+        if self.worker is not None:
+            self.worker.stop()
         self.finish_stopped()
 
     def finish_stopped(self):
@@ -753,6 +773,7 @@ class MainWindow(QWidget):
         event.accept()
 
     def set_running(self, on):
+        self.running = on
         self.primary.setText("Stop training" if on else "adjust the font")
 
     def show_progress(self, info):
@@ -851,6 +872,7 @@ class MainWindow(QWidget):
         self.record("\n".join(lines))
         self.close_run_log()
         self.accepting = False
+        self.set_running(False)
         self.status.setText("Done. The model is saved. Results are in the table below.")
 
     def _add_result_row(self, font, before, after):
