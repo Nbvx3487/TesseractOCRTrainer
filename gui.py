@@ -50,6 +50,8 @@ COMMON_FONTS = [
 DEFAULT_ITERATIONS = 400
 DEFAULT_FONT_SIZE = 32
 DEFAULT_GENERATED_LINES = 200
+DEFAULT_MEMORY_GB = 16
+DEFAULT_THREADS = 8
 
 # Colours follow the Windows settings look: light or dark, with a blue accent.
 LIGHT = dict(bg="#F3F3F3", card="#FFFFFF", border="#E5E5E5", hover="#F5F5F5",
@@ -105,9 +107,27 @@ def to_wsl(path) -> str:
     return f"/mnt/{text[0].lower()}{text[2:]}"
 
 
-def build_command(args):
-    """The WSL command that runs the trainer CLI inside the repo folder."""
-    return ["wsl", "--cd", to_wsl(REPO), "--", "python3", "-m", "trainer.cli", *args]
+def build_command(args, threads):
+    """The WSL command that runs the trainer CLI inside the repo folder, with the CPU
+    thread limit set through OMP_THREAD_LIMIT (read by Tesseract's OpenMP code)."""
+    return ["wsl", "--cd", to_wsl(REPO), "--", "env", f"OMP_THREAD_LIMIT={threads}",
+            "python3", "-m", "trainer.cli", *args]
+
+
+def wslconfig_text(text, memory_gb, processors):
+    """Return the .wslconfig text with memory and processors set under [wsl2].
+    Other settings in the file are kept."""
+    wanted = [f"memory={memory_gb}GB", f"processors={processors}"]
+    lines = text.splitlines()
+    if not any(line.strip().lower() == "[wsl2]" for line in lines):
+        lines.append("[wsl2]")
+    start = next(i for i, line in enumerate(lines) if line.strip().lower() == "[wsl2]")
+    end = next((i for i in range(start + 1, len(lines)) if lines[i].strip().startswith("[")),
+               len(lines))
+    body = [line for line in lines[start + 1:end]
+            if line.split("=", 1)[0].strip().lower() not in ("memory", "processors")]
+    lines = lines[:start + 1] + wanted + body + lines[end:]
+    return "\n".join(lines).rstrip() + "\n"
 
 
 def generate_lines(count):
@@ -130,12 +150,13 @@ class TrainWorker(QThread):
     done = Signal(dict)
     failed = Signal(str)
 
-    def __init__(self, args, parent=None):
+    def __init__(self, args, threads, parent=None):
         super().__init__(parent)
         self.args = args
+        self.threads = threads
 
     def run(self):
-        command = build_command(self.args)
+        command = build_command(self.args, self.threads)
         try:
             process = subprocess.Popen(
                 command, stdout=subprocess.PIPE, stderr=subprocess.STDOUT,
@@ -235,6 +256,16 @@ class MainWindow(QWidget):
         self.generated_count.setValue(DEFAULT_GENERATED_LINES)
         self.generated_count.setFixedWidth(110)
 
+        # Resource limits (left panel). Memory and CPU apply to WSL.
+        self.memory_gb = QSpinBox()
+        self.memory_gb.setRange(4, 128)
+        self.memory_gb.setValue(DEFAULT_MEMORY_GB)
+        self.memory_gb.setFixedWidth(110)
+        self.cpu_threads = QSpinBox()
+        self.cpu_threads.setRange(1, os.cpu_count() or 1)
+        self.cpu_threads.setValue(min(DEFAULT_THREADS, os.cpu_count() or 1))
+        self.cpu_threads.setFixedWidth(110)
+
         # Run and log
         self.adjust = QPushButton("adjust the font")
         self.adjust.setObjectName("primary")
@@ -269,18 +300,18 @@ class MainWindow(QWidget):
         layout = QVBoxLayout(panel)
         layout.setContentsMargins(20, 24, 20, 20)
         layout.setSpacing(18)
-        title = QLabel("Advanced settings")
+        title = QLabel("Resources")
         title.setObjectName("panelTitle")
         layout.addWidget(title)
         layout.addLayout(self._setting(
-            "Model name", "Letters, digits, - or _. One name for the whole run.", self.name))
+            "Memory limit", "Most memory WSL may use. Applies after WSL restarts.",
+            self.memory_gb))
         layout.addLayout(self._setting(
-            "Iterations", "How long training runs. More takes longer.", self.iterations))
+            "CPU threads", "Most processor threads training may use.", self.cpu_threads))
+        gpu = QLabel("Not used")
+        gpu.setObjectName("cardDesc")
         layout.addLayout(self._setting(
-            "Font size", "Pixels for each rendered line.", self.font_size))
-        layout.addLayout(self._setting(
-            "Generated lines", "Lines made for each run when generation is on.",
-            self.generated_count))
+            "GPU", "Tesseract training runs on the CPU only.", gpu))
         layout.addStretch()
         return panel
 
@@ -329,6 +360,15 @@ class MainWindow(QWidget):
         layout.addWidget(self._card("Corpus", None, corpus_body))
 
         run_body = QVBoxLayout()
+        run_body.addLayout(self._setting(
+            "Model name", "Letters, digits, - or _. One name for the whole run.", self.name))
+        run_body.addLayout(self._setting(
+            "Iterations", "How long training runs. More takes longer.", self.iterations))
+        run_body.addLayout(self._setting(
+            "Font size", "Pixels for each rendered line.", self.font_size))
+        run_body.addLayout(self._setting(
+            "Generated lines", "Lines made for each run when generation is on.",
+            self.generated_count))
         run_body.addWidget(self.adjust)
         run_body.addWidget(self.status)
         layout.addWidget(self._card(
@@ -469,10 +509,30 @@ class MainWindow(QWidget):
 
     # ----- training -----
 
+    def apply_wsl_limits(self):
+        """Write the memory and CPU limits to .wslconfig. WSL restarts when they change.
+        Returns False if the user cancels."""
+        config = Path(os.environ.get("USERPROFILE", str(Path.home()))) / ".wslconfig"
+        current = config.read_text(encoding="utf-8") if config.exists() else ""
+        new = wslconfig_text(current, self.memory_gb.value(), self.cpu_threads.value())
+        if new == current:
+            return True
+        answer = QMessageBox.question(
+            self, "Restart WSL",
+            "The memory or CPU limit changed. WSL must restart to apply it, which stops "
+            "any WSL program that is running. Continue?")
+        if answer != QMessageBox.Yes:
+            return False
+        config.write_text(new, encoding="utf-8")
+        subprocess.run(["wsl", "--shutdown"], creationflags=CREATE_NO_WINDOW)
+        return True
+
     def start_training(self):
         problem = self.validate()
         if problem:
             QMessageBox.warning(self, "Cannot start", problem)
+            return
+        if not self.apply_wsl_limits():
             return
 
         name = self.name.text().strip()
@@ -505,7 +565,7 @@ class MainWindow(QWidget):
             self.record(f"Font: {path} (weight {weight})")
         self.status.setText("Training... this can take a long time. Keep the window open.")
         self.adjust.setEnabled(False)
-        self.worker = TrainWorker(args)
+        self.worker = TrainWorker(args, self.cpu_threads.value())
         self.worker.line.connect(self.record)
         self.worker.done.connect(self.show_results)
         self.worker.failed.connect(self.show_failure)

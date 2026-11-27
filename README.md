@@ -48,10 +48,14 @@ Load that file with **Load text file...** in the window.
 
 ## Desktop window (Windows)
 
-`gui.py` is one page laid out like PowerToys settings. The left panel holds the advanced
-settings: model name, iterations, font size, and how many lines to generate. The right side
-holds Fonts, Corpus, Run (the **adjust the font** button), and Log. It follows the Windows
-light or dark setting.
+`gui.py` is one page laid out like PowerToys settings. The left panel holds the resource
+limits: memory (written to `.wslconfig` for WSL), CPU threads (passed to training as
+`OMP_THREAD_LIMIT`), and GPU, which is not used because Tesseract training runs on the CPU.
+The right side holds Fonts, Corpus, Run (model name, iterations, font size, generated lines,
+and the **adjust the font** button), and Log. It follows the Windows light or dark setting.
+
+Changing the memory or CPU limit restarts WSL before the next run, which stops any WSL
+program that is running. The window asks first.
 Training runs in WSL, and the window calls it for you.
 
 Setup on Windows (Python 3.10+):
@@ -73,7 +77,7 @@ training images are not stored in the model file, so the window cannot replay th
 keep the base's fonts from being forgotten, add common fonts you have (for example Arial
 or Times New Roman) as extra rows, with a weight, and they are trained alongside yours.
 
-Model name: one name for the whole run, set in the Advanced settings panel.
+Model name: one name for the whole run, set in the Run card.
 
 Corpus: generated automatically for each run, with random Minecraft and mod-loader lines
 (the number is set in Advanced settings). Turn **Generate lines automatically** off to type
