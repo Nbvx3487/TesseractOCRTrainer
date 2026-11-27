@@ -10,10 +10,12 @@ Requirements (WSL): see README.md
 """
 
 import json
+import os
 import random
 import re
 import subprocess
 import sys
+from datetime import datetime
 from pathlib import Path
 
 from PySide6.QtCore import QThread, Qt, Signal
@@ -25,6 +27,7 @@ from PySide6.QtWidgets import (
 
 REPO = Path(__file__).resolve().parent
 DATA = REPO / "data"
+LOG_DIR = DATA / "logs"
 FONT_EXTENSIONS = (".ttf", ".otf")
 GENERATED_LINES = 200
 CREATE_NO_WINDOW = getattr(subprocess, "CREATE_NO_WINDOW", 0)
@@ -53,6 +56,12 @@ def generate_lines(count=GENERATED_LINES):
     return generate(count, random.randrange(1, 10**9))
 
 
+def clean_line(raw):
+    """One output line from WSL. Some WSL output arrives as UTF-16, which leaves a NUL
+    after every character; removing the NULs makes it readable."""
+    return raw.replace("\x00", "").rstrip()
+
+
 class TrainWorker(QThread):
     """Runs the trainer in the background so the window stays responsive."""
     line = Signal(str)
@@ -78,7 +87,7 @@ class TrainWorker(QThread):
         result = None
         errors = []
         for raw in process.stdout:
-            text = raw.rstrip()
+            text = clean_line(raw)
             if text.startswith("RESULT:"):
                 result = json.loads(text[len("RESULT:"):])
             elif text.startswith("ERROR:"):
@@ -107,6 +116,8 @@ class MainWindow(QWidget):
         self.setWindowTitle("Tesseract Font Trainer")
         self.resize(900, 900)
         self.worker = None
+        self.run_log = None
+        self.run_stamp = None
         self.setAcceptDrops(True)
 
         self.table = QTableWidget(0, 2)
@@ -146,6 +157,8 @@ class MainWindow(QWidget):
         self.log = QPlainTextEdit()
         self.log.setReadOnly(True)
         self.log.setPlaceholderText("Progress will appear here.")
+        open_logs = QPushButton("Open logs folder")
+        open_logs.clicked.connect(self.open_logs)
 
         layout = QVBoxLayout(self)
         layout.addWidget(QLabel(
@@ -173,6 +186,7 @@ class MainWindow(QWidget):
 
         layout.addWidget(self.adjust)
         layout.addWidget(self.status)
+        layout.addWidget(open_logs)
         layout.addWidget(self.log)
 
     def dragEnterEvent(self, event):
@@ -257,10 +271,15 @@ class MainWindow(QWidget):
         ]
 
         self.log.clear()
+        self.open_run_log(name)
+        self.record(f"Model: {name}")
+        self.record(f"Corpus: {len([l for l in self.corpus.toPlainText().splitlines() if l.strip()])} lines")
+        for path, weight in self.dataset():
+            self.record(f"Font: {path} (weight {weight})")
         self.status.setText("Training... this can take a long time. Keep the window open.")
         self.adjust.setEnabled(False)
         self.worker = TrainWorker(args)
-        self.worker.line.connect(self.log.appendPlainText)
+        self.worker.line.connect(self.record)
         self.worker.done.connect(self.show_results)
         self.worker.failed.connect(self.show_failure)
         self.worker.start()
@@ -275,8 +294,36 @@ class MainWindow(QWidget):
             return f"The corpus needs at least 10 lines. It has {len(lines)}."
         return None
 
+    def open_run_log(self, name):
+        """Every run gets a text log and a JSON result in data/logs, so you can read them later."""
+        LOG_DIR.mkdir(parents=True, exist_ok=True)
+        self.run_stamp = f"{datetime.now():%Y%m%d-%H%M%S}_{name}"
+        self.run_log = open(LOG_DIR / f"{self.run_stamp}.log", "w", encoding="utf-8")
+        self.record(f"Run started: {self.run_stamp}")
+
+    def record(self, text):
+        self.log.appendPlainText(text)
+        if self.run_log:
+            self.run_log.write(text + "\n")
+            self.run_log.flush()
+
+    def close_run_log(self):
+        if self.run_log:
+            self.record(f"Log saved to: {LOG_DIR / (self.run_stamp + '.log')}")
+            self.run_log.close()
+            self.run_log = None
+
+    def open_logs(self):
+        LOG_DIR.mkdir(parents=True, exist_ok=True)
+        if hasattr(os, "startfile"):
+            os.startfile(LOG_DIR)
+        else:
+            self.status.setText(f"Logs are in {LOG_DIR}")
+
     def show_results(self, result):
         self.adjust.setEnabled(True)
+        (LOG_DIR / f"{self.run_stamp}.json").write_text(
+            json.dumps(result, indent=2), encoding="utf-8")
         lines = ["", "Results (exact matches on held-out lines):"]
         for label, scores in result["scores"].items():
             b, t = scores["baseline"], scores["trained"]
@@ -286,13 +333,15 @@ class MainWindow(QWidget):
                 f"after {t['exact']}/{t['total']} (CER {t['cer']})")
         model = DATA / "runs" / result["name"] / "model" / f"{result['name']}.traineddata"
         lines.append(f"Model saved to: {model}")
-        self.log.appendPlainText("\n".join(lines))
-        self.status.setText("Done.")
+        self.record("\n".join(lines))
+        self.close_run_log()
+        self.status.setText("Done. The log is in the logs folder.")
 
     def show_failure(self, detail):
         self.adjust.setEnabled(True)
         self.status.setText("Training failed. See the log below.")
-        self.log.appendPlainText(f"\nFAILED: {detail}")
+        self.record(f"\nFAILED: {detail}")
+        self.close_run_log()
 
 
 def main():
