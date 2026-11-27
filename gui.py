@@ -36,7 +36,7 @@ try:
 except ImportError:  # not on Windows, so the theme cannot be read
     winreg = None
 
-from PySide6.QtCore import QThread, QTimer, Qt, Signal
+from PySide6.QtCore import QEasingCurve, QPropertyAnimation, QThread, QTimer, Qt, Signal
 from PySide6.QtNetwork import QLocalServer, QLocalSocket
 from PySide6.QtWidgets import (
     QAbstractItemView, QApplication, QCheckBox, QDialog, QFileDialog, QFrame, QHBoxLayout,
@@ -258,6 +258,7 @@ class MainWindow(QWidget):
         self.accepting = False  # True only while a run is shown; late output is ignored
         self.running = False  # True from Start until the run is finished, stopped or failed
         self.render_window = None  # small window with the rendering progress bar
+        self.bar_animations = {}  # one smooth-move animation per progress bar
         self.setAcceptDrops(True)
 
         self._build_controls()
@@ -352,7 +353,7 @@ class MainWindow(QWidget):
         self.overall_label = QLabel("All fonts: not started")
         self.overall_bar = QProgressBar()
         for bar in (self.current_bar, self.overall_bar):
-            bar.setRange(0, 100)
+            bar.setRange(0, 1000)
             bar.setValue(0)
 
         self.results = QTableWidget(0, 5)
@@ -652,8 +653,8 @@ class MainWindow(QWidget):
         self.running = True
         self.log.clear()
         self.results.setRowCount(0)
-        self.current_bar.setValue(0)
-        self.overall_bar.setValue(0)
+        self.reset_bar(self.current_bar)
+        self.reset_bar(self.overall_bar)
         self.current_label.setText("Current font: starting")
         self.overall_label.setText("All fonts: starting")
         self.model_dir = None
@@ -747,7 +748,7 @@ class MainWindow(QWidget):
             self.render_label = QLabel()
             self.render_label.setWordWrap(True)
             self.render_bar = QProgressBar()
-            self.render_bar.setRange(0, 100)
+            self.render_bar.setRange(0, 1000)
             layout.addWidget(self.render_label)
             layout.addWidget(self.render_bar)
             buttons = QHBoxLayout()
@@ -757,7 +758,7 @@ class MainWindow(QWidget):
             buttons.addWidget(stop)
             layout.addLayout(buttons)
         count = max(info["count"], 1)
-        self.render_bar.setValue(int(100 * info["current"] / count))
+        self.move_bar(self.render_bar, info["current"] / count)
         self.render_label.setText(
             f"Rendering line {info['current']} of {info['count']} in {info['label']}")
         self.render_window.show()
@@ -772,9 +773,9 @@ class MainWindow(QWidget):
         if self.render_window is not None:
             self.render_window.hide()
         total = max(info["total"], 1)
-        overall = int(100 * info["done"] / total)
+        overall = info["done"] / total
         count = max(info["count"], 1)
-        current = int(100 * info["current"] / count)
+        current = info["current"] / count
         if info["stage"] == "prepare":
             step = f"Preparing lines {info['current']}/{info['count']}"
         elif info["stage"] == "train":
@@ -782,9 +783,31 @@ class MainWindow(QWidget):
         else:
             step = f"Scoring on held-out lines ({info['current']}/{info['count']})"
         self.current_label.setText(f"Current font {info['label']}: {step}")
-        self.current_bar.setValue(current)
+        self.move_bar(self.current_bar, current)
         self.overall_label.setText(f"All fonts: {info['done']}/{info['total']} steps")
-        self.overall_bar.setValue(overall)
+        self.move_bar(self.overall_bar, overall)
+
+    def move_bar(self, bar, fraction):
+        """Move a progress bar to its new value in small steps, so it never jumps. The
+        time it takes grows with the distance, so the speed stays about the same."""
+        target = int(round(1000 * min(max(fraction, 0.0), 1.0)))
+        animation = self.bar_animations.get(bar)
+        if animation is None:
+            animation = QPropertyAnimation(bar, b"value", self)
+            animation.setEasingCurve(QEasingCurve.Linear)
+            self.bar_animations[bar] = animation
+        animation.stop()
+        distance = abs(target - bar.value())
+        animation.setDuration(max(80, min(1500, distance * 12)))
+        animation.setStartValue(bar.value())
+        animation.setEndValue(target)
+        animation.start()
+
+    def reset_bar(self, bar):
+        animation = self.bar_animations.get(bar)
+        if animation is not None:
+            animation.stop()
+        bar.setValue(0)
 
     def validate(self):
         if self.table.rowCount() == 0:
