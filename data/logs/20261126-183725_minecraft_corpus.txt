@@ -1,0 +1,10 @@
+Chunk loading took 140 ms in dimension minecraft:overworld
+Skipping carpet: incompatible with forge 2.0.0-beta.4
+java.lang.NoClassDefFoundError: net.minecraftforge.javafmlmod/xaeros-minimap
+Connection timed out while reading packet 126
+java.lang.NoClassDefFoundError: com.google.guava/oculus
+Chunk loading took 211 ms in dimension minecraft:overworld
+Error loading class org.apache.logging.log4j.oculus in oculus-1.20.1.jar
+Could not find net.fabricmc.loader for xaeros-minimap, skipping
+java.lang.NoClassDefFoundError: org.spongepowered.mixin/alexsmobs
+Chunk loading took 124 ms in dimension minecraft:overworld

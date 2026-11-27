@@ -1,0 +1,35 @@
+Run started: 20261126-183725_minecraft
+Model: minecraft
+Iterations: 1, font size: 32px
+Corpus: 10 lines, generated automatically (copy in logs: 20261126-183725_minecraft_corpus.txt)
+Font: C:\WINDOWS\Fonts\arial.ttf (weight 1)
+$ combine_tessdata -e /mnt/c/Users/Nbvx Teo/Documents/_Programming/GitHub/TesseractOCRTrainer/data/runs/minecraft/base/eng.traineddata /mnt/c/Users/Nbvx Teo/Documents/_Programming/GitHub/TesseractOCRTrainer/data/runs/minecraft/base/eng.lstm
+Extracting tessdata components from /mnt/c/Users/Nbvx Teo/Documents/_Programming/GitHub/TesseractOCRTrainer/data/runs/minecraft/base/eng.traineddata
+Wrote /mnt/c/Users/Nbvx Teo/Documents/_Programming/GitHub/TesseractOCRTrainer/data/runs/minecraft/base/eng.lstm
+Version:4.00.00alpha:eng:synth20170629:[1,36,0,1Ct3,3,16Mp3,3Lfys64Lfx96Lrx96Lfx512O1c1]
+17:lstm:size=11689099, offset=192
+18:lstm-punc-dawg:size=4322, offset=11689291
+19:lstm-word-dawg:size=3694794, offset=11693613
+20:lstm-number-dawg:size=4738, offset=15388407
+21:lstm-unicharset:size=6360, offset=15393145
+22:lstm-recoder:size=1012, offset=15399505
+23:version:size=80, offset=15400517
+Corpus: 8 training lines, 2 held-out lines
+Rendered 8 lines in 0_arial (weight 1)
+$ tesseract /mnt/c/Users/Nbvx Teo/Documents/_Programming/GitHub/TesseractOCRTrainer/data/runs/minecraft/train/0_arial/train_0000.tif /mnt/c/Users/Nbvx Teo/Documents/_Programming/GitHub/TesseractOCRTrainer/data/runs/minecraft/train/0_arial/train_0000 --psm 13 lstm.train
+$ tesseract /mnt/c/Users/Nbvx Teo/Documents/_Programming/GitHub/TesseractOCRTrainer/data/runs/minecraft/train/0_arial/train_0001.tif /mnt/c/Users/Nbvx Teo/Documents/_Programming/GitHub/TesseractOCRTrainer/data/runs/minecraft/train/0_arial/train_0001 --psm 13 lstm.train
+$ tesseract /mnt/c/Users/Nbvx Teo/Documents/_Programming/GitHub/TesseractOCRTrainer/data/runs/minecraft/train/0_arial/train_0002.tif /mnt/c/Users/Nbvx Teo/Documents/_Programming/GitHub/TesseractOCRTrainer/data/runs/minecraft/train/0_arial/train_0002 --psm 13 lstm.train
+$ tesseract /mnt/c/Users/Nbvx Teo/Documents/_Programming/GitHub/TesseractOCRTrainer/data/runs/minecraft/train/0_arial/train_0003.tif /mnt/c/Users/Nbvx Teo/Documents/_Programming/GitHub/TesseractOCRTrainer/data/runs/minecraft/train/0_arial/train_0003 --psm 13 lstm.train
+$ tesseract /mnt/c/Users/Nbvx Teo/Documents/_Programming/GitHub/TesseractOCRTrainer/data/runs/minecraft/train/0_arial/train_0004.tif /mnt/c/Users/Nbvx Teo/Documents/_Programming/GitHub/TesseractOCRTrainer/data/runs/minecraft/train/0_arial/train_0004 --psm 13 lstm.train
+$ tesseract /mnt/c/Users/Nbvx Teo/Documents/_Programming/GitHub/TesseractOCRTrainer/data/runs/minecraft/train/0_arial/train_0005.tif /mnt/c/Users/Nbvx Teo/Documents/_Programming/GitHub/TesseractOCRTrainer/data/runs/minecraft/train/0_arial/train_0005 --psm 13 lstm.train
+$ tesseract /mnt/c/Users/Nbvx Teo/Documents/_Programming/GitHub/TesseractOCRTrainer/data/runs/minecraft/train/0_arial/train_0006.tif /mnt/c/Users/Nbvx Teo/Documents/_Programming/GitHub/TesseractOCRTrainer/data/runs/minecraft/train/0_arial/train_0006 --psm 13 lstm.train
+$ tesseract /mnt/c/Users/Nbvx Teo/Documents/_Programming/GitHub/TesseractOCRTrainer/data/runs/minecraft/train/0_arial/train_0007.tif /mnt/c/Users/Nbvx Teo/Documents/_Programming/GitHub/TesseractOCRTrainer/data/runs/minecraft/train/0_arial/train_0007 --psm 13 lstm.train
+Training list: 8 entries
+$ lstmtraining --model_output /mnt/c/Users/Nbvx Teo/Documents/_Programming/GitHub/TesseractOCRTrainer/data/runs/minecraft/checkpoints/minecraft --continue_from /mnt/c/Users/Nbvx Teo/Documents/_Programming/GitHub/TesseractOCRTrainer/data/runs/minecraft/base/eng.lstm --traineddata /mnt/c/Users/Nbvx Teo/Documents/_Programming/GitHub/TesseractOCRTrainer/data/runs/minecraft/base/eng.traineddata --train_listfile /mnt/c/Users/Nbvx Teo/Documents/_Programming/GitHub/TesseractOCRTrainer/data/runs/minecraft/train_list.txt --max_iterations 1
+$ lstmtraining --stop_training --continue_from /mnt/c/Users/Nbvx Teo/Documents/_Programming/GitHub/TesseractOCRTrainer/data/runs/minecraft/checkpoints/minecraft_checkpoint --traineddata /mnt/c/Users/Nbvx Teo/Documents/_Programming/GitHub/TesseractOCRTrainer/data/runs/minecraft/base/eng.traineddata --model_output /mnt/c/Users/Nbvx Teo/Documents/_Programming/GitHub/TesseractOCRTrainer/data/runs/minecraft/model/minecraft.traineddata
+0_arial: before 0/2 exact, after 0/2 exact
+
+Results (exact matches on held-out lines):
+  arial: before 0/2 (CER 0.539), after 0/2 (CER 0.6667)
+Model saved to: C:\Users\Nbvx Teo\Documents\_Programming\GitHub\TesseractOCRTrainer\data\runs\minecraft\model\minecraft.traineddata
+Log saved to: C:\Users\Nbvx Teo\Documents\_Programming\GitHub\TesseractOCRTrainer\data\logs\20261126-183725_minecraft.log

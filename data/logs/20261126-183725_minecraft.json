@@ -1,0 +1,38 @@
+{
+  "model": "/mnt/c/Users/Nbvx Teo/Documents/_Programming/GitHub/TesseractOCRTrainer/data/runs/minecraft/model/minecraft.traineddata",
+  "name": "minecraft",
+  "scores": {
+    "0_arial": {
+      "baseline": {
+        "cer": 0.539,
+        "exact": 0,
+        "misses": [
+          {
+            "expected": "java.lang.NoClassDefFoundError: net.minecraftforge.javafmlmod/xaeros-minimap",
+            "got": "vot minectattforse vavafin nod/xaeros-minimap"
+          },
+          {
+            "expected": "java.lang.NoClassDefFoundError: org.spongepowered.mixin/alexsmobs",
+            "got": "org spongepowered.mixinalexsmobs"
+          }
+        ],
+        "total": 2
+      },
+      "trained": {
+        "cer": 0.6667,
+        "exact": 0,
+        "misses": [
+          {
+            "expected": "java.lang.NoClassDefFoundError: net.minecraftforge.javafmlmod/xaeros-minimap",
+            "got": "me ators posite I odeaeros.miniman"
+          },
+          {
+            "expected": "java.lang.NoClassDefFoundError: org.spongepowered.mixin/alexsmobs",
+            "got": "ord Spongepowered. mix/alexomobs"
+          }
+        ],
+        "total": 2
+      }
+    }
+  }
+}
