@@ -26,6 +26,9 @@ def main(argv=None):
     def log(message):
         print(message, flush=True)
 
+    log(f"Trainer started: {args.name}, {args.iterations} iterations, "
+        f"font size {args.font_size}px")
+
     try:
         fonts = [(item["path"], int(item["weight"])) for item in json.loads(args.fonts_json)]
         corpus = Path(args.corpus_file).read_text(encoding="utf-8")

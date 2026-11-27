@@ -26,6 +26,7 @@ import re
 import subprocess
 import sys
 import threading
+import time
 import traceback
 from datetime import datetime
 from pathlib import Path
@@ -35,7 +36,7 @@ try:
 except ImportError:  # not on Windows, so the theme cannot be read
     winreg = None
 
-from PySide6.QtCore import QThread, Qt, Signal
+from PySide6.QtCore import QThread, QTimer, Qt, Signal
 from PySide6.QtNetwork import QLocalServer, QLocalSocket
 from PySide6.QtWidgets import (
     QAbstractItemView, QApplication, QCheckBox, QFileDialog, QFrame, QHBoxLayout,
@@ -207,12 +208,14 @@ class TrainWorker(QThread):
 
     def _run_trainer(self):
         command = build_command(self.args, self.threads)
+        self.line.emit("Starting the trainer in WSL. The first output can take a little while.")
         try:
             self.process = subprocess.Popen(
                 command, stdout=subprocess.PIPE, stderr=subprocess.STDOUT,
                 text=True, encoding="utf-8", errors="replace",
                 creationflags=CREATE_NO_WINDOW,
             )
+            self.line.emit(f"WSL started (process {self.process.pid}), waiting for the trainer.")
         except FileNotFoundError:
             self.failed.emit("WSL was not found. Install WSL and Ubuntu first (see README).")
             return
@@ -235,64 +238,6 @@ class TrainWorker(QThread):
         if self.stopped:
             self.failed.emit("Training stopped.")
         elif code == 0 and result is not None:
-            self.done.emit(result)
-        else:
-            detail = errors[-1] if errors else f"training stopped with exit code {code}"
-            self.failed.emit(detail)
-
-
-def font_paths(urls):
-    """Local paths of the dropped URLs that are font files."""
-    paths = [url.toLocalFile() for url in urls]
-    return [p for p in paths if p.lower().endswith(FONT_EXTENSIONS)]
-
-
-def another_copy_is_open():
-    """True when another copy of this window is already running."""
-    socket = QLocalSocket()
-    socket.connectToServer(SINGLE_INSTANCE_NAME)
-    connected = socket.waitForConnected(500)
-    socket.abort()
-    return connected
-
-
-class TrainWorker(QThread):
-    """Runs the trainer in the background so the window stays responsive."""
-    line = Signal(str)
-    done = Signal(dict)
-    failed = Signal(str)
-
-    def __init__(self, args, threads, parent=None):
-        super().__init__(parent)
-        self.args = args
-        self.threads = threads
-
-    def run(self):
-        command = build_command(self.args, self.threads)
-        try:
-            process = subprocess.Popen(
-                command, stdout=subprocess.PIPE, stderr=subprocess.STDOUT,
-                text=True, encoding="utf-8", errors="replace",
-                creationflags=CREATE_NO_WINDOW,
-            )
-        except FileNotFoundError:
-            self.failed.emit("WSL was not found. Install WSL and Ubuntu first (see README).")
-            return
-
-        result = None
-        errors = []
-        for raw in process.stdout:
-            text = clean_line(raw)
-            if text.startswith("RESULT:"):
-                result = json.loads(text[len("RESULT:"):])
-            elif text.startswith("ERROR:"):
-                errors.append(text)
-                self.line.emit(text)
-            elif text:
-                self.line.emit(text)
-
-        code = process.wait()
-        if code == 0 and result is not None:
             self.done.emit(result)
         else:
             detail = errors[-1] if errors else f"training stopped with exit code {code}"
@@ -728,6 +673,12 @@ class MainWindow(QWidget):
             "--font-size", str(self.font_size.value()),
         ]
 
+        self.run_started = time.monotonic()
+        self.last_output = self.run_started
+        if getattr(self, "heartbeat", None) is None:
+            self.heartbeat = QTimer(self)
+            self.heartbeat.timeout.connect(self.heartbeat_tick)
+        self.heartbeat.start(15000)
         self.record(f"Model: {name}")
         self.record(f"Iterations: {self.iterations.value()}, font size: {self.font_size.value()}px")
         self.record(f"Corpus: {len(lines)} lines, {source} "
@@ -776,6 +727,8 @@ class MainWindow(QWidget):
 
     def set_running(self, on):
         self.running = on
+        if not on and getattr(self, "heartbeat", None) is not None:
+            self.heartbeat.stop()
         self.primary.setText("Stop training" if on else "adjust the font")
 
     def show_progress(self, info):
@@ -819,9 +772,19 @@ class MainWindow(QWidget):
         self.run_log = open(LOG_DIR / f"{self.run_stamp}.log", "w", encoding="utf-8")
         self.record(f"Run started: {self.run_stamp}")
 
+    def heartbeat_tick(self):
+        """Log a line when the trainer has been quiet for 15 seconds, so the log never looks frozen."""
+        if not self.running:
+            return
+        now = time.monotonic()
+        if now - self.last_output >= 15:
+            self.record(f"Still working: {int(now - self.run_started)} s since the start, "
+                        f"{int(now - self.last_output)} s since the last line.")
+
     def record(self, text):
         if not self.accepting:
             return
+        self.last_output = time.monotonic()
         self.log.appendPlainText(text)
         if self.run_log:
             self.run_log.write(text + "\n")
