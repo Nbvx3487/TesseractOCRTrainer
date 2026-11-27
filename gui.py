@@ -541,10 +541,8 @@ class MainWindow(QWidget):
 
         lines = self.corpus_lines_for_run()
         corpus_text = "\n".join(lines) + "\n"
-        corpus_file = DATA / f"corpus_{name}.txt"
-        corpus_file.parent.mkdir(parents=True, exist_ok=True)
+        corpus_file = LOG_DIR / f"{self.run_stamp}_corpus.txt"
         corpus_file.write_text(corpus_text, encoding="utf-8")
-        (LOG_DIR / f"{self.run_stamp}_corpus.txt").write_text(corpus_text, encoding="utf-8")
 
         source = "generated automatically" if self.auto_corpus.isChecked() else "your own text"
         fonts = [{"path": to_wsl(path), "weight": weight} for path, weight in self.dataset()]
@@ -552,7 +550,7 @@ class MainWindow(QWidget):
             "--fonts-json", json.dumps(fonts),
             "--name", name,
             "--corpus-file", to_wsl(corpus_file),
-            "--data-root", to_wsl(DATA / "runs"),
+            "--data-root", to_wsl(DATA / "runs" / self.run_stamp),
             "--iterations", str(self.iterations.value()),
             "--font-size", str(self.font_size.value()),
         ]
@@ -621,7 +619,7 @@ class MainWindow(QWidget):
             lines.append(
                 f"  {font}: before {b['exact']}/{b['total']} (CER {b['cer']}), "
                 f"after {t['exact']}/{t['total']} (CER {t['cer']})")
-        model = DATA / "runs" / result["name"] / "model" / f"{result['name']}.traineddata"
+        model = DATA / "runs" / self.run_stamp / result["name"] / "model" / f"{result['name']}.traineddata"
         lines.append(f"Model saved to: {model}")
         self.record("\n".join(lines))
         self.close_run_log()
