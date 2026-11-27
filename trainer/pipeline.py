@@ -23,7 +23,7 @@ import time
 from pathlib import Path
 
 from .corpus import split_corpus
-from .render import render_lines
+from .render import font_cache_dir, render_lines
 from .scoring import score_set
 
 BEST_MODEL_HINT = (
@@ -114,7 +114,8 @@ def font_label(index, font_path):
     return f"{index}_{Path(font_path).stem}"
 
 
-def train_font(name, fonts, corpus, data_root, log, font_size=32, iterations=400, check_every=0):
+def train_font(name, fonts, corpus, data_root, log, font_size=32, iterations=400, check_every=0,
+               cache_root=None):
     """Run the full pipeline.
 
     fonts: list of (font_path, weight) pairs. Weight is an integer, 1 or more.
@@ -148,12 +149,21 @@ def train_font(name, fonts, corpus, data_root, log, font_size=32, iterations=400
     # line prepared, one per training iteration, and one per held-out line checked after.
     font_count = len(fonts)
     prepared_units = font_count * len(train_lines)
-    total = font_count * len(control_lines) * 2 + prepared_units + iterations
+    checks_total = -(-iterations // check_every) if check_every > 0 else 0  # ceiling
+    # Every step counts: render and score the control lines (before and after training),
+    # render and prepare the training lines, train, and each checkpoint check.
+    total = (font_count * len(control_lines) * 3 + prepared_units * 2 + iterations
+             + checks_total * font_count * len(control_lines))
     done = 0
     # Time spent on each step, saved with the result so the next estimate can use it.
     timings = {"render_seconds": 0.0, "rendered_images": 0, "prepare_seconds": 0.0,
                "prepared_images": 0, "train_seconds": 0.0, "iterations": 0,
                "score_seconds": 0.0, "scored_images": 0}
+
+    def cache_dir_for(font_path):
+        if cache_root is None:
+            return None
+        return font_cache_dir(cache_root, font_path, font_size)
 
     # Held-out check before training: the untrained English model, font by font.
     control_images = {}
@@ -164,11 +174,14 @@ def train_font(name, fonts, corpus, data_root, log, font_size=32, iterations=400
         render_start = time.monotonic()
         images = render_lines(control_lines, font_path, work / "control" / label,
                               font_size, prefix="ctrl", log=log, label=label,
-                              progress=lambda cur, cnt: report(log, "render", label, cur, cnt, 0, 1))
+                              progress=lambda cur, cnt: report(log, "render", label, cur, cnt,
+                                                               done + cur, total),
+                              cache_dir=cache_dir_for(font_path))
         timings["render_seconds"] += time.monotonic() - render_start
         timings["rendered_images"] += len(images)
         log(f"Rendered {len(images)} held-out images in {label}")
         control_images[label] = images
+        done += len(images)
         report(log, "score", label, 0, len(images), done, total)
         score_start = time.monotonic()
         baseline_scores[label] = score_and_log(label, images, "eng", system_tessdata,
@@ -187,7 +200,10 @@ def train_font(name, fonts, corpus, data_root, log, font_size=32, iterations=400
         render_start = time.monotonic()
         tifs = render_lines(train_lines, font_path, train_dir, font_size, prefix="train",
                             log=log, label=label,
-                            progress=lambda cur, cnt: report(log, "render", label, cur, cnt, 0, 1))
+                            progress=lambda cur, cnt: report(log, "render", label, cur, cnt,
+                                                             done + cur, total),
+                            cache_dir=cache_dir_for(font_path))
+        done += len(tifs)
         timings["render_seconds"] += time.monotonic() - render_start
         timings["rendered_images"] += len(tifs)
         prepare_start = time.monotonic()
@@ -216,10 +232,10 @@ def train_font(name, fonts, corpus, data_root, log, font_size=32, iterations=400
         if match:
             current = min(int(match.group(1)), iterations)
             report(log, "train", "all fonts", current, iterations,
-                   done + current, total)
+                   done + current + state["checks_done"], total)
 
     report(log, "train", "all fonts", 0, iterations, done, total)
-    state = {"last": 0, "finished": False}
+    state = {"last": 0, "finished": False, "checks_done": 0}
 
     def on_chunk_line(line):
         match = ITERATION_LINE.search(line)
@@ -276,8 +292,9 @@ def train_font(name, fonts, corpus, data_root, log, font_size=32, iterations=400
             timings["train_seconds"] += time.monotonic() - chunk_start
             source = checkpoints / f"{name}_checkpoint"
             checks.append(run_check(state["last"] or target))
+            state["checks_done"] += font_count * len(control_lines)
             (work / "metrics.json").write_text(json.dumps(checks, indent=2), encoding="utf-8")
-    done += iterations
+    done += iterations + state["checks_done"]
 
     output_dir = work / "model"
     output_dir.mkdir()

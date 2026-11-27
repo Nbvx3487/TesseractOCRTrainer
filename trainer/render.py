@@ -6,6 +6,7 @@ Tesseract's LSTM trainer needs, per line:
   name.gt.txt  the exact text (used for scoring)
 """
 
+import hashlib
 import os
 import shutil
 import subprocess
@@ -37,8 +38,31 @@ def stage_font(font_path):
     return USER_FONTS
 
 
-def render_one(text, stem, family, fonts_dir, font_size):
-    """Render one line with text2image and write its .gt.txt. Returns the TIFF path."""
+def font_cache_dir(cache_root, font_path, font_size):
+    """The folder that keeps the rendered lines of one font at one size. It is named by the
+    font file's content, so the same font keeps its cache even if the file is copied."""
+    digest = hashlib.sha1(Path(font_path).read_bytes()).hexdigest()[:10]
+    return Path(cache_root) / f"{Path(font_path).stem}_{digest}_{font_size}px"
+
+
+CACHED_SUFFIXES = (".tif", ".box", ".gt.txt")
+
+
+def cached_stem(cache_dir, text):
+    """The cache file name for one line of text (the text itself is the key)."""
+    return Path(cache_dir) / hashlib.sha1(text.encode("utf-8")).hexdigest()[:16]
+
+
+def render_one(text, stem, family, fonts_dir, font_size, cache_stem=None):
+    """Render one line with text2image and write its .gt.txt. Returns the TIFF path.
+
+    If the line was rendered before for this font (cache_stem), its files are copied from
+    the cache instead of rendering it again. New renders are saved to the cache."""
+    if cache_stem is not None and all(cache_stem.with_suffix(suffix).exists()
+                                      for suffix in CACHED_SUFFIXES):
+        for suffix in CACHED_SUFFIXES:
+            shutil.copy2(cache_stem.with_suffix(suffix), stem.with_suffix(suffix))
+        return stem.with_suffix(".tif")
     text_file = stem.with_suffix(".txt")
     text_file.write_text(text + "\n", encoding="utf-8")
     result = subprocess.run(
@@ -50,11 +74,15 @@ def render_one(text, stem, family, fonts_dir, font_size):
         raise RuntimeError(f"text2image failed for '{text}': {result.stderr.strip()}")
     stem.with_suffix(".gt.txt").write_text(text + "\n", encoding="utf-8")
     text_file.unlink()
+    if cache_stem is not None:
+        cache_stem.parent.mkdir(parents=True, exist_ok=True)
+        for suffix in CACHED_SUFFIXES:
+            shutil.copy2(stem.with_suffix(suffix), cache_stem.with_suffix(suffix))
     return stem.with_suffix(".tif")
 
 
 def render_lines(lines, font_path, out_dir, font_size=32, prefix="line", log=None, label="",
-                 progress=None):
+                 progress=None, cache_dir=None):
     """Render each line to name.tif + name.box + name.gt.txt. Returns the TIFF paths.
 
     Lines are rendered in parallel, one per CPU thread (OMP_THREAD_LIMIT, set by the
@@ -73,7 +101,9 @@ def render_lines(lines, font_path, out_dir, font_size=32, prefix="line", log=Non
         futures = {}
         for index, text in enumerate(lines):
             stem = out_dir / f"{prefix}_{index:04d}"
-            futures[pool.submit(render_one, text, stem, family, fonts_dir, font_size)] = index
+            cache_stem = cached_stem(cache_dir, text) if cache_dir is not None else None
+            futures[pool.submit(render_one, text, stem, family, fonts_dir, font_size,
+                                cache_stem)] = index
         try:
             for future in as_completed(futures):
                 tiffs[futures[future]] = future.result()

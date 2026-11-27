@@ -1179,6 +1179,7 @@ class MainWindow(QMainWindow):
             "--iterations", str(self.iterations.value()),
             "--font-size", str(self.font_size.value()),
             "--check-every", str(CHECK_EVERY),
+            "--cache-dir", to_wsl(DATA / "rendered"),
         ]
 
         self.live_log.clear()
@@ -1360,6 +1361,8 @@ class MainWindow(QMainWindow):
     def on_done(self, result):
         if not self.running:
             return
+        self.current_bar.setValue(BAR_STEPS)
+        self.overall_bar.setValue(BAR_STEPS)
         lines = ["", "Results (exact matches on held-out lines):"]
         self.results_table.setRowCount(0)
         for label, scores in result["scores"].items():

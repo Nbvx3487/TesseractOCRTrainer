@@ -23,6 +23,8 @@ def main(argv=None):
     parser.add_argument("--font-size", type=int, default=32, help="Rendered line size in px")
     parser.add_argument("--check-every", type=int, default=0,
                         help="Score the checkpoint on held-out lines every N iterations (0 = off)")
+    parser.add_argument("--cache-dir", default=None,
+                        help="Folder for rendered lines, reused across runs of the same font")
     args = parser.parse_args(argv)
 
     def log(message):
@@ -43,6 +45,7 @@ def main(argv=None):
             font_size=args.font_size,
             iterations=args.iterations,
             check_every=args.check_every,
+            cache_root=args.cache_dir,
         )
     except Exception as error:
         print(f"ERROR: {error}", flush=True)
