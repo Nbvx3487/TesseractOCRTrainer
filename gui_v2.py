@@ -21,6 +21,7 @@ os.environ.setdefault("QT_OPENGL", "software")
 import difflib
 import json
 import random
+import shutil
 import re
 import subprocess
 import sys
@@ -51,6 +52,7 @@ REPO = Path(__file__).resolve().parent
 DATA = REPO / "data"
 LOG_DIR = DATA / "logs"
 RUNS_DIR = DATA / "runs"
+RENDER_CACHE = DATA / "rendered"
 sys.path.insert(0, str(REPO / "tools"))
 from make_corpus import generate  # noqa: E402  (the Minecraft line generator)
 
@@ -299,6 +301,13 @@ def card(title=None, hint=None):
         label.setWordWrap(True)
         layout.addWidget(label)
     return frame, layout
+
+
+def format_size(size):
+    for unit in ("B", "KB", "MB", "GB"):
+        if size < 1024 or unit == "GB":
+            return f"{size:.0f} {unit}" if unit == "B" else f"{size:.1f} {unit}"
+        size /= 1024
 
 
 def page_header(title, subtitle):
@@ -615,7 +624,17 @@ class MainWindow(QMainWindow):
         form_layout.addLayout(form)
         layout.addWidget(settings)
 
-        progress, progress_layout = card("Progress")
+        progress, progress_layout = card(
+            "Progress",
+            "Time estimate is rough, from the speed of this run so far. "
+            "Checkpoint checks are not counted yet.")
+        self.eta_total = QLabel("Starts when you press Start training.")
+        self.eta_render = QLabel()
+        self.eta_prepare = QLabel()
+        self.eta_train = QLabel()
+        for widget in (self.eta_total, self.eta_render, self.eta_prepare, self.eta_train):
+            progress_layout.addWidget(widget)
+        progress_layout.addSpacing(8)
         self.current_label = QLabel("Current font: not started")
         self.current_bar = make_bar()
         self.overall_label = QLabel("All fonts: not started")
@@ -628,17 +647,6 @@ class MainWindow(QMainWindow):
                        self.overall_bar, self.render_label, self.render_bar):
             progress_layout.addWidget(widget)
         layout.addWidget(progress)
-
-        eta, eta_layout = card(
-            "Time estimate",
-            "Rough, from the speed of this run so far. Checkpoint checks are not counted yet.")
-        self.eta_total = QLabel("Starts when you press Start training.")
-        self.eta_render = QLabel()
-        self.eta_prepare = QLabel()
-        self.eta_train = QLabel()
-        for widget in (self.eta_total, self.eta_render, self.eta_prepare, self.eta_train):
-            eta_layout.addWidget(widget)
-        layout.addWidget(eta)
 
         live, live_layout = card("Live log", "Every step is written to data/logs as it happens.")
         self.live_log = QPlainTextEdit()
@@ -682,8 +690,50 @@ class MainWindow(QMainWindow):
         buttons.addWidget(common)
         buttons.addStretch(1)
         frame_layout.addLayout(buttons)
+
+        cache = QHBoxLayout()
+        self.cache_label = QLabel()
+        self.cache_label.setWordWrap(True)
+        clear_cache = QPushButton("Clear render cache")
+        clear_cache.clicked.connect(self.clear_render_cache)
+        cache.addWidget(self.cache_label, 1)
+        cache.addWidget(clear_cache, 0, Qt.AlignmentFlag.AlignVCenter)
+        frame_layout.addLayout(cache)
+        self.refresh_cache_label()
         layout.addWidget(frame, 1)
         return page
+
+    def render_cache_size(self):
+        """Total size of the saved rendered lines, in bytes."""
+        total = 0
+        if RENDER_CACHE.exists():
+            for path in RENDER_CACHE.rglob("*"):
+                if path.is_file():
+                    total += path.stat().st_size
+        return total
+
+    def refresh_cache_label(self):
+        size = self.render_cache_size()
+        if size == 0:
+            text = "Render cache: empty. Rendered lines are saved here after the first run of a font."
+        else:
+            text = (f"Render cache: {format_size(size)} in {RENDER_CACHE}. "
+                    "Reused when the same font is trained again.")
+        self.cache_label.setText(text)
+
+    def clear_render_cache(self):
+        if self.running:
+            QMessageBox.information(self, "Training is running",
+                                    "Wait for the run to finish before clearing the cache.")
+            return
+        answer = QMessageBox.question(
+            self, "Clear render cache",
+            f"Delete all saved rendered lines ({format_size(self.render_cache_size())})?\n\n"
+            "The next run of each font will render its lines again.")
+        if answer != QMessageBox.StandardButton.Yes:
+            return
+        shutil.rmtree(RENDER_CACHE, ignore_errors=True)
+        self.refresh_cache_label()
 
     def build_corpus_page(self):
         page = QWidget()
@@ -1179,7 +1229,7 @@ class MainWindow(QMainWindow):
             "--iterations", str(self.iterations.value()),
             "--font-size", str(self.font_size.value()),
             "--check-every", str(CHECK_EVERY),
-            "--cache-dir", to_wsl(DATA / "rendered"),
+            "--cache-dir", to_wsl(RENDER_CACHE),
         ]
 
         self.live_log.clear()
@@ -1235,6 +1285,7 @@ class MainWindow(QMainWindow):
     def finish_run(self):
         """Close the run: the log is saved and the window goes back to idle."""
         self.running = False
+        self.refresh_cache_label()
         self.update_prestart_estimate()
         self.heartbeat.stop()
         self.set_primary_mode(stop=False)
