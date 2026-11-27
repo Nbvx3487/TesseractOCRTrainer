@@ -1,0 +1,492 @@
+Run started: 20261126-221609_minecraft
+Model: minecraft
+Iterations: 400, font size: 32px
+Corpus: 200 lines, generated automatically (copy in logs: 20261126-221609_minecraft_corpus.txt)
+Font: C:\WINDOWS\Fonts\arial.ttf (weight 1)
+Starting the trainer in WSL. The first output can take a little while.
+WSL started (process 3448), waiting for the trainer.
+Trainer started: minecraft, 400 iterations, font size 32px
+$ combine_tessdata -e /mnt/c/Users/Nbvx Teo/Documents/_Programming/GitHub/TesseractOCRTrainer/data/runs/20261126-221609_minecraft/minecraft/base/eng.traineddata /mnt/c/Users/Nbvx Teo/Documents/_Programming/GitHub/TesseractOCRTrainer/data/runs/20261126-221609_minecraft/minecraft/base/eng.lstm
+Extracting tessdata components from /mnt/c/Users/Nbvx Teo/Documents/_Programming/GitHub/TesseractOCRTrainer/data/runs/20261126-221609_minecraft/minecraft/base/eng.traineddata
+Wrote /mnt/c/Users/Nbvx Teo/Documents/_Programming/GitHub/TesseractOCRTrainer/data/runs/20261126-221609_minecraft/minecraft/base/eng.lstm
+Version:4.00.00alpha:eng:synth20170629:[1,36,0,1Ct3,3,16Mp3,3Lfys64Lfx96Lrx96Lfx512O1c1]
+17:lstm:size=11689099, offset=192
+18:lstm-punc-dawg:size=4322, offset=11689291
+19:lstm-word-dawg:size=3694794, offset=11693613
+20:lstm-number-dawg:size=4738, offset=15388407
+21:lstm-unicharset:size=6360, offset=15393145
+22:lstm-recoder:size=1012, offset=15399505
+23:version:size=80, offset=15400517
+Corpus: 160 training lines, 40 held-out lines
+Rendering 40 held-out lines in 0_arial
+Rendered 40 held-out images in 0_arial
+  checked 1/40 lines in 0_arial (before training)
+  checked 2/40 lines in 0_arial (before training)
+  checked 3/40 lines in 0_arial (before training)
+  checked 4/40 lines in 0_arial (before training)
+  checked 5/40 lines in 0_arial (before training)
+  checked 6/40 lines in 0_arial (before training)
+  checked 7/40 lines in 0_arial (before training)
+  checked 8/40 lines in 0_arial (before training)
+  checked 9/40 lines in 0_arial (before training)
+  checked 10/40 lines in 0_arial (before training)
+  checked 11/40 lines in 0_arial (before training)
+  checked 12/40 lines in 0_arial (before training)
+  checked 13/40 lines in 0_arial (before training)
+  checked 14/40 lines in 0_arial (before training)
+  checked 15/40 lines in 0_arial (before training)
+  checked 16/40 lines in 0_arial (before training)
+  checked 17/40 lines in 0_arial (before training)
+  checked 18/40 lines in 0_arial (before training)
+  checked 19/40 lines in 0_arial (before training)
+  checked 20/40 lines in 0_arial (before training)
+  checked 21/40 lines in 0_arial (before training)
+  checked 22/40 lines in 0_arial (before training)
+  checked 23/40 lines in 0_arial (before training)
+  checked 24/40 lines in 0_arial (before training)
+  checked 25/40 lines in 0_arial (before training)
+  checked 26/40 lines in 0_arial (before training)
+  checked 27/40 lines in 0_arial (before training)
+  checked 28/40 lines in 0_arial (before training)
+  checked 29/40 lines in 0_arial (before training)
+  checked 30/40 lines in 0_arial (before training)
+  checked 31/40 lines in 0_arial (before training)
+  checked 32/40 lines in 0_arial (before training)
+  checked 33/40 lines in 0_arial (before training)
+  checked 34/40 lines in 0_arial (before training)
+  checked 35/40 lines in 0_arial (before training)
+  checked 36/40 lines in 0_arial (before training)
+  checked 37/40 lines in 0_arial (before training)
+  checked 38/40 lines in 0_arial (before training)
+  checked 39/40 lines in 0_arial (before training)
+  checked 40/40 lines in 0_arial (before training)
+0_arial before training: 16/40 lines pass, CER 0.42
+  PASS  Texture pack reloaded with 359 resources
+  FAIL  expected: Failed to load mod quark 2.0.0-beta.4: missing dependency org.apache.logging.log4j
+        got:      dependency org apache logging logd)
+  FAIL  expected: Error loading class net.minecraftforge.fmlcore.cloth-config in cloth-config-0.14.22.jar
+        got:      configinclothconfig.0.14.22ja"
+  FAIL  expected: Crash report saved to D:\Games\MultiMC\crash-reports\crash-2026-11-04.txt
+        got:
+  PASS  farmersdelight 5.4.0 is already installed in 1.20.1 Forge
+  FAIL  expected: Failed to load mod oculus 0.15.3: missing dependency net.minecraftforge.fmlcore
+        got:      Failed ecpattforse frloore 0.15.3: missing dependency
+  FAIL  expected: Missing dependency: net.fabricmc.loader version 1.21 required by sodium
+        got:      required by sodium net.fabricmc.loader version 1.21
+  PASS  Skipping waystones: incompatible with forge 0.15.3
+  PASS  Skipping glassseam-fix: incompatible with forge 3.1.8
+  FAIL  expected: Error loading class net.minecraftforge.fmlcore.oculus in oculus-1.20.1.jar
+        got:      Sor ey ‘ar net.minecraftforge.fmlicore.oculus in
+  PASS  Launching 1.20.1 Forge with 2048 MB of memory
+  PASS  Downloaded modmenu-1.19.2.jar in 206 seconds
+  FAIL  expected: Chunk loading took 97 ms in dimension minecraft:overworld
+        got:      mineorattoverwerld
+  FAIL  expected: Failed to load mod terralith 47.4.10: missing dependency org.spongepowered.mixin
+        got:      org 2p onqepe moe yer 47.4.10: missing dependency
+  PASS  Downloaded cloth-config-1.16.5.jar in 90 seconds
+  FAIL  expected: Unable to open D:\Games\MultiMC\libraries\com\google\guava\3.1.8\quark-3.1.8.jar
+        got:      ca nest Cibra ries\com\google\guava\3.1.8\quark-
+  PASS  Found 248 mods, 0 failed to load
+  FAIL  expected: Set JVM argument -Xmx4096M for 1.21 Survival
+        got:      set JVM argument -Xmx4096M for 1.21 Survival
+  PASS  Launching 1.16.5 Create with 6144 MB of memory
+  PASS  Texture pack reloaded with 68 resources
+  FAIL  expected: Saved world settings to disk successfully
+        got:      saved world settings to disk successfully
+  PASS  Found 618 mods, 5 failed to load
+  FAIL  expected: Unable to open D:\Games\MultiMC\libraries\net\minecraftforge\fmlcore\47.2.0\jei-47.2.0.jar
+        got:      Games loaves netinecetexgeinort7 2
+  FAIL  expected: Error loading class net.fabricmc.loader.create in create-1.19.2.jar
+        got:      St eng an net.fabricmc.loader.create in
+  FAIL  expected: The Mod File E:\Games\MultiMC\instances\1.21 Survival\.minecraft\mods\biomesoplenty.jar has mods that were not found
+        got:
+  FAIL  expected: Missing dependency: org.spongepowered.mixin version 5.4.0 required by waystones
+        got:      540 recuited by wey ora-Spongepowered.mixin version
+  PASS  Retrying download of waystones: HTTP status 404
+  FAIL  expected: Unable to open E:\Games\MultiMC\libraries\net\fabricmc\loader\47.2.0\fabric-api-47.2.0.jar
+        got:      Gamestore netlatccoader7 2 eb
+  FAIL  expected: Failed to load mod fabric-api 3.1.8: missing dependency com.electronwizard.config
+        got:
+  FAIL  expected: Unable to open E:\Games\MultiMC\libraries\net\fabricmc\loader\3.1.8\terralith-3.1.8.jar
+        got:      a nes cllibra ries\net\fabricmc\loader\3.1.8\terral-
+  PASS  [INFO] Registered 803 recipes from create
+  FAIL  expected: The Mod File D:\Games\MultiMC\instances\1.21 Survival\.minecraft\mods\waystones.jar has mods that were not found
+        got:
+  PASS  [INFO] Registered 126 recipes from oculus
+  FAIL  expected: [WARN] Config file alexsmobs-common.toml is out of date
+        got:      Lae Config file alexsmobs-common.toml is out of
+  PASS  Texture pack reloaded with 771 resources
+  FAIL  expected: Mod mekanism requires Minecraft 1.19.2 but found 47.2.0
+        got:      none requires Minecraft 1.19.2 but found
+  PASS  [INFO] Registered 344 recipes from journeymap
+  FAIL  expected: java.lang.NoClassDefFoundError: com.google.guava/ironchests
+        got:      Java. ang. NoClassDelFounderror com.google.guava/
+  FAIL  expected: Skipping quark: incompatible with forge 2.0.0-beta.4
+        got:      okipping quark: incompatible with forge 2.0.0-beta.4
+  FAIL  expected: Server started on port 8080 after 24 seconds
+        got:      server started on port 8080 after 24 seconds
+Rendering 160 training lines in 0_arial (weight 1)
+Still working: 60 s since the start, 28 s since the last line.
+Still working: 75 s since the start, 15 s since the last line.
+Rendered 160 training images in 0_arial
+  prepared 1/160 lines in 0_arial: train_0000.tif
+  prepared 2/160 lines in 0_arial: train_0001.tif
+  prepared 3/160 lines in 0_arial: train_0002.tif
+  prepared 4/160 lines in 0_arial: train_0003.tif
+  prepared 5/160 lines in 0_arial: train_0004.tif
+  prepared 6/160 lines in 0_arial: train_0005.tif
+  prepared 7/160 lines in 0_arial: train_0006.tif
+  prepared 8/160 lines in 0_arial: train_0007.tif
+  prepared 9/160 lines in 0_arial: train_0008.tif
+  prepared 10/160 lines in 0_arial: train_0009.tif
+  prepared 11/160 lines in 0_arial: train_0010.tif
+  prepared 12/160 lines in 0_arial: train_0011.tif
+  prepared 13/160 lines in 0_arial: train_0012.tif
+  prepared 14/160 lines in 0_arial: train_0013.tif
+  prepared 15/160 lines in 0_arial: train_0014.tif
+  prepared 16/160 lines in 0_arial: train_0015.tif
+  prepared 17/160 lines in 0_arial: train_0016.tif
+  prepared 18/160 lines in 0_arial: train_0017.tif
+  prepared 19/160 lines in 0_arial: train_0018.tif
+  prepared 20/160 lines in 0_arial: train_0019.tif
+  prepared 21/160 lines in 0_arial: train_0020.tif
+  prepared 22/160 lines in 0_arial: train_0021.tif
+  prepared 23/160 lines in 0_arial: train_0022.tif
+  prepared 24/160 lines in 0_arial: train_0023.tif
+  prepared 25/160 lines in 0_arial: train_0024.tif
+  prepared 26/160 lines in 0_arial: train_0025.tif
+  prepared 27/160 lines in 0_arial: train_0026.tif
+  prepared 28/160 lines in 0_arial: train_0027.tif
+  prepared 29/160 lines in 0_arial: train_0028.tif
+  prepared 30/160 lines in 0_arial: train_0029.tif
+  prepared 31/160 lines in 0_arial: train_0030.tif
+  prepared 32/160 lines in 0_arial: train_0031.tif
+  prepared 33/160 lines in 0_arial: train_0032.tif
+  prepared 34/160 lines in 0_arial: train_0033.tif
+  prepared 35/160 lines in 0_arial: train_0034.tif
+  prepared 36/160 lines in 0_arial: train_0035.tif
+  prepared 37/160 lines in 0_arial: train_0036.tif
+  prepared 38/160 lines in 0_arial: train_0037.tif
+  prepared 39/160 lines in 0_arial: train_0038.tif
+  prepared 40/160 lines in 0_arial: train_0039.tif
+  prepared 41/160 lines in 0_arial: train_0040.tif
+  prepared 42/160 lines in 0_arial: train_0041.tif
+  prepared 43/160 lines in 0_arial: train_0042.tif
+  prepared 44/160 lines in 0_arial: train_0043.tif
+  prepared 45/160 lines in 0_arial: train_0044.tif
+  prepared 46/160 lines in 0_arial: train_0045.tif
+  prepared 47/160 lines in 0_arial: train_0046.tif
+  prepared 48/160 lines in 0_arial: train_0047.tif
+  prepared 49/160 lines in 0_arial: train_0048.tif
+  prepared 50/160 lines in 0_arial: train_0049.tif
+  prepared 51/160 lines in 0_arial: train_0050.tif
+  prepared 52/160 lines in 0_arial: train_0051.tif
+  prepared 53/160 lines in 0_arial: train_0052.tif
+  prepared 54/160 lines in 0_arial: train_0053.tif
+  prepared 55/160 lines in 0_arial: train_0054.tif
+  prepared 56/160 lines in 0_arial: train_0055.tif
+  prepared 57/160 lines in 0_arial: train_0056.tif
+  prepared 58/160 lines in 0_arial: train_0057.tif
+  prepared 59/160 lines in 0_arial: train_0058.tif
+  prepared 60/160 lines in 0_arial: train_0059.tif
+  prepared 61/160 lines in 0_arial: train_0060.tif
+  prepared 62/160 lines in 0_arial: train_0061.tif
+  prepared 63/160 lines in 0_arial: train_0062.tif
+  prepared 64/160 lines in 0_arial: train_0063.tif
+  prepared 65/160 lines in 0_arial: train_0064.tif
+  prepared 66/160 lines in 0_arial: train_0065.tif
+  prepared 67/160 lines in 0_arial: train_0066.tif
+  prepared 68/160 lines in 0_arial: train_0067.tif
+  prepared 69/160 lines in 0_arial: train_0068.tif
+  prepared 70/160 lines in 0_arial: train_0069.tif
+  prepared 71/160 lines in 0_arial: train_0070.tif
+  prepared 72/160 lines in 0_arial: train_0071.tif
+  prepared 73/160 lines in 0_arial: train_0072.tif
+  prepared 74/160 lines in 0_arial: train_0073.tif
+  prepared 75/160 lines in 0_arial: train_0074.tif
+  prepared 76/160 lines in 0_arial: train_0075.tif
+  prepared 77/160 lines in 0_arial: train_0076.tif
+  prepared 78/160 lines in 0_arial: train_0077.tif
+  prepared 79/160 lines in 0_arial: train_0078.tif
+  prepared 80/160 lines in 0_arial: train_0079.tif
+  prepared 81/160 lines in 0_arial: train_0080.tif
+  prepared 82/160 lines in 0_arial: train_0081.tif
+  prepared 83/160 lines in 0_arial: train_0082.tif
+  prepared 84/160 lines in 0_arial: train_0083.tif
+  prepared 85/160 lines in 0_arial: train_0084.tif
+  prepared 86/160 lines in 0_arial: train_0085.tif
+  prepared 87/160 lines in 0_arial: train_0086.tif
+  prepared 88/160 lines in 0_arial: train_0087.tif
+  prepared 89/160 lines in 0_arial: train_0088.tif
+  prepared 90/160 lines in 0_arial: train_0089.tif
+  prepared 91/160 lines in 0_arial: train_0090.tif
+  prepared 92/160 lines in 0_arial: train_0091.tif
+  prepared 93/160 lines in 0_arial: train_0092.tif
+  prepared 94/160 lines in 0_arial: train_0093.tif
+  prepared 95/160 lines in 0_arial: train_0094.tif
+  prepared 96/160 lines in 0_arial: train_0095.tif
+  prepared 97/160 lines in 0_arial: train_0096.tif
+  prepared 98/160 lines in 0_arial: train_0097.tif
+  prepared 99/160 lines in 0_arial: train_0098.tif
+  prepared 100/160 lines in 0_arial: train_0099.tif
+  prepared 101/160 lines in 0_arial: train_0100.tif
+  prepared 102/160 lines in 0_arial: train_0101.tif
+  prepared 103/160 lines in 0_arial: train_0102.tif
+  prepared 104/160 lines in 0_arial: train_0103.tif
+  prepared 105/160 lines in 0_arial: train_0104.tif
+  prepared 106/160 lines in 0_arial: train_0105.tif
+  prepared 107/160 lines in 0_arial: train_0106.tif
+  prepared 108/160 lines in 0_arial: train_0107.tif
+  prepared 109/160 lines in 0_arial: train_0108.tif
+  prepared 110/160 lines in 0_arial: train_0109.tif
+  prepared 111/160 lines in 0_arial: train_0110.tif
+  prepared 112/160 lines in 0_arial: train_0111.tif
+  prepared 113/160 lines in 0_arial: train_0112.tif
+  prepared 114/160 lines in 0_arial: train_0113.tif
+  prepared 115/160 lines in 0_arial: train_0114.tif
+  prepared 116/160 lines in 0_arial: train_0115.tif
+  prepared 117/160 lines in 0_arial: train_0116.tif
+  prepared 118/160 lines in 0_arial: train_0117.tif
+  prepared 119/160 lines in 0_arial: train_0118.tif
+  prepared 120/160 lines in 0_arial: train_0119.tif
+  prepared 121/160 lines in 0_arial: train_0120.tif
+  prepared 122/160 lines in 0_arial: train_0121.tif
+  prepared 123/160 lines in 0_arial: train_0122.tif
+  prepared 124/160 lines in 0_arial: train_0123.tif
+  prepared 125/160 lines in 0_arial: train_0124.tif
+  prepared 126/160 lines in 0_arial: train_0125.tif
+  prepared 127/160 lines in 0_arial: train_0126.tif
+  prepared 128/160 lines in 0_arial: train_0127.tif
+  prepared 129/160 lines in 0_arial: train_0128.tif
+  prepared 130/160 lines in 0_arial: train_0129.tif
+  prepared 131/160 lines in 0_arial: train_0130.tif
+  prepared 132/160 lines in 0_arial: train_0131.tif
+  prepared 133/160 lines in 0_arial: train_0132.tif
+  prepared 134/160 lines in 0_arial: train_0133.tif
+  prepared 135/160 lines in 0_arial: train_0134.tif
+  prepared 136/160 lines in 0_arial: train_0135.tif
+  prepared 137/160 lines in 0_arial: train_0136.tif
+  prepared 138/160 lines in 0_arial: train_0137.tif
+  prepared 139/160 lines in 0_arial: train_0138.tif
+  prepared 140/160 lines in 0_arial: train_0139.tif
+  prepared 141/160 lines in 0_arial: train_0140.tif
+  prepared 142/160 lines in 0_arial: train_0141.tif
+  prepared 143/160 lines in 0_arial: train_0142.tif
+  prepared 144/160 lines in 0_arial: train_0143.tif
+  prepared 145/160 lines in 0_arial: train_0144.tif
+  prepared 146/160 lines in 0_arial: train_0145.tif
+  prepared 147/160 lines in 0_arial: train_0146.tif
+  prepared 148/160 lines in 0_arial: train_0147.tif
+  prepared 149/160 lines in 0_arial: train_0148.tif
+  prepared 150/160 lines in 0_arial: train_0149.tif
+  prepared 151/160 lines in 0_arial: train_0150.tif
+  prepared 152/160 lines in 0_arial: train_0151.tif
+  prepared 153/160 lines in 0_arial: train_0152.tif
+  prepared 154/160 lines in 0_arial: train_0153.tif
+  prepared 155/160 lines in 0_arial: train_0154.tif
+  prepared 156/160 lines in 0_arial: train_0155.tif
+  prepared 157/160 lines in 0_arial: train_0156.tif
+  prepared 158/160 lines in 0_arial: train_0157.tif
+  prepared 159/160 lines in 0_arial: train_0158.tif
+  prepared 160/160 lines in 0_arial: train_0159.tif
+Prepared 160 lines in 0_arial
+Training list: 160 entries
+$ lstmtraining --model_output /mnt/c/Users/Nbvx Teo/Documents/_Programming/GitHub/TesseractOCRTrainer/data/runs/20261126-221609_minecraft/minecraft/checkpoints/minecraft --continue_from /mnt/c/Users/Nbvx Teo/Documents/_Programming/GitHub/TesseractOCRTrainer/data/runs/20261126-221609_minecraft/minecraft/base/eng.lstm --traineddata /mnt/c/Users/Nbvx Teo/Documents/_Programming/GitHub/TesseractOCRTrainer/data/runs/20261126-221609_minecraft/minecraft/base/eng.traineddata --train_listfile /mnt/c/Users/Nbvx Teo/Documents/_Programming/GitHub/TesseractOCRTrainer/data/runs/20261126-221609_minecraft/minecraft/train_list.txt --max_iterations 400
+Loaded file /mnt/c/Users/Nbvx Teo/Documents/_Programming/GitHub/TesseractOCRTrainer/data/runs/20261126-221609_minecraft/minecraft/base/eng.lstm, unpacking...
+Warning: LSTMTrainer deserialized an LSTMRecognizer!
+Continuing from /mnt/c/Users/Nbvx Teo/Documents/_Programming/GitHub/TesseractOCRTrainer/data/runs/20261126-221609_minecraft/minecraft/base/eng.lstm
+Loaded 3/3 lines (1-3) of document /mnt/c/Users/Nbvx Teo/Documents/_Programming/GitHub/TesseractOCRTrainer/data/runs/20261126-221609_minecraft/minecraft/train/0_arial/train_0001.lstmf
+Loaded 2/2 lines (1-2) of document /mnt/c/Users/Nbvx Teo/Documents/_Programming/GitHub/TesseractOCRTrainer/data/runs/20261126-221609_minecraft/minecraft/train/0_arial/train_0004.lstmf
+Loaded 2/2 lines (1-2) of document /mnt/c/Users/Nbvx Teo/Documents/_Programming/GitHub/TesseractOCRTrainer/data/runs/20261126-221609_minecraft/minecraft/train/0_arial/train_0005.lstmf
+Loaded 3/3 lines (1-3) of document /mnt/c/Users/Nbvx Teo/Documents/_Programming/GitHub/TesseractOCRTrainer/data/runs/20261126-221609_minecraft/minecraft/train/0_arial/train_0006.lstmf
+Loaded 2/2 lines (1-2) of document /mnt/c/Users/Nbvx Teo/Documents/_Programming/GitHub/TesseractOCRTrainer/data/runs/20261126-221609_minecraft/minecraft/train/0_arial/train_0008.lstmf
+Loaded 2/2 lines (1-2) of document /mnt/c/Users/Nbvx Teo/Documents/_Programming/GitHub/TesseractOCRTrainer/data/runs/20261126-221609_minecraft/minecraft/train/0_arial/train_0009.lstmf
+Loaded 3/3 lines (1-3) of document /mnt/c/Users/Nbvx Teo/Documents/_Programming/GitHub/TesseractOCRTrainer/data/runs/20261126-221609_minecraft/minecraft/train/0_arial/train_0010.lstmf
+Loaded 2/2 lines (1-2) of document /mnt/c/Users/Nbvx Teo/Documents/_Programming/GitHub/TesseractOCRTrainer/data/runs/20261126-221609_minecraft/minecraft/train/0_arial/train_0013.lstmf
+Loaded 3/3 lines (1-3) of document /mnt/c/Users/Nbvx Teo/Documents/_Programming/GitHub/TesseractOCRTrainer/data/runs/20261126-221609_minecraft/minecraft/train/0_arial/train_0015.lstmf
+Loaded 2/2 lines (1-2) of document /mnt/c/Users/Nbvx Teo/Documents/_Programming/GitHub/TesseractOCRTrainer/data/runs/20261126-221609_minecraft/minecraft/train/0_arial/train_0019.lstmf
+Loaded 2/2 lines (1-2) of document /mnt/c/Users/Nbvx Teo/Documents/_Programming/GitHub/TesseractOCRTrainer/data/runs/20261126-221609_minecraft/minecraft/train/0_arial/train_0020.lstmf
+Loaded 2/2 lines (1-2) of document /mnt/c/Users/Nbvx Teo/Documents/_Programming/GitHub/TesseractOCRTrainer/data/runs/20261126-221609_minecraft/minecraft/train/0_arial/train_0022.lstmf
+Loaded 3/3 lines (1-3) of document /mnt/c/Users/Nbvx Teo/Documents/_Programming/GitHub/TesseractOCRTrainer/data/runs/20261126-221609_minecraft/minecraft/train/0_arial/train_0023.lstmf
+Loaded 2/2 lines (1-2) of document /mnt/c/Users/Nbvx Teo/Documents/_Programming/GitHub/TesseractOCRTrainer/data/runs/20261126-221609_minecraft/minecraft/train/0_arial/train_0024.lstmf
+Loaded 2/2 lines (1-2) of document /mnt/c/Users/Nbvx Teo/Documents/_Programming/GitHub/TesseractOCRTrainer/data/runs/20261126-221609_minecraft/minecraft/train/0_arial/train_0028.lstmf
+Loaded 2/2 lines (1-2) of document /mnt/c/Users/Nbvx Teo/Documents/_Programming/GitHub/TesseractOCRTrainer/data/runs/20261126-221609_minecraft/minecraft/train/0_arial/train_0031.lstmf
+Loaded 2/2 lines (1-2) of document /mnt/c/Users/Nbvx Teo/Documents/_Programming/GitHub/TesseractOCRTrainer/data/runs/20261126-221609_minecraft/minecraft/train/0_arial/train_0034.lstmf
+Loaded 2/2 lines (1-2) of document /mnt/c/Users/Nbvx Teo/Documents/_Programming/GitHub/TesseractOCRTrainer/data/runs/20261126-221609_minecraft/minecraft/train/0_arial/train_0035.lstmf
+Loaded 3/3 lines (1-3) of document /mnt/c/Users/Nbvx Teo/Documents/_Programming/GitHub/TesseractOCRTrainer/data/runs/20261126-221609_minecraft/minecraft/train/0_arial/train_0037.lstmf
+Loaded 2/2 lines (1-2) of document /mnt/c/Users/Nbvx Teo/Documents/_Programming/GitHub/TesseractOCRTrainer/data/runs/20261126-221609_minecraft/minecraft/train/0_arial/train_0039.lstmf
+Loaded 2/2 lines (1-2) of document /mnt/c/Users/Nbvx Teo/Documents/_Programming/GitHub/TesseractOCRTrainer/data/runs/20261126-221609_minecraft/minecraft/train/0_arial/train_0040.lstmf
+Loaded 3/3 lines (1-3) of document /mnt/c/Users/Nbvx Teo/Documents/_Programming/GitHub/TesseractOCRTrainer/data/runs/20261126-221609_minecraft/minecraft/train/0_arial/train_0041.lstmf
+Loaded 2/2 lines (1-2) of document /mnt/c/Users/Nbvx Teo/Documents/_Programming/GitHub/TesseractOCRTrainer/data/runs/20261126-221609_minecraft/minecraft/train/0_arial/train_0043.lstmf
+Loaded 2/2 lines (1-2) of document /mnt/c/Users/Nbvx Teo/Documents/_Programming/GitHub/TesseractOCRTrainer/data/runs/20261126-221609_minecraft/minecraft/train/0_arial/train_0047.lstmf
+Loaded 3/3 lines (1-3) of document /mnt/c/Users/Nbvx Teo/Documents/_Programming/GitHub/TesseractOCRTrainer/data/runs/20261126-221609_minecraft/minecraft/train/0_arial/train_0048.lstmf
+Loaded 2/2 lines (1-2) of document /mnt/c/Users/Nbvx Teo/Documents/_Programming/GitHub/TesseractOCRTrainer/data/runs/20261126-221609_minecraft/minecraft/train/0_arial/train_0049.lstmf
+Loaded 3/3 lines (1-3) of document /mnt/c/Users/Nbvx Teo/Documents/_Programming/GitHub/TesseractOCRTrainer/data/runs/20261126-221609_minecraft/minecraft/train/0_arial/train_0052.lstmf
+Loaded 2/2 lines (1-2) of document /mnt/c/Users/Nbvx Teo/Documents/_Programming/GitHub/TesseractOCRTrainer/data/runs/20261126-221609_minecraft/minecraft/train/0_arial/train_0053.lstmf
+Loaded 2/2 lines (1-2) of document /mnt/c/Users/Nbvx Teo/Documents/_Programming/GitHub/TesseractOCRTrainer/data/runs/20261126-221609_minecraft/minecraft/train/0_arial/train_0056.lstmf
+Loaded 2/2 lines (1-2) of document /mnt/c/Users/Nbvx Teo/Documents/_Programming/GitHub/TesseractOCRTrainer/data/runs/20261126-221609_minecraft/minecraft/train/0_arial/train_0057.lstmf
+Loaded 2/2 lines (1-2) of document /mnt/c/Users/Nbvx Teo/Documents/_Programming/GitHub/TesseractOCRTrainer/data/runs/20261126-221609_minecraft/minecraft/train/0_arial/train_0061.lstmf
+Loaded 2/2 lines (1-2) of document /mnt/c/Users/Nbvx Teo/Documents/_Programming/GitHub/TesseractOCRTrainer/data/runs/20261126-221609_minecraft/minecraft/train/0_arial/train_0064.lstmf
+Loaded 3/3 lines (1-3) of document /mnt/c/Users/Nbvx Teo/Documents/_Programming/GitHub/TesseractOCRTrainer/data/runs/20261126-221609_minecraft/minecraft/train/0_arial/train_0065.lstmf
+Loaded 2/2 lines (1-2) of document /mnt/c/Users/Nbvx Teo/Documents/_Programming/GitHub/TesseractOCRTrainer/data/runs/20261126-221609_minecraft/minecraft/train/0_arial/train_0066.lstmf
+Loaded 2/2 lines (1-2) of document /mnt/c/Users/Nbvx Teo/Documents/_Programming/GitHub/TesseractOCRTrainer/data/runs/20261126-221609_minecraft/minecraft/train/0_arial/train_0069.lstmf
+Loaded 2/2 lines (1-2) of document /mnt/c/Users/Nbvx Teo/Documents/_Programming/GitHub/TesseractOCRTrainer/data/runs/20261126-221609_minecraft/minecraft/train/0_arial/train_0072.lstmf
+Loaded 2/2 lines (1-2) of document /mnt/c/Users/Nbvx Teo/Documents/_Programming/GitHub/TesseractOCRTrainer/data/runs/20261126-221609_minecraft/minecraft/train/0_arial/train_0073.lstmf
+Loaded 3/3 lines (1-3) of document /mnt/c/Users/Nbvx Teo/Documents/_Programming/GitHub/TesseractOCRTrainer/data/runs/20261126-221609_minecraft/minecraft/train/0_arial/train_0074.lstmf
+Loaded 2/2 lines (1-2) of document /mnt/c/Users/Nbvx Teo/Documents/_Programming/GitHub/TesseractOCRTrainer/data/runs/20261126-221609_minecraft/minecraft/train/0_arial/train_0075.lstmf
+Loaded 2/2 lines (1-2) of document /mnt/c/Users/Nbvx Teo/Documents/_Programming/GitHub/TesseractOCRTrainer/data/runs/20261126-221609_minecraft/minecraft/train/0_arial/train_0076.lstmf
+Loaded 2/2 lines (1-2) of document /mnt/c/Users/Nbvx Teo/Documents/_Programming/GitHub/TesseractOCRTrainer/data/runs/20261126-221609_minecraft/minecraft/train/0_arial/train_0077.lstmf
+Loaded 3/3 lines (1-3) of document /mnt/c/Users/Nbvx Teo/Documents/_Programming/GitHub/TesseractOCRTrainer/data/runs/20261126-221609_minecraft/minecraft/train/0_arial/train_0078.lstmf
+Loaded 2/2 lines (1-2) of document /mnt/c/Users/Nbvx Teo/Documents/_Programming/GitHub/TesseractOCRTrainer/data/runs/20261126-221609_minecraft/minecraft/train/0_arial/train_0079.lstmf
+Loaded 2/2 lines (1-2) of document /mnt/c/Users/Nbvx Teo/Documents/_Programming/GitHub/TesseractOCRTrainer/data/runs/20261126-221609_minecraft/minecraft/train/0_arial/train_0080.lstmf
+Loaded 2/2 lines (1-2) of document /mnt/c/Users/Nbvx Teo/Documents/_Programming/GitHub/TesseractOCRTrainer/data/runs/20261126-221609_minecraft/minecraft/train/0_arial/train_0082.lstmf
+Loaded 3/3 lines (1-3) of document /mnt/c/Users/Nbvx Teo/Documents/_Programming/GitHub/TesseractOCRTrainer/data/runs/20261126-221609_minecraft/minecraft/train/0_arial/train_0083.lstmf
+Loaded 3/3 lines (1-3) of document /mnt/c/Users/Nbvx Teo/Documents/_Programming/GitHub/TesseractOCRTrainer/data/runs/20261126-221609_minecraft/minecraft/train/0_arial/train_0085.lstmf
+Loaded 2/2 lines (1-2) of document /mnt/c/Users/Nbvx Teo/Documents/_Programming/GitHub/TesseractOCRTrainer/data/runs/20261126-221609_minecraft/minecraft/train/0_arial/train_0087.lstmf
+Loaded 2/2 lines (1-2) of document /mnt/c/Users/Nbvx Teo/Documents/_Programming/GitHub/TesseractOCRTrainer/data/runs/20261126-221609_minecraft/minecraft/train/0_arial/train_0092.lstmf
+Loaded 2/2 lines (1-2) of document /mnt/c/Users/Nbvx Teo/Documents/_Programming/GitHub/TesseractOCRTrainer/data/runs/20261126-221609_minecraft/minecraft/train/0_arial/train_0096.lstmf
+Loaded 2/2 lines (1-2) of document /mnt/c/Users/Nbvx Teo/Documents/_Programming/GitHub/TesseractOCRTrainer/data/runs/20261126-221609_minecraft/minecraft/train/0_arial/train_0097.lstmf
+Loaded 3/3 lines (1-3) of document /mnt/c/Users/Nbvx Teo/Documents/_Programming/GitHub/TesseractOCRTrainer/data/runs/20261126-221609_minecraft/minecraft/train/0_arial/train_0098.lstmf
+Loaded 2/2 lines (1-2) of document /mnt/c/Users/Nbvx Teo/Documents/_Programming/GitHub/TesseractOCRTrainer/data/runs/20261126-221609_minecraft/minecraft/train/0_arial/train_0100.lstmf
+Loaded 2/2 lines (1-2) of document /mnt/c/Users/Nbvx Teo/Documents/_Programming/GitHub/TesseractOCRTrainer/data/runs/20261126-221609_minecraft/minecraft/train/0_arial/train_0101.lstmf
+Loaded 2/2 lines (1-2) of document /mnt/c/Users/Nbvx Teo/Documents/_Programming/GitHub/TesseractOCRTrainer/data/runs/20261126-221609_minecraft/minecraft/train/0_arial/train_0106.lstmf
+Loaded 3/3 lines (1-3) of document /mnt/c/Users/Nbvx Teo/Documents/_Programming/GitHub/TesseractOCRTrainer/data/runs/20261126-221609_minecraft/minecraft/train/0_arial/train_0107.lstmf
+2 Percent improvement time=4, best error was 100 @ 0
+At iteration 4/100/100, mean rms=0.167%, delta=0.046%, BCER train=0.106%, BWER train=2.250%, skip ratio=0.000%, New best BCER = 0.106 Transitioned to stage 1 wrote best model:/mnt/c/Users/Nbvx Teo/Documents/_Programming/GitHub/TesseractOCRTrainer/data/runs/20261126-221609_minecraft/minecraft/checkpoints/minecraft_0.106_4_100.checkpoint wrote checkpoint.
+Loaded 3/3 lines (1-3) of document /mnt/c/Users/Nbvx Teo/Documents/_Programming/GitHub/TesseractOCRTrainer/data/runs/20261126-221609_minecraft/minecraft/train/0_arial/train_0108.lstmf
+Loaded 2/2 lines (1-2) of document /mnt/c/Users/Nbvx Teo/Documents/_Programming/GitHub/TesseractOCRTrainer/data/runs/20261126-221609_minecraft/minecraft/train/0_arial/train_0109.lstmf
+Loaded 2/2 lines (1-2) of document /mnt/c/Users/Nbvx Teo/Documents/_Programming/GitHub/TesseractOCRTrainer/data/runs/20261126-221609_minecraft/minecraft/train/0_arial/train_0113.lstmf
+Loaded 2/2 lines (1-2) of document /mnt/c/Users/Nbvx Teo/Documents/_Programming/GitHub/TesseractOCRTrainer/data/runs/20261126-221609_minecraft/minecraft/train/0_arial/train_0117.lstmf
+Loaded 2/2 lines (1-2) of document /mnt/c/Users/Nbvx Teo/Documents/_Programming/GitHub/TesseractOCRTrainer/data/runs/20261126-221609_minecraft/minecraft/train/0_arial/train_0119.lstmf
+Loaded 2/2 lines (1-2) of document /mnt/c/Users/Nbvx Teo/Documents/_Programming/GitHub/TesseractOCRTrainer/data/runs/20261126-221609_minecraft/minecraft/train/0_arial/train_0122.lstmf
+Loaded 3/3 lines (1-3) of document /mnt/c/Users/Nbvx Teo/Documents/_Programming/GitHub/TesseractOCRTrainer/data/runs/20261126-221609_minecraft/minecraft/train/0_arial/train_0124.lstmf
+Loaded 3/3 lines (1-3) of document /mnt/c/Users/Nbvx Teo/Documents/_Programming/GitHub/TesseractOCRTrainer/data/runs/20261126-221609_minecraft/minecraft/train/0_arial/train_0126.lstmf
+Loaded 2/2 lines (1-2) of document /mnt/c/Users/Nbvx Teo/Documents/_Programming/GitHub/TesseractOCRTrainer/data/runs/20261126-221609_minecraft/minecraft/train/0_arial/train_0128.lstmf
+Loaded 2/2 lines (1-2) of document /mnt/c/Users/Nbvx Teo/Documents/_Programming/GitHub/TesseractOCRTrainer/data/runs/20261126-221609_minecraft/minecraft/train/0_arial/train_0129.lstmf
+Loaded 2/2 lines (1-2) of document /mnt/c/Users/Nbvx Teo/Documents/_Programming/GitHub/TesseractOCRTrainer/data/runs/20261126-221609_minecraft/minecraft/train/0_arial/train_0130.lstmf
+Loaded 2/2 lines (1-2) of document /mnt/c/Users/Nbvx Teo/Documents/_Programming/GitHub/TesseractOCRTrainer/data/runs/20261126-221609_minecraft/minecraft/train/0_arial/train_0132.lstmf
+Loaded 2/2 lines (1-2) of document /mnt/c/Users/Nbvx Teo/Documents/_Programming/GitHub/TesseractOCRTrainer/data/runs/20261126-221609_minecraft/minecraft/train/0_arial/train_0133.lstmf
+Loaded 3/3 lines (1-3) of document /mnt/c/Users/Nbvx Teo/Documents/_Programming/GitHub/TesseractOCRTrainer/data/runs/20261126-221609_minecraft/minecraft/train/0_arial/train_0136.lstmf
+Loaded 3/3 lines (1-3) of document /mnt/c/Users/Nbvx Teo/Documents/_Programming/GitHub/TesseractOCRTrainer/data/runs/20261126-221609_minecraft/minecraft/train/0_arial/train_0137.lstmf
+Loaded 2/2 lines (1-2) of document /mnt/c/Users/Nbvx Teo/Documents/_Programming/GitHub/TesseractOCRTrainer/data/runs/20261126-221609_minecraft/minecraft/train/0_arial/train_0138.lstmf
+Loaded 2/2 lines (1-2) of document /mnt/c/Users/Nbvx Teo/Documents/_Programming/GitHub/TesseractOCRTrainer/data/runs/20261126-221609_minecraft/minecraft/train/0_arial/train_0142.lstmf
+Loaded 2/2 lines (1-2) of document /mnt/c/Users/Nbvx Teo/Documents/_Programming/GitHub/TesseractOCRTrainer/data/runs/20261126-221609_minecraft/minecraft/train/0_arial/train_0143.lstmf
+Loaded 2/2 lines (1-2) of document /mnt/c/Users/Nbvx Teo/Documents/_Programming/GitHub/TesseractOCRTrainer/data/runs/20261126-221609_minecraft/minecraft/train/0_arial/train_0146.lstmf
+Loaded 2/2 lines (1-2) of document /mnt/c/Users/Nbvx Teo/Documents/_Programming/GitHub/TesseractOCRTrainer/data/runs/20261126-221609_minecraft/minecraft/train/0_arial/train_0148.lstmf
+Loaded 3/3 lines (1-3) of document /mnt/c/Users/Nbvx Teo/Documents/_Programming/GitHub/TesseractOCRTrainer/data/runs/20261126-221609_minecraft/minecraft/train/0_arial/train_0150.lstmf
+Loaded 2/2 lines (1-2) of document /mnt/c/Users/Nbvx Teo/Documents/_Programming/GitHub/TesseractOCRTrainer/data/runs/20261126-221609_minecraft/minecraft/train/0_arial/train_0152.lstmf
+Loaded 2/2 lines (1-2) of document /mnt/c/Users/Nbvx Teo/Documents/_Programming/GitHub/TesseractOCRTrainer/data/runs/20261126-221609_minecraft/minecraft/train/0_arial/train_0155.lstmf
+At iteration 5/200/200, mean rms=0.148%, delta=0.032%, BCER train=0.133%, BWER train=2.125%, skip ratio=0.000%, New worst BCER = 0.133 wrote checkpoint.
+2 Percent improvement time=5, best error was 100 @ 0
+At iteration 5/300/300, mean rms=0.132%, delta=0.021%, BCER train=0.089%, BWER train=1.417%, skip ratio=0.000%, New best BCER = 0.089 wrote best model:/mnt/c/Users/Nbvx Teo/Documents/_Programming/GitHub/TesseractOCRTrainer/data/runs/20261126-221609_minecraft/minecraft/checkpoints/minecraft_0.089_5_300.checkpoint wrote checkpoint.
+2 Percent improvement time=5, best error was 100 @ 0
+At iteration 5/400/400, mean rms=0.122%, delta=0.016%, BCER train=0.067%, BWER train=1.063%, skip ratio=0.000%, New best BCER = 0.067 wrote best model:/mnt/c/Users/Nbvx Teo/Documents/_Programming/GitHub/TesseractOCRTrainer/data/runs/20261126-221609_minecraft/minecraft/checkpoints/minecraft_0.067_5_400.checkpoint wrote checkpoint.
+Finished! Selected model with minimal training error rate (BCER) = 0.067
+$ lstmtraining --stop_training --continue_from /mnt/c/Users/Nbvx Teo/Documents/_Programming/GitHub/TesseractOCRTrainer/data/runs/20261126-221609_minecraft/minecraft/checkpoints/minecraft_checkpoint --traineddata /mnt/c/Users/Nbvx Teo/Documents/_Programming/GitHub/TesseractOCRTrainer/data/runs/20261126-221609_minecraft/minecraft/base/eng.traineddata --model_output /mnt/c/Users/Nbvx Teo/Documents/_Programming/GitHub/TesseractOCRTrainer/data/runs/20261126-221609_minecraft/minecraft/model/minecraft.traineddata
+Loaded file /mnt/c/Users/Nbvx Teo/Documents/_Programming/GitHub/TesseractOCRTrainer/data/runs/20261126-221609_minecraft/minecraft/checkpoints/minecraft_checkpoint, unpacking...
+  checked 1/40 lines in 0_arial (after training)
+  checked 2/40 lines in 0_arial (after training)
+  checked 3/40 lines in 0_arial (after training)
+  checked 4/40 lines in 0_arial (after training)
+  checked 5/40 lines in 0_arial (after training)
+  checked 6/40 lines in 0_arial (after training)
+  checked 7/40 lines in 0_arial (after training)
+  checked 8/40 lines in 0_arial (after training)
+  checked 9/40 lines in 0_arial (after training)
+  checked 10/40 lines in 0_arial (after training)
+  checked 11/40 lines in 0_arial (after training)
+  checked 12/40 lines in 0_arial (after training)
+  checked 13/40 lines in 0_arial (after training)
+  checked 14/40 lines in 0_arial (after training)
+  checked 15/40 lines in 0_arial (after training)
+  checked 16/40 lines in 0_arial (after training)
+  checked 17/40 lines in 0_arial (after training)
+  checked 18/40 lines in 0_arial (after training)
+  checked 19/40 lines in 0_arial (after training)
+  checked 20/40 lines in 0_arial (after training)
+  checked 21/40 lines in 0_arial (after training)
+  checked 22/40 lines in 0_arial (after training)
+  checked 23/40 lines in 0_arial (after training)
+  checked 24/40 lines in 0_arial (after training)
+  checked 25/40 lines in 0_arial (after training)
+  checked 26/40 lines in 0_arial (after training)
+  checked 27/40 lines in 0_arial (after training)
+  checked 28/40 lines in 0_arial (after training)
+  checked 29/40 lines in 0_arial (after training)
+  checked 30/40 lines in 0_arial (after training)
+  checked 31/40 lines in 0_arial (after training)
+  checked 32/40 lines in 0_arial (after training)
+  checked 33/40 lines in 0_arial (after training)
+  checked 34/40 lines in 0_arial (after training)
+  checked 35/40 lines in 0_arial (after training)
+  checked 36/40 lines in 0_arial (after training)
+  checked 37/40 lines in 0_arial (after training)
+  checked 38/40 lines in 0_arial (after training)
+  checked 39/40 lines in 0_arial (after training)
+  checked 40/40 lines in 0_arial (after training)
+0_arial after training: 20/40 lines pass, CER 0.4163
+  PASS  Texture pack reloaded with 359 resources
+  FAIL  expected: Failed to load mod quark 2.0.0-beta.4: missing dependency org.apache.logging.log4j
+        got:      dbpendency org apache logging od |
+  FAIL  expected: Error loading class net.minecraftforge.fmlcore.cloth-config in cloth-config-0.14.22.jar
+        got:      config in cloh-contg-0.14 52501 Co
+  FAIL  expected: Crash report saved to D:\Games\MultiMC\crash-reports\crash-2026-11-04.txt
+        got:
+  PASS  farmersdelight 5.4.0 is already installed in 1.20.1 Forge
+  FAIL  expected: Failed to load mod oculus 0.15.3: missing dependency net.minecraftforge.fmlcore
+        got:      Failec ores fat 0.15.3: missing dependency
+  FAIL  expected: Missing dependency: net.fabricmc.loader version 1.21 required by sodium
+        got:      ilo asiicd net.fabricmc.loader version 1.21
+  PASS  Skipping waystones: incompatible with forge 0.15.3
+  PASS  Skipping glassseam-fix: incompatible with forge 3.1.8
+  FAIL  expected: Error loading class net.minecraftforge.fmlcore.oculus in oculus-1.20.1.jar
+        got:      emer oadng oss net.minecraftforge.fmlcore.oculus in
+  PASS  Launching 1.20.1 Forge with 2048 MB of memory
+  PASS  Downloaded modmenu-1.19.2.jar in 206 seconds
+  FAIL  expected: Chunk loading took 97 ms in dimension minecraft:overworld
+        got:      rinecraftovemord To
+  FAIL  expected: Failed to load mod terralith 47.4.10: missing dependency org.spongepowered.mixin
+        got:      en en mod rerraith 47.4.10: missing dependency
+  PASS  Downloaded cloth-config-1.16.5.jar in 90 seconds
+  FAIL  expected: Unable to open D:\Games\MultiMC\libraries\com\google\guava\3.1.8\quark-3.1.8.jar
+        got:      Ga nes Clibra ries\com\google\guava\3.1.8\quark-
+  PASS  Found 248 mods, 0 failed to load
+  PASS  Set JVM argument -Xmx4096M for 1.21 Survival
+  PASS  Launching 1.16.5 Create with 6144 MB of memory
+  PASS  Texture pack reloaded with 68 resources
+  PASS  Saved world settings to disk successfully
+  PASS  Found 618 mods, 5 failed to load
+  FAIL  expected: Unable to open D:\Games\MultiMC\libraries\net\minecraftforge\fmlcore\47.2.0\jei-47.2.0.jar
+        got:      Games aCe ntact 2
+  FAIL  expected: Error loading class net.fabricmc.loader.create in create-1.19.2.jar
+        got:      cor loading cass net.fabricmmc.loader.create in
+  FAIL  expected: The Mod File E:\Games\MultiMC\instances\1.21 Survival\.minecraft\mods\biomesoplenty.jar has mods that were not found
+        got:
+  FAIL  expected: Missing dependency: org.spongepowered.mixin version 5.4.0 required by waystones
+        got:      54.0 rectird by wy ord-spongepowered. mixin version
+  PASS  Retrying download of waystones: HTTP status 404
+  FAIL  expected: Unable to open E:\Games\MultiMC\libraries\net\fabricmc\loader\47.2.0\fabric-api-47.2.0.jar
+        got:      Games uC ntfatncrcoaderd? 2 ic
+  FAIL  expected: Failed to load mod fabric-api 3.1.8: missing dependency com.electronwizard.config
+        got:
+  FAIL  expected: Unable to open E:\Games\MultiMC\libraries\net\fabricmc\loader\3.1.8\terralith-3.1.8.jar
+        got:      ca resin Cuibra ries\net\fabricnc\loader\3.1.8\terral-
+  PASS  [INFO] Registered 803 recipes from create
+  FAIL  expected: The Mod File D:\Games\MultiMC\instances\1.21 Survival\.minecraft\mods\waystones.jar has mods that were not found
+        got:
+  PASS  [INFO] Registered 126 recipes from oculus
+  FAIL  expected: [WARN] Config file alexsmobs-common.toml is out of date
+        got:      Mb Config file alexsmobs-common.toml is out of
+  PASS  Texture pack reloaded with 771 resources
+  FAIL  expected: Mod mekanism requires Minecraft 1.19.2 but found 47.2.0
+        got:      og mekanism requires Minecraft 1.19.2 but found
+  PASS  [INFO] Registered 344 recipes from journeymap
+  FAIL  expected: java.lang.NoClassDefFoundError: com.google.guava/ironchests
+        got:      java. ang NoClassDeffoundEror com.google.guava/
+  PASS  Skipping quark: incompatible with forge 2.0.0-beta.4
+  PASS  Server started on port 8080 after 24 seconds
+
+Results (exact matches on held-out lines):
+  arial: before 16/40 (CER 0.42), after 20/40 (CER 0.4163)
+Model saved to: C:\Users\Nbvx Teo\Documents\_Programming\GitHub\TesseractOCRTrainer\data\runs\20261126-221609_minecraft\minecraft\model\minecraft.traineddata
+Log saved to: C:\Users\Nbvx Teo\Documents\_Programming\GitHub\TesseractOCRTrainer\data\logs\20261126-221609_minecraft.log

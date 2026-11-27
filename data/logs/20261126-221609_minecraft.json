@@ -1,0 +1,466 @@
+{
+  "model": "/mnt/c/Users/Nbvx Teo/Documents/_Programming/GitHub/TesseractOCRTrainer/data/runs/20261126-221609_minecraft/minecraft/model/minecraft.traineddata",
+  "name": "minecraft",
+  "scores": {
+    "0_arial": {
+      "baseline": {
+        "cer": 0.42,
+        "exact": 16,
+        "lines": [
+          {
+            "expected": "Texture pack reloaded with 359 resources",
+            "got": "Texture pack reloaded with 359 resources",
+            "pass": true
+          },
+          {
+            "expected": "Failed to load mod quark 2.0.0-beta.4: missing dependency org.apache.logging.log4j",
+            "got": "dependency org apache logging logd)",
+            "pass": false
+          },
+          {
+            "expected": "Error loading class net.minecraftforge.fmlcore.cloth-config in cloth-config-0.14.22.jar",
+            "got": "configinclothconfig.0.14.22ja\"",
+            "pass": false
+          },
+          {
+            "expected": "Crash report saved to D:\\Games\\MultiMC\\crash-reports\\crash-2026-11-04.txt",
+            "got": "",
+            "pass": false
+          },
+          {
+            "expected": "farmersdelight 5.4.0 is already installed in 1.20.1 Forge",
+            "got": "farmersdelight 5.4.0 is already installed in 1.20.1 Forge",
+            "pass": true
+          },
+          {
+            "expected": "Failed to load mod oculus 0.15.3: missing dependency net.minecraftforge.fmlcore",
+            "got": "Failed ecpattforse frloore 0.15.3: missing dependency",
+            "pass": false
+          },
+          {
+            "expected": "Missing dependency: net.fabricmc.loader version 1.21 required by sodium",
+            "got": "required by sodium net.fabricmc.loader version 1.21",
+            "pass": false
+          },
+          {
+            "expected": "Skipping waystones: incompatible with forge 0.15.3",
+            "got": "Skipping waystones: incompatible with forge 0.15.3",
+            "pass": true
+          },
+          {
+            "expected": "Skipping glassseam-fix: incompatible with forge 3.1.8",
+            "got": "Skipping glassseam-fix: incompatible with forge 3.1.8",
+            "pass": true
+          },
+          {
+            "expected": "Error loading class net.minecraftforge.fmlcore.oculus in oculus-1.20.1.jar",
+            "got": "Sor ey \u2018ar net.minecraftforge.fmlicore.oculus in",
+            "pass": false
+          },
+          {
+            "expected": "Launching 1.20.1 Forge with 2048 MB of memory",
+            "got": "Launching 1.20.1 Forge with 2048 MB of memory",
+            "pass": true
+          },
+          {
+            "expected": "Downloaded modmenu-1.19.2.jar in 206 seconds",
+            "got": "Downloaded modmenu-1.19.2.jar in 206 seconds",
+            "pass": true
+          },
+          {
+            "expected": "Chunk loading took 97 ms in dimension minecraft:overworld",
+            "got": "mineorattoverwerld",
+            "pass": false
+          },
+          {
+            "expected": "Failed to load mod terralith 47.4.10: missing dependency org.spongepowered.mixin",
+            "got": "org 2p onqepe moe yer 47.4.10: missing dependency",
+            "pass": false
+          },
+          {
+            "expected": "Downloaded cloth-config-1.16.5.jar in 90 seconds",
+            "got": "Downloaded cloth-config-1.16.5.jar in 90 seconds",
+            "pass": true
+          },
+          {
+            "expected": "Unable to open D:\\Games\\MultiMC\\libraries\\com\\google\\guava\\3.1.8\\quark-3.1.8.jar",
+            "got": "ca nest Cibra ries\\com\\google\\guava\\3.1.8\\quark-",
+            "pass": false
+          },
+          {
+            "expected": "Found 248 mods, 0 failed to load",
+            "got": "Found 248 mods, 0 failed to load",
+            "pass": true
+          },
+          {
+            "expected": "Set JVM argument -Xmx4096M for 1.21 Survival",
+            "got": "set JVM argument -Xmx4096M for 1.21 Survival",
+            "pass": false
+          },
+          {
+            "expected": "Launching 1.16.5 Create with 6144 MB of memory",
+            "got": "Launching 1.16.5 Create with 6144 MB of memory",
+            "pass": true
+          },
+          {
+            "expected": "Texture pack reloaded with 68 resources",
+            "got": "Texture pack reloaded with 68 resources",
+            "pass": true
+          },
+          {
+            "expected": "Saved world settings to disk successfully",
+            "got": "saved world settings to disk successfully",
+            "pass": false
+          },
+          {
+            "expected": "Found 618 mods, 5 failed to load",
+            "got": "Found 618 mods, 5 failed to load",
+            "pass": true
+          },
+          {
+            "expected": "Unable to open D:\\Games\\MultiMC\\libraries\\net\\minecraftforge\\fmlcore\\47.2.0\\jei-47.2.0.jar",
+            "got": "Games loaves netinecetexgeinort7 2",
+            "pass": false
+          },
+          {
+            "expected": "Error loading class net.fabricmc.loader.create in create-1.19.2.jar",
+            "got": "St eng an net.fabricmc.loader.create in",
+            "pass": false
+          },
+          {
+            "expected": "The Mod File E:\\Games\\MultiMC\\instances\\1.21 Survival\\.minecraft\\mods\\biomesoplenty.jar has mods that were not found",
+            "got": "",
+            "pass": false
+          },
+          {
+            "expected": "Missing dependency: org.spongepowered.mixin version 5.4.0 required by waystones",
+            "got": "540 recuited by wey ora-Spongepowered.mixin version",
+            "pass": false
+          },
+          {
+            "expected": "Retrying download of waystones: HTTP status 404",
+            "got": "Retrying download of waystones: HTTP status 404",
+            "pass": true
+          },
+          {
+            "expected": "Unable to open E:\\Games\\MultiMC\\libraries\\net\\fabricmc\\loader\\47.2.0\\fabric-api-47.2.0.jar",
+            "got": "Gamestore netlatccoader7 2 eb",
+            "pass": false
+          },
+          {
+            "expected": "Failed to load mod fabric-api 3.1.8: missing dependency com.electronwizard.config",
+            "got": "",
+            "pass": false
+          },
+          {
+            "expected": "Unable to open E:\\Games\\MultiMC\\libraries\\net\\fabricmc\\loader\\3.1.8\\terralith-3.1.8.jar",
+            "got": "a nes cllibra ries\\net\\fabricmc\\loader\\3.1.8\\terral-",
+            "pass": false
+          },
+          {
+            "expected": "[INFO] Registered 803 recipes from create",
+            "got": "[INFO] Registered 803 recipes from create",
+            "pass": true
+          },
+          {
+            "expected": "The Mod File D:\\Games\\MultiMC\\instances\\1.21 Survival\\.minecraft\\mods\\waystones.jar has mods that were not found",
+            "got": "",
+            "pass": false
+          },
+          {
+            "expected": "[INFO] Registered 126 recipes from oculus",
+            "got": "[INFO] Registered 126 recipes from oculus",
+            "pass": true
+          },
+          {
+            "expected": "[WARN] Config file alexsmobs-common.toml is out of date",
+            "got": "Lae Config file alexsmobs-common.toml is out of",
+            "pass": false
+          },
+          {
+            "expected": "Texture pack reloaded with 771 resources",
+            "got": "Texture pack reloaded with 771 resources",
+            "pass": true
+          },
+          {
+            "expected": "Mod mekanism requires Minecraft 1.19.2 but found 47.2.0",
+            "got": "none requires Minecraft 1.19.2 but found",
+            "pass": false
+          },
+          {
+            "expected": "[INFO] Registered 344 recipes from journeymap",
+            "got": "[INFO] Registered 344 recipes from journeymap",
+            "pass": true
+          },
+          {
+            "expected": "java.lang.NoClassDefFoundError: com.google.guava/ironchests",
+            "got": "Java. ang. NoClassDelFounderror com.google.guava/",
+            "pass": false
+          },
+          {
+            "expected": "Skipping quark: incompatible with forge 2.0.0-beta.4",
+            "got": "okipping quark: incompatible with forge 2.0.0-beta.4",
+            "pass": false
+          },
+          {
+            "expected": "Server started on port 8080 after 24 seconds",
+            "got": "server started on port 8080 after 24 seconds",
+            "pass": false
+          }
+        ],
+        "misses": [
+          {
+            "expected": "Failed to load mod quark 2.0.0-beta.4: missing dependency org.apache.logging.log4j",
+            "got": "dependency org apache logging logd)"
+          },
+          {
+            "expected": "Error loading class net.minecraftforge.fmlcore.cloth-config in cloth-config-0.14.22.jar",
+            "got": "configinclothconfig.0.14.22ja\""
+          },
+          {
+            "expected": "Crash report saved to D:\\Games\\MultiMC\\crash-reports\\crash-2026-11-04.txt",
+            "got": ""
+          },
+          {
+            "expected": "Failed to load mod oculus 0.15.3: missing dependency net.minecraftforge.fmlcore",
+            "got": "Failed ecpattforse frloore 0.15.3: missing dependency"
+          },
+          {
+            "expected": "Missing dependency: net.fabricmc.loader version 1.21 required by sodium",
+            "got": "required by sodium net.fabricmc.loader version 1.21"
+          }
+        ],
+        "total": 40
+      },
+      "trained": {
+        "cer": 0.4163,
+        "exact": 20,
+        "lines": [
+          {
+            "expected": "Texture pack reloaded with 359 resources",
+            "got": "Texture pack reloaded with 359 resources",
+            "pass": true
+          },
+          {
+            "expected": "Failed to load mod quark 2.0.0-beta.4: missing dependency org.apache.logging.log4j",
+            "got": "dbpendency org apache logging od |",
+            "pass": false
+          },
+          {
+            "expected": "Error loading class net.minecraftforge.fmlcore.cloth-config in cloth-config-0.14.22.jar",
+            "got": "config in cloh-contg-0.14 52501 Co",
+            "pass": false
+          },
+          {
+            "expected": "Crash report saved to D:\\Games\\MultiMC\\crash-reports\\crash-2026-11-04.txt",
+            "got": "",
+            "pass": false
+          },
+          {
+            "expected": "farmersdelight 5.4.0 is already installed in 1.20.1 Forge",
+            "got": "farmersdelight 5.4.0 is already installed in 1.20.1 Forge",
+            "pass": true
+          },
+          {
+            "expected": "Failed to load mod oculus 0.15.3: missing dependency net.minecraftforge.fmlcore",
+            "got": "Failec ores fat 0.15.3: missing dependency",
+            "pass": false
+          },
+          {
+            "expected": "Missing dependency: net.fabricmc.loader version 1.21 required by sodium",
+            "got": "ilo asiicd net.fabricmc.loader version 1.21",
+            "pass": false
+          },
+          {
+            "expected": "Skipping waystones: incompatible with forge 0.15.3",
+            "got": "Skipping waystones: incompatible with forge 0.15.3",
+            "pass": true
+          },
+          {
+            "expected": "Skipping glassseam-fix: incompatible with forge 3.1.8",
+            "got": "Skipping glassseam-fix: incompatible with forge 3.1.8",
+            "pass": true
+          },
+          {
+            "expected": "Error loading class net.minecraftforge.fmlcore.oculus in oculus-1.20.1.jar",
+            "got": "emer oadng oss net.minecraftforge.fmlcore.oculus in",
+            "pass": false
+          },
+          {
+            "expected": "Launching 1.20.1 Forge with 2048 MB of memory",
+            "got": "Launching 1.20.1 Forge with 2048 MB of memory",
+            "pass": true
+          },
+          {
+            "expected": "Downloaded modmenu-1.19.2.jar in 206 seconds",
+            "got": "Downloaded modmenu-1.19.2.jar in 206 seconds",
+            "pass": true
+          },
+          {
+            "expected": "Chunk loading took 97 ms in dimension minecraft:overworld",
+            "got": "rinecraftovemord To",
+            "pass": false
+          },
+          {
+            "expected": "Failed to load mod terralith 47.4.10: missing dependency org.spongepowered.mixin",
+            "got": "en en mod rerraith 47.4.10: missing dependency",
+            "pass": false
+          },
+          {
+            "expected": "Downloaded cloth-config-1.16.5.jar in 90 seconds",
+            "got": "Downloaded cloth-config-1.16.5.jar in 90 seconds",
+            "pass": true
+          },
+          {
+            "expected": "Unable to open D:\\Games\\MultiMC\\libraries\\com\\google\\guava\\3.1.8\\quark-3.1.8.jar",
+            "got": "Ga nes Clibra ries\\com\\google\\guava\\3.1.8\\quark-",
+            "pass": false
+          },
+          {
+            "expected": "Found 248 mods, 0 failed to load",
+            "got": "Found 248 mods, 0 failed to load",
+            "pass": true
+          },
+          {
+            "expected": "Set JVM argument -Xmx4096M for 1.21 Survival",
+            "got": "Set JVM argument -Xmx4096M for 1.21 Survival",
+            "pass": true
+          },
+          {
+            "expected": "Launching 1.16.5 Create with 6144 MB of memory",
+            "got": "Launching 1.16.5 Create with 6144 MB of memory",
+            "pass": true
+          },
+          {
+            "expected": "Texture pack reloaded with 68 resources",
+            "got": "Texture pack reloaded with 68 resources",
+            "pass": true
+          },
+          {
+            "expected": "Saved world settings to disk successfully",
+            "got": "Saved world settings to disk successfully",
+            "pass": true
+          },
+          {
+            "expected": "Found 618 mods, 5 failed to load",
+            "got": "Found 618 mods, 5 failed to load",
+            "pass": true
+          },
+          {
+            "expected": "Unable to open D:\\Games\\MultiMC\\libraries\\net\\minecraftforge\\fmlcore\\47.2.0\\jei-47.2.0.jar",
+            "got": "Games aCe ntact 2",
+            "pass": false
+          },
+          {
+            "expected": "Error loading class net.fabricmc.loader.create in create-1.19.2.jar",
+            "got": "cor loading cass net.fabricmmc.loader.create in",
+            "pass": false
+          },
+          {
+            "expected": "The Mod File E:\\Games\\MultiMC\\instances\\1.21 Survival\\.minecraft\\mods\\biomesoplenty.jar has mods that were not found",
+            "got": "",
+            "pass": false
+          },
+          {
+            "expected": "Missing dependency: org.spongepowered.mixin version 5.4.0 required by waystones",
+            "got": "54.0 rectird by wy ord-spongepowered. mixin version",
+            "pass": false
+          },
+          {
+            "expected": "Retrying download of waystones: HTTP status 404",
+            "got": "Retrying download of waystones: HTTP status 404",
+            "pass": true
+          },
+          {
+            "expected": "Unable to open E:\\Games\\MultiMC\\libraries\\net\\fabricmc\\loader\\47.2.0\\fabric-api-47.2.0.jar",
+            "got": "Games uC ntfatncrcoaderd? 2 ic",
+            "pass": false
+          },
+          {
+            "expected": "Failed to load mod fabric-api 3.1.8: missing dependency com.electronwizard.config",
+            "got": "",
+            "pass": false
+          },
+          {
+            "expected": "Unable to open E:\\Games\\MultiMC\\libraries\\net\\fabricmc\\loader\\3.1.8\\terralith-3.1.8.jar",
+            "got": "ca resin Cuibra ries\\net\\fabricnc\\loader\\3.1.8\\terral-",
+            "pass": false
+          },
+          {
+            "expected": "[INFO] Registered 803 recipes from create",
+            "got": "[INFO] Registered 803 recipes from create",
+            "pass": true
+          },
+          {
+            "expected": "The Mod File D:\\Games\\MultiMC\\instances\\1.21 Survival\\.minecraft\\mods\\waystones.jar has mods that were not found",
+            "got": "",
+            "pass": false
+          },
+          {
+            "expected": "[INFO] Registered 126 recipes from oculus",
+            "got": "[INFO] Registered 126 recipes from oculus",
+            "pass": true
+          },
+          {
+            "expected": "[WARN] Config file alexsmobs-common.toml is out of date",
+            "got": "Mb Config file alexsmobs-common.toml is out of",
+            "pass": false
+          },
+          {
+            "expected": "Texture pack reloaded with 771 resources",
+            "got": "Texture pack reloaded with 771 resources",
+            "pass": true
+          },
+          {
+            "expected": "Mod mekanism requires Minecraft 1.19.2 but found 47.2.0",
+            "got": "og mekanism requires Minecraft 1.19.2 but found",
+            "pass": false
+          },
+          {
+            "expected": "[INFO] Registered 344 recipes from journeymap",
+            "got": "[INFO] Registered 344 recipes from journeymap",
+            "pass": true
+          },
+          {
+            "expected": "java.lang.NoClassDefFoundError: com.google.guava/ironchests",
+            "got": "java. ang NoClassDeffoundEror com.google.guava/",
+            "pass": false
+          },
+          {
+            "expected": "Skipping quark: incompatible with forge 2.0.0-beta.4",
+            "got": "Skipping quark: incompatible with forge 2.0.0-beta.4",
+            "pass": true
+          },
+          {
+            "expected": "Server started on port 8080 after 24 seconds",
+            "got": "Server started on port 8080 after 24 seconds",
+            "pass": true
+          }
+        ],
+        "misses": [
+          {
+            "expected": "Failed to load mod quark 2.0.0-beta.4: missing dependency org.apache.logging.log4j",
+            "got": "dbpendency org apache logging od |"
+          },
+          {
+            "expected": "Error loading class net.minecraftforge.fmlcore.cloth-config in cloth-config-0.14.22.jar",
+            "got": "config in cloh-contg-0.14 52501 Co"
+          },
+          {
+            "expected": "Crash report saved to D:\\Games\\MultiMC\\crash-reports\\crash-2026-11-04.txt",
+            "got": ""
+          },
+          {
+            "expected": "Failed to load mod oculus 0.15.3: missing dependency net.minecraftforge.fmlcore",
+            "got": "Failec ores fat 0.15.3: missing dependency"
+          },
+          {
+            "expected": "Missing dependency: net.fabricmc.loader version 1.21 required by sodium",
+            "got": "ilo asiicd net.fabricmc.loader version 1.21"
+          }
+        ],
+        "total": 40
+      }
+    }
+  }
+}
