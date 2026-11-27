@@ -244,7 +244,7 @@ class MainWindow(QWidget):
         self.name = QLineEdit("minecraft")
         self.name.setFixedWidth(150)
         self.iterations = QSpinBox()
-        self.iterations.setRange(100, 5000)
+        self.iterations.setRange(1, 5000)
         self.iterations.setValue(DEFAULT_ITERATIONS)
         self.iterations.setFixedWidth(110)
         self.font_size = QSpinBox()
@@ -252,7 +252,7 @@ class MainWindow(QWidget):
         self.font_size.setValue(DEFAULT_FONT_SIZE)
         self.font_size.setFixedWidth(110)
         self.generated_count = QSpinBox()
-        self.generated_count.setRange(20, 1000)
+        self.generated_count.setRange(1, 1000)
         self.generated_count.setValue(DEFAULT_GENERATED_LINES)
         self.generated_count.setFixedWidth(110)
 
@@ -580,6 +580,8 @@ class MainWindow(QWidget):
             lines = [l for l in self.corpus_edit.toPlainText().splitlines() if l.strip()]
             if len(lines) < 10:
                 return f"Your own corpus needs at least 10 lines. It has {len(lines)}."
+        elif self.generated_count.value() < 10:
+            return "Generated lines must be at least 10. Training needs 10 lines to split."
         return None
 
     def open_run_log(self, name):
