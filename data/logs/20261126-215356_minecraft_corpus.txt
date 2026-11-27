@@ -1,0 +1,200 @@
+Retrying download of oculus: HTTP status 403
+Error loading class org.lwjgl.glfw.create in create-5.4.0.jar
+Loading mod list from D:\Games\MultiMC\instances\1.20.1 Forge\mods
+[INFO] Registered 723 recipes from fabric-api
+Launching 1.20.1 6June2026Wiped9Nov2026 with 6144 MB of memory
+Saved world settings to disk successfully
+Unable to open D:\Games\MultiMC\libraries\net\minecraftforge\javafmlmod\47.2.0\ironchests-47.2.0.jar
+Error loading class net.minecraftforge.javafmlmod.oculus in oculus-1.20.4.jar
+Launching 1.20.1 Forge with 4096 MB of memory
+Failed to load mod oculus 47.2.0: missing dependency com.google.guava
+Connection timed out while reading packet 210
+Deleted 332 old log files from C:\Games\MultiMC\logs
+[INFO] Registered 840 recipes from ironchests
+Error loading class org.lwjgl.glfw.alexsmobs in alexsmobs-1.20.1.jar
+Could not find com.google.guava for applied-energistics-2, skipping
+[INFO] Registered 138 recipes from sodium
+Failed to load mod farmersdelight 3.1.8: missing dependency org.lwjgl.glfw
+Error loading class org.apache.logging.log4j.create in create-47.4.10.jar
+Chunk loading took 84 ms in dimension minecraft:overworld
+Connection timed out while reading packet 180
+Connection timed out while reading packet 238
+Error loading class net.minecraftforge.javafmlmod.waystones in waystones-5.4.0.jar
+Loading mod list from C:\Games\MultiMC\instances\1.16.5 Create\mods
+Texture pack reloaded with 745 resources
+Found 65 mods, 3 failed to load
+[INFO] Registered 775 recipes from fabric-api
+[INFO] Registered 737 recipes from supplementaries
+Chunk loading took 33 ms in dimension minecraft:overworld
+Chunk loading took 37 ms in dimension minecraft:overworld
+java.lang.NoClassDefFoundError: net.minecraftforge.javafmlmod/journeymap
+Failed to load mod terralith 47.4.10: missing dependency net.fabricmc.loader
+Error loading class net.minecraftforge.fmlcore.waystones in waystones-47.4.10.jar
+[INFO] Registered 55 recipes from create
+Set JVM argument -Xmx6144M for Server Backup 2026
+Mod quark requires Minecraft 0.14.22 but found 47.4.10
+[INFO] Registered 21 recipes from mekanism
+journeymap 1.20.4 is already installed in 1.20.1 6June2026Wiped9Nov2026
+Downloaded oculus-47.4.10.jar in 165 seconds
+Failed to load mod journeymap 47.4.10: missing dependency net.minecraftforge.fmlcore
+jei 1.19.2 is already installed in 1.16.5 Create
+Missing dependency: org.apache.logging.log4j version 1.16.5 required by cloth-config
+Deleted 216 old log files from C:\Games\MultiMC\logs
+Failed to load mod cloth-config 2.0.0-beta.4: missing dependency net.fabricmc.loader
+Mixin apply failed for org.spongepowered.mixin: target class not found
+Skipping waystones: incompatible with forge 47.4.10
+Crash report saved to C:\Games\MultiMC\crash-reports\crash-2026-11-11.txt
+Failed to load mod journeymap 47.4.10: missing dependency com.google.guava
+Deleted 669 old log files from E:\Games\MultiMC\logs
+Crash report saved to E:\Games\MultiMC\crash-reports\crash-2026-11-09.txt
+Mixin apply failed for net.fabricmc.loader: target class not found
+[WARN] Config file cloth-config-common.toml is out of date
+Connection timed out while reading packet 158
+[WARN] Config file fabric-api-common.toml is out of date
+Texture pack reloaded with 543 resources
+Error loading class org.spongepowered.mixin.ironchests in ironchests-47.4.10.jar
+Deleted 706 old log files from D:\Games\MultiMC\logs
+Launching Server Backup 2026 with 6144 MB of memory
+Retrying download of terralith: HTTP status 500
+Chunk loading took 180 ms in dimension minecraft:overworld
+Chunk loading took 117 ms in dimension minecraft:overworld
+Failed to load mod journeymap 47.2.0: missing dependency org.lwjgl.glfw
+Server started on port 25566 after 55 seconds
+sodium 0.14.22 is already installed in 1.16.5 Create
+Error loading class com.electronwizard.config.oculus in oculus-0.14.22.jar
+Server started on port 8080 after 205 seconds
+Unable to open E:\Games\MultiMC\libraries\com\electronwizard\config\47.4.10\carpet-47.4.10.jar
+Deleted 277 old log files from E:\Games\MultiMC\logs
+Set JVM argument -Xmx2048M for Server Backup 2026
+Chunk loading took 18 ms in dimension minecraft:overworld
+Failed to load mod terralith 47.4.10: missing dependency net.minecraftforge.fmlcore
+Connection timed out while reading packet 114
+Found 748 mods, 9 failed to load
+Could not find com.google.guava for carpet, skipping
+Crash report saved to E:\Games\MultiMC\crash-reports\crash-2026-11-30.txt
+Chunk loading took 119 ms in dimension minecraft:overworld
+Error loading class com.electronwizard.config.applied-energistics-2 in applied-energistics-2-1.20.1.jar
+Found 308 mods, 1 failed to load
+Unable to open D:\Games\MultiMC\libraries\org\lwjgl\glfw\47.2.0\xaeros-minimap-47.2.0.jar
+Launching Server Backup 2026 with 2048 MB of memory
+Mixin apply failed for com.google.guava: target class not found
+The Mod File C:\Games\MultiMC\instances\Server Backup 2026\.minecraft\mods\quark.jar has mods that were not found
+Launching 1.20.4 Fabric with 2048 MB of memory
+Unable to open E:\Games\MultiMC\libraries\org\lwjgl\glfw\47.4.10\jei-47.4.10.jar
+Deleted 170 old log files from C:\Games\MultiMC\logs
+Retrying download of ironchests: HTTP status 403
+Deleted 742 old log files from E:\Games\MultiMC\logs
+java.lang.NoClassDefFoundError: net.fabricmc.loader/ironchests
+mekanism 47.4.10 is already installed in 1.20.4 Fabric
+Loading mod list from C:\Games\MultiMC\instances\1.20.4 Fabric\mods
+Deleted 793 old log files from C:\Games\MultiMC\logs
+Failed to load mod farmersdelight 47.4.10: missing dependency com.electronwizard.config
+Launching 1.16.5 Create with 8192 MB of memory
+Launching 1.21 Survival with 2048 MB of memory
+Mixin apply failed for net.minecraftforge.javafmlmod: target class not found
+mekanism 0.14.22 is already installed in 1.20.4 Fabric
+Launching 1.21 Survival with 6144 MB of memory
+Unable to open E:\Games\MultiMC\libraries\net\minecraftforge\fmlcore\2.0.0-beta.4\applied-energistics-2-2.0.0-beta.4.jar
+Retrying download of farmersdelight: HTTP status 403
+[INFO] Registered 728 recipes from iris
+Texture pack reloaded with 77 resources
+Failed to load mod modmenu 2.0.0-beta.4: missing dependency org.spongepowered.mixin
+Skipping glassseam-fix: incompatible with forge 0.15.3
+Found 852 mods, 6 failed to load
+[INFO] Registered 635 recipes from applied-energistics-2
+Launching Server Backup 2026 with 8192 MB of memory
+Found 137 mods, 3 failed to load
+Loading mod list from E:\Games\MultiMC\instances\1.20.1 Forge\mods
+Downloaded waystones-0.14.22.jar in 195 seconds
+[WARN] Config file farmersdelight-common.toml is out of date
+Launching 1.21 Survival with 8192 MB of memory
+Found 649 mods, 5 failed to load
+Texture pack reloaded with 730 resources
+Failed to load mod carpet 2.0.0-beta.4: missing dependency org.spongepowered.mixin
+Error loading class org.spongepowered.mixin.xaeros-minimap in xaeros-minimap-1.20.1.jar
+java.lang.NoClassDefFoundError: net.minecraftforge.fmlcore/sodium
+Crash report saved to E:\Games\MultiMC\crash-reports\crash-2026-11-15.txt
+mekanism 0.14.22 is already installed in 1.20.1 Forge
+Chunk loading took 46 ms in dimension minecraft:overworld
+[INFO] Registered 568 recipes from fabric-api
+Unable to open C:\Games\MultiMC\libraries\org\lwjgl\glfw\0.15.3\modmenu-0.15.3.jar
+Retrying download of modmenu: HTTP status 404
+Error loading class com.google.guava.terralith in terralith-1.16.5.jar
+The Mod File D:\Games\MultiMC\instances\1.21 Survival\.minecraft\mods\modmenu.jar has mods that were not found
+The Mod File E:\Games\MultiMC\instances\Server Backup 2026\.minecraft\mods\xaeros-minimap.jar has mods that were not found
+Texture pack reloaded with 350 resources
+Crash report saved to D:\Games\MultiMC\crash-reports\crash-2026-11-01.txt
+Crash report saved to E:\Games\MultiMC\crash-reports\crash-2026-11-21.txt
+Mod sodium requires Minecraft 1.21 but found 47.4.10
+Chunk loading took 211 ms in dimension minecraft:overworld
+Skipping biomesoplenty: incompatible with forge 47.4.10
+Chunk loading took 104 ms in dimension minecraft:overworld
+Texture pack reloaded with 721 resources
+Server started on port 25566 after 233 seconds
+Deleted 131 old log files from D:\Games\MultiMC\logs
+Skipping terralith: incompatible with forge 47.4.10
+Crash report saved to D:\Games\MultiMC\crash-reports\crash-2026-11-30.txt
+Connection timed out while reading packet 189
+Error loading class net.fabricmc.loader.glassseam-fix in glassseam-fix-0.14.22.jar
+Chunk loading took 154 ms in dimension minecraft:overworld
+applied-energistics-2 1.21 is already installed in 1.20.4 Fabric
+Connection timed out while reading packet 217
+modmenu 1.19.2 is already installed in 1.19.2 Modded
+Missing dependency: org.apache.logging.log4j version 1.20.4 required by alexsmobs
+[INFO] Registered 804 recipes from create
+Loading mod list from C:\Games\MultiMC\instances\1.19.2 Modded\mods
+Loading mod list from E:\Games\MultiMC\instances\1.20.1 6June2026Wiped9Nov2026\mods
+Texture pack reloaded with 165 resources
+Texture pack reloaded with 405 resources
+Chunk loading took 82 ms in dimension minecraft:overworld
+Texture pack reloaded with 900 resources
+Connection timed out while reading packet 193
+The Mod File E:\Games\MultiMC\instances\1.20.1 Forge\.minecraft\mods\quark.jar has mods that were not found
+Launching 1.20.1 Forge with 2048 MB of memory
+Connection timed out while reading packet 138
+Retrying download of journeymap: HTTP status 404
+Error loading class net.minecraftforge.fmlcore.supplementaries in supplementaries-47.4.10.jar
+[WARN] Config file carpet-common.toml is out of date
+Unable to open C:\Games\MultiMC\libraries\com\electronwizard\config\47.2.0\mekanism-47.2.0.jar
+Error loading class org.lwjgl.glfw.xaeros-minimap in xaeros-minimap-1.19.2.jar
+Retrying download of oculus: HTTP status 500
+[INFO] Registered 547 recipes from mekanism
+Error loading class net.fabricmc.loader.oculus in oculus-1.19.2.jar
+Failed to load mod terralith 2.0.0-beta.4: missing dependency com.electronwizard.config
+Mod sodium requires Minecraft 1.20.4 but found 3.1.8
+Crash report saved to D:\Games\MultiMC\crash-reports\crash-2026-11-18.txt
+Mod terralith requires Minecraft 1.16.5 but found 2.0.0-beta.4
+[INFO] Registered 199 recipes from create
+[WARN] Config file mekanism-common.toml is out of date
+Mod terralith requires Minecraft 0.14.22 but found 2.0.0-beta.4
+Set JVM argument -Xmx2048M for 1.20.4 Fabric
+The Mod File C:\Games\MultiMC\instances\Server Backup 2026\.minecraft\mods\iris.jar has mods that were not found
+Could not find com.electronwizard.config for journeymap, skipping
+Downloaded iris-5.4.0.jar in 189 seconds
+Connection timed out while reading packet 61
+Crash report saved to C:\Games\MultiMC\crash-reports\crash-2026-11-05.txt
+Deleted 293 old log files from E:\Games\MultiMC\logs
+Connection timed out while reading packet 76
+Found 820 mods, 2 failed to load
+Skipping jei: incompatible with forge 47.2.0
+[WARN] Config file jei-common.toml is out of date
+Mixin apply failed for org.apache.logging.log4j: target class not found
+Could not find org.apache.logging.log4j for jei, skipping
+Failed to load mod sodium 47.2.0: missing dependency net.minecraftforge.fmlcore
+Chunk loading took 225 ms in dimension minecraft:overworld
+Crash report saved to E:\Games\MultiMC\crash-reports\crash-2026-11-26.txt
+Deleted 633 old log files from E:\Games\MultiMC\logs
+Launching 1.20.4 Fabric with 4096 MB of memory
+[WARN] Config file create-common.toml is out of date
+terralith 47.4.10 is already installed in 1.21 Survival
+Could not find net.fabricmc.loader for oculus, skipping
+Loading mod list from E:\Games\MultiMC\instances\1.21 Survival\mods
+[INFO] Registered 165 recipes from mekanism
+create 1.16.5 is already installed in Server Backup 2026
+terralith 5.4.0 is already installed in 1.20.4 Fabric
+The Mod File C:\Games\MultiMC\instances\1.19.2 Modded\.minecraft\mods\carpet.jar has mods that were not found
+[INFO] Registered 602 recipes from carpet
+Missing dependency: com.electronwizard.config version 1.19.2 required by journeymap
+Failed to load mod mekanism 47.4.10: missing dependency org.spongepowered.mixin
+Failed to load mod terralith 3.1.8: missing dependency com.google.guava
+Failed to load mod carpet 0.15.3: missing dependency com.google.guava
