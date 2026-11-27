@@ -2,3 +2,4 @@ __pycache__/
 data/*
 !data/logs/
 base_models/*.traineddata
+fonts.conf

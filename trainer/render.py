@@ -6,10 +6,15 @@ Tesseract's LSTM trainer needs, per line:
   name.gt.txt  the exact text (used for scoring)
 """
 
+import shutil
 import subprocess
 from pathlib import Path
 
 from PIL import ImageFont
+
+# Linux-side folder that text2image reads fonts from. Fonts on a Windows drive
+# (/mnt/c/...) are often not found by fontconfig, so each font is copied here first.
+FONT_STAGING = Path.home() / ".cache" / "tesstrain_fonts"
 
 
 def font_family(font_path):
@@ -18,12 +23,22 @@ def font_family(font_path):
     return family
 
 
+def stage_font(font_path):
+    """Copy the font into the Linux staging folder and return that folder."""
+    FONT_STAGING.mkdir(parents=True, exist_ok=True)
+    source = Path(font_path)
+    target = FONT_STAGING / source.name
+    if not target.exists() or target.stat().st_size != source.stat().st_size:
+        shutil.copy2(source, target)
+    return FONT_STAGING
+
+
 def render_lines(lines, font_path, out_dir, font_size=32, prefix="line"):
     """Render each line to name.tif + name.box + name.gt.txt. Returns the TIFF paths."""
     out_dir = Path(out_dir)
     out_dir.mkdir(parents=True, exist_ok=True)
     family = font_family(font_path)
-    fonts_dir = Path(font_path).resolve().parent
+    fonts_dir = stage_font(font_path)
 
     tiffs = []
     for index, text in enumerate(lines):
