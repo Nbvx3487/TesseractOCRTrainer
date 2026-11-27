@@ -257,7 +257,6 @@ class MainWindow(QWidget):
         self.model_dir = None
         self.accepting = False  # True only while a run is shown; late output is ignored
         self.running = False  # True from Start until the run is finished, stopped or failed
-        self.render_window = None  # small window with the rendering progress bar
         self.bar_animations = {}  # one smooth-move animation per progress bar
         self.loading_window = None  # second window: copies of the bars and the latest log
         self.loading_bars = {}  # main bar -> its copy in the loading window
@@ -737,37 +736,21 @@ class MainWindow(QWidget):
         self.running = on
         if not on and getattr(self, "heartbeat", None) is not None:
             self.heartbeat.stop()
-        if not on and self.render_window is not None:
-            self.render_window.hide()
         if not on and self.loading_window is not None:
             self.loading_window.hide()
         self.primary.setText("Stop training" if on else "adjust the font")
 
     def show_render_window(self, info):
-        """A small window with a progress bar for rendering the lines, like the copy
-        window in Explorer. It has its own Stop button."""
-        if self.render_window is None:
-            self.render_window = QDialog(self)
-            self.render_window.setWindowTitle("Rendering lines")
-            self.render_window.setMinimumWidth(420)
-            layout = QVBoxLayout(self.render_window)
-            self.render_label = QLabel()
-            self.render_label.setWordWrap(True)
-            self.render_bar = QProgressBar()
-            self.render_bar.setRange(0, 1000)
-            layout.addWidget(self.render_label)
-            layout.addWidget(self.render_bar)
-            buttons = QHBoxLayout()
-            buttons.addStretch(1)
-            stop = QPushButton("Stop training")
-            stop.clicked.connect(self.stop_training)
-            buttons.addWidget(stop)
-            layout.addLayout(buttons)
+        """Show the rendering row in the loading window: a progress bar for the lines being
+        rendered, with the Stop button in the same window."""
+        self.ensure_loading_window()
         count = max(info["count"], 1)
-        self.move_bar(self.render_bar, info["current"] / count)
+        self.animate_bar(self.render_bar, int(round(1000 * info["current"] / count)))
         self.render_label.setText(
             f"Rendering line {info['current']} of {info['count']} in {info['label']}")
-        self.render_window.show()
+        self.render_label.show()
+        self.render_bar.show()
+        self.loading_window.show()
 
     def show_progress(self, info):
         """Update both progress bars from a PROGRESS line of the trainer."""
@@ -776,8 +759,9 @@ class MainWindow(QWidget):
         if info["stage"] == "render":
             self.show_render_window(info)
             return
-        if self.render_window is not None:
-            self.render_window.hide()
+        if self.loading_window is not None:
+            self.render_label.hide()
+            self.render_bar.hide()
         total = max(info["total"], 1)
         overall = info["done"] / total
         count = max(info["count"], 1)
@@ -794,13 +778,27 @@ class MainWindow(QWidget):
         self.move_bar(self.overall_bar, overall)
 
     def show_loading_window(self):
-        """A second small window with copies of the two progress bars and the latest log
-        lines, so the run can be followed from anywhere on the screen."""
+        """Start of a run: show the window with the bars and the latest log lines, empty log."""
+        self.ensure_loading_window()
+        self.loading_log.clear()
+        self.loading_window.show()
+
+    def ensure_loading_window(self):
+        """The one window for a run: the rendering bar (shown while lines are rendered),
+        copies of the two progress bars, the latest log lines, and the Stop button."""
         if self.loading_window is None:
             self.loading_window = QDialog(self)
             self.loading_window.setWindowTitle("Training progress")
             self.loading_window.setMinimumWidth(560)
             layout = QVBoxLayout(self.loading_window)
+            self.render_label = QLabel()
+            self.render_label.setWordWrap(True)
+            self.render_bar = QProgressBar()
+            self.render_bar.setRange(0, 1000)
+            self.render_label.hide()
+            self.render_bar.hide()
+            layout.addWidget(self.render_label)
+            layout.addWidget(self.render_bar)
             for source_label, source_bar in ((self.current_label, self.current_bar),
                                              (self.overall_label, self.overall_bar)):
                 label = QLabel(source_label.text())
@@ -821,8 +819,6 @@ class MainWindow(QWidget):
             stop.clicked.connect(self.stop_training)
             buttons.addWidget(stop)
             layout.addLayout(buttons)
-        self.loading_log.clear()
-        self.loading_window.show()
 
     def set_label(self, label, text):
         label.setText(text)
